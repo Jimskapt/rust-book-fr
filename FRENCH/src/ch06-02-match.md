@@ -31,7 +31,7 @@ the value falls into the associated code block to be used during execution.
 -->
 
 Considérez l'expression `match` comme une machine à trier les pièces de
-monnaie : les pièces descendent le long d'une piste avec des trous de taille
+monnaie : les pièces descendent le long d'une piste avec des trous de taille
 différente tout le long, et chaque pièce tombe dans le premier trou qu'elle
 rencontre à sa taille. De manière similaire, les valeurs parcourent tous les
 motifs dans un `match`, et au premier motif auquel la valeur “correspond”, la
@@ -46,7 +46,7 @@ value in cents, as shown here in Listing 6-3.
 -->
 
 Comme nous venons de mentionner des pièces, utilisons-les avec un exemple qui
-utilise `match` ! Nous pouvons écrire une fonction qui prends en paramètre une
+utilise `match` ! Nous pouvons écrire une fonction qui prends en paramètre une
 pièce inconnue des Etats Unis d'Amérique (USA) et, de la même manière qu'une
 machine à trier, déterminons quelle pièce c'est et retourner sa valeur en
 centimes, comme ci-dessous dans l'encart 6-3.
@@ -94,7 +94,7 @@ fn valeur_en_centimes(piece: USACoin) -> u8 {
 the variants of the enum as its patterns</span>
 -->
 
-<span class="caption">Encart 6-3 : Une énumération et une expression `match` qui
+<span class="caption">Encart 6-3 : Une énumération et une expression `match` qui
 a les variantes de l'énumération dans ses motifs</span>
 
 <!--
@@ -109,7 +109,7 @@ that we defined on line 1.
 Décomposons le `match` dans la fonction `valeur_en_centimes`. En premier lieu,
 nous utilisons le mot-clé `match` suivi par une expression, qui dans notre cas
 est la valeur de `piece`. Cela ressemble beaucoup à une expression utilisée avec
-`if`, mais il y a une grosse différence : avec `if`, l'expression doit retourner
+`if`, mais il y a une grosse différence : avec `if`, l'expression doit retourner
 un valeur booléenne, mais ici, elle peut retourner n'importe quel type. Dans cet
 exemple, `piece` est de type `USACoin`, qui est l'énumération que nous avons
 défini à la ligne 1.
@@ -121,7 +121,7 @@ operator that separates the pattern and the code to run. The code in this case
 is just the value `1`. Each arm is separated from the next with a comma.
 -->
 
-Ensuite, nous avons les branches du `match`. Une branche a deux parties : un
+Ensuite, nous avons les branches du `match`. Une branche a deux parties : un
 motif et du code. La première branche a ici un motif qui est la valeur
 `USACoin::Penny` et ensuite l'opérateur `=>` qui sépare le motif et le code à
 exécuter. Le code dans ce cas est uniquement la valeur `1`. Chaque branche est
@@ -140,7 +140,7 @@ avec le motif de chaque branche, dans l'ordre. Si un motif correspond à la
 valeur, le code correspondant à ce motif est alors exécuté. Si ce motif ne
 correspond pas à la valeur, l'exécution passe à la prochaine branche, un peu
 comme dans une machine de trie de pièces. Nous pouvons avoir autant de branches
-que nous avons besoin : dans l'encart 6-3, notre `match` a quatre branches.
+que nous avons besoin : dans l'encart 6-3, notre `match` a quatre branches.
 
 <!--
 The code associated with each arm is an expression, and the resulting value of
@@ -164,9 +164,9 @@ Les accolades ne sont généralement pas utilisées si le code de la branche
 correspondante est court, comme est le cas dans l'encart 6-3 où chaque branche
 retourne simplement une valeur. Si vous voulez exécuter plusieures lignes de
 code dans une branche d'un `match`, vous devez utiliser les accolades. Par
-exemple, le code suivant va afficher “Un centime porte-bonheur !” à chaque fois
+exemple, le code suivant va afficher “Un centime porte-bonheur !” à chaque fois
 que la méthode a été appellée avec une valeur `USACoin::Penny` mais va continuer
-à retourner la dernière valeur du bloc, `1` :
+à retourner la dernière valeur du bloc, `1` :
 
 <!--
 ```rust
@@ -202,7 +202,7 @@ fn value_in_cents(coin: Coin) -> u8 {
 fn valeur_en_centimes(piece: USACoin) -> u8 {
     match piece {
         USACoin::Penny => {
-            println!("Un centime porte-bonheur !");
+            println!("Un centime porte-bonheur !");
             1
         },
         USACoin::Nickel => 5,
@@ -285,7 +285,7 @@ enum USACoin {
 also holds a `UsState` value</span>
 -->
 
-<span class="caption">Encart 6-4 : Une énumération `USACoin` dans laquelle la
+<span class="caption">Encart 6-4 : Une énumération `USACoin` dans laquelle la
 variante `Quarter` stocke en plus une valeur de type `USAState`</span>
 
 <!--
@@ -311,7 +311,7 @@ Dans l'expression `match` de ce code, nous avons ajouté une variable `etat` au
 motif qui correspond à la variante `USACoin::Quarter`. Quand on aura une
 correspondance `USACoin::Quarter`, la variable `etat` sera liée à la valeur de
 l'état de cette pièce. Ensuite, nous pouvons utiliser `etat` dans le code de
-cette branche, comme ceci :
+cette branche, comme ceci :
 
 <!--
 ```rust
@@ -362,7 +362,7 @@ fn valeur_en_centimes(piece: USACoin) -> u8 {
         USACoin::Nickel => 5,
         USACoin::Dime => 10,
         USACoin::Quarter(etat) => {
-            println!("Il s'agit d'un Quarter de l'état de {:?} !", etat);
+            println!("Il s'agit d'un Quarter de l'état de {:?} !", etat);
             25
         },
     }
@@ -404,7 +404,7 @@ the same.
 Dans la section précédente, nous voulions obtenir la valeur interne `T` dans le
 cas de `Some` lorsqu'on utilisait `Option<T>`; nous pouvons aussi gérer les
 `Option<T>` en utilisant `match` comme nous l'avons fait avec l'énumération
-`USACoin` ! Au lieu de comparer des pièces, nous allons comparer les variantes
+`USACoin` ! Au lieu de comparer des pièces, nous allons comparer les variantes
 de `Option<T>`, mais la façon d'utiliser l'expression `match` reste la même.
 
 <!--
@@ -460,7 +460,7 @@ let none = plus_un(None);
 an `Option<i32>`</span>
 -->
 
-<span class="caption">Encart 6-5 : Une fonction qui utilise une expression
+<span class="caption">Encart 6-5 : Une fonction qui utilise une expression
 `match` sur une `Option<i32>`</span>
 
 <!--
@@ -496,7 +496,7 @@ code in the match arm is then executed, so we add 1 to the value of `i` and
 create a new `Some` value with our total `6` inside.
 -->
 
-Est-ce que `Some(5)` correspond au `Some(i)` ? Oui, pourquoi pas ? Nous avons la
+Est-ce que `Some(5)` correspond au `Some(i)` ? Oui, pourquoi pas ? Nous avons la
 même variante. Le `i` va prendre la valeur contenue dans le `Some`, donc `i`
 prend la valeur `5`. La code dans la branche du `match` est exécuté, donc nous
 ajoutons 1 à la valeur de `i` et nous créons une nouvelle valeur `Some` avec
@@ -520,7 +520,7 @@ It matches! There’s no value to add to, so the program stops and returns the
 arms are compared.
 -->
 
-Cela correspond ! Il n'y a pas de valeur à additionner, donc le programmme
+Cela correspond ! Il n'y a pas de valeur à additionner, donc le programmme
 s'arrête et retourne la valeur `None` qui est dans le côté droit du `=>`. Comme
 la première branche correspond, les autres branches ne sont pas comparées.
 
@@ -533,7 +533,7 @@ consistently a user favorite.
 -->
 
 La combinaison de `match` et des énumérations est utile dans de nombreuses
-situations. Vous allez revoir de nombreuses fois ce schéma dans du code Rust :
+situations. Vous allez revoir de nombreuses fois ce schéma dans du code Rust :
 utiliser `match` sur une énumération, récupérer la valeur qu'elle renferme, et
 exécuter du code en fonction de sa valeur. C'est un peu délicat au début, mais
 une fois que vous vous y êtes habitué, vous regretterez de ne pas l'avoir dans
@@ -551,7 +551,7 @@ of our `plus_one` function that has a bug and won’t compile:
 -->
 
 Il y a un autre point de `match` que nous devons aborder. Admettons que cette
-version de notre fonction `plus_un` a un bogue et ne va pas se compiler :
+version de notre fonction `plus_un` a un bogue et ne va pas se compiler :
 
 <!--
 ```rust,ignore,does_not_compile
@@ -579,7 +579,7 @@ error:
 
 Nous n'avons pas géré le cas du `None`, donc ce code va générer un bogue.
 Heureusement, c'est un bogue que Rust sait gérer. Si nous essayons de compiler
-ce code, nous allons obtenir cette erreur :
+ce code, nous allons obtenir cette erreur :
 
 ```text
 error[E0004]: non-exhaustive patterns: `None` not covered
@@ -599,7 +599,7 @@ have null, thus making the billion-dollar mistake discussed earlier.
 -->
 
 Rust sait que nous n'avons pas couvert toutes les possibilités et sait même quel
-motif nous avons oublié ! Les `match` de Rust sont *exhaustifs* : nous devons
+motif nous avons oublié ! Les `match` de Rust sont *exhaustifs* : nous devons
 traiter toutes les possibilités afin que le code soit valide. Dans notre cas de
 `Option<T>`, quand Rust nous empêche d'oublier de gérer explicitement le cas de
 `None`, il nous protège d'une situation où nous supposons que nous avons une
@@ -624,7 +624,7 @@ Rust a aussi un motif que nous pouvons utliser quand nous ne voulons pas traiter
 toutes les valeurs possibles. Par exemple, un `u8` peut être valide entre 0
 et 255. Si nous n'avons besoin que des valeurs 1, 3, 5 et 7, nous ne voulons pas
 traiter 0, 2, 4, 6, 7, 8, 9 et ainsi de suite jusqu'à 255. Heureusement, nous
-n'avons pas à le faire : nous pouvons utiliser le motif spécial `_` :
+n'avons pas à le faire : nous pouvons utiliser le motif spécial `_` :
 
 <!--
 ```rust

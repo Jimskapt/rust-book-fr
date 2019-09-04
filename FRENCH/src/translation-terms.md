@@ -15,6 +15,7 @@ français.
 | associated function | fonction associée | - |
 | binary crate | crate binaire | s'utilise au féminin |
 | *n*-bit number | nombre encodé sur *n* bits | - |
+| boilerplate code | code standard | - |
 | boolean | booléen | - |
 | borrow | emprunt(er) | - |
 | bug | bogue | - |
@@ -54,6 +55,7 @@ français.
 | floating-point number | nombre à virgule flottante | - |
 | function | fonction | - |
 | generics | génériques / généricité | - |
+| generic type parameter | paramètre de type générique | - |
 | guessing game | jeu de devinettes | - |
 | handle | référence abstraite | - |
 | hash | hash / relatif au hachage | - |
@@ -78,6 +80,7 @@ français.
 | library crate | crate de bibliothèque | s'utilise au féminin |
 | lifetime | durée de vie | - |
 | linker | linker | - |
+| literal value | valeur pure | - |
 | Listing | encart | tout en minuscule (sauf en début de phrase) |
 | low-level | bas niveau | - |
 | machine learning | apprentissage automatique | - |
@@ -88,6 +91,7 @@ français.
 | module | module | - |
 | mutability | mutabilité | - |
 | mutable | mutable | modifiable |
+| namespace | espace de nom | - |
 | Note | remarque | tout en minuscule (sauf en début de phrase) |
 | numerical characters | chiffres | - |
 | operating system | système d'exploitation | - |
@@ -138,6 +142,7 @@ français.
 | `String` | `String` | nom féminin (une `String`) |
 | struct | structure | - |
 | submodule | sous-module | - |
+| syntax sugar | sucre syntaxique | - |
 | systems concept | notion système | - |
 | systems-level | niveau système | - |
 | systems-level code | code système | - |
@@ -160,4 +165,5 @@ français.
 | vector | vecteur | - |
 | version control system (VCS) | système de gestion de versions (VCS) | - |
 | warning | avertissement | - |
+| wildcard | jocker | - |
 | zero-cost abstraction | abstraction sans coût | - |

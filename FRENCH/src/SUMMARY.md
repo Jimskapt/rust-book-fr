@@ -13,3 +13,5 @@
     - [Hello, Cargo!](ch01-03-hello-cargo.md)
 
 - [Programmer un jeu de devinettes](ch02-00-guessing-game-tutorial.md)
+
+- [La structure de contrôle `match`](ch06-02-match.md)

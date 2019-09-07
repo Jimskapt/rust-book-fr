@@ -13,3 +13,5 @@
     - [Hello, Cargo!](ch01-03-hello-cargo.md)
 
 - [Programmer un jeu de devinettes](ch02-00-guessing-game-tutorial.md)
+
+- [Une structure de contrôle concise avec `if let`](ch06-03-if-let.md)

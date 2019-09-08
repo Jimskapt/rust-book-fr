@@ -15,3 +15,7 @@
 - [Programmer un jeu de devinettes](ch02-00-guessing-game-tutorial.md)
 
 - [Utiliser les structures pour structurer des données apparentées](ch05-00-structs.md)
+
+## Connaissances de base sur Rust
+
+- [Gérer des projets grandissants avec les paquets, crates et modules](ch07-00-managing-growing-projects-with-packages-crates-and-modules.md)

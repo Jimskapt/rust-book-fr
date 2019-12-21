@@ -17,7 +17,7 @@ possible cases are handled.
 Rust a un opérateur de contrôle très puissant appelé `match`, qui
 vous permet de comparer une valeur avec une série de motifs et d'exécuter du
 code en fonction du motif qui correspond. Les motifs peuvent être constitués de
-valeurs pures, de noms de variables, de jokers, parmi tant d'autres; le
+valeurs pures, de noms de variables, de jokers, parmi tant d'autres ; le
 chapitre 18 va couvrir tous les différents types de motifs et ce qu'ils font. Ce
 qui fait la puissance de `match` est l'expressivité des motifs et le fait que le
 compilateur vérifie que tous les cas possibles sont bien gérés.
@@ -135,7 +135,7 @@ value, execution continues to the next arm, much as in a coin-sorting machine.
 We can have as many arms as we need: in Listing 6-3, our `match` has four arms.
 -->
 
-Lorsqu'une expression `match` s'exécute, elle compare la valeur de `piece`
+Lorsqu'une expression `match` est exécutée, elle compare la valeur de `piece`
 avec le motif de chaque branche, dans l'ordre. Si un motif correspond à la
 valeur, le code correspondant à ce motif est alors exécuté. Si ce motif ne
 correspond pas à la valeur, l'exécution passe à la prochaine branche, un peu
@@ -402,7 +402,7 @@ the same.
 -->
 
 Dans la section précédente, nous voulions obtenir la valeur interne `T` dans le
-cas de `Some` lorsqu'on utilisait `Option<T>`; nous pouvons aussi gérer les
+cas de `Some` lorsqu'on utilisait `Option<T>` ; nous pouvons aussi gérer les
 `Option<T>` en utilisant `match` comme nous l'avons fait avec l'énumération
 `USACoin` ! Au lieu de comparer des pièces, nous allons comparer les variantes
 de `Option<T>`, mais la façon d'utiliser l'expression `match` reste la même.
@@ -496,7 +496,7 @@ code in the match arm is then executed, so we add 1 to the value of `i` and
 create a new `Some` value with our total `6` inside.
 -->
 
-Est-ce que `Some(5)` correspond au `Some(i)` ? Bien sûr ! Nous avons la
+Est-ce que `Some(5)` correspond au `Some(i)` ? Bien sûr ! Nous avons la
 même variante. Le `i` va prendre la valeur contenue dans le `Some`, donc `i`
 prend la valeur `5`. La code dans la branche du `match` est exécuté, donc nous
 ajoutons 1 à la valeur de `i` et nous créons une nouvelle valeur `Some` avec

@@ -32,7 +32,7 @@ the value falls into the associated code block to be used during execution.
 
 Considérez l'expression `match` comme une machine à trier les pièces de
 monnaie : les pièces descendent le long d'une piste avec des trous de taille
-différente tout le long, et chaque pièce tombe dans le premier trou qu'elle
+différente, et chaque pièce tombe dans le premier trou qu'elle
 rencontre à sa taille. De manière similaire, les valeurs parcourent tous les
 motifs dans un `match`, et au premier motif auquel la valeur “correspond”, la
 valeur va descendre dans le bloc de code correspondant afin d'être utilisée
@@ -46,9 +46,9 @@ value in cents, as shown here in Listing 6-3.
 -->
 
 Comme nous venons de mentionner des pièces, utilisons-les avec un exemple qui
-utilise `match` ! Nous pouvons écrire une fonction qui prends en paramètre une
+utilise `match` ! Nous pouvons écrire une fonction qui prend en paramètre une
 pièce inconnue des Etats Unis d'Amérique (USA) et, de la même manière qu'une
-machine à trier, déterminons quelle pièce c'est et retourner sa valeur en
+machine à trier, déterminer quelle pièce c'est et retourner sa valeur en
 centimes, comme ci-dessous dans l'encart 6-3.
 
 <!--
@@ -95,7 +95,7 @@ the variants of the enum as its patterns</span>
 -->
 
 <span class="caption">Encart 6-3 : Une énumération et une expression `match` qui
-a les variantes de l'énumération dans ses motifs</span>
+trie les variantes de l'énumération dans ses motifs</span>
 
 <!--
 Let’s break down the `match` in the `value_in_cents` function. First, we list
@@ -112,7 +112,7 @@ est la valeur de `piece`. Cela ressemble beaucoup à une expression utilisée av
 `if`, mais il y a une grosse différence : avec `if`, l'expression doit retourner
 un valeur booléenne, mais ici, elle peut retourner n'importe quel type. Dans cet
 exemple, `piece` est de type `USACoin`, qui est l'énumération que nous avons
-défini à la ligne 1.
+définie à la ligne 1.
 
 <!--
 Next are the `match` arms. An arm has two parts: a pattern and some code. The
@@ -122,7 +122,7 @@ is just the value `1`. Each arm is separated from the next with a comma.
 -->
 
 Ensuite, nous avons les branches du `match`. Une branche a deux parties : un
-motif et du code. La première branche a ici un motif qui est la valeur
+motif et du code. La première branche a ici pour motif la valeur
 `USACoin::Penny` et ensuite l'opérateur `=>` qui sépare le motif et le code à
 exécuter. Le code dans ce cas est uniquement la valeur `1`. Chaque branche est
 séparée de la suivante par une virgule.
@@ -135,11 +135,11 @@ value, execution continues to the next arm, much as in a coin-sorting machine.
 We can have as many arms as we need: in Listing 6-3, our `match` has four arms.
 -->
 
-Lorsqu'une expression `match` s'exécute, elle compare la valeur qui en résulte
+Lorsqu'une expression `match` s'exécute, elle compare la valeur de `piece`
 avec le motif de chaque branche, dans l'ordre. Si un motif correspond à la
 valeur, le code correspondant à ce motif est alors exécuté. Si ce motif ne
 correspond pas à la valeur, l'exécution passe à la prochaine branche, un peu
-comme dans une machine de trie de pièces. Nous pouvons avoir autant de branches
+comme dans une machine de tri de pièces. Nous pouvons avoir autant de branches
 que nous avons besoin : dans l'encart 6-3, notre `match` a quatre branches.
 
 <!--
@@ -165,7 +165,7 @@ correspondante est court, comme est le cas dans l'encart 6-3 où chaque branche
 retourne simplement une valeur. Si vous voulez exécuter plusieures lignes de
 code dans une branche d'un `match`, vous devez utiliser les accolades. Par
 exemple, le code suivant va afficher “Un centime porte-bonheur !” à chaque fois
-que la méthode a été appellée avec une valeur `USACoin::Penny` mais va continuer
+que la méthode est appellée avec une valeur `USACoin::Penny` mais va continuer
 à retourner la dernière valeur du bloc, `1` :
 
 <!--
@@ -216,7 +216,7 @@ fn valeur_en_centimes(piece: USACoin) -> u8 {
 ### Patterns that Bind to Values
 -->
 
-### Des motifs qui sont reliés à des valeurs
+### Des motifs reliés à des valeurs
 
 <!--
 Another useful feature of match arms is that they can bind to the parts of the
@@ -239,9 +239,9 @@ inside it, which we’ve done here in Listing 6-4.
 
 En guise d'exemple, changeons une de nos variantes d'énumération pour stocker
 une donnée à l'intérieur. Entre 1999 et 2008, les Etats-Unis d'Amérique ont
-frappé un coté des pièces de monnaie "Quarter" avec des décors différents pour
+frappé un côté des pièces de monnaie "Quarter" avec des décors différents pour
 chacun des 50 états. Les autres pièces n'ont pas eu de décors d'états, donc
-seul le "Quarter" a cette valeur en plus. Nous pouvons ajouer cette information
+seul le "Quarter" a cette valeur en plus. Nous pouvons ajouter cette information
 à notre `enum` en changeant la variante `Quarter` pour y ajouter une valeur
 `USAState` qui y sera stockée à l'intérieur, comme nous l'avons fait dans
 l'encart 6-4.
@@ -265,7 +265,7 @@ enum Coin {
 -->
 
 ```rust
-#[derive(Debug)] // avec cela nous pourrons vérifier l'état, prochainement
+#[derive(Debug)] // pour pouvoir afficher l'État
 enum USAState {
     Alabama,
     Alaska,
@@ -310,7 +310,7 @@ quarter’s state. Then we can use `state` in the code for that arm, like so:
 Dans l'expression `match` de ce code, nous avons ajouté une variable `etat` au
 motif qui correspond à la variante `USACoin::Quarter`. Quand on aura une
 correspondance `USACoin::Quarter`, la variable `etat` sera liée à la valeur de
-l'état de cette pièce. Ensuite, nous pouvons utiliser `etat` dans le code de
+l'état de cette pièce. Ensuite, nous pourrons utiliser `etat` dans le code de
 cette branche, comme ceci :
 
 <!--
@@ -378,13 +378,13 @@ then use that binding in the `println!` expression, thus getting the inner
 state value out of the `Coin` enum variant for `Quarter`.
 -->
 
-Si nous appellions `valeur_en_centimes(USACoin::Quarter(USAState::Alaska))`,
+Si nous appelons `valeur_en_centimes(USACoin::Quarter(USAState::Alaska))`,
 `piece` vaudra `USACoin::Quarter(USAState::Alaska)`. Quand nous comparons cette
 valeur avec toutes les branches du `match`, aucune d'entre elles ne
 correspondront jusqu'à ce qu'on arrive à `USACoin::Quarter(etat)`. A partir de
 ce moment, la variable `etat` aura la valeur `USAState::Alaska`. Nous pouvons
 alors utiliser cette variable dans l'expression `println!`, ce qui nous permet
-d'avoir la valeur de l'état à l'intérieur de la variante `Quarter` de la
+d'afficher la valeur de l'état à l'intérieur de la variante `Quarter` de la
 l'énumération `USACoin`.
 
 <!--
@@ -415,16 +415,16 @@ operations.
 -->
 
 Disons que nous voulons écrire une fonction qui prend une `Option<i32>` et, si
-elle a une valeur à l'intérieur, ajouter 1 à cette valeur. S'il n'y pas de
+il y a une valeur à l'intérieur, ajouter 1 à cette valeur. S'il n'y pas de
 valeur à l'intérieur, la fonction retournera la valeur `None` et ne va rien
-essayer de faire de plus.
+faire de plus.
 
 <!--
 This function is very easy to write, thanks to `match`, and will look like
 Listing 6-5.
 -->
 
-Cette fonction est très facile à écrire, grâce au `match`, et ressemblera à
+Cette fonction est très facile à écrire, grâce à `match`, et ressemblera à
 l'encart 6-5.
 
 <!--
@@ -496,7 +496,7 @@ code in the match arm is then executed, so we add 1 to the value of `i` and
 create a new `Some` value with our total `6` inside.
 -->
 
-Est-ce que `Some(5)` correspond au `Some(i)` ? Oui, pourquoi pas ? Nous avons la
+Est-ce que `Some(5)` correspond au `Some(i)` ? Bien sûr ! Nous avons la
 même variante. Le `i` va prendre la valeur contenue dans le `Some`, donc `i`
 prend la valeur `5`. La code dans la branche du `match` est exécuté, donc nous
 ajoutons 1 à la valeur de `i` et nous créons une nouvelle valeur `Some` avec
@@ -670,4 +670,4 @@ care about only *one* of the cases. For this situation, Rust provides `if let`.
 
 Cependant, l'expression `match` peut être un peu verbeuse dans une situation où
 nous nous préoccupons uniquement *d'un seul* cas. Pour ce cas, Rust nous propose
-d'utiliser `if let`.
+d'utiliser une autre structure, `if let`.

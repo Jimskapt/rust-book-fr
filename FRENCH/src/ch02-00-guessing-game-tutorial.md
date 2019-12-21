@@ -455,7 +455,7 @@ io::stdin().read_line(&mut supposition)
 ```
 
 <!--
-If we hadn’t listed the `use std::io` line at the beginning of the program, we
+If we hadn’t put the `use std::io` line at the beginning of the program, we
 could have written this function call as `std::io::stdin`. The `stdin` function
 returns an instance of [`std::io::Stdin`][iostdin]<!-- ignore -- >, which is a
 type that represents a handle to the standard input for your terminal.
@@ -875,6 +875,12 @@ Avant d'écrire le code qui utilisera `rand`, il nous faut éditer le fichier
 maintenant ce fichier et ajoutez la ligne suivante à la fin, en dessous de
 l'en-tête de section `[dependencies]` que Cargo a créé pour vous :
 
+<!-- When updating the version of `rand` used, also update the version of
+`rand` used in these files so they all match:
+* ch07-04-bringing-paths-into-scope-with-the-use-keyword.md
+* ch14-03-cargo-workspaces.md
+-->
+
 <!--
 <span class="filename">Filename: Cargo.toml</span>
 -->
@@ -884,7 +890,7 @@ l'en-tête de section `[dependencies]` que Cargo a créé pour vous :
 ```toml
 [dependencies]
 
-rand = "0.3.14"
+rand = "0.5.5"
 ```
 
 <!--
@@ -892,11 +898,11 @@ In the *Cargo.toml* file, everything that follows a header is part of a section
 that continues until another section starts. The `[dependencies]` section is
 where you tell Cargo which external crates your project depends on and which
 versions of those crates you require. In this case, we’ll specify the `rand`
-crate with the semantic version specifier `0.3.14`. Cargo understands [Semantic
+crate with the semantic version specifier `0.5.5`. Cargo understands [Semantic
 Versioning][semver]<!-- ignore -- > (sometimes called *SemVer*), which is a
-standard for writing version numbers. The number `0.3.14` is actually shorthand
-for `^0.3.14`, which means “any version that has a public API compatible with
-version 0.3.14.”
+standard for writing version numbers. The number `0.5.5` is actually shorthand
+for `^0.5.5`, which means “any version that has a public API compatible with
+version 0.5.5.”
 -->
 
 Dans le fichier *Cargo.toml*, tout ce qui suit une en-tête fait partie de cette
@@ -904,11 +910,11 @@ section, et ce jusqu'à ce qu'une autre section débute. La section
 `[dependencies]` permet d'indiquer à Cargo de quelles *crates* externes votre
 projet dépend, et de quelle version de ces *crates* vous avez besoin.
 Dans notre cas, on ajoute comme dépendance la crate `rand` avec la version
-sémantique `0.3.14`. Cargo arrive à interpréter le
+sémantique `0.5.5`. Cargo arrive à interpréter le
 [versionnage sémantique][semver]<!-- ignore --> (aussi appelé *SemVer*), qui
-est une convention d'écriture de numéros de version. En réalité, `0.3.14` est
-une abréviation pour `^0.3.14`, ce qui signifie “toute version qui propose une
-API publique compatible avec la version 0.3.14”.
+est une convention d'écriture de numéros de version. En réalité, `0.5.5` est
+une abréviation pour `^0.5.5`, ce qui signifie “toute version qui propose une
+API publique compatible avec la version 0.5.5”.
 
 [semver]: http://semver.org
 
@@ -922,13 +928,19 @@ du projet, comme dans l'encart 2-2 :
 
 ```text
 $ cargo build
-    Updating registry `https://github.com/rust-lang/crates.io-index`
- Downloading rand v0.3.14
- Downloading libc v0.2.14
-   Compiling libc v0.2.14
-   Compiling rand v0.3.14
+    Updating crates.io index
+  Downloaded rand v0.5.5
+  Downloaded libc v0.2.62
+  Downloaded rand_core v0.2.2
+  Downloaded rand_core v0.3.1
+  Downloaded rand_core v0.4.2
+   Compiling rand_core v0.4.2
+   Compiling libc v0.2.62
+   Compiling rand_core v0.3.1
+   Compiling rand_core v0.2.2
+   Compiling rand v0.5.5
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-    Finished dev [unoptimized + debuginfo] target(s) in 2.53 secs
+    Finished dev [unoptimized + debuginfo] target(s) in 2.53 s
 ```
 
 <!--
@@ -967,17 +979,17 @@ disponibles aux autres.
 <!--
 After updating the registry, Cargo checks the `[dependencies]` section and
 downloads any crates you don’t have yet. In this case, although we only listed
-`rand` as a dependency, Cargo also grabbed a copy of `libc`, because `rand`
-depends on `libc` to work. After downloading the crates, Rust compiles them and
-then compiles the project with the dependencies available.
+`rand` as a dependency, Cargo also grabbed `libc` and `rand_core`, because
+`rand` depends on those to work. After downloading the crates, Rust compiles
+them and then compiles the project with the dependencies available.
 -->
 
 Une fois le registre mis à jour, Cargo lit la section `[dependencies]` et se
 charge de télécharger les *crates* que vous n'avez pas encore. Dans notre cas,
 bien que nous n'ayons spécifié qu'une seule dépendance, `rand`, Cargo a aussi
-téléchargé la *crate* `libc`, car `rand` dépend de `libc` pour fonctionner. Une
-fois le téléchargement terminé des *crates*, Rust les compile, puis compile
-notre projet avec les dépendances disponibles.
+téléchargé la *crate* `libc` et `rand_core`, car `rand` dépend d'elles pour
+fonctionner. Une fois le téléchargement terminé des *crates*, Rust les compile,
+puis compile notre projet avec les dépendances disponibles.
 
 <!--
 If you immediately run `cargo build` again without making any changes, you
@@ -1007,7 +1019,7 @@ uniquement deux lignes :
 ```text
 $ cargo build
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
-    Finished dev [unoptimized + debuginfo] target(s) in 2.53 secs
+    Finished dev [unoptimized + debuginfo] target(s) in 2.53s
 ```
 
 <!--
@@ -1033,7 +1045,7 @@ du code.
 Cargo has a mechanism that ensures you can rebuild the same artifact every time
 you or anyone else builds your code: Cargo will use only the versions of the
 dependencies you specified until you indicate otherwise. For example, what
-happens if next week version 0.3.15 of the `rand` crate comes out and
+happens if next week version 0.5.6 of the `rand` crate comes out and
 contains an important bug fix but also contains a regression that will break
 your code?
 -->
@@ -1042,7 +1054,7 @@ Cargo embarque une fonctionnalité qui garantie que vous pouvez recompiler le
 même artéfact à chaque fois que vous ou quelqu'un d'autre compile votre code :
 Cargo va utiliser uniquement les versions de dépendances que vous avez
 utilisées jusqu'à ce que vous indiquiez le contraire.
-Par exemple, que se passe-t-il si la semaine prochaine, la version 0.3.15 de la
+Par exemple, que se passe-t-il si la semaine prochaine, la version 0.5.6 de la
 *crate* `rand` est publiée et qu'elle apporte une correction importante, mais
 aussi qu'elle produit une régression qui va casser votre code ?
 
@@ -1055,7 +1067,7 @@ the *Cargo.lock* file. When you build your project in the future, Cargo will
 see that the *Cargo.lock* file exists and use the versions specified there
 rather than doing all the work of figuring out versions again. This lets you
 have a reproducible build automatically. In other words, your project will
-remain at `0.3.14` until you explicitly upgrade, thanks to the *Cargo.lock*
+remain at `0.5.5` until you explicitly upgrade, thanks to the *Cargo.lock*
 file.
 -->
 
@@ -1068,7 +1080,7 @@ Quand vous recompilerez votre projet plus tard, Cargo verra que le fichier
 *Cargo.lock* existe et utilisera les versions précisées à l'intérieur au lieu
 de recommencer à déterminer toutes les versions demandées.
 Ceci vous permet d'avoir automatiquement des compilations reproductibles.
-En d'autres termes, votre projet va rester sur la version `0.3.14` jusqu'à ce
+En d'autres termes, votre projet va rester sur la version `0.5.5` jusqu'à ce
 que vous le mettiez à jour explicitement, grâce au fichier *Cargo.lock*.
 
 <!--
@@ -1091,33 +1103,33 @@ rechercher toutes les versions qui correspondent à vos critères dans
 fichier *Cargo.lock*.
 
 <!--
-But by default, Cargo will only look for versions greater than `0.3.0` and less
-than `0.4.0`. If the `rand` crate has released two new versions, `0.3.15` and
-`0.4.0`, you would see the following if you ran `cargo update`:
+But by default, Cargo will only look for versions greater than `0.5.5` and less
+than `0.6.0`. If the `rand` crate has released two new versions, `0.5.6` and
+`0.6.0`, you would see the following if you ran `cargo update`:
 -->
 
 Mais par défaut, Cargo va rechercher uniquement les versions plus grandes que
-`0.3.0` et inférieures à `0.4.0`. Si la *crate* `rand` a été publiée en deux
-nouvelles versions, `0.3.15` et `0.4.0`, alors vous verrez ceci si vous
+`0.5.5` et inférieures à `0.6.0`. Si la *crate* `rand` a été publiée en deux
+nouvelles versions, `0.5.6` et `0.6.0`, alors vous verrez ceci si vous
 lancez `cargo update` :
 
 ```text
 $ cargo update
-    Updating registry `https://github.com/rust-lang/crates.io-index`
-    Updating rand v0.3.14 -> v0.3.15
+    Updating crates.io index
+    Updating rand v0.5.5 -> v0.5.6
 ```
 
 <!--
 At this point, you would also notice a change in your *Cargo.lock* file noting
-that the version of the `rand` crate you are now using is `0.3.15`.
+that the version of the `rand` crate you are now using is `0.5.6`.
 -->
 
 À partir de ce moment, vous pouvez aussi constater un changement dans le fichier
 *Cargo.lock* indiquant que la version de la *crate* `rand` que vous utilisez
-maintenant est la `0.3.15`.
+maintenant est la `0.5.6`.
 
 <!--
-If you wanted to use `rand` version `0.4.0` or any version in the `0.4.x`
+If you wanted to use `rand` version `0.6.0` or any version in the `0.6.x`
 series, you’d have to update the *Cargo.toml* file to look like this instead:
 -->
 
@@ -1127,8 +1139,7 @@ ceci :
 
 ```toml
 [dependencies]
-
-rand = "0.4.0"
+rand = "0.6.0"
 ```
 
 <!--
@@ -1518,6 +1529,7 @@ However, the code in Listing 2-4 won’t compile yet. Let’s try it:
 Cependant, notre code dans l'encart 2-4 ne compile pas encore. Essayons de le
 faire :
 
+<!-- markdownlint-disable -->
 <!--
 ```text
 $ cargo build
@@ -1526,7 +1538,7 @@ error[E0308]: mismatched types
   -- > src/main.rs:23:21
    |
 23 |     match guess.cmp(&secret_number) {
-   |                     ^^^^^^^^^^^^^^ expected struct `std::string::String`, found integral variable
+   |                     ^^^^^^^^^^^^^^ expected struct `std::string::String`, found integer
    |
    = note: expected type `&std::string::String`
    = note:    found type `&{integer}`
@@ -1535,6 +1547,7 @@ error: aborting due to previous error
 Could not compile `guessing_game`.
 ```
 -->
+<!-- markdownlint-restore -->
 
 ```text
 $ cargo build
@@ -1543,7 +1556,7 @@ error[E0308]: mismatched types
   -- > src/main.rs:23:21
    |
 23 |     match supposition.cmp(&nombre_secret) {
-   |                           ^^^^^^^^^^^^^^ expected struct `std::string::String`, found integral variable
+   |                           ^^^^^^^^^^^^^^ expected struct `std::string::String`, found integer
    |
    = note: expected type `&std::string::String`
    = note:    found type `&{integer}`
@@ -1758,7 +1771,8 @@ L'utilisation de `parse` peut facilement mener à une erreur. Si par exemple,
 le texte contient `A👍%`, il ne sera pas possible de le convertir en nombre.
 Comme elle peut échouer, la méthode `parse` retourne un type `Result`, comme
 celui que la méthode `read_line` retourne (comme nous l'avons vu plus tôt dans
-[“Gérer les erreurs potentielles avec le type `Result`”](#gérer-les-erreurs-potentielles-avec-le-type-result)<!-- ignore-->).
+[“Gérer les erreurs potentielles avec le type
+`Result`”](#gérer-les-erreurs-potentielles-avec-le-type-result)<!-- ignore-->).
 Nous allons gérer ce `Result` de la même manière, avec à nouveau la méthode
 `expect`. Si `parse` retourne une variante `Err` de `Result` car elle ne peut
 pas créer un nombre à partir de la chaîne de caractères, l'appel à
@@ -1911,11 +1925,12 @@ user can take advantage of that in order to quit, as shown here:
 L'utilisateur pourrait quand même interrompre le programme en utilisant le
 raccourci clavier <span class="keystroke">ctrl-c</span>.
 Mais il y a une autre façon d'échapper à ce monstre insatiable, comme nous
-l'avons abordé dans la partie
-[“Comparer le nombre saisi au nombre secret”](#comparer-le-nombre-saisi-au-nombre-secret)<!-- ignore --> :
-si l'utilisateur saisit quelque chose qui n'est pas un nombre, le programme va
+l'avons abordé dans la partie [“Comparer le nombre saisi au nombre
+secret”](#comparer-le-nombre-saisi-au-nombre-secret)<!-- ignore --> : si
+l'utilisateur saisit quelque chose qui n'est pas un nombre, le programme va
 planter. L'utilisateur peut procéder ainsi pour le quitter, comme ci-dessous :
 
+<!-- markdownlint-disable -->
 <!--
 ```text
 $ cargo run
@@ -1943,6 +1958,7 @@ note: Run with `RUST_BACKTRACE=1` for a backtrace.
 error: Process didn't exit successfully: `target/debug/guess` (exit code: 101)
 ```
 -->
+<!-- markdownlint-restore -->
 
 ```text
 $ cargo run

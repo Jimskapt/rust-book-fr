@@ -165,5 +165,5 @@ français.
 | vector | vecteur | - |
 | version control system (VCS) | système de gestion de versions (VCS) | - |
 | warning | avertissement | - |
-| wildcard | jocker | - |
+| wildcard | joker | - |
 | zero-cost abstraction | abstraction sans coût | - |

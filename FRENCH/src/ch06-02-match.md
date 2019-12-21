@@ -35,7 +35,7 @@ monnaie : les pièces descendent le long d'une piste avec des trous de taille
 différente tout le long, et chaque pièce tombe dans le premier trou qu'elle
 rencontre à sa taille. De manière similaire, les valeurs parcourent tous les
 motifs dans un `match`, et au premier motif auquel la valeur “correspond”, la
-valeur va descendre dans le bloc de code correspondant afin d'être utilisé
+valeur va descendre dans le bloc de code correspondant afin d'être utilisée
 pendant son exécution.
 
 <!--

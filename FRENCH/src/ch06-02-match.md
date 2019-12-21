@@ -14,7 +14,7 @@ expressiveness of the patterns and the fact that the compiler confirms that all
 possible cases are handled.
 -->
 
-Rust a un opérateur de contrôle très puissant qui s'appelle `match` et qui
+Rust a un opérateur de contrôle très puissant appelé `match`, qui
 vous permet de comparer une valeur avec une série de motifs et d'exécuter du
 code en fonction du motif qui correspond. Les motifs peuvent être constitués de
 valeurs pures, de nom de variables, de jockers, parmis tant d'autres; le

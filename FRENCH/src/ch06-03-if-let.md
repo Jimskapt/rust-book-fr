@@ -2,7 +2,7 @@
 ## Concise Control Flow with `if let`
 -->
 
-## Une structure de contrôle concise avec `if let`
+## Une structure de contrôle concise : `if let`
 
 <!--
 The `if let` syntax lets you combine `if` and `let` into a less verbose way to
@@ -11,11 +11,10 @@ program in Listing 6-6 that matches on an `Option<u8>` value but only wants to
 execute code if the value is 3.
 -->
 
-La syntaxe `if let` vous permet de combiner `if` et `let` de manière moins
-verbeuse afin de récupérer des valeurs qui correspondent à un motif tout en
-ignorant les autres. Imaginons le programme dans l'encart 6-6 qui fait un
-`match` sur une valeur `Option<u8>` mais n'a besoin d'exécuter du code que
-si la valeur est 3.
+La syntaxe `if let` vous permet de combiner `if` et `let` afin de gérer une
+valeur qui correspond à un motif tout en ignorant les autres possibilités.
+Imaginons le programme dans l'encart 6-6 qui fait un `match` sur une valeur
+`Option<u8>` mais n'a besoin d'exécuter du code que si la valeur est 3.
 
 <!--
 ```rust
@@ -60,8 +59,9 @@ Instead, we could write this in a shorter way using `if let`. The following
 code behaves the same as the `match` in Listing 6-6:
 -->
 
-A la place, nous pourrions écrire le même programme de manière plus concise en utilisant `if let`.
-Le code suivant se comporte comme le `match` de l'encart 6-6 :
+A la place, nous pourrions écrire le même programme de manière plus concise en
+utilisant `if let`. Le code suivant se comporte comme le `match` de l'encart
+6-6 :
 
 <!--
 ```rust
@@ -97,11 +97,10 @@ situation and whether gaining conciseness is an appropriate trade-off for
 losing exhaustive checking.
 -->
 
-L'utilisation de `if let` représente moins d'écriture, moins d'indentation, et
-moins de code standard. Cependant, vous perdez la vérification de l'exhaustivité
-qu'assure le `match`. Choisir entre `match` et `if let` dépend de la situation
-dans laquelle vous êtes et est un équilibre entre choisir d'être concis et de
-sacrifier la vérification exhaustive.
+Utiliser `if let` permet d'écrire moins de code, et de moins l'indenter.
+Cependant, vous perdez la vérification de l'exhaustivité qu'assure le `match`.
+Choisir entre `match` et `if let` dépend de la situation : à vous de choisir
+un équilibre entre être concis et appliquer une vérification exhaustive.
 
 <!--
 In other words, you can think of `if let` as syntax sugar for a `match` that
@@ -127,7 +126,7 @@ Nous pouvons joindre un `else` à un `if let`. Le bloc de code qui va dans le
 `match`. Souvenez-vous de la définition de l'énumération `USACoin` de l'encart
 6-4, où la variante `Quarter` avait aussi une valeur `USAState`. Si nous
 voulions compter toutes les pièces qui ne sont pas des `Quarter` que nous voyons
-passer, tout en signalant l'état des `Quarter`, nous pourrions le faire avec
+passer, tout en affichant l'état des `Quarter`, nous pourrions le faire avec
 une expression `match` comme ceci :
 
 <!--
@@ -231,9 +230,8 @@ If you have a situation in which your program has logic that is too verbose to
 express using a `match`, remember that `if let` is in your Rust toolbox as well.
 -->
 
-Si vous vous trouvez dans une situation dans laquelle votre programme a une
-logique qui est trop verbeuse en utilisant un `match`, souvenez-vous que
-`if let` est aussi dans votre boite à outils Rust.
+Si vous trouvez que votre programme est alourdi par l'utilisation d'un `match`,
+souvenez-vous que `if let` est aussi présent dans votre boite à outils Rust.
 
 <!--
 ## Summary

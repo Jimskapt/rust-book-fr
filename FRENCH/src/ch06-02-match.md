@@ -668,6 +668,6 @@ However, the `match` expression can be a bit wordy in a situation in which we
 care about only *one* of the cases. For this situation, Rust provides `if let`.
 -->
 
-Cependant, l'expression `match` peut être un peu verbeuse dans une situation où
+Cependant, l'expression `match` peut être un peu lourde dans une situation où
 nous nous préoccupons uniquement *d'un seul* cas. Pour ce cas, Rust nous propose
 d'utiliser une autre structure, `if let`.

@@ -44,7 +44,7 @@ français.
 | dependency | dépendance | - |
 | destructure | déstructurer | - |
 | DevOps | DevOps | - |
-| directory | répertoire | - |
+| directory | dossier | - |
 | dot notation | la notation avec un point | - |
 | enum | énumération | - |
 | enumeration | énumération | - |

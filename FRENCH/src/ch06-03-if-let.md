@@ -14,7 +14,7 @@ execute code if the value is 3.
 La syntaxe `if let` vous permet de combiner `if` et `let` de manière moins
 verbeuse afin de récupérer des valeurs qui correspondent à un motif tout en
 ignorant les autres. Imaginons le programme dans l'encart 6-6 qui fait un
-`match` sur une valeur `Option<u8>` mais a besoin d'exécuter du code uniquement
+`match` sur une valeur `Option<u8>` mais n'a besoin d'exécuter du code que
 si la valeur est 3.
 
 <!--
@@ -50,17 +50,17 @@ have to add `_ => ()` after processing just one variant, which is a lot of
 boilerplate code to add.
 -->
 
-Nous voulons faire quelque chose avec la valeur `Some(3)` mais rien faire avec
+Nous voulons faire quelque chose avec la valeur `Some(3)` mais ignorer
 les autres valeurs de type `Some<u8>` ou la valeur `None`. Pour satisfaire
 l'expression `match`, nous devons ajouter `_ => ()` après avoir géré une seule
-variante, ce qui représente trop de code à ajouter.
+variante, ce qui fait beaucoup de code inutile.
 
 <!--
 Instead, we could write this in a shorter way using `if let`. The following
 code behaves the same as the `match` in Listing 6-6:
 -->
 
-A la place, nous pourrions écrire de manière plus concise en utilisant `if let`.
+A la place, nous pourrions écrire le même programme de manière plus concise en utilisant `if let`.
 Le code suivant se comporte comme le `match` de l'encart 6-6 :
 
 <!--
@@ -123,11 +123,11 @@ expression like this:
 -->
 
 Nous pouvons joindre un `else` à un `if let`. Le bloc de code qui va dans le
-`else` est le même que le bloc de code qui va dans le cas `_` dans l'expression
+`else` est le même que le bloc de code qui va dans le cas `_` avec l'expression
 `match`. Souvenez-vous de la définition de l'énumération `USACoin` de l'encart
 6-4, où la variante `Quarter` avait aussi une valeur `USAState`. Si nous
 voulions compter toutes les pièces qui ne sont pas des `Quarter` que nous voyons
-passer, tout en signalant l'état des `Quarter`, nous pourrions faire ceci avec
+passer, tout en signalant l'état des `Quarter`, nous pourrions le faire avec
 une expression `match` comme ceci :
 
 <!--
@@ -178,7 +178,7 @@ match piece {
 Or we could use an `if let` and `else` expression like this:
 -->
 
-Ou nous pourrions utiliser des expressions `if let` et `else` comme ceci :
+Ou nous pourrions utiliser une expression `if let`/`else` comme ceci :
 
 <!--
 ```rust
@@ -253,7 +253,7 @@ Nous avons désormais appris comment utiliser les énumérations pour créer des
 types personnalisés qui peuvent faire partie d'un jeu de valeurs recensées. Nous
 avons montré comment le type `Option<T>` de la bibliothèque standard vous aide
 à utiliser le système de types pour éviter les erreurs. Lorsque les valeurs
-d'énumération ont une valeur à l'intérieur d'elles, vous pouvez utiliser `match`
+d'énumération contiennent des données, vous pouvez utiliser `match`
 ou `if let` pour extraire et utiliser ces valeurs, à choisir en fonction du
 nombre de cas que vous voulez gérer.
 
@@ -267,7 +267,7 @@ function expects.
 Vos programmes Rust peuvent maintenant décrire des concepts métier à l'aide de
 structures et d'énumérations. Créer des types personnalisés à utiliser dans
 votre API assure la sécurité des types : le compilateur s'assurera que vos
-fonctions ne reçoivent uniquement des valeurs du type attendu.
+fonctions ne reçoivent que des valeurs du type attendu.
 
 <!--
 In order to provide a well-organized API to your users that is straightforward

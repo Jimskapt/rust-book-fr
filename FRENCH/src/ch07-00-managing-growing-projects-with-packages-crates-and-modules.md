@@ -14,7 +14,7 @@ where to go to change how a feature works.
 
 Lorsque vous commencez à écrire des gros programmes, organiser votre code va
 devenir important car vous ne pourrez plus vous souvenir de l'intégralité de
-votre programme de tête. En regroupant des fonctionnalités qui ont des points
+votre programme. En regroupant des fonctionnalités qui ont des points
 communs et en séparant des autres fonctionnalités, vous clarifiez l'endroit où
 trouver le code qui implémente une fonctionnalité spécifique et où aller pour
 changer une fonctionnalité.
@@ -52,7 +52,7 @@ of detail you have to keep in your head.
 -->
 
 En plus de pouvoir regrouper des fonctionnalités, l'encapsulation des éléments
-implémentés vous permet de réutiliser votre code à un niveau supérieur : lorsque
+implémentés vous permet de réutiliser votre code comme une abstraction : lorsque
 vous avez implémenté une opération, un autre code peut appeler ce code via
 l'interface de programmation publique du code sans se soucier de connaître les
 détails de son implémentation. La façon dont vous écrivez le code définit
@@ -75,8 +75,7 @@ Un concept qui lui est associé est la portée : le contexte dans lequel le cod
 est écrit a un jeu de noms qui sont définis comme “dans la portée”. Quand ils
 lisent, écrivent et compilent du code, les développeurs et les compilateurs ont
 besoin de savoir à un endroit précis quel nom se réfère à à quelle variable,
-fonction, structure, énumération, module, constante, ou tout autre élément et
-ce que signifie cet élément.
+que cet objet soit une fonction, une structure, une énumération, un module, une constante...
 
 <!--
 Rust has a number of features that allow you to manage your code’s
@@ -112,7 +111,7 @@ explain how to use them to manage scope. By the end, you should have a solid
 understanding of the module system and be able to work with scopes like a pro!
 -->
 
-Dans ce chapitre, nous découvrirons ces fonctionnalités, voir comment elles
+Dans ce chapitre, nous allons découvrir ces fonctionnalités, voir comment elles
 intéragissent, et expliquer comment les utiliser pour gérer les portées. À
 l'issue de ce chapitre, vous aurez de solides connaissances sur le système de
 modules et vous pourrez travailler avec les portées comme un pro !

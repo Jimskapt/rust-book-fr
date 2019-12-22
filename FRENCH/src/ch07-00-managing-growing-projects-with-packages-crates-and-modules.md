@@ -16,8 +16,8 @@ Lorsque vous commencez à écrire des gros programmes, organiser votre code va
 devenir important car vous ne pourrez plus vous souvenir de l'intégralité de
 votre programme. En regroupant des fonctionnalités qui ont des points
 communs et en séparant des autres fonctionnalités, vous clarifiez l'endroit où
-trouver le code qui implémente une fonctionnalité spécifique et où aller pour
-changer une fonctionnalité.
+trouver le code qui implémente une fonctionnalité spécifique afin de pouvoir le
+relire ou le modifier.
 
 <!--
 The programs we’ve written so far have been in one module in one file. As a
@@ -58,8 +58,8 @@ l'interface de programmation publique du code sans se soucier de connaître les
 détails de son implémentation. La façon dont vous écrivez le code définit
 quelles sont les parties sont publiques pour qu'un autre code puisse l'utiliser
 et quelles parties sont des détails d'implémentation privées dont vous vous
-réservez le droit de modifier. C'est un autre moyen de limiter la quantité de
-détails que vous devez garder à l'esprit.
+réservez le droit de modifier. C'est un autre moyen de limiter le nombre
+d'éléments de l'API pour celui qui l'utilise.
 
 <!--
 A related concept is scope: the nested context in which code is written has a
@@ -85,10 +85,12 @@ collectively referred to as the *module system*, and include:
 -->
 
 Rust a de nombreuses fonctionnalités qui vous permettent de gérer l'organisation
-de votre code, comprenant quels éléments sont accessibles, quels éléments sont
-privés, et quels noms sont dans quelles portées de notre programme. Ces
-fonctionnalités, souvent désignées par la communauté par le *système de
-modules*, comprend :
+de votre code, grâce à ce que la communauté Rust appelle le *système de
+modules*.
+Ce système définit quels sont les éléments qui sont accessibles depuis
+l'extérieur de la bibliothèque (notion de privé ou public), ansi que leur
+portée.
+Ces fonctionnalités comprennent :
 
 <!--
 * **Packages:** A Cargo feature that lets you build, test, and share crates

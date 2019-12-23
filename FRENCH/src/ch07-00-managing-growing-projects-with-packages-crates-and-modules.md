@@ -74,8 +74,11 @@ same name in the same scope; tools are available to resolve name conflicts.
 Un concept qui lui est associé est la portée : le contexte dans lequel le code
 est écrit a un jeu de noms qui sont définis comme “dans la portée”. Quand ils
 lisent, écrivent et compilent du code, les développeurs et les compilateurs ont
-besoin de savoir à un endroit précis quel nom se réfère à à quelle variable,
-que cet objet soit une fonction, une structure, une énumération, un module, une constante...
+besoin de savoir précisément ce que désigne une entité, que cette entité soit
+une variable, une fonction, une structure, une énumération, un module, une
+constante ... Vous pouvez créer des portées et décider si les entités sont dans
+la portée ou non. Vous ne pouvez pas avoir deux entités avec le même nom dans la
+même portée ; cependant des outils existent pour résoudre les conflits de nom.
 
 <!--
 Rust has a number of features that allow you to manage your code’s

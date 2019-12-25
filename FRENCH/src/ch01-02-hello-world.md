@@ -55,11 +55,11 @@ votre dossier utilisateur et de ranger tous vos projets là-dedans.
 
 <!--
 Open a terminal and enter the following commands to make a *projects* directory
-and a directory for the Hello, world! project within the *projects* directory.
+and a directory for the “Hello, world!” project within the *projects* directory.
 -->
 
 Ouvrez un terminal et écrivez les commandes suivantes pour créer un
-dossier *projects* et un dossier pour le projet *Hello, world!* à l'intérieur
+dossier *projects* et un dossier pour le projet “Hello, world!” à l'intérieur
 de ce dossier *projects*.
 
 <!--
@@ -80,7 +80,6 @@ For Windows CMD, enter this:
 -->
 
 Avec CMD sous Windows, écrivez ceci :
-
 
 ```cmd
 > mkdir "%USERPROFILE%\projects"
@@ -186,11 +185,11 @@ programme Rust. Cela fait de vous un développeur Rust — bienvenue !
 ### Structure d'un programme Rust
 
 <!--
-Let’s review in detail what just happened in your Hello, world! program.
+Let’s review in detail what just happened in your “Hello, world!” program.
 Here’s the first piece of the puzzle:
 -->
 
-Regardons en détail ce qui s'est passé dans votre programme *Hello, world!*.
+Regardons en détail ce qui s'est passé dans votre programme “Hello, world!”.
 Voici le premier morceau du puzzle :
 
 ```rust
@@ -394,11 +393,11 @@ $ ./main # ou .\main.exe sous Windows
 ```
 
 <!--
-If *main.rs* was your Hello, world! program, this line would print `Hello,
+If *main.rs* was your “Hello, world!” program, this line would print `Hello,
 world!` to your terminal.
 -->
 
-Si *main.rs* était votre programme *Hello, world!*, cette ligne devrait afficher
+Si *main.rs* était votre programme “Hello, world!”, cette ligne devrait afficher
 `Hello, world!` dans votre terminal.
 
 <!--

@@ -1,3 +1,19 @@
 {
-    "editor.rulers": [80]
+    "editor.rulers": [80],
+    "markdownlint.config": {
+        "MD001": false,
+        "MD002": false,
+        "MD007": false,
+        "MD013": {
+            "headings": false,
+            "tables": false,
+            "code_blocks": false
+        },
+        "MD014": false,
+        "MD026": false,
+        "MD033": {
+            "allowed_elements": ["img", "span", "sup"]
+        },
+        "MD041": false
+    }
 }

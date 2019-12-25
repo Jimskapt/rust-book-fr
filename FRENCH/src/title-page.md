@@ -12,14 +12,14 @@
 Rust*
 
 <!--
-This version of the text assumes you’re using Rust 1.31.0 or later with
+This version of the text assumes you’re using Rust 1.37.0 or later with
 `edition="2018"` in *Cargo.toml* of all projects to use Rust 2018 Edition
 idioms. See the [“Installation” section of Chapter 1][install]<!-- ignore -- >
 to install or update Rust, and see the new [Appendix E][editions]<!-- ignore
 -- > for information on editions.
 -->
 
-Cette version du document suppose que vous utilisez Rust 1.31.0 ou ultérieur
+Cette version du document suppose que vous utilisez Rust 1.37.0 ou ultérieur
 avec `edition="2018"` dans *Cargo.toml* de tous les projets afin d'utiliser les
 expressions idiomatiques de l'édition 2018 de Rust.
 Voir la [section “Installation” du chapitre 1][install]<!-- ignore -->

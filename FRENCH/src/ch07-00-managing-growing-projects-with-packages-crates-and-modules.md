@@ -34,7 +34,7 @@ Le programme que nous avons écrit précédemment était dans un module et dans 
 seul fichier. Quand le projet grandit, vous pouvez organiser votre code en le
 découpant en plusieurs modules et ensuite en plusieurs fichiers. Un paquet peut
 contenir plusieurs crates binaires et accessoirement une crate de bibliothèque.
-Lorsque un paquet grandit, vous pouvez en extraire des parties dans des crates
+Lorsqu'un paquet grandit, vous pouvez en extraire des parties dans des crates
 séparées qui deviennent des dépendances externes. Ce chapitre va aborder toutes
 ces techniques. Pour un projet de très grande envergure qui a des paquets
 interconnectés qui évoluent ensemble, Cargo propose les espaces de travail, que

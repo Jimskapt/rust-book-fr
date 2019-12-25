@@ -14,6 +14,7 @@ when you need to translate a technicial term.
 ### Translation of Rust code
 
 In rust code, we should translate :
+
 - comment
 - string text
 - variable name
@@ -45,7 +46,7 @@ instead of space on punctuation who need this space before (like `:`, `!`, `?`,
 ### Translate flow
 
 *NB : the following term `main translate repository` refers to
-https://github.com/Jimskapt/rust-book-fr*
+<https://github.com/Jimskapt/rust-book-fr>*
 
 01. Open or edit an GitHub issue in the *main translate repository* to report to
     other that you are working on `ch00-00-introduction`.
@@ -101,7 +102,7 @@ https://github.com/Jimskapt/rust-book-fr*
     repository*)
 03. `git merge english-book/master` (merging latest changes from *English main
     repository* on current branch)
-    
+
 It is also the same to update your fork with the main translate repository.
 
 ### Add a translation term
@@ -113,3 +114,21 @@ It is also the same to update your fork with the main translate repository.
 02. Edit the `/FRENCH/src/translation-terms.md` file with your new technical
     term translation. Write it in singular and if necessary, specify the gender
     of the translation in `Remarques` column.
+
+### Translate figures
+
+Let's suppose you want to translate Figure 42-69.
+You need to have the `dot` installed, for instance after typing
+`sudo apt install graphviz`.
+
+01. Copy the DOT figure you want to translate (for instance, `trpl42-69.dot`)
+    from `/dot/` to `/FRENCH/dot/`.
+02. Edit `/FRENCH/dot/trpl42-69.dot` and translate the text into French.
+    You should not translate the names and values of attributes.
+03. Run `dot FRENCH/dot/trpl42-69.dot -Tsvg > FRENCH/src/img/trpl42-69.svg`
+04. Edit the new file `FRENCH/src/img/trpl42-69.svg`:
+    - Within the `<svg>` tag, remove the `width` and `height` attributes, and
+      set the `viewBox` attribute to `0.00 0.00 1000.00 1000.00` or other values
+      that don't cut off the image.
+    - Replace every instance of `font-family="Times,serif"` with
+      `font-family="Times,Liberation Serif,serif"`.

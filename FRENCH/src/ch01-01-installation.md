@@ -176,12 +176,16 @@ pour Visual Studio 2013 ou plus récent. La méthode la plus facile pour obtenir
 les outils de compilation est d'installer
 [Build Tools pour Visual Studio 2019][visualstudio].
 
-[install]: https://www.rust-lang.org/tools/install
+<!-- markdownlint-disable -->
 <!--
+[install]: https://www.rust-lang.org/tools/install
 [visualstudio]: https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2019
 FR translation: the website redirects to French version, we lose the "id" link.
 Fix is directly below:
 -->
+<!-- markdownlint-restore -->
+
+[install]: https://www.rust-lang.org/tools/install
 [visualstudio]: https://www.visualstudio.com/fr/downloads/#build-tools-for-visual-studio-2019
 
 <!--
@@ -285,14 +289,14 @@ sont [le forum d'utilisateurs][users] et [Stack Overflow][stackoverflow].
 ### Documentation en local
 
 <!--
-The installer also includes a copy of the documentation locally, so you can
-read it offline. Run `rustup doc` to open the local documentation in your
-browser.
+The installation of Rust also includes a copy of the documentation locally, so
+you can read it offline. Run `rustup doc` to open the local documentation in
+your browser.
 -->
 
-L'installateur embarque aussi une copie de la documentation en local pour que
-vous puissiez la lire hors ligne. Lancez `rustup doc` afin
-d'ouvrir la documentation locale dans votre navigateur.
+L'installation de Rust embarque aussi une copie de la documentation en local
+pour que vous puissiez la lire hors ligne. Lancez `rustup doc` afin d'ouvrir la
+documentation locale dans votre navigateur.
 
 <!--
 Any time a type or function is provided by the standard library and you’re not

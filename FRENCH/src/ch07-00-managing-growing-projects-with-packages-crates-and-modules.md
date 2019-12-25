@@ -51,15 +51,15 @@ that you reserve the right to change. This is another way to limit the amount
 of detail you have to keep in your head.
 -->
 
-En plus de pouvoir regrouper des fonctionnalités, l'encapsulation des éléments
-implémentés vous permet de réutiliser votre code comme une abstraction : lorsque
-vous avez implémenté une opération, un autre code peut appeler ce code via
-l'interface de programmation publique du code sans se soucier de connaître les
-détails de son implémentation. La façon dont vous écrivez le code définit
-quelles sont les parties sont publiques pour qu'un autre code puisse l'utiliser
-et quelles parties sont des détails d'implémentation privées dont vous vous
-réservez le droit de modifier. C'est un autre moyen de limiter le nombre
-d'éléments de l'API pour celui qui l'utilise.
+En plus de regrouper des fonctionnalités, les modules vous permettent
+d'encapsuler les détails de l'implémentation d'une opération : vous pouvez
+écrire du code puis l'utiliser comme une abstraction à travers l'interface de
+programmation publique (API) du code sans se soucier de connaître les détails de
+son implémentation. La façon dont vous écrivez le code définit quelles sont les
+parties sont publiques pour qu'un autre code puisse l'utiliser et quelles
+parties sont des détails d'implémentation privées dont vous vous réservez le
+droit de modifier. C'est un autre moyen de limiter le nombre d'éléments de
+l'API pour celui qui l'utilise.
 
 <!--
 A related concept is scope: the nested context in which code is written has a

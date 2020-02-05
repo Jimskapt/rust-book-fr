@@ -36,10 +36,13 @@
     - [La structure de contrôle `match`](ch06-02-match.md)
     - [Une structure de contrôle concise : `if let`](ch06-03-if-let.md)
 
-
 ## Connaissances de base sur Rust
 
 - [Gérer des projets grandissants avec les paquets, crates et modules](ch07-00-managing-growing-projects-with-packages-crates-and-modules.md)
     - [Les paquets et les crates](ch07-01-packages-and-crates.md)
     - [Définir des modules pour gérer la portée et la protection](ch07-02-defining-modules-to-control-scope-and-privacy.md)
     - [Désigner un élément dans l'arborescence de modules](ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md)
+
+## Penser en Rust
+
+- [Les fonctionnalités orientées objet de Rust](ch17-00-oop.md)

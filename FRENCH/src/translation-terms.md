@@ -236,4 +236,5 @@ français.
 | version control system (VCS) | système de gestion de versions (VCS) | - |
 | warning | avertissement | - |
 | wildcard | joker | - |
+| workspace | espace de travail | - |
 | zero-cost abstraction | abstraction sans coût | - |

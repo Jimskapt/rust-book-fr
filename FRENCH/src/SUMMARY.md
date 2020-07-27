@@ -49,3 +49,7 @@
 - [Les collections standard](ch08-00-common-collections.md)
     - [Stocker des listes de valeurs avec des vecteurs](ch08-01-vectors.md)
     - [Stocker du texte encodé en UTF-8 avec les Strings](ch08-02-strings.md)
+
+## Repenser les choses en Rust
+
+- [Les fonctionnalités des langages fonctionnels : les itérateurs et les fermetures](ch13-00-functional-features.md)

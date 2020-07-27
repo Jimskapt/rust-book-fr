@@ -175,6 +175,7 @@ français.
 | scalar | scalaire | - |
 | scope | portée | - |
 | script | script | - |
+| secret | secret | - |
 | section header | en-tête de section | - |
 | semantic version | version sémantique | - |
 | semantic versioning | versionnage sémantique | abréviation : SemVer |
@@ -211,6 +212,7 @@ français.
 | systems-level | niveau système | - |
 | systems-level code | code système | - |
 | terminal | terminal | - |
+| token | jeton | - |
 | trait | trait | - |
 | tree | arborescence | - |
 | troubleshooting | dépannage | - |
@@ -236,4 +238,5 @@ français.
 | version control system (VCS) | système de gestion de versions (VCS) | - |
 | warning | avertissement | - |
 | wildcard | joker | - |
+| yank | déprécier | - |
 | zero-cost abstraction | abstraction sans coût | - |

@@ -226,6 +226,7 @@ français.
 | unit-like struct | structure unité | - |
 | unit type | type unité | - |
 | unit value | valeur unité | - |
+| unrolling | déroulage | pour une boucle à taille connue à la compilation |
 | unsafe | non sécurisé | - |
 | unsigned | sans signe (toujours positif) | - |
 | unsigned | non signé | - |

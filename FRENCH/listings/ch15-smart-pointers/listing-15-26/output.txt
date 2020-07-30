@@ -1,0 +1,11 @@
+$ cargo run
+   Compiling cons-list v0.1.0 (file:///projects/cons-list)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.53s
+     Running `target/debug/cons-list`
+compteur initial de a = 1
+prochain élément de a = Some(RefCell { value: Nil })
+compteur de a après création de b = 2
+compteur initial de b = 1
+prochain élément de b = Some(RefCell { value: Cons(5, RefCell { value: Nil }) })
+compteur de b après avoir changé a = 2
+compteur de a après avoir changé a = 2

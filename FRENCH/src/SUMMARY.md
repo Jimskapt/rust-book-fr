@@ -49,3 +49,7 @@
 - [Les collections standard](ch08-00-common-collections.md)
     - [Stocker des listes de valeurs avec des vecteurs](ch08-01-vectors.md)
     - [Stocker du texte encodé en UTF-8 avec les Strings](ch08-02-strings.md)
+
+## Sujets avancés
+
+- [Les motifs et le filtrage par motif](ch18-00-patterns.md)

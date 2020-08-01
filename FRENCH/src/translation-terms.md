@@ -211,6 +211,7 @@ français.
 | systems-level | niveau système | - |
 | systems-level code | code système | - |
 | terminal | terminal | - |
+| thread pool | groupe de tâches | - |
 | trait | trait | - |
 | tree | arborescence | - |
 | troubleshooting | dépannage | - |

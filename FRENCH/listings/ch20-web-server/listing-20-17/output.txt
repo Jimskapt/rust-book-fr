@@ -1,0 +1,17 @@
+$ cargo check
+    Checking salutations v0.1.0 (file:///projects/salutations)
+error[E0382]: use of moved value: `reception`
+  --> src/lib.rs:27:42
+   |
+22 |         let (envoi, reception) = mpsc::channel();
+   |                     --------- move occurs because `reception` has type `std::sync::mpsc::Receiver<Job>`, which does not implement the `Copy` trait
+...
+27 |             operateurs.push(Worker::new(id, reception));
+   |                                             ^^^^^^^^^ value moved here, in previous iteration of loop
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0382`.
+error: could not compile `salutations`.
+
+To learn more, run the command again with --verbose.

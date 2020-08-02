@@ -1,0 +1,14 @@
+$ cargo check
+    Checking salutations v0.1.0 (file:///projects/salutations)
+error[E0599]: no method named `executer` found for type `salutations::GroupeTaches` in the current scope
+  --> src/bin/main.rs:16:14
+   |
+16 |         groupe.executer(|| {
+   |                ^^^^^^^^ method not found in `salutations::GroupeTaches`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `salutations`.
+
+To learn more, run the command again with --verbose.

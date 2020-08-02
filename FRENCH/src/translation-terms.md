@@ -56,6 +56,7 @@ français.
 | dangling | pendouillant | - |
 | data race | accès concurrent | - |
 | data representation | modèle de données | - |
+| deadlock | interblocage | - |
 | deallocate | désalloué | - |
 | debug | déboguer | - |
 | debugging | débogage | - |
@@ -87,6 +88,7 @@ français.
 | grapheme cluster | groupe de graphèmes  | - |
 | glob | global | opérateur |
 | global scope | portée globale | - |
+| green thread | tâche virtuelle | - |
 | guessing game | jeu de devinettes | - |
 | handle | référence abstraite | - |
 | hash | hash / relatif au hachage | - |
@@ -155,9 +157,11 @@ français.
 | prelude | étape préliminaire | - |
 | privacy | protection | explication de la protection des éléments d'un module |
 | procedural macro | macro procédurale | - |
+| process | processus | - |
 | project chapter | chapitre de projet | - |
 | race condition | situation de concurrence | - |
 | pushing onto the stack | empiler | - |
+| race condition | situation de concurrence | - |
 | raw identifier | identificateur brut | - |
 | README | README | - |
 | refactoring | remaniement | - |
@@ -211,6 +215,7 @@ français.
 | systems-level | niveau système | - |
 | systems-level code | code système | - |
 | terminal | terminal | - |
+| thread | tâche | - |
 | trait | trait | - |
 | tree | arborescence | - |
 | troubleshooting | dépannage | - |

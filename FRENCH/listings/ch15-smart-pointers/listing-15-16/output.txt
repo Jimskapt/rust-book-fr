@@ -1,0 +1,7 @@
+$ cargo run
+   Compiling drop-example v0.1.0 (file:///projects/drop-example)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.73s
+     Running `target/debug/drop-example`
+PointeurPerso créé.
+Nettoyage d'un PointeurPerso avec la donnée `some data` !
+PointeurPerso libéré avant la fin du main.

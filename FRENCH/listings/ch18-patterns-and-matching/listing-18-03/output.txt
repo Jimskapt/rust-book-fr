@@ -1,0 +1,7 @@
+$ cargo run
+   Compiling patterns v0.1.0 (file:///projects/patterns)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.52s
+     Running `target/debug/patterns`
+a est à l'indice 0
+b est à l'indice 1
+c est à l'indice 2

@@ -1,0 +1,5 @@
+$ cargo run
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.48s
+     Running `target/debug/minigrep`
+Problème rencontré lors de l'interprétation des arguments : il n'y a pas assez d'arguments

@@ -125,6 +125,7 @@ français.
 | macro | macro | - |
 | main | main | - |
 | map | tableau associatif | - |
+| match guard | contrôle de correspondance | - |
 | memory management | gestion de mémoire | - |
 | method | méthode | - |
 | modern | récent | - |

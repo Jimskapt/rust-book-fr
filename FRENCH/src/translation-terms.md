@@ -140,6 +140,7 @@ français.
 | numerical characters | chiffres | - |
 | object-oriented language | langage orienté objet | - |
 | operating system | système d'exploitation | - |
+| overload | surcharge | - |
 | owner | propriétaire | - |
 | ownership | possession | - |
 | package manager | système de gestion de paquets | - |
@@ -216,6 +217,7 @@ français.
 | troubleshooting | dépannage | - |
 | tuple | tuple | - |
 | tuple struct | structure tuple | - |
+| tuple enum | énumération tuple | - |
 | type | type | - |
 | type annotation | annotation de type | - |
 | type inference | inférence de types | - |

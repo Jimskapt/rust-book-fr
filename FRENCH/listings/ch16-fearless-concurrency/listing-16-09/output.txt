@@ -1,0 +1,18 @@
+$ cargo run
+   Compiling message-passing v0.1.0 (file:///projects/message-passing)
+error[E0382]: borrow of moved value: `valeur`
+  --> src/main.rs:10:31
+   |
+8  |         let valeur = String::from("salut");
+   |             ------ move occurs because `valeur` has type `std::string::String`, which does not implement the `Copy` trait
+9  |         tx.send(valeur).unwrap();
+   |                 ------ value moved here
+10 |         println!("valeur vaut {}", valeur);
+   |                                    ^^^^^^ value borrowed here after move
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0382`.
+error: could not compile `message-passing`.
+
+To learn more, run the command again with --verbose.

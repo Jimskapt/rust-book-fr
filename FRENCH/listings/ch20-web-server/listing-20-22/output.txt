@@ -1,0 +1,14 @@
+$ cargo check
+    Checking salutations v0.1.0 (file:///projects/salutations)
+error[E0507]: cannot move out of `operateur.tache` which is behind a mutable reference
+  --> src/lib.rs:52:13
+   |
+52 |             operateur.tache.join().unwrap();
+   |             ^^^^^^^^^^^^^^^ move occurs because `operateur.tache` has type `std::thread::JoinHandle<()>`, which does not implement the `Copy` trait
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0507`.
+error: could not compile `salutations`.
+
+To learn more, run the command again with --verbose.

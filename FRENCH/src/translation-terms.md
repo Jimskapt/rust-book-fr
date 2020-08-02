@@ -33,6 +33,7 @@ français.
 | Cargo | Cargo | - |
 | catchall value | valeur passe-partout | - |
 | Chapter | chapitre | tout en minuscule (sauf en début de phrase) |
+| CI system | système d'Intégration Continue | - |
 | closure | fermeture | - |
 | code review | revue de code | - |
 | coercion | extrapolation | - |

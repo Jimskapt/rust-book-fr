@@ -64,6 +64,7 @@ français.
 | deref coercion | extrapolation de déréferencement | - |
 | dereference operator | opérateur de déréférencement | - |
 | dereferencing | déréférencement | - |
+| design pattern | patron de conception | - |
 | destructure | déstructurer | - |
 | DevOps | DevOps | - |
 | directory | dossier | - |

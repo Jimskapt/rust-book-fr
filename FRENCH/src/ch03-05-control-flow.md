@@ -830,7 +830,7 @@ array.
 -->
 
 Par exemple, dans le code de l'encart 3-4, si vous changez la définition du
-tableau `a` pour qu'il stocle quatre éléments mais que vous oubliez de mettre à
+tableau `a` pour qu'il stocke quatre éléments mais que vous oubliez de mettre à
 jour la condition tel que `while indice < 4`, le code va paniquer. En utilisant
 la boucle `for`, vous n'aurez pas à vous rappeler de changer le code si vous
 changez le nombre de valeurs dans le tableau.

@@ -12,8 +12,8 @@ domains than you did before.
 -->
 
 Cela n'a pas toujours été aussi évident, mais le langage de programmation Rust
-apporte avant tout plus de *puissance* : peu importe le type de code que vous
-écrivez en ce moment, Rust vous permet d'aller plus loin et de
+vous donne fondamentallement *plus de pouvoirs* : peu importe le type de code que vous
+écrivez en ce moment, Rust vous donne le pouvoir d'aller plus loin et de
 programmer en toute confiance dans une plus grande diversité de domaines
 qu'auparavant.
 

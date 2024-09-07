@@ -12,7 +12,7 @@ domains than you did before.
 -->
 
 Cela n'a pas toujours été aussi évident, mais le langage de programmation Rust
-vous donne fondamentallement *plus de pouvoirs* : peu importe le type de code que vous
+vous donne avant tout *plus de pouvoirs* : peu importe le type de code que vous
 écrivez en ce moment, Rust vous donne le pouvoir d'aller plus loin et de
 programmer en toute confiance dans une plus grande diversité de domaines
 qu'auparavant.
@@ -94,8 +94,8 @@ knowledge of Rust, but also your reach and confidence as a programmer in
 general. So dive in, get ready to learn—and welcome to the Rust community!
 -->
 
-Ce livre exploite pleinement le potentiel de Rust pour permettre à ses
-utilisateurs de se perfectionner. C'est une documentation conviviale et accessible
+Ce livre exploite pleinement le potentiel de Rust pour donner à ses
+utilisateurs plus de pouvoirs. C'est une documentation conviviale et accessible
 destinée à améliorer vos connaissances en Rust, mais aussi à améliorer vos
 capacités et votre assurance en tant que développeur en général. Alors foncez,
 préparez-vous à apprendre, et bienvenue dans la communauté Rust !

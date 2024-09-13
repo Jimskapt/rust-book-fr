@@ -293,7 +293,7 @@ d'entier par défaut est le `i32`. La principale utilisation d'un `isize` ou d'u
 > Rust va effectuer un *rebouclage du complément à deux*. Pour faire simple, les
 > valeurs supérieures à la valeur maximale du type seront “rebouclées” depuis la
 > valeur minimale que le type peut stocker. Dans le cas d'un `u8`, la valeur 256
-> devient 0, la valeur 257 devient 1, et ainsi de suite. Le programme ne va
+> devient 0, la valeur 257 devient 1, et ainsi de suite. Le programme ne va pas
 > paniquer, mais la variable va avoir une valeur qui n'est probablement pas ce
 > que vous attendez à avoir. Se fier au comportement du rebouclage lors du
 > dépassement d'entier est considéré comme une faute.

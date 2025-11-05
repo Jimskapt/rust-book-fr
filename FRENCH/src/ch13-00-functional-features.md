@@ -49,7 +49,7 @@ Plus précisément, nous allons voir :
 * *les itérateurs*, une façon de travailler sur une série d'éléments
 * Comment utiliser ces deux fonctionnalités pour améliorer le projet
   d'entrée/sortie du chapitre 12
-* Etudier la performance de ces deux fonctionnalités (divulgâchage : elles sont
+* Etudier la performance de ces deux fonctionnalités (Spoiler alert : elles sont
   probablement plus rapides que ce que vous pensez !)
 
 <!--

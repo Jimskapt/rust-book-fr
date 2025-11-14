@@ -1649,13 +1649,13 @@ de `String` va enlever les espaces et autres *whitespaces* au début et à la
 fin, ce que nous devons faire pour comparer la chaîne au `u32`, qui ne peut
 être constitué que de chiffres. L'utilisateur doit appuyer sur
 <span class="keystroke">entrée</span> pour mettre fin à `read_line` et
-récupérer leur supposition, ce qui va rajouter un caractère de fin de ligne à
+récupérer sa supposition, ce qui va rajouter un caractère de fin de ligne à
 la chaîne de caractères. Par exemple, si l'utilisateur écrit
 <span class="keystroke">5</span> et appuie sur <span class="keystroke">entrée
 </span>, `supposition` aura alors cette valeur : `5\n`.
 Le `\n` représente une fin de ligne (à noter que sur Windows, appuyer sur
-<span class="keystroke">entrée</span> résulte en un retour chariot suivi d'une
-fin de ligne, `\r\n`). La méthode `trim` enlève `\n` et `\r\n`, il ne reste donc
+<span class="keystroke">entrée</span> résulte en un retour chariot suivi d'un
+saut de ligne, `\r\n`). La méthode `trim` enlève `\n` et `\r\n`, il ne reste donc
 plus que `5`.
 
 <!--

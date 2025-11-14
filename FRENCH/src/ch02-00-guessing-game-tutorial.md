@@ -1644,7 +1644,7 @@ class="keystroke">enter</span> results in a carriage return and a newline,
 Nous lions cette nouvelle variable à l'expression `supposition.trim().parse()`.
 Le `supposition` dans l'expression se réfère à la variable `supposition`
 initiale qui contenait la saisie utilisateur en tant que chaîne de caractères.
-`String` contenant la saisie utilisateur. La méthode `trim` sur une instance
+La méthode `trim` sur une instance
 de `String` va enlever les espaces et autres *whitespaces* au début et à la
 fin, ce que nous devons faire pour comparer la chaîne au `u32`, qui ne peut
 être constitué que de chiffres. L'utilisateur doit appuyer sur

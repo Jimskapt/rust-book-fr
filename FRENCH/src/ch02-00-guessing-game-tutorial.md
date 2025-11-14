@@ -1009,8 +1009,8 @@ them and then compiles the project with the dependencies available.
 -->
 
 Une fois le registre mis à jour, Cargo lit la section `[dependencies]` et se
-charge de télécharger les *crates* qui y sont listés que vous n'avez pas encore
-téléchargé. Dans notre cas, bien que nous n'ayons spécifié qu'une seule
+charge de télécharger les *crates* qui y sont listées que vous n'avez pas encore
+téléchargées. Dans notre cas, bien que nous n'ayons spécifié qu'une seule
 dépendance, `rand`, Cargo a aussi téléchargé d'autres *crates* dont dépend
 `rand` pour fonctionner. Une fois le téléchargement terminé des *crates*, Rust
 les compile, puis compile notre projet avec les dépendances disponibles.
@@ -1089,7 +1089,7 @@ time you run `cargo build`, so we now have this in the *guessing_game*
 directory.
 -->
 
-Cargo embarque une fonctionnalité qui garantie que vous pouvez recompiler le
+Cargo embarque une fonctionnalité qui garantit que vous pouvez recompiler le
 même artéfact à chaque fois que vous ou quelqu'un d'autre compile votre code :
 Cargo va utiliser uniquement les versions de dépendances que vous avez
 utilisées jusqu'à ce que vous indiquiez le contraire.
@@ -1504,7 +1504,7 @@ code in that arm will execute and print `Too big!` to the screen. The `match`
 expression ends because it has no need to look at the last arm in this scenario.
 -->
 
-Voyons un exemple avec l'expression `match` que nous avons utilisé ici. Disons
+Voyons un exemple avec l'expression `match` que nous avons utilisée ici. Disons
 que l'utilisateur a saisi le nombre 50 et que le nombre secret généré
 aléatoirement a cette fois-ci comme valeur 38. Quand le code compare 50 à 38,
 la méthode `cmp` va retourner `Ordering::Greater`, car 50 est plus grand

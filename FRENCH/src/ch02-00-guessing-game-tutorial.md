@@ -1644,19 +1644,18 @@ class="keystroke">enter</span> results in a carriage return and a newline,
 Nous lions cette nouvelle variable à l'expression `supposition.trim().parse()`.
 Le `supposition` dans l'expression se réfère à la variable `supposition`
 initiale qui contenait la saisie utilisateur en tant que chaîne de caractères.
-La méthode `trim` sur une instance
-de `String` va enlever les espaces et autres *whitespaces* au début et à la
-fin, ce que nous devons faire pour comparer la chaîne au `u32`, qui ne peut
-être constitué que de chiffres. L'utilisateur doit appuyer sur
-<span class="keystroke">entrée</span> pour mettre fin à `read_line` et
-récupérer sa supposition, ce qui va rajouter un caractère de fin de ligne à
+La méthode `trim` sur une instance de `String` va enlever les espaces et autres
+*whitespaces* au début et à la fin, ce que nous devons faire pour comparer la
+chaîne au `u32`, qui ne peut être constitué que de chiffres. L'utilisateur doit
+appuyer sur <span class="keystroke">entrée</span> pour mettre fin à `read_line`
+et récupérer sa supposition, ce qui va rajouter un caractère de fin de ligne à
 la chaîne de caractères. Par exemple, si l'utilisateur écrit
 <span class="keystroke">5</span> et appuie sur <span class="keystroke">entrée
 </span>, `supposition` aura alors cette valeur : `5\n`.
 Le `\n` représente une fin de ligne (à noter que sur Windows, appuyer sur
 <span class="keystroke">entrée</span> résulte en un retour chariot suivi d'un
-saut de ligne, `\r\n`). La méthode `trim` enlève `\n` et `\r\n`, il ne reste donc
-plus que `5`.
+saut de ligne, `\r\n`). La méthode `trim` enlève `\n` et `\r\n`, il ne reste
+donc plus que `5`.
 
 <!--
 The [`parse` method on strings][parse]<!-- ignore -- > parses a string into some
@@ -1672,7 +1671,7 @@ comparison will be between two values of the same type!
 -->
 
 La [méthode `parse` des chaînes de caractères][parse]<!-- ignore --> interprète
-une chaîne de caractères en une sorte de nombre. Comme cette méthode peut
+une chaîne de caractères pour en extraire des nombres. Comme cette méthode peut
 interpréter plusieurs types de nombres, nous devons indiquer à Rust le type
 exact de nombre que nous voulons en utilisant `let supposition: u32`.
 Le deux-points (`:`) après `supposition` indique à Rust que nous voulons

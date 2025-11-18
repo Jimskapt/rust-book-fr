@@ -399,9 +399,9 @@ been completed.
 Créer un masque est différent que de marquer une variable comme étant `mut`,
 car à moins d'utiliser une nouvelle fois le mot-clé `let`, nous obtiendrons une
 erreur de compilation si nous essayons de réassigner cette variable par
-accident. Nous pouvons effectuer quelques transformations sur une valeur en
-utilisant `let`, mais faire en sorte que la variable soit immuable après que ces
-transformations ont été appliquées.
+accident.  En utilisant `let`, on peut faire quelques modifications à une 
+valeur tout en gardant le caractère immuable de la variable, une fois ces 
+modifications effectuées. 
 
 <!--
 The other difference between `mut` and shadowing is that because we’re

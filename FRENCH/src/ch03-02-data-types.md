@@ -86,8 +86,8 @@ these from other programming languages. Let’s jump into how they work in Rust.
 
 Un type *scalaire* représente une seule valeur. Rust possède quatre types
 principaux de scalaires : les entiers, les nombres à virgule flottante, les
-booléens et les caractères. Vous les connaissez sûrement d'autres langages de
-programmation. Regardons comment ils fonctionnent avec Rust.
+booléens et les caractères. Vous les connaissez sûrement dans d'autres langages 
+de programmation. Regardons comment ils fonctionnent avec Rust.
 
 <!--
 #### Integer Types
@@ -170,13 +170,13 @@ Each signed variant can store numbers from -(2<sup>n - 1</sup>) to 2<sup>n -
 so a `u8` can store numbers from 0 to 2<sup>8</sup> - 1, which equals 0 to 255.
 -->
 
-Chaque variante signée peut stocker des nombres allant de −(2<sup>*n* − 1</sup>)
-à 2<sup>*n* − 1</sup> − 1 inclus, où *n* est le nombre de bits que cette
+Chaque variante signée peut stocker des nombres allant de −(2<sup>*n* − 1</sup>)
+à 2<sup>*n* − 1</sup> − 1 inclus, où *n* est le nombre de bits que cette
 variante utilise.
 Un `i8` peut donc stocker des nombres allant de −(2<sup>7</sup>) à
-2<sup>7</sup> − 1, c'est-à-dire de −128 à 127. Les variantes non signées peuvent
-stocker des nombres de 0 à 2<sup>*n*</sup> − 1, donc un `u8` peut stocker
-des nombres allant de 0 à 2<sup>8</sup> − 1, c'est-à-dire de 0 à 255.
+2<sup>7</sup> − 1, c'est-à-dire de −128 à 127. Les variantes non signées peuvent
+stocker des nombres de 0 à 2<sup>*n*</sup> − 1, donc un `u8` peut stocker
+des nombres allant de 0 à 2<sup>8</sup> − 1, c'est-à-dire de 0 à 255.
 
 <!--
 Additionally, the `isize` and `usize` types depend on the architecture of the

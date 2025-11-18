@@ -374,7 +374,7 @@ en répétant `let x =`, en récupérant la valeur d'origine et lui ajoutant `1`
 la valeur de `x` est désormais `6`. Ensuite, à l'intérieur de la portée interne,
 la troisième instruction `let` crée un autre masque de `x`, en récupérant la
 précédente valeur et en la multipliant par `2` pour donner à `x` la valeur
-finale de `12`. Dès que nous sortons de cette portée, le masque prends fin, et
+finale de `12`. Dès que nous sortons de cette portée, le masque prend fin, et
 `x` revient à la valeur `6`. Lorsque nous exécutons ce programme, nous obtenons
 ceci :
 

@@ -279,7 +279,7 @@ d'entier par défaut est le `i32`. La principale utilisation d'un `isize` ou d'u
 > Imaginons que vous avez une variable de type `u8` qui peut stocker des
 > valeurs entre 0 et 255. Si vous essayez de changer la variable pour une valeur
 > en dehors de cet intervalle, comme 256, vous aurez un dépassement d'entier
-> *(integer overflow)*, qui peut se compter de deux manière. Lorsque vous
+> *(integer overflow)*, qui peut se compter de deux manières. Lorsque vous
 > compilez en mode débogage, Rust embarque des vérifications pour détecter les
 > cas de dépassements d'entiers qui pourraient faire *paniquer* votre programme
 > à l'exécution si ce phénomène se produit. Rust utilise le terme *paniquer*

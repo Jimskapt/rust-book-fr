@@ -297,6 +297,11 @@ variable en lui assignant une valeur avec le mot-clé `let` est une instruction.
 Dans l'encart 3-1, `let y = 6;` est une instruction.
 
 <!--
+Nota Bene: in the HTML output, there is no "encart 3-1" to refer to.
+-->
+
+
+<!--
 <span class="filename">Filename: src/main.rs</span>
 -->
 

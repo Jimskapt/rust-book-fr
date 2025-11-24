@@ -580,9 +580,9 @@ to skip over any remaining code in this iteration of the loop and go to the
 next iteration.
 -->
 
-Nous avons également `continue` dans le jeu du plus ou du moins, qui dans une
-boucle demande au programme de sauter le code restant dans cette iteration de
-la boucle et passer directement à la prochaine itération.
+Nous avons également `continue` dans le jeu du plus ou du moins qui, dans une
+boucle, demande au programme de sauter le code restant dans cette itération de
+la boucle et de passer directement à la prochaine itération.
 
 <!--
 If you have loops within loops, `break` and `continue` apply to the innermost

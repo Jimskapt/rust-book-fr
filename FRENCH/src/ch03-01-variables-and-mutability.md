@@ -399,7 +399,7 @@ been completed.
 Créer un masque est différent que de marquer une variable comme étant `mut`,
 car à moins d'utiliser une nouvelle fois le mot-clé `let`, nous obtiendrons une
 erreur de compilation si nous essayons de réassigner cette variable par
-accident.  En utilisant `let`, on peut faire quelques modifications à une 
+accident. En utilisant `let`, on peut faire quelques modifications à une 
 valeur tout en gardant le caractère immuable de la variable, une fois ces 
 modifications effectuées. 
 

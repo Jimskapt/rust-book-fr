@@ -865,7 +865,7 @@ s'utilise comme dans le code de l'encart 3-5.
 using a `for` loop</span>
 -->
 
-<span class="caption">Encart 3-5 : itérer sur chaque élément d'une collection
+<span class="caption">Encart 3-5 : itération sur chaque élément d'une collection
 en utilisant une boucle `for`</span>
 
 <!--

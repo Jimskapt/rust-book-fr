@@ -130,7 +130,7 @@ chaînes de caractères.
 >
 > La pile et le tas sont tous les deux des emplacements de la mémoire à
 > disposition de votre code lors de son exécution, mais sont organisés de façon
-> différente. La pile enregistre les valeurs dans l'ordre qu'elle les reçoit et
+> différente. La pile enregistre les valeurs dans l'ordre dans lequel elle les reçoit et
 > enlève les valeurs dans l'autre sens. C'est ce que l'on appelle le principe
 > de *dernier entré, premier sorti*. C'est comme une pile d'assiettes : quand
 > vous ajoutez des nouvelles assiettes, vous les déposez sur le dessus de la
@@ -642,7 +642,7 @@ it to `s2`. But this isn’t quite what happens.
 
 Cela ressemble beaucoup, donc nous allons supposer que cela fonctionne pareil
 que précédemment : ainsi, la seconde ligne va faire une copie de la valeur de
-`s1` et l'assigner à `s2`. Mais ce n'est pas tout à fait ce qu'il se passe.
+`s1` et l'assigner à `s2`. Mais ce n'est pas tout à fait ce qui se passe.
 
 <!--
 Take a look at Figure 4-1 to see what is happening to `String` under the

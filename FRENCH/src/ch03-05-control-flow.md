@@ -337,7 +337,7 @@ instruction `let` pour assigner le résultat à une variable, comme dans l'encar
 to a variable</span>
 -->
 
-<span class="caption">Encart 3-2 : assigner le résultat d'une expression `if` à
+<span class="caption">Encart 3-2 : Assignation du résultat d'une expression `if` à
 une variable</span>
 
 <!--
@@ -733,7 +733,7 @@ fois, et ensuite, après la boucle, il va afficher un message et se fermer.
 condition holds true</span>
 -->
 
-<span class="caption">Encart 3-3: utiliser une boucle `while` pour exécuter du
+<span class="caption">Encart 3-3: Utilisation d'une boucle `while` pour exécuter du
 code tant qu'une condition est vraie</span>
 
 <!--
@@ -783,7 +783,7 @@ l'encart 3-4 affiche chaque élément présent dans le tableau `a`.
 using a `while` loop</span>
 -->
 
-<span class="caption">Encart 3-4 : itération sur les éléments d'une collection
+<span class="caption">Encart 3-4 : Itération sur les éléments d'une collection
 en utilisant une boucle `while`</span>
 
 <!--
@@ -865,7 +865,7 @@ s'utilise comme dans le code de l'encart 3-5.
 using a `for` loop</span>
 -->
 
-<span class="caption">Encart 3-5 : itération sur chaque élément d'une collection
+<span class="caption">Encart 3-5 : Itération sur chaque élément d'une collection
 en utilisant une boucle `for`</span>
 
 <!--

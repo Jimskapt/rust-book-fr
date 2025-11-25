@@ -168,7 +168,7 @@ So what happens if we try to modify something we’re borrowing? Try the code in
 Listing 4-6. Spoiler alert: it doesn’t work!
 -->
 
-Donc qu'est-ce qui se passe si nous essayons de modifier quelque chose que nous
+Donc que se passe-t-il si nous essayons de modifier quelque chose que nous
 empruntons ? Essayez le code dans l'encart 4-6. Attention, spoiler : cela ne
 fonctionne pas !
 
@@ -477,7 +477,7 @@ have to track down why your data isn’t what you thought it was.
 
 Même si ces erreurs d'emprunt peuvent parfois être frustrantes, n'oubliez pas
 que le compilateur de Rust nous signale un bogue potentiel en avance (au moment
-de la compilation plutôt que l'exécution) et vous montre où se situe exactement
+de la compilation plutôt que de l'exécution) et vous montre où se situe exactement
 le problème. Ainsi, vous n'avez pas à chercher pourquoi vos données ne
 correspondent pas à ce que vous pensiez qu'elles devraient être.
 
@@ -573,7 +573,7 @@ Ce qui peut se traduire par :
 
 ```text
 Le type de retour de cette fonction contient une valeur empruntée, mais il n'y a
-plus aucune valeur qui peut être empruntée.
+aucune valeur à partir de laquelle elle peut être empruntée.
 ```
 
 <!--

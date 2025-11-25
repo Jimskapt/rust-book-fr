@@ -685,7 +685,7 @@ the capacity.
 
 La taille est la quantité de mémoire, en octets, que le contenu de la `String`
 utilise actuellement. La capacité est la quantité totale de mémoire, en octets,
-que la `String` a reçue du gestionnaire. La différence entre la taille et la
+que la `String` a reçue du gestionnaire. La notion de différence entre la taille et la
 capacité est importante, mais pas pour notre exemple, donc pour l'instant, ce
 n'est pas grave d'ignorer la capacité.
 
@@ -779,7 +779,7 @@ created; it won’t work:
 
 Pour garantir la sécurité de la mémoire, après la ligne `let s2 = s1`, Rust
 considère que `s1` n'est plus en vigueur. Par conséquent, Rust n'a pas besoin
-de libérer quoi que ce soit lorsque `s1` sort de la portée. Regardez ce qu'il
+de libérer quoi que ce soit lorsque `s1` sort de la portée. Regardez ce qui
 se passe quand vous essayez d'utiliser `s1` après que `s2` est créé, cela ne va
 pas fonctionner :
 
@@ -962,8 +962,8 @@ different from the usual shallow copying and we can leave it out.
 
 La raison est que les types comme les entiers ont une taille connue au moment de
 la compilation et sont entièrement stockés sur la pile, donc la copie des
-vraies valeurs est rapide à faire. Cela signifie qu'il n'y a pas de raison que
-nous voudrions neutraliser `x` après avoir créé la variable `y`. En d'autres
+vraies valeurs est rapide à faire. Cela signifie qu'il n'y a pas de raison pour
+laquelle nous voudrions neutraliser `x` après avoir créé la variable `y`. En d'autres
 termes, il n'y a pas ici de différence entre la copie superficielle et profonde,
 donc appeler `clone` ne ferait rien d'autre qu'une copie superficielle classique
 et on peut s'en passer.
@@ -1143,8 +1143,8 @@ from the body of the function that we might want to return as well.
 -->
 
 Même si cela fonctionne, il est un peu fastidieux de prendre la possession puis
-ensuite de retourner la possession à chaque fonction. Et qu'est-ce qu'il se
-passe si nous voulons qu'une fonction utilise une valeur, mais n'en prenne pas
+ensuite de retourner la possession à chaque fonction. Et que se passe-t-il
+si nous voulons qu'une fonction utilise une valeur, mais n'en prenne pas
 possession ? C'est assez pénible que tout ce que nous passons doive être
 retourné si nous voulons l'utiliser à nouveau, en plus de toutes les données
 qui découlent du corps de la fonction que nous voulons aussi récupérer.

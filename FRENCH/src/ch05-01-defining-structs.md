@@ -356,9 +356,9 @@ exemple, nous ne pouvons plus utiliser `utilisateur1` après avoir créé
 déplacée dans `utilisateur2`. Si nous avions donné des nouvelles valeurs pour
 chacune des `String` `email` et `pseudo`, et que par conséquent nous aurions
 déplacé uniquement les valeurs de `actif` et de `nombre_de_connexions` à partir
-de `utilisateur1`, alors `utilisateur1` restera en vigueur après avoir créé
-`utilisateur2`. Les types de `actif` et de `nombre_de_connexions` sont de types
-qui implémentent le trait `Copy`, donc le comportement décris dans [la section
+de `utilisateur1`, alors `utilisateur1` resterait en vigueur après la création de
+`utilisateur2`. Les types de `actif` et de `nombre_de_connexions` sont des types
+qui implémentent le trait `Copy`, donc le comportement décrit dans [la section
 à propos de copy][copy]<!-- ignore --> aura lieu ici.
 
 <!--

@@ -365,7 +365,7 @@ qui implémentent le trait `Copy`, donc le comportement décrit dans [la section
 ### Using Tuple Structs without Named Fields to Create Different Types
 -->
 
-### Utilisation de structures tuples sans champ nommé pour créer des types différents
+### Utilisation de structures tuples sans champs nommés pour créer des types différents
 
 <!--
 Rust also supports structs that look similar to tuples, called *tuple
@@ -566,7 +566,7 @@ type, y compris sur les structures unité.
 > Dans la définition de la structure `Utilisateur` de l'encart 5-1, nous avions
 > utilisé le type possédé `String` plutôt que le type de *slice* de chaîne de
 > caractères `&str`. Il s'agit d'un choix délibéré puisque nous voulons que
-> chacune des instances de cette structure possèdent toutes leurs données et
+> chacune des instances de cette structure possède toutes leurs données et
 > que ces données restent valides tant que la structure tout entière est
 > valide.
 >

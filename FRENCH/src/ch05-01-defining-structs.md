@@ -51,7 +51,7 @@ compte d'utilisateur.
 <span class="caption">Listing 5-1: A `User` struct definition</span>
 -->
 
-<span class="caption">Encart 5-1 : la définition d'une structure
+<span class="caption">Encart 5-1 : Définition d'une structure
 `Utilisateur`</span>
 
 <!--
@@ -92,7 +92,7 @@ déclarer un utilisateur précis comme dans l'encart 5-2.
 struct</span>
 -->
 
-<span class="caption">Encart 5-2 : création d'une instance de la structure
+<span class="caption">Encart 5-2 : Création d'une instance de la structure
 `Utilisateur`</span>
 
 <!--
@@ -126,7 +126,7 @@ d'une instance mutable de `Utilisateur`.
 `User` instance</span>
 -->
 
-<span class="caption">Encart 5-3 : changement de la valeur du champ `email`
+<span class="caption">Encart 5-3 : Changement de la valeur du champ `email`
 d'une instance de `Utilisateur`</span>
 
 <!--
@@ -167,7 +167,7 @@ prend la valeur `true` et le `nombre_de_connexions` prend la valeur `1`.
 and username and returns a `User` instance</span>
 -->
 
-<span class="caption">Encart 5-4 : une fonction `creer_utilisateur` qui prend
+<span class="caption">Encart 5-4 : Une fonction `creer_utilisateur` qui prend
 en entrée une adresse e-mail et un pseudo et retourne une instance de
 `Utilisateur`</span>
 
@@ -222,7 +222,7 @@ shorthand because the `email` and `username` parameters have the same name as
 struct fields</span>
 -->
 
-<span class="caption">Encart 5-5 : une fonction `creer_utilisateur` qui utilise
+<span class="caption">Encart 5-5 : Une fonction `creer_utilisateur` qui utilise
 le raccourci d'initialisation des champs parce que les paramètres `email` et
 `pseudo` ont le même nom que les champs de la structure</span>
 
@@ -283,7 +283,7 @@ l'encart 5-2.
 the values from `user1`</span>
 -->
 
-<span class="caption">Encart 5-6 : création d'une nouvelle instance de
+<span class="caption">Encart 5-6 : Création d'une nouvelle instance de
 `Utilisateur` en utilisant une des valeurs de `utilisateur1`.</span>
 
 <!--
@@ -313,7 +313,7 @@ devraient avoir la même valeur que dans l'instance précisée.
 `user1`</span>
 -->
 
-<span class="caption">Encart 5-7 : utilisation de la syntaxe de mise à jour de
+<span class="caption">Encart 5-7 : Utilisation de la syntaxe de mise à jour de
 structure pour assigner de nouvelles valeurs à `email` d'une nouvelle instance
 de `Utilisateur` tout en utilisant les autres valeurs de `utilisateur1`</span>
 

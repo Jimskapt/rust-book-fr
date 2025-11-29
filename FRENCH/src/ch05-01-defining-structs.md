@@ -264,7 +264,7 @@ otherwise use the same values from `user1` that we created in Listing 5-2.
 
 Tout d'abord, dans l'encart 5-6 nous montrons comment créer une nouvelle
 instance de `Utilisateur` dans `utilisateur2` sans la syntaxe de mise à jour de
-structure. On donne de nouvelles valeurs au champ `email` mais on utilise
+structure. On donne une nouvelle valeur au champ `email` mais on utilise
 pour les autres champs les mêmes valeurs que dans `utilisateur1` qu'on a créé à
 l'encart 5-2.
 
@@ -348,8 +348,8 @@ types that implement the `Copy` trait, so the behavior we discussed in the
 [“Stack-Only Data: Copy”][copy]<!-- ignore -- > section would apply.
 -->
 
-Veuillez notez que la syntaxe de la mise à jour de structure utilise un `=`
-comme le ferait une assignation ; car cela déplace les données, comme nous
+Veuillez notez que la syntaxe de mise à jour d'une structure utilise un `=`
+comme c'est le cas pour une assignation ; c'est parce que cela déplace les données, comme nous
 l'avons vu dans [une des sections au chapitre 4][move]<!-- ignore -->. Dans cet
 exemple, nous ne pouvons plus utiliser `utilisateur1` après avoir créé
 `utilisateur2` car la `String` dans le champ `pseudo` de `utilisateur1` a été
@@ -442,7 +442,7 @@ in Chapter 10. Here’s an example of declaring and instantiating a unit struct
 named `AlwaysEqual`:
 -->
 
-On peut aussi définir des structures qui n'ont pas de champs ! Cela s'appelle
+On peut aussi définir des structures qui n'ont pas de champ ! Cela s'appelle
 des *structures unité* parce qu'elles se comportent d'une façon analogue au type
 unité, `()`, que nous avons vu dans [la section sur les
 tuples][tuples]<!-- ignore -->. Les structures unité sont utiles lorsqu'on doit
@@ -566,7 +566,7 @@ type, y compris sur les structures unité.
 > Dans la définition de la structure `Utilisateur` de l'encart 5-1, nous avions
 > utilisé le type possédé `String` plutôt que le type de *slice* de chaîne de
 > caractères `&str`. Il s'agit d'un choix délibéré puisque nous voulons que
-> chacune des instances de cette structure possède toutes leurs données et
+> chacune des instances de cette structure possède ses données et
 > que ces données restent valides tant que la structure tout entière est
 > valide.
 >
@@ -575,8 +575,8 @@ type, y compris sur les structures unité.
 > *durées de vie*, une fonctionnalité de Rust que nous aborderons au
 > chapitre 10. Les durées de vie assurent que les données référencées par une
 > structure restent valides tant que la structure l'est aussi. Disons que vous
-> essayiez de stocker une référence dans une structure sans indiquer de durées
-> de vie, comme ce qui suit, ce qui ne fonctionnera pas :
+> essayez de stocker une référence dans une structure sans indiquer de durée
+> de vie, comme ce qui suit, cela ne fonctionnera pas :
 >
 > <span class="filename">Fichier : src/main.rs</span>
 >

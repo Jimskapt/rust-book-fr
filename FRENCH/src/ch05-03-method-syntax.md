@@ -16,11 +16,11 @@ method is being called on.
 
 Les *méthodes* sont similaires aux fonctions : nous les déclarons avec le
 mot-clé `fn` et un nom, elles peuvent avoir des paramètres et une valeur de
-retour, et elles contiennent du code qui est exécuté quand on la méthode est
+retour, et elles contiennent du code qui est exécuté quand la méthode est
 appellée depuis un autre endroit. Contrairement aux fonctions, les méthodes
-diffèrent des fonctions parce qu'elles sont définies dans le contexte d'une
+sont définies dans le contexte d'une
 structure (ou d'une énumération ou d'un objet de trait, que nous aborderons
-respectivement aux chapitres 6 et 17) et que leur premier paramètre est
+respectivement aux chapitres 6 et 17) et leur premier paramètre est
 toujours `self`, un mot-clé qui représente l'instance de la structure sur
 laquelle on appelle la méthode.
 
@@ -142,12 +142,12 @@ code search for capabilities of `Rectangle` in various places in the library we
 provide.
 -->
 
-En complément de l'application de la syntaxe des méthodes et ainsi de ne pas
-être obligé de répéter le type de `self` dans la signature de chaque méthode,
-la principale raison d'utiliser les méthodes plutôt que de fonctions est pour
-l'organisation. Nous avons mis tout ce qu'on pouvait faire avec une instance de
+La principale raison d'utiliser des méthodes plutôt que des fonctions est,
+en plus de l'application de la syntaxe des méthodes et de ne pas avoir à répéter 
+le type de `self` dans la signature de chaque méthode, une question 
+d'organisation. Nous avons mis tout ce qu'on pouvait faire avec une instance de
 notre type dans un bloc `impl` plutôt que d'imposer aux futurs utilisateurs de
-notre code à rechercher les fonctionnalités de `Rectangle` à divers endroits de
+notre code de rechercher les fonctionnalités de `Rectangle` à divers endroits de
 la bibliothèque que nous fournissons.
 
 <!--
@@ -155,8 +155,8 @@ Note that we can choose to give a method the same name as one of the struct’s
 fields. For example, we can define a method on `Rectangle` also named `width`:
 -->
 
-Notez que nous pourions faire en sorte qu'une méthode porte le même nom qu'un
-des champs de la structure. Par exemple, nous pourions définir une méthode sur
+Notez que nous pourrions faire en sorte qu'une méthode porte le même nom qu'un
+des champs de la structure. Par exemple, nous pourrions définir une méthode sur
 `Rectangle` qui s'appelle elle aussi `largeur` :
 
 <!--
@@ -184,11 +184,11 @@ when we follow `rect1.width` with parentheses, Rust knows we mean the method
 -->
 
 Ici, nous avons défini la méthode `largeur` pour qu'elle retourne `true` si la
-valeur dans le champ `largeur` est supérieur ou égal à 0, et `false` si la
+valeur dans le champ `largeur` est supérieur à 0, et `false` si la
 valeur est 0 : nous pouvons utiliser un champ à l'intérieur d'une méthode du
 même nom, pour n'importe quel usage. Dans le `main`, lorsque nous ajoutons des
 parenthèses après `rect1.largeur`, Rust comprend que nous parlons de la méthode
-`largeur`. Lorsque nous n'utilisons pas les parenthèses, Rust sait nous parlons
+`largeur`. Lorsque nous n'utilisons pas les parenthèses, Rust sait que nous parlons
 du champ `largeur`.
 
 <!--
@@ -205,10 +205,10 @@ private in Chapter 7.
 Souvent, mais pas toujours, lorsque nous appellons une méthode avec le même nom
 qu'un champ, nous voulons qu'elle renvoie uniquement la valeur de ce champ et
 ne fasse rien d'autre. Ces méthodes sont appelées des *accesseurs*, et Rust ne
-les implémente pas automatiquement pour les champs des structures comme le font
+les implémente pas automatiquement pour les champs des structures, comme le font
 certains langages. Les accesseurs sont utiles pour rendre le champ privé mais
-rendre la méthode publique et ainsi donner un accès en lecture seule à ce champ
-dans l'API publique de ce type. Nous développerons les notions de publique et
+la méthode publique et ainsi donner un accès en lecture seule à ce champ
+dans l'API publique du type. Nous développerons les notions de public et
 privé et comment définir un champ ou une méthode publique ou privée au
 chapitre 7.
 

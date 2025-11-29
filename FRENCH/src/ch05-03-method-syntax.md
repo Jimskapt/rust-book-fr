@@ -143,8 +143,8 @@ provide.
 -->
 
 La principale raison d'utiliser des méthodes plutôt que des fonctions est,
-en plus de l'application de la syntaxe des méthodes et de ne pas avoir à répéter 
-le type de `self` dans la signature de chaque méthode, une question 
+en plus de l'application de la syntaxe des méthodes et de ne pas avoir à répéter
+le type de `self` dans la signature de chaque méthode, une question
 d'organisation. Nous avons mis tout ce qu'on pouvait faire avec une instance de
 notre type dans un bloc `impl` plutôt que d'imposer aux futurs utilisateurs de
 notre code de rechercher les fonctionnalités de `Rectangle` à divers endroits de
@@ -187,9 +187,9 @@ Ici, nous avons défini la méthode `largeur` pour qu'elle retourne `true` si la
 valeur dans le champ `largeur` est supérieur à 0, et `false` si la
 valeur est 0 : nous pouvons utiliser un champ à l'intérieur d'une méthode du
 même nom, pour n'importe quel usage. Dans le `main`, lorsque nous ajoutons des
-parenthèses après `rect1.largeur`, Rust comprend que nous parlons de la méthode
-`largeur`. Lorsque nous n'utilisons pas les parenthèses, Rust sait que nous parlons
-du champ `largeur`.
+parenthèses après `rect1.largeur`, Rust comprend que nous faisons référence à la méthode
+`largeur`. Lorsque nous n'utilisons pas les parenthèses, Rust sait que nous faisons référence
+au champ `largeur`.
 
 <!--
 Often, but not always, when we give methods with the same name as a field we

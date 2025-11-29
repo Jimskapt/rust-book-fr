@@ -273,8 +273,8 @@ sont est si fréquent que [la bibliothèque standard a une définition que nous
 pouvons utiliser !][IpAddr]<!-- ignore --> Analysons comment la bibliothèque
 standard a défini `IpAddr` (l'équivalent de notre `AdresseIp`) : nous retrouvons
 la même énumération et les variantes que nous avons définies et utilisées, mais
-stocke les données d'adresse dans des variantes dans deux structures
-différentes, qui sont définies chacune pour chaque variante :
+les données d'adresse sont stockées dans les variantes dans deux structures
+différentes, qui ont une définition différente pour chaque variante :
 
 <!--
 ```rust

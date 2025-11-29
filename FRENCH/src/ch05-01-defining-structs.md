@@ -264,7 +264,7 @@ otherwise use the same values from `user1` that we created in Listing 5-2.
 
 Tout d'abord, dans l'encart 5-6 nous montrons comment créer une nouvelle
 instance de `Utilisateur` dans `utilisateur2` sans la syntaxe de mise à jour de
-structure. On donne de nouvelles valeurs à `email` et `pseudo` mais on utilise
+structure. On donne de nouvelles valeurs au champ `email` mais on utilise
 pour les autres champs les mêmes valeurs que dans `utilisateur1` qu'on a créé à
 l'encart 5-2.
 

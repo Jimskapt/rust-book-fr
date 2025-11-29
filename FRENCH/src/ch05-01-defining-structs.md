@@ -71,7 +71,7 @@ cette structure en indiquant des valeurs concrètes pour chacun des champs.
 On crée une instance en indiquant le nom de la structure puis en ajoutant des
 accolades qui contiennent des paires de `clé: valeur`, où les clés sont les noms
 des champs et les valeurs sont les données que l'on souhaite stocker dans ces
-champs. Nous n'avons pas à préciser les champs dans le même ordre qu'on les a
+champs. Nous n'avons pas à préciser les champs dans le même ordre que nous les avons
 déclarés dans la structure. En d'autres termes, la définition de la structure
 décrit un gabarit pour le type, et les instances remplissent ce gabarit avec des
 données précises pour créer des valeurs de ce type. Par exemple, nous pouvons

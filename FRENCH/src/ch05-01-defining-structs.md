@@ -18,7 +18,7 @@ chapitre 3][tuples]<!-- ignore -->, car tous les deux portent plusieurs valeurs
 associées. Comme pour les tuples, les éléments d'une structure peuvent être de
 différents types. Contrairement aux tuples, dans une structure on doit nommer
 chaque élément des données afin de clarifier le rôle de chaque valeur. L'ajout
-de ces noms font que les structures sont plus flexibles que les tuples : on n'a
+de ces noms fait que les structures sont plus flexibles que les tuples : on n'a
 pas à utiliser l'ordre des données pour spécifier ou accéder aux valeurs d'une
 instance.
 

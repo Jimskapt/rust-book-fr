@@ -187,9 +187,9 @@ Ici, nous avons défini la méthode `largeur` pour qu'elle retourne `true` si la
 valeur dans le champ `largeur` est supérieur à 0, et `false` si la
 valeur est 0 : nous pouvons utiliser un champ à l'intérieur d'une méthode du
 même nom, pour n'importe quel usage. Dans le `main`, lorsque nous ajoutons des
-parenthèses après `rect1.largeur`, Rust comprend que nous parlons de la méthode
-`largeur`. Lorsque nous n'utilisons pas les parenthèses, Rust sait que nous parlons
-du champ `largeur`.
+parenthèses après `rect1.largeur`, Rust comprend que nous faisons référence à la méthode
+`largeur`. Lorsque nous n'utilisons pas les parenthèses, Rust sait que nous faisons référence
+au champ `largeur`.
 
 <!--
 Often, but not always, when we give methods with the same name as a field we

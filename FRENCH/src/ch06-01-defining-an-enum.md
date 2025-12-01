@@ -494,7 +494,7 @@ two states: null or not-null.
 
 La conception d'un langage de programmation est souvent pensée en fonction des
 fonctionnalités qu'on inclut, mais les fonctionnalités qu'on refuse sont elles
-aussi importantes. Rust n'a pas de fonctionnalité *null* qu'ont de nombreux
+aussi importantes. Rust n'a pas de fonctionnalité null qu'ont de nombreux
 langages. *Null* est une valeur qui signifie qu'il n'y a pas de valeur à cet
 endroit. Avec les langages qui utilisent null, les variables peuvent toujours
 être dans deux états : null ou non null.

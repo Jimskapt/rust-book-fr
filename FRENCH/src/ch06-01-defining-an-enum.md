@@ -504,9 +504,9 @@ In his 2009 presentation “Null References: The Billion Dollar Mistake,” Tony
 Hoare, the inventor of null, has this to say:
 -->
 
-Dans sa thèse de 2009 “Null References: The Billion Dollar Mistake” (les
+Lors d'une conférence en 2009 “Null References: The Billion Dollar Mistake” (les
 références nulles : l'erreur à un milliard de dollars), Tony Hoare, l'inventeur
-de null, a écrit ceci :
+du null, a dit ceci :
 
 <!--
 > I call it my billion-dollar mistake. At that time, I was designing the first

@@ -737,7 +737,7 @@ deliberate design decision for Rust to limit null’s pervasiveness and increase
 the safety of Rust code.
 -->
 
-Eliminer le risque que des valeurs nulles puissent être mal gérées vous aide à
+Éliminer le risque que des valeurs nulles puissent être mal gérées vous aide à
 être plus confiant en votre code. Pour avoir une valeur qui peut
 potentiellement être nulle, vous devez l'indiquer explicitement en déclarant
 que le type de cette valeur est `Option<T>`. Ensuite, quand vous utiliserez

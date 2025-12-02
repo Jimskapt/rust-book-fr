@@ -652,7 +652,7 @@ the same thing as null: we don’t have a valid value. So why is having
 Lorsque nous avons une valeur `Some`, nous savons que la valeur est présente et
 que la valeur est stockée dans le `Some`. Lorsque nous avons une valeur `None`,
 en quelque sorte, cela veut dire la même chose que null : nous n'avons pas une
-valeur valide. Donc pourquoi obtenir `Option<T>` est meilleur que d'avoir null ?
+valeur valide. Donc en quoi obtenir `Option<T>` est-il meilleur que d'avoir null ?
 
 <!--
 In short, because `Option<T>` and `T` (where `T` can be any type) are different

@@ -46,7 +46,7 @@ descendre dans le bloc de code correspondant afin d'être utilisée pendant son
 exécution. En parlant des pièces, utilisons-les avec un exemple qui utilise
 `match` ! Nous pouvons écrire une fonction qui prend en paramètre une pièce
 inconnue des États-Unis d'Amérique et qui peut, de la même manière qu'une
-machine à trier, déterminer quelle pièce c'est et retourner sa valeur en
+machine à trier, déterminer de quelle pièce il s'agit et retourner sa valeur en
 centimes, comme ci-dessous dans l'encart 6-3.
 
 <!--

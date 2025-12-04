@@ -56,7 +56,7 @@ qu'à utiliser `accueil::ajouter_a_la_liste_attente` pour appeler la fonction
 `use`</span>
 -->
 
-<span class="caption">Encart 7-11 : importer un module dans la portée via `use`
+<span class="caption">Encart 7-11 : Importer un module dans la portée via `use`
 </span>
 
 <!--
@@ -105,7 +105,7 @@ obtenir le même résultat que l'encart 7-11.
 a relative path</span>
 -->
 
-<span class="caption">Encart 7-12 : importer un module dans la portée avec `use`
+<span class="caption">Encart 7-12 : Importer un module dans la portée avec `use`
 et un chemin relatif</span>
 
 <!--
@@ -148,7 +148,7 @@ pour avoir le même résultat, comme dans l'encart 7-13.
 into scope with `use`, which is unidiomatic</span>
 -->
 
-<span class="caption">Encart 7-13 : importer la fonction
+<span class="caption">Encart 7-13 : Importer la fonction
 `ajouter_a_la_liste_attente` dans la portée avec `use`, ce qui n'est pas idéal
 </span>
 
@@ -204,7 +204,7 @@ standard dans la portée d'une crate binaire.
 idiomatic way</span>
 -->
 
-<span class="caption">Encart 7-14 : import de `HashMap` dans la portée de
+<span class="caption">Encart 7-14 : Import de `HashMap` dans la portée de
 manière idéale</span>
 
 <!--
@@ -250,7 +250,7 @@ sont distincts.
 the same scope requires using their parent modules.</span>
 -->
 
-<span class="caption">Encart 7-15 : l'import de deux types ayant le même nom
+<span class="caption">Encart 7-15 : L'import de deux types ayant le même nom
 dans la même portée nécessite d'utiliser leurs modules parents.</span>
 
 <!--
@@ -306,7 +306,7 @@ deux types `Result`.
 scope with the `as` keyword</span>
 -->
 
-<span class="caption">Encart 7-16 : renommer un type lorsqu'il est importé dans
+<span class="caption">Encart 7-16 : Renommer un type lorsqu'il est importé dans
 la portée, avec le mot-clé `as`</span>
 
 <!--
@@ -372,7 +372,7 @@ a été remplacé par `pub use`.
 from a new scope with `pub use`</span>
 -->
 
-<span class="caption">Encart 7-17 : rendre un élément disponible pour n'importe
+<span class="caption">Encart 7-17 : Rendre un élément disponible pour n'importe
 quel code qui l'importera dans sa portée, avec `pub use`</span>
 
 <!--
@@ -601,7 +601,7 @@ comme dans l'encart 7-18 :
 items with the same prefix into scope</span>
 -->
 
-<span class="caption">Encart 7-18 : utiliser un chemin imbriqué pour importer
+<span class="caption">Encart 7-18 : Utiliser un chemin imbriqué pour importer
 plusieurs éléments avec le même préfixe dans la portée</span>
 
 <!--
@@ -648,7 +648,7 @@ une qui importe `std::io` dans la portée et une autre qui importe
 of the other</span>
 -->
 
-<span class="caption">Encart 7-19 : deux instructions `use` où l'une est un
+<span class="caption">Encart 7-19 : Deux instructions `use` où l'une est un
 sous-chemin de l'autre</span>
 
 <!--
@@ -682,7 +682,7 @@ nous pouvons utiliser `self` dans le chemin imbriqué, comme dans l'encart 7-20.
 one `use` statement</span>
 -->
 
-<span class="caption">Encart 7-20 : imbrication des chemins de l'encart 7-19
+<span class="caption">Encart 7-20 : Imbrication des chemins de l'encart 7-19
 dans une seule instruction `use`</span>
 
 <!--

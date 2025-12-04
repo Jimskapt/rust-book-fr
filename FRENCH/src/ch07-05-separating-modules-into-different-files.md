@@ -123,7 +123,7 @@ Then we create a *src/front_of_house* directory and a file
 `hosting` module:
 -->
 
-Ensuite, nous créons un dossier *src/salle_a_manger* et un fichier
+Ensuite, nous créons un répertoire *src/salle_a_manger* et un fichier
 *src/salle_a_manger/accueil.rs* qui contiendra les définitions du module
 `accueil` :
 

@@ -725,9 +725,9 @@ was defined.
 
 Cette instruction `use` va importer tous les éléments publics définis dans
 `std::collections` dans la portée courante. Mais soyez prudent quand vous
-utilisez l'opérateur global ! L'opérateur global rend difficile à dire quels
-éléments sont dans la portée et là où un élément utilisé dans notre programme a
-été défini.
+utilisez l'opérateur global ! L'utilisation de l'opérateur global peut rendre
+difficile l'identification des noms dans la portée et là où un élément utilisé
+dans notre programme a été défini.
 
 <!--
 The glob operator is often used when testing to bring everything under test

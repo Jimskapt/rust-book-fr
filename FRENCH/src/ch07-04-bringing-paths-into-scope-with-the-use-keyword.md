@@ -68,7 +68,7 @@ also check privacy, like any other paths.
 -->
 
 Dans une portée, utiliser un `use` et un chemin s'apparente à créer un lien
-symbolique dans le système de fichier. Grâce à l'ajout de
+symbolique dans le système de fichiers. Grâce à l'ajout de
 `use crate::salle_a_manger::accueil` à la racine de la crate, `accueil` est
 maintenant un nom valide dans cette portée, comme si le module `accueil` avait
 été défini à la racine de la crate. Les chemins importés dans la portée via
@@ -178,7 +178,7 @@ to bring the standard library’s `HashMap` struct into the scope of a binary
 crate.
 -->
 
-Cela dit, lorsque nous importons des structures, des énumérations, et d'autres
+Cela dit, lorsque nous importons des structures, des énumérations et d'autres
 éléments avec `use`, il est idéal de préciser le chemin complet. L'encart 7-14
 montre la manière idéale d'importer la structure `HashMap` de la bibliothèque
 standard dans la portée d'une crate binaire.

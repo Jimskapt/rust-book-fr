@@ -501,7 +501,7 @@ La fonction `corriger_commande_erronee` est dans le module `cuisines`, donc nous
 pouvons utiliser `super` pour nous rendre au module parent de `cuisines`, qui
 dans notre cas est `crate`, la racine. De là, nous cherchons `servir_commande`
 et nous la trouvons. Avec succès ! Nous pensons que le module `cuisines` et la
-fonction `servir_commande` vont toujours garder la même relation et devrons être
+fonction `servir_commande` vont toujours garder la même relation et devront être
 déplacés ensemble si nous réorganisons l'arborescence de modules de la crate.
 Ainsi, nous avons utilisé `super` pour avoir moins de code à mettre à jour à
 l'avenir si ce code est déplacé dans un module différent.

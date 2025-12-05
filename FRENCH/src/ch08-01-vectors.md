@@ -49,7 +49,7 @@ dans l'encart 8-1.
 of type `i32`</span>
 -->
 
-<span class="caption">Encart 8-1 : création d'un nouveau vecteur vide pour y
+<span class="caption">Encart 8-1 : Création d'un nouveau vecteur vide pour y
 stocker des valeurs de type `i32`</span>
 
 <!--
@@ -107,7 +107,7 @@ de données”][data-types]<!-- ignore --> du chapitre 3.
 values</span>
 -->
 
-<span class="caption">Encart 8-2 : création d'un nouveau vecteur qui contient
+<span class="caption">Encart 8-2 : Création d'un nouveau vecteur qui contient
 des valeurs</span>
 
 <!--
@@ -149,7 +149,7 @@ la méthode `push`, comme dans l'encart 8-3.
 vector</span>
 -->
 
-<span class="caption">Encart 8-3 : utilisation de la méthode `push` pour ajouter
+<span class="caption">Encart 8-3 : Utilisation de la méthode `push` pour ajouter
 des valeurs à un vecteur</span>
 
 <!--
@@ -194,7 +194,7 @@ portée, comme précisé dans l'encart 8-4.
 are dropped</span>
 -->
 
-<span class="caption">Encart 8-4 : mise en évidence de là où le vecteur et ses
+<span class="caption">Encart 8-4 : Mise en évidence de là où le vecteur et ses
 éléments sont libérés</span>
 
 <!--
@@ -250,7 +250,7 @@ via la syntaxe d'indexation et avec la méthode `get`.
 access an item in a vector</span>
 -->
 
-<span class="caption">Encart 8-5 : utilisation de la syntaxe d'indexation ainsi
+<span class="caption">Encart 8-5 : Utilisation de la syntaxe d'indexation ainsi
 que la méthode `get` pour accéder à un élément d'un vecteur</span>
 
 <!--
@@ -298,7 +298,7 @@ essayons d'accéder à un élément à l'indice 100 avec chaque technique.
 100 in a vector containing five elements</span>
 -->
 
-<span class="caption">Encart 8-6 : tentative d'accès à l'élément à l'indice 100
+<span class="caption">Encart 8-6 : Tentative d'accès à l'élément à l'indice 100
 dans un vecteur qui contient cinq éléments</span>
 
 <!--
@@ -374,7 +374,7 @@ essayons aussi d'utiliser cet élément plus tard dans la fonction :
 while holding a reference to an item</span>
 -->
 
-<span class="caption">Encart 8-7 : tentative d'ajout d'un élément à un vecteur
+<span class="caption">Encart 8-7 : Tentative d'ajout d'un élément à un vecteur
 alors que nous utilisons une référence à un élément</span>
 
 <!--
@@ -459,7 +459,7 @@ obtenir des références immuables pour chacun des éléments dans un vecteur de
 iterating over the elements using a `for` loop</span>
 -->
 
-<span class="caption">Encart 8-8 : affichage de chaque élément d'un vecteur en
+<span class="caption">Encart 8-8 : Affichage de chaque élément d'un vecteur en
 itérant sur les éléments en utilisant une boucle `for`</span>
 
 <!--
@@ -487,7 +487,7 @@ l'encart 8-9 va ajouter `50` à chacun des éléments.
 elements in a vector</span>
 -->
 
-<span class="caption">Encart 8-9 : itérations sur des références mutables vers
+<span class="caption">Encart 8-9 : Itérations sur des références mutables vers
 des éléments d'un vecteur</span>
 
 <!--
@@ -558,7 +558,7 @@ de cette technique est dans l'encart 8-10.
 different types in one vector</span>
 -->
 
-<span class="caption">Encart 8-10 : définition d'une `enum` pour stocker des
+<span class="caption">Encart 8-10 : Définition d'une `enum` pour stocker des
 valeurs de différents types dans un seul vecteur</span>
 
 <!--

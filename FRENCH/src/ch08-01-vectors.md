@@ -575,10 +575,10 @@ Rust a besoin de savoir quel type de donnée sera stocké dans le vecteur au
 moment de la compilation afin de connaître la quantité de mémoire nécessaire
 pour stocker chaque élément sur le tas. Nous devons être précis sur les types
 autorisés dans ce vecteur. Si Rust avait permis qu'un vecteur stocke n'importe
-quel type, il y aurait pu avoir un risque qu'un ou plusieurs des types
+quel type, il aurait pu y avoir un risque qu'un ou plusieurs des types
 provoquent une erreur avec les manipulations effectuées sur les éléments du
-vecteur. L'utilisation d'une énumération ainsi qu'une expression `match` permet
-à Rust de garantir au moment de la compilation que tous les cas possibles sont
+vecteur. L'utilisation d'une énumération ainsi qu'une expression `match` permettent
+à Rust de garantir, au moment de la compilation, que tous les cas possibles sont
 traités, comme nous l'avons appris au chapitre 6.
 
 <!--

@@ -410,9 +410,9 @@ premier élément devrait se soucier de ce qui se passe à la fin du vecteur ?
 Cette erreur s'explique par la façon dont les vecteurs fonctionnent : comme les
 vecteurs ajoutent les valeurs les unes à côté des autres dans la mémoire,
 l'ajout d'un nouvel élément à la fin du vecteur peut nécessiter d'allouer un
-nouvel espace mémoire et copier tous les anciens éléments dans ce nouvel
+nouvel espace mémoire et de copier tous les anciens éléments dans ce nouvel
 espace, s'il n'y a pas assez de place pour placer tous les éléments les uns à
-côté des autres dans la mémoire là où est actuellement stocké le vecteur. Dans
+côté des autres dans l'emplacemen mémoire où est actuellement stocké le vecteur. Dans
 ce cas, la référence au premier élément pointerait vers de la mémoire
 désallouée. Les règles d'emprunt évitent aux programmes de se retrouver dans
 cette situation.
@@ -522,7 +522,7 @@ Les vecteurs ne peuvent stocker que des valeurs du même type. Cela peut être u
 problème ; il y a forcément des cas où on a besoin de stocker une liste
 d'éléments de types différents. Heureusement, les variantes d'une énumération
 sont définies sous le même type d'énumération, donc lorsque nous avons besoin
-d'un type pour représenter les éléments de types différents, nous pouvons
+d'un type pour représenter des éléments de types différents, nous pouvons
 définir et utiliser une énumération !
 
 <!--
@@ -538,9 +538,9 @@ Par exemple, imaginons que nous voulions obtenir les valeurs d'une ligne d'une
 feuille de calcul dans laquelle quelques colonnes sont des entiers, d'autres
 des nombres à virgule flottante, et quelques chaînes de caractères. Nous
 pouvons définir une énumération dont les variantes vont avoir les différents
-types, et toutes les variantes de l'énumération seront du même type : celui de
+types, de sorte que toutes les variantes de l'énumération seront du même type : celui de
 l'énumération. Ensuite, nous pouvons créer un vecteur pour stocker cette
-énumération et ainsi, au final, qui stocke différents types. La démonstration
+énumération et ainsi, au final, le vecteur stocke différents types. La démonstration
 de cette technique est dans l'encart 8-10.
 
 <!--

@@ -170,7 +170,7 @@ retourner un manipulateur de fichier qui peut nous permettre de le lire ou d'y
 fichier n'existe pas, ou si nous n'avons pas le droit d'accéder au fichier. La
 fonction `File::open` doit avoir un moyen de nous dire si son utilisation a
 réussi ou échoué et en même temps nous fournir soit le manipulateur de fichier,
-soit des informations sur l'erreur. C'est exactement ces informations que
+soit des informations sur l'erreur. Ce sont exactement ces informations que
 l'énumération `Result` se charge de nous transmettre.
 
 <!--

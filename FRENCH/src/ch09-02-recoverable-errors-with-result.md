@@ -93,7 +93,7 @@ peut échouer. Dans l'encart 9-3, nous essayons d'ouvrir un fichier :
 <span class="caption">Listing 9-3: Opening a file</span>
 -->
 
-<span class="caption">Encart 9-3 : ouverture d'un fichier</span>
+<span class="caption">Encart 9-3 : Ouverture d'un fichier</span>
 
 <!--
 How do we know `File::open` returns a `Result`? We could look at the [standard
@@ -218,7 +218,7 @@ nous avons vue au chapitre 6.
 `Result` variants that might be returned</span>
 -->
 
-<span class="caption">Encart 9-4 : utilisation de l'expression `match` pour
+<span class="caption">Encart 9-4 : Utilisation de l'expression `match` pour
 gérer les variantes de `Result` qui peuvent être retournées</span>
 
 <!--
@@ -325,7 +325,7 @@ tests to fail lol -- >
 different ways</span>
 -->
 
-<span class="caption">Encart 9-5 : gestion des différents cas d'erreurs avec des
+<span class="caption">Encart 9-5 : Gestion des différents cas d'erreurs avec des
 actions différentes</span>
 
 <!--
@@ -635,7 +635,7 @@ don't want to include it for rustdoc testing purposes. -- >
 calling code using `match`</span>
 -->
 
-<span class="caption">Encart 9-6 : une fonction qui retourne les erreurs au code
+<span class="caption">Encart 9-6 : Une fonction qui retourne les erreurs au code
 qui l'appelle en utilisant `match`</span>
 
 <!--
@@ -791,7 +791,7 @@ don't want to include it for rustdoc testing purposes. -- >
 calling code using the `?` operator</span>
 -->
 
-<span class="caption">Encart 9-7 : une fonction qui retourne les erreurs au code
+<span class="caption">Encart 9-7 : Une fonction qui retourne les erreurs au code
 appelant en utilisant l'opérateur `?`</span>
 
 <!--
@@ -890,7 +890,7 @@ don't want to include it for rustdoc testing purposes. -- >
 operator</span>
 -->
 
-<span class="caption">Encart 9-8 : enchaînement des appels aux méthodes après
+<span class="caption">Encart 9-8 : Enchaînement des appels aux méthodes après
 l'opérateur `?`</span>
 
 <!--
@@ -948,7 +948,7 @@ don't want to include it for rustdoc testing purposes. -- >
 opening and then reading the file</span>
 -->
 
-<span class="caption">Encart 9-9 : utilisation de `fs::read_to_string` plutôt
+<span class="caption">Encart 9-9 : Utilisation de `fs::read_to_string` plutôt
 que d'ouvrir puis lire le fichier</span>
 
 <!--
@@ -1018,7 +1018,7 @@ incompatible avec le type de valeur sur laquelle nous utilisons `?` :
 function that returns `()` won’t compile</span>
 -->
 
-<span class="caption">Encart 9-10 : tentative d'utilisation du `?` dans la
+<span class="caption">Encart 9-10 : Tentative d'utilisation du `?` dans la
 fonction `main` qui retourne un `()`, qui ne devrait pas pouvoir se
 compiler</span>
 
@@ -1100,7 +1100,7 @@ le texte qu'on lui fournit :
 value</span>
 -->
 
-<span class="caption">Encart 9-11 : utilisation de l'opérateur `?` sur une
+<span class="caption">Encart 9-11 : Utilisation de l'opérateur `?` sur une
 valeur du type `Option<T>`</span>
 
 <!--
@@ -1210,7 +1210,7 @@ retour `Ok(())` à la fin. Ce code devrait maintenant pouvoir se compiler :
 allows the use of the `?` operator on `Result` values</span>
 -->
 
-<span class="caption">Encart 9-12 : changement du `main` pour qu'elle retourne
+<span class="caption">Encart 9-12 : Changement du `main` pour qu'elle retourne
 un `Result<(), E>` permettant d'utiliser l'opérateur `?` sur des valeurs de type
 `Result`</span>
 

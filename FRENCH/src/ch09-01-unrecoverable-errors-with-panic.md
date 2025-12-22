@@ -172,7 +172,7 @@ valides.
 end of a vector, which will cause a call to `panic!`</span>
 -->
 
-<span class="caption">Encart 9-1 : tentative d'accès à un élément qui dépasse de
+<span class="caption">Encart 9-1 : Tentative d'accès à un élément qui dépasse de
 l'intervalle d'un vecteur, ce qui provoque un `panic!`</span>
 
 <!--
@@ -321,7 +321,7 @@ note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose bac
 `panic!` displayed when the environment variable `RUST_BACKTRACE` is set</span>
 -->
 
-<span class="caption">Encart 9-2 : le retraçage généré par l'appel de `panic!`
+<span class="caption">Encart 9-2 : Le retraçage généré par l'appel de `panic!`
 qui s'affiche quand la variable d'environnement `RUST_BACKTRACE` est définie
 </span>
 

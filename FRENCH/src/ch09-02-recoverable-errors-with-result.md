@@ -590,9 +590,9 @@ information or logic that dictates how the error should be handled than what
 you have available in the context of your code.
 -->
 
-Lorsqu'une fonction dont l'implémentation utilise quelque chose qui peut
+Lorsque l'implémentation d'une fonction utilise quelque chose qui peut
 échouer, au lieu de gérer l'erreur directement dans cette fonction, vous pouvez
-retourner cette erreur au code qui l'appelle pour qu'il décide quoi faire.
+retourner cette erreur au code qui l'appelle pour que ce dernier décide quoi faire.
 C'est ce que l'on appelle *propager* l'erreur et donne ainsi plus de contrôle
 au code qui appelle la fonction, dans lequel il peut y avoir plus
 d'informations ou d'instructions pour traiter l'erreur que dans le contexte de

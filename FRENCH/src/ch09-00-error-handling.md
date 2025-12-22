@@ -35,7 +35,7 @@ Rust classe les erreurs dans deux catégories principales : les erreurs
 l'erreur *le fichier n'a pas été trouvé*, nous préférons probablement signaler
 le problème à l'utilisateur et relancer l'opération. Les erreurs irrécupérables
 sont toujours des symptômes de bogues, comme par exemple essayer d'accéder à un
-élément en dehors de l'intervalle de données d'un tableau, et alors dans ce cas
+élément en dehors de l'intervalle de données d'un tableau : dans un tel cas,
 nous voulons arrêter immédiatement l'exécution du programme.
 
 <!--

@@ -1227,7 +1227,7 @@ Le type `Box<dyn Error>` est un *objet trait*, que nous verrons dans une
 section du [chapitre 17][trait-objects]<!-- ignore -->. Pour l'instant, vous
 pouvez interpréter `Box<dyn Error>` en “tout type d'erreur”. L'utilisation de
 `?` sur une valeur type `Result` dans la fonction `main` avec le type
-`Box<dyn Error>` est donc permise, car cela permet à n'importe quelle une
+`Box<dyn Error>` est donc permise, car cela permet à n'importe quelle
 valeur de type `Err` d'être retournée prématurément.
 
 <!--

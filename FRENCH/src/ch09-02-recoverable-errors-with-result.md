@@ -732,7 +732,7 @@ it to handle appropriately.
 
 Le code qui appelle ce code va devoir ensuite gérer les cas où il récupère une
 valeur `Ok` qui contient un pseudo, ou une valeur `Err` qui contient une
-`io::Error`. Il revient au code appelant de décider quoi faire avec ces
+`io::Error`. Il revient au code appelant de décider que faire avec ces
 valeurs. Si le code appelant obtient une valeur `Err`, il peut appeler `panic!`
 et faire planter le programme, utiliser un pseudo par défaut, ou chercher le
 pseudo autre part que dans ce fichier, par exemple. Nous n'avons pas assez

@@ -835,7 +835,7 @@ reçu est converti dans le type d'erreur déclaré dans le type de retour de la
 fonction concernée. C'est utile lorsqu'une fonction retourne un type d'erreur
 qui peut couvrir tous les cas d'échec de la fonction, même si certaines de ses
 parties peuvent échouer pour différentes raisons. À partir du moment où il y a
-un `impl From<AutreErreur>` sur `ErreurRetournee` pour expliquer la conversion
+un `impl From<AutreErreur> for ErreurRetournee` pour expliquer la conversion
 dans la fonction `from` du trait, l'opérateur `?` se charge d'appeler la
 fonction `from` automatiquement.
 

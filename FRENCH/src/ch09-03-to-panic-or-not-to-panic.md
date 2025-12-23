@@ -62,7 +62,7 @@ handle errors, which can differ based on what the rest of your code is doing.
 Lorsque vous écrivez un exemple pour illustrer un concept, y rajouter un code
 de gestion des erreurs très résilient peut nuire à la clarté de l'exemple. Dans
 les exemples, il est courant d'utiliser une méthode comme `unwrap` (qui peut
-faire un panic) pour remplacer le code de gestion de l'erreur que vous
+faire un `panic!`) pour remplacer le code de gestion de l'erreur que vous
 utiliseriez en temps normal dans votre application, et qui peut changer en
 fonction de ce que le reste de votre code va faire.
 
@@ -238,7 +238,7 @@ documentation for the function.
 -->
 
 Lorsque votre code effectue des opérations sur des valeurs, votre code devrait
-d'abord vérifier que ces valeurs sont valides, et faire un panic si les valeurs
+d'abord vérifier que ces valeurs sont valides, et faire un `panic!` si les valeurs
 ne sont pas correctes. C'est essentiellement pour des raisons de sécurité :
 tenter de travailler avec des données invalides peut exposer votre code à des
 vulnérabilités. C'est la principale raison pour laquelle la bibliothèque
@@ -252,7 +252,7 @@ du côté de l'appelant, et ce n'est pas le genre d'erreur que vous voulez que l
 code appelant gère explicitement. En fait, il n'y a aucun moyen rationnel pour
 que le code appelant se corrige : le *développeur* du code appelant doit
 corriger le code. Les contrats d'une fonction, en particulier lorsqu'une
-violation va causer un panic, doivent être expliqués dans la documentation de
+violation va causer un `panic!`, doivent être expliqués dans la documentation de
 l'API de ladite fonction.
 
 <!--
@@ -360,8 +360,8 @@ with this requirement, having a check like this in every function would be
 tedious (and might impact performance).
 -->
 
-Cependant, ce n'est pas une solution idéale : si c'était absolument critique
-que le programme ne travaille qu'avec des valeurs entre 1 et 100 et qu'il aurait
+Cependant, ce n'est pas une solution idéale : s'il était absolument critique
+que le programme ne travaille qu'avec des valeurs entre 1 et 100 et qu'il y avait
 de nombreuses fonctions qui reposent sur cette condition, cela pourrait être
 fastidieux (et cela impacterait potentiellement la performance) de faire une
 vérification comme celle-ci dans chacune de ces fonctions.

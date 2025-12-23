@@ -972,7 +972,7 @@ manière la plus longue.
 #### Where The `?` Operator Can Be Used
 -->
 
-#### Où l'opérateur `?` peut être utilisé
+#### Où l'opérateur `?` peut-il être utilisé
 
 <!--
 The `?` operator can only be used in functions whose return type is compatible

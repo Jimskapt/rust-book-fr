@@ -37,7 +37,7 @@ failure is impossible, but you as a human can. The chapter will conclude with
 some general guidelines on how to decide whether to panic in library code.
 -->
 
-Dans certains cas comme les exemples, les prototypes, et les tests, il est plus
+Dans certains cas comme les exemples, les prototypes et les tests, il est plus
 approprié d'écrire du code qui panique plutôt que de retourner un `Result`.
 Nous allons voir pourquoi, puis nous verrons des situations dans lesquelles
 vous savez en tant qu'humain qu'un code ne peut pas échouer, mais que le

@@ -1117,7 +1117,7 @@ return a `Some` value containing a string slice of the first line in `text`.
 
 Cette fonction retourne un type `Option<char>` car il est possible qu'il y ait
 un caractère à cet endroit, mais il est aussi possible qu'il n'y soit pas. Ce
-code prends l'argument `texte` slice de chaîne de caractère et appelle sur elle
+code prend l'argument `texte` slice de chaîne de caractère et appelle sur elle
 la méthode `lines`, qui retourne un itérateur des lignes dans la chaîne. Comme
 cette fonction veut traiter la première ligne, elle appelle `next` sur
 l'itérateur afin d'obtenir la première valeur de cet itérateur. Si `texte` est

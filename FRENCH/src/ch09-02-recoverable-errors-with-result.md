@@ -1029,7 +1029,7 @@ value returned by `File::open`, but this `main` function has the return type of
 message:
 -->
 
-Ce code ouvre un fichier, ce qui devrait échouer. L'opérateur `?` est placée
+Ce code ouvre un fichier, ce qui devrait échouer. L'opérateur `?` est placé
 derrière la valeur de type `Result` retournée par `File::open`, mais cette
 fonction `main` a un type de retour `()` et non pas `Result`. Lorsque nous
 compilons ce code, nous obtenons le message d'erreur suivant :

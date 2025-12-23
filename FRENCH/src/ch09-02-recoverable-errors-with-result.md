@@ -1178,7 +1178,7 @@ are restrictions on what its return type can be for the programs to behave as
 expected.
 -->
 
-Jusqu'ici, toutes les fonctions `main` que nous avons utilisé retournent `()`.
+Jusqu'ici, toutes les fonctions `main` que nous avons utilisées retournent `()`.
 La fonction `main` est spéciale car c'est le point d'entrée et de sortie des
 programmes exécutables, et il y a quelques limitations sur ce que peut être
 le type de retour pour que les programmes se comportent correctement.

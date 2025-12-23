@@ -663,7 +663,7 @@ par regarder le type de retour de la fonction : `Result<String, io::Error>`.
 Cela signifie que la fonction retourne une valeur de type `Result<T, E>` où le
 paramètre générique `T` a été remplacé par le type `String` et le paramètre
 générique `E` a été remplacé par le type `io::Error`. Si cette fonction réussit
-sans problème, le code qui appellant va obtenir une valeur `Ok` qui contient
+sans problème, le code appellant va obtenir une valeur `Ok` qui contient
 une `String`, le pseudo que cette fonction lit dans le fichier. Si cette
 fonction rencontre un problème, le code qui appelle cette fonction va obtenir
 une valeur `Err` qui contient une instance de `io::Error` qui donne plus

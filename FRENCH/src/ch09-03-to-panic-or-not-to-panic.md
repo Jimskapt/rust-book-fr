@@ -405,7 +405,7 @@ purposes. -- >
 values between 1 and 100</span>
 -->
 
-<span class="caption">Encart 9-13 : un type `Supposition` qui ne va continuer
+<span class="caption">Encart 9-13 : Un type `Supposition` qui ne va continuer
 que si la valeur est entre 1 et 100</span>
 
 <!--

@@ -68,7 +68,7 @@ slice.
 names and the types in their signatures</span>
 -->
 
-<span class="caption">Encart 10-4 : deux fonctions qui se distinguent seulement
+<span class="caption">Encart 10-4 : Deux fonctions qui se distinguent seulement
 par leur nom et le type dans leur signature</span>
 
 <!--
@@ -176,7 +176,7 @@ encore, mais nous allons y remédier plus tard dans ce chapitre.
 uses generic type parameters but doesn’t compile yet</span>
 -->
 
-<span class="caption">Encart 10-5 : une définition de la fonction
+<span class="caption">Encart 10-5 : Une définition de la fonction
 `le_plus_grand` qui utilise des paramètres de type génériques, mais qui ne
 compile pas encore</span>
 
@@ -261,7 +261,7 @@ valeurs de coordonnées `x` et `y` de n'importe quel type.
 values of type `T`</span>
 -->
 
-<span class="caption">Encart 10-6 : une structure `Point<T>` qui stocke les
+<span class="caption">Encart 10-6 : Une structure `Point<T>` qui stocke les
 valeurs `x` et `y` de type `T`</span>
 
 <!--
@@ -314,7 +314,7 @@ compiler.
 type because both have the same generic data type `T`.</span>
 -->
 
-<span class="caption">Encart 10-7 : les champs `x` et `y` doivent être du même
+<span class="caption">Encart 10-7 : Les champs `x` et `y` doivent être du même
 type car ils ont tous les deux le même type de données générique `T`.</span>
 
 <!--
@@ -374,7 +374,7 @@ des types `T` et `U` où `x` est de type `T` et `y` est de type `U`.
 that `x` and `y` can be values of different types</span>
 -->
 
-<span class="caption">Encart 10-8: un `Point<T, U>` générique en fonction de
+<span class="caption">Encart 10-8: Un `Point<T, U>` générique en fonction de
 deux types `x` et `y` qui peuvent être des valeurs de types différents</span>
 
 <!--
@@ -538,7 +538,7 @@ implémentée sur cette dernière.
 `T`</span>
 -->
 
-<span class="caption">Encart 10-9 : implémentation d'une méthode `x` sur la
+<span class="caption">Encart 10-9 : Implémentation d'une méthode `x` sur la
 structure `Point<T>` qui va retourner une référence au champ `x`, de type `T`
 </span>
 
@@ -609,7 +609,7 @@ de déclarer un type après `impl`.
 struct with a particular concrete type for the generic type parameter `T`</span>
 -->
 
-<span class="caption">Encart 10-10 : un bloc `impl` qui ne s'applique que sur
+<span class="caption">Encart 10-10 : Un bloc `impl` qui ne s'applique que sur
 une structure d'un type concret particulier pour le paramètre de type générique
 `T`
 </span>
@@ -668,7 +668,7 @@ paramètre (de type `Y2`).
 from its struct’s definition</span>
 -->
 
-<span class="caption">Encart 10-11 : une méthode qui utilise différents types
+<span class="caption">Encart 10-11 : Une méthode qui utilise différents types
 génériques provenant de la définition de la structure</span>
 
 <!--

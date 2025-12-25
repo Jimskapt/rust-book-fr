@@ -126,7 +126,7 @@ comme dans l'encart 10-1.
 of numbers</span>
 -->
 
-<span class="caption">Encart 10-1 : le code pour trouver le nombre le plus grand
+<span class="caption">Encart 10-1 : Le code pour trouver le nombre le plus grand
 dans une liste de nombres</span>
 
 <!--
@@ -181,7 +181,7 @@ deux endroits différents du programme, comme dans l'encart 10-2.
 lists of numbers</span>
 -->
 
-<span class="caption">Encart 10-2 : le code pour trouver le plus grand nombre
+<span class="caption">Encart 10-2 : Le code pour trouver le plus grand nombre
 dans *deux* listes de nombres</span>
 
 <!--

@@ -94,7 +94,7 @@ public `Resumable` qui décrit ce comportement.
 behavior provided by a `summarize` method</span>
 -->
 
-<span class="caption">Encart 10-12 : un trait `Resumable` qui représente le
+<span class="caption">Encart 10-12 : Un trait `Resumable` qui représente le
 comportement fourni par une méthode `resumer`</span>
 
 <!--
@@ -183,7 +183,7 @@ limité à 280 caractères.
 `NewsArticle` and `Tweet` types</span>
 -->
 
-<span class="caption">Encart 10-13 : implémentation du trait `Resumable` sur les
+<span class="caption">Encart 10-13 : Implémentation du trait `Resumable` sur les
 types `ArticleDePresse` et `Tweet`</span>
 
 <!--
@@ -339,7 +339,7 @@ signature de la méthode, comme nous l'avons fait dans l'encart 10-12.
 default implementation of the `summarize` method</span>
 -->
 
-<span class="caption">Encart 10-14 : définition du trait `Resumable` avec une
+<span class="caption">Encart 10-14 : Définition du trait `Resumable` avec une
 implémentation par défaut de la méthode `resumer`</span>
 
 <!--
@@ -983,7 +983,7 @@ function that works on any generic type that implements the `PartialOrd` and
 `Copy` traits</span>
 -->
 
-<span class="caption">Encart 10-15 : une définition de la fonction
+<span class="caption">Encart 10-15 : Une définition de la fonction
 `le_plus_grand` qui fonctionne et s'applique sur n'importe quel type générique
 qui implémente les traits `PartialOrd` et `Copy`</span>
 
@@ -1079,7 +1079,7 @@ l'affichage.
 generic type depending on trait bounds</span>
 -->
 
-<span class="caption">Encart 10-16 : implémentation de méthodes sur un type
+<span class="caption">Encart 10-16 : Implémentation de méthodes sur un type
 générique en fonction des traits liés</span>
 
 <!--

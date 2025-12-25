@@ -1079,7 +1079,7 @@ valeurs de type `Option<T>`. Comme pour pouvoir utiliser `?` sur un `Result`,
 vous devez utiliser `?` sur `Option` uniquement dans une fonction qui retourne
 une `Option`. Le comportement de l'opérateur `?` sur une `Option<T>` est
 identique au comportement sur un `Result<T, E>` : si la valeur est `None`, le
-`None` sera retourné prématurémment à la fonction dans laquelle il est utilisé.
+`None` sera retourné prématurément à la fonction dans laquelle il est utilisé.
 Si la valeur est `Some`, la valeur dans le `Some` sera la valeur résultante de
 l'expression et la fonction continuera son déroulement. L'encart 9-11 est un
 exemple de fonction qui trouve le dernier caractère de la première ligne dans

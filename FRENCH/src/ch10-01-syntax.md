@@ -14,7 +14,7 @@ generics. Then we’ll discuss how generics affect code performance.
 Nous pouvons utiliser la généricité pour créer des définitions pour des éléments
 comme les signatures de fonctions ou les structures, que nous pouvons ensuite
 utiliser sur de nombreux types de données concrets. Commençons par regarder
-comment définir des fonctions, des structures, des énumérations, et des méthodes
+comment définir des fonctions, des structures, des énumérations et des méthodes
 en utilisant la généricité. Ensuite nous verrons comment la généricité impacte
 la performance du code.
 

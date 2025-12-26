@@ -203,7 +203,7 @@ voulons implémenter après le `impl`, et que nous utilisons ensuite le mot-clé
 `for` suivi du nom du type sur lequel nous souhaitons implémenter le trait. À
 l'intérieur du bloc `impl`, nous ajoutons les signatures des méthodes présentes
 dans la définition du trait. Au lieu d'ajouter un point-virgule après chaque
-signature, nous plaçons les accolades et on remplit le corps de la méthode avec
+signature, nous plaçons les accolades et nous remplissons le corps de la méthode avec
 le comportement spécifique que nous voulons que les méthodes du trait suivent
 pour le type en question.
 

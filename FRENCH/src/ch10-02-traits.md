@@ -122,7 +122,7 @@ that any type that has the `Summary` trait will have the method `summarize`
 defined with this signature exactly.
 -->
 
-A la fin de la signature de la méthode, au lieu de renseigner une implémentation
+À la fin de la signature de la méthode, au lieu de renseigner une implémentation
 entre des accolades, nous utilisons un point-virgule. Chaque type qui implémente
 ce trait doit renseigner son propre comportement dans le corps de la méthode. Le
 compilateur va s'assurer que tous les types qui ont le trait `Resumable` auront

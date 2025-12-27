@@ -391,7 +391,7 @@ library that is a growable, UTF-8 encoded bit of text.
 Lorsque vous revenez sur le jeu du plus ou du moins, vous comprenez donc
 maintenant que la ligne `let mut supposition` permet de créer une variable
 mutable nommée `supposition`. Le signe égal (`=`) indique à Rust que nous
-voulons désormais lier quelquechose à la variable. A la droite du signe égal,
+voulons désormais lier quelquechose à la variable. À la droite du signe égal,
 nous avons la valeur liée à `supposition`, qui est ici le résultat de
 l'utilisation de `String::new`, qui est une fonction qui retourne une nouvelle
 instance de `String`.
@@ -1282,7 +1282,7 @@ upper bound, so we need to specify `1..101` to request a number between 1 and
 100. Alternatively, we could pass the range `1..=100`, which is equivalent.
 -->
 
-Ensuite, nous ajoutons deux lignes au milieu. A la première ligne, nous
+Ensuite, nous ajoutons deux lignes au milieu. À la première ligne, nous
 appelons la fonction `rand::thread_rng` qui nous fournit le générateur de
 nombres aléatoires particulier que nous allons utiliser : il est propre au fil
 d'exécution courant et généré par le système d'exploitation. Ensuite, nous

@@ -89,7 +89,7 @@ une valeur qui est sortie de la portée</span>
 
 > Remarque : Les exemples dans les encarts 10-17, 10-18 et 10-24 déclarent des
 > variables sans initialiser leur valeur, donc les noms de ces variables
-> existent dans la portée externe. A première vue, cela semble être en conflit
+> existent dans la portée externe. À première vue, cela semble être en conflit
 > avec le fonctionnement de Rust qui n'utilise pas les valeurs nulles.
 > Cependant, si nous essayons d'utiliser une variable avant de lui donner une
 > valeur, nous aurons une erreur au moment de la compilation, qui confirme que
@@ -339,7 +339,7 @@ caractères, mais ne se compile pas encore</span>
 Instead, we get the following error that talks about lifetimes:
 -->
 
-A la place, nous obtenons l'erreur suivante qui nous parle de durées de vie :
+À la place, nous obtenons l'erreur suivante qui nous parle de durées de vie :
 
 <!--
 ```console
@@ -1040,7 +1040,7 @@ signature would have been written like this:
 La raison pour laquelle cette fonction se compile sans annotation de durée de
 vie est historique : dans les premières versions de Rust (avant la 1.0), ce code
 ne se serait pas compilé parce que chaque référence devait avoir une durée de
-vie explicite. A l'époque, la signature de la fonction devait être écrite
+vie explicite. À l'époque, la signature de la fonction devait être écrite
 ainsi :
 
 <!--

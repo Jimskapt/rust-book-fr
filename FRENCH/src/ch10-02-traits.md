@@ -609,7 +609,7 @@ only possible to express using a trait bound, like this:
 
 Si nous souhaitons permettre à `element1` et `element2` d'avoir des types
 différents, l'utilisation de `impl Trait` est appropriée (du moment que chacun
-de ces types implémentent `Resumable`). Mais si nous souhaitons forcer les deux
+de ces types implémente `Resumable`). Mais si nous souhaitons forcer les deux
 paramètres à être du même type, cela n'est possible à exprimer qu'avec un trait
 lié, comme ceci :
 

@@ -649,7 +649,7 @@ the `notify` definition that `item` must implement both `Display` and
 Nous pouvons aussi préciser que nous attendons plus d'un trait lié. Imaginons
 que nous souhaitons que `notifier` utilise le formatage d'affichage sur
 `element` ainsi que la méthode `resumer` : nous indiquons dans la définition de
-`notify` que `element` doit implémenter à la fois `Display` et `Resumable`.
+`notifier` que `element` doit implémenter à la fois `Display` et `Resumable`.
 Nous pouvons faire ceci avec la syntaxe `+` :
 
 <!--

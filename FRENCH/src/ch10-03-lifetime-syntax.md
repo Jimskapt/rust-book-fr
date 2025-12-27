@@ -20,7 +20,7 @@ valid.
 Il reste un détail que nous n'avons pas abordé dans la section [“Les références
 et l'emprunt”][references-and-borrowing]<!-- ignore --> du chapitre 4, c'est que
 toutes les références ont une *durée de vie* dans Rust, qui est la portée pour
-laquelle cette référence est en vigueur. La plupart du temps, les durées de
+laquelle chaque référence est en vigueur. La plupart du temps, les durées de
 vies sont implicites et sont déduites automatiquement, comme pour la plupart du
 temps les types sont déduits. Nous devons renseigner le type lorsque plusieurs
 types sont possibles. De la même manière, nous devons renseigner les durées de

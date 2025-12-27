@@ -36,11 +36,11 @@ their entirety in this chapter, we’ll discuss common ways you might encounter
 lifetime syntax so you can get introduced to the concept.
 -->
 
-L'annotation de la durée de vie n'est pas un concept présent dans la pluspart
+L'annotation de la durée de vie n'est pas un concept présent dans la plupart
 des langages de programmation, donc cela n'est pas très familier. Bien que nous
 ne puissions couvrir l'intégralité de la durée de vie dans ce chapitre, nous
 allons voir les cas les plus courants où vous allez rencontrer la syntaxe de la
-durée de vie, pour vous introduire ces concept.
+durée de vie, pour vous introduire ces concepts.
 
 <!--
 ### Preventing Dangling References with Lifetimes

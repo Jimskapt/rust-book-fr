@@ -680,7 +680,7 @@ compile.
 Maintenant, essayons un exemple qui fait en sorte que la durée de vie de la
 référence dans `resultat` sera plus petite que celles des deux arguments. Nous
 allons déplacer la déclaration de la variable `resultat` à l'extérieur de la
-portée interne mais on va laisser l'affectation de la valeur de la variable
+portée interne mais nous allons laisser l'affectation de la valeur de la variable
 `resultat` à l'intérieur de la portée de `string2`. Nous allons ensuite déplacer
 le `println!`, qui utilise `resultat`, à l'extérieur de la portée interne, après
 que la portée soit terminée. Le code de l'encart 10-24 ne va pas se compiler.

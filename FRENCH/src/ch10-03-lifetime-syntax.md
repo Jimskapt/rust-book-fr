@@ -905,7 +905,7 @@ would create dangling pointers or otherwise violate memory safety.
 
 Enfin, la syntaxe de la durée de vie sert à interconnecter les durées de vie de
 plusieurs paramètres ainsi que les valeurs de retour des fonctions. Une fois
-celles-ci interconnectés, Rust a assez d'informations pour autoriser les opérations
+celles-ci interconnectées, Rust a assez d'informations pour autoriser les opérations
 sécurisées dans la mémoire et refuser les opérations qui pourraient créer des
 pointeurs pendouillants ou alors enfreindre la sécurité de la mémoire.
 
@@ -1298,7 +1298,7 @@ couldn’t figure out all the lifetimes of the references in the signature.
 Vous pouvez constater que la deuxième règle ne s'applique pas car il y a plus
 d'une seule durée de vie. La troisième ne s'applique pas non plus, car
 `la_plus_longue` est une fonction et pas une méthode, donc aucun de ses
-paramètres ne sont `self`. Après avoir utilisé ces trois règles, nous n'avons
+paramètres n'est `self`. Après avoir utilisé ces trois règles, nous n'avons
 pas pu en déduire la durée de vie de la valeur de retour. C'est pourquoi nous
 obtenons une erreur en essayant de compiler le code dans l'encart 10-21 : le
 compilateur a utilisé les règles d'élision des durées de vie mais n'est pas

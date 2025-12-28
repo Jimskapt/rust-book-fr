@@ -1026,7 +1026,7 @@ compiled without lifetime annotations, even though the parameter and return
 type are references</span>
 -->
 
-<span class="caption">Encart 10-26 : Une fonction que nous avons défini dans
+<span class="caption">Encart 10-26 : Une fonction que nous avons définie dans
 l'encart 4-9 qui se compilait sans avoir d'indications sur la durée de vie, même
 si les paramètres et le type de retour sont des références</span>
 

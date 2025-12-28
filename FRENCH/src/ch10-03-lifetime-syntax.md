@@ -1470,7 +1470,7 @@ Il se peut que voyiez des suggestions pour utiliser la durée de vie `'static`
 dans les messages d'erreur. Mais avant d'utiliser `'static` comme durée de vie
 pour une référence, demandez-vous si la référence en question vit bien pendant
 toute la vie de votre programme, ou non. Vous devriez vous demander si vous
-voulez qu'elle vive aussi longtemps, même si si c'était possible. La plupart du
+voulez qu'elle vive aussi longtemps, même si c'était possible. La plupart du
 temps, le problème résulte d'une tentative de création d'une référence
 pendouillante ou d'une inadéquation des durées de vie disponibles. Dans ces
 cas-là, la solution consiste à résoudre ces problèmes, et pas à renseigner la

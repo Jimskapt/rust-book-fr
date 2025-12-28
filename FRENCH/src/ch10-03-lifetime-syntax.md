@@ -1067,7 +1067,7 @@ compte que les développeurs Rust saisissaient toujours les mêmes durées de vi
 encore et encore dans des situations spécifiques. Ces situations étaient
 prévisibles et suivaient des schémas prédéterminés. Les développeurs ont
 programmé ces schémas dans le code du compilateur afin que le vérificateur
-d'emprunt puisse deviner les durées de vie dans ces situations et n'auront plus
+d'emprunt puisse deviner les durées de vie dans ces situations et n'aie plus
 besoin d'annotations explicites.
 
 <!--

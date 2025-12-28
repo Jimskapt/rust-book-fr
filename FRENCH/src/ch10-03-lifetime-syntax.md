@@ -490,7 +490,7 @@ parameters are. We’ll name the lifetime `'a` and then add it to each reference
 as shown in Listing 10-22.
 -->
 
-Maintenant, examinons les annotations de durée de vie dans contexte de la
+Maintenant, examinons les annotations de durée de vie dans le contexte de la
 fonction `la_plus_longue`. Comme avec les paramètres de type génériques, nous
 devons déclarer les paramètres de durée de vie génériques dans des chevrons
 entre le nom de la fonction et la liste des paramètres. Nous souhaitons
@@ -546,11 +546,11 @@ analyzing this code.
 -->
 
 La signature de la fonction indique maintenant à Rust que pour la durée de vie
-`'a`, la fonction prend deux paramètres, les deux étant des slices de chaîne de
+`'a`, la fonction prend deux paramètres, les deux étant des slices de chaînes de
 caractères qui vivent aussi longtemps que la durée de vie `'a`. La signature de
 la fonction indique également à Rust que la slice de chaîne de caractères qui est
 retournée par la fonction vivra au moins aussi longtemps que la durée de vie
-`'a`. Dans la pratique, cela veut dire que durée de vie de la référence
+`'a`. Dans la pratique, cela veut dire que la durée de vie de la référence
 retournée par la fonction `la_plus_longue` est la même que celle de la plus
 petite des durées de vies des références qu'on lui donne. Cette relation est ce
 que nous voulons que Rust mette en place lorsqu'il analysera ce code.

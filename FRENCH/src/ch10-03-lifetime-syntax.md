@@ -1546,7 +1546,7 @@ de nombreuses situations. Les paramètres de type génériques vous permettent
 d'appliquer du code à différents types. Les traits et les traits liés
 s'assurent que bien que les types soient génériques, ils auront un comportement
 particulier sur lequel le code peut compter. Vous avez appris comment utiliser
-les indications de durée de vie pour s'assurer que ce code flexible n'aura pas
+les indications de durée de vie pour vous assurer que ce code flexible n'aura pas
 de références pendouillantes. Et toutes ces vérifications se font au moment de
 la compilation, ce qui n'influe pas sur les performances au moment de
 l'exécution du programme !

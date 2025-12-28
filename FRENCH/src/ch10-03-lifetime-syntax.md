@@ -75,7 +75,7 @@ a une portée externe et une portée interne.
 has gone out of scope</span>
 -->
 
-<span class="caption">Encart 10-17 : tentative d'utiliser une référence vers
+<span class="caption">Encart 10-17 : Tentative d'utiliser une référence vers
 une valeur qui est sortie de la portée</span>
 
 <!--
@@ -173,7 +173,7 @@ les durées de vies des variables.
 `x`, named `'a` and `'b`, respectively</span>
 -->
 
-<span class="caption">Encart 10-18 : commentaires pour montrer les durées de vie
+<span class="caption">Encart 10-18 : Commentaires pour montrer les durées de vie
 de `r` et `x`, qui s'appellent respectivement `'a` et `'b`</span>
 
 <!--
@@ -216,7 +216,7 @@ qu'il se compile sans erreur.
 longer lifetime than the reference</span>
 -->
 
-<span class="caption">Encart 10-19 : la référence est valide puisque la donnée a
+<span class="caption">Encart 10-19 : La référence est valide puisque la donnée a
 une durée de vie plus longue que la référence</span>
 
 <!--
@@ -280,7 +280,7 @@ afficher `La plus grande chaîne est abcd`.
 function to find the longer of two string slices</span>
 -->
 
-<span class="caption">Encart 10-20 : une fonction `main` qui appelle la
+<span class="caption">Encart 10-20 : Une fonction `main` qui appelle la
 fonction `la_plus_longue` pour trouver la plus grande des deux slices de chaîne
 de caractères
 </span>
@@ -331,7 +331,7 @@ function that returns the longer of two string slices but does not yet
 compile</span>
 -->
 
-<span class="caption">Encart 10-21 : une implémentation de la fonction
+<span class="caption">Encart 10-21 : Une implémentation de la fonction
 `la_plus_longue` qui retourne la plus longue des deux slices de chaînes de
 caractères, mais ne se compile pas encore</span>
 
@@ -522,7 +522,7 @@ specifying that all the references in the signature must have the same lifetime
 `'a`</span>
 -->
 
-<span class="caption">Encart 10-22 : définition de la fonction `la_plus_longue`
+<span class="caption">Encart 10-22 : Définition de la fonction `la_plus_longue`
 qui indique que toutes les références présentes dans la signature doivent avoir
 la même durée de vie `'a`</span>
 
@@ -648,7 +648,7 @@ concrètement différentes. L'encart 10-23 en est un exemple.
 references to `String` values that have different concrete lifetimes</span>
 -->
 
-<span class="caption">Encart 10-23 : utilisation de la fonction `la_plus_longue`
+<span class="caption">Encart 10-23 : Utilisation de la fonction `la_plus_longue`
 sur des références à des valeurs `String` qui ont concrètement des durées de vie
 différentes</span>
 
@@ -706,7 +706,7 @@ que la portée soit terminée. Le code de l'encart 10-24 ne va pas se compiler.
 has gone out of scope</span>
 -->
 
-<span class="caption">Encart 10-24 : tentative d'utilisation de `resultat` après
+<span class="caption">Encart 10-24 : Tentative d'utilisation de `resultat` après
 `string2`, qui est sortie de la portée</span>
 
 <!--
@@ -949,7 +949,7 @@ structure `ExtraitImportant` qui stocke une slice de chaîne de caractères.
 definition needs a lifetime annotation</span>
 -->
 
-<span class="caption">Encart 10-25 : une structure qui stocke une référence,
+<span class="caption">Encart 10-25 : Une structure qui stocke une référence,
 par conséquent sa définition a besoin d'une annotation de durée de vie</span>
 
 <!--
@@ -1026,7 +1026,7 @@ compiled without lifetime annotations, even though the parameter and return
 type are references</span>
 -->
 
-<span class="caption">Encart 10-26 : une fonction que nous avons défini dans
+<span class="caption">Encart 10-26 : Une fonction que nous avons défini dans
 l'encart 4-9 qui se compilait sans avoir d'indications sur la durée de vie, même
 si les paramètres et le type de retour sont des références</span>
 

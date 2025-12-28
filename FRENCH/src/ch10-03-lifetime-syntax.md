@@ -1077,7 +1077,7 @@ even fewer lifetime annotations might be required.
 -->
 
 Cette partie de l'histoire de Rust est intéressante car il est possible que
-d'autres modèles prédéterminés émergent et soient ajoutés au compilateur. A
+d'autres modèles prédéterminés émergent et soient ajoutés au compilateur. À
 l'avenir, il est possible qu'encore moins d'annotations de durée de vie soient
 nécessaires.
 

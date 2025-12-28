@@ -227,7 +227,7 @@ always be valid while `x` is valid.
 
 Ici, `x` a la durée de vie `'b`, qui est plus grande dans ce cas que `'a`. Cela
 signifie que `r` peut référencer `x` car Rust sait que la référence présente
-dans `r` sera toujours valide du moment que `x` est en vigueur.
+dans `r` sera toujours valide tant que `x` est valide.
 
 <!--
 Now that you know where the lifetimes of references are and how Rust analyzes

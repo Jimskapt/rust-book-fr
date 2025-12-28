@@ -253,7 +253,7 @@ implemented the `longest` function, the code in Listing 10-20 should print `The
 longest string is abcd`.
 -->
 
-Ecrivons une fonction qui retourne la plus longue des slice d'une chaîne de
+Écrivons une fonction qui retourne la plus longue des slices d'une chaîne de
 caractères. Cette fonction va prendre en argument deux slices de chaîne de
 caractères et retourner une slice d'une chaîne de caractères. Après avoir
 implémenté la fonction `la_plus_longue`, le code de l'encart 10-20 devrait

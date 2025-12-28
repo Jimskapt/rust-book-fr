@@ -254,7 +254,7 @@ longest string is abcd`.
 -->
 
 Écrivons une fonction qui retourne la plus longue des slices d'une chaîne de
-caractères. Cette fonction va prendre en argument deux slices de chaîne de
+caractères. Cette fonction va prendre en argument deux slices de chaînes de
 caractères et retourner une slice d'une chaîne de caractères. Après avoir
 implémenté la fonction `la_plus_longue`, le code de l'encart 10-20 devrait
 afficher `La plus grande chaîne est abcd`.
@@ -471,7 +471,7 @@ nous avons une fonction avec le paramètre `premier` qui est une référence à 
 `i32` avec la durée de vie `'a`. La fonction a aussi un autre paramètre `second`
 qui est une autre référence à un `i32` qui a aussi la durée de vie `'a`. Les
 annotations de durée de vie indiquent que les références `premier` et `second`
-doivent tous les deux exister aussi longtemps que la durée de vie générique.
+doivent toutes les deux exister aussi longtemps que la durée de vie générique.
 
 <!--
 ### Lifetime Annotations in Function Signatures

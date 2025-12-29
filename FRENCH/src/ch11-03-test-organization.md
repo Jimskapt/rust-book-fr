@@ -578,8 +578,8 @@ C'est une des raisons pour lesquelles les projets Rust qui fournissent un
 binaire ont un simple fichier *src/main.rs* qui fait appel à la logique
 présente dans le fichier *src/lib.rs*. En utilisant cette structure, les tests
 d'intégration *peuvent* tester la crate de bibliothèque avec le `use` pour
-importer les importantes fonctionnalités disponibles. Si les fonctionnalités
-importantes fonctionnent, la petite portion de code dans le fichier
+pouvoir accéder à la fonctionnalité importante. Si la fonctionnalité
+importante fonctionne, la petite portion de code dans le fichier
 *src/main.rs* va fonctionner, et cette petite partie de code n'a pas besoin
 d'être testée.
 

@@ -145,7 +145,7 @@ il est courant d'importer le module parent dans la portée plutôt que la
 fonction. En faisant ainsi, nous pouvons facilement utiliser les autres
 fonctions de `std::env`. C'est aussi moins ambigu que d'importer uniquement
 `std::env::args` et ensuite d'appeler la fonction avec seulement `args`, car
-`args` peu facilement être confondu avec une fonction qui est définie dans le
+`args` peut facilement être confondu avec une fonction qui est définie dans le
 module courant.
 
 <!--

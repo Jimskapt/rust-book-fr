@@ -425,7 +425,7 @@ let’s look at some macros other than `panic!` that are useful in tests.
 -->
 
 Maintenant que vous avez vu à quoi ressemblent les résultats de tests dans
-différents scénarios, voyons d'autres macros que `panic!` qui nous serons utiles
+différents scénarios, voyons d'autres macros que `panic!` qui nous seront utiles
 pour les tests.
 
 <!--
@@ -484,7 +484,7 @@ tests en utilisant la macro `assert!`.
 `can_hold` method from Chapter 5</span>
 -->
 
-<span class="caption">Encart 11-5 : Utilisation de la structure `Rectangle` et
+<span class="caption">Encart 11-5 : Utilisation de la structure `Rectangle` et de
 sa méthode `peut_contenir` du chapitre 5</span>
 
 <!--
@@ -555,7 +555,7 @@ is supposed to return `true`, so our test should pass. Let’s find out!
 -->
 
 Nous avons nommé notre test `un_grand_peut_contenir_un_petit`, et nous avons
-créé les deux instances `Rectangle` que nous avions besoin. Ensuite, nous avons
+créé les deux instances `Rectangle` dont nous avons besoin. Ensuite, nous avons
 appelé la macro `assert!` et nous lui avons passé le résultat de l'appel à
 `le_grand.peut_contenir(&le_petit)`. Cette expression est censée retourner
 `true`, donc notre test devrait réussir. Vérifions cela !
@@ -622,7 +622,7 @@ method by replacing the greater than sign with a less than sign when it
 compares the widths:
 -->
 
-Voilà deux tests qui réussissent ! Maintenant, voyons ce qu'il se passe dans les
+Voilà deux tests qui réussissent ! Maintenant, voyons ce qui se passe dans les
 résultats de nos tests lorsque nous introduisons un bogue dans notre code.
 Changeons l'implémentation de la méthode `peut_contenir` en remplaçant
 l'opérateur *plus grand que* par un *plus petit que* au moment de la comparaison
@@ -763,7 +763,7 @@ uses `assert_eq!` fails. Change the implementation of the `add_two` function to
 instead add `3`:
 -->
 
-Ajoutons un bogue dans notre code pour voir ce qu'il se passe lorsque un test
+Ajoutons un bogue dans notre code pour voir ce qui se passe lorsque un test
 qui utilise `assert_eq!` échoue. Changez l'implémentation de la fonction
 `ajouter_deux` pour ajouter plutôt `3` :
 

@@ -32,7 +32,7 @@ library are doing what you expect them to, separately and together.
 -->
 
 L'écriture de ces deux types de tests est importante pour s'assurer que chaque
-élément de notre bibliothèque fait bien ce que vous attendiez d'eux, de
+élément de notre bibliothèque fait bien ce que vous attendez d'eux, de
 manière isolée et conjuguée avec d'autres.
 
 <!--

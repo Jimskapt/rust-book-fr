@@ -149,7 +149,7 @@ cd ../../..
 automatically by `cargo new`</span>
 -->
 
-<span class="caption">Encart 11-1 : le module de test et la fonction générés
+<span class="caption">Encart 11-1 : Le module de test et la fonction générés
 automatiquement par `cargo new`</span>
 
 <!--
@@ -203,7 +203,7 @@ le montre l'encart 11-2.
 generated test</span>
 -->
 
-<span class="caption">Encart 11-2 : le résultat du lancement des tests sur le
+<span class="caption">Encart 11-2 : Le résultat du lancement des tests sur le
 test généré automatiquement</span>
 
 <!--
@@ -356,7 +356,7 @@ chapitre 9, qui consiste à appeler la macro `panic!`. Ecrivez ce nouveau test,
 we call the `panic!` macro</span>
 -->
 
-<span class="caption">Encart 11-3 : ajout d'un second test qui va échouer car
+<span class="caption">Encart 11-3 : Ajout d'un second test qui va échouer car
 nous appelons la macro `panic!`</span>
 
 <!--
@@ -383,7 +383,7 @@ réussi et que `un_autre` a échoué.
 test fails</span>
 -->
 
-<span class="caption">Encart 11-4 : les résultats de tests lorsque un test
+<span class="caption">Encart 11-4 : Les résultats de tests lorsque un test
 réussit et un autre test échoue</span>
 
 <!--
@@ -484,7 +484,7 @@ tests en utilisant la macro `assert!`.
 `can_hold` method from Chapter 5</span>
 -->
 
-<span class="caption">Encart 11-5 : utilisation de la structure `Rectangle` et
+<span class="caption">Encart 11-5 : Utilisation de la structure `Rectangle` et
 sa méthode `peut_contenir` du chapitre 5</span>
 
 <!--
@@ -523,7 +523,7 @@ hauteur de 1.
 larger rectangle can indeed hold a smaller rectangle</span>
 -->
 
-<span class="caption">Encart 11-6 : un test pour `peut_contenir` qui vérifie le
+<span class="caption">Encart 11-6 : Un test pour `peut_contenir` qui vérifie le
 cas où un grand rectangle peut contenir un plus petit rectangle</span>
 
 <!--
@@ -727,7 +727,7 @@ utilisant la macro `assert_eq!`.
 `assert_eq!` macro</span>
 -->
 
-<span class="caption">Encart 11-7 : test de la fonction `ajouter_deux` en
+<span class="caption">Encart 11-7 : Test de la fonction `ajouter_deux` en
 utilisant la macro `assert_eq!`.</span>
 
 <!--
@@ -1103,7 +1103,7 @@ L'encart 11-8 nous montre un test qui vérifie que les conditions d'erreur de
 `panic!`</span>
 -->
 
-<span class="caption">Encart 11-8 : tester qu'une condition va faire un `panic`
+<span class="caption">Encart 11-8 : Tester qu'une condition va faire un `panic`
 </span>
 
 <!--
@@ -1214,7 +1214,7 @@ valeur est trop petite ou trop grande.
 `panic!` with a particular panic message</span>
 -->
 
-<span class="caption">Encart 11-9 : on vérifie qu'une situation va provoquer un
+<span class="caption">Encart 11-9 : On vérifie qu'une situation va provoquer un
 `panic!` avec un message de panique bien précis</span>
 
 <!--

@@ -763,7 +763,7 @@ uses `assert_eq!` fails. Change the implementation of the `add_two` function to
 instead add `3`:
 -->
 
-Ajoutons un bogue dans notre code pour voir ce qui se passe lorsque un test
+Ajoutons un bogue dans notre code pour voir ce qui se passe lorsqu'un test
 qui utilise `assert_eq!` échoue. Changez l'implémentation de la fonction
 `ajouter_deux` pour ajouter plutôt `3` :
 

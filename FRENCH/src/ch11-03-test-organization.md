@@ -410,7 +410,7 @@ separate code into modules and files.
 Le fait que chaque fichier de test d'intégration soit sa propre crate est utile
 pour créer des portées séparées qui ressemblent à la manière dont les
 développeurs vont consommer votre crate. Cependant, cela veut aussi dire que
-les fichiers dans le répertoire *tests* ne partagent pas le même comportement que les
+les fichiers dans le répertoire *tests* ne partagent pas le même comportement que
 les fichiers dans *src*, comme vous l'avez appris au chapitre 7 à
 propos de la manière de séparer le code dans des modules et des fichiers.
 

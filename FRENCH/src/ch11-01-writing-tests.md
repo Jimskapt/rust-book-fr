@@ -694,7 +694,7 @@ deux arguments. Elles vont aussi afficher les deux valeurs si la vérification
 échoue, ce qui va nous aider à comprendre *pourquoi* le test a échoué ;
 paradoxalement, la macro `assert!` indique seulement qu'elle a obtenu une valeur
 `false` de l'expression avec le `==`, mais n'affiche pas les valeurs qui l'ont
-mené à la valeur `false`.
+menée à la valeur `false`.
 
 <!--
 In Listing 11-7, we write a function named `add_two` that adds `2` to its
@@ -841,7 +841,7 @@ to assert might be that the output of the function is not equal to the input.
 
 La macro `assert_ne!` va réussir si les deux valeurs que nous lui donnons ne
 sont pas égales et va échouer si elles sont égales. Cette macro est utile dans
-les cas où nous ne sommes pas sûr de ce que *devrait* valoir une valeur, mais
+les cas où nous ne sommes pas sûrs de ce que *devrait* valoir une valeur, mais
 que nous savons ce que la valeur ne devrait surtout *pas* être si notre code
 fonctionne comme nous le souhaitons. Par exemple, si nous testons une fonction
 qui doit transformer sa valeur d'entrée de manière à ce qu'elle dépend du jour

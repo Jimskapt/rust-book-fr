@@ -61,7 +61,7 @@ dans des tâches. Cela veut dire que tous les tests vont finir de s'exécuter pl
 rapidement afin que vous sachiez si votre code fonctionne ou non. Comme les
 tests s'exécutent en même temps, il faut s'assurer qu'ils ne dépendent
 pas les uns des autres ou d'un état partagé, y compris un environnement partagé,
-comme le dossier de travail actuel ou des variables d'environnement.
+comme le répertoire de travail actuel ou des variables d'environnement.
 
 <!--
 For example, say each of your tests runs some code that creates a file on disk
@@ -479,5 +479,5 @@ En gérant quels tests sont exécutés, vous pouvez vous assurer que vos résult
 de `cargo test` seront rapides. Lorsque vous arrivez à un stade où il est
 justifié de vérifier le résultat des tests `ignored` et que vous avez le temps
 d'attendre ces résultats, vous pouvez lancer à la place
-`cargo test -- --ignored`. Si vous voulez exécuter tous les tests q'uils soient
+`cargo test -- --ignored`. Si vous voulez exécuter tous les tests, qu'ils soient
 ignorés ou non, vous pouvez lancer `cargo test -- --include-ignored`.

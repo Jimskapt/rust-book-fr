@@ -105,7 +105,7 @@ detail.
 
 Nous vous présenterons aussi brièvement les fermetures, les itérateurs et les
 objets de trait, que les chapitres [13][ch13]<!-- ignore --> et
-[17][ch17]<!-- ignore --> traiteront en détails.
+[17][ch17]<!-- ignore --> traiteront en détail.
 
 <!--
 [ch7]: ch07-00-managing-growing-projects-with-packages-crates-and-modules.html

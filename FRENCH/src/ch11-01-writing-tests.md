@@ -399,7 +399,7 @@ the [“Controlling How Tests Are Run”][controlling-how-tests-are-run]<!-- ign
 -- > section.
 -->
 
-A la place du `ok`, la ligne `test tests:un_autre` affiche `FAILED`. Deux
+À la place du `ok`, la ligne `test tests:un_autre` affiche `FAILED`. Deux
 nouvelles sections apparaissent entre la liste des tests et le résumé : la
 première section affiche les raisons détaillées de chaque échec de test. Dans
 notre cas, `un_autre` a échoué car il a paniqué à 'Fait échouer ce test', qui
@@ -1352,7 +1352,7 @@ question mark operator on the `Result<T, E>` value. Instead, use
 Vous ne pouvez pas utiliser l'annotation `#[should_panic]` sur les tests qui
 utilisent `Result<T, E>`. Pour vérifier qu'une opération retourne une variante
 `Err`, *n'utilisez pas* l'opérateur "point d'interrogation" sur la valeur de
-type `Result<T, E>`. A la place, utilisez plutôt `assert!(valeur.is_err())`.
+type `Result<T, E>`. À la place, utilisez plutôt `assert!(valeur.is_err())`.
 
 <!--
 Now that you know several ways to write tests, let’s look at what is happening

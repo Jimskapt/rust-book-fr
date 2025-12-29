@@ -171,7 +171,7 @@ paramètres et retourne 10, ainsi qu'un test qui réussit et un test qui échoue
 `println!`</span>
 -->
 
-<span class="caption">Encart 11-10 : tests d'une fonction qui fait appel à
+<span class="caption">Encart 11-10 : Tests d'une fonction qui fait appel à
 `println!`</span>
 
 <!--
@@ -290,7 +290,7 @@ choisir lesquels nous allons exécuter.
 names</span>
 -->
 
-<span class="caption">Encart 11-11 : trois tests avec trois noms différents
+<span class="caption">Encart 11-11 : Trois tests avec trois noms différents
 </span>
 
 <!--

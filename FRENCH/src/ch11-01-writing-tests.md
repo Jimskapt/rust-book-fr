@@ -686,7 +686,7 @@ expression, not the values that led to the `false` value.
 Une façon courante de tester des fonctionnalités est de comparer le résultat du
 code à tester par rapport à une valeur que vous souhaitez que le code retourne,
 afin de vous assurer qu'elles soient bien égales. Vous pouvez faire cela avec la
-macro `assert!` et en lui passant une expression qui utilise l'opérateur `==`.
+macro `assert!`, en lui passant une expression qui utilise l'opérateur `==`.
 Cependant, c'est un test si courant que la bibliothèque standard fournit une
 paire de macros (`assert_eq!` et `assert_ne!`) pour procéder à ce test plus
 facilement. Les macros comparent respectivement l'égalité ou la non égalité de

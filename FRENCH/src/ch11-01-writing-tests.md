@@ -804,7 +804,7 @@ had `add_two(2)`, was `5`.
 Notre test a détecté le bogue ! Le test `cela_ajoute_deux` a échoué, ce qui a
 affiché le message `` assertion failed: `(left == right)` `` qui nous explique
 qu'à gauche nous avions `4` et qu'à droite nous avions `5`. Ce message utile
-nous aide au déboguage : cela veut dire que l'argument de gauche de `assert_eq!`
+nous aide au débogage : cela veut dire que l'argument de gauche de `assert_eq!`
 valait `4` mais que l'argument de droite, où nous avions `ajouter_deux(2)`,
 valait `5`.
 
@@ -844,7 +844,7 @@ sont pas égales et va échouer si elles sont égales. Cette macro est utile dan
 les cas où nous ne sommes pas sûrs de ce que *devrait* valoir une valeur, mais
 que nous savons ce que la valeur ne devrait surtout *pas* être si notre code
 fonctionne comme nous le souhaitons. Par exemple, si nous testons une fonction
-qui doit transformer sa valeur d'entrée de manière à ce qu'elle dépend du jour
+qui doit transformer sa valeur d'entrée de manière à ce qu'elle dépende du jour
 de la semaine où nous lançons nos tests, la meilleure façon de vérifier serait
 que la sortie de la fonction ne soit pas égale à son entrée.
 
@@ -865,7 +865,7 @@ definition. See Appendix C, [“Derivable Traits,”][derivable-traits]<!-- igno
 
 Sous la surface, les macros `assert_eq!` et `assert_ne!` utilisent
 respectivement les opérateurs `==` et `!=`. Lorsque les vérifications échouent,
-ces macros affichent leurs arguments en utilisant le formatage de déboguage, ce
+ces macros affichent leurs arguments en utilisant le formatage de débogage, ce
 qui veut dire que les valeurs comparées doivent implémenter les traits
 `PartialEq` et `Debug`. Tous les types primitifs et la plupart des types de
 la bibliothèque standard implémentent ces traits. Concernant les structures et

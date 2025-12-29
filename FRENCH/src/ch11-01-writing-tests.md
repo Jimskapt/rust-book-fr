@@ -1287,7 +1287,7 @@ figuring out where our bug is!
 -->
 
 Le message d'échec nous informe que ce test a paniqué comme prévu, mais que le
-message de panique n'inclus pas la chaîne de caractères prévue `'La supposition
+message de panique n'inclut pas la chaîne de caractères prévue `'La supposition
 doit être plus petite ou égale à 100'`. Le message de panique que nous avons
 obtenu dans ce cas était `La supposition doit être plus grande ou égale à 1, et
 nous avons 200.`. Maintenant, on comprend mieux où est le bogue !

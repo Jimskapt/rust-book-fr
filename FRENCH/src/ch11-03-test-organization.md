@@ -397,7 +397,7 @@ avoir besoin de les diviser en plusieurs fichiers dans le répertoire *tests* po
 vous aider à les organiser ; par exemple, vous pouvez regrouper les fonctions
 de test par fonctionnalités qu'elles testent. Comme mentionné précédemment,
 chaque fichier dans le répertoire *tests* est compilé comme étant sa propre crate
-séparée de tous les autres.
+séparée de toutes les autres.
 
 <!--
 Treating each integration test file as its own crate is useful to create

@@ -871,7 +871,7 @@ qui veut dire que les valeurs comparées doivent implémenter les traits
 la bibliothèque standard implémentent ces traits. Concernant les structures et
 les énumérations que vous définissez, vous allez avoir besoin de leur
 implémenter `Debug` pour afficher les valeurs lorsque les vérifications
-échouent. Comme ces traits sont des traits dérivables, comme nous l'avons évoqué
+échouent. Du fait que ces traits sont des traits dérivables, comme nous l'avons évoqué
 dans l'encart 5-12 du chapitre 5, il suffit généralement de simplement ajouter
 l'annotation `#[derive(PartialEq, Debug)]` sur les définitions de vos structures
 ou énumérations. Rendez-vous à [l'annexe C][derivable-traits]<!-- ignore -->

@@ -170,7 +170,7 @@ la fonction privée `addition_interne`.
 <span class="caption">Listing 11-12: Testing a private function</span>
 -->
 
-<span class="caption">Encart 11-12 : test d'une fonction privée</span>
+<span class="caption">Encart 11-12 : Test d'une fonction privée</span>
 
 <!--
 Note that the `internal_adder` function is not marked as `pub`. Tests are just
@@ -271,7 +271,7 @@ un nouveau fichier *tests/test_integration.rs* et insérez-y le code de l'encart
 `adder` crate</span>
 -->
 
-<span class="caption">Encart 11-13 : un test d'intégration d'une fonction
+<span class="caption">Encart 11-13 : Un test d'intégration d'une fonction
 présente dans la crate `addition`</span>
 
 <!--

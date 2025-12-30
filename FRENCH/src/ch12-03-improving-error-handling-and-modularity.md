@@ -535,7 +535,7 @@ happened and what they should do instead. Let’s fix that now.
 
 La ligne `index out of bounds: the len is 1 but the index is 1` est un
 message d'erreur destiné aux développeurs. Il n'aidera pas nos utilisateurs
-finaux à comprendre ce qu'il s'est passé et ce qu'ils devraient faire à la
+finaux à comprendre ce qui s'est passé et ce qu'ils devraient faire à la
 place. Corrigeons cela dès maintenant.
 
 <!--

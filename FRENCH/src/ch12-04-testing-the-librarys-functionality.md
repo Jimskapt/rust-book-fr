@@ -39,12 +39,12 @@ de logiciels suit ces trois étapes :
 4. Repeat from step 1!
 -->
 
-1. Ecrire un test qui échoue et lancez-le pour vous assurer qu'il va échouer
+1. Écrivez un test qui échoue et lancez-le pour vous assurer qu'il va échouer
    pour la raison que vous attendiez.
-2. Ecrire ou modifier juste assez de code pour faire réussir ce nouveau test.
-3. Remanier le code que vous venez d'ajouter ou de changer pour vous assurer
+2. Écrivez ou modifiez juste assez de code pour faire réussir ce nouveau test.
+3. Remaniez le code que vous venez d'ajouter ou de changer pour vous assurer
    que les tests continuent à réussir.
-4. Recommencer à l'étape 1 !
+4. Recommencez à l'étape 1 !
 
 <!--
 This process is just one of many ways to write software, but TDD can help drive

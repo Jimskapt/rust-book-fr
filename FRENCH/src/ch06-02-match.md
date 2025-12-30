@@ -514,7 +514,7 @@ we’ve chosen to name `other`. The code that runs for the `other` arm uses the
 variable by passing it to the `move_player` function.
 -->
 
-Dans les deux premières branches, les motifs sont les valeurs litérales 3 et 7.
+Dans les deux premières branches, les motifs sont les valeurs littérales 3 et 7.
 La dernière branche couvre toutes les autres valeurs possibles, le motif est la
 variable `autre`. Le code qui s'exécute pour la branche `autre` utilise la
 variable en la passant dans la fonction `deplacer_joueur`.

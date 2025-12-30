@@ -495,7 +495,7 @@ Rust. We’ll discuss this topic in detail in [“Storing UTF-8 Encoded Text wit
 Strings”][strings]<!-- ignore -- > in Chapter 8.
 -->
 
-Notez que nous renseignons un litéral `char` avec des guillemets simples,
+Notez que nous renseignons un littéral `char` avec des guillemets simples,
 contrairement aux littéraux de chaîne de caractères, qui nécéssite des doubles
 guillemets. Le type `char` de Rust prend quatre octets en mémoire et représente
 une valeur scalaire Unicode, ce qui veut dire que cela représente plus de

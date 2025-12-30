@@ -131,7 +131,7 @@ the `search` function contains only the line we expect.
 Ce test recherche la chaîne de caractères `"duct"`. Le texte dans lequel nous
 recherchons fait trois lignes, et seulement une d'entre elles contient `"duct"`
 (remarquez que l'antislash après la double-guillet ouvrante indique à Rust de
-ne pas insérer un caractère de nouvelle ligne au début du contenu de ce litéral
+ne pas insérer un caractère de nouvelle ligne au début du contenu de ce littéral
 de chaîne de caractère). Nous vérifions que la valeur retournée par la fonction
 `rechercher` contient seulement la ligne que nous avions prévu.
 

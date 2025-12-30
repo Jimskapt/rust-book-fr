@@ -588,7 +588,7 @@ données !
 ### Writing a Response
 -->
 
-### Ecrire une réponse
+### Écrire une réponse
 
 <!--
 Now we’ll implement sending data in response to a client request. Responses

@@ -2,7 +2,7 @@
 # Writing Automated Tests
 -->
 
-# Ecrire des tests automatisés
+# Écrire des tests automatisés
 
 <!--
 In his 1972 essay “The Humble Programmer,” Edsger W. Dijkstra said that

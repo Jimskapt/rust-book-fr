@@ -168,7 +168,7 @@ the loop.
 
 Les calculs dans des applications comme les décodeurs audio donnent souvent la
 priorité aux performances. Ici, nous créons un itérateur à l'aide de deux
-adaptateurs, puis nous en consommons la valeur. A quel code d'assemblage
+adaptateurs, puis nous en consommons la valeur. À quel code d'assemblage
 ce code Rust ressemblera-t-il une fois compilé ? Et bien, à l'heure
 où nous écrivons ces lignes, il donne le même code assembleur que vous
 écririez à la main. Il n'y a pas du tout de boucle correspondant à l'itération

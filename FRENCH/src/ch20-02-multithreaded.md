@@ -660,7 +660,7 @@ Again, this is the simplest implementation of the `execute` method: it does
 nothing, but we’re trying only to make our code compile. Let’s check it again:
 -->
 
-A nouveau, c'est l'implémentation la plus simpliste de la méthode `executer` :
+À nouveau, c'est l'implémentation la plus simpliste de la méthode `executer` :
 elle ne fait rien, mais nous essayons seulement de faire en sorte que notre
 code se compile. Vérifions-le à nouveau :
 
@@ -1680,7 +1680,7 @@ tâches que nous souhaitons : une requête lente à traiter va continuer à met
 en attente de traitement les autres requêtes. La raison à cela est subtile : la
 structure `Mutex` n'a pas de méthode publique `unlock` car la propriété du
 verrou se base sur la durée de vie du `MutexGuard<T>` au sein du
-`LockResult<MutexGuard<T>>` que retourne la méthode `lock`. A la compilation,
+`LockResult<MutexGuard<T>>` que retourne la méthode `lock`. À la compilation,
 le vérificateur d'emprunt peut ensuite vérifier la règle qui dit qu'une
 ressource gardée par un `Mutex` ne peut être accessible que si nous avons ce
 verrou. Mais cette implémentation peut aussi conduire à ce que nous gardions le

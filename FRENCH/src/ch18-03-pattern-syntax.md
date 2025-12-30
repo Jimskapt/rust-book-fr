@@ -158,7 +158,7 @@ the inner `y`. The last `println!` produces `at the end: x = Some(5), y = 10`.
 
 Lorsque l'expression `match` est terminée, sa portée se termine également, et
 avec elle la portée de la variable interne `y`. Le dernier `println!` affiche
-donc `A la fin : x = Some(5), y = 10`.
+donc `À la fin : x = Some(5), y = 10`.
 
 <!--
 To create a `match` expression that compares the values of the outer `x` and
@@ -989,7 +989,7 @@ because `s` doesn’t get moved into `_`.
 -->
 
 Nous allons obtenir une erreur car la valeur `s` est toujours déplacée dans
-`_s`, ce qui nous empêche d'utiliser `s` ensuite. A l'inverse, l'utilisation du
+`_s`, ce qui nous empêche d'utiliser `s` ensuite. À l'inverse, l'utilisation du
 tiret bas tout seul n'assigne jamais la valeur à quelque chose. Par conséquent,
 l'encart 18-22 va se compiler sans aucune erreur car `s` n'est pas déplacé dans
 `_`.

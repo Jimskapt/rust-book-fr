@@ -183,7 +183,7 @@ diagram in Figure 15-4.
 -->
 
 Les compteurs de références des instances de `Rc<List>` valent tous les deux 2
-pour `a` et `b` après avoir modifié `a` pour qu'elle pointe sur `b`. A la fin
+pour `a` et `b` après avoir modifié `a` pour qu'elle pointe sur `b`. À la fin
 du `main`, Rust nettoie d'abord la variable `b`, ce qui décrémente le compteur
 de références dans l'instance `Rc<List>` de 2 à 1. La mémoire utilisée sur le
 tas par `Rc<List>` ne sera pas libérée à ce moment, car son compteur de
@@ -567,7 +567,7 @@ the `upgrade` method, we get a `None` value. We see this in the output from the
 first `println!` statement:
 -->
 
-A ce moment-là, lorsque nous essayons d'obtenir une référence vers le parent de
+À ce moment-là, lorsque nous essayons d'obtenir une référence vers le parent de
 `feuille` en utilisant la méthode `upgrade`, nous obtenons une valeur `None`.
 Nous constatons cela dans la première instruction `println!` sur la sortie :
 
@@ -726,7 +726,7 @@ reference to the `Rc<Node>` again.
 -->
 
 Si nous essayons d'accéder au parent de `feuille` après la fin de la portée,
-nous allons à nouveau obtenir `None`. A la fin du programme, le `Rc<Noeud>`
+nous allons à nouveau obtenir `None`. À la fin du programme, le `Rc<Noeud>`
 dans `feuille` a son compteur strong à 1 et son compteur weak à 0, car la
 variable `feuille` est à nouveau la seule référence au `Rc<Noeud>`.
 

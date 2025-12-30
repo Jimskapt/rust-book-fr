@@ -1337,7 +1337,7 @@ mark operator in the body of tests, which can be a convenient way to write
 tests that should fail if any operation within them returns an `Err` variant.
 -->
 
-Ecrire vos tests afin qu'ils retournent un `Result<T, E>` vous permet
+Écrire vos tests afin qu'ils retournent un `Result<T, E>` vous permet
 d'utiliser l'opérateur *point d'interrogation* dans le corps des tests, ce
 qui est un outil facile à utiliser pour écrire des tests qui peuvent échouer
 si n'importe quelle opération en son sein retourne une variante de `Err`.

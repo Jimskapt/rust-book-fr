@@ -442,7 +442,7 @@ function named `mix`, as shown in Listing 14-3:
 -->
 
 Par exemple, disons que nous avons créé une bibliothèque `art` pour modéliser
-des concepts artistiques. A l'intérieur de cette bibliothèque nous avons deux
+des concepts artistiques. À l'intérieur de cette bibliothèque nous avons deux
 modules : un module `types` qui contient deux énumérations `CouleurPrimaire` et
 `CouleurSecondaire`, et un module `utilitaires` qui contient une fonction
 `mixer`, comme dans l'encart 14-3 :

@@ -95,7 +95,7 @@ déjà acquis à ce stade :
 * Gérer les erreurs ([chapitre 9][ch9]<!-- ignore -->)
 * Utiliser les traits et les durées de vie lorsque c'est approprié
 ([chapitre 10][ch10]<!-- ignore -->)
-* Ecrire les tests ([chapitre 11][ch11]<!-- ignore -->)
+* Écrire les tests ([chapitre 11][ch11]<!-- ignore -->)
 
 <!--
 We’ll also briefly introduce closures, iterators, and trait objects, which

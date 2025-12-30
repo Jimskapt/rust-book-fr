@@ -19,7 +19,7 @@ What would communicating by sharing memory look like? In addition, why would
 message-passing enthusiasts not use it and do the opposite instead?
 -->
 
-A quoi ressemble la communication par partage de mémoire ? De plus, pourquoi les
+À quoi ressemble la communication par partage de mémoire ? De plus, pourquoi les
 partisans de l'envoi de messages ne devraient-ils pas l'utiliser et faire plutôt
 le contraire ?
 
@@ -382,7 +382,7 @@ Once again, we compile and get... different errors! The compiler is teaching us
 a lot.
 -->
 
-A nouveau, nous compilons et nous obtenons ... une erreur différente ! Le
+À nouveau, nous compilons et nous obtenons ... une erreur différente ! Le
 compilateur nous en apprend beaucoup.
 
 <!--

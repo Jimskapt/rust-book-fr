@@ -176,7 +176,7 @@ over the code can be tiresome and error prone. Imagine having a project full of
 code like that in Listing 19-24.
 -->
 
-Ecrire ce type un peu long dans des signatures de fonctions et comme
+Écrire ce type un peu long dans des signatures de fonctions et comme
 annotations de types tout au long du code peut s'avérer pénible et faciliter
 les erreurs. Imaginez que vous ayez un projet avec plein de code ressemblant à
 celui de l'encart 19-24.
@@ -393,7 +393,7 @@ At the time, we skipped over some details in this code. In Chapter 6 in [“The
 for example, the following code doesn’t work:
 -->
 
-A l'époque, nous avions sauté quelques détails dans ce code. Dans la section
+À l'époque, nous avions sauté quelques détails dans ce code. Dans la section
 [“La structure de contrôle
 `match`”][the-match-control-flow-operator]<!-- ignore --> du chapitre 6, nous
 avons vu que les branches d'un `match` doivent toutes retourner le même type.

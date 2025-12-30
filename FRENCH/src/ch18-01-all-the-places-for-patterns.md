@@ -599,7 +599,7 @@ be irrefutable; in other circumstances, they can be refutable. We’ll discuss
 these two concepts next.
 -->
 
-A présent, vous avez vu plusieurs façons d'utiliser les motifs, mais les motifs
+À présent, vous avez vu plusieurs façons d'utiliser les motifs, mais les motifs
 ne fonctionnent pas de la même manière dans toutes les situations où nous les
 utilisons. Des fois, le motif sera irréfutable ; d'autres fois, il sera
 réfutable. C'est ce que nous allons voir tout de suite.

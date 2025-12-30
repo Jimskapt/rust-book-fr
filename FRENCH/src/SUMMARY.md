@@ -61,7 +61,7 @@
     - [Définir des comportements partagés avec les traits](ch10-02-traits.md)
     - [La conformité des références avec les durées de vies](ch10-03-lifetime-syntax.md)
 
-- [Ecrire des tests automatisés](ch11-00-testing.md)
+- [Écrire des tests automatisés](ch11-00-testing.md)
     - [Comment écrire des tests](ch11-01-writing-tests.md)
     - [Gérer l'exécution des tests](ch11-02-running-tests.md)
     - [L'organisation des tests](ch11-03-test-organization.md)
@@ -72,7 +72,7 @@
     - [Remanier le code pour améliorer sa modularité et la gestion des erreurs](ch12-03-improving-error-handling-and-modularity.md)
     - [Développer les fonctionnalités de la bibliothèque avec le TDD](ch12-04-testing-the-librarys-functionality.md)
     - [Travailler avec des variables d'environnement](ch12-05-working-with-environment-variables.md)
-    - [Ecrire les messages d'erreur sur la sortie d'erreurs standard au lieu de la sortie normale](ch12-06-writing-to-stderr-instead-of-stdout.md)
+    - [Écrire les messages d'erreur sur la sortie d'erreurs standard au lieu de la sortie normale](ch12-06-writing-to-stderr-instead-of-stdout.md)
 
 ## Repenser les choses en Rust
 

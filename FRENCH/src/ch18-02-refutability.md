@@ -101,7 +101,7 @@ use a refutable pattern where an irrefutable pattern is required:
 Si `une_option_quelconque` était une valeur `None`, elle ne correspondrait pas
 au motif `Some(x)`, ce qui signifie que le motif est réfutable. Cependant,
 l'instruction `let` ne peut accepter qu'un motif irréfutable car il n'existe
-pas d'instructions valides à exécuter avec une valeur `None`. A la compilation,
+pas d'instructions valides à exécuter avec une valeur `None`. À la compilation,
 Rust s'y opposera en expliquant que nous avons essayé d'utiliser un motif
 réfutable là où un motif irréfutable est nécessaire :
 

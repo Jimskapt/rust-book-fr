@@ -26,7 +26,7 @@ leurs recherches insensibles à la casse dans cette session du terminal.
 ### Writing a Failing Test for the Case-Insensitive `search` Function
 -->
 
-### Ecrire un test qui échoue pour la fonction `rechercher` insensible à la casse
+### Écrire un test qui échoue pour la fonction `rechercher` insensible à la casse
 
 <!--
 We want to add a new `search_case_insensitive` function that we’ll call when

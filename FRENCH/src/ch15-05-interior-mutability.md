@@ -59,7 +59,7 @@ apprises au chapitre 4 :
 * References must always be valid.
 -->
 
-* A un instant donné, vous pouvez avoir *soit* (mais pas les deux) une
+* À un instant donné, vous pouvez avoir *soit* (mais pas les deux) une
   référence mutable, soit n'importe quel nombre de références immuables
 * Les références doivent toujours être en vigueur.
 
@@ -598,10 +598,10 @@ borrows or one mutable borrow at any point in time.
 -->
 
 Le `RefCell<T>` suit combien de pointeurs intelligents `Ref<T>` et `RefMut<T>`
-sont actuellement actifs. A chaque fois que nous faisons appel à `borrow`, le
+sont actuellement actifs. À chaque fois que nous faisons appel à `borrow`, le
 `RefCell<T>` augmente son compteur du nombre d'emprunts immuables qui existent.
 Lorsqu'une valeur `Ref<T>` sort de la portée, le compteur d'emprunts immuables
-est décrémenté de un. A tout moment `RefCell<T>` nous permet d'avoir plusieurs emprunts
+est décrémenté de un. À tout moment `RefCell<T>` nous permet d'avoir plusieurs emprunts
 immuables ou bien un seul emprunt mutable, tout comme le font les
 règles d'emprunt au moment de la compilation.
 

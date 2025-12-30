@@ -75,7 +75,7 @@ that path is *adder*:
 Ensuite, dans le dossier *ajout*, nous créons le fichier *Cargo.toml* qui va
 configurer l'intégralité de l'espace de travail. Ce fichier n'aura pas de
 section `[package]` ou les métadonnées que nous avons vues dans les autres
-fichiers *Cargo.toml*. A la place, il commencera par une section `[workspace]`
+fichiers *Cargo.toml*. À la place, il commencera par une section `[workspace]`
 qui va nous permettre d'ajouter des membres à l'espace de travail en
 renseignant le chemin vers le paquet qui contient notre crate binaire ; dans ce
 cas, ce chemin est *additioneur* :
@@ -130,7 +130,7 @@ At this point, we can build the workspace by running `cargo build`. The files
 in your *add* directory should look like this:
 -->
 
-A partir de ce moment, nous pouvons compiler l'espace de travail en lançant
+À partir de ce moment, nous pouvons compiler l'espace de travail en lançant
 `cargo build`. Les fichiers dans votre dossier *ajout* devraient ressembler à
 ceci :
 

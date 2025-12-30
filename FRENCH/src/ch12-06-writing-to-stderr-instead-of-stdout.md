@@ -2,7 +2,7 @@
 ## Writing Error Messages to Standard Error Instead of Standard Output
 -->
 
-## Ecrire les messages d'erreur sur la sortie d'erreur standard au lieu de la sortie normale
+## Écrire les messages d'erreur sur la sortie d'erreur standard au lieu de la sortie normale
 
 <!--
 At the moment, we’re writing all of our output to the terminal using the
@@ -124,7 +124,7 @@ exécution fructueuse finissent dans le fichier. Nous allons corriger cela.
 ### Printing Errors to Standard Error
 -->
 
-### Ecrire les erreurs sur la sortie d'erreur standard
+### Écrire les erreurs sur la sortie d'erreur standard
 
 <!--
 We’ll use the code in Listing 12-24 to change how error messages are printed.
@@ -163,7 +163,7 @@ endroits où nous appelons `println!` afin d'utiliser `eprintln!` à la place.
 instead of standard output using `eprintln!`</span>
 -->
 
-<span class="caption">Encart 12-24 : Ecrire les messages d'erreur sur la sortie
+<span class="caption">Encart 12-24 : Écrire les messages d'erreur sur la sortie
 d'erreur standard au lieu de la sortie standard en utilisant `eprintln!`</span>
 
 <!--

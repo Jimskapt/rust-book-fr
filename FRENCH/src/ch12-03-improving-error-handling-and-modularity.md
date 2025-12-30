@@ -634,7 +634,7 @@ nous ne souhaitons pas afficher à nos utilisateurs. Peut-être que la technique
 que nous avons utilisée dans l'encart 9-13 n'est pas la plus appropriée dans ce
 cas : un appel à `panic!` est plus approprié pour un problème de développement
 qu'un problème d'utilisation, [comme nous l'avons appris au chapitre
-9][ch9-error-guidelines]<!-- ignore -->. A la place, nous pourrions utiliser
+9][ch9-error-guidelines]<!-- ignore -->. À la place, nous pourrions utiliser
 une autre technique que vous avez apprise au chapitre 9 — [retourner un
 `Result`][ch9-result]<!-- ignore --> qui indique si c'est un succès ou une
 erreur.
@@ -1255,7 +1255,7 @@ modular. Almost all of our work will be done in *src/lib.rs* from here on out.
 
 Ouah ! C'était pas mal de travail, mais nous nous sommes organisés pour nous assurer
 le succès à venir. Maintenant il est bien plus facile de gérer les erreurs, et
-nous avons rendu le code plus modulaire. A partir de maintenant, l'essentiel de
+nous avons rendu le code plus modulaire. À partir de maintenant, l'essentiel de
 notre travail sera effectué dans *src/lib.rs*.
 
 <!--

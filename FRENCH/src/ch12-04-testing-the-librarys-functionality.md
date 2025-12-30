@@ -53,7 +53,7 @@ test pass helps to maintain high test coverage throughout the process.
 -->
 
 Ce processus n'est qu'une des différentes manières d'écrire des programmes,
-mais le TDD peut aussi aider à piloter sa conception. Ecrire les tests avant
+mais le TDD peut aussi aider à piloter sa conception. Écrire les tests avant
 d'écrire le code qui fait réussir les tests aide à maintenir une haute
 couverture de tests tout le long du processus.
 
@@ -73,7 +73,7 @@ cette fonctionnalité dans une fonction `rechercher`.
 ### Writing a Failing Test
 -->
 
-### Ecrire un test qui échoue
+### Écrire un test qui échoue
 
 <!--
 Because we don’t need them anymore, let’s remove the `println!` statements from
@@ -285,7 +285,7 @@ sorte qu'il réussisse !
 ### Writing Code to Pass the Test
 -->
 
-### Ecrire du code pour réussir au test
+### Écrire du code pour réussir au test
 
 <!--
 Currently, our test is failing because we always return an empty vector. To fix

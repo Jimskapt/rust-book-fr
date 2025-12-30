@@ -612,7 +612,7 @@ tous les opérateurs aient reçu les messages, nous avons essayé d'utiliser
 d'extinction, donc la tâche principale a attendu que l'opérateur 0 finisse.
 Pendant ce temps, tous les autres opérateurs ont reçu les messages
 d'extinction. Lorsque l'opérateur 0 a fini, la tâche principale a attendu que
-les autres opérateurs se terminent. A ce stade, ils avaient alors tous reçu le
+les autres opérateurs se terminent. À ce stade, ils avaient alors tous reçu le
 message d'extinction et étaient en mesure de s'arrêter.
 
 <!--

@@ -101,7 +101,7 @@ definitions.
 
 Le désavantage d'implémenter une macro par rapport à une fonction est que les
 définitions de macros sont plus complexes que les définitions de fonction car
-vous écrivez du code Rust qui écrit lui-même du code Rust. A cause de cette
+vous écrivez du code Rust qui écrit lui-même du code Rust. À cause de cette
 approche, les définitions de macro sont généralement plus difficiles à lire,
 à comprendre et à maintenir que les définitions de fonctions.
 
@@ -298,7 +298,7 @@ pattern within the parentheses for use in the replacement code. Within `$()` is
 Premièrement, un jeu de parenthèses englobent l'intégralité du motif. Ensuite
 vient le symbole dollar (`$`), suivi par un jeu de parenthèses qui capturent les
 valeurs qui correspondent au motif entre les parenthèses pour les utiliser dans
-le code de remplacement. A l'intérieur du `$()` nous avons `$x:expr`, qui
+le code de remplacement. À l'intérieur du `$()` nous avons `$x:expr`, qui
 correspond à n'importe quelle expression Rust et donne le nom `$x` à
 l'expression.
 
@@ -601,7 +601,7 @@ We have a trait and its function. At this point, our crate user could implement
 the trait to achieve the desired functionality, like so:
 -->
 
-Nous avons maintenant un trait et sa fonction. A partir de là, notre
+Nous avons maintenant un trait et sa fonction. À partir de là, notre
 utilisateur de la crate peut implémenter le trait pour accomplir la
 fonctionnalité souhaitée, comme ceci :
 

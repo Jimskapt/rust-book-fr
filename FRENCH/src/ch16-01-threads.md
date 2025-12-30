@@ -421,7 +421,7 @@ Le mot-clé `move` est souvent utilisé avec des fermetures passées à
 `thread::spawn` car la fermeture va alors prendre possession des valeurs de son
 environnement qu'elle utilise, ce qui transfère la possession des valeurs d'une
 tâche à une autre. Dans [une section du chapitre 13][capture]<!-- ignore -->,
-nous avons présenté `move` dans le contexte des fermetures. A présent, nous
+nous avons présenté `move` dans le contexte des fermetures. À présent, nous
 allons plus nous concentrer sur l'interaction entre `move` et `thread::spawn`.
 
 <!--

@@ -484,7 +484,7 @@ La méthode `demander_relecture` sur `Brouillon` doit retourner une nouvelle
 instance d'une structure `EnRelecture` dans une `Box`, qui représente l'état
 lorsqu'un billet est en attente de relecture. La structure `EnRelecture`
 implémente elle aussi la méthode `demander_relecture` mais ne fait aucune
-modification. A la place, elle se retourne elle-même, car lorsque nous demandons
+modification. À la place, elle se retourne elle-même, car lorsque nous demandons
 une relecture sur un billet déjà à l'état `EnRelecture`, il doit rester à l'état
 `EnRelecture`.
 

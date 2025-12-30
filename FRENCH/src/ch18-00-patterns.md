@@ -68,5 +68,5 @@ a clear way.
 Ce chapitre sert de référence pour tout ce qui concerne les motifs. Nous allons voir
 les moments appropriés pour utiliser les motifs, les différences entre les
 motifs réfutables et irréfutables ainsi que les différentes syntaxes de motifs que
-vous pouvez rencontrer. A la fin de ce chapitre, vous saurez comment utiliser
+vous pouvez rencontrer. À la fin de ce chapitre, vous saurez comment utiliser
 les motifs pour exprimer clairement de nombreux concepts.

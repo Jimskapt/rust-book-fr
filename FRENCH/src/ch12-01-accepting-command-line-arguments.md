@@ -167,7 +167,7 @@ module courant.
 > place. Cette fonction retourne un itérateur qui engendre des valeurs `OsString`
 > plutôt que des valeurs `String`. Nous avons choisi d'utiliser ici
 > `std::env::args` par simplicité, car les valeurs `OsString` diffèrent selon
-> la plateforme et c'est plus complexe de travailler avec par rapport aux
+> la plateforme et qu'elles sont plus complexes à traiter que les
 > valeurs de type `String`.
 
 <!--

@@ -170,14 +170,14 @@ avoid unnecessary rebuilding.
 -->
 
 L'espace de travail a un dossier *target* au niveau le plus haut pour y placer
-les artefacts compilés ; le paquet `additioneur` n'a pas son propre dossier
+les artéfacts compilés ; le paquet `additioneur` n'a pas son propre dossier
 *target*. Même si nous lancions `cargo build` à l'intérieur du dossier
-*additioneur*, les artefacts compilés finirons toujours dans *ajout/target*
+*additioneur*, les artéfacts compilés finirons toujours dans *ajout/target*
 plutôt que dans *ajout/additioneur/target*. Cargo organise ainsi le dossier
 *target* car les crates d'un espace de travail sont censés dépendre l'une de
 l'autre. Si chaque crate avait son propre dossier *target*, chaque crate
 devrait recompiler chacune des autres crates présentes dans l'espace de
-travail pour avoir les artefacts dans son propre dossier *target*. En
+travail pour avoir les artéfacts dans son propre dossier *target*. En
 partageant un seul dossier *target*, les crates peuvent éviter des
 re-compilations inutiles.
 

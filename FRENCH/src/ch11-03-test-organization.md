@@ -78,7 +78,7 @@ L'annotation `#[cfg(test)]` sur les modules de tests indique à Rust de
 compiler et d'exécuter le code de test seulement lorsque vous lancez
 `cargo test`, et non pas lorsque vous lancez `cargo build`. Cela diminue la
 durée de compilation lorsque vous souhaitez uniquement compiler la bibliothèque
-et cela réduit la taille dans l'artefact compilé qui en résulte car les tests
+et cela réduit la taille dans l'artéfact compilé qui en résulte car les tests
 n'y sont pas intégrés. Vous verrez plus tard que comme les tests d'intégration
 se placent dans un répertoire différent, ils n'ont pas besoin de l'annotation
 `#[cfg(test)]`. Cependant, comme les tests unitaires vont dans les mêmes

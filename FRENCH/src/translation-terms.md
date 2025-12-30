@@ -12,6 +12,7 @@ français.
 | angle bracket | chevrons | - |
 | annotate | indiquer | - |
 | anti-pattern | anti-patron | - |
+| antislash | barre oblique inverse | - |
 | Appendix | annexe | tout en minuscule (sauf en début de phrase) |
 | append | ajouter | - |
 | Application Programming Interface (API) | interface de programmation applicative (API) | - |

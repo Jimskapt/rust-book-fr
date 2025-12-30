@@ -28,8 +28,8 @@ pas un problème majeur. Cependant, si nous continuons à faire grossir notre
 programme dans le `main`, le nombre des différentes tâches qu'assure la
 fonction `main` va continuer à s'agrandir. Plus une fonction assure des
 tâches différentes, plus cela devient difficile de la comprendre, de la tester,
-et d'y faire des changements sans casser ses autres constituants. Cela est
-mieux de séparer les fonctionnalités afin que chaque fonction n'assure qu'une
+et d'y faire des changements sans casser ses autres constituants. Il est
+largement préférable de séparer les fonctionnalités afin que chaque fonction n'assure qu'une
 seule tâche.
 
 <!--

@@ -707,7 +707,7 @@ always be string literals that have the `'static` lifetime.
 
 Notre fonction `new` retourne désormais un `Result` contenant une instance de
 `Config` dans le cas d'un succès et une `&'static str` dans le cas d'une
-erreur. Nos valeurs d'erreur seront toujours des litéraux de chaîne de
+erreur. Nos valeurs d'erreur seront toujours des littéraux de chaîne de
 caractères qui ont la durée de vie `'static`.
 
 <!--

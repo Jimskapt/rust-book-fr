@@ -83,7 +83,7 @@ Nous avons ajouté une nouvelle ligne avec le texte `"Duct tape."` en utilisant
 un D majuscule qui ne devrait pas correspondre à la recherche `"duct"` lorsque
 nous recherchons de manière à être sensible à la casse. Ce changement de
 l'ancien test permet de nous assurer que nous ne casserons pas accidentellement
-la fonction de recherche sensible à la casse que nous avons déjà implémenté. Ce
+la fonction de recherche sensible à la casse que nous avons déjà implémentée. Ce
 test devrait toujours continuer à réussir au fur et à mesure que nous progressons
 sur la recherche insensible à la casse.
 
@@ -163,9 +163,9 @@ writing a real application, we’d want to do a bit more work here, but this sec
 is about environment variables, not Unicode, so we’ll leave it at that here.
 -->
 
-D'abord, nous obtenons la chaîne de caractères `recherche` en minuscule et nous
+D'abord, nous obtenons la chaîne de caractères `recherche` en minuscules et nous
 l'enregistrons dans une variable masquée avec le même nom. L'appel à
-`to_lowercase` sur la recherche est nécessaire afin que quel que soit la
+`to_lowercase` sur la recherche est nécessaire afin que quelle que soit la
 recherche de l'utilisateur, comme `"rust"`, `"RUST"`, `"Rust"`, ou `"rUsT"`,
 nous traitons la recherche comme si elle était `"rust"` et par conséquent elle
 est insensible à la casse. La méthode `to_lowercase` devrait gérer de l'Unicode
@@ -203,7 +203,7 @@ query is.
 
 Ensuite, nous ajoutons un appel à `to_lowercase` sur chaque `ligne` avant de
 vérifier si elle contient `recherche` afin d'obtenir tous ses caractères en
-minuscule. Maintenant que nous avons `ligne` et `recherche` en minuscules, nous
+minuscules. Maintenant que nous avons `ligne` et `recherche` en minuscules, nous
 allons rechercher les correspondances peu importe la casse de la recherche.
 
 <!--

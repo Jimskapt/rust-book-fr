@@ -23,7 +23,7 @@ fn generer_exercices(intensite: u32, nombre_aleatoire: u32) {
             println!("Faites une pause aujourd'hui ! Rappelez-vous de bien vous hydrater !");
         } else {
             println!(
-                "Aujourd'hui, courrez pendant {} minutes !",
+                "Aujourd'hui, courez pendant {} minutes !",
                 simuler_gros_calcul(intensite)
             );
         }

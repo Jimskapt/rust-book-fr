@@ -204,7 +204,7 @@ query is.
 Ensuite, nous ajoutons un appel à `to_lowercase` sur chaque `ligne` avant de
 vérifier si elle contient `recherche` afin d'obtenir tous ses caractères en
 minuscules. Maintenant que nous avons `ligne` et `recherche` en minuscules, nous
-allons rechercher les correspondances peu importe la casse de la recherche.
+allons rechercher les correspondances, peu importe la casse de la recherche.
 
 <!--
 Let’s see if this implementation passes the tests:
@@ -450,7 +450,7 @@ We should get lines that contain “to” that might have uppercase letters:
 -->
 
 Nous devrions trouver cette fois-ci également toutes les lignes qui contiennent
-“to” écrit avec certaines lettres en majuscule:
+“to” écrit avec certaines lettres en majuscules :
 
 <!--
 <!-- manual-regeneration

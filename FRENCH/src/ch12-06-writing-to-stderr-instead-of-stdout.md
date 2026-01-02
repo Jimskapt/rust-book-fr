@@ -271,7 +271,7 @@ entrées/sorties en Rust. En utilisant les arguments en ligne de commande, les
 fichiers, les variables d'environnement et la macro `eprintln!` pour écrire les
 erreurs, vous pouvez désormais écrire des applications en ligne de commande. En
 suivant les concepts vus dans les chapitres précédents, votre code restera bien
-organisé, stockera les données dans les bonnes structures de données, gérera
+organisé, stockera les données dans les bonnes structures de données, gèrera
 correctement les erreurs et sera correctement testé.
 
 <!--

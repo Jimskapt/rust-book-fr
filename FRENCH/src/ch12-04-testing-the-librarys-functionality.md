@@ -377,7 +377,7 @@ collection.
 #### Searching Each Line for the Query
 -->
 
-#### Trouver chaque ligne correspondante à la recherche
+#### Trouver chaque ligne correspondant à la recherche
 
 <!--
 Next, we’ll check whether the current line contains our query string.

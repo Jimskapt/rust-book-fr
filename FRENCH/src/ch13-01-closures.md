@@ -54,7 +54,7 @@ une application destinée à générer des programmes d'entraînements physiques
 personnalisés. L'application dorsale est écrite en Rust et repose sur un
 algorithme qui génère les exercices en fonction de beaucoup de facteurs tels
 que l'âge de l'utilisateur, son indice de masse corporelle, ses préférences et
-une intensité qu'il aura paramétré. L'algorithme réellement utilisé n'est pas
+une intensité qu'il aura paramétrée. L'algorithme réellement utilisé n'est pas
 important pour cet exemple : ce qui est important c'est que le calcul prenne
 plusieurs secondes. Nous voulons appeler l'algorithme uniquement lorsque nous
 en avons besoin, et seulement une fois, afin que l'utilisateur n'ait pas à

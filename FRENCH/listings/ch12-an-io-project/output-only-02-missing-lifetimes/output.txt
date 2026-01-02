@@ -10,7 +10,7 @@ error[E0106]: missing lifetime specifier
 help: consider introducing a named lifetime parameter
    |
 28 | pub fn rechercher<'a>(recherche: &'a str, contenu: &'a str) -> Vec<&'a str> {
-   |                  ++++             ++            ++              ++
+   |                  ++++             ++                ++              ++
 
 error: aborting due to previous error
 

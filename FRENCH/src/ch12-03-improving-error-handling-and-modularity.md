@@ -801,7 +801,7 @@ value when it runs.
 Dans cet encart, nous avons utilisé une méthode que nous n'avons pas encore
 détaillée pour l'instant : `unwrap_or_else`, qui est définie sur `Result<T, E>`
 par la bibliothèque standard. L'utilisation de `unwrap_or_else` nous permet de
-définir une gestion des erreurs personnalisée, exempt de `panic!`. Si le
+définir une gestion des erreurs personnalisée, exempte de `panic!`. Si le
 `Result` est une valeur `Ok`, le comportement de cette méthode est similaire à
 `unwrap` : elle retourne la valeur à l'intérieur du `Ok`. Cependant, si la
 valeur est une valeur `Err`, cette méthode appelle le code dans la *fermeture*,

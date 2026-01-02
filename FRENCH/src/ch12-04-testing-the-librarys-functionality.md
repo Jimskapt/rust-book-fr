@@ -492,7 +492,7 @@ return to this example in [Chapter 13][ch13-iterators]<!-- ignore -- >, where we
 explore iterators in detail, and look at how to improve it.
 -->
 
-Arrivé à ce stade, nous pourrions envisager des pistes de remaniement pour
+Arrivés à ce stade, nous pourrions envisager des pistes de remaniement pour
 l'implémentation de la fonction de recherche tout en faisant en sorte que les
 tests réussissent toujours afin de conserver les mêmes fonctionnalités. Le code
 de la fonction de recherche n'est pas mauvais, mais il ne profite pas de

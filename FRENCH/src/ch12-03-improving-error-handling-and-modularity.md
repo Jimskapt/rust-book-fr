@@ -1204,7 +1204,7 @@ Now we need to bring the code we moved to *src/lib.rs* into the scope of the
 binary crate in *src/main.rs*, as shown in Listing 12-14.
 -->
 
-Maintenant nous devons importer le code que nous avons déplacé dans
+Maintenant, nous devons importer le code que nous avons déplacé dans
 *src/lib.rs* dans la portée de la crate binaire dans *src/main.rs*, comme dans
 l'encart 12-14.
 

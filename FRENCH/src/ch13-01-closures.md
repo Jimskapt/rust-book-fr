@@ -93,7 +93,7 @@ qui lui a été donné :
 calculation that takes about 2 seconds to run</span>
 -->
 
-<span class="caption">Encart 13-1 : une fonction pour remplacer un calcul
+<span class="caption">Encart 13-1 : Une fonction pour remplacer un calcul
 hypothétique qui prend environ deux secondes à s'exécuter</span>
 
 <!--
@@ -160,7 +160,7 @@ fonction `main` que nous allons utiliser.
 simulate user input and random number generation</span>
 -->
 
-<span class="caption">Encart 13-2 : une fonction `main` avec des valeurs codées
+<span class="caption">Encart 13-2 : Une fonction `main` avec des valeurs codées
 en dur pour simuler la saisie d'une valeur d'intensité par l'utilisateur et la
 génération d'un nombre aléatoire</span>
 
@@ -215,7 +215,7 @@ plans based on the inputs and calls to the `simulated_expensive_calculation`
 function</span>
 -->
 
-<span class="caption">Encart 13-3 : la logique métier qui affiche les programmes
+<span class="caption">Encart 13-3 : La logique métier qui affiche les programmes
 d'entraînement en fonction des entrées et des appels à la fonction
 `simuler_gros_calcul`.</span>
 
@@ -322,7 +322,7 @@ Tout d'abord, nous allons essayer d'extraire l'appel en double à la fonction
 `expensive_result` variable</span>
 -->
 
-<span class="caption">Encart 13-4 : extraction des appels à
+<span class="caption">Encart 13-4 : Extraction des appels à
 `simuler_gros_calcul` dans un seul endroit et stockage du résultat dans la
 variable `resultat_lent`.</span>
 
@@ -391,7 +391,7 @@ la fermeture que nous introduisons ici.
 `expensive_closure` variable</span>
 -->
 
-<span class="caption">Encart 13-5 : définition d'une fermeture et son
+<span class="caption">Encart 13-5 : Définition d'une fermeture et son
 enregistrement dans la variable `fermeture_lente`.</span>
 
 <!--
@@ -479,7 +479,7 @@ arguments que nous voulons utiliser pour cet appel, comme dans l'encart 13-6.
 defined</span>
 -->
 
-<span class="caption">Encart 13-6 : appel de la fermeture `fermeture_lente`
+<span class="caption">Encart 13-6 : Appel de la fermeture `fermeture_lente`
 que nous avons définie</span>
 
 <!--
@@ -591,7 +591,7 @@ avons définie dans l'encart 13-5 ressemblerait à l'encart 13-7.
 parameter and return value types in the closure</span>
 -->
 
-<span class="caption">Encart 13-7 : ajout d'annotations de type optionnelles sur
+<span class="caption">Encart 13-7 : Ajout d'annotations de type optionnelles sur
 les paramètres et les valeurs de retour de la fermeture</span>
 
 <!--
@@ -686,7 +686,7 @@ deuxième fois, nous obtiendrons une erreur :
 are inferred with two different types</span>
 -->
 
-<span class="caption">Encart 13-8 : tentative d'appeler une fermeture dont les
+<span class="caption">Encart 13-8 : Tentative d'appeler une fermeture dont les
 types sont déduits avec deux types différents</span>
 
 <!--
@@ -832,7 +832,7 @@ fermeture et une valeur de résultat optionnelle :
 closure in `calculation` and an optional result in `value`</span>
 -->
 
-<span class="caption">Encart 13-9 : définition d'une structure `Cache` qui
+<span class="caption">Encart 13-9 : Définition d'une structure `Cache` qui
 possède une fermeture dans `calcul` et un résultat optionnel dans `valeur`.
 </span>
 
@@ -907,7 +907,7 @@ l'encart 13-10 :
 <span class="caption">Listing 13-10: The caching logic of `Cacher`</span>
 -->
 
-<span class="caption">Encart 13-10 : la logique de `Cache`</span>
+<span class="caption">Encart 13-10 : La logique de `Cache`</span>
 
 <!--
 We want `Cacher` to manage the struct fields’ values rather than letting the
@@ -987,7 +987,7 @@ L'encart 13-11 montre comment utiliser cette structure `Cache` dans la fonction
 function to abstract away the caching logic</span>
 -->
 
-<span class="caption">Encart 13-11 : utilisation de `Cache` dans la fonction
+<span class="caption">Encart 13-11 : Utilisation de `Cache` dans la fonction
 `generer_exercices` pour masquer la logique du cache.</span>
 
 <!--
@@ -1186,7 +1186,7 @@ fermeture :
 variable in its enclosing scope</span>
 -->
 
-<span class="caption">Encart 13-12 : exemple d'une fermeture qui se réfère à une
+<span class="caption">Encart 13-12 : Exemple d'une fermeture qui se réfère à une
 variable présente dans la portée qui la contient.</span>
 
 <!--

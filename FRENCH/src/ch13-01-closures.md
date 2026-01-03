@@ -1309,7 +1309,7 @@ because the body of the closure only needs to read the value in `x`.
 
 Lorsque nous créons une fermeture, Rust déduit quel trait utiliser en se basant
 sur la façon dont la fermeture utilise les valeurs de l'environnement. Toutes
-les fermetures implémentent `FnOne` car elles peuvent toute être appelées au
+les fermetures implémentent `FnOnce` car elles peuvent toute être appelées au
 moins une fois. Les fermetures qui ne déplacent pas les variables capturées
 implémentent également `FnMut`, et les fermetures qui n'ont pas besoin d'accès
 mutable aux variables capturées implémentent aussi `Fn`. Dans l'encart 13-12, la

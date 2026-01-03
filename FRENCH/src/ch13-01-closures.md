@@ -640,7 +640,7 @@ compile because the types will be inferred from their usage.
 La première ligne affiche la définition d'une fonction et la deuxième ligne une
 définition d'une fermeture entièrement annotée. La troisième ligne supprime les
 annotations de type de la définition de la fermeture, et la quatrième ligne
-supprime les accolades qui sont facultatives, parce que le corps d'une fermeture
+supprime les accolades qui sont facultatives, parce que le corps de la fermeture
 n'a qu'une seule expression. Ce sont toutes des définitions valides qui
 suivront le même comportement lorsqu'on les appellera. L'appel aux fermetures
 est nécessaire pour que `ajouter_un_v3` et `ajouter_un_v4` puissent être compilés

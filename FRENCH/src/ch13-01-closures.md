@@ -847,7 +847,7 @@ parameter (specified within the parentheses after `Fn`) and must return a
 La structure `Cache` a un champ `calcul` du type générique `T`. Le trait lié `T`
 précise que c'est une fermeture en utilisant le trait `Fn`. Toute fermeture que
 l'on veut stocker dans le champ `calcul` doit avoir un paramètre `u32` (ce qui
-est précisé entre parenthèse après le `Fn`) et doit retourner un `u32` (ce qui
+est précisé entre parenthèses après le `Fn`) et doit retourner un `u32` (ce qui
 est précisé après le `->`).
 
 <!--

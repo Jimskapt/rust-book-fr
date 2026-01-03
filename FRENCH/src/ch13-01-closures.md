@@ -872,7 +872,7 @@ the result of the closure again, instead of executing the closure again, the
 -->
 
 Le champ `valeur` est de type `Option<u32>`. Avant d'exécuter la fermeture,
-`valeur` sera initialisée à `None`. Lorsque du code utilisant un `Cache` demande
+`valeur` sera initialisée à `None`. Lorsque du code utilisant un `Cache` demandera
 le *résultat* de la fermeture, le `Cache` exécutera la fermeture à ce moment-là
 et stockera le résultat dans une variante `Some` dans le champ `valeur`.
 Ensuite, si le code demande à nouveau le résultat de la fermeture, le `Cache`

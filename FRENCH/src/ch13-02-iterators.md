@@ -25,7 +25,7 @@ the `iter` method defined on `Vec<T>`. This code by itself doesn’t do anything
 useful.
 -->
 
-En Rust, un itérateur est *une évaluation paresseuse*, ce qui signifie qu'il n'a
+En Rust, un itérateur est une *évaluation paresseuse*, ce qui signifie qu'il n'a
 aucun effet jusqu'à ce que nous appelions des méthodes qui consomment
 l'itérateur pour l'utiliser. Par exemple, le code dans l'encart 13-13 crée un
 itérateur sur les éléments du vecteur `v1` en appelant la méthode `iter` définie
@@ -339,7 +339,7 @@ D'autres méthodes définies sur le trait `Iterator`, connues sous le nom
 *d'adaptateurs d'itération*, nous permettent de transformer un itérateur en un
 type d'itérateur différent. Nous pouvons enchaîner plusieurs appels à des
 adaptateurs d'itération pour effectuer des actions complexes de manière
-compréhensible. Mais comme les itérateurs sont *des évaluations paresseuses*,
+compréhensible. Mais comme les itérateurs sont des *évaluations paresseuses*,
 nous devons faire appel à l'une des méthodes d'adaptation de consommation pour
 obtenir les résultats des appels aux adaptateurs d'itération.
 

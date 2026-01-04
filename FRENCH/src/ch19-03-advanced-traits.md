@@ -82,7 +82,7 @@ section du chapitre 13, nous avions mentionné que la définition du trait
 that has an associated type `Item`</span>
 -->
 
-<span class="caption">Encart 19-12 : la définition du trait `Iterator` qui a un
+<span class="caption">Encart 19-12 : La définition du trait `Iterator` qui a un
 type `Item` associé</span>
 
 <!--
@@ -157,7 +157,7 @@ trait `Iterator` avec les génériques, comme dans l'encart 19-13 ?
 `Iterator` trait using generics</span>
 -->
 
-<span class="caption">Encart 19-13 : une définition hypothétique du trait
+<span class="caption">Encart 19-13 : Une définition hypothétique du trait
 `Iterator` en utilisant des génériques</span>
 
 <!--
@@ -266,7 +266,7 @@ deux instances de `Point`. Nous pouvons faire cela en implémentant le trait
 the `+` operator for `Point` instances</span>
 -->
 
-<span class="caption">Encart 19-14 : implémentation du trait `Add` pour
+<span class="caption">Encart 19-14 : Implémentation du trait `Add` pour
 surcharger l'opérateur `+` pour les instances de `Point`</span>
 
 <!--
@@ -378,7 +378,7 @@ sur `Millimetres` avec `Metres` comme étant le `Rhs`, comme dans l'encart
 `Millimeters` to add `Millimeters` to `Meters`</span>
 -->
 
-<span class="caption">Encart 19-15 : implémentation du trait `Add` sur
+<span class="caption">Encart 19-15 : Implémentation du trait `Add` sur
 `Millimetres` pour pouvoir additionner `Millimetres` à `Metres`</span>
 
 <!--
@@ -491,7 +491,7 @@ method and are implemented on the `Human` type, and a `fly` method is
 implemented on `Human` directly</span>
 -->
 
-<span class="caption">Encart 19-16 : deux traits qui ont une méthode `voler`
+<span class="caption">Encart 19-16 : Deux traits qui ont une méthode `voler`
 et qui sont implémentés sur le type `Humain`, et une méthode `voler` est aussi
 implémentée directement sur `Humain`</span>
 
@@ -525,7 +525,7 @@ comme le montre l'encart 19-17.
 `Human`</span>
 -->
 
-<span class="caption">Encart 19-17 : utilisation de `voler` sur une instance de
+<span class="caption">Encart 19-17 : Utilisation de `voler` sur une instance de
 `Humain`</span>
 
 <!--
@@ -568,7 +568,7 @@ nous souhaitons utiliser. L'encart 19-18 montre cette syntaxe.
 want to call</span>
 -->
 
-<span class="caption">Encart 19-18 : préciser de quel trait nous souhaitons
+<span class="caption">Encart 19-18 : Préciser de quel trait nous souhaitons
 utiliser la méthode `voler`</span>
 
 <!--
@@ -654,7 +654,7 @@ type with an associated function of the same name that also implements the
 trait</span>
 -->
 
-<span class="caption">Encart 19-19 : un trait avec une fonction associée et un
+<span class="caption">Encart 19-19 : Un trait avec une fonction associée et un
 type avec une autre fonction associée qui porte le même nom et qui implémente
 aussi ce trait</span>
 
@@ -731,7 +731,7 @@ function from the `Animal` trait, but Rust doesn’t know which implementation t
 use</span>
 -->
 
-<span class="caption">Encart 19-20 : tentative d'appel à la fonction `nom_bebe`
+<span class="caption">Encart 19-20 : Tentative d'appel à la fonction `nom_bebe`
 du trait `Animal`, mais Rust ne sait pas quelle implémentation utiliser</span>
 
 <!--
@@ -789,7 +789,7 @@ that we want to call the `baby_name` function from the `Animal` trait as
 implemented on `Dog`</span>
 -->
 
-<span class="caption">Encart 19-21 : utilisation de la syntaxe totalement
+<span class="caption">Encart 19-21 : Utilisation de la syntaxe totalement
 définie pour préciser que nous souhaitons appeler la fonction `nom_bebe` du
 trait `Animal` tel qu'il est implémenté sur `Chien`</span>
 
@@ -940,7 +940,7 @@ trait lié au trait. L'encart 19-22 montre une implémentation du trait
 requires the functionality from `Display`</span>
 -->
 
-<span class="caption">Encart 19-22 : implémentation du trait `OutlinePrint` qui
+<span class="caption">Encart 19-22 : Implémentation du trait `OutlinePrint` qui
 nécessite la fonctionnalité offerte par `Display`</span>
 
 <!--
@@ -1108,7 +1108,7 @@ utiliser la valeur `Vec<T>`, comme dans l'encart 19-23.
 `Vec<String>` to implement `Display`</span>
 -->
 
-<span class="caption">Encart 19-23 : création d'un type `Enveloppe` autour de
+<span class="caption">Encart 19-23 : Création d'un type `Enveloppe` autour de
 `Vec<String>` pour implémenter `Display`</span>
 
 <!--

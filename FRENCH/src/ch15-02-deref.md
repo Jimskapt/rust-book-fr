@@ -91,7 +91,7 @@ ensuite l'opérateur de déréférencement pour suivre la référence vers la do
 reference to an `i32` value</span>
 -->
 
-<span class="caption">Encart 15-6 : utiliser l'opérateur de déréférencement pour
+<span class="caption">Encart 15-6 : Utiliser l'opérateur de déréférencement pour
 suivre une référence vers une valeur `i32`</span>
 
 <!--
@@ -175,7 +175,7 @@ montré dans l'encart 15-7 :
 `Box<i32>`</span>
 -->
 
-<span class="caption">Encart 15-7 : utilisation de l'opérateur de
+<span class="caption">Encart 15-7 : Utilisation de l'opérateur de
 déréférencement sur un `Box<i32>`</span>
 
 <!--
@@ -245,7 +245,7 @@ fonction `new` définie sur `Box<T>`.
 <span class="caption">Listing 15-8: Defining a `MyBox<T>` type</span>
 -->
 
-<span class="caption">Encart 15-8 : définition du type `MaBoite<T>`</span>
+<span class="caption">Encart 15-8 : Définition du type `MaBoite<T>`</span>
 
 <!--
 We define a struct named `MyBox` and declare a generic parameter `T`, because
@@ -293,7 +293,7 @@ comment déréférencer `MaBoite`.
 way we used references and `Box<T>`</span>
 -->
 
-<span class="caption">Encart 15-9 : tentative d'utiliser `MaBoite<T>` de la même
+<span class="caption">Encart 15-9 : Tentative d'utiliser `MaBoite<T>` de la même
 manière que nous avions utilisé les références et `Box<T>`</span>
 
 <!--
@@ -365,7 +365,7 @@ de `MaBoite` :
 <span class="caption">Listing 15-10: Implementing `Deref` on `MyBox<T>`</span>
 -->
 
-<span class="caption">Encart 15-10 : implémentation de `Deref` sur `MaBoite<T>`
+<span class="caption">Encart 15-10 : Implémentation de `Deref` sur `MaBoite<T>`
 </span>
 
 <!--
@@ -551,7 +551,7 @@ caractères :
 `name` of type `&str`</span>
 -->
 
-<span class="caption">Encart 15-11 : une fonction `saluer` qui prend en
+<span class="caption">Encart 15-11 : Une fonction `saluer` qui prend en
 paramètre `nom` du type `&str`</span>
 
 <!--
@@ -586,7 +586,7 @@ valeur du type `MaBoite<String>`, comme dans l'encart 15-12 :
 `MyBox<String>` value, which works because of deref coercion</span>
 -->
 
-<span class="caption">Encart 15-12 : appel à `saluer` avec une référence à une
+<span class="caption">Encart 15-12 : Appel à `saluer` avec une référence à une
 valeur du type `MaBoite<String>`, qui fonctionne grâce à l'extrapolation de
 déréférencement</span>
 
@@ -640,7 +640,7 @@ appeler `saluer` avec une valeur du type `&MaBoite<String>`.
 didn’t have deref coercion</span>
 -->
 
-<span class="caption">Encart 15-13 : le code que nous aurions dû écrire si Rust
+<span class="caption">Encart 15-13 : Le code que nous aurions dû écrire si Rust
 n'avait pas d'extrapolation de déréférencement</span>
 
 <!--

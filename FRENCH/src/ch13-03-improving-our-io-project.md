@@ -59,7 +59,7 @@ l'encart 12-23 à la fin du chapitre 12 :
 from Listing 12-23</span>
 -->
 
-<span class="caption">Encart 13-24 : reproduction de la fonction `Config::new`
+<span class="caption">Encart 13-24 : Reproduction de la fonction `Config::new`
 de la fin du chapitre 12</span>
 
 <!--
@@ -170,7 +170,7 @@ que nous mettions également à jour `Config::new`.
 `Config::new`</span>
 -->
 
-<span class="caption">Encart 13-25 : on passe directement la valeur de retour de
+<span class="caption">Encart 13-25 : On passe directement la valeur de retour de
 `env::args` à `Config::new`.</span>
 
 <!--
@@ -218,7 +218,7 @@ encore car nous devons mettre à jour le corps de la fonction.
 expect an iterator</span>
 -->
 
-<span class="caption">Encart 13-26 : mise à jour de la signature de
+<span class="caption">Encart 13-26 : Mise à jour de la signature de
 `Config::new` pour recevoir un itérateur</span>
 
 <!--
@@ -277,7 +277,7 @@ met à jour le code de l'encart 12-23 afin d'utiliser la méthode `next` :
 iterator methods</span>
 -->
 
-<span class="caption">Encart 13-27 : changement du corps de `Config::new` afin
+<span class="caption">Encart 13-27 : Changement du corps de `Config::new` afin
 d'utiliser les méthodes d'itération</span>
 
 <!--
@@ -377,7 +377,7 @@ vecteur `resultats`. L'encart 13-29 montre ce changement :
 implementation of the `search` function</span>
 -->
 
-<span class="caption">Encart 13-29 : utilisation des méthodes des adaptateurs
+<span class="caption">Encart 13-29 : Utilisation des méthodes des adaptateurs
 d'itération dans l'implémentation de la fonction `rechercher`</span>
 
 <!--

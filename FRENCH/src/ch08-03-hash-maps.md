@@ -81,7 +81,7 @@ points, et l'équipe Jaune commence avec 50.
 keys and values</span>
 -->
 
-<span class="caption">Encart 8-20 : création d'une nouvelle table de hachage et
+<span class="caption">Encart 8-20 : Création d'une nouvelle table de hachage et
 insertion de quelques clés et valeurs</span>
 
 <!--
@@ -151,7 +151,7 @@ itérateur de tuples en table de hachage, comme dans l'encart 8-21.
 and a list of scores</span>
 -->
 
-<span class="caption">Encart 8-21 : création d'une table de hachage à partir
+<span class="caption">Encart 8-21 : Création d'une table de hachage à partir
 d'une liste d'équipes et d'une liste de scores</span>
 
 <!--
@@ -204,7 +204,7 @@ propriétaire de ces valeurs, comme démontré dans l'encart 8-22.
 the hash map once they’re inserted</span>
 -->
 
-<span class="caption">Encart 8-22 : démonstration que les clés et les valeurs
+<span class="caption">Encart 8-22 : Démonstration que les clés et les valeurs
 sont possédées par la table de hachage une fois qu'elles sont insérées</span>
 
 <!--
@@ -259,7 +259,7 @@ méthode `get`, comme dans l'encart 8-23.
 stored in the hash map</span>
 -->
 
-<span class="caption">Encart 8-23 : récupération du score de l'équipe `Bleu`,
+<span class="caption">Encart 8-23 : Récupération du score de l'équipe `Bleu`,
 stocké dans la table de hachage</span>
 
 <!--
@@ -375,7 +375,7 @@ nous ajoutons la valeur pour l'équipe `Bleu` à deux reprises.
 key</span>
 -->
 
-<span class="caption">Encart 8-24 : remplacement d'une valeur stockée sous une
+<span class="caption">Encart 8-24 : Remplacement d'une valeur stockée sous une
 clé spécifique</span>
 
 <!--
@@ -427,7 +427,7 @@ ce code va ressembler à l'encart 8-25.
 the key does not already have a value</span>
 -->
 
-<span class="caption">Encart 8-25 : utilisation de la méthode `entry` pour
+<span class="caption">Encart 8-25 : Utilisation de la méthode `entry` pour
 ajouter la clé uniquement si elle n'a pas déjà de valeur associée</span>
 
 <!--
@@ -497,7 +497,7 @@ insérer la valeur `0`.
 map that stores words and counts</span>
 -->
 
-<span class="caption">Encart 8-26 : comptage des occurrences des mots en
+<span class="caption">Encart 8-26 : Comptage des occurrences des mots en
 utilisant une table de hachage qui stocke les mots et leur quantité</span>
 
 <!--

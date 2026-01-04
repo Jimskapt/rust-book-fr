@@ -91,7 +91,7 @@ fonction `ajouter_un` dans une crate nommée `ma_crate`.
 function</span>
 -->
 
-<span class="caption">Encart 14-1 : un commentaire de documentation pour une
+<span class="caption">Encart 14-1 : Un commentaire de documentation pour une
 fonction</span>
 
 <!--
@@ -316,7 +316,7 @@ fichier *src/lib.rs*, comme dans l'encart 14-2 :
 whole</span>
 -->
 
-<span class="caption">Encart 14-2 : documentation portant sur la crate
+<span class="caption">Encart 14-2 : Documentation portant sur la crate
 `ma_crate`</span>
 
 <!--
@@ -468,7 +468,7 @@ modules : un module `types` qui contient deux énumérations `CouleurPrimaire` 
 `kinds` and `utils` modules</span>
 -->
 
-<span class="caption">Encart 14-3 : une bibliothèque `art` avec des éléments
+<span class="caption">Encart 14-3 : Une bibliothèque `art` avec des éléments
 organisés selon les modules `types` et `utilitaires`</span>
 
 <!--
@@ -542,7 +542,7 @@ montre un exemple d'une crate qui utilise les éléments `CouleurPrimaire` et
 its internal structure exported</span>
 -->
 
-<span class="caption">Encart 14-4 : une crate qui utilise les éléments de la
+<span class="caption">Encart 14-4 : Une crate qui utilise les éléments de la
 crate `art` avec sa structure interne exportée</span>
 
 <!--
@@ -602,7 +602,7 @@ pour ré-exporter les éléments au niveau supérieur, comme montré dans l'enca
 items</span>
 -->
 
-<span class="caption">Encart 14-5 : ajout de l'instruction `pub use` pour
+<span class="caption">Encart 14-5 : Ajout de l'instruction `pub use` pour
 ré-exporter les éléments</span>
 
 <!--
@@ -667,7 +667,7 @@ mais ils peuvent maintenant utiliser la structure plus pratique de l'encart
 the `art` crate</span>
 -->
 
-<span class="caption">Encart 14-6 : un programme qui utilise les éléments
+<span class="caption">Encart 14-6 : Un programme qui utilise les éléments
 ré-exportés de la crate `art`</span>
 
 <!--

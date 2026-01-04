@@ -63,7 +63,7 @@ secondes avant de pouvoir répondre à nouveau.
 */sleep* and sleeping for 5 seconds</span>
 -->
 
-<span class="caption">Encart 20-10 : simulation d'une requête provoquant un
+<span class="caption">Encart 20-10 : Simulation d'une requête provoquant un
 long traitement en détectant */pause* et en faisant une pause de 5
 secondes</span>
 
@@ -271,7 +271,7 @@ gérer chaque flux avec une boucle `for`.
 stream</span>
 -->
 
-<span class="caption">Encart 20-11 : création d'une nouvelle tâche pour chaque
+<span class="caption">Encart 20-11 : Création d'une nouvelle tâche pour chaque
 flux</span>
 
 <!--
@@ -752,7 +752,7 @@ en sorte que le programme panique s'il reçoit un zéro, en utilisant la macro
 `size` is zero</span>
 -->
 
-<span class="caption">Encart 20-13 : implémentation de `GroupeTaches::new` qui
+<span class="caption">Encart 20-13 : Implémentation de `GroupeTaches::new` qui
 devrait paniquer si `taille` vaut zéro</span>
 
 <!--
@@ -882,7 +882,7 @@ instance de `GroupeTaches` qui les contient.
 the threads</span>
 -->
 
-<span class="caption">Encart 20-14 : création d'un vecteur pour `GroupeTaches`
+<span class="caption">Encart 20-14 : Création d'un vecteur pour `GroupeTaches`
 pour stocker les tâches</span>
 
 <!--
@@ -1050,7 +1050,7 @@ aux changements listés précédemment.
 instances instead of holding threads directly</span>
 -->
 
-<span class="caption">Encart 20-15 : modification de `GroupeTaches` pour
+<span class="caption">Encart 20-15 : Modification de `GroupeTaches` pour
 stocker des instances de `Operateur` plutôt que de stocker directement des
 tâches</span>
 
@@ -1192,7 +1192,7 @@ d'éléments que nous enverrons dans le canal.
 sending end of a channel that sends `Job` instances</span>
 -->
 
-<span class="caption">Encart 20-16 : modification de `GroupeTaches` pour
+<span class="caption">Encart 20-16 : Modification de `GroupeTaches` pour
 stocker la partie émettrice du canal qui émet des instances de `Mission`</span>
 
 <!--
@@ -1238,7 +1238,7 @@ code de l'encart 20-17 ne se compile pas encore.
 to the workers</span>
 -->
 
-<span class="caption">Encart 20-17 : envoi de la partie réceptrice du canal aux
+<span class="caption">Encart 20-17 : Envoi de la partie réceptrice du canal aux
 opérateurs</span>
 
 <!--
@@ -1332,7 +1332,7 @@ montre les changements que nous devons apporter.
 among the workers using `Arc` and `Mutex`</span>
 -->
 
-<span class="caption">Encart 20-18 : partage de la partie réceptrice du canal
+<span class="caption">Encart 20-18 : Partage de la partie réceptrice du canal
 entre les opérateurs en utilisant `Arc` et `Mutex`</span>
 
 <!--
@@ -1396,7 +1396,7 @@ trop longs. Voyez cela dans l'encart 20-19.
 that holds each closure and then sending the job down the channel</span>
 -->
 
-<span class="caption">Encart 20-19 : création d'un alias de type `Mission`
+<span class="caption">Encart 20-19 : Création d'un alias de type `Mission`
 pour une `Box` qui contient chaque fermeture et qui transportera la mission
 dans le canal</span>
 
@@ -1458,7 +1458,7 @@ quand elle en obtient une. Appliquons les changements montrés dans l'encart
 worker’s thread</span>
 -->
 
-<span class="caption">Encart 20-20 : réception et exécution des missions dans
+<span class="caption">Encart 20-20 : Réception et exécution des missions dans
 la tâche de l'opérateur</span>
 
 <!--
@@ -1659,7 +1659,7 @@ comme dans l'encart 20-21.
 `Worker::new` using `while let`</span>
 -->
 
-<span class="caption">Encart 20-21 : une implémentation alternative de
+<span class="caption">Encart 20-21 : Une implémentation alternative de
 `Operateur::new` qui utilise `while let`</span>
 
 <!--

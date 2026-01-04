@@ -45,7 +45,7 @@ sur `Vec<T>`. Ce code en lui-même ne fait rien d'utile.
 <span class="caption">Listing 13-13: Creating an iterator</span>
 -->
 
-<span class="caption">Encart 13-13 : création d'un itérateur</span>
+<span class="caption">Encart 13-13 : Création d'un itérateur</span>
 
 <!--
 Once we’ve created an iterator, we can use it in a variety of ways. In Listing
@@ -86,7 +86,7 @@ est utilisé à chaque itération de la boucle, qui affiche chaque valeur.
 <span class="caption">Listing 13-14: Using an iterator in a `for` loop</span>
 -->
 
-<span class="caption">Encart 13-14 : utilisation d'un itérateur dans une boucle
+<span class="caption">Encart 13-14 : Utilisation d'un itérateur dans une boucle
 `for`</span>
 
 <!--
@@ -213,7 +213,7 @@ l'itérateur créé à partir du vecteur.
 iterator</span>
 -->
 
-<span class="caption">Encart 13-15 : appel de la méthode `next` sur un itérateur
+<span class="caption">Encart 13-15 : Appel de la méthode `next` sur un itérateur
 </span>
 
 <!--
@@ -310,7 +310,7 @@ illustrant une utilisation de la méthode `sum` :
 of all items in the iterator</span>
 -->
 
-<span class="caption">Encart 13-16 : appel de la méthode `sum` pour obtenir la
+<span class="caption">Encart 13-16 : Appel de la méthode `sum` pour obtenir la
 somme de tous les éléments présents dans l'itérateur</span>
 
 <!--
@@ -377,7 +377,7 @@ déclenche un avertissement :
 create a new iterator</span>
 -->
 
-<span class="caption">Encart 13-17 : appel de l'adaptateur d'itération `map`
+<span class="caption">Encart 13-17 : Appel de l'adaptateur d'itération `map`
 pour créer un nouvel itérateur</span>
 
 <!--
@@ -450,7 +450,7 @@ iterator and then calling the `collect` method to consume the new iterator and
 create a vector</span>
 -->
 
-<span class="caption">Encart 13-18 : appel de la méthode `map` pour créer un
+<span class="caption">Encart 13-18 : Appel de la méthode `map` pour créer un
 nouvel itérateur, puis appel de la méthode `collect` pour consommer le nouvel
 itérateur afin de créer un vecteur</span>
 
@@ -522,7 +522,7 @@ chaussures avec la pointure demandée.
 that captures `shoe_size`</span>
 -->
 
-<span class="caption">Encart 13-19 : utilisation de la méthode `filter` avec une
+<span class="caption">Encart 13-19 : Utilisation de la méthode `filter` avec une
 fermeture capturant `pointure_chaussure`</span>
 
 <!--
@@ -637,7 +637,7 @@ function that creates instances of `Counter` with an initial value of 0 for
 `count`</span>
 -->
 
-<span class="caption">Encart 13-20 : définition de la structure `Compteur` et
+<span class="caption">Encart 13-20 : Définition de la structure `Compteur` et
 d'une fonction `new` qui crée des instances de `Compteur` avec une valeur
 initiale de 0 pour le champ `compteur`.</span>
 
@@ -687,7 +687,7 @@ qu'il se passe quand cet itérateur est utilisé, comme dans l'encart 13-21 :
 `Counter` struct</span>
 -->
 
-<span class="caption">Encart 13-21 : implémentation du trait `Iterator` sur
+<span class="caption">Encart 13-21 : Implémentation du trait `Iterator` sur
 notre structure `Compteur`</span>
 
 <!--
@@ -755,7 +755,7 @@ partir d'un vecteur dans l'encart 13-15.
 method implementation</span>
 -->
 
-<span class="caption">Encart 13-22 : test de l'implémentation de la méthode
+<span class="caption">Encart 13-22 : Test de l'implémentation de la méthode
 `next`</span>
 
 <!--
@@ -822,7 +822,7 @@ pourrions le faire, comme le montre le test dans l'encart 13-23 :
 methods on our `Counter` iterator</span>
 -->
 
-<span class="caption">Encart 13-23 : utilisation d'une gamme de méthodes du
+<span class="caption">Encart 13-23 : Utilisation d'une gamme de méthodes du
 trait `Iterator` sur notre itérateur `Compteur` </span>
 
 <!--

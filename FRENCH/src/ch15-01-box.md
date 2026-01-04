@@ -116,7 +116,7 @@ L'encart 15-1 nous montre comment utiliser une boite pour stocker une valeur
 box</span>
 -->
 
-<span class="caption">Encart 15-1 : stocker une valeur `i32` sur le tas en
+<span class="caption">Encart 15-1 : Stocker une valeur `i32` sur le tas en
 utilisant une boîte</span>
 
 <!--
@@ -290,7 +290,7 @@ pas encore de taille connue, ce que nous allons voir ensuite.
 represent a cons list data structure of `i32` values</span>
 -->
 
-<span class="caption">Encart 15-2 : première tentative de définition d'une
+<span class="caption">Encart 15-2 : Première tentative de définition d'une
 énumération pour représenter une structure de données de liste de construction
 de valeurs `i32`</span>
 
@@ -335,7 +335,7 @@ code dans l'encart 15-3 :
 2, 3`</span>
 -->
 
-<span class="caption">Encart 15-3 : utilisation de l'énumération `List` pour
+<span class="caption">Encart 15-3 : Utilisation de l'énumération `List` pour
 stocker la liste `1, 2, 3`</span>
 
 <!--
@@ -374,7 +374,7 @@ l'encart 15-4 :
 a recursive enum</span>
 -->
 
-<span class="caption">Encart 15-4 : l'erreur que nous obtenons lorsque nous
+<span class="caption">Encart 15-4 : L'erreur que nous obtenons lorsque nous
 essayons de définir une énumération récursive</span>
 
 <!--
@@ -575,7 +575,7 @@ va se compiler :
 order to have a known size</span>
 -->
 
-<span class="caption">Encart 15-5 : définition de `List` qui utilise `Box<T>`
+<span class="caption">Encart 15-5 : Définition de `List` qui utilise `Box<T>`
 dans le but d'avoir une taille connue</span>
 
 <!--

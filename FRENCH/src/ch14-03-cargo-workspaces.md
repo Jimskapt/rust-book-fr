@@ -369,7 +369,7 @@ portée. Changez ensuite la fonction `main` pour appeler la fonction
  `adder` crate</span>
 -->
 
-<span class="caption">Encart 14-7 : utilisation de la bibliothèque `ajouter_un`
+<span class="caption">Encart 14-7 : Utilisation de la bibliothèque `ajouter_un`
 dans la crate `additioneur`</span>
 
 <!--

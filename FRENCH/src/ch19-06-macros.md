@@ -213,7 +213,7 @@ L'encart 19-28 montre une définition légèrement simplifiée de la macro `vec!
 definition</span>
 -->
 
-<span class="caption">Encart 19-28 : une version simplifiée de la définition de
+<span class="caption">Encart 19-28 : Une version simplifiée de la définition de
 la macro `vec!`</span>
 
 <!--
@@ -469,7 +469,7 @@ pub fn un_nom_quelconque(entree: TokenStream) -> TokenStream {
 macro</span>
 -->
 
-<span class="caption">Encart 19-29 : un exemple de déclaration d'une macro
+<span class="caption">Encart 19-29 : Un exemple de déclaration d'une macro
 procédurale</span>
 
 <!--
@@ -552,7 +552,7 @@ d'écrire du code comme l'encart 19-30 en utilisant notre crate.
 to write when using our procedural macro</span>
 -->
 
-<span class="caption">Encart 19-30 : le code qu'un utilisateur de notre crate
+<span class="caption">Encart 19-30 : Le code qu'un utilisateur de notre crate
 pourra écrire lorsqu'il utilisera notre macro procédurale</span>
 
 <!--
@@ -751,7 +751,7 @@ fonction `impl_hello_macro`.
 will require in order to process Rust code</span>
 -->
 
-<span class="caption">Encart 19-31 : du code dont la plupart des macros
+<span class="caption">Encart 19-31 : Du code dont la plupart des macros
 procédurales auront besoin pour travailler avec du code Rust</span>
 
 <!--
@@ -890,7 +890,7 @@ DeriveInput {
 parsing the code that has the macro’s attribute in Listing 19-30</span>
 -->
 
-<span class="caption">Encart 19-32 : l'instance de `DeriveInput` que nous
+<span class="caption">Encart 19-32 : L'instance de `DeriveInput` que nous
 obtenons lorsque nous analysons le code qui est décoré par l'attribut de la
 macro dans l'encart 19-30</span>
 
@@ -980,7 +980,7 @@ trait `HelloMacro` sur le type annoté, comme montré dans l'encart 19-33.
 the parsed Rust code</span>
 -->
 
-<span class="caption">Encart 19-33 : implémentation du trait `HelloMacro` en
+<span class="caption">Encart 19-33 : Implémentation du trait `HelloMacro` en
 utilisant le code Rust interprété</span>
 
 <!--

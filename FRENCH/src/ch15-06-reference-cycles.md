@@ -64,7 +64,7 @@ de l'encart 15-25 :
 `RefCell<T>` so we can modify what a `Cons` variant is referring to</span>
 -->
 
-<span class="caption">Encart 15-25 : une liste de construction qui stocke une
+<span class="caption">Encart 15-25 : Une liste de construction qui stocke une
 `RefCell<T>` pour que nous puissions modifier ce sur quoi une variante `Cons`
 pointe</span>
 
@@ -121,7 +121,7 @@ références à différents endroits du processus.
 values pointing to each other</span>
 -->
 
-<span class="caption">Encart 15-26 : création d'une boucle de références de
+<span class="caption">Encart 15-26 : Création d'une boucle de références de
 deux valeurs `List` qui se pointent mutuellement dessus</span>
 
 <!--
@@ -433,7 +433,7 @@ enfant, comme dans l'encart 15-27 :
 and a `branch` node with `leaf` as one of its children</span>
 -->
 
-<span class="caption">Encart 15-27 : création d'un nœud `feuille` sans aucun
+<span class="caption">Encart 15-27 : Création d'un nœud `feuille` sans aucun
 enfant et un nœud `branche` avec `feuille` comme enfant</span>
 
 <!--
@@ -547,7 +547,7 @@ moyen de pointer vers son parent, `branche` :
 parent node `branch`</span>
 -->
 
-<span class="caption">Encart 15-28 : un nœud `feuille` avec une référence faible
+<span class="caption">Encart 15-28 : Un nœud `feuille` avec une référence faible
 vers son nœud parent, `branche`</span>
 
 <!--
@@ -682,7 +682,7 @@ dans l'encart 15-29 :
 examining strong and weak reference counts</span>
 -->
 
-<span class="caption">Encart 15-29 : création de `branche` dans une portée
+<span class="caption">Encart 15-29 : Création de `branche` dans une portée
 interne et vérification des compteurs de références strong et weak</span>
 
 <!--

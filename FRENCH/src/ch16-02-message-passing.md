@@ -105,7 +105,7 @@ canal.
 halves to `tx` and `rx`</span>
 -->
 
-<span class="caption">Encart 16-6 : création d'un canal et assignation de ses
+<span class="caption">Encart 16-6 : Création d'un canal et assignation de ses
 deux parties à `tx` et `rx`</span>
 
 <!--
@@ -185,7 +185,7 @@ instantané d'une tâche à une autre.
 “hi”</span>
 -->
 
-<span class="caption">Encart 16-7 : déplacement de `tx` dans la nouvelle tâche
+<span class="caption">Encart 16-7 : Déplacement de `tx` dans la nouvelle tâche
 et envoi de “salut”</span>
 
 <!--
@@ -249,7 +249,7 @@ dans l'eau à la fin de la rivière, ou récupérer un message instantané.
 and printing it</span>
 -->
 
-<span class="caption">Encart 16-8 : réception de la valeur “salut” dans la
+<span class="caption">Encart 16-8 : Réception de la valeur “salut” dans la
 tâche principale pour l'afficher</span>
 
 <!--
@@ -373,7 +373,7 @@ pour découvrir pourquoi ce code n'est pas autorisé :
 down the channel</span>
 -->
 
-<span class="caption">Encart 16-9 : tentative d'utiliser `valeur` après que
+<span class="caption">Encart 16-9 : Tentative d'utiliser `valeur` après que
 nous l'avons envoyée dans le canal</span>
 
 <!--
@@ -458,7 +458,7 @@ entre chaque message.
 between each</span>
 -->
 
-<span class="caption">Encart 16-10 : envoi de plusieurs messages en faisant une
+<span class="caption">Encart 16-10 : Envoi de plusieurs messages en faisant une
 pause entre chacun</span>
 
 <!--
@@ -563,7 +563,7 @@ valeurs au même récepteur. Nous pouvons faire ceci en clonant la partie
 producers</span>
 -->
 
-<span class="caption">Encart 16-11 : envoi de plusieurs messages à partir de
+<span class="caption">Encart 16-11 : Envoi de plusieurs messages à partir de
 plusieurs producteurs</span>
 
 <!--

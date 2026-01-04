@@ -336,7 +336,7 @@ fournir. L'encart 15-20 propose le code pour cette bibliothèque :
 value is to a maximum value and warn when the value is at certain levels</span>
 -->
 
-<span class="caption">Encart 15-20 : une bibliothèque qui suit la proximité
+<span class="caption">Encart 15-20 : Une bibliothèque qui suit la proximité
 d'une valeur avec une valeur maximale et avertit lorsque cette valeur atteint
 un certain seuil</span>
 
@@ -405,7 +405,7 @@ d'emprunt ne nous autorise pas à le faire :
 that isn’t allowed by the borrow checker</span>
 -->
 
-<span class="caption">Encart 15-21 : une tentative d'implémentation d'un
+<span class="caption">Encart 15-21 : Une tentative d'implémentation d'un
 `MessagerMock` qui n'est pas autorisée par le vérificateur d'emprunt</span>
 
 <!--
@@ -516,7 +516,7 @@ ressembler :
 value while the outer value is considered immutable</span>
 -->
 
-<span class="caption">Encart 15-22 : utilisation du `RefCell<T>` pour muter
+<span class="caption">Encart 15-22 : Utilisation du `RefCell<T>` pour muter
 une valeur interne que les valeurs externes considèrent comme immuable
 </span>
 
@@ -642,7 +642,7 @@ portée pour montrer que `RefCell<T>` nous empêche de faire ceci à l'exécutio
 same scope to see that `RefCell<T>` will panic</span>
 -->
 
-<span class="caption">Encart 15-23 : création de deux références mutables dans
+<span class="caption">Encart 15-23 : Création de deux références mutables dans
 la même portée pour voir si `RefCell<T>` va paniquer</span>
 
 <!--
@@ -763,7 +763,7 @@ dans n'importe quelle liste :
 `List` that we can mutate</span>
 -->
 
-<span class="caption">Encart 15-24 : utilisation de `Rc<RefCell<i32>>` pour
+<span class="caption">Encart 15-24 : Utilisation de `Rc<RefCell<i32>>` pour
 créer une `List` que nous pouvons modifier</span>
 
 <!--

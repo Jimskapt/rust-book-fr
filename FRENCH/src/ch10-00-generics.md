@@ -240,7 +240,7 @@ listes différentes.
 in two lists</span>
 -->
 
-<span class="caption">Encart 10-3 : du code abstrait qui trouve le plus grand
+<span class="caption">Encart 10-3 : Du code abstrait qui trouve le plus grand
 nombre dans deux listes</span>
 
 <!--

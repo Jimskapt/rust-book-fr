@@ -77,7 +77,7 @@ d'implémentation de `Drop` ; ce code ne fonctionne pas encore tout à fait.
 goes out of scope</span>
 -->
 
-<span class="caption">Encart 20-22 : utilisation de `join` sur chaque tâche
+<span class="caption">Encart 20-22 : Utilisation de `join` sur chaque tâche
 lorsque le groupe de tâches sort de la portée</span>
 
 <!--
@@ -342,7 +342,7 @@ Nous devons corriger le canal pour utiliser les valeurs du type `Message`
 exiting the loop if a `Worker` receives `Message::Terminate`</span>
 -->
 
-<span class="caption">Encart 20-23 : envoi et réception de valeurs de `Message`
+<span class="caption">Encart 20-23 : Envoi et réception de valeurs de `Message`
 et sortie de la boucle si un `Operateur` reçoit `Message:Extinction`</span>
 
 <!--
@@ -398,7 +398,7 @@ pour qu'elle ressemble à l'encart 20-24.
 workers before calling `join` on each worker thread</span>
 -->
 
-<span class="caption">Encart 20-24 : envoi de `Message::Extinction` aux
+<span class="caption">Encart 20-24 : Envoi de `Message::Extinction` aux
 opérateurs avant de d'appeler `join` sur toutes les tâches de ces
 opérateurs</span>
 
@@ -487,7 +487,7 @@ l'encart 20-25.
 requests by exiting the loop</span>
 -->
 
-<span class="caption">Encart 20-25 : arrêt du serveur après avoir servi deux
+<span class="caption">Encart 20-25 : Arrêt du serveur après avoir servi deux
 requêtes en sortant de la boucle</span>
 
 <!--

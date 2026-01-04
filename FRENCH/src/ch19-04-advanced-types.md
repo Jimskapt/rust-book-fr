@@ -195,7 +195,7 @@ celui de l'encart 19-24.
 <span class="caption">Listing 19-24: Using a long type in many places</span>
 -->
 
-<span class="caption">Encart 19-24 : utilisation d'un type long à écrire dans
+<span class="caption">Encart 19-24 : Utilisation d'un type long à écrire dans
 de nombreux endroits</span>
 
 <!--
@@ -223,7 +223,7 @@ court qui peut le remplacer partout où il est utilisé.
 repetition</span>
 -->
 
-<span class="caption">Encart 19-25 : ajout et utilisation d'un alias `Thunk`
+<span class="caption">Encart 19-25 : Ajout et utilisation d'un alias `Thunk`
 pour réduire les répétitions</span>
 
 <!--
@@ -383,7 +383,7 @@ celui-ci dans l'encart 19-26.
 `continue`</span>
 -->
 
-<span class="caption">Encart 19-26 : un `match` avec une branche qui finit par
+<span class="caption">Encart 19-26 : Un `match` avec une branche qui finit par
 un `continue`</span>
 
 <!--

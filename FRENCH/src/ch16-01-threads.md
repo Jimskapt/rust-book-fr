@@ -118,7 +118,7 @@ et un autre texte à partir d'une nouvelle tâche :
 while the main thread prints something else</span>
 -->
 
-<span class="caption">Encart 16-1 : création d'une nouvelle tâche pour afficher
+<span class="caption">Encart 16-1 : Création d'une nouvelle tâche pour afficher
 une chose pendant que la tâche principale affiche autre chose</span>
 
 <!--
@@ -254,7 +254,7 @@ bien avant que `main` ne se termine :
 to guarantee the thread is run to completion</span>
 -->
 
-<span class="caption">Encart 16-2 : sauvegarde d'un `JoinHandle` d'un
+<span class="caption">Encart 16-2 : Sauvegarde d'un `JoinHandle` d'un
 `thread::spawn` pour garantir que la tâche est exécutée jusqu'à la fin</span>
 
 <!--
@@ -463,7 +463,7 @@ constater dans un moment.
 main thread in another thread</span>
 -->
 
-<span class="caption">Encart 16-3 : tentative d'utilisation d'un vecteur créé
+<span class="caption">Encart 16-3 : Tentative d'utilisation d'un vecteur créé
 par la tâche principale dans une autre tâche</span>
 
 <!--
@@ -529,7 +529,7 @@ référence à `v` qui ne sera plus valide :
 capture a reference to `v` from a main thread that drops `v`</span>
 -->
 
-<span class="caption">Encart 16-4 : une tâche dont la fermeture essaye de
+<span class="caption">Encart 16-4 : Une tâche dont la fermeture essaye de
 capturer une référence à `v` à partir de la tâche principale, qui va ensuite
 libérer `v`</span>
 
@@ -613,7 +613,7 @@ dans l'encart 16-5 devraient se compiler et s'exécuter comme prévu :
 to take ownership of the values it uses</span>
 -->
 
-<span class="caption">Encart 16-5 : utilisation du mot-clé `move` pour forcer
+<span class="caption">Encart 16-5 : Utilisation du mot-clé `move` pour forcer
 une fermeture à prendre possession des valeurs qu'elle utilise</span>
 
 <!--

@@ -153,7 +153,7 @@ le contexte d'une seule tâche, comme dans l'encart 16-12 :
 single-threaded context for simplicity</span>
 -->
 
-<span class="caption">Encart 16-12 : découverte de l'API de `Mutex<T>` dans le
+<span class="caption">Encart 16-12 : Découverte de l'API de `Mutex<T>` dans le
 contexte d'une seule tâche pour raison de simplicité</span>
 
 <!--
@@ -268,7 +268,7 @@ correctement.
 guarded by a `Mutex<T>`</span>
 -->
 
-<span class="caption">Encart 16-13 : dix tâches qui augmentent chacune un
+<span class="caption">Encart 16-13 : Dix tâches qui augmentent chacune un
 compteur gardé par un `Mutex<T>`</span>
 
 <!--
@@ -374,7 +374,7 @@ avant de déplacer sa possession à la tâche.
 multiple threads to own the `Mutex<T>`</span>
 -->
 
-<span class="caption">Encart 16-14 : tentative d'utilisation d'un `Rc<T>` pour
+<span class="caption">Encart 16-14 : Tentative d'utilisation d'un `Rc<T>` pour
 nous permettre d'utiliser plusieurs tâches qui posséderont le `Mutex<T>`</span>
 
 <!--
@@ -510,7 +510,7 @@ s'exécuter :
 to be able to share ownership across multiple threads</span>
 -->
 
-<span class="caption">Encart 16-15 : utilisation d'un `Arc<T>` pour englober
+<span class="caption">Encart 16-15 : Utilisation d'un `Arc<T>` pour englober
 le `Mutex<T>` afin de partager la possession entre plusieurs tâches</span>
 
 <!--

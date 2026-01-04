@@ -183,7 +183,7 @@ méthode nommée `afficher` :
 <span class="caption">Listing 17-3: Definition of the `Draw` trait</span>
 -->
 
-<span class="caption">Encart 17-3 : définition du trait `Affichable`</span>
+<span class="caption">Encart 17-3 : Définition du trait `Affichable`</span>
 
 <!--
 This syntax should look familiar from our discussions on how to define traits
@@ -222,7 +222,7 @@ bouche-trou pour n'importe quel type au sein d'un `Box` qui implémente le trait
 trait</span>
 -->
 
-<span class="caption">Encart 17-4 : définition de la structure `Ecran` avec un
+<span class="caption">Encart 17-4 : Définition de la structure `Ecran` avec un
 champ `composants` contenant un vecteur d'objets traits qui implémentent le
 trait `Affichable`</span>
 
@@ -256,7 +256,7 @@ l'encart 17-5 :
 `draw` method on each component</span>
 -->
 
-<span class="caption">Encart 17-5 : une méthode `executer` sur `Ecran` qui
+<span class="caption">Encart 17-5 : Une méthode `executer` sur `Ecran` qui
 appelle la méthode `afficher` sur chaque composant</span>
 
 <!--
@@ -296,7 +296,7 @@ utilisant un type générique et un trait lié comme dans l'encart 17-6 :
 struct and its `run` method using generics and trait bounds</span>
 -->
 
-<span class="caption">Encart 17-6 : une implémentation différente de la
+<span class="caption">Encart 17-6 : Une implémentation différente de la
 structure `Ecran` et de sa méthode `executer` en utilisant la généricité et les
 traits liés</span>
 
@@ -367,7 +367,7 @@ ressembler l'implémentation, une structure `Bouton` pourrait avoir des champs
 `Draw` trait</span>
 -->
 
-<span class="caption">Encart 17-7 : une structure `Bouton` qui implémente le
+<span class="caption">Encart 17-7 : Une structure `Bouton` qui implémente le
 trait `Affichable`</span>
 
 <!--
@@ -426,7 +426,7 @@ comme dans l'encart 17-8 :
 the `Draw` trait on a `SelectBox` struct</span>
 -->
 
-<span class="caption">Encart 17-8 : une autre *crate* utilisant `gui` et
+<span class="caption">Encart 17-8 : Une autre *crate* utilisant `gui` et
 implémentant le trait `Affichable` sur une structure `ListeDeroulante`</span>
 
 <!--
@@ -465,7 +465,7 @@ L'encart 17-9 montre cette implémentation :
 different types that implement the same trait</span>
 -->
 
-<span class="caption">Encart 17-9 : utilisation d'objets traits pour stocker des
+<span class="caption">Encart 17-9 : Utilisation d'objets traits pour stocker des
 valeurs de types différents qui implémentent le même trait</span>
 
 <!--
@@ -550,7 +550,7 @@ Par exemple, l'encart 17-10 montre ce qui arrive si on essaie de créer un
 implement the trait object’s trait</span>
 -->
 
-<span class="caption">Encart 17-10 : tentative d'utiliser un type qui
+<span class="caption">Encart 17-10 : Tentative d'utiliser un type qui
 n'implémente pas le trait de l'objet trait</span>
 
 <!--

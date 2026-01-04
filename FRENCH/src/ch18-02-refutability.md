@@ -87,7 +87,7 @@ ce code ne va pas se compiler.
 `let`</span>
 -->
 
-<span class="caption">Encart 18-8 : tentative d'utilisation d'un motif
+<span class="caption">Encart 18-8 : Tentative d'utilisation d'un motif
 réfutable avec `let`</span>
 
 <!--
@@ -154,7 +154,7 @@ d'erreur. L'encart 18-9 montre comment corriger le code de l'encart 18-8.
 patterns instead of `let`</span>
 -->
 
-<span class="caption">Encart 18-9 : utilisation de `if let` et d'un bloc avec
+<span class="caption">Encart 18-9 : Utilisation de `if let` et d'un bloc avec
 un motif réfutable plutôt qu'un `let`</span>
 
 <!--
@@ -185,7 +185,7 @@ lever un avertissement.
 with `if let`</span>
 -->
 
-<span class="caption">Encart 18-10 : tentative d'utiliser un motif irréfutable
+<span class="caption">Encart 18-10 : Tentative d'utiliser un motif irréfutable
 avec `if let`</span>
 
 <!--

@@ -105,7 +105,7 @@ encore implémenté la crate `blog`.
 behavior we want our `blog` crate to have</span>
 -->
 
-<span class="caption">Encart 17-11 : du code qui montre le comportement attendu
+<span class="caption">Encart 17-11 : Du code qui montre le comportement attendu
 de notre crate `blog`</span>
 
 <!--
@@ -208,7 +208,7 @@ function that creates a new `Post` instance, a `State` trait, and a `Draft`
 struct</span>
 -->
 
-<span class="caption">Encart 17-12 : définition d'une structure `Billet` et
+<span class="caption">Encart 17-12 : Définition d'une structure `Billet` et
 d'une fonction `new` qui crée une nouvelle instance de `Billet`, un trait
 `Etat` et une structure `Brouillon`</span>
 
@@ -287,7 +287,7 @@ le bloc `Billet` de l'encart 17-13 :
 text to a post’s `content`</span>
 -->
 
-<span class="caption">Encart 17-13 : implémentation de la méthode
+<span class="caption">Encart 17-13 : Implémentation de la méthode
 `ajouter_texte` pour ajouter du texte au `contenu` d'un billet</span>
 
 <!--
@@ -357,7 +357,7 @@ montre l'implémentation de ceci :
 the `content` method on `Post` that always returns an empty string slice</span>
 -->
 
-<span class="caption">Encart 17-14 : ajout d'une implémentation de la méthode
+<span class="caption">Encart 17-14 : Ajout d'une implémentation de la méthode
 `contenu` sur `Billet` qui va toujours retourner une slice de chaîne de
 caractères vide</span>
 
@@ -405,7 +405,7 @@ relecture d'un billet, qui devrait changer son état de `Brouillon` à
 `Post` and the `State` trait</span>
 -->
 
-<span class="caption">Encart 17-15 : implémentation des méthodes
+<span class="caption">Encart 17-15 : Implémentation des méthodes
 `demander_relecture` sur `Billet` et le trait `Etat`</span>
 
 <!--
@@ -548,7 +548,7 @@ sera approuvé, comme le montre l'encart 17-16 :
 `Post` and the `State` trait</span>
 -->
 
-<span class="caption">Encart 17-16 : implémentation de la méthode `approuver`
+<span class="caption">Encart 17-16 : Implémentation de la méthode `approuver`
 sur `Billet` et sur le trait `Etat`</span>
 
 <!--
@@ -611,7 +611,7 @@ une méthode `contenu` défini sur son `etat`, comme dans l'encart 17-17 :
 delegate to a `content` method on `State`</span>
 -->
 
-<span class="caption">Encart 17-17 : correction de la méthode `contenu` de
+<span class="caption">Encart 17-17 : Correction de la méthode `contenu` de
 `Billet` afin qu'elle délègue à la méthode `contenu` de `Etat`</span>
 
 <!--
@@ -702,7 +702,7 @@ l'encart 17-18 :
 trait</span>
 -->
 
-<span class="caption">Encart 17-18 : ajout de la méthode `contenu` sur le trait
+<span class="caption">Encart 17-18 : Ajout de la méthode `contenu` sur le trait
 `Etat`</span>
 
 <!--
@@ -981,7 +981,7 @@ compilera même pas. L'encart 17-19 nous propose les définitions d'une structur
 `DraftPost` without a `content` method</span>
 -->
 
-<span class="caption">Encart 17-19 : un `Billet` avec une méthode `contenu` et
+<span class="caption">Encart 17-19 : Un `Billet` avec une méthode `contenu` et
 un `BrouillonDeBillet` sans méthode `contenu`</span>
 
 <!--
@@ -1073,7 +1073,7 @@ calling `request_review` on `DraftPost` and an `approve` method that turns a
 `PendingReviewPost` into a published `Post`</span>
 -->
 
-<span class="caption">Encart 17-20 : ajout d'un `BilletEnRelecture` qui est créé
+<span class="caption">Encart 17-20 : Ajout d'un `BilletEnRelecture` qui est créé
 par l'appel à `demander_relecture` sur `BrouillonDeBillet`, ainsi qu'une méthode
 `approuver` qui transforme un `BilletEnRelecture` en `Billet` publié</span>
 
@@ -1147,7 +1147,7 @@ l'encart 17-21 :
 implementation of the blog post workflow</span>
 -->
 
-<span class="caption">Encart 17-21 : modification de `main` pour utiliser la
+<span class="caption">Encart 17-21 : Modification de `main` pour utiliser la
 nouvelle implémentation du processus de publication de billet de blog</span>
 
 <!--

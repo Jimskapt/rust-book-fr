@@ -112,7 +112,7 @@ commencer. Ce code va écouter les flux TCP entrants à l'adresse
 a message when we receive a stream</span>
 -->
 
-<span class="caption">Encart 20-1 : écoute des flux entrants et affichage d'un
+<span class="caption">Encart 20-1 : Écoute des flux entrants et affichage d'un
 message lorsque nous recevons un flux</span>
 
 <!--
@@ -335,7 +335,7 @@ pour qu'il ressemble à l'encart 20-2.
 the data</span>
 -->
 
-<span class="caption">Encart 20-2 : lecture du `TcpStream` et affichage des
+<span class="caption">Encart 20-2 : Lecture du `TcpStream` et affichage des
 données</span>
 
 <!--
@@ -679,7 +679,7 @@ l'encart 20-3.
 the stream</span>
 -->
 
-<span class="caption">Encart 20-3 : écriture d'une toute petite réponse HTTP de
+<span class="caption">Encart 20-3 : Écriture d'une toute petite réponse HTTP de
 réussite dans le flux</span>
 
 <!--
@@ -764,7 +764,7 @@ souhaitez ; l'encart 20-4 vous montre une possibilité.
 response</span>
 -->
 
-<span class="caption">Encart 20-4 : un exemple de fichier HTML à retourner dans
+<span class="caption">Encart 20-4 : Un exemple de fichier HTML à retourner dans
 une réponse</span>
 
 <!--
@@ -801,7 +801,7 @@ l'envoyer.
 body of the response</span>
 -->
 
-<span class="caption">Encart 20-5 : envoi du contenu de *hello.html* dans
+<span class="caption">Encart 20-5 : Envoi du contenu de *hello.html* dans
 le corps de la réponse</span>
 
 <!--
@@ -898,7 +898,7 @@ contenu de la requête que nous recevons à la requête que nous attendrions pou
 to */* differently from other requests</span>
 -->
 
-<span class="caption">Encart 20-6 : détection et gestion des requêtes vers */*
+<span class="caption">Encart 20-6 : Détection et gestion des requêtes vers */*
 de manière différenciée des autres requêtes</span>
 
 <!--
@@ -976,7 +976,7 @@ page s'affiche dans le navigateur, indiquant la réponse à l'utilisateur final.
 error page if anything other than */* was requested</span>
 -->
 
-<span class="caption">Encart 20-7 : répondre un code de statut 404 et une page
+<span class="caption">Encart 20-7 : Répondre un code de statut 404 et une page
 d'erreur lorsqu'autre chose que */* a été demandé</span>
 
 <!--
@@ -1015,7 +1015,7 @@ présent dans l'encart 20-8.
 with any 404 response</span>
 -->
 
-<span class="caption">Encart 20-8 : contenu d'exemple pour la page à renvoyer
+<span class="caption">Encart 20-8 : Contenu d'exemple pour la page à renvoyer
 avec les réponses 404</span>
 
 <!--
@@ -1078,7 +1078,7 @@ gros blocs `if` et `else`.
 contain only the code that differs between the two cases</span>
 -->
 
-<span class="caption">Encart 20-9 : remaniement des blocs `if` et `else` pour
+<span class="caption">Encart 20-9 : Remaniement des blocs `if` et `else` pour
 qu'ils contiennent uniquement le code qui différencie les deux cas</span>
 
 <!--

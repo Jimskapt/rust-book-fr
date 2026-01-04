@@ -251,7 +251,7 @@ de références.
 <span class="caption">Listing 19-1: Creating raw pointers from references</span>
 -->
 
-<span class="caption">Encart 19-1 : création de pointeurs bruts à partir de
+<span class="caption">Encart 19-1 : Création de pointeurs bruts à partir de
 références</span>
 
 <!--
@@ -312,7 +312,7 @@ n'y a pas de bonne raison d'écrire du code comme celui-ci, mais c'est possible.
 memory address</span>
 -->
 
-<span class="caption">Encart 19-2 : création d'un pointeur brut vers une
+<span class="caption">Encart 19-2 : Création d'un pointeur brut vers une
 adresse mémoire arbitraire</span>
 
 <!--
@@ -342,7 +342,7 @@ l'opérateur de déréférencement `*` sur un pointeur brut qui nécessite un bl
 `unsafe` block</span>
 -->
 
-<span class="caption">Encart 19-3 : déréférencement d'un pointeur brut à
+<span class="caption">Encart 19-3 : Déréférencement d'un pointeur brut à
 l'intérieur d'un bloc `unsafe`</span>
 
 <!--
@@ -520,7 +520,7 @@ la slice à l'indice donné en argument. L'encart 19-4 montre comment utiliser
 function</span>
 -->
 
-<span class="caption">Encart 19-4 : utilisation de la fonction sécurisée
+<span class="caption">Encart 19-4 : Utilisation de la fonction sécurisée
 `split_at_mut`</span>
 
 <!--
@@ -551,7 +551,7 @@ lieu d'un type générique `T`.
 `split_at_mut` using only safe Rust</span>
 -->
 
-<span class="caption">Encart 19-5 : une tentative d'implémentation de
+<span class="caption">Encart 19-5 : Une tentative d'implémentation de
 `split_at_mut` en utilisant uniquement du Rust sécurisé</span>
 
 <!--
@@ -636,7 +636,7 @@ implémentation de `split_at_mut` qui fonctionne.
 the `split_at_mut` function</span>
 -->
 
-<span class="caption">Encart 19-6 : utilisation de code non sécurisé dans
+<span class="caption">Encart 19-6 : Utilisation de code non sécurisé dans
 l'implémentation de la fonction `split_at_mut`</span>
 
 <!--
@@ -738,7 +738,7 @@ arbitraire dans la mémoire et crée un slice de 10 000 éléments.
 location</span>
 -->
 
-<span class="caption">Encart 19-7 : création d'une slice à partir d'un
+<span class="caption">Encart 19-7 : Création d'une slice à partir d'un
 emplacement mémoire arbitraire</span>
 
 <!--
@@ -808,7 +808,7 @@ de la sécurité revient au développeur.
 defined in another language</span>
 -->
 
-<span class="caption">Encart 19-8 : déclaration et appel à une fonction externe
+<span class="caption">Encart 19-8 : Déclaration et appel à une fonction externe
 qui est définie dans un autre langage</span>
 
 <!--
@@ -916,7 +916,7 @@ avec une slice de chaîne de caractères comme valeur.
 variable</span>
 -->
 
-<span class="caption">Encart 19-9 : définition et utilisation d'une variable
+<span class="caption">Encart 19-9 : Définition et utilisation d'une variable
 statique immuable</span>
 
 <!--
@@ -986,7 +986,7 @@ lire et modifier la variable statique mutable `COMPTEUR`.
 static variable is unsafe</span>
 -->
 
-<span class="caption">Encart 19-10 : la lecture et l'écriture d'une variable
+<span class="caption">Encart 19-10 : La lecture et l'écriture d'une variable
 statique mutable est non sécurisé</span>
 
 <!--
@@ -1056,7 +1056,7 @@ l'encart 19-11.
 trait</span>
 -->
 
-<span class="caption">Encart 19-11 : définition et implémentation d'un trait non
+<span class="caption">Encart 19-11 : Définition et implémentation d'un trait non
 sécurisé</span>
 
 <!--

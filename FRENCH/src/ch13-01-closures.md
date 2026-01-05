@@ -1289,7 +1289,7 @@ traits `Fn` comme ceci :
 * `FnOnce` consomme les variables qu'il capture à partir de sa portée, désignée
   sous le nom de *l'environnement* de la fermeture. Pour consommer les variables
   capturées, la fermeture doit prendre possession de ces variables et les
-  déplacer dans la fermeture lorsqu'elle est définie. La partie `Once` du nom
+  déplacer dans la fermeture au moment où elle est définie. La partie `Once` du nom
   représente le fait que la fermeture ne puisse pas prendre possession
   des mêmes variables plus d'une fois, donc elle ne peut être appelée qu'une
   seule fois.

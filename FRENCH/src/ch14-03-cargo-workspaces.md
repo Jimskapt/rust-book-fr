@@ -179,7 +179,7 @@ l'autre. Si chaque crate avait son propre répertoire *target*, chaque crate
 devrait recompiler chacune des autres crates présentes dans l'espace de
 travail pour avoir les artéfacts dans son propre répertoire *target*. En
 partageant un seul répertoire *target*, les crates peuvent éviter des
-re-compilations inutiles.
+recompilations inutiles.
 
 <!--
 ### Creating the Second Package in the Workspace

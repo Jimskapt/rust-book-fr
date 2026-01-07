@@ -78,7 +78,7 @@ section `[package]` ou les métadonnées que nous avons vues dans les autres
 fichiers *Cargo.toml*. À la place, il commencera par une section `[workspace]`
 qui va nous permettre d'ajouter des membres à l'espace de travail en
 renseignant le chemin vers le paquet qui contient notre crate binaire ; dans ce
-cas, ce chemin est *additioneur* :
+cas, ce chemin est *additionneur* :
 
 <!--
 <span class="filename">Filename: Cargo.toml</span>
@@ -101,7 +101,7 @@ Next, we’ll create the `adder` binary crate by running `cargo new` within the
 *add* directory:
 -->
 
-Ensuite, nous allons créer la crate binaire `additioneur` en lançant `cargo new`
+Ensuite, nous allons créer la crate binaire `additionneur` en lançant `cargo new`
 dans le répertoire *ajout* :
 
 <!--
@@ -121,8 +121,8 @@ $ cargo new adder
 -->
 
 ```console
-$ cargo new additioneur
-     Created binary (application) `additioneur` package
+$ cargo new additionneur
+     Created binary (application) `additionneur` package
 ```
 
 <!--
@@ -149,7 +149,7 @@ ceci :
 ```text
 ├── Cargo.lock
 ├── Cargo.toml
-├── additioneur
+├── additionneur
 │   ├── Cargo.toml
 │   └── src
 │       └── main.rs
@@ -170,10 +170,10 @@ avoid unnecessary rebuilding.
 -->
 
 L'espace de travail a un répertoire *target* au niveau le plus haut pour y placer
-les artéfacts compilés ; le paquet `additioneur` n'a pas son propre répertoire
+les artéfacts compilés ; le paquet `additionneur` n'a pas son propre répertoire
 *target*. Même si nous lancions `cargo build` à l'intérieur du répertoire
-*additioneur*, les artéfacts compilés finirons toujours dans *ajout/target*
-plutôt que dans *ajout/additioneur/target*. Cargo organise ainsi le répertoire
+*additionneur*, les artéfacts compilés finirons toujours dans *ajout/target*
+plutôt que dans *ajout/additionneur/target*. Cargo organise ainsi le répertoire
 *target* car les crates d'un espace de travail sont censés dépendre l'une de
 l'autre. Si chaque crate avait son propre répertoire *target*, chaque crate
 devrait recompiler chacune des autres crates présentes dans l'espace de
@@ -269,7 +269,7 @@ Votre répertoire *ajout* devrait maintenant avoir ces répertoires et fichiers�
 │   ├── Cargo.toml
 │   └── src
 │       └── lib.rs
-├── additioneur
+├── additionneur
 │   ├── Cargo.toml
 │   └── src
 │       └── main.rs
@@ -306,15 +306,15 @@ library. First, we’ll need to add a path dependency on `add_one` to
 -->
 
 Maintenant que nous avons un autre paquet dans l'espace de travail, nous pouvons
-faire en sorte que le paquet `additioneur` qui contient notre binaire dépende du
+faire en sorte que le paquet `additionneur` qui contient notre binaire dépende du
 paquet `ajouter_un`, qui contient notre bibliothèque. D'abord, nous devons
-ajouter un chemin de dépendance à `ajouter_un` dans *additioneur/Cargo.toml*.
+ajouter un chemin de dépendance à `ajouter_un` dans *additionneur/Cargo.toml*.
 
 <!--
 <span class="filename">Filename: adder/Cargo.toml</span>
 -->
 
-<span class="filename">Fichier : additioneur/Cargo.toml</span>
+<span class="filename">Fichier : additionneur/Cargo.toml</span>
 
 <!--
 ```toml
@@ -323,7 +323,7 @@ ajouter un chemin de dépendance à `ajouter_un` dans *additioneur/Cargo.toml*.
 -->
 
 ```toml
-{{#include ../listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/ajout/additioneur/Cargo.toml:6:7}}
+{{#include ../listings/ch14-more-about-cargo/no-listing-02-workspace-with-two-crates/ajout/additionneur/Cargo.toml:6:7}}
 ```
 
 <!--
@@ -343,7 +343,7 @@ function to call the `add_one` function, as in Listing 14-7.
 -->
 
 Ensuite, utilisons la fonction `ajouter_un` de la crate `ajouter_un` dans la
-crate `additioneur`. Ouvrez le fichier *additioneur/src/main.rs* et ajoutez une
+crate `additionneur`. Ouvrez le fichier *additionneur/src/main.rs* et ajoutez une
 ligne `use` tout en haut pour importer la bibliothèque `ajouter_un` dans la
 portée. Changez ensuite la fonction `main` pour appeler la fonction
 `ajouter_un`, comme dans l'encart 14-7.
@@ -352,7 +352,7 @@ portée. Changez ensuite la fonction `main` pour appeler la fonction
 <span class="filename">Filename: adder/src/main.rs</span>
 -->
 
-<span class="filename">Fichier : additioneur/src/main.rs</span>
+<span class="filename">Fichier : additionneur/src/main.rs</span>
 
 <!--
 ```rust,ignore
@@ -361,7 +361,7 @@ portée. Changez ensuite la fonction `main` pour appeler la fonction
 -->
 
 ```rust,ignore
-{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-07/ajout/additioneur/src/main.rs}}
+{{#rustdoc_include ../listings/ch14-more-about-cargo/listing-14-07/ajout/additionneur/src/main.rs}}
 ```
 
 <!--
@@ -370,7 +370,7 @@ portée. Changez ensuite la fonction `main` pour appeler la fonction
 -->
 
 <span class="caption">Encart 14-7 : Utilisation de la bibliothèque `ajouter_un`
-dans la crate `additioneur`</span>
+dans la crate `additionneur`</span>
 
 <!--
 Let’s build the workspace by running `cargo build` in the top-level *add*
@@ -400,7 +400,7 @@ $ cargo build
 ```console
 $ cargo build
    Compiling ajouter_un v0.1.0 (file:///projects/ajout/ajouter_un)
-   Compiling additioneur v0.1.0 (file:///projects/ajout/additioneur)
+   Compiling additionneur v0.1.0 (file:///projects/ajout/additionneur)
     Finished dev [unoptimized + debuginfo] target(s) in 0.68s
 ```
 
@@ -432,9 +432,9 @@ Hello, world! 10 plus one is 11!
 -->
 
 ```console
-$ cargo run -p additioneur
+$ cargo run -p additionneur
     Finished dev [unoptimized + debuginfo] target(s) in 0.0s
-     Running `target/debug/additioneur`
+     Running `target/debug/additionneur`
 Hello, world ! 10 plus un vaut 11 !
 ```
 
@@ -442,7 +442,7 @@ Hello, world ! 10 plus un vaut 11 !
 This runs the code in *adder/src/main.rs*, which depends on the `add_one` crate.
 -->
 
-Cela exécute le code de *additioneur/src/main.rs*, qui dépend de la crate
+Cela exécute le code de *additionneur/src/main.rs*, qui dépend de la crate
 `ajouter_un`.
 
 <!--
@@ -468,7 +468,7 @@ Notez que l'espace de travail a un seul fichier *Cargo.lock* dans le niveau le
 plus haut de l'espace de travail plutôt que d'avoir un *Cargo.lock* dans chaque
 répertoire de chaque crate. Cela garantit que toutes les crates utilisent la même
 version de toutes les dépendances. Si nous ajoutons le paquet `rand` aux
-fichiers *additioneur/Cargo.toml* et *ajouter_un/Cargo.toml*, cargo va réunir
+fichiers *additionneur/Cargo.toml* et *ajouter_un/Cargo.toml*, cargo va réunir
 les deux en une seule version de `rand` et enregistrer cela dans un seul
 *Cargo.lock*. Faire en sorte que toutes les crates de l'espace de travail
 utilisent la même dépendance signifie que les crates dans l'espace de travail
@@ -561,7 +561,7 @@ warning: unused import: `rand`
 
 warning: 1 warning emitted
 
-   Compiling additioneur v0.1.0 (file:///projects/ajout/additioneur)
+   Compiling additionneur v0.1.0 (file:///projects/ajout/additionneur)
     Finished dev [unoptimized + debuginfo] target(s) in 10.18s
 ```
 
@@ -578,8 +578,8 @@ de dépendance à `rand` pour `ajouter_un`. Cependant, même si `rand` est
 utilisé quelque part dans l'espace de travail, nous ne pouvons pas l'utiliser
 dans d'autres crates de l'espace de travail tant que nous n'ajoutons pas
 `rand` dans leurs fichiers *Cargo.toml*. Par exemple, si nous ajoutons
-`use rand;` dans le fichier *additioneur/src/main.rs* pour le paquet
-`additioneur`, nous allons avoir une erreur :
+`use rand;` dans le fichier *additionneur/src/main.rs* pour le paquet
+`additionneur`, nous allons avoir une erreur :
 
 <!--
 <!-- manual-regeneration
@@ -605,9 +605,9 @@ error[E0432]: unresolved import `rand`
 ```console
 $ cargo build
   -- partie masquée ici --
-   Compiling additioneur v0.1.0 (file:///projects/ajout/additioneur)
+   Compiling additionneur v0.1.0 (file:///projects/ajout/additionneur)
 error[E0432]: unresolved import `rand`
- --> additioneur/src/main.rs:2:5
+ --> additionneur/src/main.rs:2:5
   |
 2 | use rand;
   |     ^^^^ no external crate `rand`
@@ -625,9 +625,9 @@ in the workspace will be compatible with each other.
 -->
 
 Pour corriger cela, modifiez le fichier *Cargo.toml* pour le paquet
-`additioneur` et indiquez que `rand` est une dépendance de cette crate aussi.
-La compilation du paquet `additioneur` va rajouter `rand` à la liste des
-dépendances pour `additioneur` dans *Cargo.lock*, mais aucune copie
+`additionneur` et indiquez que `rand` est une dépendance de cette crate aussi.
+La compilation du paquet `additionneur` va rajouter `rand` à la liste des
+dépendances pour `additionneur` dans *Cargo.lock*, mais aucune copie
 supplémentaire de `rand` ne sera téléchargée. Cargo s'est assuré que toutes les
 crates de chaque paquet de l'espace de travail qui utilise le paquet `rand`
 seraient de la même version. Utiliser la même version de `rand` dans les
@@ -710,7 +710,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ```console
 $ cargo test
    Compiling ajouter_un v0.1.0 (file:///projects/ajout/ajouter_un)
-   Compiling additioneur v0.1.0 (file:///projects/ajout/additioneur)
+   Compiling additionneur v0.1.0 (file:///projects/ajout/additionneur)
     Finished test [unoptimized + debuginfo] target(s) in 0.27s
      Running target/debug/deps/ajouter_un-f0253159197f7841
 
@@ -719,7 +719,7 @@ test tests::cela_fonctionne ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
-     Running target/debug/deps/additioneur-49979ff40686fa8e
+     Running target/debug/deps/additionneur-49979ff40686fa8e
 
 running 0 tests
 
@@ -742,7 +742,7 @@ one will run the tests for all the crates in the workspace.
 
 La première section de la sortie indique que le test `cela_fonctionne` de la
 crate `ajouter_un` a réussi. La section suivante indique qu'aucun test n'a été
-trouvé dans la crate `additioneur`, puis la dernière section indique elle
+trouvé dans la crate `additionneur`, puis la dernière section indique elle
 aussi qu'aucun test de documentation n'a été trouvé dans la crate `ajouter_un`.
 Lancer `cargo test` dans un espace de travail structuré comme celui-ci va
 exécuter les tests pour toutes les crates de cet espace de travail.
@@ -807,7 +807,7 @@ didn’t run the `adder` crate tests.
 -->
 
 Cette sortie montre que `cargo test` a lancé les tests uniquement pour la
-crate `ajouter_un` et n'a pas lancé les tests de la crate `additioneur`.
+crate `ajouter_un` et n'a pas lancé les tests de la crate `additionneur`.
 
 <!--
 If you publish the crates in the workspace to [crates.io](https://crates.io/),

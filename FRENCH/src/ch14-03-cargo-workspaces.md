@@ -40,7 +40,7 @@ a new directory for the workspace:
 -->
 
 Un *espace de travail* est un jeu de paquets qui partagent tous le même
-*Cargo.lock* et le même dossier de sortie. Créons donc un projet en utilisant un
+*Cargo.lock* et le même répertoire de sortie. Créons donc un projet en utilisant un
 espace de travail — nous allons utiliser du code trivial afin de nous concentrer
 sur la structure de l'espace de travail. Il existe plusieurs façons de
 structurer un espace de travail ; nous allons vous montrer une manière commune
@@ -49,7 +49,7 @@ deux bibliothèques. Le binaire, qui devrait fournir les fonctionnalités
 principales, va dépendre des deux bibliothèques. Une bibliothèque va fournir une
 fonction `ajouter_un`, et la seconde bibliothèque, une fonction `ajouter_deux`.
 Ces trois crates feront partie du même espace de travail. Nous allons commencer
-par créer un nouveau dossier pour cet espace de travail :
+par créer un nouveau répertoire pour cet espace de travail :
 
 <!--
 ```console
@@ -72,7 +72,7 @@ by specifying the path to the package with our binary crate; in this case,
 that path is *adder*:
 -->
 
-Ensuite, dans le dossier *ajout*, nous créons le fichier *Cargo.toml* qui va
+Ensuite, dans le répertoire *ajout*, nous créons le fichier *Cargo.toml* qui va
 configurer l'intégralité de l'espace de travail. Ce fichier n'aura pas de
 section `[package]` ou les métadonnées que nous avons vues dans les autres
 fichiers *Cargo.toml*. À la place, il commencera par une section `[workspace]`
@@ -102,7 +102,7 @@ Next, we’ll create the `adder` binary crate by running `cargo new` within the
 -->
 
 Ensuite, nous allons créer la crate binaire `additioneur` en lançant `cargo new`
-dans le dossier *ajout* :
+dans le répertoire *ajout* :
 
 <!--
 <!-- manual-regeneration
@@ -131,7 +131,7 @@ in your *add* directory should look like this:
 -->
 
 À partir de ce moment, nous pouvons compiler l'espace de travail en lançant
-`cargo build`. Les fichiers dans votre dossier *ajout* devraient ressembler à
+`cargo build`. Les fichiers dans votre répertoire *ajout* devraient ressembler à
 ceci :
 
 <!--
@@ -169,16 +169,16 @@ its own *target* directory. By sharing one *target* directory, the crates can
 avoid unnecessary rebuilding.
 -->
 
-L'espace de travail a un dossier *target* au niveau le plus haut pour y placer
-les artéfacts compilés ; le paquet `additioneur` n'a pas son propre dossier
-*target*. Même si nous lancions `cargo build` à l'intérieur du dossier
+L'espace de travail a un répertoire *target* au niveau le plus haut pour y placer
+les artéfacts compilés ; le paquet `additioneur` n'a pas son propre répertoire
+*target*. Même si nous lancions `cargo build` à l'intérieur du répertoire
 *additioneur*, les artéfacts compilés finirons toujours dans *ajout/target*
-plutôt que dans *ajout/additioneur/target*. Cargo organise ainsi le dossier
+plutôt que dans *ajout/additioneur/target*. Cargo organise ainsi le répertoire
 *target* car les crates d'un espace de travail sont censés dépendre l'une de
-l'autre. Si chaque crate avait son propre dossier *target*, chaque crate
+l'autre. Si chaque crate avait son propre répertoire *target*, chaque crate
 devrait recompiler chacune des autres crates présentes dans l'espace de
-travail pour avoir les artéfacts dans son propre dossier *target*. En
-partageant un seul dossier *target*, les crates peuvent éviter des
+travail pour avoir les artéfacts dans son propre répertoire *target*. En
+partageant un seul répertoire *target*, les crates peuvent éviter des
 re-compilations inutiles.
 
 <!--
@@ -244,7 +244,7 @@ $ cargo new ajouter_un --lib
 Your *add* directory should now have these directories and files:
 -->
 
-Votre dossier *ajout* devrait maintenant avoir ces dossiers et fichiers :
+Votre répertoire *ajout* devrait maintenant avoir ces répertoires et fichiers :
 
 <!--
 ```text
@@ -378,7 +378,7 @@ directory!
 -->
 
 Compilons l'espace de travail en lançant `cargo build` dans le niveau le plus
-haut du dossier *ajout* !
+haut du répertoire *ajout* !
 
 <!--
 <!-- manual-regeneration
@@ -410,7 +410,7 @@ package in the workspace we want to run by using the `-p` argument and the
 package name with `cargo run`:
 -->
 
-Pour lancer la crate binaire à partir du dossier *ajout*, nous pouvons
+Pour lancer la crate binaire à partir du répertoire *ajout*, nous pouvons
 préciser quel paquet nous souhaitons exécuter dans l'espace de travail en
 utilisant l'argument `-p` suivi du nom du paquet avec `cargo run` :
 
@@ -466,7 +466,7 @@ crate:
 
 Notez que l'espace de travail a un seul fichier *Cargo.lock* dans le niveau le
 plus haut de l'espace de travail plutôt que d'avoir un *Cargo.lock* dans chaque
-dossier de chaque crate. Cela garantit que toutes les crates utilisent la même
+répertoire de chaque crate. Cela garantit que toutes les crates utilisent la même
 version de toutes les dépendances. Si nous ajoutons le paquet `rand` aux
 fichiers *additioneur/Cargo.toml* et *ajouter_un/Cargo.toml*, cargo va réunir
 les deux en une seule version de `rand` et enregistrer cela dans un seul
@@ -509,7 +509,7 @@ referring to the `rand` we brought into scope:
 
 Nous pouvons maintenant ajouter `use rand;` au fichier *ajouter_un/src/lib.rs*
 et compiler l'ensemble de l'espace de travail en lançant `cargo build` dans le
-dossier *ajout*, ce qui va importer et compiler la crate `rand`. Nous devrions
+répertoire *ajout*, ce qui va importer et compiler la crate `rand`. Nous devrions
 avoir un avertissement car nous n'avons pas utilisé le `rand` que nous avons
 introduit dans la portée :
 
@@ -670,7 +670,7 @@ Now run `cargo test` in the top-level *add* directory:
 -->
 
 Lancez maintenant `cargo test` dans le niveau le plus haut du
-dossier *ajout* :
+répertoire *ajout* :
 
 <!--
 <!-- manual-regeneration
@@ -754,7 +754,7 @@ we want to test:
 -->
 
 Nous pouvons aussi lancer des tests pour une crate en particulier dans un
-espace de travail à partir du dossier du plus haut niveau en utilisant le
+espace de travail à partir du répertoire du plus haut niveau en utilisant le
 drapeau `-p` et en renseignant le nom de la crate que nous voulons tester :
 
 <!--
@@ -820,7 +820,7 @@ workspace to publish the crates.
 Si vous publiez les crates présentes dans l'espace de travail sur
 [crates.io](https://crates.io/), chaque crate de l'espace de travail va avoir
 besoin d'être publiée de manière séparée. La commande `cargo publish` n'a pas
-de drapeau `--all` ou `-p`, donc vous devrez vous rendre dans chaque dossier de
+de drapeau `--all` ou `-p`, donc vous devrez vous rendre dans chaque répertoire de
 chaque crate et lancer `cargo publish` sur chaque crate présente dans l'espace
 de travail pour publier les crates.
 

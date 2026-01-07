@@ -2,7 +2,7 @@
 # Final Project: Building a Multithreaded Web Server
 -->
 
-# Projet final : construire un serveur web multitâches
+# Projet final : construire un serveur web multitâches
 
 <!--
 It’s been a long journey, but we’ve reached the end of the book. In this

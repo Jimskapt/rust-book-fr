@@ -364,7 +364,7 @@ But what use is a type you can never create values for? Recall the code from
 Listing 2-5; we’ve reproduced part of it here in Listing 19-26.
 -->
 
-Mais à quoi sert un type dont on ne peut jamais créer de valeurs ?
+Mais à quoi sert un type dont on ne peut jamais créer de valeurs ?
 Souvenez-vous du code de l'encart 2-5 ; nous avons reproduit une partie de
 celui-ci dans l'encart 19-26.
 

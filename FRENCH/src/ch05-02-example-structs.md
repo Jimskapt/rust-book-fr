@@ -517,7 +517,7 @@ rend la possession de cette valeur.
 > Output” section in Chapter 12][err]<!-- ignore -- >.
 -->
 
-> Remarque : l'appel à la macro `dbg!` écrit dans le flux d'erreur standard
+> Remarque : l'appel à la macro `dbg!` écrit dans le flux d'erreur standard
 > de la console (`stderr`), contrairement à `println!` qui écrit dans le flux
 > de sortie standard de la console (`stdout`). Nous reparlerons de `stderr` et
 > de `stdout` dans [une section du chapitre 12][err]<!-- ignore -->.

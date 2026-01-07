@@ -141,7 +141,7 @@ will return a new `TcpListener` instance. The reason the function is called
 
 La fonction `bind` dans ce scénario fonctionne comme la fonction `new` dans le
 sens où elle retourne une nouvelle instance de `TcpListener`. La raison pour
-laquelle cette fonction s'appelle `bind` *(NdT : signifie "lier")* est que dans
+laquelle cette fonction s'appelle `bind` *(NdT : signifie "lier")* est que dans
 le domaine des réseaux, se connecter à un port se dit se “lier à un port”.
 
 <!--
@@ -307,7 +307,7 @@ look like Listing 20-2.
 -->
 
 Commençons à implémenter la fonctionnalité permettant de lire la requête du
-navigateur ! Pour séparer les parties où nous obtenons une connexion de celle
+navigateur ! Pour séparer les parties où nous obtenons une connexion de celle
 où nous agissons avec la connexion, nous allons créer une nouvelle fonction
 pour traiter les connexions. Dans cette nouvelle fonction `gestion_connexion`,
 nous allons lire des données provenant du flux TCP et les afficher afin que
@@ -385,7 +385,7 @@ données qui seront lues. Nous avons fait en sorte que le tampon fasse 1024
 octets, ce qui est suffisamment grand pour stocker les données d'une requête
 basique, ce qui est suffisant pour nos besoins dans ce chapitre. Si nous
 avions voulu gérer des requêtes de taille arbitraire, cette gestion du tampon
-aurait été plus complexe ; nous allons la garder simpliste pour l'instant.
+aurait été plus complexe ; nous allons la garder simpliste pour l'instant.
 Nous envoyons le tampon dans `flux.read` qui va lire les octets provenant du
 `TcpStream` et les ajouter dans le tampon.
 

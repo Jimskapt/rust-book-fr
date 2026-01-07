@@ -610,7 +610,7 @@ won’t let us do this.
 Comme `s` est créé dans `pendouille`, lorsque le code de `pendouille` est
 terminé, la variable `s` sera désallouée. Mais nous avons essayé de retourner
 une référence vers elle. Cela veut dire que cette référence va pointer vers une
-`String` invalide. Ce n'est pas bon ! Rust ne nous laissera pas faire cela.
+`String` invalide. Ce n'est pas bon ! Rust ne nous laissera pas faire cela.
 
 <!--
 The solution here is to return the `String` directly:

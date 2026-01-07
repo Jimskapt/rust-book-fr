@@ -43,7 +43,7 @@ utilisées dans les programmes Rust :
   détail.
 * La *table de hachage* qui vous permet d'associer une valeur à une clé précise.
   C'est une implémentation spécifique d'une structure de données plus
-  générique : le *tableau associatif*.
+  générique : le *tableau associatif*.
 
 <!--
 To learn about the other kinds of collections provided by the standard library,

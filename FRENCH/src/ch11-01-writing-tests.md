@@ -959,7 +959,7 @@ Let’s introduce a bug into this code by changing `greeting` to not include
 -->
 
 Introduisons un bogue dans ce code en changeant `accueil` pour ne pas
-ajouter `nom` afin de voir ce que donne l'échec de ce test :
+ajouter `nom` afin de voir ce que donne l'échec de ce test :
 
 <!--
 ```rust,not_desired_behavior,noplayground
@@ -975,7 +975,7 @@ ajouter `nom` afin de voir ce que donne l'échec de ce test :
 Running this test produces the following:
 -->
 
-L'exécution du test va donner ceci :
+L'exécution du test va donner ceci :
 
 <!--
 ```console
@@ -1000,7 +1000,7 @@ Le message d'échec serait plus utile dans notre cas s'il affichait la valeur
 que nous obtenons de la fonction `accueil`. Changeons la fonction de test, pour
 lui donner un message d'erreur personnalisé, qui est une chaîne de caractères
 de formatage avec un espace réservé qui contiendra la valeur que
-nous avons obtenue de la fonction `accueil` :
+nous avons obtenue de la fonction `accueil` :
 
 <!--
 ```rust,ignore
@@ -1017,7 +1017,7 @@ Now when we run the test, we’ll get a more informative error message:
 -->
 
 Maintenant, lorsque nous lançons à nouveau le test, nous obtenons un message
-d'échec plus explicite :
+d'échec plus explicite :
 
 <!--
 ```console
@@ -1071,7 +1071,7 @@ test will fail if the code inside the function doesn’t panic.
 
 Nous allons vérifier cela en ajoutant un autre attribut, `should_panic`, à notre
 fonction de test. Cet attribut fait réussir le test si le code à l'intérieur
-de la fonction fait paniquer ; le test va échouer si le code à l'intérieur de
+de la fonction fait paniquer ; le test va échouer si le code à l'intérieur de
 la fonction ne panique pas.
 
 <!--
@@ -1086,7 +1086,7 @@ L'encart 11-8 nous montre un test qui vérifie que les conditions d'erreur de
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,noplayground
@@ -1103,7 +1103,7 @@ L'encart 11-8 nous montre un test qui vérifie que les conditions d'erreur de
 `panic!`</span>
 -->
 
-<span class="caption">Encart 11-8 : Tester qu'une condition va faire un `panic`
+<span class="caption">Encart 11-8 : Tester qu'une condition va faire un `panic`
 </span>
 
 <!--
@@ -1114,7 +1114,7 @@ passes:
 
 Nous plaçons l'attribut `#[should_panic]` après l'attribut `#[test]` et avant
 la fonction de test sur laquelle il s'applique. Voyons le résultat lorsque ce
-test réussit :
+test réussit :
 
 <!--
 ```console
@@ -1131,9 +1131,9 @@ Looks good! Now let’s introduce a bug in our code by removing the condition
 that the `new` function will panic if the value is greater than 100:
 -->
 
-Ca fonctionne ! Maintenant, ajoutons un bogue dans notre code en enlevant
+Ca fonctionne ! Maintenant, ajoutons un bogue dans notre code en enlevant
 la condition dans laquelle la fonction `new` panique lorsque la valeur est
-plus grande que 100 :
+plus grande que 100 :
 
 <!--
 ```rust,not_desired_behavior,noplayground
@@ -1149,7 +1149,7 @@ plus grande que 100 :
 When we run the test in Listing 11-8, it will fail:
 -->
 
-Lorsque nous lançons le test de l'encart 11-8, il va échouer :
+Lorsque nous lançons le test de l'encart 11-8, il va échouer :
 
 <!--
 ```console
@@ -1197,7 +1197,7 @@ valeur est trop petite ou trop grande.
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,noplayground
@@ -1214,7 +1214,7 @@ valeur est trop petite ou trop grande.
 `panic!` with a particular panic message</span>
 -->
 
-<span class="caption">Encart 11-9 : On vérifie qu'une situation va provoquer un
+<span class="caption">Encart 11-9 : On vérifie qu'une situation va provoquer un
 `panic!` avec un message de panique bien précis</span>
 
 <!--
@@ -1249,7 +1249,7 @@ fails, let’s again introduce a bug into our code by swapping the bodies of the
 Pour voir ce qui se passe lorsqu'un test `should_panic` qui a un message
 `expected` qui échoue, essayons à nouveau d'introduire un bogue dans notre code
 en permutant les corps des blocs de `if valeur < 1` et de
-`else if valeur > 100` :
+`else if valeur > 100` : 
 
 <!--
 ```rust,ignore,not_desired_behavior
@@ -1266,7 +1266,7 @@ This time when we run the `should_panic` test, it will fail:
 -->
 
 Cette fois, lorsque nous lançons le test avec `should_panic`, il devrait
-échouer :
+échouer :
 
 <!--
 ```console
@@ -1290,7 +1290,7 @@ Le message d'échec nous informe que ce test a paniqué comme prévu, mais que l
 message de panique n'inclut pas la chaîne de caractères prévue `'La supposition
 doit être plus petite ou égale à 100'`. Le message de panique que nous avons
 obtenu dans ce cas était `La supposition doit être plus grande ou égale à 1, et
-nous avons 200.`. Maintenant, on comprend mieux où est le bogue !
+nous avons 200.`. Maintenant, on comprend mieux où est le bogue !
 
 <!--
 ### Using `Result<T, E>` in Tests
@@ -1305,9 +1305,9 @@ that use `Result<T, E>`! Here’s the test from Listing 11-1, rewritten to use
 -->
 
 Précédemment, nous avons écrit des tests qui paniquent lorsqu'ils échouent.
-Nous pouvons également écrire des tests qui utilisent `Result<T, E>` ! Voici
+Nous pouvons également écrire des tests qui utilisent `Result<T, E>` ! Voici
 le test de l'encart 11-1, réécrit pour utiliser `Result<T, E>` et retourner
-une `Err` au lieu de paniquer :
+une `Err` au lieu de paniquer :
 
 <!--
 ```rust,noplayground

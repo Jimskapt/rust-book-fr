@@ -233,7 +233,7 @@ On the `Screen` struct, we’ll define a method named `run` that will call the
 
 Sur la structure `Ecran`, nous allons définir une méthode nommée `executer` qui
 appellera la méthode `afficher` sur chacun de ses `composants`, comme l'illustre
-l'encart 17-5 :
+l'encart 17-5 :
 
 <!--
 <span class="filename">Filename: src/lib.rs</span>

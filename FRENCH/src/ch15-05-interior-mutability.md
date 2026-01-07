@@ -806,7 +806,7 @@ Après avoir créé les listes dans `a`, `b`, et `c`, nous ajoutons 10 à la val
 dans `valeur`. Nous faisons cela en appelant `borrow_mut` sur `valeur`, ce qui
 utilise la fonctionnalité de déréférencement automatique que nous avons vue au
 chapitre 5 (voir la section
-[“Où est l'opérateur -> ?”][wheres-the---operator]<!-- ignore -->) pour
+[“Où est l'opérateur -> ?”][wheres-the---operator]<!-- ignore -->) pour
 déréférencer le `Rc<T>` dans la valeur interne `RefCell<T>`. La méthode
 `borrow_mut` retourne un pointeur intelligent `RefMut<T>`, et nous utilisons
 l'opérateur de déréférencement sur lui pour changer sa valeur interne.

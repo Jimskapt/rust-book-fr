@@ -13,7 +13,7 @@ the text `Hello, world!` to the screen, so we’ll do the same here!
 Maintenant que vous avez installé Rust, écrivons notre premier programme Rust.
 Lorsqu'on apprend un nouveau langage, il est de tradition d'écrire un petit
 programme qui écrit le texte "Hello, world!" à l'écran, donc c'est ce que nous
-allons faire !
+allons faire !
 
 <!--
 > Note: This book assumes basic familiarity with the command line. Rust makes
@@ -33,7 +33,7 @@ allons faire !
 > charge Rust à des degrés divers ; consultez la documentation de
 > l'IDE pour plus d'informations. Récemment, l'équipe Rust s'est attelée à
 > améliorer l'intégration dans les IDE et des progrès ont rapidement été faits
-> dans ce domaine !
+> dans ce domaine !
 
 <!--
 ### Creating a Project Directory
@@ -217,8 +217,8 @@ If `Hello, world!` did print, congratulations! You’ve officially written a Rus
 program. That makes you a Rust programmer—welcome!
 -->
 
-Si `Hello, world!` s'affiche, félicitations ! Vous avez officiellement écrit un
-programme Rust. Cela fait de vous un développeur Rust — bienvenue !
+Si `Hello, world!` s'affiche, félicitations ! Vous avez officiellement écrit un
+programme Rust. Cela fait de vous un développeur Rust — bienvenue !
 
 <!--
 ### Anatomy of a Rust Program

@@ -84,7 +84,7 @@ fichier entre le moment où un autre test lit et écrit sur ce fichier. Le secon
 test va ensuite échouer, non pas parce que le code est incorrect mais parce
 que les tests se sont perturbés mutuellement pendant qu'ils s'exécutaient en
 parallèle. Une solution serait de s'assurer que chaque test écrit dans un
-fichier différent ; une autre serait de lancer les tests les uns après les autres.
+fichier différent ; une autre serait de lancer les tests les uns après les autres.
 
 <!--
 If you don’t want to run the tests in parallel or if you want more fine-grained
@@ -96,7 +96,7 @@ the following example:
 Si vous ne souhaitez pas exécuter les tests en parallèle ou si vous voulez un
 contrôle plus précis du nombre de tâches utilisées, vous pouvez utiliser l'option
  `--test-threads` suivie du nombre de tâches que vous souhaitez
-que le binaire de test exécute en parallèle. Regardez cet exemple :
+que le binaire de test exécute en parallèle. Regardez cet exemple :
 
 <!--
 ```console
@@ -138,7 +138,7 @@ printed to standard output with the rest of the failure message.
 Par défaut, si un test réussit, la bibliothèque de test de Rust récupère tout
 ce qui est affiché sur la sortie standard. Par exemple, si nous appelons
 `println!` dans un test et que le test réussit, nous ne verrons pas la sortie
-correspondant au `println!` dans le terminal ; on verra seulement la ligne qui
+correspondant au `println!` dans le terminal ; on verra seulement la ligne qui
 indique que le test a réussi. Si un test échoue, nous verrons ce qui a été
 affiché sur la sortie standard avec le reste des messages d'erreur.
 
@@ -154,7 +154,7 @@ paramètres et retourne 10, ainsi qu'un test qui réussit et un test qui échoue
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,panics,noplayground
@@ -171,14 +171,14 @@ paramètres et retourne 10, ainsi qu'un test qui réussit et un test qui échoue
 `println!`</span>
 -->
 
-<span class="caption">Encart 11-10 : Tests d'une fonction qui fait appel à
+<span class="caption">Encart 11-10 : Tests d'une fonction qui fait appel à
 `println!`</span>
 
 <!--
 When we run these tests with `cargo test`, we’ll see the following output:
 -->
 
-Lorsque nous lançons ces tests avec `cargo test`, nous voyons cette sortie :
+Lorsque nous lançons ces tests avec `cargo test`, nous voyons cette sortie :
 
 <!--
 ```console
@@ -229,7 +229,7 @@ see the following output:
 -->
 
 Lorsque nous lançons à nouveau les tests de l'encart 11-10 avec l'option
-`--show-output`, nous voyons la sortie suivante :
+`--show-output`, nous voyons la sortie suivante :
 
 <!--
 ```console
@@ -273,7 +273,7 @@ choisir lesquels nous allons exécuter.
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,noplayground
@@ -290,7 +290,7 @@ choisir lesquels nous allons exécuter.
 names</span>
 -->
 
-<span class="caption">Encart 11-11 : Trois tests avec trois noms différents
+<span class="caption">Encart 11-11 : Trois tests avec trois noms différents
 </span>
 
 <!--
@@ -299,7 +299,7 @@ tests will run in parallel:
 -->
 
 Si nous exécutons les tests sans ajouter d'arguments, comme nous l'avons vu
-précédemment, tous les tests vont s'exécuter en parallèle :
+précédemment, tous les tests vont s'exécuter en parallèle :
 
 <!--
 ```console
@@ -322,7 +322,7 @@ We can pass the name of any test function to `cargo test` to run only that test:
 -->
 
 Nous pouvons donner le nom de n'importe quelle fonction de test à `cargo test`
-afin d'exécuter uniquement ce test :
+afin d'exécuter uniquement ce test :
 
 <!--
 ```console
@@ -340,7 +340,7 @@ that name. The test output lets us know we had more tests than what this
 command ran by displaying `2 filtered out` at the end of the summary line.
 -->
 
-Le test avec le nom `cent` est le seul exécuté ; les deux autres tests ne
+Le test avec le nom `cent` est le seul exécuté ; les deux autres tests ne
 correspondent pas à ce nom. La sortie du test nous indique que nous avons
 d'autres tests en plus de celui que cette commande a exécuté en affichant
 `2 filtered out` à la fin de la ligne de résumé.
@@ -350,7 +350,7 @@ We can’t specify the names of multiple tests in this way; only the first value
 given to `cargo test` will be used. But there is a way to run multiple tests.
 -->
 
-Nous ne pouvons pas renseigner plusieurs noms de tests de cette manière ; il
+Nous ne pouvons pas renseigner plusieurs noms de tests de cette manière ; il
 n'y a que la première valeur fournie à `cargo test` qui sera utilisée. Mais
 il existe un moyen d'exécuter plusieurs tests.
 
@@ -369,7 +369,7 @@ run those two by running `cargo test add`:
 Nous pouvons ne renseigner qu'une partie d'un nom de test, et tous les tests dont
 les noms correspondent à cette valeur vont être exécutés. Par exemple, comme
 deux de nos noms de tests contiennent `ajouter`, nous pouvons exécuter ces deux
-en lançant `cargo test ajouter` :
+en lançant `cargo test ajouter` :
 
 <!--
 ```console
@@ -412,13 +412,13 @@ s'exécuter, de sorte que vous voulez les exclure de la majorité des exécution
 de `cargo test`. Plutôt que de lister en argument tous les tests que vous
 souhaitez exécuter, vous pouvez plutôt faire une annotation sur les tests qui
 prennent du temps en utilisant l'attribut `ignore` pour les exclure, comme
-ci-dessous :
+ci-dessous :
 
 <!--
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,noplayground
@@ -437,7 +437,7 @@ when we run our tests, `it_works` runs, but `expensive_test` doesn’t:
 
 Après `#[test]`, nous avons ajouté la ligne `#[ignore]` pour le test que nous
 souhaitons exclure. Maintenant lorsque nous exécutons nos tests, `it_works`
-s'exécute, mais pas `test_long` :
+s'exécute, mais pas `test_long` :
 
 <!--
 ```console
@@ -455,7 +455,7 @@ the ignored tests, we can use `cargo test -- --ignored`:
 -->
 
 La fonction `test_long` est listée comme `ignored`. Si nous voulons exécuter
-uniquement les tests ignorés, nous pouvons utiliser `cargo test -- --ignored` :
+uniquement les tests ignorés, nous pouvons utiliser `cargo test -- --ignored` :
 
 <!--
 ```console

@@ -452,7 +452,7 @@ as they write their program to make sure it compiles. Then they run `cargo
 build` when they’re ready to use the executable.
 -->
 
-Dans quel cas n'aurions-nous pas besoin d'un exécutable ? Parfois, `cargo check`
+Dans quel cas n'aurions-nous pas besoin d'un exécutable ? Parfois, `cargo check`
 est bien plus rapide que `cargo build`, car il saute l'étape de création de
 l'exécutable. Si vous vérifiez votre travail continuellement pendant que vous
 écrivez votre code, utiliser `cargo check` accélèrera le processus ! C'est
@@ -597,7 +597,7 @@ You’re already off to a great start on your Rust journey! In this chapter,
 you’ve learned how to:
 -->
 
-Vous êtes déjà bien lancé dans votre périple avec Rust ! Dans ce chapitre, vous
+Vous êtes déjà bien lancé dans votre périple avec Rust ! Dans ce chapitre, vous
 avez appris comment :
 
 <!--

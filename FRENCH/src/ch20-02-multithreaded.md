@@ -63,7 +63,7 @@ secondes avant de pouvoir répondre à nouveau.
 */sleep* and sleeping for 5 seconds</span>
 -->
 
-<span class="caption">Encart 20-10 : Simulation d'une requête provoquant un
+<span class="caption">Encart 20-10 : Simulation d'une requête provoquant un
 long traitement en détectant */pause* et en faisant une pause de 5
 secondes</span>
 

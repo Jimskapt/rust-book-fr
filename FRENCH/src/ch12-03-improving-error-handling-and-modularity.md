@@ -847,7 +847,7 @@ le texte en plus. Essayons cela :
 Great! This output is much friendlier for our users.
 -->
 
-Très bien ! Cette sortie est bien plus compréhensible pour nos utilisateurs.
+Très bien ! Cette sortie est bien plus compréhensible pour nos utilisateurs.
 
 <!--
 ### Extracting Logic from `main`
@@ -1057,7 +1057,7 @@ have some error-handling code here! Let’s rectify that problem now.
 Rust nous informe que notre code ignore la valeur `Result` et que cette valeur
 `Result` pourrait indiquer qu'une erreur s'est passée. Mais nous ne vérifions
 pas pour savoir si oui ou non il y a eu une erreur, et le compilateur nous
-rappelle que nous devrions avoir du code de gestion des erreurs ici !
+rappelle que nous devrions avoir du code de gestion des erreurs ici !
 Corrigeons dès à présent ce problème.
 
 <!--

@@ -15,7 +15,7 @@ Les motifs sont une syntaxe spéciale de Rust permettant de filtrer selon la
 structure des types, qu'elle soit simple ou complexe. L'utilisation de motifs
 conjointement avec des expressions `match` et d'autres constructions vous donne
 davantage de maîtrise sur le flux de contrôle de votre programme. Un motif est
-constitué d'une combinaison de :
+constitué d'une combinaison de :
 
 <!--
 * Literals

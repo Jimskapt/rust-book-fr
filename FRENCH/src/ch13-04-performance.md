@@ -191,7 +191,7 @@ est très rapide d'accéder à ces valeurs. Il n'y a pas de vérification des bo
 sur les accès au tableau à l'exécution. Toutes ces optimisations que Rust est
 capable d'appliquer rendent le code produit extrêmement efficace. Maintenant
 que vous savez cela, vous pouvez utiliser des itérateurs et des fermetures
-sans crainte ! Ils font en sorte que le code soit de haut niveau, mais n'entraînent
+sans crainte ! Ils font en sorte que le code soit de haut niveau, mais n'entraînent
 pas de pénalité de performance à l'exécution.
 
 <!--

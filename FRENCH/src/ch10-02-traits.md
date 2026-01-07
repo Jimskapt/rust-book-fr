@@ -860,8 +860,8 @@ to run that code, we received this error:
 Maintenant que vous savez comment renseigner le comportement que vous souhaitez
 utiliser en utilisant les traits liés des paramètres de type génériques,
 retournons à l'encart 10-5 pour corriger la définition de la fonction
-`le_plus_grand` qui utilise un paramètre de type générique ! La dernière fois
-que nous avons essayé de lancer ce code, nous avions l'erreur suivante :
+`le_plus_grand` qui utilise un paramètre de type générique ! La dernière fois
+que nous avons essayé de lancer ce code, nous avions l'erreur suivante :
 
 <!--
 ```console

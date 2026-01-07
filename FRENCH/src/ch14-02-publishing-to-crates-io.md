@@ -937,13 +937,13 @@ With a unique name, the version, your description, and a license added, the
 
 Une fois le nom unique, la version, la description et la licence ajoutés, le
 fichier *Cargo.toml* de ce projet qui est prêt à être publié devrait ressembler
-à ceci :
+à ceci :
 
 <!--
 <span class="filename">Filename: Cargo.toml</span>
 -->
 
-<span class="filename">Fichier : Cargo.toml</span>
+<span class="filename">Fichier : Cargo.toml</span>
 
 <!--
 ```toml
@@ -994,7 +994,7 @@ Publishing a crate uploads a specific version to
 
 Maintenant que vous avez créé un compte, sauvegardé votre jeton de clé, choisi
 un nom pour votre crate, et précisé les métadonnées requises, vous êtes prêt à
-publier ! Publier une crate téléverse une version précise sur
+publier ! Publier une crate téléverse une version précise sur
 [crates.io](https://crates.io/)<!-- ignore --> pour que les autres puissent
 l'utiliser.
 
@@ -1023,7 +1023,7 @@ Run the `cargo publish` command again. It should succeed now:
 -->
 
 Lancez la commande `cargo publish` à nouveau. Elle devrait fonctionner à
-présent :
+présent :
 
 <!--
 <!-- manual-regeneration
@@ -1062,7 +1062,7 @@ Congratulations! You’ve now shared your code with the Rust community, and
 anyone can easily add your crate as a dependency of their project.
 -->
 
-Félicitations ! Vous venez de partager votre code avec la communauté Rust, et
+Félicitations ! Vous venez de partager votre code avec la communauté Rust, et
 désormais tout le monde peut facilement ajouter votre crate comme une dépendance
 de son projet.
 
@@ -1133,7 +1133,7 @@ want to yank:
 -->
 
 Pour déprécier une version d'une crate, lancez `cargo yank` et renseignez quelle
-version vous voulez déprécier :
+version vous voulez déprécier :
 
 <!--
 ```console
@@ -1151,7 +1151,7 @@ to start depending on a version again:
 -->
 
 Si vous ajoutez `--undo` à la commande, vous pouvez aussi annuler une
-dépréciation et permettre à nouveaux aux projets de dépendre de cette version :
+dépréciation et permettre à nouveaux aux projets de dépendre de cette version :
 
 <!--
 ```console

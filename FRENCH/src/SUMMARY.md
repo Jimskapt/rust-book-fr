@@ -22,7 +22,7 @@
     - [Les structures de contrôle](ch03-05-control-flow.md)
 
 - [Comprendre la possession](ch04-00-understanding-ownership.md)
-    - [Qu'est-ce que la possession ?](ch04-01-what-is-ownership.md)
+    - [Qu'est-ce que la possession ?](ch04-01-what-is-ownership.md)
     - [Les références et l'emprunt](ch04-02-references-and-borrowing.md)
     - [Le type slice](ch04-03-slices.md)
 
@@ -122,7 +122,7 @@
     - [Les fonctions et fermetures avancées](ch19-05-advanced-functions-and-closures.md)
     - [Les macros](ch19-06-macros.md)
 
-- [Projet final : construire un serveur web multitâches](ch20-00-final-project-a-web-server.md)
+- [Projet final : construire un serveur web multitâches](ch20-00-final-project-a-web-server.md)
     - [Développer un serveur web monotâche](ch20-01-single-threaded.md)
     - [Transformer notre serveur monotâche en serveur multitâches](ch20-02-multithreaded.md)
     - [Arrêt propre et nettoyage](ch20-03-graceful-shutdown-and-cleanup.md)

@@ -65,7 +65,7 @@ for an `add_one` function in a crate named `my_crate`.
 -->
 
 Les commentaires de documentation utilisent trois barres obliques `///` au lieu
-de deux et prend en charge la notation Markdown pour mettre en forme le texte.
+de deux et prennent en charge la notation Markdown pour mettre en forme le texte.
 Placez les commentaires de documentation juste avant l'élément qu'ils
 documentent. L'encart 14-1 montre des commentaires de documentation pour une
 fonction `ajouter_un` dans une crate nommée `ma_crate`.

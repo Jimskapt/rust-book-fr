@@ -679,7 +679,7 @@ possible for programmers to use `hello_macro` even if they don’t want the
 -->
 
 Nos deux crates sont étroitement liées, donc nous créons la crate de macro
-procédurale à l'intérieur du dossier de notre crate `hello_macro`. Si nous
+procédurale à l'intérieur du répertoire de notre crate `hello_macro`. Si nous
 changeons la définition du trait dans `hello_macro`, nous aurons aussi à
 changer l'implémentation de la macro procédurale dans `hello_macro_derive`. Les
 deux crates vont devoir être publiées séparément, et les développeurs qui vont
@@ -1083,7 +1083,7 @@ dependencies; if not, you can specify them as `path` dependencies as follows:
 Maintenant, `cargo build` devrait fonctionner correctement pour `hello_macro` et
 `hello_macro_derive`. Relions maintenant ces crates au code de l'encart 19-30
 pour voir les macros procédurales à l'oeuvre ! Créez un nouveau projet binaire
-dans votre dossier *projects* en utilisant `cargo new pancakes`. Nous avons
+dans votre répertoire *projects* en utilisant `cargo new pancakes`. Nous avons
 besoin d'ajouter `hello_macro` et `hello_macro_derive` comme dépendances dans le
 *Cargo.toml* de la crate `pancakes`. Si vous publiez vos versions de
 `hello_macro` et de `hello_macro_derive` sur [crates.io](https://crates.io),

@@ -39,7 +39,7 @@ allons faire !
 ### Creating a Project Directory
 -->
 
-### Créer un dossier projet
+### Créer un répertoire projet
 
 <!--
 You’ll start by making a directory to store your Rust code. It doesn’t matter
@@ -48,10 +48,10 @@ we suggest making a *projects* directory in your home directory and keeping all
 your projects there.
 -->
 
-Nous allons commencer par créer un dossier pour y ranger le code Rust. Là où
+Nous allons commencer par créer un répertoire pour y ranger le code Rust. Là où
 vous mettez votre code n'est pas important pour Rust, mais pour les exercices et
-projets de ce livre, nous vous suggérons de créer un dossier *projects* dans
-votre dossier utilisateur et de ranger tous vos projets là-dedans.
+projets de ce livre, nous vous suggérons de créer un répertoire *projects* dans
+votre répertoire utilisateur et de ranger tous vos projets là-dedans.
 
 <!--
 Open a terminal and enter the following commands to make a *projects* directory
@@ -59,8 +59,8 @@ and a directory for the “Hello, world!” project within the *projects* direct
 -->
 
 Ouvrez un terminal et écrivez les commandes suivantes pour créer un
-dossier *projects* et un dossier pour le projet “Hello, world!” à l'intérieur
-de ce dossier *projects*.
+répertoire *projects* et un répertoire pour le projet “Hello, world!” à l'intérieur
+de ce répertoire *projects*.
 
 <!--
 For Linux, macOS, and PowerShell on Windows, enter this:
@@ -451,7 +451,7 @@ From here, you run the *main* or *main.exe* file, like this:
 Ceci affiche le fichier de code source avec l'extension *.rs*, le fichier
 exécutable (*main.exe* sous Windows, mais *main* sur toutes les autres
 plateformes) et, quand on utilise Windows, un fichier qui contient des
-informations de débogage avec l'extension *.pdb*. Dans ce dossier, vous pouvez
+informations de débogage avec l'extension *.pdb*. Dans ce répertoire, vous pouvez
 exécuter le fichier *main* ou *main.exe* comme ceci :
 
 <!--

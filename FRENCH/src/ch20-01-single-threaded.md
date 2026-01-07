@@ -739,8 +739,8 @@ possibility.
 -->
 
 Implémentons la fonctionnalité permettant de retourner plus qu'une simple page
-blanche. Créez un nouveau fichier, *hello.html*, à la racine de votre dossier
-de projet, et pas dans le dossier *src*. Vous pouvez ajouter le HTML que vous
+blanche. Créez un nouveau fichier, *hello.html*, à la racine de votre répertoire
+de projet, et pas dans le répertoire *src*. Vous pouvez ajouter le HTML que vous
 souhaitez ; l'encart 20-4 vous montre une possibilité.
 
 <!--

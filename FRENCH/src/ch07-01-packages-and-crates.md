@@ -80,7 +80,7 @@ Lorsque nous avons saisi la commande, Cargo a créé un fichier *Cargo.toml*, qu
 définit un paquet. Si on regarde le contenu de *Cargo.toml*, le fichier
 *src/main.rs* n'est pas mentionné car Cargo obéit à une convention selon
 laquelle *src/main.rs* est la racine de la crate binaire portant le même
-nom que le paquet. De la même façon, Cargo sait que si le dossier du paquet
+nom que le paquet. De la même façon, Cargo sait que si le répertoire du paquet
 contient *src/lib.rs*, alors le paquet contient une crate de bibliothèque qui a
 le même nom que le paquet, et que *src/lib.rs* est sa racine. Cargo transmet les
 fichiers de la crate racine à `rustc` pour compiler la bibliothèque ou le

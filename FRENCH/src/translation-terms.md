@@ -85,7 +85,7 @@ français.
 | destructor | destructeur | - |
 | destructure | déstructurer | - |
 | DevOps | DevOps | - |
-| directory | dossier | - |
+| directory | répertoire | - |
 | dot notation | la notation avec un point | - |
 | double free | double libération | - |
 | drop | libérér | - |

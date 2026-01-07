@@ -39,7 +39,7 @@ Create a new project called *branches* in your *projects* directory to explore
 the `if` expression. In the *src/main.rs* file, input the following:
 -->
 
-Créez un nouveau projet appelé *branches* dans votre dossier *projects* pour
+Créez un nouveau projet appelé *branches* dans votre répertoire *projects* pour
 découvrir les expressions `if`. Dans le fichier *src/main.rs*, écrivez ceci :
 
 <!--
@@ -479,7 +479,7 @@ As an example, change the *src/main.rs* file in your *loops* directory to look
 like this:
 -->
 
-Par exemple, changez le fichier *src/main.rs* dans votre dossier *loops* comme
+Par exemple, changez le fichier *src/main.rs* dans votre répertoire *loops* comme
 ceci :
 
 <!--

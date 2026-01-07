@@ -108,7 +108,7 @@ débuté une section avec le titre `Exemples` puis fourni du code qui
 montre comment utiliser la fonction `ajouter_un`. Nous pouvons générer la
 documentation HTML à partir de ces commentaires de documentation en lançant
 `cargo doc`. Cette commande lance l'outil `rustdoc` qui est distribué avec Rust
-et place la documentation HTML générée dans le dossier *target/doc*.
+et place la documentation HTML générée dans le répertoire *target/doc*.
 
 <!--
 For convenience, running `cargo doc --open` will build the HTML for your

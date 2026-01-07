@@ -430,9 +430,9 @@ to bring the library crate in and bring `ThreadPool` into scope by adding the
 following code to the top of *src/bin/main.rs*:
 -->
 
-Créez ensuite un nouveau dossier, *src/bin*, et déplacez-y la crate binaire
+Créez ensuite un nouveau répertoire, *src/bin*, et déplacez-y la crate binaire
 *src/main.rs*  qui sera donc désormais *src/bin/main.rs*. Ceci va faire que la
-crate de bibliothèque sera la crate principale dans le dossier *salutations* ;
+crate de bibliothèque sera la crate principale dans le répertoire *salutations* ;
 nous pouvons quand même continuer à exécuter le binaire dans *src/bin/main.rs*
 en utilisant `cargo run`. Après avoir déplacé le fichier *main.rs*, modifiez-le
 pour importer la crate de bibliothèque et importer `GroupeTaches` dans la

@@ -48,7 +48,7 @@ To set up a new project, go to the *projects* directory that you created in
 Chapter 1 and make a new project using Cargo, like so:
 -->
 
-Pour créer un nouveau projet, rendez-vous dans le dossier *projects* que
+Pour créer un nouveau projet, rendez-vous dans le répertoire *projects* que
 vous avez créé au chapitre 1 et utilisez Cargo pour créer votre projet, comme
 ceci :
 
@@ -72,7 +72,7 @@ directory.
 
 La première commande, `cargo new`, prend comme premier argument le nom de notre
 projet (`jeu_du_plus_ou_du_moins`). La seconde commande nous déplace dans le
-dossier de notre nouveau projet créé par Cargo.
+répertoire de notre nouveau projet créé par Cargo.
 
 <!--
 Look at the generated *Cargo.toml* file:
@@ -1097,7 +1097,7 @@ Par exemple, imaginons que la semaine prochaine, la version 0.8.4 de la
 *crate* `rand` est publiée, et qu'elle apporte une correction importante, mais
 aussi qu'elle produit une régression qui va casser votre code. Pour éviter cela,
 Rust crée le fichier *Cargo.lock* la première fois que vous utilisez
-`cargo build`, donc nous l'avons désormais dans le dossier
+`cargo build`, donc nous l'avons désormais dans le répertoire
 *jeu_du_plus_ou_du_moins*.
 
 <!--

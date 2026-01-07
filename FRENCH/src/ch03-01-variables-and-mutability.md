@@ -30,7 +30,7 @@ in your *projects* directory by using `cargo new variables`.
 
 Lorsqu'une variable est immuable, cela signifie qu'une fois qu'une valeur est
 liée à un nom, vous ne pouvez pas changer cette valeur. À titre d'illustration,
-générons un nouveau projet appelé *variables* dans votre dossier *projects* en
+générons un nouveau projet appelé *variables* dans votre répertoire *projects* en
 utilisant `cargo new variables`.
 
 <!--
@@ -39,7 +39,7 @@ code with the following code. This code won’t compile just yet, we’ll first
 examine the immutability error.
 -->
 
-Ensuite, dans votre nouveau dossier *variables*, ouvrez *src/main.rs* et
+Ensuite, dans votre nouveau répertoire *variables*, ouvrez *src/main.rs* et
 remplacez son code par le code suivant. Ce code ne se compile pas pour le
 moment, nous allons commencer par étudier l'erreur d'immutabilité.
 

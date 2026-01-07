@@ -250,11 +250,11 @@ Votre répertoire *ajout* devrait maintenant avoir ces répertoires et fichiers�
 ```text
 ├── Cargo.lock
 ├── Cargo.toml
-├── add_one
+├── ajouter_un
 │   ├── Cargo.toml
 │   └── src
 │       └── lib.rs
-├── adder
+├── additionneur
 │   ├── Cargo.toml
 │   └── src
 │       └── main.rs
@@ -653,7 +653,7 @@ Afin de procéder à une autre amélioration, ajoutons un test de la fonction
 <span class="filename">Filename: add_one/src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : add_one/src/lib.rs</span>
+<span class="filename">Fichier : ajouter_un/src/lib.rs</span>
 
 <!--
 ```rust,noplayground

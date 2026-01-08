@@ -188,13 +188,13 @@ that enables us to use the dereference operator by defining our own box type.
 -->
 
 La principale différence entre l'encart 15-7 et l'encart 15-6 est qu'ici nous
-avons fait en sorte que `y` soit une instance de boite qui pointe sur une copie
+avons fait en sorte que `y` soit une instance de boîte qui pointe sur une copie
 de la valeur de `x` plutôt qu'avoir une référence vers la valeur de `x`. Dans
 la dernière assertion, nous pouvons utiliser l'opérateur de déréférencement
-pour suivre le pointeur de la boite de la même manière que nous l'avons fait
+pour suivre le pointeur de la boîte de la même manière que nous l'avons fait
 lorsque `y` était une référence. Maintenant, nous allons regarder ce qu'il y a
 de si spécial dans `Box<T>` qui nous permet d'utiliser l'opérateur de
-déréférencement en définissant notre propre type de boite.
+déréférencement en définissant notre propre type de boîte.
 
 <!--
 ### Defining Our Own Smart Pointer

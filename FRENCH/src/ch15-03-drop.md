@@ -24,7 +24,7 @@ présentons `Drop` dans le contexte des pointeurs intelligents car la
 fonctionnalité du trait `Drop` est quasiment systématiquement utilisée
 lorsque nous implémentons un pointeur intelligent. Par exemple, lorsqu'une
 `Box<T>` est libérée, elle va désallouer l'espace occupé sur le tas sur lequel
-la boite pointe.
+la boîte pointe.
 
 <!--
 In some languages, the programmer must call code to free memory or resources

@@ -1298,7 +1298,7 @@ solutions.
 -->
 
 Ouah ! Maintenant vous avez quelques fonctionnalités de Rust supplémentaires
-dans votre boite à outils que vous n'utiliserez probablement que rarement, mais vous
+dans votre boîte à outils que vous n'utiliserez probablement que rarement, mais vous
 savez maintenant qu'elles pourront vous aider dans certaines situations très particulières.
 Nous avons introduits plusieurs sujets complexes afin que vous puissiez les
 reconnaître, ainsi que la syntaxe associée, lorsque vous les rencontrerez dans des

@@ -173,7 +173,7 @@ type. Un des types dont la taille ne peut pas être connue au moment de la
 compilation est le *type récursif*, dans lequel une valeur peut avoir une partie
 de sa définition qui a une valeur du même type qu'elle-même. Comme cet emboîtement
 de valeurs pourrait théoriquement se poursuivre à l'infini, Rust ne sait pas
-combien d'espace une valeur d'un type récursif peut avoir besoin. Cependant, les
+de combien d'espace une valeur d'un type récursif peut avoir besoin. Cependant, les
 boîtes ont une taille connue, donc en utilisant une boîte dans la définition
 d'un type récursif, vous pouvez créer des types récursifs.
 
@@ -252,7 +252,7 @@ data type without much distraction.
 
 Bien que les langages de programmation fonctionnels utilisent les listes de
 construction fréquemment, la liste de construction n'est pas une structure de
-donnée utilisée couramment en Rust. La plupart du temps lorsque vous avez une
+donnée utilisée couramment en Rust. La plupart du temps, lorsque vous avez une
 liste d'éléments en Rust, `Vec<T>` s'avère être un meilleur choix à faire.
 Autrement, il existe des types de données récursifs plus complexes *qui sont*
 utiles dans d'autres situations, mais en commençant avec les listes de
@@ -388,7 +388,7 @@ type.
 
 L'erreur explique que ce type “a une taille infinie”. La raison est que nous
 avons défini `List` avec une variante qui est récursive : elle stocke
-directement une autre valeur d'elle-même. Au final, Rust ne peut pas savoir
+directement une autre valeur d'elle-même. Au final, Rust ne peut pas savoir de
 combien de place il a besoin pour stocker une valeur `List`. Analysons
 pourquoi nous obtenons cette erreur. D'abord, regardons comment Rust décide de
 l'espace dont il a besoin pour stocker une valeur d'un type non récursif.

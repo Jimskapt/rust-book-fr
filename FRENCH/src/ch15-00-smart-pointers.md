@@ -16,7 +16,7 @@ most often.
 
 Un *pointeur* est un concept général pour une variable qui contient une adresse
 vers la mémoire. Cette adresse pointe vers d'autres données. Le type de pointeur
-le plus courant en Rust est la référence, que vous avez appris au chapitre 4.
+le plus courant en Rust est la référence, que vous avez apprise au chapitre 4.
 Les références sont marquées par le symbole `&` et empruntent la valeur sur
 laquelle elles pointent. Elles n'ont pas d'autres fonctionnalités que celle de
 pointer sur une donnée. De plus, elles n'ont aucun coût sur les performances et

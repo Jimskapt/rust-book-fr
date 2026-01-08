@@ -472,7 +472,7 @@ processus continue à l'infini, comme l'illustration 15-1.
 `Cons` variants</span>
 -->
 
-<span class="caption">Illustration 15-1 : une `List` infinie qui contient des
+<span class="caption">Illustration 15-1 : Une `List` infinie qui contient des
 variantes `Cons` infinies</span>
 
 <!--
@@ -611,7 +611,7 @@ savoir l'espace dont il a besoin pour stocker une valeur `List`. L'illustration
 because `Cons` holds a `Box`</span>
 -->
 
-<span class="caption">Illustration 15-2 : une `List` qui n'a pas de taille
+<span class="caption">Illustration 15-2 : Une `List` qui n'a pas de taille
 infinie car `Cons` est une `Box`</span>
 
 <!--

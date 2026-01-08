@@ -141,7 +141,7 @@ ressembler à l'illustration 14-1 :
 function</span>
 -->
 
-<span class="caption">Illustration 14-1 : documentation HTML pour la fonction
+<span class="caption">Illustration 14-1 : Documentation HTML pour la fonction
 `ajouter_un`</span>
 
 <!--
@@ -632,7 +632,7 @@ l'illustration 14-4, ce qui rend les types `CouleurPrimaire` et
 that lists the re-exports</span>
 -->
 
-<span class="caption">Illustration 14-4 : la page d'accueil de la documentation
+<span class="caption">Illustration 14-4 : La page d'accueil de la documentation
 pour `art` qui liste les ré-exports</span>
 
 <!--

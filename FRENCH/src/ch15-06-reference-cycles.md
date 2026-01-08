@@ -208,7 +208,7 @@ l'illustration 15-4.
 pointing to each other</span>
 -->
 
-<span class="caption">Illustration 15-4 : une boucle de références entre les
+<span class="caption">Illustration 15-4 : Une boucle de références entre les
 listes `a` et `b` qui se pointent mutuellement dessus</span>
 
 <!--

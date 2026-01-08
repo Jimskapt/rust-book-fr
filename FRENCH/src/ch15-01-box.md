@@ -11,8 +11,8 @@ remains on the stack is the pointer to the heap data. Refer to Chapter 4 to
 review the difference between the stack and the heap.
 -->
 
-Le pointeur intelligent le plus simple est la *boite*, dont le type s'écrit
-`Box<T>`. Les boites vous permettent de stocker des données sur le tas plutôt
+Le pointeur intelligent le plus simple est la *boîte*, dont le type s'écrit
+`Box<T>`. Les boîtes vous permettent de stocker des données sur le tas plutôt
 que sur la pile. La seule chose qui reste sur la pile est le pointeur vers les
 données sur le tas. Revenez au chapitre 4 pour vous rappeler la différence entre
 la pile et le tas.
@@ -23,7 +23,7 @@ heap instead of on the stack. But they don’t have many extra capabilities
 either. You’ll use them most often in these situations:
 -->
 
-Les boites ne provoquent pas de surcharge au niveau des performances, si ce
+Les boîtes ne provoquent pas de surcharge au niveau des performances, si ce
 n'est le stockage de leurs données sur le tas plutôt que sur la pile. Mais elles
 n'ont pas non plus beaucoup plus de fonctionnalités. Vous allez les utiliser
 principalement dans les situations suivantes :
@@ -63,11 +63,11 @@ Chapter 17!
 
 Nous allons expérimenter la première situation dans la section [“Pouvoir
 utiliser des types récursifs grâce aux
-boites”](#pouvoir-utiliser-des-types-récursifs-grâce-aux-boites)<!-- ignore -->.
+boîtes”](#pouvoir-utiliser-des-types-récursifs-grâce-aux-boîtes)<!-- ignore -->.
 Pour la seconde situation, le transfert de possession d'une grosse quantité de
 données peut prendre beaucoup de temps car les données sont recopiées sur la
 pile. Pour améliorer les performances dans cette situation, nous pouvons stocker
-ces données sur le tas grâce à une boite. Ainsi, seul le petit pointeur vers les
+ces données sur le tas grâce à une boîte. Ainsi, seul le petit pointeur vers les
 données est copié sur la pile, alors que les données qu'il pointe restent à leur
 place sur le tas. La troisième situation décris ce qu'on appelle un
 *objet de trait* et le [chapitre 17][trait-objects]<!-- ignore --> dédie une
@@ -92,7 +92,7 @@ comment interagir avec les valeurs stockées dans un `Box<T>`.
 Listing 15-1 shows how to use a box to store an `i32` value on the heap:
 -->
 
-L'encart 15-1 nous montre comment utiliser une boite pour stocker une valeur
+L'encart 15-1 nous montre comment utiliser une boîte pour stocker une valeur
 `i32` sur le tas :
 
 <!--
@@ -131,10 +131,10 @@ to (stored on the heap).
 
 Nous avons défini la variable `b` pour avoir la valeur d'une `Box` qui pointe
 sur la valeur `5`, qui est donc allouée sur le tas. Ce programme va afficher
-`b = 5` ; dans ce cas, nous pouvons accéder à la donnée présente dans la boite
+`b = 5` ; dans ce cas, nous pouvons accéder à la donnée présente dans la boîte
 de la même manière que nous le ferrions si elle était sur la pile. Comme toute
-valeur possédée, lorsque une boite sort de la portée, comme lorsque `b` le fait
-à la fin du `main`, elle sera désallouée. Ce sera la boite qui sera désallouée
+valeur possédée, lorsque une boîte sort de la portée, comme lorsque `b` le fait
+à la fin du `main`, elle sera désallouée. Ce sera la boîte qui sera désallouée
 en premier (elle est stockée sur la pile), puis ce sera au tour des données sur
 lesquelles elle pointait (qui sont stockées sur le tas).
 
@@ -147,17 +147,17 @@ wouldn’t be allowed to if we didn’t have boxes.
 -->
 
 Déposer une seule valeur sur le tas n'est pas très utile, donc vous n'utiliserez
-que très rarement les boites de cette manière. Laisser les valeurs comme des `i32`
+que très rarement les boîtes de cette manière. Laisser les valeurs comme des `i32`
 indépendantes sur la pile, où elles sont stockées par défaut, reste plus
-approprié dans la majeure partie des situations. Regardons un cas où les boites
+approprié dans la majeure partie des situations. Regardons un cas où les boîtes
 nous permettent de définir des types que nous ne pourrions pas définir si nous
-n'avions pas les boites.
+n'avions pas les boîtes.
 
 <!--
 ### Enabling Recursive Types with Boxes
 -->
 
-### Pouvoir utiliser des types récursifs grâce aux boites
+### Pouvoir utiliser des types récursifs grâce aux boîtes
 
 <!--
 At compile time, Rust needs to know how much space a type takes up. One type
@@ -174,7 +174,7 @@ compilation est le *type récursif*, dans lequel une valeur peut avoir une parti
 de sa définition qui a une valeur du même type qu'elle-même. Comme cet emboîtement
 de valeurs pourrait théoriquement se poursuivre à l'infini, Rust ne sait pas
 combien d'espace une valeur d'un type récursif peut avoir besoin. Cependant, les
-boites ont une taille connue, donc en utilisant une boite dans la définition
+boîtes ont une taille connue, donc en utilisant une boîte dans la définition
 d'un type récursif, vous pouvez créer des types récursifs.
 
 <!--
@@ -256,7 +256,7 @@ donnée utilisée couramment en Rust. La plupart du temps lorsque vous avez une
 liste d'éléments en Rust, `Vec<T>` s'avère être un meilleur choix à faire.
 Autrement, il existe des types de données récursifs plus complexes *qui sont*
 utiles dans d'autres situations, mais en commençant avec les listes de
-construction, nous pouvons découvrir comment les boites nous permettent de
+construction, nous pouvons découvrir comment les boîtes nous permettent de
 définir un type de données récursif sans être trop perturbé par la complexité.
 
 <!--
@@ -589,10 +589,10 @@ looks like now.
 -->
 
 La variante `Cons` va avoir besoin de l'espace d'un `i32` plus l'espace pour
-stocker le pointeur vers la donnée de la boite. La variante `Nil` ne stocke pas
+stocker le pointeur vers la donnée de la boîte. La variante `Nil` ne stocke pas
 de valeurs, donc elle a besoin de moins d'espace que la variante `Cons`. Nous
 savons maintenant que chaque valeur `List` va prendre la taille d'un `i32`
-plus la taille d'un pointeur vers la donnée de la boite. En utilisant une boite,
+plus la taille d'un pointeur vers la donnée de la boîte. En utilisant une boîte,
 vous avez arrêté la chaine infinie et récursive, donc le compilateur peut
 savoir l'espace dont il a besoin pour stocker une valeur `List`. L'illustration
 15-2 montre à quoi ressemble maintenant la variante `Cons`.
@@ -623,13 +623,13 @@ indirection is the only feature we need. We’ll look at more use cases for boxe
 in Chapter 17, too.
 -->
 
-Les boites fournissent uniquement la redirection et l'allocation sur le tas ;
+Les boîtes fournissent uniquement la redirection et l'allocation sur le tas ;
 elles n'ont pas d'autres fonctionnalités, comme celles que nous verrons sur
 d'autres types de pointeurs intelligents. Elles n'ont pas non plus de surcoût
 sur les performances autre que ce qu'offrent ces capacités spéciales, donc
 elles sont utiles dans des cas comme les listes de construction où la
 redirection est la seule fonctionnalité que nous avons besoin. Nous verrons
-aussi plus de cas d'usages pour les boites dans le chapitre 17.
+aussi plus de cas d'usages pour les boîtes dans le chapitre 17.
 
 <!--
 The `Box<T>` type is a smart pointer because it implements the `Deref` trait,
@@ -644,7 +644,7 @@ rest of this chapter.
 Le type `Box<T>` est un pointeur intelligent car il implémente le trait
 `Deref`, qui permet aux valeurs `Box<T>` d'être traitées comme des
 références. Lorsque une valeur `Box<T>` sort de la portée, les données sur le
-tas pointées par la boite seront également nettoyées grâce à l'implémentation
+tas pointées par la boîte seront également nettoyées grâce à l'implémentation
 du trait `Drop`. Explorons plus en détail ces deux traits. Ces deux traits
 deviendrons encore plus importants pour les fonctionnalités offertes par les
 autres pointeurs intelligents que nous verrons dans le reste de ce chapitre.

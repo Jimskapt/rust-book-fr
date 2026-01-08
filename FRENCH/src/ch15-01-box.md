@@ -432,7 +432,7 @@ parcourt chaque variante pour voir quelle variante a besoin le plus d'espace.
 Rust voit que `Message::Quitter` n'a pas besoin d'espace, `Message::Deplacer` a
 besoin de suffisamment d'espace pour stocker deux valeurs `i32`, et ainsi de
 suite. Comme une seule variante sera utilisée, le plus grand espace dont une
-valeur de `Message` aura besoin sera l'espace que cela prendra de stocker la
+valeur de `Message` aura besoin sera l'espace nécessaire pour stocker la
 plus grosse de ses variantes.
 
 <!--
@@ -534,7 +534,7 @@ but this implementation is now more like placing the items next to one another
 rather than inside one another.
 -->
 
-Comme `Box<T>` est un pointeur, Rust connaît toujours combien d'espace un
+Comme `Box<T>` est un pointeur, Rust connaît toujours de combien d'espace un
 `Box<T>` a besoin : la taille d'un pointeur ne change pas, peu importe la
 quantité de données sur lesquelles il pointe. Cela signifie que nous pouvons
 insérer un `Box<T>` à l'intérieur d'une variante `Cons` au lieu d'y mettre

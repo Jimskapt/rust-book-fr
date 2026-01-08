@@ -133,7 +133,7 @@ Nous avons défini la variable `b` pour avoir la valeur d'une `Box` qui pointe
 sur la valeur `5`, qui est donc allouée sur le tas. Ce programme va afficher
 `b = 5` ; dans ce cas, nous pouvons accéder à la donnée présente dans la boîte
 de la même manière que nous le ferions si elle était sur la pile. Comme toute
-valeur possédée, lorsque une boîte sort de la portée, comme lorsque `b` le fait
+valeur possédée, lorsqu'une boîte sort de la portée, comme lorsque `b` le fait
 à la fin du `main`, elle sera désallouée. Ce sera la boîte qui sera désallouée
 en premier (elle est stockée sur la pile), puis ce sera au tour des données sur
 lesquelles elle pointait (qui sont stockées sur le tas).
@@ -643,7 +643,7 @@ rest of this chapter.
 
 Le type `Box<T>` est un pointeur intelligent car il implémente le trait
 `Deref`, qui permet aux valeurs `Box<T>` d'être traitées comme des
-références. Lorsque une valeur `Box<T>` sort de la portée, les données sur le
+références. Lorsqu'une valeur `Box<T>` sort de la portée, les données sur le
 tas pointées par la boîte seront également nettoyées grâce à l'implémentation
 du trait `Drop`. Explorons plus en détail ces deux traits. Ces deux traits
 deviendrons encore plus importants pour les fonctionnalités offertes par les

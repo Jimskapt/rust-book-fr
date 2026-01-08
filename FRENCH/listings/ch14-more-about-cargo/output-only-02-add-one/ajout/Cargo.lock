@@ -5,7 +5,7 @@ name = "ajouter_un"
 version = "0.1.0"
 
 [[package]]
-name = "additioneur"
+name = "additionneur"
 version = "0.1.0"
 dependencies = [
  "ajouter_un 0.1.0",

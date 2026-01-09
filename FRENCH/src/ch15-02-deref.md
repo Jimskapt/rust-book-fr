@@ -267,7 +267,7 @@ code in Listing 15-9 won’t compile because Rust doesn’t know how to derefere
 `MyBox`.
 -->
 
-Essayons d'ajouter la fonction `main` de l'encart 15-7 dans l'encart 15-8 et la
+Essayons d'ajouter la fonction `main` de l'encart 15-7 dans l'encart 15-8 et de la
 modifier pour utiliser le type `MaBoite<T>` que nous avons défini à la place de
 `Box<T>`. Le code de l'encart 15-9 ne se compile pas car Rust ne sait pas
 comment déréférencer `MaBoite`.

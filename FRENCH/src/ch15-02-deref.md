@@ -30,7 +30,7 @@ or smart pointers.
 -->
 
 Regardons d'abord comment l'opérateur de déréférencement fonctionne avec des
-références classiques. Ensuite nous essayerons de définir un type personnalisé
+références classiques. Ensuite nous essaierons de définir un type personnalisé
 qui se comporte comme `Box<T>` et voir pourquoi l'opérateur de déréférencement
 ne fonctionne pas comme une référence sur notre type fraîchement défini. Nous
 allons découvrir comment implémenter le trait `Deref` de manière à ce qu'il soit
@@ -189,7 +189,7 @@ that enables us to use the dereference operator by defining our own box type.
 
 La principale différence entre l'encart 15-7 et l'encart 15-6 est qu'ici nous
 avons fait en sorte que `y` soit une instance de boîte qui pointe sur une copie
-de la valeur de `x` plutôt qu'avoir une référence vers la valeur de `x`. Dans
+de la valeur de `x` plutôt que d'avoir une référence vers la valeur de `x`. Dans
 la dernière assertion, nous pouvons utiliser l'opérateur de déréférencement
 pour suivre le pointeur de la boîte de la même manière que nous l'avons fait
 lorsque `y` était une référence. Maintenant, nous allons regarder ce qu'il y a
@@ -254,7 +254,7 @@ with one element of type `T`. The `MyBox::new` function takes one parameter of
 type `T` and returns a `MyBox` instance that holds the value passed in.
 -->
 
-Nous définissons une structure `MaBoite` et on déclare un paramètre générique
+Nous définissons une structure `MaBoite` et nous déclarons un paramètre générique
 `T`, car nous souhaitons que notre type stocke des valeurs de n'importe quel
 type. Le type `MaBoite` est une structure de tuple avec un seul élément de type
 `T`. La fonction `MaBoite::new` prend un paramètre de type `T` et retourne une

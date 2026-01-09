@@ -121,8 +121,8 @@ in the `drop` method, printing our final message. Note that we didn’t need to
 call the `drop` method explicitly.
 -->
 
-Dans le `main`, nous créons deux instances de `PointeurPerso` et ensuite on
-affiche `PointeurPersos créés`. À la fin du `main`, nos instances de
+Dans le `main`, nous créons deux instances de `PointeurPerso` et ensuite nous
+affichons `PointeurPersos créés`. À la fin du `main`, nos instances de
 `PointeurPerso` vont sortir de la portée, et Rust va appeler le code que nous
 avons placé dans la méthode `drop` et qui va afficher notre message final.
 Notez que nous n'avons pas besoin d'appeler explicitement la méthode `drop`.

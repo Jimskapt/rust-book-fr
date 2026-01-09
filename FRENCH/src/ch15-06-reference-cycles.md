@@ -17,7 +17,7 @@ will never be dropped.
 
 Les garanties de sécurité de la mémoire de Rust rendent difficile, mais pas
 impossible, la création accidentelle de mémoire qui n'est jamais nettoyée
-(aussi appelée *fuite de mémoire*). Eviter totalement les fuites de mémoire
+(aussi appelée *fuite de mémoire*). Éviter totalement les fuites de mémoire
 n'est pas une des garanties de Rust, en tout cas pas comme pour l'accès
 concurrent au moment de la compilation, ce qui signifie que les fuites de
 mémoire sont sans risque pour la mémoire avec Rust. Nous pouvons constater
@@ -283,7 +283,7 @@ boucles de références.
 ### Preventing Reference Cycles: Turning an `Rc<T>` into a `Weak<T>`
 -->
 
-### Eviter les boucles de références : transformer un `Rc<T>` en `Weak<T>`
+### Éviter les boucles de références : transformer un `Rc<T>` en `Weak<T>`
 
 <!--
 So far, we’ve demonstrated that calling `Rc::clone` increases the

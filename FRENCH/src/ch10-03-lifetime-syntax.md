@@ -46,7 +46,7 @@ durée de vie, pour vous introduire ces concepts.
 ### Preventing Dangling References with Lifetimes
 -->
 
-### Eviter les références pendouillantes avec les durées de vie
+### Éviter les références pendouillantes avec les durées de vie
 
 <!--
 The main aim of lifetimes is to prevent dangling references, which cause a

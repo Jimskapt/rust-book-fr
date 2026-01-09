@@ -59,9 +59,9 @@ apprises au chapitre 4 :
 * References must always be valid.
 -->
 
-* À un instant donné, vous pouvez avoir *soit* (mais pas les deux) une
-  référence mutable, soit n'importe quel nombre de références immuables
-* Les références doivent toujours être en vigueur.
+* à un instant donné, vous pouvez avoir *soit* (mais pas les deux) une
+  référence mutable, soit n'importe quel nombre de références immuables ;
+* les références doivent toujours être en vigueur.
 
 <!--
 With references and `Box<T>`, the borrowing rules’ invariants are enforced at

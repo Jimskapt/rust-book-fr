@@ -307,7 +307,7 @@ called `Messenger`. Listing 15-20 shows the library code:
 -->
 
 Notre bibliothèque fournira uniquement la fonctionnalité de suivi en fonction de
-la proximité d'une valeur avec la maximale et définiera quels seront les
+la proximité d'une valeur avec la maximale et définira quels seront les
 messages associés. Les applications qui utiliseront notre bibliothèque devront
 fournir un mécanisme pour envoyer les messages : l'application peut afficher le
 message dans l'application, l'envoyer par email, l'envoyer par SMS ou autre

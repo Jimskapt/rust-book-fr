@@ -438,8 +438,8 @@ identically whether we have a regular reference or a type that implements
 Rust remplace l'opérateur `*` par un appel à la méthode `deref` suivi par un
 simple déréférencement afin que nous n'ayons pas à nous demander si nous devons
 ou non appeler la méthode `deref`. Cette fonctionnalité de Rust nous permet
-d'écrire du code qui fonctionne de manière identique que nous ayons une
-référence classique ou un type qui implémente `Deref`.
+d'écrire du code qui fonctionne de manière identique, que nous ayons une
+référence classique ou bien un type qui implémente `Deref`.
 
 <!--
 The reason the `deref` method returns a reference to a value, and that the plain
@@ -456,7 +456,7 @@ et que le déréférencement du tout dans les parenthèses externes de
 `deref` retournait la valeur directement au lieu d'une référence à cette valeur,
 la valeur serait *déplacée* à l'extérieur de `self`. Nous ne souhaitons pas
 prendre possession de la valeur à l'intérieur de `MaBoite<T>` dans ce cas ainsi
-que la plupart des cas où nous utilisons l'opérateur de déréférencement.
+que dans la plupart des cas où nous utilisons l'opérateur de déréférencement.
 
 <!--
 Note that the `*` operator is replaced with a call to the `deref` method and

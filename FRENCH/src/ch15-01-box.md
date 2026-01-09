@@ -626,9 +626,9 @@ in Chapter 17, too.
 Les boîtes fournissent uniquement la redirection et l'allocation sur le tas ;
 elles n'ont pas d'autres fonctionnalités, comme celles que nous verrons sur
 d'autres types de pointeurs intelligents. Elles n'ont pas non plus de surcoût
-sur les performances autre que ce qu'offrent ces capacités spéciales, donc
+sur les performances autres que ce qu'offrent ces capacités spéciales, donc
 elles sont utiles dans des cas comme les listes de construction où la
-redirection est la seule fonctionnalité que nous avons besoin. Nous verrons
+redirection est la seule fonctionnalité dont nous avons besoin. Nous verrons
 aussi plus de cas d'usages pour les boîtes dans le chapitre 17.
 
 <!--
@@ -646,7 +646,7 @@ Le type `Box<T>` est un pointeur intelligent car il implémente le trait
 références. Lorsqu'une valeur `Box<T>` sort de la portée, les données sur le
 tas pointées par la boîte seront également nettoyées grâce à l'implémentation
 du trait `Drop`. Explorons plus en détail ces deux traits. Ces deux traits
-deviendrons encore plus importants pour les fonctionnalités offertes par les
+deviendront encore plus importants pour les fonctionnalités offertes par les
 autres pointeurs intelligents que nous verrons dans le reste de ce chapitre.
 
 <!-- markdownlint-disable -->

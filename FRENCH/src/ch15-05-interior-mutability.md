@@ -840,7 +840,7 @@ structures.
 
 Cette technique est plutôt ingénieuse ! En utilisant `RefCell<T>`, nous avons
 une valeur `List` qui est immuable de l'extérieur. Mais nous pouvons utiliser
-les méthodes de `RefCell<T>` qui nous donne accès à sa mutabilité interne afin
+les méthodes de `RefCell<T>` qui nous donnent accès à sa mutabilité interne afin
 que nous puissions modifier notre donnée lorsque nous en avons besoin. Les
 vérifications des règles d'emprunt à l'exécution nous protègent des accès
 concurrents, et il est parfois intéressant de sacrifier un peu de vitesse pour

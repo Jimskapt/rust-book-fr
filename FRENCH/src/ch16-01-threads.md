@@ -41,13 +41,13 @@ tels que :
   reliably
 -->
 
-* Les situations de concurrence, durant lesquelles les tâches accèdent à des
-  données ou des ressources dans un ordre incohérent
-* Des interblocages, durant lesquels deux tâches attendent mutuellement que
+* les situations de concurrence, durant lesquelles les tâches accèdent à des
+  données ou des ressources dans un ordre incohérent ;
+* des interblocages, durant lesquels deux tâches attendent mutuellement que
   l'autre finisse d'utiliser une ressource que l'autre tâche utilise, bloquant
-  la progression des deux tâches
-* Des bogues qui surgissent uniquement dans certaines situations et qui sont
-  difficiles à reproduire et corriger durablement
+  la progression des deux tâches ;
+* des bogues qui surgissent uniquement dans certaines situations et qui sont
+  difficiles à reproduire et corriger durablement.
 
 <!--
 Rust attempts to mitigate the negative effects of using threads, but

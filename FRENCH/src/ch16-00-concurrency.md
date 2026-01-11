@@ -114,9 +114,9 @@ Voici les sujets que nous allons aborder dans ce chapitre :
   user-defined types as well as types provided by the standard library
 -->
 
-* Comment créer des tâches pour exécuter plusieurs parties de code en même temps
+* comment créer des tâches pour exécuter plusieurs parties de code en même temps
 * Le *passage de message* en concurrence, qui permet à plusieurs tâches
-  d'accéder à la même donnée
-* Les traits `Sync` et `Send`, qui étendent les garanties de Rust sur la
+  d'accéder à la même donnée ;
+* les traits `Sync` et `Send`, qui étendent les garanties de Rust sur la
   concurrence tant aux types définis par les utilisateurs qu'à ceux
-  fournis par la bibliothèque standard
+  fournis par la bibliothèque standard.

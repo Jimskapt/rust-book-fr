@@ -424,7 +424,7 @@ with it. What we need is a type exactly like `Rc<T>` but one that makes changes
 to the reference count in a thread-safe way.
 -->
 
-Malheureusement l'utilisation de `Rc<T>` n'est pas sure lorsqu'il est partagé
+Malheureusement, l'utilisation de `Rc<T>` n'est pas sûre lorsqu'il est partagé
 entre plusieurs tâches. Lorsque `Rc<T>` gère le compteur de références, il
 incrémente le compteur autant de fois que nous avons fait appel à `clone` et
 décrémente le compteur à chaque fois qu'un clone est libéré. Mais il n'utilise

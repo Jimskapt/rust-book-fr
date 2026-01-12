@@ -2,7 +2,7 @@
 ## Extending Cargo with Custom Commands
 -->
 
-## Etendre les fonctionnalités de cargo avec des commandes personnalisées
+## Étendre les fonctionnalités de cargo avec des commandes personnalisées
 
 <!--
 Cargo is designed so you can extend it with new subcommands without having to

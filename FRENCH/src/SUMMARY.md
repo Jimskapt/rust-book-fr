@@ -87,7 +87,7 @@
     - [Publier une crate sur crates.io](ch14-02-publishing-to-crates-io.md)
     - [Les espaces de travail de cargo](ch14-03-cargo-workspaces.md)
     - [Installer des binaires à partir de crates.io avec `cargo install`](ch14-04-installing-binaries.md)
-    - [Etendre les fonctionnalités de cargo avec des commandes personnalisées](ch14-05-extending-cargo.md)
+    - [Étendre les fonctionnalités de cargo avec des commandes personnalisées](ch14-05-extending-cargo.md)
 
 - [Les pointeurs intelligents](ch15-00-smart-pointers.md)
     - [Utiliser `Box<T>` pour pointer sur des données présentes sur le tas](ch15-01-box.md)
@@ -101,7 +101,7 @@
     - [Utiliser les tâches pour exécuter simultanément du code](ch16-01-threads.md)
     - [Utiliser l'envoi de messages pour transférer des données entre les tâches](ch16-02-message-passing.md)
     - [Le partage d'état en concurrence](ch16-03-shared-state.md)
-    - [Etendre la concurrence avec les traits `Sync` et `Send`](ch16-04-extensible-concurrency-sync-and-send.md)
+    - [Étendre la concurrence avec les traits `Sync` et `Send`](ch16-04-extensible-concurrency-sync-and-send.md)
 
 - [Les fonctionnalités orientées objet de Rust](ch17-00-oop.md)
     - [Les caractéristiques des langages orientés objet](ch17-01-what-is-oo.md)

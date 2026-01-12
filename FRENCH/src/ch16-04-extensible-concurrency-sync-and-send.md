@@ -2,7 +2,7 @@
 ## Extensible Concurrency with the `Sync` and `Send` Traits
 -->
 
-## Etendre la concurrence avec les traits `Sync` et `Send`
+## Étendre la concurrence avec les traits `Sync` et `Send`
 
 <!--
 Interestingly, the Rust language has *very* few concurrency features. Almost

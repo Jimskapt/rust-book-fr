@@ -282,7 +282,7 @@ again.
 La méthode `try_recv` ne bloque pas, mais va plutôt retourner immédiatement un
 `Result<T, E>` : une valeur `Ok` qui contiendra un message s'il y en a un de
 disponible, et une valeur `Err` s'il n'y a pas de message cette fois-ci.
-L'utilisation de `try_recv` est pratique si cette tâche à d'autres choses à
+L'utilisation de `try_recv` est pratique si cette tâche a d'autres choses à
 faire pendant qu'elle attend les messages : nous pouvons ainsi écrire une
 boucle qui appelle régulièrement `try_recv`, gère le message s'il y en a un, et
 sinon fait d'autres choses avant de vérifier à nouveau.
@@ -294,7 +294,7 @@ thread is appropriate.
 -->
 
 Nous avons utilisé `recv` dans cet exemple pour des raisons de simplicité ;
-nous n'avons rien d'autres à faire dans la tâche principale que d'attendre les
+nous n'avons rien d'autre à faire dans la tâche principale que d'attendre les
 messages, donc bloquer la tâche principale est acceptable.
 
 <!--

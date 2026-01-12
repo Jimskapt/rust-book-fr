@@ -505,7 +505,7 @@ Listing 16-4 provides a scenario that’s more likely to have a reference to `v`
 that won’t be valid:
 -->
 
-L'encart 16-4 propose un scénario qui est a plus de chance d'avoir une
+L'encart 16-4 propose un scénario qui a plus de chances d'avoir une
 référence à `v` qui ne sera plus valide :
 
 <!--

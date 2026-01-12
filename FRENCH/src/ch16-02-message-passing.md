@@ -469,7 +469,7 @@ between each by calling the `thread::sleep` function with a `Duration` value of
 -->
 
 Cette fois-ci, la nouvelle tâche a un vecteur de chaînes de caractères que nous
-souhaitons envoyer à la tâche principale. Nous itérons sur celui-ci, on envoie
+souhaitons envoyer à la tâche principale. Nous itérons sur celui-ci, nous envoyons
 les chaînes une par une en faisant une pause entre chaque envoi en appelant la
 fonction `thread::sleep` avec une valeur `Duration` de 1 seconde.
 

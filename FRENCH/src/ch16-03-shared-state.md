@@ -434,7 +434,7 @@ provoquer des bogues subtils induisant une mauvaise gestion du compteur, ce qui
 pourrait provoquer des fuites de mémoire ou faire qu'une valeur soit libérée
 avant que nous ayions fini de l'utiliser. Nous avons besoin d'un type
 exactement comme `Rc<T>` mais qui procède aux changements du compteur de
-références de manière sure en situation de concurrence.
+références de manière sûre en situation de concurrence.
 
 <!--
 #### Atomic Reference Counting with `Arc<T>`
@@ -455,7 +455,7 @@ types but are safe to share across threads.
 Heureusement, `Arc<T>` *est* un type comme `Rc<T>` qui est sûr en
 situation de concurrence. Le *A* signifie *atomique*, ce qui signifie que c'est
 un type *compteur de références atomique*. L'atome est une sorte de primitive
-concurrente que nous n'allons pas aborder en détails ici : rendez-vous dans la
+concurrente que nous n'allons pas aborder en détail ici : rendez-vous dans la
 documentation de la bibliothèque standard sur [`std::sync::atomic`][atomic]<!--
 ignore --> pour en savoir plus. Pour le moment, vous avez juste besoin de
 retenir que les atomes fonctionnent comme les types primitifs mais qui sont

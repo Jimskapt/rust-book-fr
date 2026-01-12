@@ -76,7 +76,7 @@ we’ll discuss in Chapter 19.
 -->
 
 Tous les types composés entièrement d'autres types qui implémentent `Send` sont
-automatiquement marqués comme `Send` eux-aussi. Presque tous les types
+automatiquement marqués comme `Send` eux aussi. Presque tous les types
 primitifs sont `Send`, à part les pointeurs bruts, ce que nous verrons au
 chapitre 19.
 

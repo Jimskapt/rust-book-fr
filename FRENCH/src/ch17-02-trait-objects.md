@@ -193,7 +193,7 @@ in Chapter 10. Next comes some new syntax: Listing 17-4 defines a struct named
 a `Box` that implements the `Draw` trait.
 -->
 
-Cette syntaxe devrait vous rappeler nos discussions sur comment définir des
+Cette syntaxe devrait vous rappeler nos discussions concernant la définition des
 traits au chapitre 10. Puis vient une nouvelle syntaxe : l'encart 17-4 définit
 une structure `Ecran` qui contient un vecteur `composants`. Ce
 vecteur est du type `Box<dyn Affichable>`, qui est un objet trait ; c'est un

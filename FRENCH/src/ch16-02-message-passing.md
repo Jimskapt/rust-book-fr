@@ -13,7 +13,7 @@ documentation](https://golang.org/doc/effective_go.html#concurrency):
 -->
 
 Une approche de plus en plus populaire pour garantir la sécurité de la
-concurrence est l'*envoi de message*, avec lequel les tâches ou les acteurs
+concurrence est l'*envoi de messages*, avec lequel les tâches ou les acteurs
 communiquent en envoyant aux autres des messages contenant des données. Voici
 l'idée résumée, tirée d'un slogan provenant de [la documentation du langage
 Go](https://golang.org/doc/effective_go.html#concurrency) : “Ne communiquez pas

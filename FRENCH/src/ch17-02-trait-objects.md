@@ -197,7 +197,7 @@ Cette syntaxe devrait vous rappeler nos discussions concernant la définition de
 traits au chapitre 10. Puis vient une nouvelle syntaxe : l'encart 17-4 définit
 une structure `Ecran` qui contient un vecteur `composants`. Ce
 vecteur est du type `Box<dyn Affichable>`, qui est un objet trait ; c'est un
-bouche-trou pour n'importe quel type au sein d'un `Box` qui implémente le trait
+substitut pour n'importe quel type au sein d'un `Box` qui implémente le trait
 `Affichable`.
 
 <!--

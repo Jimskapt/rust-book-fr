@@ -265,7 +265,7 @@ for the first thread to finish.
 
 Avec tous ces changements, notre code se compile désormais sans aucun
 avertissement. Mais la mauvaise nouvelle est que pour l'instant ce code ne
-fonctionne comme nous le souhaitons. La cause se situe dans la logique des
+fonctionne pas comme nous le souhaitons. La cause se situe dans la logique des
 fermetures qui sont exécutées par les tâches des instances de `Operateur` :
 pour le moment, nous faisons appel à `join`, mais cela ne va pas arrêter les
 tâches car elles font une boucle infinie avec `loop` pour attendre des

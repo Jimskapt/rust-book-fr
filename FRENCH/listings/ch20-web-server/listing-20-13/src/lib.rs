@@ -4,7 +4,7 @@ pub struct GroupeTaches;
 impl GroupeTaches {
     /// Crée un nouveau GroupeTaches.
     ///
-    /// La taille est le nom de tâches présentes dans le groupe.
+    /// La taille est le nombre de tâches présentes dans le groupe.
     ///
     /// # Panics
     ///

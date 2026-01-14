@@ -576,7 +576,7 @@ slice.
 -->
 
 Ensuite, nous retournons deux slices mutables dans un tuple : une à partir du
-début de la slice initiale jusqu'à l'indice `mod` et une autre à partir de
+début de la slice initiale jusqu'à l'indice `mid` et une autre à partir de
 l'indice jusqu'à la fin de la slice.
 
 <!--

@@ -1216,7 +1216,7 @@ guard of `if x % 2 == 0` (which will be true if the number is even).
 
 La condition peut utiliser des variables créées dans le motif. L'encart 18-26
 montre un `match` dans lequel la première branche a le motif `Some(x)` et
-procède aussi au contrôle de correspondance `if x < % 2 == 0` (qui sera vrai si
+procède aussi au contrôle de correspondance `if x % 2 == 0` (qui sera vrai si
 le nombre est pair).
 
 <!--

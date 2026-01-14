@@ -16,7 +16,7 @@ method is being called on.
 
 Les *méthodes* sont similaires aux fonctions : nous les déclarons avec le
 mot-clé `fn` et un nom, elles peuvent avoir des paramètres et une valeur de
-retour, et elles contiennent du code qui est exécuté quand on la méthode est
+retour, et elles contiennent du code qui est exécuté quand la méthode est
 appellée depuis un autre endroit. Contrairement aux fonctions, les méthodes
 diffèrent des fonctions parce qu'elles sont définies dans le contexte d'une
 structure (ou d'une énumération ou d'un objet de trait, que nous aborderons
@@ -184,7 +184,7 @@ when we follow `rect1.width` with parentheses, Rust knows we mean the method
 -->
 
 Ici, nous avons défini la méthode `largeur` pour qu'elle retourne `true` si la
-valeur dans le champ `largeur` est supérieur ou égal à 0, et `false` si la
+valeur dans le champ `largeur` est supérieure à 0, et `false` si la
 valeur est 0 : nous pouvons utiliser un champ à l'intérieur d'une méthode du
 même nom, pour n'importe quel usage. Dans le `main`, lorsque nous ajoutons des
 parenthèses après `rect1.largeur`, Rust comprend que nous parlons de la méthode

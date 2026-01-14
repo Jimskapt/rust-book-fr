@@ -10,7 +10,7 @@ pub struct Supposition {
 impl Supposition {
     pub fn new(valeur: i32) -> Supposition {
         if valeur < 1 || valeur > 100 {
-            panic!("Supposition valeur must be between 1 and 100, got {}.", valeur);
+            panic!("La valeur de Supposition doit ĉtre comprise entre 1 et 100, nous avons {}.", valeur);
         }
 
         Supposition { valeur }

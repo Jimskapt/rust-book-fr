@@ -628,7 +628,7 @@ fonctions qui ne sont pas des méthodes et qui ont le même nom de fonction, Rus
 ne peut pas toujours savoir quel type vous sous-entendez jusqu'à ce que vous
 utilisiez la *syntaxe totalement définie*. Par exemple, le trait `Animal` de
 l'encart 19-19 a une fonction associée `nom_bebe` qui n'est pas une méthode, et
-le trait `Animal` est implémenté pour la structure `Dog`.Il y a aussi une
+le trait `Animal` est implémenté pour la structure `Chien`.Il y a aussi une
 fonction associée `nom_bebe` qui n'est pas une méthode et qui est définie
 directement sur `Chien`.
 

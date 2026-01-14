@@ -663,7 +663,7 @@ par regarder le type de retour de la fonction : `Result<String, io::Error>`.
 Cela signifie que la fonction retourne une valeur de type `Result<T, E>` où le
 paramètre générique `T` a été remplacé par le type `String` et le paramètre
 générique `E` a été remplacé par le type `io::Error`. Si cette fonction réussit
-sans problème, le code qui appellant va obtenir une valeur `Ok` qui contient
+sans problème, le code appellant va obtenir une valeur `Ok` qui contient
 une `String`, le pseudo que cette fonction lit dans le fichier. Si cette
 fonction rencontre un problème, le code qui appelle cette fonction va obtenir
 une valeur `Err` qui contient une instance de `io::Error` qui donne plus
@@ -984,8 +984,8 @@ as the `match` expression we defined in Listing 9-6. In Listing 9-6, the
 it’s compatible with this `return`.
 -->
 
-L'opérateur `?` ne peut être utilisé uniquement que dans des fonctions dont le
-type de retour compatible avec ce sur quoi le `?` est utilisé. C'est parce que
+L'opérateur `?` ne peut être utilisé que dans des fonctions dont le type de
+retour est compatible avec ce sur quoi le `?` est utilisé. C'est parce que
 l'opérateur `?` est conçu pour retourner prématurémment une valeur de la
 fonction, de la même manière que le faisait l'expression `match` que nous avons
 définie dans l'encart 9-6. Dans l'encart 9-6, le `match` utilisait une valeur

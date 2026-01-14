@@ -53,7 +53,7 @@ mod tests {
 Rust:
 sécurité, rapidité, productivité.
 Obtenez les trois en même temps.
-Duck tape.";
+Duct tape.";
 
         assert_eq!(vec!["sécurité, rapidité, productivité."], rechercher(recherche, contenu));
     }

@@ -290,14 +290,14 @@ afficher `lettre ASCII du début`.
 ### Destructuring to Break Apart Values
 -->
 
-### Destructurer pour séparer les valeurs
+### Déstructurer pour séparer les valeurs
 
 <!--
 We can also use patterns to destructure structs, enums, and tuples to use
 different parts of these values. Let’s walk through each value.
 -->
 
-Nous pouvons aussi utiliser les motifs pour destructurer les structures, les
+Nous pouvons aussi utiliser les motifs pour déstructurer les structures, les
 énumérations, et les tuples pour utiliser différentes parties de ces valeurs.
 Passons en revue chacun des cas.
 
@@ -305,7 +305,7 @@ Passons en revue chacun des cas.
 #### Destructuring Structs
 -->
 
-#### Destructurer les structures
+#### Déstructurer les structures
 
 <!--
 Listing 18-12 shows a `Point` struct with two fields, `x` and `y`, that we can
@@ -413,10 +413,10 @@ some of the fields for particular values while creating variables to
 destructure the other fields.
 -->
 
-Nous pouvons aussi destructurer en utilisant des valeurs littérales faisant partie
+Nous pouvons aussi déstructurer en utilisant des valeurs littérales faisant partie
 du motif de la structure plutôt que d'avoir à créer les variables pour tous les
 champs. Ceci nous permet de tester que certains champs possèdent des valeurs
-particulières tout en créant des variables pour destructurer les autres champs.
+particulières tout en créant des variables pour déstructurer les autres champs.
 
 <!--
 Listing 18-14 shows a `match` expression that separates `Point` values into
@@ -490,7 +490,7 @@ vaut `0`, donc ce code va afficher `Sur l'axe y à la position 7`.
 #### Destructuring Enums
 -->
 
-#### Destructurer une énumération
+#### Déstructurer une énumération
 
 <!--
 We’ve destructured enums earlier in this book, for example, when we
@@ -501,13 +501,13 @@ example, in Listing 18-15 we use the `Message` enum from Listing 6-2 and write
 a `match` with patterns that will destructure each inner value.
 -->
 
-Nous avons déjà destructuré des énumérations précédemment dans ce livre, par exemple
-lorsque nous avions destructuré `Option<i32>` dans l'encart 6-5 du chapitre 6.
+Nous avons déjà déstructuré des énumérations précédemment dans ce livre, par exemple
+lorsque nous avions déstructuré `Option<i32>` dans l'encart 6-5 du chapitre 6.
 Un détail que nous n'avions pas précisé explicitement était que le motif pour
-destructurer une énumération doit correspondre à la façon dont sont définies les
+déstructurer une énumération doit correspondre à la façon dont sont définies les
 données dans l'énumération. Par exemple, dans l'encart 18-15 nous utilisons
 l'énumération `Message` de l'encart 6-2 et nous ajoutons un `match` avec des
-motifs qui devraient destructurer chaque valeur interne.
+motifs qui devraient déstructurer chaque valeur interne.
 
 <!--
 <span class="filename">Filename: src/main.rs</span>
@@ -550,7 +550,7 @@ and no variables are in that pattern.
 -->
 
 Pour les variantes d'énumération sans aucune donnée, telle que `Message::Quitter`,
-nous ne pouvons pas destructurer de valeurs. Nous pouvons uniquement
+nous ne pouvons pas déstructurer de valeurs. Nous pouvons uniquement
 correspondre à la valeur littérale `Message::Quitter` et il n'y a pas de
 variable dans ce motif.
 
@@ -589,7 +589,7 @@ variante qui correspond.
 #### Destructuring Nested Structs and Enums
 -->
 
-#### Destructurer des structures et des énumérations imbriquées
+#### Déstructurer des structures et des énumérations imbriquées
 
 <!--
 Until now, all our examples have been matching structs or enums that were one
@@ -648,7 +648,7 @@ bien que deux énumérations différentes soient impliquées.
 #### Destructuring Structs and Tuples
 -->
 
-#### Destructurer des structures et des tuples
+#### Déstructurer des structures et des tuples
 
 <!--
 We can mix, match, and nest destructuring patterns in even more complex ways.
@@ -659,7 +659,7 @@ tuples inside a tuple and destructure all the primitive values out:
 Nous pouvons mélanger les correspondances et les motifs pour déstructurer des
 éléments imbriqués de manière bien plus complexe. L'exemple suivant montre une
 déstructuration complexe dans laquelle nous imbriquons des structures et des
-tuples à l'intérieur d'un tuple et nous y destructurons toutes les valeurs
+tuples à l'intérieur d'un tuple et nous y déstructurons toutes les valeurs
 primitives :
 
 <!--

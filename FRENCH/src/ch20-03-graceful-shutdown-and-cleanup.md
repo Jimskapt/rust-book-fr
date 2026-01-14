@@ -243,7 +243,7 @@ cleaned up, so nothing happens in that case.
 
 Comme nous l'avons vu au chapitre 17, la méthode `take` sur `Option` sort la
 variante `Some` et laisse un `None` à la place. Nous utilisons `if let` pour
-destructurer le `Some` et obtenir la tâche ; ensuite nous faisons appel à `join`
+déstructurer le `Some` et obtenir la tâche ; ensuite nous faisons appel à `join`
 sur cette tâche. Si la tâche d'un opérateur est déjà un `None`, nous savons
 qu'il a déjà nettoyé sa tâche et que dans ce cas nous n'avons rien à faire.
 

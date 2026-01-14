@@ -259,7 +259,7 @@ n'importe quelle slice concrète de valeurs `i32` que nous pouvons passer à la
 fonction. Au final, lorsque nous appelons la fonction, le code s'exécute sur les
 valeurs précises que nous lui avons fournies. Mais ne nous préoccupons pas de
 la syntaxe de la boucle `for` pour l'instant. Ici, nous n'utilisons pas une
-référence vers un `i32`, nous destructurons via le filtrage par motif chaque
+référence vers un `i32`, nous déstructurons via le filtrage par motif chaque
 `&i32` afin que la boucle `for` utilise cet `element` en tant que `i32` dans le
 corps de la boucle. Nous parlerons plus en détails du filtrage par motif au
 [chapitre 18][ch18]<!-- ignore -->.

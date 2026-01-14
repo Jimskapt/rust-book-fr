@@ -909,7 +909,7 @@ draft posts where only published posts are allowed by issuing a compiler error.
 
 Nous allons vous montrer comment repenser le patron état pour qu'il offre des
 compromis différents. Plutôt que d'encapsuler complètement les états et les
-transitions, faisant que le code externe ne puissent pas les connaître, nous
+transitions, faisant que le code externe ne puisse pas les connaître, nous
 allons coder ces états sous forme de différents types. En conséquence, le
 système de vérification de type de Rust va empêcher toute tentative
 d'utilisation des brouillons de billets là où seuls des billets publiés sont

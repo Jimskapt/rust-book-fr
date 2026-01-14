@@ -25,11 +25,11 @@ constitué d'une combinaison de :
 * Placeholders
 -->
 
-* littéraux
-* tableaux de structures, énumérations, structures ou tuples
-* variables
-* jokers
-* espaces réservés
+* littéraux ;
+* tableaux de structures, énumérations, structures ou tuples ;
+* variables ;
+* jokers ;
+* espaces réservés.
 
 <!--
 These components describe the shape of the data we’re working with, which we

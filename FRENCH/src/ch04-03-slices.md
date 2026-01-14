@@ -55,7 +55,7 @@ La fonction `premier_mot` prend un `&String` comme paramètre. Nous ne
 voulons pas en prendre possession, donc c'est ce qu'il nous faut. Mais que
 devons-nous retourner ? Nous n'avons aucun moyen de désigner une *partie*
 d'une chaîne de caractères. Cependant, nous pouvons retourner l'indice de la
-fin du mot, qui se produit lorsqu'il y a un espace. Essayons cela, dans
+fin du mot, qui se produit lorsqu'il y a une espace. Essayons cela, dans
 l'encart 4-7 :
 
 <!--

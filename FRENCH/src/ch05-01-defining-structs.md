@@ -18,7 +18,7 @@ chapitre 3][tuples]<!-- ignore -->, car tous les deux portent plusieurs valeurs
 associées. Comme pour les tuples, les éléments d'une structure peuvent être de
 différents types. Contrairement aux tuples, dans une structure on doit nommer
 chaque élément des données afin de clarifier le rôle de chaque valeur. L'ajout
-de ces noms font que les structures sont plus flexibles que les tuples : on n'a
+de ces noms fait que les structures sont plus flexibles que les tuples : on n'a
 pas à utiliser l'ordre des données pour spécifier ou accéder aux valeurs d'une
 instance.
 
@@ -51,7 +51,7 @@ compte d'utilisateur.
 <span class="caption">Listing 5-1: A `User` struct definition</span>
 -->
 
-<span class="caption">Encart 5-1 : la définition d'une structure
+<span class="caption">Encart 5-1 : Définition d'une structure
 `Utilisateur`</span>
 
 <!--
@@ -71,7 +71,7 @@ cette structure en indiquant des valeurs concrètes pour chacun des champs.
 On crée une instance en indiquant le nom de la structure puis en ajoutant des
 accolades qui contiennent des paires de `clé: valeur`, où les clés sont les noms
 des champs et les valeurs sont les données que l'on souhaite stocker dans ces
-champs. Nous n'avons pas à préciser les champs dans le même ordre qu'on les a
+champs. Nous n'avons pas à préciser les champs dans le même ordre que nous les avons
 déclarés dans la structure. En d'autres termes, la définition de la structure
 décrit un gabarit pour le type, et les instances remplissent ce gabarit avec des
 données précises pour créer des valeurs de ce type. Par exemple, nous pouvons
@@ -92,7 +92,7 @@ déclarer un utilisateur précis comme dans l'encart 5-2.
 struct</span>
 -->
 
-<span class="caption">Encart 5-2 : création d'une instance de la structure
+<span class="caption">Encart 5-2 : Création d'une instance de la structure
 `Utilisateur`</span>
 
 <!--
@@ -126,7 +126,7 @@ d'une instance mutable de `Utilisateur`.
 `User` instance</span>
 -->
 
-<span class="caption">Encart 5-3 : changement de la valeur du champ `email`
+<span class="caption">Encart 5-3 : Changement de la valeur du champ `email`
 d'une instance de `Utilisateur`</span>
 
 <!--
@@ -167,7 +167,7 @@ prend la valeur `true` et le `nombre_de_connexions` prend la valeur `1`.
 and username and returns a `User` instance</span>
 -->
 
-<span class="caption">Encart 5-4 : une fonction `creer_utilisateur` qui prend
+<span class="caption">Encart 5-4 : Une fonction `creer_utilisateur` qui prend
 en entrée une adresse e-mail et un pseudo et retourne une instance de
 `Utilisateur`</span>
 
@@ -222,7 +222,7 @@ shorthand because the `email` and `username` parameters have the same name as
 struct fields</span>
 -->
 
-<span class="caption">Encart 5-5 : une fonction `creer_utilisateur` qui utilise
+<span class="caption">Encart 5-5 : Une fonction `creer_utilisateur` qui utilise
 le raccourci d'initialisation des champs parce que les paramètres `email` et
 `pseudo` ont le même nom que les champs de la structure</span>
 
@@ -264,7 +264,7 @@ otherwise use the same values from `user1` that we created in Listing 5-2.
 
 Tout d'abord, dans l'encart 5-6 nous montrons comment créer une nouvelle
 instance de `Utilisateur` dans `utilisateur2` sans la syntaxe de mise à jour de
-structure. On donne de nouvelles valeurs à `email` et `pseudo` mais on utilise
+structure. On donne une nouvelle valeur au champ `email` mais on utilise
 pour les autres champs les mêmes valeurs que dans `utilisateur1` qu'on a créé à
 l'encart 5-2.
 
@@ -283,7 +283,7 @@ l'encart 5-2.
 the values from `user1`</span>
 -->
 
-<span class="caption">Encart 5-6 : création d'une nouvelle instance de
+<span class="caption">Encart 5-6 : Création d'une nouvelle instance de
 `Utilisateur` en utilisant une des valeurs de `utilisateur1`.</span>
 
 <!--
@@ -313,7 +313,7 @@ devraient avoir la même valeur que dans l'instance précisée.
 `user1`</span>
 -->
 
-<span class="caption">Encart 5-7 : utilisation de la syntaxe de mise à jour de
+<span class="caption">Encart 5-7 : Utilisation de la syntaxe de mise à jour de
 structure pour assigner de nouvelles valeurs à `email` d'une nouvelle instance
 de `Utilisateur` tout en utilisant les autres valeurs de `utilisateur1`</span>
 
@@ -328,10 +328,10 @@ the struct’s definition.
 -->
 
 Le code dans l'encart 5-7 crée aussi une instance dans `utilisateur2` qui a une
-valeur différente pour `email`, mais qui as les mêmes valeurs pour les champs
+valeur différente pour `email`, mais qui a les mêmes valeurs pour les champs
 `pseudo`, `actif` et `nombre_de_connexions` que `utilisateur1`. Le
 `..utilisateur1` doit être inséré à la fin pour préciser que tous les champs
-restants obtiendrons les valeurs des champs correspondants de `utilisateur1`,
+restants obtiendront les valeurs des champs correspondants de `utilisateur1`,
 mais nous pouvons renseigner les valeurs des champs dans n'importe quel ordre,
 peu importe leur position dans la définition de la structure.
 
@@ -348,24 +348,24 @@ types that implement the `Copy` trait, so the behavior we discussed in the
 [“Stack-Only Data: Copy”][copy]<!-- ignore -- > section would apply.
 -->
 
-Veuillez notez que la syntaxe de la mise à jour de structure utilise un `=`
-comme le ferait une assignation ; car cela déplace les données, comme nous
+Veuillez notez que la syntaxe de mise à jour d'une structure utilise un `=`
+comme c'est le cas pour une assignation ; c'est parce que cela déplace les données, comme nous
 l'avons vu dans [une des sections au chapitre 4][move]<!-- ignore -->. Dans cet
 exemple, nous ne pouvons plus utiliser `utilisateur1` après avoir créé
 `utilisateur2` car la `String` dans le champ `pseudo` de `utilisateur1` a été
 déplacée dans `utilisateur2`. Si nous avions donné des nouvelles valeurs pour
 chacune des `String` `email` et `pseudo`, et que par conséquent nous aurions
 déplacé uniquement les valeurs de `actif` et de `nombre_de_connexions` à partir
-de `utilisateur1`, alors `utilisateur1` restera en vigueur après avoir créé
-`utilisateur2`. Les types de `actif` et de `nombre_de_connexions` sont de types
-qui implémentent le trait `Copy`, donc le comportement décris dans [la section
+de `utilisateur1`, alors `utilisateur1` resterait en vigueur après la création de
+`utilisateur2`. Les types de `actif` et de `nombre_de_connexions` sont des types
+qui implémentent le trait `Copy`, donc le comportement décrit dans [la section
 à propos de copy][copy]<!-- ignore --> aura lieu ici.
 
 <!--
 ### Using Tuple Structs without Named Fields to Create Different Types
 -->
 
-### Utilisation de structures tuples sans champ nommé pour créer des types différents
+### Utilisation de structures tuples sans champs nommés pour créer des types différents
 
 <!--
 Rust also supports structs that look similar to tuples, called *tuple
@@ -442,7 +442,7 @@ in Chapter 10. Here’s an example of declaring and instantiating a unit struct
 named `AlwaysEqual`:
 -->
 
-On peut aussi définir des structures qui n'ont pas de champs ! Cela s'appelle
+On peut aussi définir des structures qui n'ont pas de champ ! Cela s'appelle
 des *structures unité* parce qu'elles se comportent d'une façon analogue au type
 unité, `()`, que nous avons vu dans [la section sur les
 tuples][tuples]<!-- ignore -->. Les structures unité sont utiles lorsqu'on doit
@@ -566,7 +566,7 @@ type, y compris sur les structures unité.
 > Dans la définition de la structure `Utilisateur` de l'encart 5-1, nous avions
 > utilisé le type possédé `String` plutôt que le type de *slice* de chaîne de
 > caractères `&str`. Il s'agit d'un choix délibéré puisque nous voulons que
-> chacune des instances de cette structure possèdent toutes leurs données et
+> chacune des instances de cette structure possède ses données et
 > que ces données restent valides tant que la structure tout entière est
 > valide.
 >
@@ -575,8 +575,8 @@ type, y compris sur les structures unité.
 > *durées de vie*, une fonctionnalité de Rust que nous aborderons au
 > chapitre 10. Les durées de vie assurent que les données référencées par une
 > structure restent valides tant que la structure l'est aussi. Disons que vous
-> essayiez de stocker une référence dans une structure sans indiquer de durées
-> de vie, comme ce qui suit, ce qui ne fonctionnera pas :
+> essayez de stocker une référence dans une structure sans indiquer de durée
+> de vie, comme ce qui suit, cela ne fonctionnera pas :
 >
 > <span class="filename">Fichier : src/main.rs</span>
 >

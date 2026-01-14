@@ -2,7 +2,7 @@
 ## Extensible Concurrency with the `Sync` and `Send` Traits
 -->
 
-## Etendre la concurrence avec les traits `Sync` et `Send`
+## Étendre la concurrence avec les traits `Sync` et `Send`
 
 <!--
 Interestingly, the Rust language has *very* few concurrency features. Almost
@@ -52,7 +52,7 @@ vous essayez de transférer la possession de ce clone à une autre tâche, les
 deux tâches peuvent modifier le compteur de référence en même temps. Pour cette
 raison, `Rc<T>` n'est prévu que pour une utilisation dans des situations qui
 ne nécessitent qu'une seule tâche et pour lesquelles vous n'avez pas besoin de payer
-le surcoût sur la performance induit par la sureté de fonctionnement multi tâches.
+le surcoût sur la performance induit par la sureté de fonctionnement multitâches.
 
 <!--
 Therefore, Rust’s type system and trait bounds ensure that you can never
@@ -76,8 +76,8 @@ we’ll discuss in Chapter 19.
 -->
 
 Tous les types composés entièrement d'autres types qui implémentent `Send` sont
-automatiquement marqués comme `Send` eux-aussi. Presque tous les types
-primitifs sont `Send`, à part les pointeurs bruts, ce que nous verrons au
+automatiquement marqués comme `Send` eux aussi. Presque tous les types
+primitifs sont marqués comme `Send`, à part les pointeurs bruts, ce que nous verrons au
 chapitre 19.
 
 <!--
@@ -100,7 +100,7 @@ tâches vers le type qui implémente `Sync`. Autrement dit, n'importe quel type
 `Send`, ce qui signifie que la référence peut être envoyée en toute sécurité à
 une autre tâche. De la même manière que `Send`, les types primitifs
 implémentent `Sync`, et les types composés entièrement d'autres types qui
-implémentent `Sync` sont eux-mêmes `Sync`.
+implémentent `Sync` sont eux-mêmes marqués comme `Sync`.
 
 <!--
 The smart pointer `Rc<T>` is also not `Sync` for the same reasons that it’s not
@@ -116,7 +116,7 @@ Le pointeur intelligent `Rc<T>` n'implémente pas non plus `Sync` pour les même
 raisons qu'il n'implémente pas `Send`. Le type `RefCell<T>` (que nous avons vu
 au chapitre 15) et la famille liée aux types `Cell<T>` n'implémentent pas `Sync`.
 L'implémentation du vérificateur d'emprunt que `RefCell<T>` met en oeuvre à l'exécution
-n'est pas sûre pour le multi tâches. Le pointeur intelligent `Mutex<T>`
+n'est pas sûre pour le multitâches. Le pointeur intelligent `Mutex<T>`
 implémente `Sync` et peut être utilisé pour partager l'accès entre plusieurs
 tâches, comme vous l'avez vu dans la section précédente.
 

@@ -15,7 +15,7 @@ Rust supports it.
 -->
 
 Les développeurs ne se sont jamais entendus sur les fonctionnalités qu'un
-langage doit avoir pour être considéré orienté objet. Rust est influencé par
+langage doit avoir pour être considéré comme orienté objet. Rust est influencé par
 de nombreux paradigmes de programmation, y compris la POO ; par exemple, nous
 avons examiné les fonctionnalités issues de la programmation fonctionnelle au
 chapitre 13. On peut vraisemblablement dire que les langages orientés objet ont
@@ -236,7 +236,7 @@ different parts of code enables encapsulation of implementation details.
 -->
 
 Si l'encapsulation est une condition nécessaire pour qu'un langage soit
-considéré orienté objet, alors Rust satisfait cette condition. La possibilité
+considéré comme orienté objet, alors Rust satisfait cette condition. La possibilité
 d'utiliser `pub` ou non pour différentes parties de notre code permet
 d'encapsuler les détails d'implémentation.
 

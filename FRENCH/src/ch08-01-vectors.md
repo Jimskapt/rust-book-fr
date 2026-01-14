@@ -49,7 +49,7 @@ dans l'encart 8-1.
 of type `i32`</span>
 -->
 
-<span class="caption">Encart 8-1 : création d'un nouveau vecteur vide pour y
+<span class="caption">Encart 8-1 : Création d'un nouveau vecteur vide pour y
 stocker des valeurs de type `i32`</span>
 
 <!--
@@ -107,7 +107,7 @@ de données”][data-types]<!-- ignore --> du chapitre 3.
 values</span>
 -->
 
-<span class="caption">Encart 8-2 : création d'un nouveau vecteur qui contient
+<span class="caption">Encart 8-2 : Création d'un nouveau vecteur qui contient
 des valeurs</span>
 
 <!--
@@ -149,7 +149,7 @@ la méthode `push`, comme dans l'encart 8-3.
 vector</span>
 -->
 
-<span class="caption">Encart 8-3 : utilisation de la méthode `push` pour ajouter
+<span class="caption">Encart 8-3 : Utilisation de la méthode `push` pour ajouter
 des valeurs à un vecteur</span>
 
 <!--
@@ -194,7 +194,7 @@ portée, comme précisé dans l'encart 8-4.
 are dropped</span>
 -->
 
-<span class="caption">Encart 8-4 : mise en évidence de là où le vecteur et ses
+<span class="caption">Encart 8-4 : Mise en évidence de là où le vecteur et ses
 éléments sont libérés</span>
 
 <!--
@@ -250,7 +250,7 @@ via la syntaxe d'indexation et avec la méthode `get`.
 access an item in a vector</span>
 -->
 
-<span class="caption">Encart 8-5 : utilisation de la syntaxe d'indexation ainsi
+<span class="caption">Encart 8-5 : Utilisation de la syntaxe d'indexation ainsi
 que la méthode `get` pour accéder à un élément d'un vecteur</span>
 
 <!--
@@ -298,7 +298,7 @@ essayons d'accéder à un élément à l'indice 100 avec chaque technique.
 100 in a vector containing five elements</span>
 -->
 
-<span class="caption">Encart 8-6 : tentative d'accès à l'élément à l'indice 100
+<span class="caption">Encart 8-6 : Tentative d'accès à l'élément à l'indice 100
 dans un vecteur qui contient cinq éléments</span>
 
 <!--
@@ -374,7 +374,7 @@ essayons aussi d'utiliser cet élément plus tard dans la fonction :
 while holding a reference to an item</span>
 -->
 
-<span class="caption">Encart 8-7 : tentative d'ajout d'un élément à un vecteur
+<span class="caption">Encart 8-7 : Tentative d'ajout d'un élément à un vecteur
 alors que nous utilisons une référence à un élément</span>
 
 <!--
@@ -410,9 +410,9 @@ premier élément devrait se soucier de ce qui se passe à la fin du vecteur ?
 Cette erreur s'explique par la façon dont les vecteurs fonctionnent : comme les
 vecteurs ajoutent les valeurs les unes à côté des autres dans la mémoire,
 l'ajout d'un nouvel élément à la fin du vecteur peut nécessiter d'allouer un
-nouvel espace mémoire et copier tous les anciens éléments dans ce nouvel
+nouvel espace mémoire et de copier tous les anciens éléments dans ce nouvel
 espace, s'il n'y a pas assez de place pour placer tous les éléments les uns à
-côté des autres dans la mémoire là où est actuellement stocké le vecteur. Dans
+côté des autres dans l'emplacemen mémoire où est actuellement stocké le vecteur. Dans
 ce cas, la référence au premier élément pointerait vers de la mémoire
 désallouée. Les règles d'emprunt évitent aux programmes de se retrouver dans
 cette situation.
@@ -459,7 +459,7 @@ obtenir des références immuables pour chacun des éléments dans un vecteur de
 iterating over the elements using a `for` loop</span>
 -->
 
-<span class="caption">Encart 8-8 : affichage de chaque élément d'un vecteur en
+<span class="caption">Encart 8-8 : Affichage de chaque élément d'un vecteur en
 itérant sur les éléments en utilisant une boucle `for`</span>
 
 <!--
@@ -487,7 +487,7 @@ l'encart 8-9 va ajouter `50` à chacun des éléments.
 elements in a vector</span>
 -->
 
-<span class="caption">Encart 8-9 : itérations sur des références mutables vers
+<span class="caption">Encart 8-9 : Itérations sur des références mutables vers
 des éléments d'un vecteur</span>
 
 <!--
@@ -522,7 +522,7 @@ Les vecteurs ne peuvent stocker que des valeurs du même type. Cela peut être u
 problème ; il y a forcément des cas où on a besoin de stocker une liste
 d'éléments de types différents. Heureusement, les variantes d'une énumération
 sont définies sous le même type d'énumération, donc lorsque nous avons besoin
-d'un type pour représenter les éléments de types différents, nous pouvons
+d'un type pour représenter des éléments de types différents, nous pouvons
 définir et utiliser une énumération !
 
 <!--
@@ -538,9 +538,9 @@ Par exemple, imaginons que nous voulions obtenir les valeurs d'une ligne d'une
 feuille de calcul dans laquelle quelques colonnes sont des entiers, d'autres
 des nombres à virgule flottante, et quelques chaînes de caractères. Nous
 pouvons définir une énumération dont les variantes vont avoir les différents
-types, et toutes les variantes de l'énumération seront du même type : celui de
+types, de sorte que toutes les variantes de l'énumération seront du même type : celui de
 l'énumération. Ensuite, nous pouvons créer un vecteur pour stocker cette
-énumération et ainsi, au final, qui stocke différents types. La démonstration
+énumération et ainsi, au final, le vecteur stocke différents types. La démonstration
 de cette technique est dans l'encart 8-10.
 
 <!--
@@ -558,7 +558,7 @@ de cette technique est dans l'encart 8-10.
 different types in one vector</span>
 -->
 
-<span class="caption">Encart 8-10 : définition d'une `enum` pour stocker des
+<span class="caption">Encart 8-10 : Définition d'une `enum` pour stocker des
 valeurs de différents types dans un seul vecteur</span>
 
 <!--
@@ -575,10 +575,10 @@ Rust a besoin de savoir quel type de donnée sera stocké dans le vecteur au
 moment de la compilation afin de connaître la quantité de mémoire nécessaire
 pour stocker chaque élément sur le tas. Nous devons être précis sur les types
 autorisés dans ce vecteur. Si Rust avait permis qu'un vecteur stocke n'importe
-quel type, il y aurait pu avoir un risque qu'un ou plusieurs des types
+quel type, il aurait pu y avoir un risque qu'un ou plusieurs des types
 provoquent une erreur avec les manipulations effectuées sur les éléments du
-vecteur. L'utilisation d'une énumération ainsi qu'une expression `match` permet
-à Rust de garantir au moment de la compilation que tous les cas possibles sont
+vecteur. L'utilisation d'une énumération ainsi qu'une expression `match` permettent
+à Rust de garantir, au moment de la compilation, que tous les cas possibles sont
 traités, comme nous l'avons appris au chapitre 6.
 
 <!--

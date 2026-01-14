@@ -15,7 +15,7 @@ Les motifs sont une syntaxe spéciale de Rust permettant de filtrer selon la
 structure des types, qu'elle soit simple ou complexe. L'utilisation de motifs
 conjointement avec des expressions `match` et d'autres constructions vous donne
 davantage de maîtrise sur le flux de contrôle de votre programme. Un motif est
-constitué d'une combinaison de :
+constitué d'une combinaison de :
 
 <!--
 * Literals
@@ -25,11 +25,11 @@ constitué d'une combinaison de :
 * Placeholders
 -->
 
-* littéraux
-* tableaux de structures, énumérations, structures ou tuples
-* variables
-* jokers
-* espaces réservés
+* littéraux ;
+* tableaux de structures, énumérations, structures ou tuples ;
+* variables ;
+* jokers ;
+* espaces réservés.
 
 <!--
 These components describe the shape of the data we’re working with, which we
@@ -68,5 +68,5 @@ a clear way.
 Ce chapitre sert de référence pour tout ce qui concerne les motifs. Nous allons voir
 les moments appropriés pour utiliser les motifs, les différences entre les
 motifs réfutables et irréfutables ainsi que les différentes syntaxes de motifs que
-vous pouvez rencontrer. A la fin de ce chapitre, vous saurez comment utiliser
+vous pouvez rencontrer. À la fin de ce chapitre, vous saurez comment utiliser
 les motifs pour exprimer clairement de nombreux concepts.

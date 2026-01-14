@@ -39,7 +39,7 @@ Create a new project called *branches* in your *projects* directory to explore
 the `if` expression. In the *src/main.rs* file, input the following:
 -->
 
-Créez un nouveau projet appelé *branches* dans votre dossier *projects* pour
+Créez un nouveau projet appelé *branches* dans votre répertoire *projects* pour
 découvrir les expressions `if`. Dans le fichier *src/main.rs*, écrivez ceci :
 
 <!--
@@ -337,7 +337,7 @@ instruction `let` pour assigner le résultat à une variable, comme dans l'encar
 to a variable</span>
 -->
 
-<span class="caption">Encart 3-2 : assigner le résultat d'une expression `if` à
+<span class="caption">Encart 3-2 : Assignation du résultat d'une expression `if` à
 une variable</span>
 
 <!--
@@ -479,7 +479,7 @@ As an example, change the *src/main.rs* file in your *loops* directory to look
 like this:
 -->
 
-Par exemple, changez le fichier *src/main.rs* dans votre dossier *loops* comme
+Par exemple, changez le fichier *src/main.rs* dans votre répertoire *loops* comme
 ceci :
 
 <!--
@@ -580,9 +580,9 @@ to skip over any remaining code in this iteration of the loop and go to the
 next iteration.
 -->
 
-Nous avons également `continue` dans le jeu du plus ou du moins, qui dans une
-boucle demande au programme de sauter le code restant dans cette iteration de
-la boucle et passer directement à la prochaine itération.
+Nous avons également `continue` dans le jeu du plus ou du moins qui, dans une
+boucle, demande au programme de sauter le code restant dans cette itération de
+la boucle et de passer directement à la prochaine itération.
 
 <!--
 If you have loops within loops, `break` and `continue` apply to the innermost
@@ -733,7 +733,7 @@ fois, et ensuite, après la boucle, il va afficher un message et se fermer.
 condition holds true</span>
 -->
 
-<span class="caption">Encart 3-3: utiliser une boucle `while` pour exécuter du
+<span class="caption">Encart 3-3: Utilisation d'une boucle `while` pour exécuter du
 code tant qu'une condition est vraie</span>
 
 <!--
@@ -783,7 +783,7 @@ l'encart 3-4 affiche chaque élément présent dans le tableau `a`.
 using a `while` loop</span>
 -->
 
-<span class="caption">Encart 3-4 : itération sur les éléments d'une collection
+<span class="caption">Encart 3-4 : Itération sur les éléments d'une collection
 en utilisant une boucle `while`</span>
 
 <!--
@@ -865,7 +865,7 @@ s'utilise comme dans le code de l'encart 3-5.
 using a `for` loop</span>
 -->
 
-<span class="caption">Encart 3-5 : itérer sur chaque élément d'une collection
+<span class="caption">Encart 3-5 : Itération sur chaque élément d'une collection
 en utilisant une boucle `for`</span>
 
 <!--

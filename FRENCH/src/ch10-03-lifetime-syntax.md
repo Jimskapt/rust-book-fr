@@ -20,7 +20,7 @@ valid.
 Il reste un détail que nous n'avons pas abordé dans la section [“Les références
 et l'emprunt”][references-and-borrowing]<!-- ignore --> du chapitre 4, c'est que
 toutes les références ont une *durée de vie* dans Rust, qui est la portée pour
-laquelle cette référence est en vigueur. La plupart du temps, les durées de
+laquelle chaque référence est en vigueur. La plupart du temps, les durées de
 vies sont implicites et sont déduites automatiquement, comme pour la plupart du
 temps les types sont déduits. Nous devons renseigner le type lorsque plusieurs
 types sont possibles. De la même manière, nous devons renseigner les durées de
@@ -36,17 +36,17 @@ their entirety in this chapter, we’ll discuss common ways you might encounter
 lifetime syntax so you can get introduced to the concept.
 -->
 
-L'annotation de la durée de vie n'est pas un concept présent dans la pluspart
+L'annotation de la durée de vie n'est pas un concept présent dans la plupart
 des langages de programmation, donc cela n'est pas très familier. Bien que nous
 ne puissions couvrir l'intégralité de la durée de vie dans ce chapitre, nous
 allons voir les cas les plus courants où vous allez rencontrer la syntaxe de la
-durée de vie, pour vous introduire ces concept.
+durée de vie, pour vous introduire ces concepts.
 
 <!--
 ### Preventing Dangling References with Lifetimes
 -->
 
-### Eviter les références pendouillantes avec les durées de vie
+### Éviter les références pendouillantes avec les durées de vie
 
 <!--
 The main aim of lifetimes is to prevent dangling references, which cause a
@@ -75,7 +75,7 @@ a une portée externe et une portée interne.
 has gone out of scope</span>
 -->
 
-<span class="caption">Encart 10-17 : tentative d'utiliser une référence vers
+<span class="caption">Encart 10-17 : Tentative d'utiliser une référence vers
 une valeur qui est sortie de la portée</span>
 
 <!--
@@ -89,7 +89,7 @@ une valeur qui est sortie de la portée</span>
 
 > Remarque : Les exemples dans les encarts 10-17, 10-18 et 10-24 déclarent des
 > variables sans initialiser leur valeur, donc les noms de ces variables
-> existent dans la portée externe. A première vue, cela semble être en conflit
+> existent dans la portée externe. À première vue, cela semble être en conflit
 > avec le fonctionnement de Rust qui n'utilise pas les valeurs nulles.
 > Cependant, si nous essayons d'utiliser une variable avant de lui donner une
 > valeur, nous aurons une erreur au moment de la compilation, qui confirme que
@@ -173,7 +173,7 @@ les durées de vies des variables.
 `x`, named `'a` and `'b`, respectively</span>
 -->
 
-<span class="caption">Encart 10-18 : commentaires pour montrer les durées de vie
+<span class="caption">Encart 10-18 : Commentaires pour montrer les durées de vie
 de `r` et `x`, qui s'appellent respectivement `'a` et `'b`</span>
 
 <!--
@@ -216,7 +216,7 @@ qu'il se compile sans erreur.
 longer lifetime than the reference</span>
 -->
 
-<span class="caption">Encart 10-19 : la référence est valide puisque la donnée a
+<span class="caption">Encart 10-19 : La référence est valide puisque la donnée a
 une durée de vie plus longue que la référence</span>
 
 <!--
@@ -227,7 +227,7 @@ always be valid while `x` is valid.
 
 Ici, `x` a la durée de vie `'b`, qui est plus grande dans ce cas que `'a`. Cela
 signifie que `r` peut référencer `x` car Rust sait que la référence présente
-dans `r` sera toujours valide du moment que `x` est en vigueur.
+dans `r` sera toujours valide tant que `x` est valide.
 
 <!--
 Now that you know where the lifetimes of references are and how Rust analyzes
@@ -253,8 +253,8 @@ implemented the `longest` function, the code in Listing 10-20 should print `The
 longest string is abcd`.
 -->
 
-Ecrivons une fonction qui retourne la plus longue des slice d'une chaîne de
-caractères. Cette fonction va prendre en argument deux slices de chaîne de
+Écrivons une fonction qui retourne la plus longue des slices d'une chaîne de
+caractères. Cette fonction va prendre en argument deux slices de chaînes de
 caractères et retourner une slice d'une chaîne de caractères. Après avoir
 implémenté la fonction `la_plus_longue`, le code de l'encart 10-20 devrait
 afficher `La plus grande chaîne est abcd`.
@@ -280,7 +280,7 @@ afficher `La plus grande chaîne est abcd`.
 function to find the longer of two string slices</span>
 -->
 
-<span class="caption">Encart 10-20 : une fonction `main` qui appelle la
+<span class="caption">Encart 10-20 : Une fonction `main` qui appelle la
 fonction `la_plus_longue` pour trouver la plus grande des deux slices de chaîne
 de caractères
 </span>
@@ -331,7 +331,7 @@ function that returns the longer of two string slices but does not yet
 compile</span>
 -->
 
-<span class="caption">Encart 10-21 : une implémentation de la fonction
+<span class="caption">Encart 10-21 : Une implémentation de la fonction
 `la_plus_longue` qui retourne la plus longue des deux slices de chaînes de
 caractères, mais ne se compile pas encore</span>
 
@@ -339,7 +339,7 @@ caractères, mais ne se compile pas encore</span>
 Instead, we get the following error that talks about lifetimes:
 -->
 
-A la place, nous obtenons l'erreur suivante qui nous parle de durées de vie :
+À la place, nous obtenons l'erreur suivante qui nous parle de durées de vie :
 
 <!--
 ```console
@@ -471,7 +471,7 @@ nous avons une fonction avec le paramètre `premier` qui est une référence à 
 `i32` avec la durée de vie `'a`. La fonction a aussi un autre paramètre `second`
 qui est une autre référence à un `i32` qui a aussi la durée de vie `'a`. Les
 annotations de durée de vie indiquent que les références `premier` et `second`
-doivent tous les deux exister aussi longtemps que la durée de vie générique.
+doivent toutes les deux exister aussi longtemps que la durée de vie générique.
 
 <!--
 ### Lifetime Annotations in Function Signatures
@@ -490,7 +490,7 @@ parameters are. We’ll name the lifetime `'a` and then add it to each reference
 as shown in Listing 10-22.
 -->
 
-Maintenant, examinons les annotations de durée de vie dans contexte de la
+Maintenant, examinons les annotations de durée de vie dans le contexte de la
 fonction `la_plus_longue`. Comme avec les paramètres de type génériques, nous
 devons déclarer les paramètres de durée de vie génériques dans des chevrons
 entre le nom de la fonction et la liste des paramètres. Nous souhaitons
@@ -522,7 +522,7 @@ specifying that all the references in the signature must have the same lifetime
 `'a`</span>
 -->
 
-<span class="caption">Encart 10-22 : définition de la fonction `la_plus_longue`
+<span class="caption">Encart 10-22 : Définition de la fonction `la_plus_longue`
 qui indique que toutes les références présentes dans la signature doivent avoir
 la même durée de vie `'a`</span>
 
@@ -546,11 +546,11 @@ analyzing this code.
 -->
 
 La signature de la fonction indique maintenant à Rust que pour la durée de vie
-`'a`, la fonction prend deux paramètres, les deux étant des slices de chaîne de
+`'a`, la fonction prend deux paramètres, les deux étant des slices de chaînes de
 caractères qui vivent aussi longtemps que la durée de vie `'a`. La signature de
 la fonction indique également à Rust que la slice de chaîne de caractères qui est
 retournée par la fonction vivra au moins aussi longtemps que la durée de vie
-`'a`. Dans la pratique, cela veut dire que durée de vie de la référence
+`'a`. Dans la pratique, cela veut dire que la durée de vie de la référence
 retournée par la fonction `la_plus_longue` est la même que celle de la plus
 petite des durées de vies des références qu'on lui donne. Cette relation est ce
 que nous voulons que Rust mette en place lorsqu'il analysera ce code.
@@ -648,7 +648,7 @@ concrètement différentes. L'encart 10-23 en est un exemple.
 references to `String` values that have different concrete lifetimes</span>
 -->
 
-<span class="caption">Encart 10-23 : utilisation de la fonction `la_plus_longue`
+<span class="caption">Encart 10-23 : Utilisation de la fonction `la_plus_longue`
 sur des références à des valeurs `String` qui ont concrètement des durées de vie
 différentes</span>
 
@@ -680,7 +680,7 @@ compile.
 Maintenant, essayons un exemple qui fait en sorte que la durée de vie de la
 référence dans `resultat` sera plus petite que celles des deux arguments. Nous
 allons déplacer la déclaration de la variable `resultat` à l'extérieur de la
-portée interne mais on va laisser l'affectation de la valeur de la variable
+portée interne mais nous allons laisser l'affectation de la valeur de la variable
 `resultat` à l'intérieur de la portée de `string2`. Nous allons ensuite déplacer
 le `println!`, qui utilise `resultat`, à l'extérieur de la portée interne, après
 que la portée soit terminée. Le code de l'encart 10-24 ne va pas se compiler.
@@ -706,7 +706,7 @@ que la portée soit terminée. Le code de l'encart 10-24 ne va pas se compiler.
 has gone out of scope</span>
 -->
 
-<span class="caption">Encart 10-24 : tentative d'utilisation de `resultat` après
+<span class="caption">Encart 10-24 : Tentative d'utilisation de `resultat` après
 `string2`, qui est sortie de la portée</span>
 
 <!--
@@ -905,7 +905,7 @@ would create dangling pointers or otherwise violate memory safety.
 
 Enfin, la syntaxe de la durée de vie sert à interconnecter les durées de vie de
 plusieurs paramètres ainsi que les valeurs de retour des fonctions. Une fois
-celles-ci interconnectés, Rust a assez d'informations pour autoriser les opérations
+celles-ci interconnectées, Rust a assez d'informations pour autoriser les opérations
 sécurisées dans la mémoire et refuser les opérations qui pourraient créer des
 pointeurs pendouillants ou alors enfreindre la sécurité de la mémoire.
 
@@ -949,7 +949,7 @@ structure `ExtraitImportant` qui stocke une slice de chaîne de caractères.
 definition needs a lifetime annotation</span>
 -->
 
-<span class="caption">Encart 10-25 : une structure qui stocke une référence,
+<span class="caption">Encart 10-25 : Une structure qui stocke une référence,
 par conséquent sa définition a besoin d'une annotation de durée de vie</span>
 
 <!--
@@ -1026,7 +1026,7 @@ compiled without lifetime annotations, even though the parameter and return
 type are references</span>
 -->
 
-<span class="caption">Encart 10-26 : une fonction que nous avons défini dans
+<span class="caption">Encart 10-26 : Une fonction que nous avons définie dans
 l'encart 4-9 qui se compilait sans avoir d'indications sur la durée de vie, même
 si les paramètres et le type de retour sont des références</span>
 
@@ -1040,7 +1040,7 @@ signature would have been written like this:
 La raison pour laquelle cette fonction se compile sans annotation de durée de
 vie est historique : dans les premières versions de Rust (avant la 1.0), ce code
 ne se serait pas compilé parce que chaque référence devait avoir une durée de
-vie explicite. A l'époque, la signature de la fonction devait être écrite
+vie explicite. À l'époque, la signature de la fonction devait être écrite
 ainsi :
 
 <!--
@@ -1067,7 +1067,7 @@ compte que les développeurs Rust saisissaient toujours les mêmes durées de vi
 encore et encore dans des situations spécifiques. Ces situations étaient
 prévisibles et suivaient des schémas prédéterminés. Les développeurs ont
 programmé ces schémas dans le code du compilateur afin que le vérificateur
-d'emprunt puisse deviner les durées de vie dans ces situations et n'auront plus
+d'emprunt puisse deviner les durées de vie dans ces situations et n'aie plus
 besoin d'annotations explicites.
 
 <!--
@@ -1077,7 +1077,7 @@ even fewer lifetime annotations might be required.
 -->
 
 Cette partie de l'histoire de Rust est intéressante car il est possible que
-d'autres modèles prédéterminés émergent et soient ajoutés au compilateur. A
+d'autres modèles prédéterminés émergent et soient ajoutés au compilateur. À
 l'avenir, il est possible qu'encore moins d'annotations de durée de vie soient
 nécessaires.
 
@@ -1298,7 +1298,7 @@ couldn’t figure out all the lifetimes of the references in the signature.
 Vous pouvez constater que la deuxième règle ne s'applique pas car il y a plus
 d'une seule durée de vie. La troisième ne s'applique pas non plus, car
 `la_plus_longue` est une fonction et pas une méthode, donc aucun de ses
-paramètres ne sont `self`. Après avoir utilisé ces trois règles, nous n'avons
+paramètres n'est `self`. Après avoir utilisé ces trois règles, nous n'avons
 pas pu en déduire la durée de vie de la valeur de retour. C'est pourquoi nous
 obtenons une erreur en essayant de compiler le code dans l'encart 10-21 : le
 compilateur a utilisé les règles d'élision des durées de vie mais n'est pas
@@ -1545,7 +1545,7 @@ de nombreuses situations. Les paramètres de type génériques vous permettent
 d'appliquer du code à différents types. Les traits et les traits liés
 s'assurent que bien que les types soient génériques, ils auront un comportement
 particulier sur lequel le code peut compter. Vous avez appris comment utiliser
-les indications de durée de vie pour s'assurer que ce code flexible n'aura pas
+les indications de durée de vie pour vous assurer que ce code flexible n'aura pas
 de références pendouillantes. Et toutes ces vérifications se font au moment de
 la compilation, ce qui n'influe pas sur les performances au moment de
 l'exécution du programme !

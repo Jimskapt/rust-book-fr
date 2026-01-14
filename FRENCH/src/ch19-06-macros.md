@@ -101,7 +101,7 @@ definitions.
 
 Le désavantage d'implémenter une macro par rapport à une fonction est que les
 définitions de macros sont plus complexes que les définitions de fonction car
-vous écrivez du code Rust qui écrit lui-même du code Rust. A cause de cette
+vous écrivez du code Rust qui écrit lui-même du code Rust. À cause de cette
 approche, les définitions de macro sont généralement plus difficiles à lire,
 à comprendre et à maintenir que les définitions de fonctions.
 
@@ -213,7 +213,7 @@ L'encart 19-28 montre une définition légèrement simplifiée de la macro `vec!
 definition</span>
 -->
 
-<span class="caption">Encart 19-28 : une version simplifiée de la définition de
+<span class="caption">Encart 19-28 : Une version simplifiée de la définition de
 la macro `vec!`</span>
 
 <!--
@@ -298,7 +298,7 @@ pattern within the parentheses for use in the replacement code. Within `$()` is
 Premièrement, un jeu de parenthèses englobent l'intégralité du motif. Ensuite
 vient le symbole dollar (`$`), suivi par un jeu de parenthèses qui capturent les
 valeurs qui correspondent au motif entre les parenthèses pour les utiliser dans
-le code de remplacement. A l'intérieur du `$()` nous avons `$x:expr`, qui
+le code de remplacement. À l'intérieur du `$()` nous avons `$x:expr`, qui
 correspond à n'importe quelle expression Rust et donne le nom `$x` à
 l'expression.
 
@@ -469,7 +469,7 @@ pub fn un_nom_quelconque(entree: TokenStream) -> TokenStream {
 macro</span>
 -->
 
-<span class="caption">Encart 19-29 : un exemple de déclaration d'une macro
+<span class="caption">Encart 19-29 : Un exemple de déclaration d'une macro
 procédurale</span>
 
 <!--
@@ -552,7 +552,7 @@ d'écrire du code comme l'encart 19-30 en utilisant notre crate.
 to write when using our procedural macro</span>
 -->
 
-<span class="caption">Encart 19-30 : le code qu'un utilisateur de notre crate
+<span class="caption">Encart 19-30 : Le code qu'un utilisateur de notre crate
 pourra écrire lorsqu'il utilisera notre macro procédurale</span>
 
 <!--
@@ -601,7 +601,7 @@ We have a trait and its function. At this point, our crate user could implement
 the trait to achieve the desired functionality, like so:
 -->
 
-Nous avons maintenant un trait et sa fonction. A partir de là, notre
+Nous avons maintenant un trait et sa fonction. À partir de là, notre
 utilisateur de la crate peut implémenter le trait pour accomplir la
 fonctionnalité souhaitée, comme ceci :
 
@@ -679,7 +679,7 @@ possible for programmers to use `hello_macro` even if they don’t want the
 -->
 
 Nos deux crates sont étroitement liées, donc nous créons la crate de macro
-procédurale à l'intérieur du dossier de notre crate `hello_macro`. Si nous
+procédurale à l'intérieur du répertoire de notre crate `hello_macro`. Si nous
 changeons la définition du trait dans `hello_macro`, nous aurons aussi à
 changer l'implémentation de la macro procédurale dans `hello_macro_derive`. Les
 deux crates vont devoir être publiées séparément, et les développeurs qui vont
@@ -751,7 +751,7 @@ fonction `impl_hello_macro`.
 will require in order to process Rust code</span>
 -->
 
-<span class="caption">Encart 19-31 : du code dont la plupart des macros
+<span class="caption">Encart 19-31 : Du code dont la plupart des macros
 procédurales auront besoin pour travailler avec du code Rust</span>
 
 <!--
@@ -890,7 +890,7 @@ DeriveInput {
 parsing the code that has the macro’s attribute in Listing 19-30</span>
 -->
 
-<span class="caption">Encart 19-32 : l'instance de `DeriveInput` que nous
+<span class="caption">Encart 19-32 : L'instance de `DeriveInput` que nous
 obtenons lorsque nous analysons le code qui est décoré par l'attribut de la
 macro dans l'encart 19-30</span>
 
@@ -980,7 +980,7 @@ trait `HelloMacro` sur le type annoté, comme montré dans l'encart 19-33.
 the parsed Rust code</span>
 -->
 
-<span class="caption">Encart 19-33 : implémentation du trait `HelloMacro` en
+<span class="caption">Encart 19-33 : Implémentation du trait `HelloMacro` en
 utilisant le code Rust interprété</span>
 
 <!--
@@ -1083,7 +1083,7 @@ dependencies; if not, you can specify them as `path` dependencies as follows:
 Maintenant, `cargo build` devrait fonctionner correctement pour `hello_macro` et
 `hello_macro_derive`. Relions maintenant ces crates au code de l'encart 19-30
 pour voir les macros procédurales à l'oeuvre ! Créez un nouveau projet binaire
-dans votre dossier *projects* en utilisant `cargo new pancakes`. Nous avons
+dans votre répertoire *projects* en utilisant `cargo new pancakes`. Nous avons
 besoin d'ajouter `hello_macro` et `hello_macro_derive` comme dépendances dans le
 *Cargo.toml* de la crate `pancakes`. Si vous publiez vos versions de
 `hello_macro` et de `hello_macro_derive` sur [crates.io](https://crates.io),
@@ -1298,7 +1298,7 @@ solutions.
 -->
 
 Ouah ! Maintenant vous avez quelques fonctionnalités de Rust supplémentaires
-dans votre boite à outils que vous n'utiliserez probablement que rarement, mais vous
+dans votre boîte à outils que vous n'utiliserez probablement que rarement, mais vous
 savez maintenant qu'elles pourront vous aider dans certaines situations très particulières.
 Nous avons introduits plusieurs sujets complexes afin que vous puissiez les
 reconnaître, ainsi que la syntaxe associée, lorsque vous les rencontrerez dans des

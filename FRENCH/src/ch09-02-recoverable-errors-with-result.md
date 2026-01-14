@@ -93,7 +93,7 @@ peut échouer. Dans l'encart 9-3, nous essayons d'ouvrir un fichier :
 <span class="caption">Listing 9-3: Opening a file</span>
 -->
 
-<span class="caption">Encart 9-3 : ouverture d'un fichier</span>
+<span class="caption">Encart 9-3 : Ouverture d'un fichier</span>
 
 <!--
 How do we know `File::open` returns a `Result`? We could look at the [standard
@@ -170,7 +170,7 @@ retourner un manipulateur de fichier qui peut nous permettre de le lire ou d'y
 fichier n'existe pas, ou si nous n'avons pas le droit d'accéder au fichier. La
 fonction `File::open` doit avoir un moyen de nous dire si son utilisation a
 réussi ou échoué et en même temps nous fournir soit le manipulateur de fichier,
-soit des informations sur l'erreur. C'est exactement ces informations que
+soit des informations sur l'erreur. Ce sont exactement ces informations que
 l'énumération `Result` se charge de nous transmettre.
 
 <!--
@@ -218,7 +218,7 @@ nous avons vue au chapitre 6.
 `Result` variants that might be returned</span>
 -->
 
-<span class="caption">Encart 9-4 : utilisation de l'expression `match` pour
+<span class="caption">Encart 9-4 : Utilisation de l'expression `match` pour
 gérer les variantes de `Result` qui peuvent être retournées</span>
 
 <!--
@@ -325,7 +325,7 @@ tests to fail lol -- >
 different ways</span>
 -->
 
-<span class="caption">Encart 9-5 : gestion des différents cas d'erreurs avec des
+<span class="caption">Encart 9-5 : Gestion des différents cas d'erreurs avec des
 actions différentes</span>
 
 <!--
@@ -590,9 +590,9 @@ information or logic that dictates how the error should be handled than what
 you have available in the context of your code.
 -->
 
-Lorsqu'une fonction dont l'implémentation utilise quelque chose qui peut
+Lorsque l'implémentation d'une fonction utilise quelque chose qui peut
 échouer, au lieu de gérer l'erreur directement dans cette fonction, vous pouvez
-retourner cette erreur au code qui l'appelle pour qu'il décide quoi faire.
+retourner cette erreur au code qui l'appelle pour que ce dernier décide que faire.
 C'est ce que l'on appelle *propager* l'erreur et donne ainsi plus de contrôle
 au code qui appelle la fonction, dans lequel il peut y avoir plus
 d'informations ou d'instructions pour traiter l'erreur que dans le contexte de
@@ -635,7 +635,7 @@ don't want to include it for rustdoc testing purposes. -- >
 calling code using `match`</span>
 -->
 
-<span class="caption">Encart 9-6 : une fonction qui retourne les erreurs au code
+<span class="caption">Encart 9-6 : Une fonction qui retourne les erreurs au code
 qui l'appelle en utilisant `match`</span>
 
 <!--
@@ -732,7 +732,7 @@ it to handle appropriately.
 
 Le code qui appelle ce code va devoir ensuite gérer les cas où il récupère une
 valeur `Ok` qui contient un pseudo, ou une valeur `Err` qui contient une
-`io::Error`. Il revient au code appelant de décider quoi faire avec ces
+`io::Error`. Il revient au code appelant de décider que faire avec ces
 valeurs. Si le code appelant obtient une valeur `Err`, il peut appeler `panic!`
 et faire planter le programme, utiliser un pseudo par défaut, ou chercher le
 pseudo autre part que dans ce fichier, par exemple. Nous n'avons pas assez
@@ -791,7 +791,7 @@ don't want to include it for rustdoc testing purposes. -- >
 calling code using the `?` operator</span>
 -->
 
-<span class="caption">Encart 9-7 : une fonction qui retourne les erreurs au code
+<span class="caption">Encart 9-7 : Une fonction qui retourne les erreurs au code
 appelant en utilisant l'opérateur `?`</span>
 
 <!--
@@ -834,8 +834,8 @@ la bibliothèque standard, qui est utilisée pour convertir les erreurs d'un typ
 reçu est converti dans le type d'erreur déclaré dans le type de retour de la
 fonction concernée. C'est utile lorsqu'une fonction retourne un type d'erreur
 qui peut couvrir tous les cas d'échec de la fonction, même si certaines de ses
-parties peuvent échouer pour différentes raisons. À partir du moment qu'il y a
-un `impl From<AutreErreur>` sur `ErreurRetournee` pour expliquer la conversion
+parties peuvent échouer pour différentes raisons. À partir du moment où il y a
+un `impl From<AutreErreur> for ErreurRetournee` pour expliquer la conversion
 dans la fonction `from` du trait, l'opérateur `?` se charge d'appeler la
 fonction `from` automatiquement.
 
@@ -890,7 +890,7 @@ don't want to include it for rustdoc testing purposes. -- >
 operator</span>
 -->
 
-<span class="caption">Encart 9-8 : enchaînement des appels aux méthodes après
+<span class="caption">Encart 9-8 : Enchaînement des appels aux méthodes après
 l'opérateur `?`</span>
 
 <!--
@@ -948,7 +948,7 @@ don't want to include it for rustdoc testing purposes. -- >
 opening and then reading the file</span>
 -->
 
-<span class="caption">Encart 9-9 : utilisation de `fs::read_to_string` plutôt
+<span class="caption">Encart 9-9 : Utilisation de `fs::read_to_string` plutôt
 que d'ouvrir puis lire le fichier</span>
 
 <!--
@@ -972,7 +972,7 @@ manière la plus longue.
 #### Where The `?` Operator Can Be Used
 -->
 
-#### Où l'opérateur `?` peut être utilisé
+#### Où l'opérateur `?` peut-il être utilisé
 
 <!--
 The `?` operator can only be used in functions whose return type is compatible
@@ -984,9 +984,9 @@ as the `match` expression we defined in Listing 9-6. In Listing 9-6, the
 it’s compatible with this `return`.
 -->
 
-L'opérateur `?` ne peut être utilisé que dans des fonctions dont le type de
-retour est compatible avec ce sur quoi le `?` est utilisé. C'est parce que
-l'opérateur `?` est conçu pour retourner prématurémment une valeur de la
+L'opérateur `?` peut uniquement être utilisé dans des fonctions dont le
+type de retour est compatible avec ce sur quoi le `?` est utilisé. C'est parce que
+l'opérateur `?` est conçu pour retourner prématurément une valeur de la
 fonction, de la même manière que le faisait l'expression `match` que nous avons
 définie dans l'encart 9-6. Dans l'encart 9-6, le `match` utilisait une valeur
 de type `Result`, et la branche de retour prématuré retournait une valeur de
@@ -1018,7 +1018,7 @@ incompatible avec le type de valeur sur laquelle nous utilisons `?` :
 function that returns `()` won’t compile</span>
 -->
 
-<span class="caption">Encart 9-10 : tentative d'utilisation du `?` dans la
+<span class="caption">Encart 9-10 : Tentative d'utilisation du `?` dans la
 fonction `main` qui retourne un `()`, qui ne devrait pas pouvoir se
 compiler</span>
 
@@ -1029,7 +1029,7 @@ value returned by `File::open`, but this `main` function has the return type of
 message:
 -->
 
-Ce code ouvre un fichier, ce qui devrait échouer. L'opérateur `?` est placée
+Ce code ouvre un fichier, ce qui devrait échouer. L'opérateur `?` est placé
 derrière la valeur de type `Result` retournée par `File::open`, mais cette
 fonction `main` a un type de retour `()` et non pas `Result`. Lorsque nous
 compilons ce code, nous obtenons le message d'erreur suivant :
@@ -1079,7 +1079,7 @@ valeurs de type `Option<T>`. Comme pour pouvoir utiliser `?` sur un `Result`,
 vous devez utiliser `?` sur `Option` uniquement dans une fonction qui retourne
 une `Option`. Le comportement de l'opérateur `?` sur une `Option<T>` est
 identique au comportement sur un `Result<T, E>` : si la valeur est `None`, le
-`None` sera retourné prématurémment à la fonction dans laquelle il est utilisé.
+`None` sera retourné prématurément à la fonction dans laquelle il est utilisé.
 Si la valeur est `Some`, la valeur dans le `Some` sera la valeur résultante de
 l'expression et la fonction continuera son déroulement. L'encart 9-11 est un
 exemple de fonction qui trouve le dernier caractère de la première ligne dans
@@ -1100,7 +1100,7 @@ le texte qu'on lui fournit :
 value</span>
 -->
 
-<span class="caption">Encart 9-11 : utilisation de l'opérateur `?` sur une
+<span class="caption">Encart 9-11 : Utilisation de l'opérateur `?` sur une
 valeur du type `Option<T>`</span>
 
 <!--
@@ -1117,7 +1117,7 @@ return a `Some` value containing a string slice of the first line in `text`.
 
 Cette fonction retourne un type `Option<char>` car il est possible qu'il y ait
 un caractère à cet endroit, mais il est aussi possible qu'il n'y soit pas. Ce
-code prends l'argument `texte` slice de chaîne de caractère et appelle sur elle
+code prend l'argument `texte` slice de chaîne de caractère et appelle sur elle
 la méthode `lines`, qui retourne un itérateur des lignes dans la chaîne. Comme
 cette fonction veut traiter la première ligne, elle appelle `next` sur
 l'itérateur afin d'obtenir la première valeur de cet itérateur. Si `texte` est
@@ -1147,8 +1147,8 @@ cette première ligne, donc nous appelons `last` pour retourner le dernier
 élément dans l'itérateur. C'est une `Option` car il est possible que la
 première ligne soit une chaîne de caractères vide, par exemple si `texte`
 commence par une ligne vide mais a des caractères sur les autres lignes, comme
-par exemple `"\nhi"`. Cependant, si il y a un caractère à la fin de la première
-ligne, il sera retourné dans la variante `Some`. L'opérateur `?` au millieu
+par exemple `"\nhi"`. Cependant, s'il y a un caractère à la fin de la première
+ligne, il sera retourné dans la variante `Some`. L'opérateur `?` au milieu
 nous donne un moyen concret d'exprimer cette logique, nous permettant
 d'implémenter la fonction en une ligne. Si nous n'avions pas pu utiliser
 l'opérateur `?` sur `Option`, nous aurions dû implémenter cette logique en
@@ -1178,7 +1178,7 @@ are restrictions on what its return type can be for the programs to behave as
 expected.
 -->
 
-Jusqu'ici, toutes les fonctions `main` que nous avons utilisé retournent `()`.
+Jusqu'ici, toutes les fonctions `main` que nous avons utilisées retournent `()`.
 La fonction `main` est spéciale car c'est le point d'entrée et de sortie des
 programmes exécutables, et il y a quelques limitations sur ce que peut être
 le type de retour pour que les programmes se comportent correctement.
@@ -1210,7 +1210,7 @@ retour `Ok(())` à la fin. Ce code devrait maintenant pouvoir se compiler :
 allows the use of the `?` operator on `Result` values</span>
 -->
 
-<span class="caption">Encart 9-12 : changement du `main` pour qu'elle retourne
+<span class="caption">Encart 9-12 : Changement du `main` pour qu'elle retourne
 un `Result<(), E>` permettant d'utiliser l'opérateur `?` sur des valeurs de type
 `Result`</span>
 
@@ -1227,7 +1227,7 @@ Le type `Box<dyn Error>` est un *objet trait*, que nous verrons dans une
 section du [chapitre 17][trait-objects]<!-- ignore -->. Pour l'instant, vous
 pouvez interpréter `Box<dyn Error>` en “tout type d'erreur”. L'utilisation de
 `?` sur une valeur type `Result` dans la fonction `main` avec le type
-`Box<dyn Error>` est donc permise, car cela permet à n'importe quelle une
+`Box<dyn Error>` est donc permise, car cela permet à n'importe quelle
 valeur de type `Err` d'être retournée prématurément.
 
 <!--

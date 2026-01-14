@@ -13,8 +13,8 @@ to variables for later execution, and so forth.
 -->
 
 La conception de Rust s'est inspirée de nombreux langages et technologies
-existantes, et une de ses influences la plus marquante est la *programmation
-fonctionnelle*. La programmation fonctionnelle consiste souvent à utiliser une
+existantes, et une de ses influences les plus marquantes est la *programmation
+fonctionnelle*. La programmation dans un style fonctionnel consiste souvent à utiliser une
 fonction comme une valeur en la passant en argument d'une autre fonction, la
 retourner en résultat d'une autre fonction ou l'assigner à une variable pour
 l'exécuter plus tard, par exemple.
@@ -25,7 +25,7 @@ isn’t but will instead discuss some features of Rust that are similar to
 features in many languages often referred to as functional.
 -->
 
-Dans ce chapitre, nous n'allons pas débattre sur ce qu'est ou non la
+Dans ce chapitre, nous n'allons pas débattre sur ce qu'est ou n'est pas la
 programmation fonctionnelle, mais nous allons plutôt voir quelques
 fonctionnalités de Rust qui sont similaires à celles des autres langages
 souvent considérés comme fonctionnels.
@@ -45,7 +45,7 @@ Plus précisément, nous allons voir :
 -->
 
 * *les fermetures*, une construction qui ressemble à une fonction que vous
-  pouvez stocker dans une variable
+  pouvez stocker dans une variable ;
 * *les itérateurs*, une façon de travailler sur une série d'éléments
 * Comment utiliser ces deux fonctionnalités pour améliorer le projet
   d'entrée/sortie du chapitre 12
@@ -60,7 +60,7 @@ code, so we’ll devote this entire chapter to them.
 -->
 
 Les autres fonctionnalités de Rust, comme le filtrage par motif et les
-énumérations, que nous avons vues dans les chapitres précédents sont influencés
+énumérations, que nous avons vues dans les chapitres précédents, sont influencés
 par la programmation fonctionnelle. La maîtrise des fermetures et des itérateurs
 est une étape importante pour écrire du code Rust performant, c'est pourquoi
 nous allons leur dédier ce chapitre entier.

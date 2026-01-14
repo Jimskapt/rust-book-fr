@@ -9,8 +9,8 @@ Let’s start your Rust journey! There’s a lot to learn, but every journey sta
 somewhere. In this chapter, we’ll discuss:
 -->
 
-Démarrons notre périple avec Rust ! Il y a beaucoup à apprendre, mais chaque
-aventure doit commencer quelque part. Dans ce chapitre, nous allons aborder :
+Démarrons notre périple avec Rust ! Il y a beaucoup à apprendre, mais chaque
+aventure doit commencer quelque part. Dans ce chapitre, nous allons aborder :
 
 <!--
 * Installing Rust on Linux, macOS, and Windows

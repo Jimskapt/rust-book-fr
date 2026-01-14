@@ -30,7 +30,7 @@ in your *projects* directory by using `cargo new variables`.
 
 Lorsqu'une variable est immuable, cela signifie qu'une fois qu'une valeur est
 liée à un nom, vous ne pouvez pas changer cette valeur. À titre d'illustration,
-générons un nouveau projet appelé *variables* dans votre dossier *projects* en
+générons un nouveau projet appelé *variables* dans votre répertoire *projects* en
 utilisant `cargo new variables`.
 
 <!--
@@ -39,7 +39,7 @@ code with the following code. This code won’t compile just yet, we’ll first
 examine the immutability error.
 -->
 
-Ensuite, dans votre nouveau dossier *variables*, ouvrez *src/main.rs* et
+Ensuite, dans votre nouveau répertoire *variables*, ouvrez *src/main.rs* et
 remplacez son code par le code suivant. Ce code ne se compile pas pour le
 moment, nous allons commencer par étudier l'erreur d'immutabilité.
 
@@ -374,7 +374,7 @@ en répétant `let x =`, en récupérant la valeur d'origine et lui ajoutant `1`
 la valeur de `x` est désormais `6`. Ensuite, à l'intérieur de la portée interne,
 la troisième instruction `let` crée un autre masque de `x`, en récupérant la
 précédente valeur et en la multipliant par `2` pour donner à `x` la valeur
-finale de `12`. Dès que nous sortons de cette portée, le masque prends fin, et
+finale de `12`. Dès que nous sortons de cette portée, le masque prend fin, et
 `x` revient à la valeur `6`. Lorsque nous exécutons ce programme, nous obtenons
 ceci :
 
@@ -399,9 +399,9 @@ been completed.
 Créer un masque est différent que de marquer une variable comme étant `mut`,
 car à moins d'utiliser une nouvelle fois le mot-clé `let`, nous obtiendrons une
 erreur de compilation si nous essayons de réassigner cette variable par
-accident. Nous pouvons effectuer quelques transformations sur une valeur en
-utilisant `let`, mais faire en sorte que la variable soit immuable après que ces
-transformations ont été appliquées.
+accident. En utilisant `let`, on peut faire quelques modifications à une 
+valeur tout en gardant le caractère immuable de la variable, une fois ces 
+modifications effectuées. 
 
 <!--
 The other difference between `mut` and shadowing is that because we’re

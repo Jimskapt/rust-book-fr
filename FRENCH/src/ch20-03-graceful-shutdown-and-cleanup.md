@@ -77,7 +77,7 @@ d'implémentation de `Drop` ; ce code ne fonctionne pas encore tout à fait.
 goes out of scope</span>
 -->
 
-<span class="caption">Encart 20-22 : utilisation de `join` sur chaque tâche
+<span class="caption">Encart 20-22 : Utilisation de `join` sur chaque tâche
 lorsque le groupe de tâches sort de la portée</span>
 
 <!--
@@ -243,7 +243,7 @@ cleaned up, so nothing happens in that case.
 
 Comme nous l'avons vu au chapitre 17, la méthode `take` sur `Option` sort la
 variante `Some` et laisse un `None` à la place. Nous utilisons `if let` pour
-destructurer le `Some` et obtenir la tâche ; ensuite nous faisons appel à `join`
+déstructurer le `Some` et obtenir la tâche ; ensuite nous faisons appel à `join`
 sur cette tâche. Si la tâche d'un opérateur est déjà un `None`, nous savons
 qu'il a déjà nettoyé sa tâche et que dans ce cas nous n'avons rien à faire.
 
@@ -342,7 +342,7 @@ Nous devons corriger le canal pour utiliser les valeurs du type `Message`
 exiting the loop if a `Worker` receives `Message::Terminate`</span>
 -->
 
-<span class="caption">Encart 20-23 : envoi et réception de valeurs de `Message`
+<span class="caption">Encart 20-23 : Envoi et réception de valeurs de `Message`
 et sortie de la boucle si un `Operateur` reçoit `Message:Extinction`</span>
 
 <!--
@@ -398,7 +398,7 @@ pour qu'elle ressemble à l'encart 20-24.
 workers before calling `join` on each worker thread</span>
 -->
 
-<span class="caption">Encart 20-24 : envoi de `Message::Extinction` aux
+<span class="caption">Encart 20-24 : Envoi de `Message::Extinction` aux
 opérateurs avant de d'appeler `join` sur toutes les tâches de ces
 opérateurs</span>
 
@@ -487,7 +487,7 @@ l'encart 20-25.
 requests by exiting the loop</span>
 -->
 
-<span class="caption">Encart 20-25 : arrêt du serveur après avoir servi deux
+<span class="caption">Encart 20-25 : Arrêt du serveur après avoir servi deux
 requêtes en sortant de la boucle</span>
 
 <!--
@@ -612,7 +612,7 @@ tous les opérateurs aient reçu les messages, nous avons essayé d'utiliser
 d'extinction, donc la tâche principale a attendu que l'opérateur 0 finisse.
 Pendant ce temps, tous les autres opérateurs ont reçu les messages
 d'extinction. Lorsque l'opérateur 0 a fini, la tâche principale a attendu que
-les autres opérateurs se terminent. A ce stade, ils avaient alors tous reçu le
+les autres opérateurs se terminent. À ce stade, ils avaient alors tous reçu le
 message d'extinction et étaient en mesure de s'arrêter.
 
 <!--

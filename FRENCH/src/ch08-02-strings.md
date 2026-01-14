@@ -103,7 +103,7 @@ crates de bibliothèque peuvent fournir encore plus de solutions pour stocker de
 chaînes de caractères. Avez-vous remarqué que ces noms finissent tous par
 `String` ou `Str` ? Cela fait référence aux variantes possédées et empruntées,
 comme les types `String` et `str` que nous avons vus précédemment. Ces types de
-chaînes de caractères peuvent stocker leur texte dans de différents encodages,
+chaînes de caractères peuvent stocker leur texte dans différents encodages,
 ou le stocker en mémoire de manière différente, par exemple. Nous n'allons pas
 traiter de ces autres types de chaînes de caractères dans ce chapitre ;
 référez-vous à la documentation de leur API pour en savoir plus sur leur

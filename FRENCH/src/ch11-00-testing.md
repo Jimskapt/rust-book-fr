@@ -2,7 +2,7 @@
 # Writing Automated Tests
 -->
 
-# Ecrire des tests automatisés
+# Écrire des tests automatisés
 
 <!--
 In his 1972 essay “The Humble Programmer,” Edsger W. Dijkstra said that
@@ -67,7 +67,7 @@ changed.
 
 Nous pouvons écrire des tests qui vérifient, par exemple, que lorsque nous
 donnons `3` à la fonction `ajouter_deux`, elle retourne bien `5`. Nous pouvons
-lancer ces tests à chaque fois que nous modifions notre code pour s'assurer
+lancer ces tests à chaque fois que nous modifions notre code pour nous assurer
 qu'aucun comportement existant et satisfaisant n'a changé.
 
 <!--

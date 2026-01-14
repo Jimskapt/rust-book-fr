@@ -273,8 +273,8 @@ sont est si fréquent que [la bibliothèque standard a une définition que nous
 pouvons utiliser !][IpAddr]<!-- ignore --> Analysons comment la bibliothèque
 standard a défini `IpAddr` (l'équivalent de notre `AdresseIp`) : nous retrouvons
 la même énumération et les variantes que nous avons définies et utilisées, mais
-stocke les données d'adresse dans des variantes dans deux structures
-différentes, qui sont définies chacune pour chaque variante :
+les données d'adresse sont stockées dans les variantes par deux structures,
+qui ont une définition différente pour chaque variante :
 
 <!--
 ```rust
@@ -494,7 +494,7 @@ two states: null or not-null.
 
 La conception d'un langage de programmation est souvent pensée en fonction des
 fonctionnalités qu'on inclut, mais les fonctionnalités qu'on refuse sont elles
-aussi importantes. Rust n'a pas de fonctionnalité *null* qu'ont de nombreux
+aussi importantes. Rust n'a pas de fonctionnalité null qu'ont de nombreux
 langages. *Null* est une valeur qui signifie qu'il n'y a pas de valeur à cet
 endroit. Avec les langages qui utilisent null, les variables peuvent toujours
 être dans deux états : null ou non null.
@@ -504,9 +504,9 @@ In his 2009 presentation “Null References: The Billion Dollar Mistake,” Tony
 Hoare, the inventor of null, has this to say:
 -->
 
-Dans sa thèse de 2009 “Null References: The Billion Dollar Mistake” (les
+Lors d'une conférence en 2009 “Null References: The Billion Dollar Mistake” (les
 références nulles : l'erreur à un milliard de dollars), Tony Hoare, l'inventeur
-de null, a écrit ceci :
+du null, a dit ceci :
 
 <!--
 > I call it my billion-dollar mistake. At that time, I was designing the first
@@ -652,7 +652,7 @@ the same thing as null: we don’t have a valid value. So why is having
 Lorsque nous avons une valeur `Some`, nous savons que la valeur est présente et
 que la valeur est stockée dans le `Some`. Lorsque nous avons une valeur `None`,
 en quelque sorte, cela veut dire la même chose que null : nous n'avons pas une
-valeur valide. Donc pourquoi obtenir `Option<T>` est meilleur que d'avoir null ?
+valeur valide. Donc en quoi obtenir `Option<T>` est-il meilleur que d'avoir null ?
 
 <!--
 In short, because `Option<T>` and `T` (where `T` can be any type) are different
@@ -737,7 +737,7 @@ deliberate design decision for Rust to limit null’s pervasiveness and increase
 the safety of Rust code.
 -->
 
-Eliminer le risque que des valeurs nulles puissent être mal gérées vous aide à
+Éliminer le risque que des valeurs nulles puissent être mal gérées vous aide à
 être plus confiant en votre code. Pour avoir une valeur qui peut
 potentiellement être nulle, vous devez l'indiquer explicitement en déclarant
 que le type de cette valeur est `Option<T>`. Ensuite, quand vous utiliserez

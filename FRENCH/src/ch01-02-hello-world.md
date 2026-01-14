@@ -13,7 +13,7 @@ the text `Hello, world!` to the screen, so we’ll do the same here!
 Maintenant que vous avez installé Rust, écrivons notre premier programme Rust.
 Lorsqu'on apprend un nouveau langage, il est de tradition d'écrire un petit
 programme qui écrit le texte "Hello, world!" à l'écran, donc c'est ce que nous
-allons faire !
+allons faire !
 
 <!--
 > Note: This book assumes basic familiarity with the command line. Rust makes
@@ -33,13 +33,13 @@ allons faire !
 > charge Rust à des degrés divers ; consultez la documentation de
 > l'IDE pour plus d'informations. Récemment, l'équipe Rust s'est attelée à
 > améliorer l'intégration dans les IDE et des progrès ont rapidement été faits
-> dans ce domaine !
+> dans ce domaine !
 
 <!--
 ### Creating a Project Directory
 -->
 
-### Créer un dossier projet
+### Créer un répertoire projet
 
 <!--
 You’ll start by making a directory to store your Rust code. It doesn’t matter
@@ -48,10 +48,10 @@ we suggest making a *projects* directory in your home directory and keeping all
 your projects there.
 -->
 
-Nous allons commencer par créer un dossier pour y ranger le code Rust. Là où
+Nous allons commencer par créer un répertoire pour y ranger le code Rust. Là où
 vous mettez votre code n'est pas important pour Rust, mais pour les exercices et
-projets de ce livre, nous vous suggérons de créer un dossier *projects* dans
-votre dossier utilisateur et de ranger tous vos projets là-dedans.
+projets de ce livre, nous vous suggérons de créer un répertoire *projects* dans
+votre répertoire utilisateur et de ranger tous vos projets là-dedans.
 
 <!--
 Open a terminal and enter the following commands to make a *projects* directory
@@ -59,8 +59,8 @@ and a directory for the “Hello, world!” project within the *projects* direct
 -->
 
 Ouvrez un terminal et écrivez les commandes suivantes pour créer un
-dossier *projects* et un dossier pour le projet “Hello, world!” à l'intérieur
-de ce dossier *projects*.
+répertoire *projects* et un répertoire pour le projet “Hello, world!” à l'intérieur
+de ce répertoire *projects*.
 
 <!--
 For Linux, macOS, and PowerShell on Windows, enter this:
@@ -217,8 +217,8 @@ If `Hello, world!` did print, congratulations! You’ve officially written a Rus
 program. That makes you a Rust programmer—welcome!
 -->
 
-Si `Hello, world!` s'affiche, félicitations ! Vous avez officiellement écrit un
-programme Rust. Cela fait de vous un développeur Rust — bienvenue !
+Si `Hello, world!` s'affiche, félicitations ! Vous avez officiellement écrit un
+programme Rust. Cela fait de vous un développeur Rust — bienvenue !
 
 <!--
 ### Anatomy of a Rust Program
@@ -451,7 +451,7 @@ From here, you run the *main* or *main.exe* file, like this:
 Ceci affiche le fichier de code source avec l'extension *.rs*, le fichier
 exécutable (*main.exe* sous Windows, mais *main* sur toutes les autres
 plateformes) et, quand on utilise Windows, un fichier qui contient des
-informations de débogage avec l'extension *.pdb*. Dans ce dossier, vous pouvez
+informations de débogage avec l'extension *.pdb*. Dans ce répertoire, vous pouvez
 exécuter le fichier *main* ou *main.exe* comme ceci :
 
 <!--

@@ -95,7 +95,7 @@ déjà acquis à ce stade :
 * Gérer les erreurs ([chapitre 9][ch9]<!-- ignore -->)
 * Utiliser les traits et les durées de vie lorsque c'est approprié
 ([chapitre 10][ch10]<!-- ignore -->)
-* Ecrire les tests ([chapitre 11][ch11]<!-- ignore -->)
+* Écrire les tests ([chapitre 11][ch11]<!-- ignore -->)
 
 <!--
 We’ll also briefly introduce closures, iterators, and trait objects, which
@@ -105,7 +105,7 @@ detail.
 
 Nous vous présenterons aussi brièvement les fermetures, les itérateurs et les
 objets de trait, que les chapitres [13][ch13]<!-- ignore --> et
-[17][ch17]<!-- ignore --> traiteront en détails.
+[17][ch17]<!-- ignore --> traiteront en détail.
 
 <!--
 [ch7]: ch07-00-managing-growing-projects-with-packages-crates-and-modules.html

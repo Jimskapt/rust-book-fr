@@ -62,7 +62,7 @@ vous pouvez le voir dans l'encart 19-27.
 pointer as an argument</span>
 -->
 
-<span class="caption">Encart 19-27 : utiliser le type `fn` pour accepter un
+<span class="caption">Encart 19-27 : Utiliser le type `fn` pour accepter un
 pointeur de fonction en argument</span>
 
 <!--

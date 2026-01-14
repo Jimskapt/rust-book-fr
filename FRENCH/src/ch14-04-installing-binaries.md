@@ -39,10 +39,10 @@ directory is in your `$PATH` to be able to run programs you’ve installed with
 `cargo install`.
 -->
 
-Tous les binaires installés avec `cargo install` sont stockés dans le dossier
+Tous les binaires installés avec `cargo install` sont stockés dans le répertoire
 *bin* de la racine. Si vous installez Rust avec *rustup.rs* et que vous n'avez
-pas personnalisé la configuration, ce dossier sera *$HOME/.cargo/bin*.
-Assurez-vous que ce dossier est dans votre `$PATH` pour pouvoir exécuter des
+pas personnalisé la configuration, ce répertoire sera *$HOME/.cargo/bin*.
+Assurez-vous que ce répertoire est dans votre `$PATH` pour pouvoir exécuter des
 programmes que vous avez installés avec `cargo install`.
 
 <!--
@@ -99,6 +99,6 @@ then run `rg --help` and start using a faster, rustier tool for searching files!
 
 L'avant-dernière ligne de la sortie nous montre l'emplacement et le nom du
 binaire installé, qui est `rg` dans le cas de `ripgrep`. Tel que mentionné
-précédemment, du moment que le dossier d'installation est dans votre `$PATH`,
+précédemment, du moment que le répertoire d'installation est dans votre `$PATH`,
 vous pouvez ensuite lancer `rg --help` et commencer à utiliser un outil en Rust
 plus rapide pour rechercher dans des fichiers !

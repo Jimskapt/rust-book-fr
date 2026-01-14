@@ -102,7 +102,7 @@ de lire la suite.
 introduces a shadowed variable `y`</span>
 -->
 
-<span class="caption">Encart 18-11 : une expression `match` avec une branche
+<span class="caption">Encart 18-11 : Une expression `match` avec une branche
 qui crée une variable masquée `y`</span>
 
 <!--
@@ -158,7 +158,7 @@ the inner `y`. The last `println!` produces `at the end: x = Some(5), y = 10`.
 
 Lorsque l'expression `match` est terminée, sa portée se termine également, et
 avec elle la portée de la variable interne `y`. Le dernier `println!` affiche
-donc `A la fin : x = Some(5), y = 10`.
+donc `À la fin : x = Some(5), y = 10`.
 
 <!--
 To create a `match` expression that compares the values of the outer `x` and
@@ -290,14 +290,14 @@ afficher `lettre ASCII du début`.
 ### Destructuring to Break Apart Values
 -->
 
-### Destructurer pour séparer les valeurs
+### Déstructurer pour séparer les valeurs
 
 <!--
 We can also use patterns to destructure structs, enums, and tuples to use
 different parts of these values. Let’s walk through each value.
 -->
 
-Nous pouvons aussi utiliser les motifs pour destructurer les structures, les
+Nous pouvons aussi utiliser les motifs pour déstructurer les structures, les
 énumérations, et les tuples pour utiliser différentes parties de ces valeurs.
 Passons en revue chacun des cas.
 
@@ -305,7 +305,7 @@ Passons en revue chacun des cas.
 #### Destructuring Structs
 -->
 
-#### Destructurer les structures
+#### Déstructurer les structures
 
 <!--
 Listing 18-12 shows a `Point` struct with two fields, `x` and `y`, that we can
@@ -336,7 +336,7 @@ nous pouvons séparer en utilisant un motif avec une instruction `let`.
 separate variables</span>
 -->
 
-<span class="caption">Encart 18-12 : déstructuration des champs d'une structure
+<span class="caption">Encart 18-12 : Déstructuration des champs d'une structure
 dans des variables séparées</span>
 
 <!--
@@ -393,7 +393,7 @@ sont `x` et `y` au lieu de `a` et `b`.
 field shorthand</span>
 -->
 
-<span class="caption">Encart 18-13 : déstructuration des champs d'une structure
+<span class="caption">Encart 18-13 : Déstructuration des champs d'une structure
 en utilisant le raccourci pour les champs des structures</span>
 
 <!--
@@ -413,10 +413,10 @@ some of the fields for particular values while creating variables to
 destructure the other fields.
 -->
 
-Nous pouvons aussi destructurer en utilisant des valeurs littérales faisant partie
+Nous pouvons aussi déstructurer en utilisant des valeurs littérales faisant partie
 du motif de la structure plutôt que d'avoir à créer les variables pour tous les
 champs. Ceci nous permet de tester que certains champs possèdent des valeurs
-particulières tout en créant des variables pour destructurer les autres champs.
+particulières tout en créant des variables pour déstructurer les autres champs.
 
 <!--
 Listing 18-14 shows a `match` expression that separates `Point` values into
@@ -450,7 +450,7 @@ de ces deux axes.
 in one pattern</span>
 -->
 
-<span class="caption">Encart 18-14 : déstructurer et faire correspondre des
+<span class="caption">Encart 18-14 : Déstructurer et faire correspondre des
 valeurs littérales grâce à un seul motif</span>
 
 <!--
@@ -490,7 +490,7 @@ vaut `0`, donc ce code va afficher `Sur l'axe y à la position 7`.
 #### Destructuring Enums
 -->
 
-#### Destructurer une énumération
+#### Déstructurer une énumération
 
 <!--
 We’ve destructured enums earlier in this book, for example, when we
@@ -501,13 +501,13 @@ example, in Listing 18-15 we use the `Message` enum from Listing 6-2 and write
 a `match` with patterns that will destructure each inner value.
 -->
 
-Nous avons déjà destructuré des énumérations précédemment dans ce livre, par exemple
-lorsque nous avions destructuré `Option<i32>` dans l'encart 6-5 du chapitre 6.
+Nous avons déjà déstructuré des énumérations précédemment dans ce livre, par exemple
+lorsque nous avions déstructuré `Option<i32>` dans l'encart 6-5 du chapitre 6.
 Un détail que nous n'avions pas précisé explicitement était que le motif pour
-destructurer une énumération doit correspondre à la façon dont sont définies les
+déstructurer une énumération doit correspondre à la façon dont sont définies les
 données dans l'énumération. Par exemple, dans l'encart 18-15 nous utilisons
 l'énumération `Message` de l'encart 6-2 et nous ajoutons un `match` avec des
-motifs qui devraient destructurer chaque valeur interne.
+motifs qui devraient déstructurer chaque valeur interne.
 
 <!--
 <span class="filename">Filename: src/main.rs</span>
@@ -530,7 +530,7 @@ motifs qui devraient destructurer chaque valeur interne.
 different kinds of values</span>
 -->
 
-<span class="caption">Encart 18-15 : déstructuration des variantes d'une
+<span class="caption">Encart 18-15 : Déstructuration des variantes d'une
 énumération qui stocke différents types de valeurs</span>
 
 <!--
@@ -550,7 +550,7 @@ and no variables are in that pattern.
 -->
 
 Pour les variantes d'énumération sans aucune donnée, telle que `Message::Quitter`,
-nous ne pouvons pas destructurer de valeurs. Nous pouvons uniquement
+nous ne pouvons pas déstructurer de valeurs. Nous pouvons uniquement
 correspondre à la valeur littérale `Message::Quitter` et il n'y a pas de
 variable dans ce motif.
 
@@ -589,7 +589,7 @@ variante qui correspond.
 #### Destructuring Nested Structs and Enums
 -->
 
-#### Destructurer des structures et des énumérations imbriquées
+#### Déstructurer des structures et des énumérations imbriquées
 
 <!--
 Until now, all our examples have been matching structs or enums that were one
@@ -623,7 +623,7 @@ l'encart 18-16.
 <span class="caption">Listing 18-16: Matching on nested enums</span>
 -->
 
-<span class="caption">Encart 18-16 : correspondance avec des énumérations
+<span class="caption">Encart 18-16 : Correspondance avec des énumérations
 imbriquées</span>
 
 <!--
@@ -648,7 +648,7 @@ bien que deux énumérations différentes soient impliquées.
 #### Destructuring Structs and Tuples
 -->
 
-#### Destructurer des structures et des tuples
+#### Déstructurer des structures et des tuples
 
 <!--
 We can mix, match, and nest destructuring patterns in even more complex ways.
@@ -659,7 +659,7 @@ tuples inside a tuple and destructure all the primitive values out:
 Nous pouvons mélanger les correspondances et les motifs pour déstructurer des
 éléments imbriqués de manière bien plus complexe. L'exemple suivant montre une
 déstructuration complexe dans laquelle nous imbriquons des structures et des
-tuples à l'intérieur d'un tuple et nous y destructurons toutes les valeurs
+tuples à l'intérieur d'un tuple et nous y déstructurons toutes les valeurs
 primitives :
 
 <!--
@@ -753,7 +753,7 @@ compris dans les paramètres de fonctions, comme montré dans l'encart 18-17.
 <span class="caption">Listing 18-17: Using `_` in a function signature</span>
 -->
 
-<span class="caption">Encart 18-17 : utilisation d'un `_` dans la signature
+<span class="caption">Encart 18-17 : Utilisation d'un `_` dans la signature
 d'une fonction</span>
 
 <!--
@@ -823,7 +823,7 @@ match `Some` variants when we don’t need to use the value inside the
 `Some`</span>
 -->
 
-<span class="caption">Encart 18-18 : utilisation d'un tiret bas dans des motifs
+<span class="caption">Encart 18-18 : Utilisation d'un tiret bas dans des motifs
 qui correspondent avec des variantes `Some` lorsque nous n'avons pas besoin
 d'utiliser la valeur à l'intérieur du `Some`</span>
 
@@ -879,7 +879,7 @@ ignore la deuxième et la quatrième valeur dans un tuple de cinq éléments.
 <span class="caption">Listing 18-19: Ignoring multiple parts of a tuple</span>
 -->
 
-<span class="caption">Encart 18-19 : on ignore plusieurs éléments d'un tuple
+<span class="caption">Encart 18-19 : On ignore plusieurs éléments d'un tuple
 </span>
 
 <!--
@@ -936,7 +936,7 @@ nous n'aurons d'avertissement que pour une seule d'entre elles.
 underscore to avoid getting unused variable warnings</span>
 -->
 
-<span class="caption">Encart 18-20 : préfixer le nom d'une variable avec un
+<span class="caption">Encart 18-20 : Préfixer le nom d'une variable avec un
 tiret bas pour éviter d'avoir des avertissements signalant une variable non
 utilisée</span>
 
@@ -977,7 +977,7 @@ erreur.
 underscore still binds the value, which might take ownership of the value</span>
 -->
 
-<span class="caption">Encart 18-21 : une variable non utilisée préfixée par un
+<span class="caption">Encart 18-21 : Une variable non utilisée préfixée par un
 tiret bas continue à assigner la valeur, ce qui pourrait entraîner une prise de
 possession de la valeur</span>
 
@@ -989,7 +989,7 @@ because `s` doesn’t get moved into `_`.
 -->
 
 Nous allons obtenir une erreur car la valeur `s` est toujours déplacée dans
-`_s`, ce qui nous empêche d'utiliser `s` ensuite. A l'inverse, l'utilisation du
+`_s`, ce qui nous empêche d'utiliser `s` ensuite. À l'inverse, l'utilisation du
 tiret bas tout seul n'assigne jamais la valeur à quelque chose. Par conséquent,
 l'encart 18-22 va se compiler sans aucune erreur car `s` n'est pas déplacé dans
 `_`.
@@ -1009,7 +1009,7 @@ l'encart 18-22 va se compiler sans aucune erreur car `s` n'est pas déplacé dan
 value</span>
 -->
 
-<span class="caption">Encart 18-22 : l'utilisation d'un tiret bas n'assigne pas
+<span class="caption">Encart 18-22 : L'utilisation d'un tiret bas n'assigne pas
 la valeur</span>
 
 <!--
@@ -1059,7 +1059,7 @@ la coordonnée `x` et ignorer les valeurs des champs `y` et `z`.
 for `x` by using `..`</span>
 -->
 
-<span class="caption">Encart 18-23 : on ignore tous les champs d'un `Point` à
+<span class="caption">Encart 18-23 : On ignore tous les champs d'un `Point` à
 l'exception de `x` en utilisant `..`</span>
 
 <!--
@@ -1103,7 +1103,7 @@ L'encart 18-24 montre comment utiliser `..` avec un tuple.
 a tuple and ignoring all other values</span>
 -->
 
-<span class="caption">Encart 18-24 : on correspond uniquement avec la première
+<span class="caption">Encart 18-24 : On correspond uniquement avec la première
 et la dernière valeur d'un tuple en ignorant toutes les autres valeurs
 </span>
 
@@ -1150,7 +1150,7 @@ compilera pas.
 way</span>
 -->
 
-<span class="caption">Encart 18-25 : une tentative d'utilisation de `..` de
+<span class="caption">Encart 18-25 : Une tentative d'utilisation de `..` de
 manière ambigüe</span>
 
 <!--
@@ -1233,7 +1233,7 @@ le nombre est pair).
 <span class="caption">Listing 18-26: Adding a match guard to a pattern</span>
 -->
 
-<span class="caption">Encart 18-26 : ajout d'un contrôle de correspondance à un
+<span class="caption">Encart 18-26 : Ajout d'un contrôle de correspondance à un
 motif</span>
 
 <!--
@@ -1314,7 +1314,7 @@ répondre à ce besoin.
 with an outer variable</span>
 -->
 
-<span class="caption">Encart 18-27 : utilisation d'un contrôle de
+<span class="caption">Encart 18-27 : Utilisation d'un contrôle de
 correspondance pour vérifier l'égalité avec une variable externe au bloc</span>
 
 <!--
@@ -1378,7 +1378,7 @@ s'appliquer uniquement à `6`.
 guard</span>
 -->
 
-<span class="caption">Encart 18-28 : combinaison de plusieurs motifs avec un
+<span class="caption">Encart 18-28 : Combinaison de plusieurs motifs avec un
 contrôle de correspondance</span>
 
 <!--
@@ -1478,7 +1478,7 @@ allons utiliser un nom différent.
 while also testing it</span>
 -->
 
-<span class="caption">Encart 18-29 : utilisation de `@` pour lier une valeur
+<span class="caption">Encart 18-29 : Utilisation de `@` pour lier une valeur
 d'un motif à une variable pendant qu'on la teste</span>
 
 <!--

@@ -149,7 +149,7 @@ cd ../../..
 automatically by `cargo new`</span>
 -->
 
-<span class="caption">Encart 11-1 : le module de test et la fonction générés
+<span class="caption">Encart 11-1 : Le module de test et la fonction générés
 automatiquement par `cargo new`</span>
 
 <!--
@@ -203,7 +203,7 @@ le montre l'encart 11-2.
 generated test</span>
 -->
 
-<span class="caption">Encart 11-2 : le résultat du lancement des tests sur le
+<span class="caption">Encart 11-2 : Le résultat du lancement des tests sur le
 test généré automatiquement</span>
 
 <!--
@@ -356,7 +356,7 @@ chapitre 9, qui consiste à appeler la macro `panic!`. Ecrivez ce nouveau test,
 we call the `panic!` macro</span>
 -->
 
-<span class="caption">Encart 11-3 : ajout d'un second test qui va échouer car
+<span class="caption">Encart 11-3 : Ajout d'un second test qui va échouer car
 nous appelons la macro `panic!`</span>
 
 <!--
@@ -383,7 +383,7 @@ réussi et que `un_autre` a échoué.
 test fails</span>
 -->
 
-<span class="caption">Encart 11-4 : les résultats de tests lorsque un test
+<span class="caption">Encart 11-4 : Les résultats de tests lorsque un test
 réussit et un autre test échoue</span>
 
 <!--
@@ -399,7 +399,7 @@ the [“Controlling How Tests Are Run”][controlling-how-tests-are-run]<!-- ign
 -- > section.
 -->
 
-A la place du `ok`, la ligne `test tests:un_autre` affiche `FAILED`. Deux
+À la place du `ok`, la ligne `test tests:un_autre` affiche `FAILED`. Deux
 nouvelles sections apparaissent entre la liste des tests et le résumé : la
 première section affiche les raisons détaillées de chaque échec de test. Dans
 notre cas, `un_autre` a échoué car il a paniqué à 'Fait échouer ce test', qui
@@ -425,7 +425,7 @@ let’s look at some macros other than `panic!` that are useful in tests.
 -->
 
 Maintenant que vous avez vu à quoi ressemblent les résultats de tests dans
-différents scénarios, voyons d'autres macros que `panic!` qui nous serons utiles
+différents scénarios, voyons d'autres macros que `panic!` qui nous seront utiles
 pour les tests.
 
 <!--
@@ -484,7 +484,7 @@ tests en utilisant la macro `assert!`.
 `can_hold` method from Chapter 5</span>
 -->
 
-<span class="caption">Encart 11-5 : utilisation de la structure `Rectangle` et
+<span class="caption">Encart 11-5 : Utilisation de la structure `Rectangle` et de
 sa méthode `peut_contenir` du chapitre 5</span>
 
 <!--
@@ -523,7 +523,7 @@ hauteur de 1.
 larger rectangle can indeed hold a smaller rectangle</span>
 -->
 
-<span class="caption">Encart 11-6 : un test pour `peut_contenir` qui vérifie le
+<span class="caption">Encart 11-6 : Un test pour `peut_contenir` qui vérifie le
 cas où un grand rectangle peut contenir un plus petit rectangle</span>
 
 <!--
@@ -555,7 +555,7 @@ is supposed to return `true`, so our test should pass. Let’s find out!
 -->
 
 Nous avons nommé notre test `un_grand_peut_contenir_un_petit`, et nous avons
-créé les deux instances `Rectangle` que nous avions besoin. Ensuite, nous avons
+créé les deux instances `Rectangle` dont nous avons besoin. Ensuite, nous avons
 appelé la macro `assert!` et nous lui avons passé le résultat de l'appel à
 `le_grand.peut_contenir(&le_petit)`. Cette expression est censée retourner
 `true`, donc notre test devrait réussir. Vérifions cela !
@@ -622,7 +622,7 @@ method by replacing the greater than sign with a less than sign when it
 compares the widths:
 -->
 
-Voilà deux tests qui réussissent ! Maintenant, voyons ce qu'il se passe dans les
+Voilà deux tests qui réussissent ! Maintenant, voyons ce qui se passe dans les
 résultats de nos tests lorsque nous introduisons un bogue dans notre code.
 Changeons l'implémentation de la méthode `peut_contenir` en remplaçant
 l'opérateur *plus grand que* par un *plus petit que* au moment de la comparaison
@@ -686,7 +686,7 @@ expression, not the values that led to the `false` value.
 Une façon courante de tester des fonctionnalités est de comparer le résultat du
 code à tester par rapport à une valeur que vous souhaitez que le code retourne,
 afin de vous assurer qu'elles soient bien égales. Vous pouvez faire cela avec la
-macro `assert!` et en lui passant une expression qui utilise l'opérateur `==`.
+macro `assert!`, en lui passant une expression qui utilise l'opérateur `==`.
 Cependant, c'est un test si courant que la bibliothèque standard fournit une
 paire de macros (`assert_eq!` et `assert_ne!`) pour procéder à ce test plus
 facilement. Les macros comparent respectivement l'égalité ou la non égalité de
@@ -694,7 +694,7 @@ deux arguments. Elles vont aussi afficher les deux valeurs si la vérification
 échoue, ce qui va nous aider à comprendre *pourquoi* le test a échoué ;
 paradoxalement, la macro `assert!` indique seulement qu'elle a obtenu une valeur
 `false` de l'expression avec le `==`, mais n'affiche pas les valeurs qui l'ont
-mené à la valeur `false`.
+menée à la valeur `false`.
 
 <!--
 In Listing 11-7, we write a function named `add_two` that adds `2` to its
@@ -727,7 +727,7 @@ utilisant la macro `assert_eq!`.
 `assert_eq!` macro</span>
 -->
 
-<span class="caption">Encart 11-7 : test de la fonction `ajouter_deux` en
+<span class="caption">Encart 11-7 : Test de la fonction `ajouter_deux` en
 utilisant la macro `assert_eq!`.</span>
 
 <!--
@@ -763,7 +763,7 @@ uses `assert_eq!` fails. Change the implementation of the `add_two` function to
 instead add `3`:
 -->
 
-Ajoutons un bogue dans notre code pour voir ce qu'il se passe lorsque un test
+Ajoutons un bogue dans notre code pour voir ce qui se passe lorsqu'un test
 qui utilise `assert_eq!` échoue. Changez l'implémentation de la fonction
 `ajouter_deux` pour ajouter plutôt `3` :
 
@@ -804,7 +804,7 @@ had `add_two(2)`, was `5`.
 Notre test a détecté le bogue ! Le test `cela_ajoute_deux` a échoué, ce qui a
 affiché le message `` assertion failed: `(left == right)` `` qui nous explique
 qu'à gauche nous avions `4` et qu'à droite nous avions `5`. Ce message utile
-nous aide au déboguage : cela veut dire que l'argument de gauche de `assert_eq!`
+nous aide au débogage : cela veut dire que l'argument de gauche de `assert_eq!`
 valait `4` mais que l'argument de droite, où nous avions `ajouter_deux(2)`,
 valait `5`.
 
@@ -841,10 +841,10 @@ to assert might be that the output of the function is not equal to the input.
 
 La macro `assert_ne!` va réussir si les deux valeurs que nous lui donnons ne
 sont pas égales et va échouer si elles sont égales. Cette macro est utile dans
-les cas où nous ne sommes pas sûr de ce que *devrait* valoir une valeur, mais
+les cas où nous ne sommes pas sûrs de ce que *devrait* valoir une valeur, mais
 que nous savons ce que la valeur ne devrait surtout *pas* être si notre code
 fonctionne comme nous le souhaitons. Par exemple, si nous testons une fonction
-qui doit transformer sa valeur d'entrée de manière à ce qu'elle dépend du jour
+qui doit transformer sa valeur d'entrée de manière à ce qu'elle dépende du jour
 de la semaine où nous lançons nos tests, la meilleure façon de vérifier serait
 que la sortie de la fonction ne soit pas égale à son entrée.
 
@@ -865,13 +865,13 @@ definition. See Appendix C, [“Derivable Traits,”][derivable-traits]<!-- igno
 
 Sous la surface, les macros `assert_eq!` et `assert_ne!` utilisent
 respectivement les opérateurs `==` et `!=`. Lorsque les vérifications échouent,
-ces macros affichent leurs arguments en utilisant le formatage de déboguage, ce
+ces macros affichent leurs arguments en utilisant le formatage de débogage, ce
 qui veut dire que les valeurs comparées doivent implémenter les traits
 `PartialEq` et `Debug`. Tous les types primitifs et la plupart des types de
 la bibliothèque standard implémentent ces traits. Concernant les structures et
 les énumérations que vous définissez, vous allez avoir besoin de leur
 implémenter `Debug` pour afficher les valeurs lorsque les vérifications
-échouent. Comme ces traits sont des traits dérivables, comme nous l'avons évoqué
+échouent. Du fait que ces traits sont des traits dérivables, comme nous l'avons évoqué
 dans l'encart 5-12 du chapitre 5, il suffit généralement de simplement ajouter
 l'annotation `#[derive(PartialEq, Debug)]` sur les définitions de vos structures
 ou énumérations. Rendez-vous à [l'annexe C][derivable-traits]<!-- ignore -->
@@ -959,7 +959,7 @@ Let’s introduce a bug into this code by changing `greeting` to not include
 -->
 
 Introduisons un bogue dans ce code en changeant `accueil` pour ne pas
-ajouter `nom` afin de voir ce que donne l'échec de ce test :
+ajouter `nom` afin de voir ce que donne l'échec de ce test :
 
 <!--
 ```rust,not_desired_behavior,noplayground
@@ -975,7 +975,7 @@ ajouter `nom` afin de voir ce que donne l'échec de ce test :
 Running this test produces the following:
 -->
 
-L'exécution du test va donner ceci :
+L'exécution du test va donner ceci :
 
 <!--
 ```console
@@ -1000,7 +1000,7 @@ Le message d'échec serait plus utile dans notre cas s'il affichait la valeur
 que nous obtenons de la fonction `accueil`. Changeons la fonction de test, pour
 lui donner un message d'erreur personnalisé, qui est une chaîne de caractères
 de formatage avec un espace réservé qui contiendra la valeur que
-nous avons obtenue de la fonction `accueil` :
+nous avons obtenue de la fonction `accueil` :
 
 <!--
 ```rust,ignore
@@ -1017,7 +1017,7 @@ Now when we run the test, we’ll get a more informative error message:
 -->
 
 Maintenant, lorsque nous lançons à nouveau le test, nous obtenons un message
-d'échec plus explicite :
+d'échec plus explicite :
 
 <!--
 ```console
@@ -1071,7 +1071,7 @@ test will fail if the code inside the function doesn’t panic.
 
 Nous allons vérifier cela en ajoutant un autre attribut, `should_panic`, à notre
 fonction de test. Cet attribut fait réussir le test si le code à l'intérieur
-de la fonction fait paniquer ; le test va échouer si le code à l'intérieur de
+de la fonction fait paniquer ; le test va échouer si le code à l'intérieur de
 la fonction ne panique pas.
 
 <!--
@@ -1086,7 +1086,7 @@ L'encart 11-8 nous montre un test qui vérifie que les conditions d'erreur de
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,noplayground
@@ -1103,7 +1103,7 @@ L'encart 11-8 nous montre un test qui vérifie que les conditions d'erreur de
 `panic!`</span>
 -->
 
-<span class="caption">Encart 11-8 : tester qu'une condition va faire un `panic`
+<span class="caption">Encart 11-8 : Tester qu'une condition va faire un `panic`
 </span>
 
 <!--
@@ -1114,7 +1114,7 @@ passes:
 
 Nous plaçons l'attribut `#[should_panic]` après l'attribut `#[test]` et avant
 la fonction de test sur laquelle il s'applique. Voyons le résultat lorsque ce
-test réussit :
+test réussit :
 
 <!--
 ```console
@@ -1131,9 +1131,9 @@ Looks good! Now let’s introduce a bug in our code by removing the condition
 that the `new` function will panic if the value is greater than 100:
 -->
 
-Ca fonctionne ! Maintenant, ajoutons un bogue dans notre code en enlevant
+Ca fonctionne ! Maintenant, ajoutons un bogue dans notre code en enlevant
 la condition dans laquelle la fonction `new` panique lorsque la valeur est
-plus grande que 100 :
+plus grande que 100 :
 
 <!--
 ```rust,not_desired_behavior,noplayground
@@ -1149,7 +1149,7 @@ plus grande que 100 :
 When we run the test in Listing 11-8, it will fail:
 -->
 
-Lorsque nous lançons le test de l'encart 11-8, il va échouer :
+Lorsque nous lançons le test de l'encart 11-8, il va échouer :
 
 <!--
 ```console
@@ -1197,7 +1197,7 @@ valeur est trop petite ou trop grande.
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,noplayground
@@ -1214,7 +1214,7 @@ valeur est trop petite ou trop grande.
 `panic!` with a particular panic message</span>
 -->
 
-<span class="caption">Encart 11-9 : on vérifie qu'une situation va provoquer un
+<span class="caption">Encart 11-9 : On vérifie qu'une situation va provoquer un
 `panic!` avec un message de panique bien précis</span>
 
 <!--
@@ -1249,7 +1249,7 @@ fails, let’s again introduce a bug into our code by swapping the bodies of the
 Pour voir ce qui se passe lorsqu'un test `should_panic` qui a un message
 `expected` qui échoue, essayons à nouveau d'introduire un bogue dans notre code
 en permutant les corps des blocs de `if valeur < 1` et de
-`else if valeur > 100` :
+`else if valeur > 100` : 
 
 <!--
 ```rust,ignore,not_desired_behavior
@@ -1266,7 +1266,7 @@ This time when we run the `should_panic` test, it will fail:
 -->
 
 Cette fois, lorsque nous lançons le test avec `should_panic`, il devrait
-échouer :
+échouer :
 
 <!--
 ```console
@@ -1287,10 +1287,10 @@ figuring out where our bug is!
 -->
 
 Le message d'échec nous informe que ce test a paniqué comme prévu, mais que le
-message de panique n'inclus pas la chaîne de caractères prévue `'La supposition
+message de panique n'inclut pas la chaîne de caractères prévue `'La supposition
 doit être plus petite ou égale à 100'`. Le message de panique que nous avons
 obtenu dans ce cas était `La supposition doit être plus grande ou égale à 1, et
-nous avons 200.`. Maintenant, on comprend mieux où est le bogue !
+nous avons 200.`. Maintenant, on comprend mieux où est le bogue !
 
 <!--
 ### Using `Result<T, E>` in Tests
@@ -1305,9 +1305,9 @@ that use `Result<T, E>`! Here’s the test from Listing 11-1, rewritten to use
 -->
 
 Précédemment, nous avons écrit des tests qui paniquent lorsqu'ils échouent.
-Nous pouvons également écrire des tests qui utilisent `Result<T, E>` ! Voici
+Nous pouvons également écrire des tests qui utilisent `Result<T, E>` ! Voici
 le test de l'encart 11-1, réécrit pour utiliser `Result<T, E>` et retourner
-une `Err` au lieu de paniquer :
+une `Err` au lieu de paniquer :
 
 <!--
 ```rust,noplayground
@@ -1337,7 +1337,7 @@ mark operator in the body of tests, which can be a convenient way to write
 tests that should fail if any operation within them returns an `Err` variant.
 -->
 
-Ecrire vos tests afin qu'ils retournent un `Result<T, E>` vous permet
+Écrire vos tests afin qu'ils retournent un `Result<T, E>` vous permet
 d'utiliser l'opérateur *point d'interrogation* dans le corps des tests, ce
 qui est un outil facile à utiliser pour écrire des tests qui peuvent échouer
 si n'importe quelle opération en son sein retourne une variante de `Err`.
@@ -1352,7 +1352,7 @@ question mark operator on the `Result<T, E>` value. Instead, use
 Vous ne pouvez pas utiliser l'annotation `#[should_panic]` sur les tests qui
 utilisent `Result<T, E>`. Pour vérifier qu'une opération retourne une variante
 `Err`, *n'utilisez pas* l'opérateur "point d'interrogation" sur la valeur de
-type `Result<T, E>`. A la place, utilisez plutôt `assert!(valeur.is_err())`.
+type `Result<T, E>`. À la place, utilisez plutôt `assert!(valeur.is_err())`.
 
 <!--
 Now that you know several ways to write tests, let’s look at what is happening

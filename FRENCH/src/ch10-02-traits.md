@@ -94,7 +94,7 @@ public `Resumable` qui décrit ce comportement.
 behavior provided by a `summarize` method</span>
 -->
 
-<span class="caption">Encart 10-12 : un trait `Resumable` qui représente le
+<span class="caption">Encart 10-12 : Un trait `Resumable` qui représente le
 comportement fourni par une méthode `resumer`</span>
 
 <!--
@@ -122,7 +122,7 @@ that any type that has the `Summary` trait will have the method `summarize`
 defined with this signature exactly.
 -->
 
-A la fin de la signature de la méthode, au lieu de renseigner une implémentation
+À la fin de la signature de la méthode, au lieu de renseigner une implémentation
 entre des accolades, nous utilisons un point-virgule. Chaque type qui implémente
 ce trait doit renseigner son propre comportement dans le corps de la méthode. Le
 compilateur va s'assurer que tous les types qui ont le trait `Resumable` auront
@@ -183,7 +183,7 @@ limité à 280 caractères.
 `NewsArticle` and `Tweet` types</span>
 -->
 
-<span class="caption">Encart 10-13 : implémentation du trait `Resumable` sur les
+<span class="caption">Encart 10-13 : Implémentation du trait `Resumable` sur les
 types `ArticleDePresse` et `Tweet`</span>
 
 <!--
@@ -203,7 +203,7 @@ voulons implémenter après le `impl`, et que nous utilisons ensuite le mot-clé
 `for` suivi du nom du type sur lequel nous souhaitons implémenter le trait. À
 l'intérieur du bloc `impl`, nous ajoutons les signatures des méthodes présentes
 dans la définition du trait. Au lieu d'ajouter un point-virgule après chaque
-signature, nous plaçons les accolades et on remplit le corps de la méthode avec
+signature, nous plaçons les accolades et nous remplissons le corps de la méthode avec
 le comportement spécifique que nous voulons que les méthodes du trait suivent
 pour le type en question.
 
@@ -339,7 +339,7 @@ signature de la méthode, comme nous l'avons fait dans l'encart 10-12.
 default implementation of the `summarize` method</span>
 -->
 
-<span class="caption">Encart 10-14 : définition du trait `Resumable` avec une
+<span class="caption">Encart 10-14 : Définition du trait `Resumable` avec une
 implémentation par défaut de la méthode `resumer`</span>
 
 <!--
@@ -609,7 +609,7 @@ only possible to express using a trait bound, like this:
 
 Si nous souhaitons permettre à `element1` et `element2` d'avoir des types
 différents, l'utilisation de `impl Trait` est appropriée (du moment que chacun
-de ces types implémentent `Resumable`). Mais si nous souhaitons forcer les deux
+de ces types implémente `Resumable`). Mais si nous souhaitons forcer les deux
 paramètres à être du même type, cela n'est possible à exprimer qu'avec un trait
 lié, comme ceci :
 
@@ -649,7 +649,7 @@ the `notify` definition that `item` must implement both `Display` and
 Nous pouvons aussi préciser que nous attendons plus d'un trait lié. Imaginons
 que nous souhaitons que `notifier` utilise le formatage d'affichage sur
 `element` ainsi que la méthode `resumer` : nous indiquons dans la définition de
-`notify` que `element` doit implémenter à la fois `Display` et `Resumable`.
+`notifier` que `element` doit implémenter à la fois `Display` et `Resumable`.
 Nous pouvons faire ceci avec la syntaxe `+` :
 
 <!--
@@ -860,8 +860,8 @@ to run that code, we received this error:
 Maintenant que vous savez comment renseigner le comportement que vous souhaitez
 utiliser en utilisant les traits liés des paramètres de type génériques,
 retournons à l'encart 10-5 pour corriger la définition de la fonction
-`le_plus_grand` qui utilise un paramètre de type générique ! La dernière fois
-que nous avons essayé de lancer ce code, nous avions l'erreur suivante :
+`le_plus_grand` qui utilise un paramètre de type générique ! La dernière fois
+que nous avons essayé de lancer ce code, nous avions l'erreur suivante :
 
 <!--
 ```console
@@ -983,7 +983,7 @@ function that works on any generic type that implements the `PartialOrd` and
 `Copy` traits</span>
 -->
 
-<span class="caption">Encart 10-15 : une définition de la fonction
+<span class="caption">Encart 10-15 : Une définition de la fonction
 `le_plus_grand` qui fonctionne et s'applique sur n'importe quel type générique
 qui implémente les traits `PartialOrd` et `Copy`</span>
 
@@ -1079,7 +1079,7 @@ l'affichage.
 generic type depending on trait bounds</span>
 -->
 
-<span class="caption">Encart 10-16 : implémentation de méthodes sur un type
+<span class="caption">Encart 10-16 : Implémentation de méthodes sur un type
 générique en fonction des traits liés</span>
 
 <!--

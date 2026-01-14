@@ -19,7 +19,7 @@ What would communicating by sharing memory look like? In addition, why would
 message-passing enthusiasts not use it and do the opposite instead?
 -->
 
-A quoi ressemble la communication par partage de mémoire ? De plus, pourquoi les
+À quoi ressemble la communication par partage de mémoire ? De plus, pourquoi les
 partisans de l'envoi de messages ne devraient-ils pas l'utiliser et faire plutôt
 le contraire ?
 
@@ -153,7 +153,7 @@ le contexte d'une seule tâche, comme dans l'encart 16-12 :
 single-threaded context for simplicity</span>
 -->
 
-<span class="caption">Encart 16-12 : découverte de l'API de `Mutex<T>` dans le
+<span class="caption">Encart 16-12 : Découverte de l'API de `Mutex<T>` dans le
 contexte d'une seule tâche pour raison de simplicité</span>
 
 <!--
@@ -268,7 +268,7 @@ correctement.
 guarded by a `Mutex<T>`</span>
 -->
 
-<span class="caption">Encart 16-13 : dix tâches qui augmentent chacune un
+<span class="caption">Encart 16-13 : Dix tâches qui augmentent chacune un
 compteur gardé par un `Mutex<T>`</span>
 
 <!--
@@ -374,7 +374,7 @@ avant de déplacer sa possession à la tâche.
 multiple threads to own the `Mutex<T>`</span>
 -->
 
-<span class="caption">Encart 16-14 : tentative d'utilisation d'un `Rc<T>` pour
+<span class="caption">Encart 16-14 : Tentative d'utilisation d'un `Rc<T>` pour
 nous permettre d'utiliser plusieurs tâches qui posséderont le `Mutex<T>`</span>
 
 <!--
@@ -382,7 +382,7 @@ Once again, we compile and get... different errors! The compiler is teaching us
 a lot.
 -->
 
-A nouveau, nous compilons et nous obtenons ... une erreur différente ! Le
+À nouveau, nous compilons et nous obtenons ... une erreur différente ! Le
 compilateur nous en apprend beaucoup.
 
 <!--
@@ -424,7 +424,7 @@ with it. What we need is a type exactly like `Rc<T>` but one that makes changes
 to the reference count in a thread-safe way.
 -->
 
-Malheureusement l'utilisation de `Rc<T>` n'est pas sure lorsqu'il est partagé
+Malheureusement, l'utilisation de `Rc<T>` n'est pas sûre lorsqu'il est partagé
 entre plusieurs tâches. Lorsque `Rc<T>` gère le compteur de références, il
 incrémente le compteur autant de fois que nous avons fait appel à `clone` et
 décrémente le compteur à chaque fois qu'un clone est libéré. Mais il n'utilise
@@ -434,7 +434,7 @@ provoquer des bogues subtils induisant une mauvaise gestion du compteur, ce qui
 pourrait provoquer des fuites de mémoire ou faire qu'une valeur soit libérée
 avant que nous ayions fini de l'utiliser. Nous avons besoin d'un type
 exactement comme `Rc<T>` mais qui procède aux changements du compteur de
-références de manière sure en situation de concurrence.
+références de manière sûre en situation de concurrence.
 
 <!--
 #### Atomic Reference Counting with `Arc<T>`
@@ -455,7 +455,7 @@ types but are safe to share across threads.
 Heureusement, `Arc<T>` *est* un type comme `Rc<T>` qui est sûr en
 situation de concurrence. Le *A* signifie *atomique*, ce qui signifie que c'est
 un type *compteur de références atomique*. L'atome est une sorte de primitive
-concurrente que nous n'allons pas aborder en détails ici : rendez-vous dans la
+concurrente que nous n'allons pas aborder en détail ici : rendez-vous dans la
 documentation de la bibliothèque standard sur [`std::sync::atomic`][atomic]<!--
 ignore --> pour en savoir plus. Pour le moment, vous avez juste besoin de
 retenir que les atomes fonctionnent comme les types primitifs mais qui sont
@@ -510,7 +510,7 @@ s'exécuter :
 to be able to share ownership across multiple threads</span>
 -->
 
-<span class="caption">Encart 16-15 : utilisation d'un `Arc<T>` pour englober
+<span class="caption">Encart 16-15 : Utilisation d'un `Arc<T>` pour englober
 le `Mutex<T>` afin de partager la possession entre plusieurs tâches</span>
 
 <!--

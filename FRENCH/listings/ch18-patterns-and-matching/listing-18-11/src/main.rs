@@ -9,6 +9,6 @@ fn main() {
         _ => println!("Cas par défaut, x = {:?}", x),
     }
 
-    println!("A la fin : x = {:?}, y = {:?}", x, y);
+    println!("À la fin : x = {:?}, y = {:?}", x, y);
     // ANCHOR_END: here
 }

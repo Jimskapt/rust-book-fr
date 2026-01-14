@@ -37,7 +37,7 @@ failure is impossible, but you as a human can. The chapter will conclude with
 some general guidelines on how to decide whether to panic in library code.
 -->
 
-Dans certains cas comme les exemples, les prototypes, et les tests, il est plus
+Dans certains cas comme les exemples, les prototypes et les tests, il est plus
 approprié d'écrire du code qui panique plutôt que de retourner un `Result`.
 Nous allons voir pourquoi, puis nous verrons des situations dans lesquelles
 vous savez en tant qu'humain qu'un code ne peut pas échouer, mais que le
@@ -62,7 +62,7 @@ handle errors, which can differ based on what the rest of your code is doing.
 Lorsque vous écrivez un exemple pour illustrer un concept, y rajouter un code
 de gestion des erreurs très résilient peut nuire à la clarté de l'exemple. Dans
 les exemples, il est courant d'utiliser une méthode comme `unwrap` (qui peut
-faire un panic) pour remplacer le code de gestion de l'erreur que vous
+faire un `panic!`) pour remplacer le code de gestion de l'erreur que vous
 utiliseriez en temps normal dans votre application, et qui peut changer en
 fonction de ce que le reste de votre code va faire.
 
@@ -238,7 +238,7 @@ documentation for the function.
 -->
 
 Lorsque votre code effectue des opérations sur des valeurs, votre code devrait
-d'abord vérifier que ces valeurs sont valides, et faire un panic si les valeurs
+d'abord vérifier que ces valeurs sont valides, et faire un `panic!` si les valeurs
 ne sont pas correctes. C'est essentiellement pour des raisons de sécurité :
 tenter de travailler avec des données invalides peut exposer votre code à des
 vulnérabilités. C'est la principale raison pour laquelle la bibliothèque
@@ -252,7 +252,7 @@ du côté de l'appelant, et ce n'est pas le genre d'erreur que vous voulez que l
 code appelant gère explicitement. En fait, il n'y a aucun moyen rationnel pour
 que le code appelant se corrige : le *développeur* du code appelant doit
 corriger le code. Les contrats d'une fonction, en particulier lorsqu'une
-violation va causer un panic, doivent être expliqués dans la documentation de
+violation va causer un `panic!`, doivent être expliqués dans la documentation de
 l'API de ladite fonction.
 
 <!--
@@ -360,8 +360,8 @@ with this requirement, having a check like this in every function would be
 tedious (and might impact performance).
 -->
 
-Cependant, ce n'est pas une solution idéale : si c'était absolument critique
-que le programme ne travaille qu'avec des valeurs entre 1 et 100 et qu'il aurait
+Cependant, ce n'est pas une solution idéale : s'il était absolument critique
+que le programme ne travaille qu'avec des valeurs entre 1 et 100 et qu'il y avait
 de nombreuses fonctions qui reposent sur cette condition, cela pourrait être
 fastidieux (et cela impacterait potentiellement la performance) de faire une
 vérification comme celle-ci dans chacune de ces fonctions.
@@ -405,7 +405,7 @@ purposes. -- >
 values between 1 and 100</span>
 -->
 
-<span class="caption">Encart 9-13 : un type `Supposition` qui ne va continuer
+<span class="caption">Encart 9-13 : Un type `Supposition` qui ne va continuer
 que si la valeur est entre 1 et 100</span>
 
 <!--

@@ -32,7 +32,7 @@ library are doing what you expect them to, separately and together.
 -->
 
 L'écriture de ces deux types de tests est importante pour s'assurer que chaque
-élément de notre bibliothèque fait bien ce que vous attendiez d'eux, de
+élément de notre bibliothèque fait bien ce que vous attendez d'eux, de
 manière isolée et conjuguée avec d'autres.
 
 <!--
@@ -53,7 +53,7 @@ in each file to contain the test functions and to annotate the module with
 Le but des tests unitaires est de tester chaque élément du code de manière
 séparée du reste du code pour identifier rapidement où le code fonctionne
 ou non comme prévu. Vous devriez insérer les tests unitaires dans le
-dossier *src* dans chaque fichier, à côté du code qu'ils testent. La convention
+répertoire *src* dans chaque fichier, à côté du code qu'ils testent. La convention
 est de créer un module `tests` dans chaque fichier qui contient les fonctions
 de test et de marquer le module avec `cfg(test)`.
 
@@ -78,7 +78,7 @@ L'annotation `#[cfg(test)]` sur les modules de tests indique à Rust de
 compiler et d'exécuter le code de test seulement lorsque vous lancez
 `cargo test`, et non pas lorsque vous lancez `cargo build`. Cela diminue la
 durée de compilation lorsque vous souhaitez uniquement compiler la bibliothèque
-et cela réduit la taille dans l'artefact compilé qui en résulte car les tests
+et cela réduit la taille dans l'artéfact compilé qui en résulte car les tests
 n'y sont pas intégrés. Vous verrez plus tard que comme les tests d'intégration
 se placent dans un répertoire différent, ils n'ont pas besoin de l'annotation
 `#[cfg(test)]`. Cependant, comme les tests unitaires vont dans les mêmes
@@ -145,7 +145,7 @@ Consider the code in Listing 11-12 with the private function `internal_adder`.
 
 Il existe un débat dans la communauté des testeurs au sujet de la nécessité ou non
 de tester directement les fonctions privées, et d'autres langages rendent
-difficile, voir impossible, de tester les fonctions privées. Quelle que soit
+difficile, voire impossible, de tester les fonctions privées. Quelle que soit
 votre approche des tests, les règles de protection de Rust vous permettent de
 tester des fonctions privées. Imaginons le code de l'encart 11-12 qui contient
 la fonction privée `addition_interne`.
@@ -170,7 +170,7 @@ la fonction privée `addition_interne`.
 <span class="caption">Listing 11-12: Testing a private function</span>
 -->
 
-<span class="caption">Encart 11-12 : test d'une fonction privée</span>
+<span class="caption">Encart 11-12 : Test d'une fonction privée</span>
 
 <!--
 Note that the `internal_adder` function is not marked as `pub`. Tests are just
@@ -218,13 +218,13 @@ de votre bibliothèque fonctionnent correctement ensemble. Les portions de code
 qui fonctionnent bien toutes seules pourraient rencontrer des problèmes une fois
 imbriquées avec d'autres, donc les tests qui couvrent l'intégration du code sont
 tout aussi importants. Pour créer des tests d'intégration, vous avez d'abord besoin
-d'un dossier *tests*.
+d'un répertoire *tests*.
 
 <!--
 #### The *tests* Directory
 -->
 
-#### Le dossier *tests*
+#### Le répertoire *tests*
 
 <!--
 We create a *tests* directory at the top level of our project directory, next
@@ -233,10 +233,10 @@ can then make as many test files as we want to in this directory, and Cargo
 will compile each of the files as an individual crate.
 -->
 
-Nous créons un dossier *tests* au niveau le plus haut de notre dossier projet,
+Nous créons un répertoire *tests* au niveau le plus haut de notre répertoire projet,
 juste à côté de *src*. Cargo sait qu'il doit rechercher les fichiers de test
-d'intégration dans ce dossier. Nous pouvons ensuite construire autant de
-fichiers de test que nous le souhaitons dans ce dossier, et Cargo va compiler
+d'intégration dans ce répertoire. Nous pouvons ensuite construire autant de
+fichiers de test que nous le souhaitons dans ce répertoire, et Cargo va compiler
 chacun de ces fichiers comme une crate individuelle.
 
 <!--
@@ -246,7 +246,7 @@ Let’s create an integration test. With the code in Listing 11-12 still in the
 -->
 
 Commençons à créer un test d'intégration. Avec le code de l'encart 11-12
-toujours présent dans le fichier *src/lib.rs*, créez un dossier *tests*, puis
+toujours présent dans le fichier *src/lib.rs*, créez un répertoire *tests*, puis
 un nouveau fichier *tests/test_integration.rs* et insérez-y le code de l'encart
 11-13.
 
@@ -271,7 +271,7 @@ un nouveau fichier *tests/test_integration.rs* et insérez-y le code de l'encart
 `adder` crate</span>
 -->
 
-<span class="caption">Encart 11-13 : un test d'intégration d'une fonction
+<span class="caption">Encart 11-13 : Un test d'intégration d'une fonction
 présente dans la crate `addition`</span>
 
 <!--
@@ -282,7 +282,7 @@ crate, so we need to bring our library into each test crate’s scope.
 
 Nous avons ajouté `use addition` en haut du code, ce que nous n'avions pas
 besoin de faire dans les tests unitaires. La raison à cela est que chaque
-fichier dans le dossier `tests` est une crate séparée, donc nous devons importer
+fichier dans le répertoire `tests` est une crate séparée, donc nous devons importer
 notre bibliothèque dans la portée de chaque crate de test.
 
 <!--
@@ -292,8 +292,8 @@ in this directory only when we run `cargo test`. Run `cargo test` now:
 -->
 
 Nous n'avons pas besoin de marquer du code avec `#[cfg(test)]` dans
-*tests/test_integration.rs*. Cargo traite le dossier `tests` de manière
-particulière et compile les fichiers présents dans ce dossier uniquement si nous
+*tests/test_integration.rs*. Cargo traite le répertoire `tests` de manière
+particulière et compile les fichiers présents dans ce répertoire uniquement si nous
 lançons `cargo test`. Lancez dès maintenant `cargo test` :
 
 <!--
@@ -347,7 +347,7 @@ vous aviez de lignes de résultats dans la section des tests unitaires, plus
 vous ajoutez des fonctions de tests aux fichiers de tests d'intégration et plus
 vous obtenez de lignes de résultat dans la section correspondant aux fichiers
 des tests d'intégration. Chaque fichier de test d'intégration a sa propre section,
-donc si nous ajoutons plus de fichiers dans le dossier *tests*, il y aura plus
+donc si nous ajoutons plus de fichiers dans le répertoire *tests*, il y aura plus
 de sections de tests d'intégration.
 
 <!--
@@ -393,11 +393,11 @@ file in the *tests* directory is compiled as its own separate crate.
 -->
 
 Au fur et à mesure que vous ajouterez des tests d'intégration, vous pourriez
-avoir besoin de les diviser en plusieurs fichiers dans le dossier *tests* pour
+avoir besoin de les diviser en plusieurs fichiers dans le répertoire *tests* pour
 vous aider à les organiser ; par exemple, vous pouvez regrouper les fonctions
 de test par fonctionnalités qu'elles testent. Comme mentionné précédemment,
-chaque fichier dans le dossier *tests* est compilé comme étant sa propre crate
-séparée de tous les autres.
+chaque fichier dans le répertoire *tests* est compilé comme étant sa propre crate
+séparée de toutes les autres.
 
 <!--
 Treating each integration test file as its own crate is useful to create
@@ -410,7 +410,7 @@ separate code into modules and files.
 Le fait que chaque fichier de test d'intégration soit sa propre crate est utile
 pour créer des portées séparées qui ressemblent à la manière dont les
 développeurs vont consommer votre crate. Cependant, cela veut aussi dire que
-les fichiers dans le dossier *tests* ne partagent pas le même comportement que les
+les fichiers dans le répertoire *tests* ne partagent pas le même comportement que
 les fichiers dans *src*, comme vous l'avez appris au chapitre 7 à
 propos de la manière de séparer le code dans des modules et des fichiers.
 
@@ -425,7 +425,7 @@ some code to `setup` that we want to call from multiple test functions in
 multiple test files:
 -->
 
-Ce comportement différent des fichiers dans le dossier *tests* est encore plus
+Ce comportement différent des fichiers dans le répertoire *tests* est encore plus
 notable lorsque vous avez un jeu de fonctions d'aide qui s'avèrent utiles
 pour plusieurs fichiers de test d'intégration et que vous essayez de suivre les
 étapes de la section [“Séparer les modules dans différents
@@ -501,7 +501,7 @@ fichier ainsi indique à Rust de ne pas traiter le module `commun` comme un
 fichier de test d'intégration. Lorsque nous déplaçons le code de la fonction
 `parametrage` dans *tests/commun/mod.rs* et que nous supprimons le fichier
 *tests/commun.rs*, la section dans la sortie des tests ne va plus s'afficher.
-Les fichiers dans les sous-répertoires du dossier *tests* ne seront pas
+Les fichiers dans les sous-répertoires du répertoire *tests* ne seront pas
 compilés comme étant une crate séparée et n'auront pas de sections dans la
 sortie des tests.
 
@@ -558,7 +558,7 @@ crates can use; binary crates are meant to be run on their own.
 
 Si notre projet est une crate binaire qui contient uniquement un fichier
 *src/main.rs* et n'a pas de fichier *src/lib.rs*, nous ne pouvons pas créer
-de tests d'intégration dans le dossier *tests* et importer les fonctions
+de tests d'intégration dans le répertoire *tests* et importer les fonctions
 définies dans le fichier *src/main.rs* dans notre portée avec une instruction
 `use`. Seules les crates de bibliothèque exposent des fonctions que les autres
 crates peuvent utiliser ; les crates binaires sont conçues pour être exécutées
@@ -578,8 +578,8 @@ C'est une des raisons pour lesquelles les projets Rust qui fournissent un
 binaire ont un simple fichier *src/main.rs* qui fait appel à la logique
 présente dans le fichier *src/lib.rs*. En utilisant cette structure, les tests
 d'intégration *peuvent* tester la crate de bibliothèque avec le `use` pour
-importer les importantes fonctionnalités disponibles. Si les fonctionnalités
-importantes fonctionnent, la petite portion de code dans le fichier
+pouvoir accéder à la fonctionnalité importante. Si la fonctionnalité
+importante fonctionne, la petite portion de code dans le fichier
 *src/main.rs* va fonctionner, et cette petite partie de code n'a pas besoin
 d'être testée.
 

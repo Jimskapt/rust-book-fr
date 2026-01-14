@@ -126,7 +126,7 @@ comme dans l'encart 10-1.
 of numbers</span>
 -->
 
-<span class="caption">Encart 10-1 : le code pour trouver le nombre le plus grand
+<span class="caption">Encart 10-1 : Le code pour trouver le nombre le plus grand
 dans une liste de nombres</span>
 
 <!--
@@ -181,7 +181,7 @@ deux endroits différents du programme, comme dans l'encart 10-2.
 lists of numbers</span>
 -->
 
-<span class="caption">Encart 10-2 : le code pour trouver le plus grand nombre
+<span class="caption">Encart 10-2 : Le code pour trouver le plus grand nombre
 dans *deux* listes de nombres</span>
 
 <!--
@@ -240,7 +240,7 @@ listes différentes.
 in two lists</span>
 -->
 
-<span class="caption">Encart 10-3 : du code abstrait qui trouve le plus grand
+<span class="caption">Encart 10-3 : Du code abstrait qui trouve le plus grand
 nombre dans deux listes</span>
 
 <!--
@@ -259,7 +259,7 @@ n'importe quelle slice concrète de valeurs `i32` que nous pouvons passer à la
 fonction. Au final, lorsque nous appelons la fonction, le code s'exécute sur les
 valeurs précises que nous lui avons fournies. Mais ne nous préoccupons pas de
 la syntaxe de la boucle `for` pour l'instant. Ici, nous n'utilisons pas une
-référence vers un `i32`, nous destructurons via le filtrage par motif chaque
+référence vers un `i32`, nous déstructurons via le filtrage par motif chaque
 `&i32` afin que la boucle `for` utilise cet `element` en tant que `i32` dans le
 corps de la boucle. Nous parlerons plus en détails du filtrage par motif au
 [chapitre 18][ch18]<!-- ignore -->.

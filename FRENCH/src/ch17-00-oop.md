@@ -24,7 +24,7 @@ influencé l'architecture de programmation d'Alan Kay dans laquelle les objets
 s'envoient des messages. Il a inventé le terme *programmation orientée objet* en
 1967 pour décrire cette architecture. Plusieurs définitions de la POO
 s'opposent ; Rust est considéré comme orienté objet selon certaines définitions
-mais pas par d'autres. Dans ce chapitre, nous examinerons certaines
+mais pas selon d'autres. Dans ce chapitre, nous examinerons certaines
 caractéristiques généralement considérées comme orientées objet et nous verrons
 comment ces caractéristiques se traduisent en code Rust traditionnel. Puis nous
 vous montrerons comment implémenter un patron de conception orienté objet en

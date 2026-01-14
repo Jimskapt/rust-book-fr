@@ -150,7 +150,7 @@ vrai programme devrait recevoir d'une saisie d'un utilisateur.
 and `else`</span>
 -->
 
-<span class="caption">Encart 18-1 : mélange de `if let`, `else if`,
+<span class="caption">Encart 18-1 : Mélange de `if let`, `else if`,
 `else if let`, et `else`</span>
 
 <!--
@@ -244,7 +244,7 @@ vecteur dans l'ordre opposé à celui dans lequel elles ont été insérées.
 for as long as `stack.pop()` returns `Some`</span>
 -->
 
-<span class="caption">Encart 18-2 : utilisation d'une boucle `while let` pour
+<span class="caption">Encart 18-2 : Utilisation d'une boucle `while let` pour
 afficher les valeurs aussi longtemps que `pile.pop()` retourne une `Some`</span>
 
 <!--
@@ -303,7 +303,7 @@ déstructurer, ou décomposer, un tuple faisant partie de la boucle `for`.
 destructure a tuple</span>
 -->
 
-<span class="caption">Encart 18-3 : utilisation d'un motif dans une boucle `for`
+<span class="caption">Encart 18-3 : Utilisation d'un motif dans une boucle `for`
 pour déstructurer un tuple</span>
 
 <!--
@@ -408,7 +408,7 @@ To see the pattern matching aspect of `let` more clearly, consider Listing
 -->
 
 Pour comprendre plus clairement l'aspect filtrage par motif de `let`, examinons
-l'encart 18-4, qui utilise un motif `let` pour destructurer un tuple.
+l'encart 18-4, qui utilise un motif `let` pour déstructurer un tuple.
 
 <!--
 ```rust
@@ -425,7 +425,7 @@ l'encart 18-4, qui utilise un motif `let` pour destructurer un tuple.
 create three variables at once</span>
 -->
 
-<span class="caption">Encart 18-4 : utilisation d'un motif pour destructurer un
+<span class="caption">Encart 18-4 : Utilisation d'un motif pour déstructurer un
 tuple et créer trois variables à la fois</span>
 
 <!--
@@ -468,7 +468,7 @@ fonctionner.
 variables don’t match the number of elements in the tuple</span>
 -->
 
-<span class="caption">Encart 18-5 : construction incorrecte d'un motif dont les
+<span class="caption">Encart 18-5 : Construction incorrecte d'un motif dont les
 variables ne vont pas correspondre au nombre d'éléments présents dans le tuple
 </span>
 
@@ -534,7 +534,7 @@ Les paramètres de fonctions peuvent aussi être des motifs. Le code de l'encart
 parameters</span>
 -->
 
-<span class="caption">Encart 18-6 : une signature de fonction qui utilise des
+<span class="caption">Encart 18-6 : Une signature de fonction qui utilise des
 motifs dans ses paramètres</span>
 
 <!--
@@ -569,7 +569,7 @@ d'une fonction.
 a tuple</span>
 -->
 
-<span class="caption">Encart 18-7 : une fonction avec des paramètres qui
+<span class="caption">Encart 18-7 : Une fonction avec des paramètres qui
 déstructurent un tuple</span>
 
 <!--
@@ -599,7 +599,7 @@ be irrefutable; in other circumstances, they can be refutable. We’ll discuss
 these two concepts next.
 -->
 
-A présent, vous avez vu plusieurs façons d'utiliser les motifs, mais les motifs
+À présent, vous avez vu plusieurs façons d'utiliser les motifs, mais les motifs
 ne fonctionnent pas de la même manière dans toutes les situations où nous les
 utilisons. Des fois, le motif sera irréfutable ; d'autres fois, il sera
 réfutable. C'est ce que nous allons voir tout de suite.

@@ -296,6 +296,7 @@ Nous avons déjà utilisé des instructions et des expressions. La création d'u
 variable en lui assignant une valeur avec le mot-clé `let` est une instruction.
 Dans l'encart 3-1, `let y = 6;` est une instruction.
 
+
 <!--
 <span class="filename">Filename: src/main.rs</span>
 -->
@@ -318,7 +319,7 @@ Dans l'encart 3-1, `let y = 6;` est une instruction.
 -->
 <!-- markdownlint-restore -->
 
-<span class="caption">Encart 3-1 : une fonction `main` qui contient une
+<span class="caption">Encart 3-1 : Une fonction `main` qui contient une
 instruction</span>
 
 <!--

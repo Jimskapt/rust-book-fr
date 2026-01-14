@@ -39,12 +39,12 @@ de logiciels suit ces trois étapes :
 4. Repeat from step 1!
 -->
 
-1. Ecrire un test qui échoue et lancez-le pour vous assurer qu'il va échouer
+1. Écrivez un test qui échoue et lancez-le pour vous assurer qu'il va échouer
    pour la raison que vous attendiez.
-2. Ecrire ou modifier juste assez de code pour faire réussir ce nouveau test.
-3. Remanier le code que vous venez d'ajouter ou de changer pour vous assurer
+2. Écrivez ou modifiez juste assez de code pour faire réussir ce nouveau test.
+3. Remaniez le code que vous venez d'ajouter ou de changer pour vous assurer
    que les tests continuent à réussir.
-4. Recommencer à l'étape 1 !
+4. Recommencez à l'étape 1 !
 
 <!--
 This process is just one of many ways to write software, but TDD can help drive
@@ -53,7 +53,7 @@ test pass helps to maintain high test coverage throughout the process.
 -->
 
 Ce processus n'est qu'une des différentes manières d'écrire des programmes,
-mais le TDD peut aussi aider à piloter sa conception. Ecrire les tests avant
+mais le TDD peut aussi aider à piloter sa conception. Écrire les tests avant
 d'écrire le code qui fait réussir les tests aide à maintenir une haute
 couverture de tests tout le long du processus.
 
@@ -73,7 +73,7 @@ cette fonctionnalité dans une fonction `rechercher`.
 ### Writing a Failing Test
 -->
 
-### Ecrire un test qui échoue
+### Écrire un test qui échoue
 
 <!--
 Because we don’t need them anymore, let’s remove the `println!` statements from
@@ -130,10 +130,10 @@ the `search` function contains only the line we expect.
 
 Ce test recherche la chaîne de caractères `"duct"`. Le texte dans lequel nous
 recherchons fait trois lignes, et seulement une d'entre elles contient `"duct"`
-(remarquez que l'antislash après la double-guillet ouvrante indique à Rust de
-ne pas insérer un caractère de nouvelle ligne au début du contenu de ce litéral
+(remarquez que la barre oblique inverse après le double guillemet ouvrant indique à Rust de
+ne pas insérer un caractère de nouvelle ligne au début du contenu de ce littéral
 de chaîne de caractère). Nous vérifions que la valeur retournée par la fonction
-`rechercher` contient seulement la ligne que nous avions prévu.
+`rechercher` contient seulement la ligne que nous avions prévue.
 
 <!--
 We aren’t able to run this test and watch it fail because the test doesn’t even
@@ -187,8 +187,8 @@ argument `query`).
 -->
 
 Remarquez que nous avons besoin de préciser explicitement une durée de vie `'a`
-définie dans la signature de `rechercher` et l'utiliser sur l'argument `contenu`
-et la valeur de retour. Rappelez-vous que dans le
+définie dans la signature de `rechercher` et de l'utiliser sur l'argument `contenu`
+ainsi que la valeur de retour. Rappelez-vous que dans le
 [chapitre 10][ch10-lifetimes]<!-- ignore --> nous avions vu que le paramètre
 de durée de vie indique quelle durée de vie d'argument est connectée
 à la durée de vie de la valeur de retour. Dans notre cas, nous indiquons que le
@@ -285,7 +285,7 @@ sorte qu'il réussisse !
 ### Writing Code to Pass the Test
 -->
 
-### Ecrire du code pour réussir au test
+### Écrire du code pour réussir au test
 
 <!--
 Currently, our test is failing because we always return an empty vector. To fix
@@ -377,7 +377,7 @@ collection.
 #### Searching Each Line for the Query
 -->
 
-#### Trouver chaque ligne correspondante à la recherche
+#### Trouver chaque ligne correspondant à la recherche
 
 <!--
 Next, we’ll check whether the current line contains our query string.
@@ -492,7 +492,7 @@ return to this example in [Chapter 13][ch13-iterators]<!-- ignore -- >, where we
 explore iterators in detail, and look at how to improve it.
 -->
 
-Arrivé à ce stade, nous pourrions envisager des pistes de remaniement pour
+Arrivés à ce stade, nous pourrions envisager des pistes de remaniement pour
 l'implémentation de la fonction de recherche tout en faisant en sorte que les
 tests réussissent toujours afin de conserver les mêmes fonctionnalités. Le code
 de la fonction de recherche n'est pas mauvais, mais il ne profite pas de

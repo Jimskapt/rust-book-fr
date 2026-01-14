@@ -2,7 +2,7 @@
 # Final Project: Building a Multithreaded Web Server
 -->
 
-# Projet final : construire un serveur web multitâches
+# Projet final : construire un serveur web multitâches
 
 <!--
 It’s been a long journey, but we’ve reached the end of the book. In this
@@ -34,7 +34,7 @@ Pour notre projet final, nous allons construire un serveur web qui dit
 <span class="caption">Figure 20-1: Our final shared project</span>
 -->
 
-<span class="caption">Illustration 20-1 : notre dernier projet en commun</span>
+<span class="caption">Illustration 20-1 : Notre dernier projet en commun</span>
 
 <!--
 Here is the plan to build the web server:

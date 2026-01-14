@@ -16,7 +16,7 @@ most often.
 
 Un *pointeur* est un concept général pour une variable qui contient une adresse
 vers la mémoire. Cette adresse pointe vers d'autres données. Le type de pointeur
-le plus courant en Rust est la référence, que vous avez appris au chapitre 4.
+le plus courant en Rust est la référence, que vous avez apprise au chapitre 4.
 Les références sont marquées par le symbole `&` et empruntent la valeur sur
 laquelle elles pointent. Elles n'ont pas d'autres fonctionnalités que celle de
 pointer sur une donnée. De plus, elles n'ont aucun coût sur les performances et
@@ -118,12 +118,12 @@ pointeurs intelligents les plus courants de la bibliothèque standard :
   the borrowing rules at runtime instead of compile time
 -->
 
-* `Box<T>` pour l'allocation de valeurs sur le tas
+* `Box<T>` pour l'allocation de valeurs sur le tas ;
 * `Rc<T>`, un type comptant les références, qui permet d'avoir plusieurs
-  propriétaires
+  propriétaires ;
 * `Ref<T>` et `RefMut<T>`, auxquels on accède via `RefCell<T>`, un type
   qui permet d'appliquer les règles d'emprunt au moment de l'exécution plutôt
-  qu'au moment de la compilation
+  qu'au moment de la compilation.
 
 <!--
 In addition, we’ll cover the *interior mutability* pattern where an immutable

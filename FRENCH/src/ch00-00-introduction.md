@@ -10,8 +10,8 @@
 > Press][nsp].
 -->
 
-> Note : la version anglaise de ce livre est disponible au format papier et
-> ebook chez [No Starch Press][nsp] à cette adresse :
+> Note : la version anglaise de ce livre est disponible au format papier et
+> ebook chez [No Starch Press][nsp] à cette adresse :
 > [The Rust Programming Language][nsprust]
 
 <!--
@@ -89,7 +89,7 @@ Rust also brings contemporary developer tools to the systems programming world:
 -->
 
 Rust offre aussi des outils de développement modernes au monde de la
-programmation système :
+programmation système :
 
 <!--
 * Cargo, the included dependency manager and build tool, makes adding,
@@ -269,7 +269,7 @@ chapters, we’ll build small programs together, applying what you’ve learned 
 far. Chapters 2, 12, and 20 are project chapters; the rest are concept chapters.
 -->
 
-Vous allez rencontrer deux différents types de chapitres dans ce livre : les
+Vous allez rencontrer deux différents types de chapitres dans ce livre : les
 chapitres théoriques et les chapitres de projet. Dans les chapitres théoriques,
 vous allez apprendre un sujet à propos de Rust. Dans un chapitre de projet, nous
 allons construire ensemble des petits programmes, pour appliquer ce que vous
@@ -359,7 +359,7 @@ Chapter 15 discusses smart pointers that the standard library provides and the
 traits that enable their functionality.
 -->
 
-Le chapitre 13 explorera les fermetures *(closures)* et itérateurs : ce sont les
+Le chapitre 13 explorera les fermetures *(closures)* et itérateurs : ce sont les
 fonctionnalités de Rust inspirées des langages de programmation fonctionnels.
 Au chapitre 14, nous explorerons plus en profondeur Cargo et les bonnes
 pratiques pour partager vos propres bibliothèques avec les autres. Le chapitre
@@ -421,8 +421,8 @@ You might have to jump back to earlier chapters if you experience any
 confusion. But do whatever works for you.
 -->
 
-Il n'y a pas de mauvaise manière de lire ce livre : si vous voulez sauter des
-étapes, allez-y !
+Il n'y a pas de mauvaise manière de lire ce livre : si vous voulez sauter des
+étapes, allez-y !
 Vous devrez alors peut-être revenir sur les chapitres précédents si vous
 éprouvez des difficultés. Mais faites comme bon vous semble.
 
@@ -443,14 +443,14 @@ error. Ferris will also help you distinguish code that isn’t meant to work:
 -->
 
 Une composante importante du processus d'apprentissage de Rust est de comprendre
-comment lire les messages d'erreur qu'affiche le compilateur : ils vous
+comment lire les messages d'erreur qu'affiche le compilateur : ils vous
 guideront vers du code correct.
 Ainsi, nous citerons de nombreux exemples qui ne compilent pas, avec le message
 d'erreur que le compilateur devrait vous afficher dans chaque cas. C'est donc
 normal que dans certains cas, si vous copiez et exécutez un exemple au hasard,
-il ne compile pas ! Assurez-vous d'avoir lu le texte autour pour savoir si
+il ne compile pas ! Assurez-vous d'avoir lu le texte autour pour savoir si
 l'exemple que vous tentez de compiler doit échouer. Ferris va aussi vous aider
-à identifier du code qui ne devrait pas fonctionner :
+à identifier du code qui ne devrait pas fonctionner :
 
 <!-- markdownlint-disable -->
 <!--
@@ -464,8 +464,8 @@ l'exemple que vous tentez de compiler doit échouer. Ferris va aussi vous aider
 
 | Ferris                                                                                                                             | Signification                           |
 |------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| <img src="img/ferris/does_not_compile.svg" class="ferris-explain" alt="Ferris avec un point d'interrogation"/>                     | Ce code ne compile pas !                |
-| <img src="img/ferris/panics.svg" class="ferris-explain" alt="Ferris qui lève ses bras"/>                                           | Ce code panique !                       |
+| <img src="img/ferris/does_not_compile.svg" class="ferris-explain" alt="Ferris avec un point d'interrogation"/>                     | Ce code ne compile pas !                |
+| <img src="img/ferris/panics.svg" class="ferris-explain" alt="Ferris qui lève ses bras"/>                                           | Ce code panique !                       |
 | <img src="img/ferris/not_desired_behavior.svg" class="ferris-explain" alt="Ferris avec une pince en l'air, haussant les épaules"/> | Ce code ne se comporte pas comme voulu. |
 
 <!--

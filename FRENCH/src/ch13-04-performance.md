@@ -168,7 +168,7 @@ the loop.
 
 Les calculs dans des applications comme les décodeurs audio donnent souvent la
 priorité aux performances. Ici, nous créons un itérateur à l'aide de deux
-adaptateurs, puis nous en consommons la valeur. A quel code d'assemblage
+adaptateurs, puis nous en consommons la valeur. À quel code d'assemblage
 ce code Rust ressemblera-t-il une fois compilé ? Et bien, à l'heure
 où nous écrivons ces lignes, il donne le même code assembleur que vous
 écririez à la main. Il n'y a pas du tout de boucle correspondant à l'itération
@@ -191,7 +191,7 @@ est très rapide d'accéder à ces valeurs. Il n'y a pas de vérification des bo
 sur les accès au tableau à l'exécution. Toutes ces optimisations que Rust est
 capable d'appliquer rendent le code produit extrêmement efficace. Maintenant
 que vous savez cela, vous pouvez utiliser des itérateurs et des fermetures
-sans crainte ! Ils font en sorte que le code soit de haut niveau, mais n'entraînent
+sans crainte ! Ils font en sorte que le code soit de haut niveau, mais n'entraînent
 pas de pénalité de performance à l'exécution.
 
 <!--

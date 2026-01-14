@@ -17,7 +17,7 @@ will never be dropped.
 
 Les garanties de sécurité de la mémoire de Rust rendent difficile, mais pas
 impossible, la création accidentelle de mémoire qui n'est jamais nettoyée
-(aussi appelée *fuite de mémoire*). Eviter totalement les fuites de mémoire
+(aussi appelée *fuite de mémoire*). Éviter totalement les fuites de mémoire
 n'est pas une des garanties de Rust, en tout cas pas comme pour l'accès
 concurrent au moment de la compilation, ce qui signifie que les fuites de
 mémoire sont sans risque pour la mémoire avec Rust. Nous pouvons constater
@@ -64,7 +64,7 @@ de l'encart 15-25 :
 `RefCell<T>` so we can modify what a `Cons` variant is referring to</span>
 -->
 
-<span class="caption">Encart 15-25 : une liste de construction qui stocke une
+<span class="caption">Encart 15-25 : Une liste de construction qui stocke une
 `RefCell<T>` pour que nous puissions modifier ce sur quoi une variante `Cons`
 pointe</span>
 
@@ -121,7 +121,7 @@ références à différents endroits du processus.
 values pointing to each other</span>
 -->
 
-<span class="caption">Encart 15-26 : création d'une boucle de références de
+<span class="caption">Encart 15-26 : Création d'une boucle de références de
 deux valeurs `List` qui se pointent mutuellement dessus</span>
 
 <!--
@@ -183,7 +183,7 @@ diagram in Figure 15-4.
 -->
 
 Les compteurs de références des instances de `Rc<List>` valent tous les deux 2
-pour `a` et `b` après avoir modifié `a` pour qu'elle pointe sur `b`. A la fin
+pour `a` et `b` après avoir modifié `a` pour qu'elle pointe sur `b`. À la fin
 du `main`, Rust nettoie d'abord la variable `b`, ce qui décrémente le compteur
 de références dans l'instance `Rc<List>` de 2 à 1. La mémoire utilisée sur le
 tas par `Rc<List>` ne sera pas libérée à ce moment, car son compteur de
@@ -208,7 +208,7 @@ l'illustration 15-4.
 pointing to each other</span>
 -->
 
-<span class="caption">Illustration 15-4 : une boucle de références entre les
+<span class="caption">Illustration 15-4 : Une boucle de références entre les
 listes `a` et `b` qui se pointent mutuellement dessus</span>
 
 <!--
@@ -283,7 +283,7 @@ boucles de références.
 ### Preventing Reference Cycles: Turning an `Rc<T>` into a `Weak<T>`
 -->
 
-### Eviter les boucles de références : transformer un `Rc<T>` en `Weak<T>`
+### Éviter les boucles de références : transformer un `Rc<T>` en `Weak<T>`
 
 <!--
 So far, we’ve demonstrated that calling `Rc::clone` increases the
@@ -433,7 +433,7 @@ enfant, comme dans l'encart 15-27 :
 and a `branch` node with `leaf` as one of its children</span>
 -->
 
-<span class="caption">Encart 15-27 : création d'un nœud `feuille` sans aucun
+<span class="caption">Encart 15-27 : Création d'un nœud `feuille` sans aucun
 enfant et un nœud `branche` avec `feuille` comme enfant</span>
 
 <!--
@@ -547,7 +547,7 @@ moyen de pointer vers son parent, `branche` :
 parent node `branch`</span>
 -->
 
-<span class="caption">Encart 15-28 : un nœud `feuille` avec une référence faible
+<span class="caption">Encart 15-28 : Un nœud `feuille` avec une référence faible
 vers son nœud parent, `branche`</span>
 
 <!--
@@ -567,7 +567,7 @@ the `upgrade` method, we get a `None` value. We see this in the output from the
 first `println!` statement:
 -->
 
-A ce moment-là, lorsque nous essayons d'obtenir une référence vers le parent de
+À ce moment-là, lorsque nous essayons d'obtenir une référence vers le parent de
 `feuille` en utilisant la méthode `upgrade`, nous obtenons une valeur `None`.
 Nous constatons cela dans la première instruction `println!` sur la sortie :
 
@@ -682,7 +682,7 @@ dans l'encart 15-29 :
 examining strong and weak reference counts</span>
 -->
 
-<span class="caption">Encart 15-29 : création de `branche` dans une portée
+<span class="caption">Encart 15-29 : Création de `branche` dans une portée
 interne et vérification des compteurs de références strong et weak</span>
 
 <!--
@@ -726,7 +726,7 @@ reference to the `Rc<Node>` again.
 -->
 
 Si nous essayons d'accéder au parent de `feuille` après la fin de la portée,
-nous allons à nouveau obtenir `None`. A la fin du programme, le `Rc<Noeud>`
+nous allons à nouveau obtenir `None`. À la fin du programme, le `Rc<Noeud>`
 dans `feuille` a son compteur strong à 1 et son compteur weak à 0, car la
 variable `feuille` est à nouveau la seule référence au `Rc<Noeud>`.
 

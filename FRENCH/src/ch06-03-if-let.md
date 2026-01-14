@@ -158,7 +158,7 @@ express using a `match`, remember that `if let` is in your Rust toolbox as well.
 -->
 
 Si vous trouvez que votre programme est alourdi par l'utilisation d'un `match`,
-souvenez-vous que `if let` est aussi présent dans votre boite à outils Rust.
+souvenez-vous que `if let` est aussi présent dans votre boîte à outils Rust.
 
 <!--
 ## Summary

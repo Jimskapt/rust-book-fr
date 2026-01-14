@@ -41,13 +41,13 @@ tels que :
   reliably
 -->
 
-* Les situations de concurrence, durant lesquelles les tâches accèdent à des
-  données ou des ressources dans un ordre incohérent
-* Des interblocages, durant lesquels deux tâches attendent mutuellement que
+* les situations de concurrence, durant lesquelles les tâches accèdent à des
+  données ou des ressources dans un ordre incohérent ;
+* des interblocages, durant lesquels deux tâches attendent mutuellement que
   l'autre finisse d'utiliser une ressource que l'autre tâche utilise, bloquant
-  la progression des deux tâches
-* Des bogues qui surgissent uniquement dans certaines situations et qui sont
-  difficiles à reproduire et corriger durablement
+  la progression des deux tâches ;
+* des bogues qui surgissent uniquement dans certaines situations et qui sont
+  difficiles à reproduire et corriger durablement.
 
 <!--
 Rust attempts to mitigate the negative effects of using threads, but
@@ -118,7 +118,7 @@ et un autre texte à partir d'une nouvelle tâche :
 while the main thread prints something else</span>
 -->
 
-<span class="caption">Encart 16-1 : création d'une nouvelle tâche pour afficher
+<span class="caption">Encart 16-1 : Création d'une nouvelle tâche pour afficher
 une chose pendant que la tâche principale affiche autre chose</span>
 
 <!--
@@ -254,7 +254,7 @@ bien avant que `main` ne se termine :
 to guarantee the thread is run to completion</span>
 -->
 
-<span class="caption">Encart 16-2 : sauvegarde d'un `JoinHandle` d'un
+<span class="caption">Encart 16-2 : Sauvegarde d'un `JoinHandle` d'un
 `thread::spawn` pour garantir que la tâche est exécutée jusqu'à la fin</span>
 
 <!--
@@ -421,7 +421,7 @@ Le mot-clé `move` est souvent utilisé avec des fermetures passées à
 `thread::spawn` car la fermeture va alors prendre possession des valeurs de son
 environnement qu'elle utilise, ce qui transfère la possession des valeurs d'une
 tâche à une autre. Dans [une section du chapitre 13][capture]<!-- ignore -->,
-nous avons présenté `move` dans le contexte des fermetures. A présent, nous
+nous avons présenté `move` dans le contexte des fermetures. À présent, nous
 allons plus nous concentrer sur l'interaction entre `move` et `thread::spawn`.
 
 <!--
@@ -463,7 +463,7 @@ constater dans un moment.
 main thread in another thread</span>
 -->
 
-<span class="caption">Encart 16-3 : tentative d'utilisation d'un vecteur créé
+<span class="caption">Encart 16-3 : Tentative d'utilisation d'un vecteur créé
 par la tâche principale dans une autre tâche</span>
 
 <!--
@@ -505,7 +505,7 @@ Listing 16-4 provides a scenario that’s more likely to have a reference to `v`
 that won’t be valid:
 -->
 
-L'encart 16-4 propose un scénario qui est a plus de chance d'avoir une
+L'encart 16-4 propose un scénario qui a plus de chances d'avoir une
 référence à `v` qui ne sera plus valide :
 
 <!--
@@ -529,7 +529,7 @@ référence à `v` qui ne sera plus valide :
 capture a reference to `v` from a main thread that drops `v`</span>
 -->
 
-<span class="caption">Encart 16-4 : une tâche dont la fermeture essaye de
+<span class="caption">Encart 16-4 : Une tâche dont la fermeture essaye de
 capturer une référence à `v` à partir de la tâche principale, qui va ensuite
 libérer `v`</span>
 
@@ -613,7 +613,7 @@ dans l'encart 16-5 devraient se compiler et s'exécuter comme prévu :
 to take ownership of the values it uses</span>
 -->
 
-<span class="caption">Encart 16-5 : utilisation du mot-clé `move` pour forcer
+<span class="caption">Encart 16-5 : Utilisation du mot-clé `move` pour forcer
 une fermeture à prendre possession des valeurs qu'elle utilise</span>
 
 <!--

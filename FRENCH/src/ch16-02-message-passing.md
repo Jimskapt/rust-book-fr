@@ -13,7 +13,7 @@ documentation](https://golang.org/doc/effective_go.html#concurrency):
 -->
 
 Une approche de plus en plus populaire pour garantir la sécurité de la
-concurrence est l'*envoi de message*, avec lequel les tâches ou les acteurs
+concurrence est l'*envoi de messages*, avec lequel les tâches ou les acteurs
 communiquent en envoyant aux autres des messages contenant des données. Voici
 l'idée résumée, tirée d'un slogan provenant de [la documentation du langage
 Go](https://golang.org/doc/effective_go.html#concurrency) : “Ne communiquez pas
@@ -105,7 +105,7 @@ canal.
 halves to `tx` and `rx`</span>
 -->
 
-<span class="caption">Encart 16-6 : création d'un canal et assignation de ses
+<span class="caption">Encart 16-6 : Création d'un canal et assignation de ses
 deux parties à `tx` et `rx`</span>
 
 <!--
@@ -185,7 +185,7 @@ instantané d'une tâche à une autre.
 “hi”</span>
 -->
 
-<span class="caption">Encart 16-7 : déplacement de `tx` dans la nouvelle tâche
+<span class="caption">Encart 16-7 : Déplacement de `tx` dans la nouvelle tâche
 et envoi de “salut”</span>
 
 <!--
@@ -249,7 +249,7 @@ dans l'eau à la fin de la rivière, ou récupérer un message instantané.
 and printing it</span>
 -->
 
-<span class="caption">Encart 16-8 : réception de la valeur “salut” dans la
+<span class="caption">Encart 16-8 : Réception de la valeur “salut” dans la
 tâche principale pour l'afficher</span>
 
 <!--
@@ -282,7 +282,7 @@ again.
 La méthode `try_recv` ne bloque pas, mais va plutôt retourner immédiatement un
 `Result<T, E>` : une valeur `Ok` qui contiendra un message s'il y en a un de
 disponible, et une valeur `Err` s'il n'y a pas de message cette fois-ci.
-L'utilisation de `try_recv` est pratique si cette tâche à d'autres choses à
+L'utilisation de `try_recv` est pratique si cette tâche a d'autres choses à
 faire pendant qu'elle attend les messages : nous pouvons ainsi écrire une
 boucle qui appelle régulièrement `try_recv`, gère le message s'il y en a un, et
 sinon fait d'autres choses avant de vérifier à nouveau.
@@ -294,7 +294,7 @@ thread is appropriate.
 -->
 
 Nous avons utilisé `recv` dans cet exemple pour des raisons de simplicité ;
-nous n'avons rien d'autres à faire dans la tâche principale que d'attendre les
+nous n'avons rien d'autre à faire dans la tâche principale que d'attendre les
 messages, donc bloquer la tâche principale est acceptable.
 
 <!--
@@ -373,7 +373,7 @@ pour découvrir pourquoi ce code n'est pas autorisé :
 down the channel</span>
 -->
 
-<span class="caption">Encart 16-9 : tentative d'utiliser `valeur` après que
+<span class="caption">Encart 16-9 : Tentative d'utiliser `valeur` après que
 nous l'avons envoyée dans le canal</span>
 
 <!--
@@ -458,7 +458,7 @@ entre chaque message.
 between each</span>
 -->
 
-<span class="caption">Encart 16-10 : envoi de plusieurs messages en faisant une
+<span class="caption">Encart 16-10 : Envoi de plusieurs messages en faisant une
 pause entre chacun</span>
 
 <!--
@@ -469,7 +469,7 @@ between each by calling the `thread::sleep` function with a `Duration` value of
 -->
 
 Cette fois-ci, la nouvelle tâche a un vecteur de chaînes de caractères que nous
-souhaitons envoyer à la tâche principale. Nous itérons sur celui-ci, on envoie
+souhaitons envoyer à la tâche principale. Nous itérons sur celui-ci, nous envoyons
 les chaînes une par une en faisant une pause entre chaque envoi en appelant la
 fonction `thread::sleep` avec une valeur `Duration` de 1 seconde.
 
@@ -563,7 +563,7 @@ valeurs au même récepteur. Nous pouvons faire ceci en clonant la partie
 producers</span>
 -->
 
-<span class="caption">Encart 16-11 : envoi de plusieurs messages à partir de
+<span class="caption">Encart 16-11 : Envoi de plusieurs messages à partir de
 plusieurs producteurs</span>
 
 <!--

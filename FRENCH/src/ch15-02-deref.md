@@ -30,7 +30,7 @@ or smart pointers.
 -->
 
 Regardons d'abord comment l'opérateur de déréférencement fonctionne avec des
-références classiques. Ensuite nous essayerons de définir un type personnalisé
+références classiques. Ensuite nous essaierons de définir un type personnalisé
 qui se comporte comme `Box<T>` et voir pourquoi l'opérateur de déréférencement
 ne fonctionne pas comme une référence sur notre type fraîchement défini. Nous
 allons découvrir comment implémenter le trait `Deref` de manière à ce qu'il soit
@@ -91,7 +91,7 @@ ensuite l'opérateur de déréférencement pour suivre la référence vers la do
 reference to an `i32` value</span>
 -->
 
-<span class="caption">Encart 15-6 : utiliser l'opérateur de déréférencement pour
+<span class="caption">Encart 15-6 : Utiliser l'opérateur de déréférencement pour
 suivre une référence vers une valeur `i32`</span>
 
 <!--
@@ -175,7 +175,7 @@ montré dans l'encart 15-7 :
 `Box<i32>`</span>
 -->
 
-<span class="caption">Encart 15-7 : utilisation de l'opérateur de
+<span class="caption">Encart 15-7 : Utilisation de l'opérateur de
 déréférencement sur un `Box<i32>`</span>
 
 <!--
@@ -188,13 +188,13 @@ that enables us to use the dereference operator by defining our own box type.
 -->
 
 La principale différence entre l'encart 15-7 et l'encart 15-6 est qu'ici nous
-avons fait en sorte que `y` soit une instance de boite qui pointe sur une copie
-de la valeur de `x` plutôt qu'avoir une référence vers la valeur de `x`. Dans
+avons fait en sorte que `y` soit une instance de boîte qui pointe sur une copie
+de la valeur de `x` plutôt que d'avoir une référence vers la valeur de `x`. Dans
 la dernière assertion, nous pouvons utiliser l'opérateur de déréférencement
-pour suivre le pointeur de la boite de la même manière que nous l'avons fait
+pour suivre le pointeur de la boîte de la même manière que nous l'avons fait
 lorsque `y` était une référence. Maintenant, nous allons regarder ce qu'il y a
 de si spécial dans `Box<T>` qui nous permet d'utiliser l'opérateur de
-déréférencement en définissant notre propre type de boite.
+déréférencement en définissant notre propre type de boîte.
 
 <!--
 ### Defining Our Own Smart Pointer
@@ -245,7 +245,7 @@ fonction `new` définie sur `Box<T>`.
 <span class="caption">Listing 15-8: Defining a `MyBox<T>` type</span>
 -->
 
-<span class="caption">Encart 15-8 : définition du type `MaBoite<T>`</span>
+<span class="caption">Encart 15-8 : Définition du type `MaBoite<T>`</span>
 
 <!--
 We define a struct named `MyBox` and declare a generic parameter `T`, because
@@ -254,7 +254,7 @@ with one element of type `T`. The `MyBox::new` function takes one parameter of
 type `T` and returns a `MyBox` instance that holds the value passed in.
 -->
 
-Nous définissons une structure `MaBoite` et on déclare un paramètre générique
+Nous définissons une structure `MaBoite` et nous déclarons un paramètre générique
 `T`, car nous souhaitons que notre type stocke des valeurs de n'importe quel
 type. Le type `MaBoite` est une structure de tuple avec un seul élément de type
 `T`. La fonction `MaBoite::new` prend un paramètre de type `T` et retourne une
@@ -267,7 +267,7 @@ code in Listing 15-9 won’t compile because Rust doesn’t know how to derefere
 `MyBox`.
 -->
 
-Essayons d'ajouter la fonction `main` de l'encart 15-7 dans l'encart 15-8 et la
+Essayons d'ajouter la fonction `main` de l'encart 15-7 dans l'encart 15-8 et de la
 modifier pour utiliser le type `MaBoite<T>` que nous avons défini à la place de
 `Box<T>`. Le code de l'encart 15-9 ne se compile pas car Rust ne sait pas
 comment déréférencer `MaBoite`.
@@ -293,7 +293,7 @@ comment déréférencer `MaBoite`.
 way we used references and `Box<T>`</span>
 -->
 
-<span class="caption">Encart 15-9 : tentative d'utiliser `MaBoite<T>` de la même
+<span class="caption">Encart 15-9 : Tentative d'utiliser `MaBoite<T>` de la même
 manière que nous avions utilisé les références et `Box<T>`</span>
 
 <!--
@@ -365,7 +365,7 @@ de `MaBoite` :
 <span class="caption">Listing 15-10: Implementing `Deref` on `MyBox<T>`</span>
 -->
 
-<span class="caption">Encart 15-10 : implémentation de `Deref` sur `MaBoite<T>`
+<span class="caption">Encart 15-10 : Implémentation de `Deref` sur `MaBoite<T>`
 </span>
 
 <!--
@@ -438,8 +438,8 @@ identically whether we have a regular reference or a type that implements
 Rust remplace l'opérateur `*` par un appel à la méthode `deref` suivi par un
 simple déréférencement afin que nous n'ayons pas à nous demander si nous devons
 ou non appeler la méthode `deref`. Cette fonctionnalité de Rust nous permet
-d'écrire du code qui fonctionne de manière identique que nous ayons une
-référence classique ou un type qui implémente `Deref`.
+d'écrire du code qui fonctionne de manière identique, que nous ayons une
+référence classique ou bien un type qui implémente `Deref`.
 
 <!--
 The reason the `deref` method returns a reference to a value, and that the plain
@@ -456,7 +456,7 @@ et que le déréférencement du tout dans les parenthèses externes de
 `deref` retournait la valeur directement au lieu d'une référence à cette valeur,
 la valeur serait *déplacée* à l'extérieur de `self`. Nous ne souhaitons pas
 prendre possession de la valeur à l'intérieur de `MaBoite<T>` dans ce cas ainsi
-que la plupart des cas où nous utilisons l'opérateur de déréférencement.
+que dans la plupart des cas où nous utilisons l'opérateur de déréférencement.
 
 <!--
 Note that the `*` operator is replaced with a call to the `deref` method and
@@ -551,7 +551,7 @@ caractères :
 `name` of type `&str`</span>
 -->
 
-<span class="caption">Encart 15-11 : une fonction `saluer` qui prend en
+<span class="caption">Encart 15-11 : Une fonction `saluer` qui prend en
 paramètre `nom` du type `&str`</span>
 
 <!--
@@ -586,7 +586,7 @@ valeur du type `MaBoite<String>`, comme dans l'encart 15-12 :
 `MyBox<String>` value, which works because of deref coercion</span>
 -->
 
-<span class="caption">Encart 15-12 : appel à `saluer` avec une référence à une
+<span class="caption">Encart 15-12 : Appel à `saluer` avec une référence à une
 valeur du type `MaBoite<String>`, qui fonctionne grâce à l'extrapolation de
 déréférencement</span>
 
@@ -640,7 +640,7 @@ appeler `saluer` avec une valeur du type `&MaBoite<String>`.
 didn’t have deref coercion</span>
 -->
 
-<span class="caption">Encart 15-13 : le code que nous aurions dû écrire si Rust
+<span class="caption">Encart 15-13 : Le code que nous aurions dû écrire si Rust
 n'avait pas d'extrapolation de déréférencement</span>
 
 <!--
@@ -739,7 +739,7 @@ possible.
 Le troisième cas est plus ardu : Rust va aussi procéder à une extrapolation de
 déréférencement d'une référence mutable vers une référence immuable. Mais
 l'inverse n'est *pas* possible: une extrapolation de déréférencement d'une
-valeur immuable ne donnera jamais une référence mutable. A cause des règles
+valeur immuable ne donnera jamais une référence mutable. À cause des règles
 d'emprunt, si vous avez une référence mutable, cette référence mutable doit
 être la seule référence vers cette donnée (autrement, le programme ne peut pas
 être compilé). Convertir une référence mutable vers une référence immuable ne

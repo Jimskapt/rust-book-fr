@@ -14,7 +14,7 @@ once and have all their searches be case insensitive in that terminal session.
 -->
 
 Nous allons améliorer `minigrep` en lui ajoutant une fonctionnalité
-supplémentaire : une option pour rechercher sans être sensible à la casse que
+supplémentaire : une option pour rechercher sans être sensible à la casse que
 l'utilisateur pourra activer via une variable d'environnement. Nous pourrions
 appliquer cette fonctionnalité avec une option en ligne de commande et demander
 à l'utilisateur de la renseigner à chaque fois qu'il veut l'activer, mais à la
@@ -26,7 +26,7 @@ leurs recherches insensibles à la casse dans cette session du terminal.
 ### Writing a Failing Test for the Case-Insensitive `search` Function
 -->
 
-### Ecrire un test qui échoue pour la fonction `rechercher` insensible à la casse
+### Écrire un test qui échoue pour la fonction `rechercher` insensible à la casse
 
 <!--
 We want to add a new `search_case_insensitive` function that we’ll call when
@@ -49,7 +49,7 @@ tests, comme dans l'encart 12-20.
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,ignore,does_not_compile
@@ -66,7 +66,7 @@ tests, comme dans l'encart 12-20.
 case-insensitive function we’re about to add</span>
 -->
 
-<span class="caption">Encart 12-20 : Ajout d'un nouveau test qui échoue pour la
+<span class="caption">Encart 12-20 : Ajout d'un nouveau test qui échoue pour la
 fonction insensible à la casse que nous sommes en train d'ajouter</span>
 
 <!--
@@ -83,7 +83,7 @@ Nous avons ajouté une nouvelle ligne avec le texte `"Duct tape."` en utilisant
 un D majuscule qui ne devrait pas correspondre à la recherche `"duct"` lorsque
 nous recherchons de manière à être sensible à la casse. Ce changement de
 l'ancien test permet de nous assurer que nous ne casserons pas accidentellement
-la fonction de recherche sensible à la casse que nous avons déjà implémenté. Ce
+la fonction de recherche sensible à la casse que nous avons déjà implémentée. Ce
 test devrait toujours continuer à réussir au fur et à mesure que nous progressons
 sur la recherche insensible à la casse.
 
@@ -132,7 +132,7 @@ même casse lorsque nous vérifierons si la ligne contient la recherche.
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,noplayground
@@ -149,7 +149,7 @@ même casse lorsque nous vérifierons si la ligne contient la recherche.
 function to lowercase the query and the line before comparing them</span>
 -->
 
-<span class="caption">Encart 12-21 : Définition de la fonction
+<span class="caption">Encart 12-21 : Définition de la fonction
 `rechercher_insensible_casse` pour obtenir en minuscule la recherche et la
 ligne avant de les comparer</span>
 
@@ -163,9 +163,9 @@ writing a real application, we’d want to do a bit more work here, but this sec
 is about environment variables, not Unicode, so we’ll leave it at that here.
 -->
 
-D'abord, nous obtenons la chaîne de caractères `recherche` en minuscule et nous
+D'abord, nous obtenons la chaîne de caractères `recherche` en minuscules et nous
 l'enregistrons dans une variable masquée avec le même nom. L'appel à
-`to_lowercase` sur la recherche est nécessaire afin que quel que soit la
+`to_lowercase` sur la recherche est nécessaire afin que quelle que soit la
 recherche de l'utilisateur, comme `"rust"`, `"RUST"`, `"Rust"`, ou `"rUsT"`,
 nous traitons la recherche comme si elle était `"rust"` et par conséquent elle
 est insensible à la casse. La méthode `to_lowercase` devrait gérer de l'Unicode
@@ -187,7 +187,7 @@ a string slice.
 Notez que `recherche` est désormais une `String` et non plus une slice de chaîne
 de caractères, car l'appel à `to_lowercase` crée des nouvelles données au lieu
 de modifier les données déjà existantes. Par exemple, disons que la recherche
-est `"rUsT"` : cette slice de chaîne de caractères ne contient pas de `u` ou de
+est `"rUsT"` : cette slice de chaîne de caractères ne contient pas de `u` ou de
 `t` minuscule que nous pourrions utiliser, donc nous devons allouer une nouvelle
 `String` qui contient `"rust"`. Maintenant, lorsque nous passons `recherche` en
 argument de la méthode `contains`, nous devons rajouter une esperluette car la
@@ -203,14 +203,14 @@ query is.
 
 Ensuite, nous ajoutons un appel à `to_lowercase` sur chaque `ligne` avant de
 vérifier si elle contient `recherche` afin d'obtenir tous ses caractères en
-minuscule. Maintenant que nous avons `ligne` et `recherche` en minuscules, nous
-allons rechercher les correspondances peu importe la casse de la recherche.
+minuscules. Maintenant que nous avons `ligne` et `recherche` en minuscules, nous
+allons rechercher les correspondances, peu importe la casse de la recherche.
 
 <!--
 Let’s see if this implementation passes the tests:
 -->
 
-Voyons si cette implémentation passe les tests :
+Voyons si cette implémentation passe les tests :
 
 <!--
 ```console
@@ -230,18 +230,18 @@ Adding this field will cause compiler errors because we aren’t initializing
 this field anywhere yet:
 -->
 
-Très bien ! Elles ont réussi. Maintenant, utilisons la nouvelle fonction
+Très bien ! Elles ont réussi. Maintenant, utilisons la nouvelle fonction
 `rechercher_insensible_casse` dans la fonction `run`. Pour commencer, nous
 allons ajouter une option de configuration à la structure `Config` pour changer
 entre la recherche sensible et non sensible à la casse. L'ajout de ce champ va
 causer des erreurs de compilation car nous n'avons jamais initialisé ce champ
-pour le moment :
+pour le moment :
 
 <!--
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,ignore,does_not_compile
@@ -271,7 +271,7 @@ l'encart 12-22. Notez que cela ne se compile pas encore.
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,ignore,does_not_compile
@@ -288,7 +288,7 @@ l'encart 12-22. Notez que cela ne se compile pas encore.
 `search_case_insensitive` based on the value in `config.case_sensitive`</span>
 -->
 
-<span class="caption">Encart 12-22 : Appeler `rechercher` ou
+<span class="caption">Encart 12-22 : Appeler `rechercher` ou
 `rechercher_insensible_casse` en fonction de la valeur dans `config.sensible_casse`
 </span>
 
@@ -312,7 +312,7 @@ d'environnement `MINIGREP_INSENSIBLE_CASSE`, comme dans l'encart 12-23.
 <span class="filename">Filename: src/lib.rs</span>
 -->
 
-<span class="filename">Fichier : src/lib.rs</span>
+<span class="filename">Fichier : src/lib.rs</span>
 
 <!--
 ```rust,noplayground
@@ -329,7 +329,7 @@ d'environnement `MINIGREP_INSENSIBLE_CASSE`, comme dans l'encart 12-23.
 `CASE_INSENSITIVE`</span>
 -->
 
-<span class="caption">Encart 12-23 : Vérification de la présence de la variable
+<span class="caption">Encart 12-23 : Vérification de la présence de la variable
 d'environnement `MINIGREP_INSENSIBLE_CASSE`</span>
 
 <!--
@@ -386,9 +386,9 @@ variable set and with the query `to`, which should match any line that contains
 the word “to” in all lowercase:
 -->
 
-Faisons un essai ! D'abord, nous allons lancer notre programme avec la variable
+Faisons un essai ! D'abord, nous allons lancer notre programme avec la variable
 d'environnement non définie et avec la recherche `to`, qui devrait trouver
-toutes les lignes qui contiennent le mot “to” en minuscules :
+toutes les lignes qui contiennent le mot “to” en minuscules :
 
 <!--
 ```console
@@ -405,7 +405,7 @@ Looks like that still works! Now, let’s run the program with `CASE_INSENSITIVE
 set to `1` but with the same query `to`.
 -->
 
-On dirait que cela fonctionne ! Maintenant, lançons le programme avec
+On dirait que cela fonctionne ! Maintenant, lançons le programme avec
 `MINIGREP_INSENSIBLE_CASSE` définie à `1` mais avec la même recherche `to`.
 
 <!--
@@ -414,7 +414,7 @@ variable and run the program as separate commands:
 -->
 
 Si vous utilisez PowerShell, vous allez avoir besoin d'affecter la variable
-d'environnement puis exécuter le programme avec deux commandes distinctes :
+d'environnement puis exécuter le programme avec deux commandes distinctes :
 
 <!--
 ```console
@@ -450,7 +450,7 @@ We should get lines that contain “to” that might have uppercase letters:
 -->
 
 Nous devrions trouver cette fois-ci également toutes les lignes qui contiennent
-“to” écrit avec certaines lettres en majuscule:
+“to” écrit avec certaines lettres en majuscules :
 
 <!--
 <!-- manual-regeneration
@@ -489,7 +489,7 @@ how to manage options set using either command line arguments or environment
 variables.
 -->
 
-Très bien, nous avons aussi obtenu les lignes qui contiennent “To” ! Notre
+Très bien, nous avons aussi obtenu les lignes qui contiennent “To” ! Notre
 programme `minigrep` peut maintenant faire des recherches insensibles à la
 casse, contrôlées par une variable d'environnement. Vous savez maintenant comment
 gérer des options définies soit par des arguments en ligne de commande, soit
@@ -519,5 +519,5 @@ environment variables: check out its documentation to see what is available.
 -->
 
 Le module `std::env` contient plein d'autres fonctionnalités utiles pour
-utiliser les variables d'environnement : regardez sa documentation pour voir ce
+utiliser les variables d'environnement : regardez sa documentation pour voir ce
 qu'il est possible de faire.

@@ -59,9 +59,9 @@ apprises au chapitre 4 :
 * References must always be valid.
 -->
 
-* A un instant donné, vous pouvez avoir *soit* (mais pas les deux) une
-  référence mutable, soit n'importe quel nombre de références immuables
-* Les références doivent toujours être en vigueur.
+* à un instant donné, vous pouvez avoir *soit* (mais pas les deux) une
+  référence mutable, soit n'importe quel nombre de références immuables ;
+* les références doivent toujours être en vigueur.
 
 <!--
 With references and `Box<T>`, the borrowing rules’ invariants are enforced at
@@ -307,7 +307,7 @@ called `Messenger`. Listing 15-20 shows the library code:
 -->
 
 Notre bibliothèque fournira uniquement la fonctionnalité de suivi en fonction de
-la proximité d'une valeur avec la maximale et définiera quels seront les
+la proximité d'une valeur avec la maximale et définira quels seront les
 messages associés. Les applications qui utiliseront notre bibliothèque devront
 fournir un mécanisme pour envoyer les messages : l'application peut afficher le
 message dans l'application, l'envoyer par email, l'envoyer par SMS ou autre
@@ -336,7 +336,7 @@ fournir. L'encart 15-20 propose le code pour cette bibliothèque :
 value is to a maximum value and warn when the value is at certain levels</span>
 -->
 
-<span class="caption">Encart 15-20 : une bibliothèque qui suit la proximité
+<span class="caption">Encart 15-20 : Une bibliothèque qui suit la proximité
 d'une valeur avec une valeur maximale et avertit lorsque cette valeur atteint
 un certain seuil</span>
 
@@ -405,7 +405,7 @@ d'emprunt ne nous autorise pas à le faire :
 that isn’t allowed by the borrow checker</span>
 -->
 
-<span class="caption">Encart 15-21 : une tentative d'implémentation d'un
+<span class="caption">Encart 15-21 : Une tentative d'implémentation d'un
 `MessagerMock` qui n'est pas autorisée par le vérificateur d'emprunt</span>
 
 <!--
@@ -516,7 +516,7 @@ ressembler :
 value while the outer value is considered immutable</span>
 -->
 
-<span class="caption">Encart 15-22 : utilisation du `RefCell<T>` pour muter
+<span class="caption">Encart 15-22 : Utilisation du `RefCell<T>` pour muter
 une valeur interne que les valeurs externes considèrent comme immuable
 </span>
 
@@ -598,10 +598,10 @@ borrows or one mutable borrow at any point in time.
 -->
 
 Le `RefCell<T>` suit combien de pointeurs intelligents `Ref<T>` et `RefMut<T>`
-sont actuellement actifs. A chaque fois que nous faisons appel à `borrow`, le
+sont actuellement actifs. À chaque fois que nous faisons appel à `borrow`, le
 `RefCell<T>` augmente son compteur du nombre d'emprunts immuables qui existent.
 Lorsqu'une valeur `Ref<T>` sort de la portée, le compteur d'emprunts immuables
-est décrémenté de un. A tout moment `RefCell<T>` nous permet d'avoir plusieurs emprunts
+est décrémenté de un. À tout moment `RefCell<T>` nous permet d'avoir plusieurs emprunts
 immuables ou bien un seul emprunt mutable, tout comme le font les
 règles d'emprunt au moment de la compilation.
 
@@ -642,7 +642,7 @@ portée pour montrer que `RefCell<T>` nous empêche de faire ceci à l'exécutio
 same scope to see that `RefCell<T>` will panic</span>
 -->
 
-<span class="caption">Encart 15-23 : création de deux références mutables dans
+<span class="caption">Encart 15-23 : Création de deux références mutables dans
 la même portée pour voir si `RefCell<T>` va paniquer</span>
 
 <!--
@@ -763,7 +763,7 @@ dans n'importe quelle liste :
 `List` that we can mutate</span>
 -->
 
-<span class="caption">Encart 15-24 : utilisation de `Rc<RefCell<i32>>` pour
+<span class="caption">Encart 15-24 : Utilisation de `Rc<RefCell<i32>>` pour
 créer une `List` que nous pouvons modifier</span>
 
 <!--
@@ -806,7 +806,7 @@ Après avoir créé les listes dans `a`, `b`, et `c`, nous ajoutons 10 à la val
 dans `valeur`. Nous faisons cela en appelant `borrow_mut` sur `valeur`, ce qui
 utilise la fonctionnalité de déréférencement automatique que nous avons vue au
 chapitre 5 (voir la section
-[“Où est l'opérateur -> ?”][wheres-the---operator]<!-- ignore -->) pour
+[“Où est l'opérateur -> ?”][wheres-the---operator]<!-- ignore -->) pour
 déréférencer le `Rc<T>` dans la valeur interne `RefCell<T>`. La méthode
 `borrow_mut` retourne un pointeur intelligent `RefMut<T>`, et nous utilisons
 l'opérateur de déréférencement sur lui pour changer sa valeur interne.
@@ -840,7 +840,7 @@ structures.
 
 Cette technique est plutôt ingénieuse ! En utilisant `RefCell<T>`, nous avons
 une valeur `List` qui est immuable de l'extérieur. Mais nous pouvons utiliser
-les méthodes de `RefCell<T>` qui nous donne accès à sa mutabilité interne afin
+les méthodes de `RefCell<T>` qui nous donnent accès à sa mutabilité interne afin
 que nous puissions modifier notre donnée lorsque nous en avons besoin. Les
 vérifications des règles d'emprunt à l'exécution nous protègent des accès
 concurrents, et il est parfois intéressant de sacrifier un peu de vitesse pour

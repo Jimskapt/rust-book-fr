@@ -24,7 +24,7 @@ présentons `Drop` dans le contexte des pointeurs intelligents car la
 fonctionnalité du trait `Drop` est quasiment systématiquement utilisée
 lorsque nous implémentons un pointeur intelligent. Par exemple, lorsqu'une
 `Box<T>` est libérée, elle va désallouer l'espace occupé sur le tas sur lequel
-la boite pointe.
+la boîte pointe.
 
 <!--
 In some languages, the programmer must call code to free memory or resources
@@ -121,8 +121,8 @@ in the `drop` method, printing our final message. Note that we didn’t need to
 call the `drop` method explicitly.
 -->
 
-Dans le `main`, nous créons deux instances de `PointeurPerso` et ensuite on
-affiche `PointeurPersos créés`. A la fin du `main`, nos instances de
+Dans le `main`, nous créons deux instances de `PointeurPerso` et ensuite nous
+affichons `PointeurPersos créés`. À la fin du `main`, nos instances de
 `PointeurPerso` vont sortir de la portée, et Rust va appeler le code que nous
 avons placé dans la méthode `drop` et qui va afficher notre message final.
 Notez que nous n'avons pas besoin d'appeler explicitement la méthode `drop`.
@@ -219,7 +219,7 @@ aurons une erreur de compilation :
 the `Drop` trait manually to clean up early</span>
 -->
 
-<span class="caption">Encart 15-15 : tentative d'appel manuel de la méthode
+<span class="caption">Encart 15-15 : Tentative d'appel manuel de la méthode
 `drop` du trait `Drop` afin de nettoyer prématurément</span>
 
 <!--
@@ -309,7 +309,7 @@ la fonction `drop`, comme dans l'encart 15-16 :
 drop a value before it goes out of scope</span>
 -->
 
-<span class="caption">Encart 15-16 : appel à `std::mem::drop` pour libérer
+<span class="caption">Encart 15-16 : Appel à `std::mem::drop` pour libérer
 explicitement une valeur avant qu'elle sorte de la portée</span>
 
 <!--

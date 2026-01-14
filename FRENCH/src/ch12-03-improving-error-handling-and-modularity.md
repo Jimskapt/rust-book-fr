@@ -28,8 +28,8 @@ pas un problème majeur. Cependant, si nous continuons à faire grossir notre
 programme dans le `main`, le nombre des différentes tâches qu'assure la
 fonction `main` va continuer à s'agrandir. Plus une fonction assure des
 tâches différentes, plus cela devient difficile de la comprendre, de la tester,
-et d'y faire des changements sans casser ses autres constituants. Cela est
-mieux de séparer les fonctionnalités afin que chaque fonction n'assure qu'une
+et d'y faire des changements sans casser ses autres constituants. Il est
+largement préférable de séparer les fonctionnalités afin que chaque fonction n'assure qu'une
 seule tâche.
 
 <!--
@@ -535,7 +535,7 @@ happened and what they should do instead. Let’s fix that now.
 
 La ligne `index out of bounds: the len is 1 but the index is 1` est un
 message d'erreur destiné aux développeurs. Il n'aidera pas nos utilisateurs
-finaux à comprendre ce qu'il s'est passé et ce qu'ils devraient faire à la
+finaux à comprendre ce qui s'est passé et ce qu'ils devraient faire à la
 place. Corrigeons cela dès maintenant.
 
 <!--
@@ -634,7 +634,7 @@ nous ne souhaitons pas afficher à nos utilisateurs. Peut-être que la technique
 que nous avons utilisée dans l'encart 9-13 n'est pas la plus appropriée dans ce
 cas : un appel à `panic!` est plus approprié pour un problème de développement
 qu'un problème d'utilisation, [comme nous l'avons appris au chapitre
-9][ch9-error-guidelines]<!-- ignore -->. A la place, nous pourrions utiliser
+9][ch9-error-guidelines]<!-- ignore -->. À la place, nous pourrions utiliser
 une autre technique que vous avez apprise au chapitre 9 — [retourner un
 `Result`][ch9-result]<!-- ignore --> qui indique si c'est un succès ou une
 erreur.
@@ -707,7 +707,7 @@ always be string literals that have the `'static` lifetime.
 
 Notre fonction `new` retourne désormais un `Result` contenant une instance de
 `Config` dans le cas d'un succès et une `&'static str` dans le cas d'une
-erreur. Nos valeurs d'erreur seront toujours des litéraux de chaîne de
+erreur. Nos valeurs d'erreur seront toujours des littéraux de chaîne de
 caractères qui ont la durée de vie `'static`.
 
 <!--
@@ -801,7 +801,7 @@ value when it runs.
 Dans cet encart, nous avons utilisé une méthode que nous n'avons pas encore
 détaillée pour l'instant : `unwrap_or_else`, qui est définie sur `Result<T, E>`
 par la bibliothèque standard. L'utilisation de `unwrap_or_else` nous permet de
-définir une gestion des erreurs personnalisée, exempt de `panic!`. Si le
+définir une gestion des erreurs personnalisée, exempte de `panic!`. Si le
 `Result` est une valeur `Ok`, le comportement de cette méthode est similaire à
 `unwrap` : elle retourne la valeur à l'intérieur du `Ok`. Cependant, si la
 valeur est une valeur `Err`, cette méthode appelle le code dans la *fermeture*,
@@ -847,7 +847,7 @@ le texte en plus. Essayons cela :
 Great! This output is much friendlier for our users.
 -->
 
-Très bien ! Cette sortie est bien plus compréhensible pour nos utilisateurs.
+Très bien ! Cette sortie est bien plus compréhensible pour nos utilisateurs.
 
 <!--
 ### Extracting Logic from `main`
@@ -1057,7 +1057,7 @@ have some error-handling code here! Let’s rectify that problem now.
 Rust nous informe que notre code ignore la valeur `Result` et que cette valeur
 `Result` pourrait indiquer qu'une erreur s'est passée. Mais nous ne vérifions
 pas pour savoir si oui ou non il y a eu une erreur, et le compilateur nous
-rappelle que nous devrions avoir du code de gestion des erreurs ici !
+rappelle que nous devrions avoir du code de gestion des erreurs ici !
 Corrigeons dès à présent ce problème.
 
 <!--
@@ -1204,7 +1204,7 @@ Now we need to bring the code we moved to *src/lib.rs* into the scope of the
 binary crate in *src/main.rs*, as shown in Listing 12-14.
 -->
 
-Maintenant nous devons importer le code que nous avons déplacé dans
+Maintenant, nous devons importer le code que nous avons déplacé dans
 *src/lib.rs* dans la portée de la crate binaire dans *src/main.rs*, comme dans
 l'encart 12-14.
 
@@ -1255,7 +1255,7 @@ modular. Almost all of our work will be done in *src/lib.rs* from here on out.
 
 Ouah ! C'était pas mal de travail, mais nous nous sommes organisés pour nous assurer
 le succès à venir. Maintenant il est bien plus facile de gérer les erreurs, et
-nous avons rendu le code plus modulaire. A partir de maintenant, l'essentiel de
+nous avons rendu le code plus modulaire. À partir de maintenant, l'essentiel de
 notre travail sera effectué dans *src/lib.rs*.
 
 <!--

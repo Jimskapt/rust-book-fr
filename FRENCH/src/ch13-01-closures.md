@@ -54,8 +54,8 @@ une application destinée à générer des programmes d'entraînements physiques
 personnalisés. L'application dorsale est écrite en Rust et repose sur un
 algorithme qui génère les exercices en fonction de beaucoup de facteurs tels
 que l'âge de l'utilisateur, son indice de masse corporelle, ses préférences et
-une intensité qu'il aura paramétré. L'algorithme réellement utilisé n'est pas
-important pour cet exemple : ce qui est important c'est que le calcul prenne
+une intensité qu'il aura paramétrée. L'algorithme réellement utilisé n'est pas
+important pour cet exemple : ce qui est important est que le calcul prenne
 plusieurs secondes. Nous voulons appeler l'algorithme uniquement lorsque nous
 en avons besoin, et seulement une fois, afin que l'utilisateur n'ait pas à
 attendre plus longtemps que nécessaire.
@@ -93,7 +93,7 @@ qui lui a été donné :
 calculation that takes about 2 seconds to run</span>
 -->
 
-<span class="caption">Encart 13-1 : une fonction pour remplacer un calcul
+<span class="caption">Encart 13-1 : Une fonction pour remplacer un calcul
 hypothétique qui prend environ deux secondes à s'exécuter</span>
 
 <!--
@@ -160,7 +160,7 @@ fonction `main` que nous allons utiliser.
 simulate user input and random number generation</span>
 -->
 
-<span class="caption">Encart 13-2 : une fonction `main` avec des valeurs codées
+<span class="caption">Encart 13-2 : Une fonction `main` avec des valeurs codées
 en dur pour simuler la saisie d'une valeur d'intensité par l'utilisateur et la
 génération d'un nombre aléatoire</span>
 
@@ -215,7 +215,7 @@ plans based on the inputs and calls to the `simulated_expensive_calculation`
 function</span>
 -->
 
-<span class="caption">Encart 13-3 : la logique métier qui affiche les programmes
+<span class="caption">Encart 13-3 : La logique métier qui affiche les programmes
 d'entraînement en fonction des entrées et des appels à la fonction
 `simuler_gros_calcul`.</span>
 
@@ -322,7 +322,7 @@ Tout d'abord, nous allons essayer d'extraire l'appel en double à la fonction
 `expensive_result` variable</span>
 -->
 
-<span class="caption">Encart 13-4 : extraction des appels à
+<span class="caption">Encart 13-4 : Extraction des appels à
 `simuler_gros_calcul` dans un seul endroit et stockage du résultat dans la
 variable `resultat_lent`.</span>
 
@@ -391,7 +391,7 @@ la fermeture que nous introduisons ici.
 `expensive_closure` variable</span>
 -->
 
-<span class="caption">Encart 13-5 : définition d'une fermeture et son
+<span class="caption">Encart 13-5 : Définition d'une fermeture et son
 enregistrement dans la variable `fermeture_lente`.</span>
 
 <!--
@@ -479,7 +479,7 @@ arguments que nous voulons utiliser pour cet appel, comme dans l'encart 13-6.
 defined</span>
 -->
 
-<span class="caption">Encart 13-6 : appel de la fermeture `fermeture_lente`
+<span class="caption">Encart 13-6 : Appel de la fermeture `fermeture_lente`
 que nous avons définie</span>
 
 <!--
@@ -591,7 +591,7 @@ avons définie dans l'encart 13-5 ressemblerait à l'encart 13-7.
 parameter and return value types in the closure</span>
 -->
 
-<span class="caption">Encart 13-7 : ajout d'annotations de type optionnelles sur
+<span class="caption">Encart 13-7 : Ajout d'annotations de type optionnelles sur
 les paramètres et les valeurs de retour de la fermeture</span>
 
 <!--
@@ -640,7 +640,7 @@ compile because the types will be inferred from their usage.
 La première ligne affiche la définition d'une fonction et la deuxième ligne une
 définition d'une fermeture entièrement annotée. La troisième ligne supprime les
 annotations de type de la définition de la fermeture, et la quatrième ligne
-supprime les accolades qui sont facultatives, parce que le corps d'une fermeture
+supprime les accolades qui sont facultatives, parce que le corps de la fermeture
 n'a qu'une seule expression. Ce sont toutes des définitions valides qui
 suivront le même comportement lorsqu'on les appellera. L'appel aux fermetures
 est nécessaire pour que `ajouter_un_v3` et `ajouter_un_v4` puissent être compilés
@@ -686,7 +686,7 @@ deuxième fois, nous obtiendrons une erreur :
 are inferred with two different types</span>
 -->
 
-<span class="caption">Encart 13-8 : tentative d'appeler une fermeture dont les
+<span class="caption">Encart 13-8 : Tentative d'appeler une fermeture dont les
 types sont déduits avec deux types différents</span>
 
 <!--
@@ -832,7 +832,7 @@ fermeture et une valeur de résultat optionnelle :
 closure in `calculation` and an optional result in `value`</span>
 -->
 
-<span class="caption">Encart 13-9 : définition d'une structure `Cache` qui
+<span class="caption">Encart 13-9 : Définition d'une structure `Cache` qui
 possède une fermeture dans `calcul` et un résultat optionnel dans `valeur`.
 </span>
 
@@ -847,7 +847,7 @@ parameter (specified within the parentheses after `Fn`) and must return a
 La structure `Cache` a un champ `calcul` du type générique `T`. Le trait lié `T`
 précise que c'est une fermeture en utilisant le trait `Fn`. Toute fermeture que
 l'on veut stocker dans le champ `calcul` doit avoir un paramètre `u32` (ce qui
-est précisé entre parenthèse après le `Fn`) et doit retourner un `u32` (ce qui
+est précisé entre parenthèses après le `Fn`) et doit retourner un `u32` (ce qui
 est précisé après le `->`).
 
 <!--
@@ -872,7 +872,7 @@ the result of the closure again, instead of executing the closure again, the
 -->
 
 Le champ `valeur` est de type `Option<u32>`. Avant d'exécuter la fermeture,
-`valeur` sera initialisée à `None`. Lorsque du code utilisant un `Cache` demande
+`valeur` sera initialisée à `None`. Lorsque du code utilisant un `Cache` demandera
 le *résultat* de la fermeture, le `Cache` exécutera la fermeture à ce moment-là
 et stockera le résultat dans une variante `Some` dans le champ `valeur`.
 Ensuite, si le code demande à nouveau le résultat de la fermeture, le `Cache`
@@ -907,7 +907,7 @@ l'encart 13-10 :
 <span class="caption">Listing 13-10: The caching logic of `Cacher`</span>
 -->
 
-<span class="caption">Encart 13-10 : la logique de `Cache`</span>
+<span class="caption">Encart 13-10 : La logique de `Cache`</span>
 
 <!--
 We want `Cacher` to manage the struct fields’ values rather than letting the
@@ -987,7 +987,7 @@ L'encart 13-11 montre comment utiliser cette structure `Cache` dans la fonction
 function to abstract away the caching logic</span>
 -->
 
-<span class="caption">Encart 13-11 : utilisation de `Cache` dans la fonction
+<span class="caption">Encart 13-11 : Utilisation de `Cache` dans la fonction
 `generer_exercices` pour masquer la logique du cache.</span>
 
 <!--
@@ -1186,7 +1186,7 @@ fermeture :
 variable in its enclosing scope</span>
 -->
 
-<span class="caption">Encart 13-12 : exemple d'une fermeture qui se réfère à une
+<span class="caption">Encart 13-12 : Exemple d'une fermeture qui se réfère à une
 variable présente dans la portée qui la contient.</span>
 
 <!--
@@ -1289,8 +1289,8 @@ traits `Fn` comme ceci :
 * `FnOnce` consomme les variables qu'il capture à partir de sa portée, désignée
   sous le nom de *l'environnement* de la fermeture. Pour consommer les variables
   capturées, la fermeture doit prendre possession de ces variables et les
-  déplacer dans la fermeture lorsqu'elle est définie. La partie `Once` du nom
-  représente le fait que la fermeture ne puisse pas prendre prendre possession
+  déplacer dans la fermeture au moment où elle est définie. La partie `Once` du nom
+  représente le fait que la fermeture ne puisse pas prendre possession
   des mêmes variables plus d'une fois, donc elle ne peut être appelée qu'une
   seule fois.
 * `FnMut` peut changer l'environnement car elle emprunte des valeurs de manière
@@ -1309,7 +1309,7 @@ because the body of the closure only needs to read the value in `x`.
 
 Lorsque nous créons une fermeture, Rust déduit quel trait utiliser en se basant
 sur la façon dont la fermeture utilise les valeurs de l'environnement. Toutes
-les fermetures implémentent `FnOne` car elles peuvent toute être appelées au
+les fermetures implémentent `FnOnce` car elles peuvent toutes être appelées au
 moins une fois. Les fermetures qui ne déplacent pas les variables capturées
 implémentent également `FnMut`, et les fermetures qui n'ont pas besoin d'accès
 mutable aux variables capturées implémentent aussi `Fn`. Dans l'encart 13-12, la

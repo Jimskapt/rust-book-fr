@@ -84,7 +84,7 @@ the following:
 -->
 
 Créons un nouveau projet en utilisant Cargo et analysons les différences avec
-notre projet initial “Hello, world!”. Retournez dans votre dossier *projects*
+notre projet initial “Hello, world!”. Retournez dans votre répertoire *projects*
 (ou là où vous avez décidé d'enregistrer votre code). Ensuite, sur n'importe
 quel système d'exploitation, lancez les commandes suivantes :
 
@@ -106,8 +106,8 @@ our project *hello_cargo*, and Cargo creates its files in a directory of the
 same name.
 -->
 
-La première commande a crée un nouveau dossier appelé *hello_cargo*. Nous avons
-appelé notre projet *hello_cargo*, et Cargo crée ses fichiers dans un dossier
+La première commande a crée un nouveau répertoire appelé *hello_cargo*. Nous avons
+appelé notre projet *hello_cargo*, et Cargo crée ses fichiers dans un répertoire
 avec le même nom.
 
 <!--
@@ -116,9 +116,9 @@ has generated two files and one directory for us: a *Cargo.toml* file and a
 *src* directory with a *main.rs* file inside.
 -->
 
-Rendez-vous dans le dossier *hello_cargo* et afficher la liste des fichiers.
-Vous constaterez que Cargo a généré deux fichiers et un dossier pour nous : un
-fichier *Cargo.toml* et un dossier *src* avec un fichier *main.rs* à
+Rendez-vous dans le répertoire *hello_cargo* et afficher la liste des fichiers.
+Vous constaterez que Cargo a généré deux fichiers et un répertoire pour nous : un
+fichier *Cargo.toml* et un répertoire *src* avec un fichier *main.rs* à
 l'intérieur.
 
 <!--
@@ -264,8 +264,8 @@ directory, and we have a *Cargo.toml* configuration file in the top directory.
 Cargo a généré un programme “Hello, world!” pour vous, exactement comme celui
 que nous avons écrit dans l'encart 1-1 ! Pour le moment, les seules différences
 entre notre projet précédent et le projet que Cargo a généré sont que Cargo a
-placé le code dans le dossier *src*, et que nous avons un fichier de
-configuration *Cargo.toml* à la racine du dossier projet.
+placé le code dans le répertoire *src*, et que nous avons un fichier de
+configuration *Cargo.toml* à la racine du répertoire projet.
 
 <!--
 Cargo expects your source files to live inside the *src* directory. The
@@ -275,7 +275,7 @@ helps you organize your projects. There’s a place for everything, and
 everything is in its place.
 -->
 
-Cargo prévoit de stocker vos fichiers sources dans le dossier *src*. Le dossier
+Cargo prévoit de stocker vos fichiers sources dans le répertoire *src*. Le répertoire
 parent est là uniquement pour les fichiers README, pour les informations à
 propos de la licence, pour les fichiers de configuration et tout ce qui n'est
 pas directement relié à votre code. Utiliser Cargo vous aide à structurer vos
@@ -290,7 +290,7 @@ file.
 
 Si vous commencez un projet sans utiliser Cargo, comme nous l'avons fait avec
 le projet “Hello, world!”, vous pouvez le transformer en projet qui
-utilise Cargo. Déplacez le code de votre projet dans un dossier *src* et créez
+utilise Cargo. Déplacez le code de votre projet dans un répertoire *src* et créez
 un fichier *Cargo.toml* adéquat.
 
 <!--
@@ -307,7 +307,7 @@ entering the following command:
 
 Maintenant, regardons ce qu'il y a de différent quand nous compilons et
 exécutons le programme “Hello, world!” avec Cargo ! À l'intérieur de votre
-dossier *hello_cargo*, compilez votre projet en utilisant la commande suivante :
+répertoire *hello_cargo*, compilez votre projet en utilisant la commande suivante :
 
 <!--
 ```console
@@ -331,7 +331,7 @@ directory. You can run the executable with this command:
 
 Cette commande crée un fichier exécutable dans *target/debug/hello_cargo* (ou
 *target\debug\hello_cargo.exe* sous Windows) plutôt que de le déposer dans votre
-dossier courant. Vous pouvez lancer l'exécutable avec cette commande :
+répertoire courant. Vous pouvez lancer l'exécutable avec cette commande :
 
 <!--
 ```console
@@ -356,7 +356,7 @@ manages its contents for you.
 
 Si tout s'est bien passé, `Hello, world!` devrait s'afficher dans le terminal.
 Lancer `cargo build` pour la première fois devrait aussi mener Cargo à créer
-un nouveau fichier à la racine du dossier projet : *Cargo.lock*. Ce fichier
+un nouveau fichier à la racine du répertoire projet : *Cargo.lock*. Ce fichier
 garde une trace des versions exactes des dépendances de votre
 projet. Ce projet n'a pas de dépendance, donc le fichier est un peu vide. Vous
 n'aurez jamais besoin de changer ce fichier manuellement ; Cargo va gérer son
@@ -452,7 +452,7 @@ as they write their program to make sure it compiles. Then they run `cargo
 build` when they’re ready to use the executable.
 -->
 
-Dans quel cas n'aurions-nous pas besoin d'un exécutable ? Parfois, `cargo check`
+Dans quel cas n'aurions-nous pas besoin d'un exécutable ? Parfois, `cargo check`
 est bien plus rapide que `cargo build`, car il saute l'étape de création de
 l'exécutable. Si vous vérifiez votre travail continuellement pendant que vous
 écrivez votre code, utiliser `cargo check` accélèrera le processus ! C'est
@@ -482,8 +482,8 @@ Récapitulons ce que nous avons appris sur Cargo :
   `cargo run`.
 * Nous pouvons compiler un projet sans produire de binaire afin de vérifier
   l'existance d'erreurs en utilisant `cargo check`.
-* Au lieu d'enregistrer le résultat de la compilation dans le même dossier que
-  votre code, Cargo l'enregistre dans le dossier *target/debug*.
+* Au lieu d'enregistrer le résultat de la compilation dans le même répertoire que
+  votre code, Cargo l'enregistre dans le répertoire *target/debug*.
 
 <!--
 An additional advantage of using Cargo is that the commands are the same no
@@ -557,7 +557,7 @@ Même si le projet `hello_cargo` est simple, il utilise maintenant une grande
 partie de l'outillage que vous rencontrerez dans votre carrière avec Rust. En
 effet, pour travailler sur n'importe quel projet Rust existant, vous n'avez
 qu'à saisir les commandes suivantes pour télécharger le code avec Git, vous
-déplacer dans le dossier projet et compiler :
+déplacer dans le répertoire projet et compiler :
 
 <!--
 ```console
@@ -597,7 +597,7 @@ You’re already off to a great start on your Rust journey! In this chapter,
 you’ve learned how to:
 -->
 
-Vous êtes déjà bien lancé dans votre périple avec Rust ! Dans ce chapitre, vous
+Vous êtes déjà bien lancé dans votre périple avec Rust ! Dans ce chapitre, vous
 avez appris comment :
 
 <!--

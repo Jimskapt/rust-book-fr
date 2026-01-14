@@ -48,7 +48,7 @@ To set up a new project, go to the *projects* directory that you created in
 Chapter 1 and make a new project using Cargo, like so:
 -->
 
-Pour créer un nouveau projet, rendez-vous dans le dossier *projects* que
+Pour créer un nouveau projet, rendez-vous dans le répertoire *projects* que
 vous avez créé au chapitre 1 et utilisez Cargo pour créer votre projet, comme
 ceci :
 
@@ -72,7 +72,7 @@ directory.
 
 La première commande, `cargo new`, prend comme premier argument le nom de notre
 projet (`jeu_du_plus_ou_du_moins`). La seconde commande nous déplace dans le
-dossier de notre nouveau projet créé par Cargo.
+répertoire de notre nouveau projet créé par Cargo.
 
 <!--
 Look at the generated *Cargo.toml* file:
@@ -391,7 +391,7 @@ library that is a growable, UTF-8 encoded bit of text.
 Lorsque vous revenez sur le jeu du plus ou du moins, vous comprenez donc
 maintenant que la ligne `let mut supposition` permet de créer une variable
 mutable nommée `supposition`. Le signe égal (`=`) indique à Rust que nous
-voulons désormais lier quelquechose à la variable. A la droite du signe égal,
+voulons désormais lier quelquechose à la variable. À la droite du signe égal,
 nous avons la valeur liée à `supposition`, qui est ici le résultat de
 l'utilisation de `String::new`, qui est une fonction qui retourne une nouvelle
 instance de `String`.
@@ -1009,8 +1009,8 @@ them and then compiles the project with the dependencies available.
 -->
 
 Une fois le registre mis à jour, Cargo lit la section `[dependencies]` et se
-charge de télécharger les *crates* qui y sont listés que vous n'avez pas encore
-téléchargé. Dans notre cas, bien que nous n'ayons spécifié qu'une seule
+charge de télécharger les *crates* qui y sont listées que vous n'avez pas encore
+téléchargées. Dans notre cas, bien que nous n'ayons spécifié qu'une seule
 dépendance, `rand`, Cargo a aussi téléchargé d'autres *crates* dont dépend
 `rand` pour fonctionner. Une fois le téléchargement terminé des *crates*, Rust
 les compile, puis compile notre projet avec les dépendances disponibles.
@@ -1089,7 +1089,7 @@ time you run `cargo build`, so we now have this in the *guessing_game*
 directory.
 -->
 
-Cargo embarque une fonctionnalité qui garantie que vous pouvez recompiler le
+Cargo embarque une fonctionnalité qui garantit que vous pouvez recompiler le
 même artéfact à chaque fois que vous ou quelqu'un d'autre compile votre code :
 Cargo va utiliser uniquement les versions de dépendances que vous avez
 utilisées jusqu'à ce que vous indiquiez le contraire.
@@ -1097,7 +1097,7 @@ Par exemple, imaginons que la semaine prochaine, la version 0.8.4 de la
 *crate* `rand` est publiée, et qu'elle apporte une correction importante, mais
 aussi qu'elle produit une régression qui va casser votre code. Pour éviter cela,
 Rust crée le fichier *Cargo.lock* la première fois que vous utilisez
-`cargo build`, donc nous l'avons désormais dans le dossier
+`cargo build`, donc nous l'avons désormais dans le répertoire
 *jeu_du_plus_ou_du_moins*.
 
 <!--
@@ -1282,7 +1282,7 @@ upper bound, so we need to specify `1..101` to request a number between 1 and
 100. Alternatively, we could pass the range `1..=100`, which is equivalent.
 -->
 
-Ensuite, nous ajoutons deux lignes au milieu. A la première ligne, nous
+Ensuite, nous ajoutons deux lignes au milieu. À la première ligne, nous
 appelons la fonction `rand::thread_rng` qui nous fournit le générateur de
 nombres aléatoires particulier que nous allons utiliser : il est propre au fil
 d'exécution courant et généré par le système d'exploitation. Ensuite, nous
@@ -1504,7 +1504,7 @@ code in that arm will execute and print `Too big!` to the screen. The `match`
 expression ends because it has no need to look at the last arm in this scenario.
 -->
 
-Voyons un exemple avec l'expression `match` que nous avons utilisé ici. Disons
+Voyons un exemple avec l'expression `match` que nous avons utilisée ici. Disons
 que l'utilisateur a saisi le nombre 50 et que le nombre secret généré
 aléatoirement a cette fois-ci comme valeur 38. Quand le code compare 50 à 38,
 la méthode `cmp` va retourner `Ordering::Greater`, car 50 est plus grand
@@ -1644,19 +1644,18 @@ class="keystroke">enter</span> results in a carriage return and a newline,
 Nous lions cette nouvelle variable à l'expression `supposition.trim().parse()`.
 Le `supposition` dans l'expression se réfère à la variable `supposition`
 initiale qui contenait la saisie utilisateur en tant que chaîne de caractères.
-`String` contenant la saisie utilisateur. La méthode `trim` sur une instance
-de `String` va enlever les espaces et autres *whitespaces* au début et à la
-fin, ce que nous devons faire pour comparer la chaîne au `u32`, qui ne peut
-être constitué que de chiffres. L'utilisateur doit appuyer sur
-<span class="keystroke">entrée</span> pour mettre fin à `read_line` et
-récupérer leur supposition, ce qui va rajouter un caractère de fin de ligne à
+La méthode `trim` sur une instance de `String` va enlever les espaces et autres
+*whitespaces* au début et à la fin, ce que nous devons faire pour comparer la
+chaîne au `u32`, qui ne peut être constitué que de chiffres. L'utilisateur doit
+appuyer sur <span class="keystroke">entrée</span> pour mettre fin à `read_line`
+et récupérer sa supposition, ce qui va rajouter un caractère de fin de ligne à
 la chaîne de caractères. Par exemple, si l'utilisateur écrit
 <span class="keystroke">5</span> et appuie sur <span class="keystroke">entrée
 </span>, `supposition` aura alors cette valeur : `5\n`.
 Le `\n` représente une fin de ligne (à noter que sur Windows, appuyer sur
-<span class="keystroke">entrée</span> résulte en un retour chariot suivi d'une
-fin de ligne, `\r\n`). La méthode `trim` enlève `\n` et `\r\n`, il ne reste donc
-plus que `5`.
+<span class="keystroke">entrée</span> résulte en un retour chariot suivi d'un
+saut de ligne, `\r\n`). La méthode `trim` enlève `\n` et `\r\n`, il ne reste
+donc plus que `5`.
 
 <!--
 The [`parse` method on strings][parse]<!-- ignore -- > parses a string into some
@@ -1672,7 +1671,7 @@ comparison will be between two values of the same type!
 -->
 
 La [méthode `parse` des chaînes de caractères][parse]<!-- ignore --> interprète
-une chaîne de caractères en une sorte de nombre. Comme cette méthode peut
+une chaîne de caractères pour en extraire des nombres. Comme cette méthode peut
 interpréter plusieurs types de nombres, nous devons indiquer à Rust le type
 exact de nombre que nous voulons en utilisant `let supposition: u32`.
 Le deux-points (`:`) après `supposition` indique à Rust que nous voulons

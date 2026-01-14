@@ -12,7 +12,7 @@ then refactor the program until we’re using structs instead.
 
 Pour comprendre dans quels cas nous voudrions utiliser des structures, écrivons
 un programme qui calcule l'aire d'un rectangle. Nous commencerons en utilisant
-de simples variables, puis on remaniera le code jusqu'à utiliser des structures
+de simples variables, puis nous remanierons le code jusqu'à utiliser des structures
 à la place.
 
 <!--
@@ -48,7 +48,7 @@ certaine manière dans le *src/main.rs* de notre projet.
 specified by separate width and height variables</span>
 -->
 
-<span class="caption">Encart 5-8 : calcul de l'aire d'un rectangle défini par
+<span class="caption">Encart 5-8 : Calcul de l'aire d'un rectangle défini par
 les variables distinctes `largeur` et `hauteur`</span>
 
 <!--
@@ -103,7 +103,7 @@ of Chapter 3: by using tuples.
 -->
 
 La fonction `aire` est censée calculer l'aire d'un rectangle, mais la fonction
-que nous avons écrite a deux paramètres, et il n'est pas précisé nulle part
+que nous avons écrite a deux paramètres, et il n'est précisé nulle part
 dans notre programme à quoi sont liés les paramètres. Il serait plus lisible et
 plus gérable de regrouper ensemble la largeur et la hauteur. Nous avons déjà vu
 dans la section [“Le type *tuple*”][the-tuple-type]<!-- ignore --> du chapitre 3
@@ -143,7 +143,7 @@ tuples.
 rectangle with a tuple</span>
 -->
 
-<span class="caption">Encart 5-9 : Renseigner la largeur et la hauteur du
+<span class="caption">Encart 5-9 : Passage de la largeur et la hauteur du
 rectangle dans un tuple</span>
 
 <!--
@@ -154,10 +154,10 @@ the tuple, making our calculation less obvious.
 -->
 
 D'une certaine façon, ce programme est meilleur. Les tuples nous permettent de
-structurer un peu plus et nous ne passons plus qu'un argument. Mais d'une autre
+structurer un peu plus et nous ne passons plus qu'un seul argument. Mais d'une autre
 façon, cette version est moins claire : les tuples ne donnent pas de noms à
 leurs éléments, donc il faut accéder aux éléments du tuple via leur indice, ce
-qui rends plus compliqué notre calcul.
+qui rend plus compliqué notre calcul.
 
 <!--
 Mixing up the width and height wouldn’t matter for the area calculation, but if
@@ -168,13 +168,13 @@ mind if they were to use our code. Because we haven’t conveyed the meaning of
 our data in our code, it’s now easier to introduce errors.
 -->
 
-Le mélange de la largeur et la hauteur n'est pas important pour calculer l'aire,
+Le mélange de la largeur et de la hauteur n'est pas important pour calculer l'aire,
 mais si on voulait afficher le rectangle à l'écran, cela serait problématique !
 Il nous faut garder à l'esprit que la `largeur` est l'élément à l'indice `0` du
-tuple et que la `hauteur` est l'élément à l'indice `1`. Cela complexifie le
-travail de quelqu'un d'autre de le comprendre et s'en souvenir pour qu'il
-puisse l'utiliser. Comme on n'a pas exprimé la signification de nos données
-dans notre code, il est plus facile de faire des erreurs.
+tuple et que la `hauteur` est l'élément à l'indice `1`. Cela serait encore plus 
+complexe à comprendre et à retenir pour une personne tierce qui viendrait à 
+réutiliser notre code. Du fait qu'on n'a pas exprimé la signification de nos données
+dans notre code, il est alors plus facile de faire des erreurs.
 
 <!--
 ### Refactoring with Structs: Adding More Meaning
@@ -273,7 +273,7 @@ using the [`println!` macro][println]<!-- ignore -- > as we have used in
 previous chapters. This won’t work, however.
 -->
 
-Cela serait pratique de pouvoir afficher une instance de `Rectangle` pendant
+Il serait pratique de pouvoir afficher une instance de `Rectangle` pendant
 qu'on débogue notre programme et de voir la valeur de chacun de ses champs.
 L'encart 5-11 essaye de le faire en utilisant [la macro
 `println!`][println]<!-- ignore --> comme on l'a fait dans les chapitres
@@ -350,7 +350,7 @@ Rust n'essaye pas de deviner ce qu'on veut, et les structures n'implémentent pa
 If we continue reading the errors, we’ll find this helpful note:
 -->
 
-Si nous continuons de lire les erreurs, nous trouvons cette remarque utile :
+Si nous continuons à lire les erreurs, nous trouvons cette remarque utile :
 
 <!--
 ```text
@@ -449,7 +449,7 @@ juste avant la définition de la structure, comme le montre l'encart 5-12.
 trait and printing the `Rectangle` instance using debug formatting</span>
 -->
 
-<span class="caption">Encart 5-12 : ajout de l'attribut pour dériver le
+<span class="caption">Encart 5-12 : Ajout de l'attribut pour dériver le
 trait `Debug` et afficher l'instance de `Rectangle` en utilisant le formatage
 de débogage</span>
 
@@ -517,7 +517,7 @@ rend la possession de cette valeur.
 > Output” section in Chapter 12][err]<!-- ignore -- >.
 -->
 
-> Remarque : l'appel à la macro `dbg!` écrit dans le flux d'erreur standard
+> Remarque : l'appel à la macro `dbg!` écrit dans le flux d'erreur standard
 > de la console (`stderr`), contrairement à `println!` qui écrit dans le flux
 > de sortie standard de la console (`stdout`). Nous reparlerons de `stderr` et
 > de `stdout` dans [une section du chapitre 12][err]<!-- ignore -->.
@@ -577,7 +577,7 @@ figure out what your code is doing!
 
 Nous pouvons constater que la première sortie provient de la ligne 10
 de *src/main.rs*, où nous déboguons l'expression `30 * echelle`, et son résultat
-est 60 (le formattage de `Debug` pour les entiers est d'afficher uniquement sa
+est 60 (le formatage de `Debug` pour les entiers est d'afficher uniquement leur
 valeur). L'appel à `dbg!` à la ligne 14 de *src/main.rs* affiche la valeur de
 `&rect1`, qui est une structure `Rectangle`. La macro `dbg!` peut être très
 utile lorsque vous essayez de comprendre ce que fait votre code !

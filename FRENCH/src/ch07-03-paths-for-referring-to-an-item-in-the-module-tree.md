@@ -88,7 +88,7 @@ moment ; nous allons l'expliquer un peu plus tard.
 absolute and relative paths</span>
 -->
 
-<span class="caption">Encart 7-3 : appel à la fonction
+<span class="caption">Encart 7-3 : Appel à la fonction
 `ajouter_a_la_liste_attente` en utilisant un chemin absolu et relatif</span>
 
 <!--
@@ -188,7 +188,7 @@ l'encart 7-4.
 Listing 7-3</span>
 -->
 
-<span class="caption">Encart 7-4 : les erreurs de compilation du code de
+<span class="caption">Encart 7-4 : Les erreurs de compilation du code de
 l'encart 7-3</span>
 
 <!--
@@ -293,7 +293,7 @@ utilisons le mot-clé `pub` sur le module `accueil`, comme dans l'encart 7-5.
 use it from `eat_at_restaurant`</span>
 -->
 
-<span class="caption">Encart 7-5 : utiliser `pub` sur le module `accueil` permet
+<span class="caption">Encart 7-5 : Utiliser `pub` sur le module `accueil` permet
 de l'utiliser dans `manger_au_restaurant`</span>
 
 <!--
@@ -319,7 +319,7 @@ l'encart 7-6.
 Listing 7-5</span>
 -->
 
-<span class="caption">Encart 7-6 : erreurs de compilation du code de l'encart
+<span class="caption">Encart 7-6 : Erreurs de compilation du code de l'encart
 7-5</span>
 
 <!--
@@ -376,7 +376,7 @@ and `fn add_to_waitlist` lets us call the function from
 `eat_at_restaurant`</span>
 -->
 
-<span class="caption">Encart 7-7 : ajout du mot-clé `pub` devant `mod accueil`
+<span class="caption">Encart 7-7 : Ajout du mot-clé `pub` devant `mod accueil`
 et `fn ajouter_a_la_liste_attente` pour nous permettre d'appeler la fonction à
 partir de `manger_au_restaurant`</span>
 
@@ -483,7 +483,7 @@ commençant le chemin de `servir_commande` avec `super` :
 starting with `super`</span>
 -->
 
-<span class="caption">Encart 7-8 : appel d'une fonction en utilisant un chemin
+<span class="caption">Encart 7-8 : Appel d'une fonction en utilisant un chemin
 relatif qui commence par `super`</span>
 
 <!--
@@ -501,7 +501,7 @@ La fonction `corriger_commande_erronee` est dans le module `cuisines`, donc nous
 pouvons utiliser `super` pour nous rendre au module parent de `cuisines`, qui
 dans notre cas est `crate`, la racine. De là, nous cherchons `servir_commande`
 et nous la trouvons. Avec succès ! Nous pensons que le module `cuisines` et la
-fonction `servir_commande` vont toujours garder la même relation et devrons être
+fonction `servir_commande` vont toujours garder la même relation et devront être
 déplacés ensemble si nous réorganisons l'arborescence de modules de la crate.
 Ainsi, nous avons utilisé `super` pour avoir moins de code à mettre à jour à
 l'avenir si ce code est déplacé dans un module différent.
@@ -559,7 +559,7 @@ obtiendront.
 private fields</span>
 -->
 
-<span class="caption">Encart 7-9 : une structure avec certains champs publics et
+<span class="caption">Encart 7-9 : Une structure avec certains champs publics et
 d'autres privés</span>
 
 <!--
@@ -625,7 +625,7 @@ seront publiques. Nous avons simplement besoin d'un `pub` devant le mot-clé
 variants public</span>
 -->
 
-<span class="caption">Encart 7-10 : on rend publique une énumération et cela
+<span class="caption">Encart 7-10 : On rend publique une énumération et cela
 rend aussi toutes ses variantes publiques</span>
 
 <!--

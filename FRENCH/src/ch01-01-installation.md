@@ -132,7 +132,7 @@ auront besoin d'un compilateur C.
 On macOS, you can get a C compiler by running:
 -->
 
-Sur macOS, vous pouvez obtenir un compilateur C en lançant la commande :
+Sur macOS, vous pouvez obtenir un compilateur C en lançant la commande :
 
 <!--
 ```console

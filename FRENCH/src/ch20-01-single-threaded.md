@@ -112,7 +112,7 @@ commencer. Ce code va écouter les flux TCP entrants à l'adresse
 a message when we receive a stream</span>
 -->
 
-<span class="caption">Encart 20-1 : écoute des flux entrants et affichage d'un
+<span class="caption">Encart 20-1 : Écoute des flux entrants et affichage d'un
 message lorsque nous recevons un flux</span>
 
 <!--
@@ -141,7 +141,7 @@ will return a new `TcpListener` instance. The reason the function is called
 
 La fonction `bind` dans ce scénario fonctionne comme la fonction `new` dans le
 sens où elle retourne une nouvelle instance de `TcpListener`. La raison pour
-laquelle cette fonction s'appelle `bind` *(NdT : signifie "lier")* est que dans
+laquelle cette fonction s'appelle `bind` *(NdT : signifie "lier")* est que dans
 le domaine des réseaux, se connecter à un port se dit se “lier à un port”.
 
 <!--
@@ -307,7 +307,7 @@ look like Listing 20-2.
 -->
 
 Commençons à implémenter la fonctionnalité permettant de lire la requête du
-navigateur ! Pour séparer les parties où nous obtenons une connexion de celle
+navigateur ! Pour séparer les parties où nous obtenons une connexion de celle
 où nous agissons avec la connexion, nous allons créer une nouvelle fonction
 pour traiter les connexions. Dans cette nouvelle fonction `gestion_connexion`,
 nous allons lire des données provenant du flux TCP et les afficher afin que
@@ -335,7 +335,7 @@ pour qu'il ressemble à l'encart 20-2.
 the data</span>
 -->
 
-<span class="caption">Encart 20-2 : lecture du `TcpStream` et affichage des
+<span class="caption">Encart 20-2 : Lecture du `TcpStream` et affichage des
 données</span>
 
 <!--
@@ -385,7 +385,7 @@ données qui seront lues. Nous avons fait en sorte que le tampon fasse 1024
 octets, ce qui est suffisamment grand pour stocker les données d'une requête
 basique, ce qui est suffisant pour nos besoins dans ce chapitre. Si nous
 avions voulu gérer des requêtes de taille arbitraire, cette gestion du tampon
-aurait été plus complexe ; nous allons la garder simpliste pour l'instant.
+aurait été plus complexe ; nous allons la garder simpliste pour l'instant.
 Nous envoyons le tampon dans `flux.read` qui va lire les octets provenant du
 `TcpStream` et les ajouter dans le tampon.
 
@@ -588,7 +588,7 @@ données !
 ### Writing a Response
 -->
 
-### Ecrire une réponse
+### Écrire une réponse
 
 <!--
 Now we’ll implement sending data in response to a client request. Responses
@@ -679,7 +679,7 @@ l'encart 20-3.
 the stream</span>
 -->
 
-<span class="caption">Encart 20-3 : écriture d'une toute petite réponse HTTP de
+<span class="caption">Encart 20-3 : Écriture d'une toute petite réponse HTTP de
 réussite dans le flux</span>
 
 <!--
@@ -739,8 +739,8 @@ possibility.
 -->
 
 Implémentons la fonctionnalité permettant de retourner plus qu'une simple page
-blanche. Créez un nouveau fichier, *hello.html*, à la racine de votre dossier
-de projet, et pas dans le dossier *src*. Vous pouvez ajouter le HTML que vous
+blanche. Créez un nouveau fichier, *hello.html*, à la racine de votre répertoire
+de projet, et pas dans le répertoire *src*. Vous pouvez ajouter le HTML que vous
 souhaitez ; l'encart 20-4 vous montre une possibilité.
 
 <!--
@@ -764,7 +764,7 @@ souhaitez ; l'encart 20-4 vous montre une possibilité.
 response</span>
 -->
 
-<span class="caption">Encart 20-4 : un exemple de fichier HTML à retourner dans
+<span class="caption">Encart 20-4 : Un exemple de fichier HTML à retourner dans
 une réponse</span>
 
 <!--
@@ -801,7 +801,7 @@ l'envoyer.
 body of the response</span>
 -->
 
-<span class="caption">Encart 20-5 : envoi du contenu de *hello.html* dans
+<span class="caption">Encart 20-5 : Envoi du contenu de *hello.html* dans
 le corps de la réponse</span>
 
 <!--
@@ -898,7 +898,7 @@ contenu de la requête que nous recevons à la requête que nous attendrions pou
 to */* differently from other requests</span>
 -->
 
-<span class="caption">Encart 20-6 : détection et gestion des requêtes vers */*
+<span class="caption">Encart 20-6 : Détection et gestion des requêtes vers */*
 de manière différenciée des autres requêtes</span>
 
 <!--
@@ -976,7 +976,7 @@ page s'affiche dans le navigateur, indiquant la réponse à l'utilisateur final.
 error page if anything other than */* was requested</span>
 -->
 
-<span class="caption">Encart 20-7 : répondre un code de statut 404 et une page
+<span class="caption">Encart 20-7 : Répondre un code de statut 404 et une page
 d'erreur lorsqu'autre chose que */* a été demandé</span>
 
 <!--
@@ -1015,7 +1015,7 @@ présent dans l'encart 20-8.
 with any 404 response</span>
 -->
 
-<span class="caption">Encart 20-8 : contenu d'exemple pour la page à renvoyer
+<span class="caption">Encart 20-8 : Contenu d'exemple pour la page à renvoyer
 avec les réponses 404</span>
 
 <!--
@@ -1078,7 +1078,7 @@ gros blocs `if` et `else`.
 contain only the code that differs between the two cases</span>
 -->
 
-<span class="caption">Encart 20-9 : remaniement des blocs `if` et `else` pour
+<span class="caption">Encart 20-9 : Remaniement des blocs `if` et `else` pour
 qu'ils contiennent uniquement le code qui différencie les deux cas</span>
 
 <!--

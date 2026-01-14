@@ -17,7 +17,7 @@ Les erreurs font partie de la vie des programmes informatiques, c'est pourquoi
 Rust a des fonctionnalités pour gérer les situations dans lesquelles quelque
 chose dérape. Dans de nombreux cas, Rust exige que vous anticipiez les erreurs
 possibles et que vous preniez des dispositions avant de pouvoir compiler votre
-code. Cette exigence rend votre programme plus résiliant en s'assurant que vous
+code. Cette exigence rend votre programme plus résilient en s'assurant que vous
 détectez et gérez les erreurs correctement avant même que vous ne déployiez
 votre code en production !
 
@@ -35,7 +35,7 @@ Rust classe les erreurs dans deux catégories principales : les erreurs
 l'erreur *le fichier n'a pas été trouvé*, nous préférons probablement signaler
 le problème à l'utilisateur et relancer l'opération. Les erreurs irrécupérables
 sont toujours des symptômes de bogues, comme par exemple essayer d'accéder à un
-élément en dehors de l'intervalle de données d'un tableau, et alors dans ce cas
+élément en dehors de l'intervalle de données d'un tableau : dans un tel cas,
 nous voulons arrêter immédiatement l'exécution du programme.
 
 <!--

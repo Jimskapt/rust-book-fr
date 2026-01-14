@@ -54,11 +54,11 @@ of detail you have to keep in your head.
 En plus de regrouper des fonctionnalités, les modules vous permettent
 d'encapsuler les détails de l'implémentation d'une opération : vous pouvez
 écrire du code puis l'utiliser comme une abstraction à travers l'interface de
-programmation publique (API) du code sans se soucier de connaître les détails de
+programmation publique (API) du code sans vous soucier de connaître les détails de
 son implémentation. La façon dont vous écrivez votre code définit quelles
 parties sont publiques et donc utilisables par un autre code, et quelles parties
 sont des détails d'implémentation privés dont vous vous réservez le droit de
-modifier. C'est un autre moyen de limiter le nombre d'éléments de l'API pour
+modification. C'est un autre moyen de limiter le nombre d'éléments de l'API pour
 celui qui l'utilise.
 
 <!--

@@ -176,7 +176,7 @@ over the code can be tiresome and error prone. Imagine having a project full of
 code like that in Listing 19-24.
 -->
 
-Ecrire ce type un peu long dans des signatures de fonctions et comme
+Écrire ce type un peu long dans des signatures de fonctions et comme
 annotations de types tout au long du code peut s'avérer pénible et faciliter
 les erreurs. Imaginez que vous ayez un projet avec plein de code ressemblant à
 celui de l'encart 19-24.
@@ -195,7 +195,7 @@ celui de l'encart 19-24.
 <span class="caption">Listing 19-24: Using a long type in many places</span>
 -->
 
-<span class="caption">Encart 19-24 : utilisation d'un type long à écrire dans
+<span class="caption">Encart 19-24 : Utilisation d'un type long à écrire dans
 de nombreux endroits</span>
 
 <!--
@@ -223,7 +223,7 @@ court qui peut le remplacer partout où il est utilisé.
 repetition</span>
 -->
 
-<span class="caption">Encart 19-25 : ajout et utilisation d'un alias `Thunk`
+<span class="caption">Encart 19-25 : Ajout et utilisation d'un alias `Thunk`
 pour réduire les répétitions</span>
 
 <!--
@@ -364,7 +364,7 @@ But what use is a type you can never create values for? Recall the code from
 Listing 2-5; we’ve reproduced part of it here in Listing 19-26.
 -->
 
-Mais à quoi sert un type dont on ne peut jamais créer de valeurs ?
+Mais à quoi sert un type dont on ne peut jamais créer de valeurs ?
 Souvenez-vous du code de l'encart 2-5 ; nous avons reproduit une partie de
 celui-ci dans l'encart 19-26.
 
@@ -383,7 +383,7 @@ celui-ci dans l'encart 19-26.
 `continue`</span>
 -->
 
-<span class="caption">Encart 19-26 : un `match` avec une branche qui finit par
+<span class="caption">Encart 19-26 : Un `match` avec une branche qui finit par
 un `continue`</span>
 
 <!--
@@ -393,7 +393,7 @@ At the time, we skipped over some details in this code. In Chapter 6 in [“The
 for example, the following code doesn’t work:
 -->
 
-A l'époque, nous avions sauté quelques détails dans ce code. Dans la section
+À l'époque, nous avions sauté quelques détails dans ce code. Dans la section
 [“La structure de contrôle
 `match`”][the-match-control-flow-operator]<!-- ignore --> du chapitre 6, nous
 avons vu que les branches d'un `match` doivent toutes retourner le même type.

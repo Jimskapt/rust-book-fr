@@ -65,7 +65,7 @@ for an `add_one` function in a crate named `my_crate`.
 -->
 
 Les commentaires de documentation utilisent trois barres obliques `///` au lieu
-de deux et prend en charge la notation Markdown pour mettre en forme le texte.
+de deux et prennent en charge la notation Markdown pour mettre en forme le texte.
 Placez les commentaires de documentation juste avant l'élément qu'ils
 documentent. L'encart 14-1 montre des commentaires de documentation pour une
 fonction `ajouter_un` dans une crate nommée `ma_crate`.
@@ -91,7 +91,7 @@ fonction `ajouter_un` dans une crate nommée `ma_crate`.
 function</span>
 -->
 
-<span class="caption">Encart 14-1 : un commentaire de documentation pour une
+<span class="caption">Encart 14-1 : Un commentaire de documentation pour une
 fonction</span>
 
 <!--
@@ -108,7 +108,7 @@ débuté une section avec le titre `Exemples` puis fourni du code qui
 montre comment utiliser la fonction `ajouter_un`. Nous pouvons générer la
 documentation HTML à partir de ces commentaires de documentation en lançant
 `cargo doc`. Cette commande lance l'outil `rustdoc` qui est distribué avec Rust
-et place la documentation HTML générée dans le dossier *target/doc*.
+et place la documentation HTML générée dans le répertoire *target/doc*.
 
 <!--
 For convenience, running `cargo doc --open` will build the HTML for your
@@ -141,7 +141,7 @@ ressembler à l'illustration 14-1 :
 function</span>
 -->
 
-<span class="caption">Illustration 14-1 : documentation HTML pour la fonction
+<span class="caption">Illustration 14-1 : Documentation HTML pour la fonction
 `ajouter_un`</span>
 
 <!--
@@ -316,7 +316,7 @@ fichier *src/lib.rs*, comme dans l'encart 14-2 :
 whole</span>
 -->
 
-<span class="caption">Encart 14-2 : documentation portant sur la crate
+<span class="caption">Encart 14-2 : Documentation portant sur la crate
 `ma_crate`</span>
 
 <!--
@@ -442,7 +442,7 @@ function named `mix`, as shown in Listing 14-3:
 -->
 
 Par exemple, disons que nous avons créé une bibliothèque `art` pour modéliser
-des concepts artistiques. A l'intérieur de cette bibliothèque nous avons deux
+des concepts artistiques. À l'intérieur de cette bibliothèque nous avons deux
 modules : un module `types` qui contient deux énumérations `CouleurPrimaire` et
 `CouleurSecondaire`, et un module `utilitaires` qui contient une fonction
 `mixer`, comme dans l'encart 14-3 :
@@ -468,7 +468,7 @@ modules : un module `types` qui contient deux énumérations `CouleurPrimaire` 
 `kinds` and `utils` modules</span>
 -->
 
-<span class="caption">Encart 14-3 : une bibliothèque `art` avec des éléments
+<span class="caption">Encart 14-3 : Une bibliothèque `art` avec des éléments
 organisés selon les modules `types` et `utilitaires`</span>
 
 <!--
@@ -542,7 +542,7 @@ montre un exemple d'une crate qui utilise les éléments `CouleurPrimaire` et
 its internal structure exported</span>
 -->
 
-<span class="caption">Encart 14-4 : une crate qui utilise les éléments de la
+<span class="caption">Encart 14-4 : Une crate qui utilise les éléments de la
 crate `art` avec sa structure interne exportée</span>
 
 <!--
@@ -602,7 +602,7 @@ pour ré-exporter les éléments au niveau supérieur, comme montré dans l'enca
 items</span>
 -->
 
-<span class="caption">Encart 14-5 : ajout de l'instruction `pub use` pour
+<span class="caption">Encart 14-5 : Ajout de l'instruction `pub use` pour
 ré-exporter les éléments</span>
 
 <!--
@@ -632,7 +632,7 @@ l'illustration 14-4, ce qui rend les types `CouleurPrimaire` et
 that lists the re-exports</span>
 -->
 
-<span class="caption">Illustration 14-4 : la page d'accueil de la documentation
+<span class="caption">Illustration 14-4 : La page d'accueil de la documentation
 pour `art` qui liste les ré-exports</span>
 
 <!--
@@ -667,7 +667,7 @@ mais ils peuvent maintenant utiliser la structure plus pratique de l'encart
 the `art` crate</span>
 -->
 
-<span class="caption">Encart 14-6 : un programme qui utilise les éléments
+<span class="caption">Encart 14-6 : Un programme qui utilise les éléments
 ré-exportés de la crate `art`</span>
 
 <!--
@@ -937,13 +937,13 @@ With a unique name, the version, your description, and a license added, the
 
 Une fois le nom unique, la version, la description et la licence ajoutés, le
 fichier *Cargo.toml* de ce projet qui est prêt à être publié devrait ressembler
-à ceci :
+à ceci :
 
 <!--
 <span class="filename">Filename: Cargo.toml</span>
 -->
 
-<span class="filename">Fichier : Cargo.toml</span>
+<span class="filename">Fichier : Cargo.toml</span>
 
 <!--
 ```toml
@@ -994,7 +994,7 @@ Publishing a crate uploads a specific version to
 
 Maintenant que vous avez créé un compte, sauvegardé votre jeton de clé, choisi
 un nom pour votre crate, et précisé les métadonnées requises, vous êtes prêt à
-publier ! Publier une crate téléverse une version précise sur
+publier ! Publier une crate téléverse une version précise sur
 [crates.io](https://crates.io/)<!-- ignore --> pour que les autres puissent
 l'utiliser.
 
@@ -1023,7 +1023,7 @@ Run the `cargo publish` command again. It should succeed now:
 -->
 
 Lancez la commande `cargo publish` à nouveau. Elle devrait fonctionner à
-présent :
+présent :
 
 <!--
 <!-- manual-regeneration
@@ -1062,7 +1062,7 @@ Congratulations! You’ve now shared your code with the Rust community, and
 anyone can easily add your crate as a dependency of their project.
 -->
 
-Félicitations ! Vous venez de partager votre code avec la communauté Rust, et
+Félicitations ! Vous venez de partager votre code avec la communauté Rust, et
 désormais tout le monde peut facilement ajouter votre crate comme une dépendance
 de son projet.
 
@@ -1133,7 +1133,7 @@ want to yank:
 -->
 
 Pour déprécier une version d'une crate, lancez `cargo yank` et renseignez quelle
-version vous voulez déprécier :
+version vous voulez déprécier :
 
 <!--
 ```console
@@ -1151,7 +1151,7 @@ to start depending on a version again:
 -->
 
 Si vous ajoutez `--undo` à la commande, vous pouvez aussi annuler une
-dépréciation et permettre à nouveaux aux projets de dépendre de cette version :
+dépréciation et permettre à nouveaux aux projets de dépendre de cette version :
 
 <!--
 ```console

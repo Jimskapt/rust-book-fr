@@ -214,8 +214,8 @@ you use modules to organize your code. And just like files in a directory, we
 need a way to find our modules.
 -->
 
-L'arborescence des modules peut rappeler les dossiers du système de fichiers de
-votre ordinateur ; et c'est une excellente comparaison ! Comme les dossiers dans
+L'arborescence des modules peut rappeler les répertoires du système de fichiers de
+votre ordinateur ; et c'est une excellente comparaison ! Comme les répertoires dans
 un système de fichiers, vous utilisez les modules pour organiser votre code. Et
-comme pour les fichiers dans un dossier, nous avons besoin d'un moyen de trouver
+comme pour les fichiers dans un répertoire, nous avons besoin d'un moyen de trouver
 nos modules.

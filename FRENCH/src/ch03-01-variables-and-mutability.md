@@ -302,7 +302,7 @@ the speed of light.
 
 Les constantes sont valables pendant toute la durée d'exécution du programme
 au sein de la portée dans laquelle elles sont déclarées. Cette caractéristique
-rends les constantes très utiles lorsque plusieurs parties du programme doivent
+rend les constantes très utiles lorsque plusieurs parties du programme doivent
 connaître certaines valeurs, comme par exemple le nombre maximum de points
 qu'un joueur est autorisé à gagner ou encore la vitesse de la lumière.
 

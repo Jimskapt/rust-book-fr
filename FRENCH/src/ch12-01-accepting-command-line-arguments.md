@@ -186,7 +186,7 @@ contient toutes les valeurs engendrées par l'itérateur. Nous pouvons utiliser
 la fonction `collect` pour créer n'importe quel genre de collection, donc nous
 avons annoté explicitement le type de `args` pour préciser que nous attendions
 un vecteur de chaînes de caractères. Bien que nous n'ayons que très
-rarement d'annoter les types en Rust, `collect` est une fonction que vous
+rarement besoin d'annoter les types en Rust, `collect` est une fonction que vous
 aurez souvent besoin d'annoter car Rust n'est pas capable de déduire le type
 de collection que vous attendez.
 

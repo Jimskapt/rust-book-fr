@@ -159,7 +159,7 @@ pour différentes missions. Ils l'utilisent pour des outils en ligne de commande
 des services web, des outils DevOps, des systèmes embarqués, de l'analyse et de
 la conversion audio et vidéo, des cryptomonnaies, de la bio-informatique, des
 moteurs de recherche, de l'internet des objets *(IoT)*, de l'apprentissage
-automatique *(marchine learning)*, et même des parties importantes du navigateur
+automatique *(machine learning)*, et même des parties importantes du navigateur
 internet Firefox.
 
 <!--

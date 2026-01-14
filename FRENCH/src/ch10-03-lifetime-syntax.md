@@ -1343,7 +1343,7 @@ of the struct’s type.
 
 Les noms des durées de vie pour les champs de structure ont toujours besoin
 d'être déclarés après le mot-clé `impl` et sont ensuite utilisés après le nom de
-la structure, car ces durées vie font partie du type de la structure.
+la structure, car ces durées de vie font partie du type de la structure.
 
 <!--
 In method signatures inside the `impl` block, references might be tied to the

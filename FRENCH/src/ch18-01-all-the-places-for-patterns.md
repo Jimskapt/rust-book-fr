@@ -408,7 +408,7 @@ To see the pattern matching aspect of `let` more clearly, consider Listing
 -->
 
 Pour comprendre plus clairement l'aspect filtrage par motif de `let`, examinons
-l'encart 18-4, qui utilise un motif `let` pour destructurer un tuple.
+l'encart 18-4, qui utilise un motif `let` pour déstructurer un tuple.
 
 <!--
 ```rust
@@ -425,7 +425,7 @@ l'encart 18-4, qui utilise un motif `let` pour destructurer un tuple.
 create three variables at once</span>
 -->
 
-<span class="caption">Encart 18-4 : Utilisation d'un motif pour destructurer un
+<span class="caption">Encart 18-4 : Utilisation d'un motif pour déstructurer un
 tuple et créer trois variables à la fois</span>
 
 <!--

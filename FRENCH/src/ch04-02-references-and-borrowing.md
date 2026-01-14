@@ -259,9 +259,9 @@ clear that the `change` function will mutate the value it borrows.
 -->
 
 D'abord, nous précisons que `s` est `mut`. Ensuite, nous avons créé une
-référence mutable avec `&mut s` où nous appelons la fonction `change` et nous
+référence mutable avec `&mut s` où nous appelons la fonction `changer` et nous
 avons modifié la signature pour accepter de prendre une référence mutable avec
-`texte: &mut String`. Cela précise clairement que la fonction `change` va faire
+`texte: &mut String`. Cela précise clairement que la fonction `changer` va faire
 muter la valeur qu'elle emprunte.
 
 <!--

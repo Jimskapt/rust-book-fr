@@ -184,7 +184,7 @@ when we follow `rect1.width` with parentheses, Rust knows we mean the method
 -->
 
 Ici, nous avons défini la méthode `largeur` pour qu'elle retourne `true` si la
-valeur dans le champ `largeur` est supérieur à 0, et `false` si la
+valeur dans le champ `largeur` est supérieure à 0, et `false` si la
 valeur est 0 : nous pouvons utiliser un champ à l'intérieur d'une méthode du
 même nom, pour n'importe quel usage. Dans le `main`, lorsque nous ajoutons des
 parenthèses après `rect1.largeur`, Rust comprend que nous faisons référence à la méthode

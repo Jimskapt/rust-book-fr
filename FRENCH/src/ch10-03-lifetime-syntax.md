@@ -1343,7 +1343,7 @@ of the struct’s type.
 
 Les noms des durées de vie pour les champs de structure ont toujours besoin
 d'être déclarés après le mot-clé `impl` et sont ensuite utilisés après le nom de
-la structure, car ces durées vie font partie du type de la structure.
+la structure, car ces durées de vie font partie du type de la structure.
 
 <!--
 In method signatures inside the `impl` block, references might be tied to the
@@ -1469,12 +1469,11 @@ solution is fixing those problems, not specifying the `'static` lifetime.
 Il se peut que voyiez des suggestions pour utiliser la durée de vie `'static`
 dans les messages d'erreur. Mais avant d'utiliser `'static` comme durée de vie
 pour une référence, demandez-vous si la référence en question vit bien pendant
-toute la vie de votre programme, ou non. Vous devriez vous demander si vous
-voulez qu'elle vive aussi longtemps, même si c'était possible. La plupart du
-temps, le problème résulte d'une tentative de création d'une référence
-pendouillante ou d'une inadéquation des durées de vie disponibles. Dans ces
-cas-là, la solution consiste à résoudre ces problèmes, et pas à renseigner la
-durée de vie comme étant `'static`.
+toute la vie de votre programme, ou non, et si c’est réellement ce que vous 
+voulez. La plupart du temps, le problème résulte d'une tentative de création 
+d'une référence pendouillante ou d'une inadéquation des durées de vie 
+disponibles. Dans ces cas-là, la solution consiste à résoudre ces problèmes, et 
+pas à renseigner la durée de vie comme étant `'static`.
 
 <!--
 ## Generic Type Parameters, Trait Bounds, and Lifetimes Together

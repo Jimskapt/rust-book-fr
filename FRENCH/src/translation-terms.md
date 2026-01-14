@@ -88,7 +88,7 @@ français.
 | directory | répertoire | - |
 | dot notation | la notation avec un point | - |
 | double free | double libération | - |
-| drop | libérér | - |
+| drop | libérer | - |
 | elision | élision | - |
 | enum | énumération | - |
 | enumeration | énumération | - |

@@ -500,7 +500,7 @@ exactly one `free`.
 
 Cependant, le deuxième point est différent. Dans des langages avec un
 *ramasse-miettes*, le ramasse-miettes surveille et nettoie la mémoire qui n'est
-plus utilisée, sans que nous n'ayons à nous en préoccuper. Dans la pluspart des
+plus utilisée, sans que nous n'ayons à nous en préoccuper. Dans la plupart des
 langages sans ramasse-miettes, c'est de notre responsabilité d'identifier quand
 cette mémoire n'est plus utilisée et d'appeler du code pour explicitement la
 libérer, comme nous l'avons fait pour la demander auparavant. Historiquement,

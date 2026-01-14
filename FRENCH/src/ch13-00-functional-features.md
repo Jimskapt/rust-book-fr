@@ -47,10 +47,10 @@ Plus précisément, nous allons voir :
 * *les fermetures*, une construction qui ressemble à une fonction que vous
   pouvez stocker dans une variable ;
 * *les itérateurs*, une façon de travailler sur une série d'éléments
-* comment utiliser ces deux fonctionnalités pour améliorer le projet
-  d'entrée/sortie du chapitre 12 ;
-* étudier la performance de ces deux fonctionnalités (divulgâchage : elles sont
-  probablement plus rapides que ce que vous pensez !).
+* Comment utiliser ces deux fonctionnalités pour améliorer le projet
+  d'entrée/sortie du chapitre 12
+* Etudier la performance de ces deux fonctionnalités (Spoiler alert : elles sont
+  probablement plus rapides que ce que vous pensez !)
 
 <!--
 Other Rust features, such as pattern matching and enums, which we’ve covered in

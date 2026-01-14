@@ -220,9 +220,9 @@ both the `value` and the `unit_label`.
 -->
 
 Cet exemple crée la fonction `afficher_mesure_avec_unite` qui a deux paramètres.
-Le premier paramètre s'appelle `valeur` et est un `i32`. Le second, `nom_unite`,
+Le premier paramètre s'appelle `valeur` et est un `i32`. Le second, `unite`,
 est de type `char`. La fonction affiche ensuite le texte qui contient les
-valeurs de `valeur` et de `nom_unite`.
+valeurs de `valeur` et de `unite`.
 
 <!--
 Let’s try running this code. Replace the program currently in your *functions*
@@ -250,7 +250,7 @@ the value for `unit_label`, the program output contains those values.
 -->
 
 Comme nous avons appelé la fonction avec la valeur `5` pour `valeur` et `'h'`
-pour `nom_unite`, la sortie de ce programme contient ces valeurs.
+pour `unite`, la sortie de ce programme contient ces valeurs.
 
 <!--
 ### Statements and Expressions

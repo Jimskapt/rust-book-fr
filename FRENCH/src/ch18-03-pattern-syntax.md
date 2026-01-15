@@ -658,8 +658,8 @@ tuples inside a tuple and destructure all the primitive values out:
 
 Nous pouvons mélanger les correspondances et les motifs pour déstructurer des
 éléments imbriqués de manière bien plus complexe. L'exemple suivant montre une
-déstructuration complexe dans laquelle nous imbriquons des structures et des
-tuples à l'intérieur d'un tuple et nous y déstructurons toutes les valeurs
+déstructuration complexe dans laquelle nous imbriquons une structure et un
+tuple à l'intérieur d'un tuple et nous y déstructurons toutes les valeurs
 primitives :
 
 <!--

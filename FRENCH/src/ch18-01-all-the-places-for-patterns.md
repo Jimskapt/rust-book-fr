@@ -196,7 +196,7 @@ valeur présente dans la variante `Ok`. Cela signifie que nous devons placer la
 condition `if age > 30` à l'intérieur de ce bloc : nous ne pouvons pas combiner
 ces deux conditions dans une seule `if let Ok(age) = age && age > 30`. La
 variable masquée `age` que nous souhaitons comparer à 30 n'est pas encore en
-vigueur tant que la nouvelle portée entre les accolades n'a pas commencée.
+vigueur tant que la nouvelle portée entre les accolades n'a pas commencé.
 
 <!--
 The downside of using `if let` expressions is that the compiler doesn’t check

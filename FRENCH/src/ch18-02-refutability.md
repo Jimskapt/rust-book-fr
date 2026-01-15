@@ -15,7 +15,7 @@ a_value` because if the value in the `a_value` variable is `None` rather than
 -->
 
 Les motifs se divisent en deux catégories : réfutables et irréfutables. Les
-motifs qui vont correspondre à n'importe quelle valeur qu'on lui passe sont
+motifs qui vont correspondre à n'importe quelle valeur qu'on leur passe sont
 *irréfutables*. Un exemple serait le `x` dans l'instruction `let x = 5;` car
 `x` correspond à tout ce qui est possible de sorte que la
 correspondance ne puisse pas échouer. Les motifs pour lesquels la correspondance
@@ -66,7 +66,7 @@ where Rust requires an irrefutable pattern and vice versa. Listing 18-8 shows a
 pattern. As you might expect, this code will not compile.
 -->
 
-Examinons un exemple de ce qu'il se passe lorsque nous essayons d'utiliser un
+Examinons un exemple de ce qui se passe lorsque nous essayons d'utiliser un
 motif réfutable lorsque Rust prévoit d'utiliser un motif irréfutable, et
 vice-versa. L'encart 18-8 montre une instruction `let`, mais comme le motif nous
 avons indiqué `Some(x)`, un motif réfutable. Comme vous pouvez vous en douter,

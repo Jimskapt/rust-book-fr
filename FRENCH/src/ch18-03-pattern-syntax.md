@@ -1187,7 +1187,7 @@ voulons ignorer `2`, faire correspondre `second` avec `4`, puis ignorer ensuite
 correspondre `second` à `8`, puis ignorer ensuite `16` et `32` ; et ainsi de
 suite. Le nom de la variable `second` ne signifie pas grand-chose pour Rust,
 donc nous obtenons une erreur de compilation à cause de l'utilisation de `..`
-à deux endroits qui rendent la situation ambigüe.
+à deux endroits qui rend la situation ambigüe.
 
 <!--
 ### Extra Conditionals with Match Guards

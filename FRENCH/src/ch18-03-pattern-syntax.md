@@ -774,8 +774,8 @@ will then not warn about unused function parameters, as it would if you used a
 name instead.
 -->
 
-Dans la plupart des cas lorsque vous n'avez pas besoin d'un paramètre d'une
-fonction, vous pouvez changer la signature pour qu'elle n'inclut pas le
+Dans la plupart des cas, lorsque vous n'avez pas besoin d'un paramètre d'une
+fonction, vous pouvez changer la signature pour qu'elle n'inclue pas le
 paramètre non utilisé. Ignorer un paramètre de fonction peut être
 particulièrement utile dans certains cas, comme par exemple, lors de
 l'implémentation d'un trait lorsque vous avez besoin d'un certain type de

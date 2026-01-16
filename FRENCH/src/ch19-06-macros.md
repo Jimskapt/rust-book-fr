@@ -1082,7 +1082,7 @@ dependencies; if not, you can specify them as `path` dependencies as follows:
 
 Maintenant, `cargo build` devrait fonctionner correctement pour `hello_macro` et
 `hello_macro_derive`. Relions maintenant ces crates au code de l'encart 19-30
-pour voir les macros procédurales à l'oeuvre ! Créez un nouveau projet binaire
+pour voir les macros procédurales à l'œuvre ! Créez un nouveau projet binaire
 dans votre répertoire *projects* en utilisant `cargo new pancakes`. Nous avons
 besoin d'ajouter `hello_macro` et `hello_macro_derive` comme dépendances dans le
 *Cargo.toml* de la crate `pancakes`. Si vous publiez vos versions de

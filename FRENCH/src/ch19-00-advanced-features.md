@@ -42,7 +42,7 @@ Dans ce chapitre, nous allons voir :
 -->
 
 * le *unsafe* de Rust : comment désactiver certaines garanties de Rust et
-  prendre la responsabilité de veiller vous-même manuellement à les assurer
+  prendre la responsabilité de veiller vous-même manuellement à les assurer ;
 * les traits avancés : les types associés, les types de paramètres par défaut,
   la syntaxe entièrement détaillée, les supertraits et le motif newtype en lien
   avec les traits ;

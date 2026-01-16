@@ -1131,7 +1131,7 @@ reason to use `unsafe` code, you can do so, and having the explicit `unsafe`
 annotation makes it easier to track down the source of problems when they occur.
 -->
 
-L'utilisation de `unsafe` pour mettre en oeuvre une des cinq actions (ou
+L'utilisation de `unsafe` pour mettre en œuvre une des cinq actions (ou
 super-pouvoirs) que nous venons d'aborder n'est pas une mauvaise chose et ne doit
 pas être mal vu. Mais il est plus difficile de sécuriser du code `unsafe` car le
 compilateur ne peut pas aider à garantir la sécurité de la mémoire. Lorsque vous

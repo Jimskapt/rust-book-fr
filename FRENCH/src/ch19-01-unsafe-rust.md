@@ -88,11 +88,11 @@ permettent de :
 * Access fields of `union`s
 -->
 
-* Déréférencer un pointeur brut
-* Faire appel à une fonction ou une méthode non sécurisée
-* Lire ou modifier une variable statique mutable
-* Implémenter un trait non sécurisé
-* Accéder aux champs des `union`
+* déréférencer un pointeur brut ;
+* faire appel à une fonction ou une méthode non sécurisée ;
+* lire ou modifier une variable statique mutable ;
+* implémenter un trait non sécurisé ;
+* accéder aux champs des `union`.
 
 <!--
 It’s important to understand that `unsafe` doesn’t turn off the borrow checker

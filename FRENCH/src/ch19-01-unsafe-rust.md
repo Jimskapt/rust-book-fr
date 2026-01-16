@@ -213,10 +213,10 @@ bruts peuvent :
 
 * ignorer les règles d'emprunt en ayant plusieurs pointeurs tant immuables que
   mutables ou en ayant plusieurs pointeurs mutables qui pointent vers le même
-  endroit.
-* ne pas être obligés de pointer sur un emplacement mémoire valide
-* être autorisés à avoir la valeur nulle
-* ne pas implémenter de fonctionnalité de nettoyage automatique
+  endroit ;
+* ne pas être obligés de pointer sur un emplacement mémoire valide ;
+* être autorisés à avoir la valeur nulle ;
+* ne pas implémenter de fonctionnalité de nettoyage automatique.
 
 <!--
 By opting out of having Rust enforce these guarantees, you can give up

@@ -36,7 +36,7 @@ garanties, il vaut mieux rejeter quelques programmes valides plutôt que
 d'accepter quelques programmes invalides. Bien que le code *puisse* être
 correct, si le compilateur Rust n'a pas assez d'information pour être sûr, il
 va refuser ce code. Dans ce cas, vous pouvez utiliser du code non sécurisé pour
-dire au compilateur “fais-moi confiance, je sais ce que je fait”. Le prix à
+dire au compilateur “fais-moi confiance, je sais ce que je fais”. Le prix à
 payer pour cela est que vous l'utilisez à vos risques et périls : si
 vous écrivez du code non sécurisé de manière incorrecte, des problèmes liés à
 la sécurité de la mémoire peuvent se produire, tel qu'un déréférencement d'un
@@ -189,7 +189,7 @@ Au chapitre 4, dans la section
 [“Les références pendouillantes”][dangling-references]<!-- ignore -->, nous
 avions mentionné que le compilateur s'assure que les références sont toujours
 valides. Le Rust non sécurisé offre deux nouveaux types qui s'appellent les
-*pointeurs brut* et qui ressemblent aux références. Comme les références, les
+*pointeurs bruts* et qui ressemblent aux références. Comme les références, les
 pointeurs bruts peuvent être immuables ou mutables et s'écrivent respectivement
 `*const T` et `*mut T`. L'astérisque n'est pas l'opérateur de déréférencement ;
 il fait partie du nom du type. Dans un contexte de pointeur brut, *immuable*

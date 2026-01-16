@@ -1035,7 +1035,7 @@ too, as shown in Listing 19-11.
 -->
 
 Un autre cas d'usage de `unsafe` est l'implémentation d'un trait non sécurisé.
-Un trait n'est pas sécurisé lorsque au moins une de ses méthodes contient une
+Un trait n'est pas sécurisé lorsqu'au moins une de ses méthodes contient une
 invariante que le compilateur ne peut pas vérifier. Nous pouvons déclarer un
 trait qui n'est pas sécurisé en ajoutant le mot-clé `unsafe` devant `trait` et
 en marquant aussi l'implémentation du trait comme `unsafe`, comme dans
@@ -1090,7 +1090,7 @@ pointeurs bruts, et nous souhaitions marquer ce type comme étant `Send` ou
 `Sync`, nous aurions dû utiliser `unsafe`. Rust ne peut pas vérifier que notre
 type respecte les garanties pour que ce type puisse être envoyé en toute
 sécurité entre des tâches ou qu'il puisse être utilisé par plusieurs tâches ;
-en conséquence, nous avons besoin de faire ces vérifications manuellement et le
+en conséquence, nous avons besoin de faire ces vérifications manuellement et de le
 signaler avec `unsafe`.
 
 <!--

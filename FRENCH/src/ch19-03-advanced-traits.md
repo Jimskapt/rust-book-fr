@@ -30,10 +30,10 @@ uses some types without needing to know exactly what those types are until the
 trait is implemented.
 -->
 
-Les *types associés* connectent un type à remplacer avec un trait afin que la
-définition des méthodes puisse utiliser ces types à remplacer dans leur
+Les *types associés* connectent un type générique avec un trait afin que les
+définitions des méthodes du trait puissent utiliser ces types génériques dans leur
 signature. Celui qui implémente un trait doit renseigner un type concret pour
-être utilisé à la place du type à remplacer pour cette implémentation précise.
+être utilisé à la place du type générique pour cette implémentation précise.
 Ainsi, nous pouvons définir un trait qui utilise certains types sans avoir
 besoin de savoir exactement quels sont ces types jusqu'à ce que ce trait soit
 implémenté.

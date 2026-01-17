@@ -277,7 +277,7 @@ method.
 -->
 
 La méthode `add` ajoute les valeurs `x` de deux instances de `Point` ainsi que
-les valeurs `y` de deux instances de `Point` pour créer un nouveau `Point`. Le
+les valeurs `y` de ces deux instances de `Point` pour créer un nouveau `Point`. Le
 trait `Add` a un type associé `Output` qui détermine le type retourné pour la
 méthode `add`.
 

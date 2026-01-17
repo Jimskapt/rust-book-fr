@@ -94,7 +94,7 @@ method will return an `Option` containing a value of that concrete type.
 
 Le type `Item` est un type à remplacer, et la définition de la méthode `next`
 informe qu'elle va retourner des valeurs du type `Option<Self::Item>`. Ceux qui
-implémenterons le trait `Iterator` devront renseigner un type concret pour
+implémenteront le trait `Iterator` devront renseigner un type concret pour
 `Item`, et la méthode `next` va retourner une `Option` qui contiendra une
 valeur de ce type concret.
 

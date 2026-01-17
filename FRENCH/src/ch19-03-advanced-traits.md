@@ -226,7 +226,7 @@ overloading. *Operator overloading* is customizing the behavior of an operator
 -->
 
 Un bon exemple d'une situation pour laquelle cette technique est utile est avec
-la surcharge d'opérateurs. *La surcharge d'opérateur* permet de personnaliser
+la surcharge d'opérateur. *La surcharge d'opérateur* permet de personnaliser
 le comportement d'un opérateur (comme `+`) dans des cas particuliers.
 
 <!--

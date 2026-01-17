@@ -1069,7 +1069,7 @@ du chapitre 5). La structure tuple aura un champ et sera une petite enveloppe
 pour le type sur lequel nous souhaitons implémenter le trait. Ensuite, le type
 enveloppant est local à notre crate, et nous pouvons lui implémenter un trait.
 *Newtype* est un terme qui provient du langage de programmation Haskell. Il n'y
-a pas de conséquence sur les performance à l'exécution pour l'utilisation de ce
+a pas de conséquence sur les performances à l'exécution pour l'utilisation de ce
 motif, ce qui signifie que le type enveloppant est résolu à la compilation.
 
 <!--

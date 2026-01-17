@@ -25,7 +25,7 @@ Rust : les macros *déclaratives* avec `macro_rules!` et trois types de macros
   specified as their argument
 -->
 
-* des macros `#[derive]` personnalisées qui renseigne du code ajouté grâce à
+* des macros `#[derive]` personnalisées qui renseignent du code ajouté grâce à
   l'attribut `derive` utilisé sur les structures et les énumérations ;
 * les macros qui ressemblent à des attributs qui définissent des attributs
   personnalisés qui sont utilisables sur n'importe quel élément ;

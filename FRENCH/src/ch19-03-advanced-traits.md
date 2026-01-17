@@ -171,7 +171,7 @@ the concrete types of the generic type parameters each time. When we use the
 indicate which implementation of `Iterator` we want to use.
 -->
 
-La différence est que lorsque on utilise les génériques, comme dans l'encart
+La différence est que lorsqu'on utilise les génériques, comme dans l'encart
 19-13, on doit annoter les types dans chaque implémentation ; et comme nous
 pouvons aussi implémenter `Iterator<String> for Compteur` ou tout autre type,
 nous pourrions alors avoir plusieurs implémentations de `Iterator` pour

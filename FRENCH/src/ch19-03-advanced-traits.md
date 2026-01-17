@@ -401,9 +401,9 @@ Vous utiliserez les paramètres de types par défaut dans deux principaux cas :
 * To allow customization in specific cases most users won’t need
 -->
 
-* Pour étendre un type sans casser le code existant
-* Pour permettre la personnalisation dans des cas spécifiques que la plupart
-  des utilisateurs n'auront pas
+* pour étendre un type sans casser le code existant ;
+* pour permettre la personnalisation dans des cas spécifiques que la plupart
+  des utilisateurs n'auront pas.
 
 <!--
 The standard library’s `Add` trait is an example of the second purpose:

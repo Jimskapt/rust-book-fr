@@ -12,7 +12,7 @@ of *procedural* macros:
 -->
 
 Nous avons déjà utilisé des macros tout au long de ce livre, comme `println!`,
-mais nous n'avons pas examiné en profondeur ce qu'est une macro et comment
+mais nous n'avons pas examiné en profondeur ce qu'est une macro ni comment
 elles fonctionnent. Le terme *macro* renvoie à une famille de fonctionnalités de
 Rust : les macros *déclaratives* avec `macro_rules!` et trois types de macros
 *procédurales* :

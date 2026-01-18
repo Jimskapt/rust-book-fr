@@ -1063,7 +1063,7 @@ saves an allocation by converting `#name` to a string literal at compile time.
 La macro `stringify!` utilisée ici est écrite en Rust. Elle prend en argument
 une expression Rust, comme `1 + 2`, et à la compilation transforme l'expression
 en une chaîne de caractères littérale, comme `"1 + 2"`. Cela est différent de
-`format!` ou de `println!`, des macros qui évaluent l'expression et retourne
+`format!` ou de `println!`, des macros qui évaluent l'expression et retournent
 ensuite le résultat dans une `String`. Il est possible que l'entrée `#nom` soit
 une expression à écrire littéralement, donc nous utilisons `stringify!`.
 L'utilisation de `stringify!` évite aussi une allocation en convertissant `#nom`

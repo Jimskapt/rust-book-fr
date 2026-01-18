@@ -143,7 +143,7 @@ sont parfois appelées “macros définies par un exemple”,
 déclaratives vous permettent d'écrire quelque chose de similaire à une
 expression `match` de Rust. Comme nous l'avons vu au chapitre 6, les
 expressions `match` sont des structures de contrôle qui prennent en argument
-une expression, comparent la valeur qui en résulte avec les motifs et ensuite
+une expression, comparent la valeur qui en résulte avec des motifs et ensuite
 exécutent le code associé au motif qui correspond. Les macros comparent elles
 aussi une valeur avec des motifs qui sont associés à code particulier : dans
 cette situation, la valeur est littéralement le code source Rust envoyé à la

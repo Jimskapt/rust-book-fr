@@ -926,7 +926,7 @@ Bientôt, nous définirons la fonction `impl_hello_macro`, qui nous permettra de
 construire le nouveau code Rust que nous souhaitons injecter. Mais avant de faire
 cela, remarquez que la sortie de notre macro `derive` est aussi un `TokenStream`.
 Le `TokenStream` retourné est ajouté au code que les utilisateurs de notre
-crate ont écrit, donc lorsqu'ils compilent leur crate, ils récupéreront la
+crate ont écrit, donc lorsqu'ils compilent leur crate, ils récupérent la
 fonctionnalité additionnelle que nous injectons dans le `TokenStream` modifié.
 
 <!--

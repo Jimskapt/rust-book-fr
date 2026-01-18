@@ -623,7 +623,7 @@ response.
 La première ligne est une *ligne de statut* qui contient la version HTTP
 utilisée dans la réponse, un code numérique de statut qui résume le résultat
 de la requête et une phrase de raison qui fournit une description textuelle du
-code de statut. Après la séquence CRLF viennent tous les en-têtes, une autre
+code de statut. Après la séquence CRLF viennent toutes les en-têtes, une autre
 séquence CRLF et enfin le corps de la réponse.
 
 <!--

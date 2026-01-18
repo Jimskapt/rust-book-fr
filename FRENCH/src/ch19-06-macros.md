@@ -941,7 +941,7 @@ about what went wrong by using `panic!` or `expect`.
 
 Vous avez peut-être remarqué que nous faisons appel à `unwrap` pour faire
 paniquer la fonction `hello_macro_derive` si l'appel à la fonction `syn::parse`
-que nous faisons échoue. Il est nécessaire de faire paniquer notre macro
+échoue. Il est nécessaire de faire paniquer notre macro
 procédurale si elle rencontre des erreurs car les fonctions `proc_macro_derive`
 doivent retourner un `TokenStream` plutôt qu'un `Result` pour se conformer à
 l'API de la macro procédurale. Nous avons simplifié cet exemple en utilisant

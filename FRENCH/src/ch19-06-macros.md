@@ -434,7 +434,7 @@ macro variety.
 -->
 
 Lorsque vous créez une macro procédurale, les définitions doivent être rangées
-dans leur propre crate avec un type spécial de crate. Ceci pour des raisons
+dans leur propre crate avec un type spécial de crate, ceci pour des raisons
 techniques complexes que nous espérons supprimer dans l'avenir. La déclaration
 des macros procédurales ressemble au code de l'encart 19-29, dans lequel
 `un_attribut_quelconque` est un emplacement pour l'utilisation d'une macro

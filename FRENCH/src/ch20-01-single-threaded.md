@@ -259,7 +259,7 @@ browser tab.
 Des fois, vous pourriez voir plusieurs messages s'afficher pour une seule
 requête du navigateur ; la raison à cela est peut-être que le navigateur fait
 une requête pour la page ainsi que des requêtes pour d'autres ressources, comme
-l'icone *favicon.ico* qui s'affiche dans l'onglet du navigateur.
+l'icône *favicon.ico* qui s'affiche dans l'onglet du navigateur.
 
 <!--
 It could also be that the browser is trying to connect to the server multiple

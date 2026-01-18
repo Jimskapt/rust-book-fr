@@ -218,7 +218,7 @@ français.
 | return | retourner | - |
 | run | exécuter | pour les programmes |
 | Rustacean | Rustacé | - |
-| section header | entête de section | - |
+| section header | en-tête de section | - |
 | semantic version | version sémantique | - |
 | scalar | scalaire | - |
 | scope | portée | - |

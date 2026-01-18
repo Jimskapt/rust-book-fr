@@ -1300,7 +1300,7 @@ solutions.
 Ouah ! Maintenant vous avez quelques fonctionnalités de Rust supplémentaires
 dans votre boîte à outils que vous n'utiliserez probablement que rarement, mais vous
 savez maintenant qu'elles pourront vous aider dans certaines situations très particulières.
-Nous avons introduits plusieurs sujets complexes afin que vous puissiez les
+Nous avons introduit plusieurs sujets complexes afin que vous puissiez les
 reconnaître, ainsi que la syntaxe associée, lorsque vous les rencontrerez dans des
 messages de suggestions dans des erreurs ou dans le code de quelqu'un d'autre.
 Utilisez ce chapitre comme référence pour vous guider vers ces solutions.

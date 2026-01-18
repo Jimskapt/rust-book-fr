@@ -683,7 +683,7 @@ procédurale à l'intérieur du répertoire de notre crate `hello_macro`. Si nou
 changeons la définition du trait dans `hello_macro`, nous aurons aussi à
 changer l'implémentation de la macro procédurale dans `hello_macro_derive`. Les
 deux crates vont devoir être publiées séparément, et les développeurs qui vont
-utiliser ces crates vont avoir besoin d'ajouter les deux dépendances et les
+utiliser ces crates vont avoir besoin d'ajouter les deux dépendances et de les
 importer dans la portée. Nous pourrions plutôt faire en sorte que la crate
 `hello_macro` utilise `hello_macro_derive` comme dépendance et ré-exporter le
 code de la macro procédurale. Cependant, la façon dont nous avons structuré le
@@ -807,7 +807,7 @@ task.
 La crate `syn` transforme le code Rust d'une chaîne de caractères en une
 structure de données sur laquelle nous pouvons procéder à des opérations. La
 crate `quote` re-transforme les structures de données de `syn` en code Rust.
-Ces crates facilite le parcours de toute sorte de code Rust que nous aurions
+Ces crates facilitent le parcours de toute sorte de code Rust que nous aurions
 besoin de gérer : l'écriture d'un interpréteur complet de code Rust n'a jamais
 été aussi facile.
 

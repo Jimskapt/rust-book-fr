@@ -50,11 +50,11 @@ Voici le plan de construction du serveur web :
 5. Improve the throughput of our server with a thread pool.
 -->
 
-1. En savoir plus sur TCP et HTTP.
-2. Ecouter les connections TCP sur un port.
-3. Interpréter une petite quantité de requêtes HTTP.
-4. Créer une réponse HTTP adéquate.
-5. Augmenter le débit de notre serveur avec un groupe de tâches.
+1. en savoir plus sur TCP et HTTP ;
+2. ecouter les connections TCP sur un port ;
+3. interpréter une petite quantité de requêtes HTTP ;
+4. créer une réponse HTTP adéquate ;
+5. augmenter le débit de notre serveur avec un groupe de tâches.
 
 <!--
 But before we get started, we should mention one detail: the method we’ll use

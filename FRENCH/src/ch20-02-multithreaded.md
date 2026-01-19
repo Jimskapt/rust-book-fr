@@ -1004,13 +1004,13 @@ en suivant ces étapes :
    a new `Worker` with that `id`, and store the worker in the vector.
 -->
 
-1. Définir une structure `Operateur` qui possède un `id` et un `JoinHandle<()>`.
-2. Modifier le `GroupeTaches` afin qu'il possède un vecteur d'instances de
-   `Operateur`.
-3. Définir une fonction `Operateur::new` qui prend en argument un numéro d'`id`
+1. définir une structure `Operateur` qui possède un `id` et un `JoinHandle<()>` ;
+2. modifier le `GroupeTaches` afin qu'il possède un vecteur d'instances de
+   `Operateur` ;
+3. définir une fonction `Operateur::new` qui prend en argument un numéro d'`id`
    et retourne une instance de `Operateur` qui contient l' `id` et une tâche
-   créée avec une fermeture vide.
-4. Dans `GroupeTaches::new`, utiliser le compteur de la boucle `for` pour
+   créée avec une fermeture vide ;
+4. dans `GroupeTaches::new`, utiliser le compteur de la boucle `for` pour
    générer un `id`, créer un nouveau `Operateur` avec cet `id` et stocker
    l'opérateur dans le vecteur.
 

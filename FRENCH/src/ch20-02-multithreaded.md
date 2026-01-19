@@ -649,7 +649,7 @@ definitions, the return type can be omitted from the signature, but even if we
 have no parameters, we still need the parentheses.
 -->
 
-Nous utilisons toujours le `()` après `FnOne` car ce `FnOnce` représente une
+Nous utilisons toujours le `()` après `FnOnce` car ce `FnOnce` représente une
 fermeture qui ne prend pas de paramètres et retourne le type unité `()`.
 Exactement comme les définitions de fonctions, le type de retour peut être omis
 de la signature, mais même si elle ne contient pas de paramètre, nous avons

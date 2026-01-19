@@ -591,7 +591,7 @@ la troisième requête, le serveur arrête d'accepter des connexions. Lorsque
 le `GroupeTaches` sort de la portée à la fin du `main`, son implémentation de
 `Drop` entre en action et le groupe demande à tous les opérateurs de
 s'arrêter. Chaque opérateur va afficher un message lorsqu'il recevra le message
-d'extinction puis le groupe de tâche utilisera `join` pour arrêter
+d'extinction puis le groupe de tâches utilisera `join` pour arrêter
 la tâche de chaque opérateur.
 
 <!--

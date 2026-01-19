@@ -10,4 +10,4 @@ Rust journey.
 -->
 
 Les sections suivantes contiennent des informations de référence que vous pourriez
-trouver utile pour votre exploration de Rust.
+trouver utiles pour votre exploration de Rust.

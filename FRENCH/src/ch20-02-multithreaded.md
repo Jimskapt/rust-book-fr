@@ -606,7 +606,7 @@ Le paramètre de type `F` est celui qui nous intéresse ici ; le paramètre de
 type `T` est lié à la valeur de retour, et ceci ne nous intéresse pas ici.
 Nous pouvons constater que `spawn` utilise le trait `FnOnce` lié à `F`.
 C'est probablement ce dont nous avons besoin, parce que nous allons sûrement
-passer cet argument dans le `execute` de `spawn`. Nous pouvons aussi être sûr
+passer cet argument dans le `execute` de `spawn`. Nous pouvons aussi être sûrs
 que `FnOnce` est le trait dont nous avons besoin car la tâche qui va traiter une
 requête ne va le faire qu'une seule fois, ce qui
 correspond à la partie `Once` dans `FnOnce`.

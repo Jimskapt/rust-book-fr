@@ -682,12 +682,12 @@ améliorer ce projet, voici quelques idées :
   robustness to the thread pool we implemented.
 -->
 
-* Ajouter de la documentation à `GroupeTaches` et aux méthodes publiques.
-* Ajouter des tests sur les fonctionnalités de la bibliothèque.
-* Remplacer les appels à `unwrap` pour fournir une meilleure gestion des erreurs.
-* Utiliser `GroupeTaches` pour exécuter d'autres tâches que de répondre à des
-  requêtes web.
-* Trouver une crate de groupe de tâches *(NdT : thread pool)* sur
+* ajouter de la documentation à `GroupeTaches` et aux méthodes publiques ;
+* ajouter des tests sur les fonctionnalités de la bibliothèque ;
+* remplacer les appels à `unwrap` pour fournir une meilleure gestion des erreurs ;
+* utiliser `GroupeTaches` pour exécuter d'autres tâches que de répondre à des
+  requêtes web ;
+* trouver une crate de groupe de tâches *(NdT : thread pool)* sur
   [crates.io](https://crates.io/) et implémenter un serveur web similaire en
   l'utilisant. Comparer ensuite son API et sa robustesse au
   groupe de tâches que nous avons implémenté.

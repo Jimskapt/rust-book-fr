@@ -841,7 +841,7 @@ and not return anything, so `T` will be the unit type `()`.
 -->
 
 La fonction `spawn` retourne un `JoinHandle<T>`, où `T` est le type que retourne
-notre fermeture. Essayons d'utiliser nous aussi `JoinHandle` pour voir ce qu'il
+notre fermeture. Essayons d'utiliser nous aussi `JoinHandle` pour voir ce qui
 va se passer. Dans notre cas, les fermetures que nous passons dans le groupe de
 tâches vont traiter les connexions mais ne vont rien retourner, donc `T` sera le
 type unité, `()`.

@@ -1675,7 +1675,7 @@ than intended if we don’t think carefully about the lifetime of the
 `MutexGuard<T>`.
 -->
 
-Ce code se compile et s'exécute mais ne se produit pas le comportement des
+Ce code se compile et s'exécute mais ne produit pas le comportement des
 tâches que nous souhaitons : une requête lente à traiter va continuer à mettre
 en attente de traitement les autres requêtes. La raison à cela est subtile : la
 structure `Mutex` n'a pas de méthode publique `unlock` car la propriété du

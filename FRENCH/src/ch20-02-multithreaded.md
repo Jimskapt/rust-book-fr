@@ -1148,14 +1148,14 @@ plan :
    and execute the closures of any jobs it receives.
 -->
 
-1. Le `GroupeTaches` va créer un canal et se connecter à la partie émettrice de
-   ce canal.
-2. Chaque `Operateur` va se connecter à la partie réceptrice du canal.
-3. Nous allons créer une nouvelle structure `Mission` qui va stocker les
-   fermetures que nous souhaitons envoyer dans le canal.
-4. La méthode `executer` va envoyer la mission qu'elle souhaite executer à la
-   partie émettrice du canal.
-5. Dans sa propre tâche, l' `Operateur` va vérifier en permanence la partie
+1. le `GroupeTaches` va créer un canal et se connecter à la partie émettrice de
+   ce canal ;
+2. chaque `Operateur` va se connecter à la partie réceptrice du canal ;
+3. nous allons créer une nouvelle structure `Mission` qui va stocker les
+   fermetures que nous souhaitons envoyer dans le canal ;
+4. la méthode `executer` va envoyer la mission qu'elle souhaite executer à la
+   partie émettrice du canal ;
+5. dans sa propre tâche, l'`Operateur` va vérifier en permanence la partie
    réceptrice du canal et exécuter les fermetures des missions qu'il va
    recevoir.
 
@@ -1279,7 +1279,7 @@ Le code essaye d'envoyer `reception` dans plusieurs instances de `Operateur`.
 Ceci ne fonctionne pas, comme vous l'avez appris au chapitre 16 :
 l'implémentation du canal que fournit Rust est du type plusieurs *producteurs*,
 un seul *consommateur*. Cela signifie que nous ne pouvons pas simplement cloner
-la partie réceptrice du canal pour corriger ce code. Même si nous aurions pu le
+la partie réceptrice du canal pour corriger ce code. Même si nous avions pu le
 faire, ce n'est pas la solution que nous souhaitons utiliser ; nous voulons
 plutôt distribuer les missions entre les tâches en partageant la même réception
 entre tous les opérateurs.

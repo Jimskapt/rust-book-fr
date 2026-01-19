@@ -561,7 +561,7 @@ $ cargo run
      Running `target/debug/main`
 L'opérateur 0 a reçu une mission ; il l'exécute.
 L'opérateur 3 a reçu une mission ; il l'exécute.
-Arrêt.
+Arrêt complet.
 Envoi du message d'extinction à tous les opérateurs.
 Arrêt de tous les opérateurs.
 Arrêt de l'opérateur 0

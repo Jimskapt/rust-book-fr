@@ -981,7 +981,7 @@ tâches, nous allons stocker des instances de structure `Operateur`. Chaque
 implémenterons une méthode sur `Operateur` qui va prendre en argument une
 fermeture de code à exécuter et l'envoyer à la tâche qui fonctionne déjà pour
 exécution. Nous allons aussi donner à chacun des opérateurs un identifiant `id`
-afin que nous puissions distinguer les différents opérateurs dans le groupe
+afin que nous puissions distinguer les différents opérateurs du groupe
 dans les journaux ou lors de débogages.
 
 <!--

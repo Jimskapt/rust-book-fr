@@ -708,7 +708,7 @@ challenges you encounter on your Rust journey.
 
 Bravo ! Vous êtes arrivé à la fin du livre ! Nous tenons à vous remercier
 chaleureusement de nous avoir accompagné pendant cette présentation de Rust.
-Vous êtes maintenant fin prêt(e) à créer vos propres projets Rust et aider les
+Vous êtes maintenant fin prêt(e) à créer vos propres projets Rust et à aider les
 projets des autres développeurs. Rappelez-vous qu'il existe une communauté
 accueillante de Rustacés qui adorerait vous aider à relever tous les défis que vous
 rencontrerez dans votre aventure avec Rust.

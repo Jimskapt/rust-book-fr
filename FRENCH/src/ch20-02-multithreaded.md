@@ -513,7 +513,7 @@ ignore -- > section of Chapter 3.
 Nous avons choisi `usize` comme type du paramètre `taille`, car nous savons
 qu'un nombre négatif de tâches n'a pas de sens. Nous savons également que nous
 allons utiliser ce 4 comme étant le nombre d'éléments dans une collection de
-tâches, ce qui est à quoi sert le type `usize`, comme nous l'avons vu dans la section
+tâches, ce qui correspond à l'utilisation du type `usize`, comme nous l'avons vu dans la section
 [“Types de nombres entiers”][integer-types]<!-- ignore --> du chapitre 3.
 
 <!--

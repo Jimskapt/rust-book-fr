@@ -9,7 +9,10 @@ set -e
 # Le chemin suivant est à adapter, au besoin:
 cd ~/dev/rust-book-fr/FRENCH/src || exit 1
 
-while IFS= read -r file; do
+# Ouvrir book_order.txt sur le FD 3
+exec 3< book_order.txt
+
+while IFS= read -r file <&3; do
   # ignorer lignes vides
   [ -z "$file" ] && continue
 
@@ -23,7 +26,6 @@ while IFS= read -r file; do
 
   echo
   echo "$file traité."
-  echo "Entrée pour continuer (Ctrl+C pour arrêter)…"
-  read
-done < book_order.txt
+  read -r -p "Entrée pour continuer, Ctrl+C pour arrêter..." < /dev/tty
+done
 

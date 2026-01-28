@@ -17,6 +17,9 @@
 
 set -e
 
+# Editor fallback (au cas où)
+EDITOR_CMD="${EDITOR:-vi}"
+
 # Vérification de l'argument
 if [ -z "$1" ]; then
     echo "Usage: $0 <nom-du-fichier>.md"
@@ -55,6 +58,62 @@ mkdir -p "$TMPDIR"
 echo "Extraction de la version anglaise : english-book/main:$ENGLISH_GIT_PATH"
 git -C ../.. show "english-book/main:$ENGLISH_GIT_PATH" > "$EN_TMP"
 
+#######################################
+# Le gros du boulot:
 echo "Lancement de vimdiff..."
 vimdiff "$EN_TMP" "$FILENAME"
+#######################################
+
+#######################################
+# Une fois l'édition terminée, on prépare le commit
+echo "Préparation du message de commit: Entrée pour continuer, Ctrl-C pour arrêter..."
+read
+
+# Fichiers modifiés (hors supprimés)
+FILES=$(git diff --name-only --diff-filter=ACM)
+
+if [ -z "$FILES" ]; then
+    echo "Nothing to commit."
+    exit 1
+fi
+
+# Heuristique simple pour le scope
+SCOPE=$(printf "%s\n" "$FILES" \
+    | sed 's#.*/##' \
+    | sed 's/\..*//' \
+    | sort -u \
+    | head -n 1)
+
+# Message temporaire
+MSG_FILE=$(mktemp /tmp/gitmsg.upstream-sync.XXXXXX)
+
+cat > "$MSG_FILE" <<EOF
+upstream-sync: ${SCOPE} – upstream alignment
+
+Source:
+- Upstream: rust-lang/book (English)
+- Reference commit/date:
+
+Changes:
+- 
+
+Notes:
+- Large diffs are mostly due to 80-column wrapping
+- Formatting-only changes unless explicitly mentioned
+EOF
+
+# Édition interactive
+"$EDITOR_CMD" "$MSG_FILE"
+
+# Si le message est vide ou inchangé, on annule
+if ! grep -q '^upstream-sync:' "$MSG_FILE"; then
+    echo "Aborted: commit message missing or invalid."
+    rm -f "$MSG_FILE"
+    exit 1
+fi
+
+# Commit
+git commit -aF "$MSG_FILE"
+
+rm -f "$MSG_FILE"
 

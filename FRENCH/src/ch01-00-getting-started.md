@@ -18,7 +18,7 @@ aventure doit commencer quelque part. Dans ce chapitre, nous allons aborder :
 * Using `cargo`, Rust’s package manager and build system
 -->
 
-* L'installation de Rust sur Linux, macOS et Windows
-* L'écriture d'un programme qui affiche `Hello, world!`
-* L'utilisation de `cargo`, le gestionnaire de paquets et système de compilation
+- L'installation de Rust sur Linux, macOS et Windows
+- L'écriture d'un programme qui affiche `Hello, world!`
+- L'utilisation de `cargo`, le gestionnaire de paquets et système de compilation
   de Rust

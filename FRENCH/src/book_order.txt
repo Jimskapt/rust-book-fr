@@ -1,8 +1,8 @@
 # Canonical chapter order for diffing English/French versions
 # Used by vimdiff_rustbookfr.sh
 
-title-page.md
-foreword.md
+# title-page.md
+# foreword.md
 ch00-00-introduction.md
 translation-terms.md
 ch01-00-getting-started.md

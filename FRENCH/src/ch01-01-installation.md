@@ -75,12 +75,6 @@ If you’re using Linux or macOS, open a terminal and enter the following comman
 Si vous utilisez Linux ou macOS, ouvrez un terminal et écrivez la commande
 suivante :
 
-<!--
-```console
-$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
-```
--->
-
 ```console
 $ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
@@ -95,12 +89,6 @@ Cette commande télécharge un script et lance l'installation de l'outil `rustup
 qui va installer la dernière version stable de Rust. Il est possible que l'on
 vous demande votre mot de passe. Si l'installation se déroule bien, vous
 devriez voir la ligne suivante s'afficher :
-
-<!--
-```text
-Rust is installed now. Great!
-```
--->
 
 ```text
 Rust is installed now. Great!
@@ -127,12 +115,6 @@ On macOS, you can get a C compiler by running:
 -->
 
 Sur macOS, vous pouvez obtenir un compilateur C en lançant la commande :
-
-<!--
-```console
-$ xcode-select --install
-```
--->
 
 ```console
 $ xcode-select --install
@@ -200,12 +182,6 @@ line:
 Pour vérifier si Rust est correctement installé, ouvrez un terminal et entrez
 cette ligne :
 
-<!--
-```console
-$ rustc --version
-```
--->
-
 ```console
 $ rustc --version
 ```
@@ -218,12 +194,6 @@ stable version that has been released in the following format:
 Vous devriez voir le numéro de version, le *hash* de *commit*,
 et la date de *commit* de la dernière version stable qui a été publiée,
 au format suivant :
-
-<!--
-```text
-rustc x.y.z (abcabcabc yyyy-mm-dd)
-```
--->
 
 ```text
 rustc x.y.z (abcabcabc yyyy-mm-dd)
@@ -294,12 +264,6 @@ easy. From your shell, run the following update script:
 Après avoir installé Rust avec `rustup`, la mise à jour vers la dernière version
 est facile. Dans votre terminal, lancez le script de mise à jour suivant :
 
-<!--
-```console
-$ rustup update
-```
--->
-
 ```console
 $ rustup update
 ```
@@ -311,12 +275,6 @@ shell:
 
 Pour désinstaller Rust et `rustup`, exécutez le script de désinstallation
 suivant dans votre terminal :
-
-<!--
-```console
-$ rustup self uninstall
-```
--->
 
 ```console
 $ rustup self uninstall

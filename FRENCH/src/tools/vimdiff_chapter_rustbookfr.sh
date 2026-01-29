@@ -92,7 +92,6 @@ upstream-sync: ${SCOPE} – upstream alignment
 
 Source:
 - Upstream: rust-lang/book (English)
-- Reference commit/date:
 
 Changes:
 - 
@@ -111,6 +110,9 @@ if ! grep -q '^upstream-sync:' "$MSG_FILE"; then
     rm -f "$MSG_FILE"
     exit 1
 fi
+
+# Pour garder une trace dans le terminal
+cat "$MSG_FILE"
 
 # Commit
 git commit -aF "$MSG_FILE"

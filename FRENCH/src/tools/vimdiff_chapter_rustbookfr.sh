@@ -99,7 +99,8 @@ Changes:
 Notes:
 - Large diffs are mostly due to upstream rewrites and 80-column wrapping
 - English commented sections were selectively updated when meaningfully changed
-- Duplicated code blocks (commented out and uncommented), when *strictly* redundant, were deleted
+- Duplicated code blocks (commented out and uncommented), when *strictly*
+  redundant, were deleted
 EOF
 
 # Édition interactive

@@ -88,7 +88,7 @@ SCOPE=$(printf "%s\n" "$FILES" \
 MSG_FILE=$(mktemp /tmp/gitmsg.upstream-sync.XXXXXX)
 
 cat > "$MSG_FILE" <<EOF
-upstream-sync: ${SCOPE} – upstream alignment
+upstream-sync: ${SCOPE} - upstream alignment
 
 Source:
 - Upstream: rust-lang/book (English)

@@ -110,7 +110,10 @@ EOF
 if ! grep -q '^upstream-sync:' "$MSG_FILE"; then
     echo "Aborted: commit message missing or invalid."
     rm -f "$MSG_FILE"
-    exit 1
+
+    # On renvoie un exit 0 plutôt que 1 pour pouvoir passer au fichier suivant,
+    # s'il n'y a pas de commit à faire:
+    exit 0
 fi
 
 # Pour garder une trace dans le terminal

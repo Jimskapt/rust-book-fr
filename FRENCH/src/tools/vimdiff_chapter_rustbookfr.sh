@@ -20,6 +20,31 @@ set -e
 # Editor fallback (au cas où)
 EDITOR_CMD="${EDITOR:-vi}"
 
+# A utility function: {{{
+confirm() {
+  local default=0
+  local msg_yesno="(Y/n)"
+  if [[ $# -ge 1 ]]; then
+    case $1 in
+      ("0") default=0; local msg_yesno="(Y/n)"; shift 1 ;;
+      ("1") default=1; local msg_yesno="(y/N)"; shift 1 ;;
+      ("*")                                             ;;
+    esac
+    local key
+    while true; do
+      read -rn 1 -e -p "${*:-Continue?} ${msg_yesno} " key
+      case ${key} in
+        ([yY]) echo; return 0          ;;
+        ([nN]) echo; return 1          ;;
+        ("")   echo; return ${default} ;;
+        (*)    printf " \033[31m %s \n\033[0m" "Invalid key"
+      esac
+    done
+  fi
+}
+# }}}
+
+
 # Vérification de l'argument
 if [ -z "$1" ]; then
     echo "Usage: $0 <nom-du-fichier>.md"
@@ -66,8 +91,10 @@ vimdiff "$EN_TMP" "$FILENAME"
 
 #######################################
 # Une fois l'édition terminée, on prépare le commit
-echo "Préparation du message de commit: Entrée pour continuer, Ctrl-C pour arrêter..."
-read
+
+# Si confirmation par l'utilisateur:
+if confirm 1 "Faire un git commit?"; then
+# Note: if block not indented intentionnally
 
 # Fichiers modifiés (hors supprimés)
 FILES=$(git diff --name-only --diff-filter=ACM)
@@ -111,6 +138,7 @@ if ! grep -q '^upstream-sync:' "$MSG_FILE"; then
     echo "Aborted: commit message missing or invalid."
     rm -f "$MSG_FILE"
 
+    # exit 1
     # On renvoie un exit 0 plutôt que 1 pour pouvoir passer au fichier suivant,
     # s'il n'y a pas de commit à faire:
     exit 0
@@ -120,7 +148,9 @@ fi
 cat "$MSG_FILE"
 
 # Commit
+
 git commit -aF "$MSG_FILE"
 
 rm -f "$MSG_FILE"
+fi
 

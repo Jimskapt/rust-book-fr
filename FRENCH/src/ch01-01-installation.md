@@ -165,7 +165,8 @@ _cmd.exe_ et PowerShell. S'il y a des différences particulières, nous vous
 expliquerons lesquelles utiliser.
 
 <!--
-NOTE: update from the English version: order of paragraphs changed upstream
+# NOTE_FR_TRANSLATION_UPDATE:
+# Update from the English version: order of paragraphs changed upstream
 -->
 
 <!--

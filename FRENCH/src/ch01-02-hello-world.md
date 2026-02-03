@@ -253,7 +253,7 @@ déclaration de la fonction, en ajoutant une espace entre les deux.
 > Note: If you want to stick to a standard style across Rust projects, you can
 > use an automatic formatter tool called `rustfmt` to format your code in a
 > particular style (more on `rustfmt` in
-> [Appendix D][devtools]<!-- ignore -->). The Rust team has included this tool
+> [Appendix D][devtools]<!-- ignore -- >). The Rust team has included this tool
 > with the standard Rust distribution, as `rustc` is, so it should already be
 > installed on your computer!
 -->
@@ -285,7 +285,9 @@ Cette ligne fait tout le travail dans ce petit programme : il écrit le texte �
 l'écran. Il y a trois détails importants à noter ici.
 
 <!--
-NOTE: update from the English version: paragraph suppressed, commented out:
+# NOTE_FR_TRANSLATION_UPDATE:
+# Update from the English version: paragraph suppressed, commented out:
+
 First, Rust style is to indent with four spaces, not a tab.
 
 Premièrement, le style de Rust est d'indenter avec quatre espaces, et non pas

@@ -1,9 +1,9 @@
 <!--
-NOTE:
-This chapter has not been substantially rewritten upstream, only details change.
-The French translation follows the current English version, and for clarity, the
-commented out historical English version was kept as is, outdated, unless
-explicitely mentioned.
+# NOTE_FR_TRANSLATION_UPDATE:
+# This chapter has not been substantially rewritten upstream, only details
+# change. The French translation follows the current English version, and for
+# clarity, the commented out historical English version was kept as is,
+# outdated, unless # explicitely mentioned.
 -->
 
 
@@ -287,8 +287,10 @@ projet ; les autres sont des chapitres théoriques.
 
 <!--
 #  --- EN (updated) ---------------------------------------------
-# NOTE: The English text below has been updated to match the current upstream
-#       English version
+# NOTE_FR_TRANSLATION_UPDATE:
+# The English text below has been updated to match the current upstream
+# English version
+
 **Chapter 1** explains how to install Rust, how to write a “Hello, world!”
 program, and how to use Cargo, Rust’s package manager and build tool. **Chapter
 2** is a hands-on introduction to writing a program in Rust, having you build
@@ -380,11 +382,12 @@ pratiques pour partager vos propres bibliothèques avec les autres. Le **chapitr
 *traits* qui activent leurs fonctionnalités.
 
 <!--
-STRUCTURAL NOTE:
-Upstream has introduced a new Chapter 17 (async/await and async concurrency).
-As a result, subsequent chapter numbers differ between the historical French
-translation and the current English version. Chapter numbers are changed in the
-historical English version.
+# NOTE_FR_TRANSLATION_UPDATE:
+# STRUCTURAL NOTE:
+# Upstream has introduced a new Chapter 17 (async/await and async concurrency).
+# As a result, subsequent chapter numbers differ between the historical French
+# translation and the current English version. Chapter numbers are changed in
+# the historical English version.
 -->
 
 <!--

@@ -1,41 +1,56 @@
-struct Counter {
-    count: u32,
+// ANCHOR: here
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect()
 }
+// ANCHOR_END: here
 
-impl Counter {
-    fn new() -> Counter {
-        Counter { count: 0 }
-    }
-}
+pub fn search_case_insensitive<'a>(
+    query: &str,
+    contents: &'a str,
+) -> Vec<&'a str> {
+    let query = query.to_lowercase();
+    let mut results = Vec::new();
 
-impl Iterator for Counter {
-    type Item = u32;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        if self.count < 5 {
-            self.count += 1;
-            Some(self.count)
-        } else {
-            None
+    for line in contents.lines() {
+        if line.to_lowercase().contains(&query) {
+            results.push(line);
         }
     }
+
+    results
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    // ANCHOR: here
     #[test]
-    fn calling_next_directly() {
-        let mut counter = Counter::new();
+    fn case_sensitive() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.
+Duct tape.";
 
-        assert_eq!(counter.next(), Some(1));
-        assert_eq!(counter.next(), Some(2));
-        assert_eq!(counter.next(), Some(3));
-        assert_eq!(counter.next(), Some(4));
-        assert_eq!(counter.next(), Some(5));
-        assert_eq!(counter.next(), None);
+        assert_eq!(vec!["safe, fast, productive."], search(query, contents));
     }
-    // ANCHOR_END: here
+
+    #[test]
+    fn case_insensitive() {
+        let query = "rUsT";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.
+Trust me.";
+
+        assert_eq!(
+            vec!["Rust:", "Trust me."],
+            search_case_insensitive(query, contents)
+        );
+    }
 }

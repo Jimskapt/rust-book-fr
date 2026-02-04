@@ -1,9 +1,65 @@
+use std::env;
+use std::error::Error;
+use std::fs;
+use std::process;
+
+use minigrep::{search, search_case_insensitive};
+
+// ANCHOR: here
 fn main() {
-    // ANCHOR: here
-    let v1: Vec<i32> = vec![1, 2, 3];
+    let config = Config::build(env::args()).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {err}");
+        process::exit(1);
+    });
 
-    let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();
-
-    assert_eq!(v2, vec![2, 3, 4]);
+    // --snip--
     // ANCHOR_END: here
+
+    if let Err(e) = run(config) {
+        eprintln!("Application error: {e}");
+        process::exit(1);
+    }
+    // ANCHOR: here
+}
+// ANCHOR_END: here
+
+pub struct Config {
+    pub query: String,
+    pub file_path: String,
+    pub ignore_case: bool,
+}
+
+impl Config {
+    fn build(args: &[String]) -> Result<Config, &'static str> {
+        if args.len() < 3 {
+            return Err("not enough arguments");
+        }
+
+        let query = args[1].clone();
+        let file_path = args[2].clone();
+
+        let ignore_case = env::var("IGNORE_CASE").is_ok();
+
+        Ok(Config {
+            query,
+            file_path,
+            ignore_case,
+        })
+    }
+}
+
+fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    let contents = fs::read_to_string(config.file_path)?;
+
+    let results = if config.ignore_case {
+        search_case_insensitive(&config.query, &contents)
+    } else {
+        search(&config.query, &contents)
+    };
+
+    for line in results {
+        println!("{line}");
+    }
+
+    Ok(())
 }

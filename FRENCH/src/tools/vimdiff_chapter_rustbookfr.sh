@@ -20,30 +20,8 @@ set -e
 # Editor fallback (au cas où)
 EDITOR_CMD="${EDITOR:-vi}"
 
-# A utility function: {{{
-confirm() {
-  local default=0
-  local msg_yesno="(Y/n)"
-  if [[ $# -ge 1 ]]; then
-    case $1 in
-      ("0") default=0; local msg_yesno="(Y/n)"; shift 1 ;;
-      ("1") default=1; local msg_yesno="(y/N)"; shift 1 ;;
-      ("*")                                             ;;
-    esac
-    local key
-    while true; do
-      read -rn 1 -e -p "${*:-Continue?} ${msg_yesno} " key
-      case ${key} in
-        ([yY]) echo; return 0          ;;
-        ([nN]) echo; return 1          ;;
-        ("")   echo; return ${default} ;;
-        (*)    printf " \033[31m %s \n\033[0m" "Invalid key"
-      esac
-    done
-  fi
-}
-# }}}
-
+# Source some utility functions:
+source ./common.sh
 
 # Vérification de l'argument
 if [ -z "$1" ]; then
@@ -86,7 +64,7 @@ git -C ../.. show "english-book/main:$ENGLISH_GIT_PATH" > "$EN_TMP"
 #######################################
 # Le gros du boulot:
 echo "Lancement de vimdiff..."
-vimdiff "$EN_TMP" "$FILENAME"
+vimdiff </dev/tty "$EN_TMP" "$FILENAME"
 #######################################
 
 #######################################

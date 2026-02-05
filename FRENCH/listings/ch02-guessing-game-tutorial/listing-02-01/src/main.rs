@@ -25,7 +25,7 @@ fn main() {
     // ANCHOR_END: expect
 
     // ANCHOR: print_guess
-    println!("Votre nombre : {}", supposition);
+    println!("Votre nombre : {supposition}");
     // ANCHOR_END: print_guess
 }
 // ANCHOR: all

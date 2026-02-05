@@ -56,15 +56,15 @@ commit_msg="$TMP_BASE/COMMIT_MESSAGE.txt"
 
 cd "$DIR_RACINE_FR"
 
-if [[ $DEBUG -eq 1 ]]; then
+# if [[ $DEBUG -eq 1 ]]; then
   # Source some utility functions:
   source $(dirname $0)/common.sh
-else
-  # Empty function instead of confirm:
-  confirm() {
-    echo
-  }
-fi
+# else
+#   # Empty function instead of confirm:
+#   confirm() {
+#     echo
+#   }
+# fi
 
 
 ################################################################################
@@ -111,11 +111,23 @@ echo "$rel" >> "$commit_msg"
 fi
 }
 
+open_vimdiff() {
+  local files=("$@")
+  # vimdiff </dev/tty "$en_new" "$en_old" "$fr_file"
+
+  vim </dev/tty -d "${files[@]}" \
+    -c "botright split $commit_msg" \
+    -c 'resize 8' \
+    -c 'setlocal nodiff buftype= bufhidden=hide noswapfile' \
+    -c 'autocmd VimEnter * wincmd k | wincmd l | wincmd l'
+}
+
+
 
 # --- itération sur les fichiers français ---
 find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file; do
   echo -e "\n### Traitement du fichier $fr_file ###"
-  confirm 0 "Traiter ce fichier?" || continue
+  # confirm 0 "Traiter ce fichier?" || continue
   rel="${fr_file#$DIR_LISTINGS_FR/}" # Ce nom de variable est bien peu explicite => nom RELatif
   [[ -n "$ONLY_CHAPITRES" && "$rel" != "$ONLY_CHAPITRES-"* ]] && continue
   en_new="$DIR_LISTINGS_EN_NEW/$rel"
@@ -155,12 +167,7 @@ find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file;
       echo "############################################"
       if confirm 1 "Voir les diffs ci-haut: édition avec vimdiff"; then
         create_commit_msg
-        # vimdiff </dev/tty "$en_new" "$en_old" "$fr_file"
-        vim </dev/tty -d "$en_new" "$en_old" "$fr_file" \
-          -c "botright split $commit_msg" \
-          -c 'resize 8' \
-          -c 'setlocal nodiff buftype= bufhidden=hide noswapfile' \
-          -c 'autocmd VimEnter * wincmd k | wincmd l | wincmd l'
+        open_vimdiff "$en_new" "$en_old" "$fr_file"
       else
         echo "Passage au fichier suivant"
       fi
@@ -172,13 +179,8 @@ find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file;
 
     if confirm 1 "Voir les diffs ci-haut: édition avec vimdiff"; then
       create_commit_msg
-      # echo $LINENO; confirm ### DEBUG
       # vim     </dev/tty -d "$en_new"           "$fr_file" "$commit_msg" -c 'wincmd J' -c 'resize 8' -c 'setlocal nodiff' -c 'setlocal buftype=' -c 'setlocal bufhidden=hide'
-      vim </dev/tty -d "$en_new"           "$fr_file" \
-        -c "botright split $commit_msg" \
-        -c 'resize 8' \
-        -c 'setlocal nodiff buftype= bufhidden=hide noswapfile' \
-        -c "buf $fr_file"
+      open_vimdiff "$en_new"           "$fr_file"
     fi
     if ! confirm 0 "Continuer"; then
       echo "On arrête."
@@ -189,7 +191,7 @@ find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file;
 done
 
 # Finaloumen, faire un git commit, avec le message préparé durant la boucle:
-if confirm 0 "Faire un git commit avec le message: "\n$(cat $commit_msg)\n ?"; then
+if confirm 0 "Faire un git commit avec le message: \"\n$(cat $commit_msg)\"\n ?"; then
   git commit -a -F "$commit_msg"
   if confirm 0 "Supprimer le fichier de brouillon de message de commit?"; then
     rm "$commit_msg"

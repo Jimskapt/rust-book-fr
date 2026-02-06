@@ -8,7 +8,8 @@
 # rustbook_update_listings.sh [OPTIONS]
 #
 # Options:
-#   --auto-cargo-toml     Applique automatiquement les updates Cargo.toml
+#   --debug               Montre les variables, et permet du pas-à-pas
+#   --ignore-cargo-toml   Ignore les fichiers Cargo.toml
 #   --only-chXX           Ne traite que chXX-* (ex: --only-ch17)
 #   --stat-only           Affiche uniquement des stats de diff, sans interaction
 
@@ -47,40 +48,37 @@ done
 DIR_RACINE_FR="$HOME/dev/rust-book-fr/FRENCH"
 DIR_LISTINGS_FR="$DIR_RACINE_FR/listings"
 DIR_LISTINGS_EN_NEW="$DIR_RACINE_FR/listings-sources"
-
 DIR_LISTINGS_EN_OLD_BRANCH="update-from-english-2025"
-
 TMP_BASE="$HOME/tmp/rustbook_en_old"
-mkdir -p "$TMP_BASE"
 commit_msg="$TMP_BASE/COMMIT_MESSAGE.txt"
 
+mkdir -p "$TMP_BASE"
 cd "$DIR_RACINE_FR"
 
-# if [[ $DEBUG -eq 1 ]]; then
-  # Source some utility functions:
-  source $(dirname $0)/common.sh
-# else
-#   # Empty function instead of confirm:
-#   confirm() {
-#     echo
-#   }
-# fi
+
+# Source some utility functions:
+source $(dirname $0)/common.sh
 
 
 ################################################################################
-echo "Configuration:" # DEBUG
-echo "AUTO_CARGO=$AUTO_CARGO"
-echo "ONLY_CHAPITRES=$ONLY_CHAPITRES"
-echo "STAT_ONLY=$STAT_ONLY"
-echo "DIR_RACINE_FR=$DIR_RACINE_FR"
-echo "DIR_LISTINGS_FR=$DIR_LISTINGS_FR"
-echo "DIR_LISTINGS_EN_NEW=$DIR_LISTINGS_EN_NEW"
-echo "DIR_LISTINGS_EN_OLD_BRANCH=$DIR_LISTINGS_EN_OLD_BRANCH"
-echo "TMP_BASE=$TMP_BASE"
-echo "Répertoire courant: $(pwd)"
+if [[ $DEBUG -eq 1 ]]; then
+  # bash-friendly display of variables, for easy copy-paste in a terminal for debugging
+  echo "Configuration:" # DEBUG
+  echo "AUTO_CARGO=$AUTO_CARGO"
+  echo "ONLY_CHAPITRES=$ONLY_CHAPITRES"
+  echo "STAT_ONLY=$STAT_ONLY"
+  echo "DIR_RACINE_FR=$DIR_RACINE_FR"
+  echo "DIR_LISTINGS_FR=$DIR_LISTINGS_FR"
+  echo "DIR_LISTINGS_EN_NEW=$DIR_LISTINGS_EN_NEW"
+  echo "DIR_LISTINGS_EN_OLD_BRANCH=$DIR_LISTINGS_EN_OLD_BRANCH"
+  echo "TMP_BASE=$TMP_BASE"
+  echo "Répertoire courant: $(pwd)"
+  echo $LINENO; confirm ### DEBUG
+fi
 ################################################################################
 
 
+# --- Définitions de fonctions: {{{
 # --- extrait un fichier depuis la branche anglaise de référence ---
 extract_old() {
   local relpath="$1"
@@ -96,6 +94,7 @@ extract_old() {
   fi
 }
 
+# --- création d'un brouillon de message de commit ---
 create_commit_msg() { # Fonction intentionnellement non indentée
 if [[ ! -f "$commit_msg" ]]; then
 cat >"$commit_msg" <<EOF
@@ -111,9 +110,10 @@ echo "$rel" >> "$commit_msg"
 fi
 }
 
+# --- ouvre des fichiers dans vimdiff avec le brouillon de message de commit ---
 open_vimdiff() {
   local files=("$@")
-  # vimdiff </dev/tty "$en_new" "$en_old" "$fr_file"
+  # vimdiff </dev/tty "$en_new_file" "$en_old_file" "$fr_file"
 
   vim </dev/tty -d "${files[@]}" \
     -c "botright split $commit_msg" \
@@ -122,52 +122,60 @@ open_vimdiff() {
     -c 'autocmd VimEnter * wincmd k | wincmd l | wincmd l'
 }
 
+# }}}
 
-
+if [[ $DEBUG -eq 1 ]]; then echo $LINENO; confirm; fi ### DEBUG pas-à-pas
+# --- Boucle principale: --- {{{
 # --- itération sur les fichiers français ---
 find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file; do
   echo -e "\n### Traitement du fichier $fr_file ###"
-  # confirm 0 "Traiter ce fichier?" || continue
+  confirm 0 "Traiter ce fichier?" || continue
   rel="${fr_file#$DIR_LISTINGS_FR/}" # Ce nom de variable est bien peu explicite => nom RELatif
   [[ -n "$ONLY_CHAPITRES" && "$rel" != "$ONLY_CHAPITRES-"* ]] && continue
-  en_new="$DIR_LISTINGS_EN_NEW/$rel"
+  en_new_file="$DIR_LISTINGS_EN_NEW/$rel"
 
-  [[ -f "$en_new" ]] || echo "Attention, $en_new est introuvable"; continue
+  if [[ ! -f "$en_new_file" ]]; then
+    echo "Attention, $en_new_file est introuvable; passage au fichier suivant."
+    continue
+  fi
 
-  en_old="$(extract_old "listings/$rel")"
+  en_old_file="$(extract_old "listings/$rel")"
 
   echo
   echo "###========================== $rel ==========================###"
 
-  if [[ -n "$en_old" ]]; then
+  if [[ -n "$en_old_file" ]]; then
+    if [[ $DEBUG -eq 1 ]]; then echo $LINENO; confirm; fi ### DEBUG pas-à-pas
     # Il y a un fichier ancien, on compare donc 3 versions du fichier:
-    #  - ENglish old: en_old  => la version anglaise qui a servi de base à la traduction en français
-    #  - English new: en_new  => la version anglaise dans sa dernière mouture
+    #  - ENglish old: en_old_file  => la version anglaise qui a servi de base à la traduction en français
+    #  - English new: en_new_file  => la version anglaise dans sa dernière mouture
     #  - FRançais:    fr_file => la version traduite en français, à mettre à jour si besoin
 
     # Première version, avec diff3, assez peu éloquente, commentée:
-    # diff3 "$en_new" "$en_old" "$fr_file"
+    # diff3 "$en_new_file" "$en_old_file" "$fr_file"
 
     # Seconde version, on affiche les différences 2 par 2:
     echo "############################################"
     echo "## Changements dans la version anglaise:  ##"
-    if diff -u --color=always "$en_old" "$en_new"; then
+    if diff -u --color=always "$en_old_file" "$en_new_file"; then
       echo "Pas de différences entre les version anglaises, donc rien à mettre à jour du côté traduction française"
     else
       echo "           => ** il y a des différences en amont ! **"
-      # echo "DEBUG: en_old=$en_old ; fr_file=$fr_file"
+      # echo "DEBUG: en_old_file=$en_old_file ; fr_file=$fr_file"
+      echo "############################################"
+      echo
+      echo
       echo "############################################"
       echo "## Changements dans la version française: ##"
-      if diff -u --color=always "$en_old" "$fr_file"; then
+      if diff -u --color=always "$en_old_file" "$fr_file"; then
         echo "Pas de différences entre la version anglaise ancienne et la traduction française: il faut mettre à jour la traduction française"
       else
-        echo "############################################"
         echo "           => il y a des différences de traduction"
       fi
       echo "############################################"
       if confirm 1 "Voir les diffs ci-haut: édition avec vimdiff"; then
         create_commit_msg
-        open_vimdiff "$en_new" "$en_old" "$fr_file"
+        open_vimdiff "$en_new_file" "$en_old_file" "$fr_file"
       else
         echo "Passage au fichier suivant"
       fi
@@ -175,12 +183,12 @@ find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file;
   else
     echo "⚠️  Pas de version dans $DIR_LISTINGS_EN_OLD_BRANCH → diff à 2"
     echo "## Changements dans la version française: ##"
-    diff --side-by-side --color=always "$en_new" "$fr_file"
+    diff --side-by-side --color=always "$en_new_file" "$fr_file"
 
     if confirm 1 "Voir les diffs ci-haut: édition avec vimdiff"; then
       create_commit_msg
-      # vim     </dev/tty -d "$en_new"           "$fr_file" "$commit_msg" -c 'wincmd J' -c 'resize 8' -c 'setlocal nodiff' -c 'setlocal buftype=' -c 'setlocal bufhidden=hide'
-      open_vimdiff "$en_new"           "$fr_file"
+      # vim     </dev/tty -d "$en_new_file"           "$fr_file" "$commit_msg" -c 'wincmd J' -c 'resize 8' -c 'setlocal nodiff' -c 'setlocal buftype=' -c 'setlocal bufhidden=hide'
+      open_vimdiff "$en_new_file"           "$fr_file"
     fi
     if ! confirm 0 "Continuer"; then
       echo "On arrête."
@@ -189,6 +197,7 @@ find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file;
   fi
   echo -e "\nFichier suivant...\n\n\n"
 done
+# }}}
 
 # Finaloumen, faire un git commit, avec le message préparé durant la boucle:
 if confirm 0 "Faire un git commit avec le message: \"\n$(cat $commit_msg)\"\n ?"; then

@@ -19,14 +19,14 @@ set -euo pipefail
 
 # --- CONFIG ---
 DEBUG=0
-AUTO_CARGO=0
+IGNORE_CARGO_TOML=0
 ONLY_CHAPITRES=""
 STAT_ONLY=0
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --auto-cargo-toml)
-      AUTO_CARGO=1
+    --ignore-cargo-toml)
+      IGNORE_CARGO_TOML=1
       ;;
     --only-ch*)
       ONLY_CHAPITRES="${1#--only-}"
@@ -64,7 +64,7 @@ source $(dirname $0)/common.sh
 if [[ $DEBUG -eq 1 ]]; then
   # bash-friendly display of variables, for easy copy-paste in a terminal for debugging
   echo "Configuration:" # DEBUG
-  echo "AUTO_CARGO=$AUTO_CARGO"
+  echo "IGNORE_CARGO_TOML=$IGNORE_CARGO_TOML"
   echo "ONLY_CHAPITRES=$ONLY_CHAPITRES"
   echo "STAT_ONLY=$STAT_ONLY"
   echo "DIR_RACINE_FR=$DIR_RACINE_FR"
@@ -128,9 +128,12 @@ if [[ $DEBUG -eq 1 ]]; then echo $LINENO; confirm; fi ### DEBUG pas-à-pas
 # --- Boucle principale: --- {{{
 # --- itération sur les fichiers français ---
 find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file; do
-  echo -e "\n### Traitement du fichier $fr_file ###"
-  confirm 0 "Traiter ce fichier?" || continue
   rel="${fr_file#$DIR_LISTINGS_FR/}" # Ce nom de variable est bien peu explicite => nom RELatif
+  if [[ $IGNORE_CARGO_TOML -eq 1 ]] && [[ $rel -eq "Cargo.toml" ]]; then
+    continue
+  fi
+  confirm 0 "Traiter ce fichier?" || continue
+  echo -e "\n### Traitement du fichier $fr_file ###"
   [[ -n "$ONLY_CHAPITRES" && "$rel" != "$ONLY_CHAPITRES-"* ]] && continue
   en_new_file="$DIR_LISTINGS_EN_NEW/$rel"
 

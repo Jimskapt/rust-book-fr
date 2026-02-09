@@ -17,7 +17,7 @@ fn main() {
     // ANCHOR: here
     let mut compteur = 0;
     if let PieceUs::Quarter(etat) = piece {
-        println!("Il s'agit d'un quarter de l'État de {:?} !", etat);
+        println!("Il s'agit d'un quarter de l'État de {etat:?} !");
     } else {
         compteur += 1;
     }

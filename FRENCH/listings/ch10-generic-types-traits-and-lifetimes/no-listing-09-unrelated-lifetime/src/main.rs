@@ -3,7 +3,7 @@ fn main() {
     let string2 = "xyz";
 
     let resultat = la_plus_longue(string1.as_str(), string2);
-    println!("La chaîne la plus longue est {}", resultat);
+    println!("La chaîne la plus longue est {resultatl}");
 }
 
 // ANCHOR: here

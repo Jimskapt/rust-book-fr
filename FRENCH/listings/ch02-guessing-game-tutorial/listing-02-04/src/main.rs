@@ -1,14 +1,15 @@
 // ANCHOR: here
-use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+
+use rand::Rng;
 
 fn main() {
     // -- partie masquée ici --
     // ANCHOR_END: here
     println!("Devinez le nombre !");
 
-    let nombre_secret = rand::thread_rng().gen_range(1..101);
+    let nombre_secret = rand::thread_rng().gen_range(1..=100);
 
     println!("Le nombre secret est : {}", nombre_secret);
 

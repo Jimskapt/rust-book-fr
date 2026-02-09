@@ -15,14 +15,14 @@ impl Resumable for ArticleDePresse {
     }
 }
 
-pub struct Tweet {
+pub struct PublicationSociale {
     pub nom_utilisateur: String,
     pub contenu: String,
     pub reponse: bool,
-    pub retweet: bool,
+    pub republication: bool,
 }
 
-impl Resumable for Tweet {
+impl Resumable for PublicationSociale {
     fn resumer(&self) -> String {
         format!("{} : {}", self.nom_utilisateur, self.contenu)
     }
@@ -32,18 +32,24 @@ impl Resumable for Tweet {
 fn retourne_resumable(estArticle: bool) -> impl Resumable {
     if estArticle {
         ArticleDePresse {
-            titre: String::from("Les Penguins ont remporté la Coupe Stanley !"),
+            titre: String::from(
+                "Les Penguins ont remporté la Coupe Stanley !"
+            ),
             lieu: String::from("Pittsburgh, PA, USA"),
             auteur: String::from("Iceburgh"),
-            contenu: String::from("Les Penguins de Pittsburgh sont une nouvelle fois la \
-            meilleure équipe de hockey de la LNH."),
+            contenu: String::from(
+                "Les Penguins de Pittsburgh sont une nouvelle fois la \
+                meilleure équipe de hockey de la LNH."
+            ),
         }
     } else {
-        Tweet {
+        PublicationSociale {
             nom_utilisateur: String::from("jean"),
-            contenu: String::from("Bien sûr, les amis, comme vous le savez probablement déjà"),
+            contenu: String::from(
+                "Bien sûr, les amis, comme vous le savez probablement déjà",
+            ),
             reponse: false,
-            retweet: false,
+            republication: false,
         }
     }
 }

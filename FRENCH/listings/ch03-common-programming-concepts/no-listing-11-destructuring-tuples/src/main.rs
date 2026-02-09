@@ -3,5 +3,5 @@ fn main() {
 
     let (x, y, z) = tup;
 
-    println!("La valeur de y est : {}", y);
+    println!("La valeur de y est : {y}");
 }

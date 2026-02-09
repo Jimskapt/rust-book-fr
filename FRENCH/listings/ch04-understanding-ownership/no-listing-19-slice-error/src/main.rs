@@ -18,6 +18,6 @@ fn main() {
 
     s.clear(); // Erreur !
 
-    println!("Le premier mot est : {}", mot);
+    println!("Le premier mot est : {mot}");
 }
 // ANCHOR_END: here

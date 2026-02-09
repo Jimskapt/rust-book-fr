@@ -8,9 +8,9 @@ struct Utilisateur {
 // ANCHOR: here
 fn main() {
     let utilisateur1 = Utilisateur {
-        email: String::from("quelquun@example.com"),
-        pseudo: String::from("pseudoquelconque123"),
         actif: true,
+        pseudo: String::from("pseudoquelconque123"),
+        email: String::from("quelquun@example.com"),
         nombre_de_connexions: 1,
     };
 }

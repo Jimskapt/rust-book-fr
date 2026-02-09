@@ -1,6 +1,6 @@
 fn main() {
     // ANCHOR: here
-    {                    // s n'est pas en vigueur ici, elle n'est pas encore déclarée
+    {                    // s n'est pas en vigueur ici, car elle n'est pas encore déclarée
         let s = "hello"; // s est en vigueur à partir de ce point
 
         // on fait des choses avec s ici

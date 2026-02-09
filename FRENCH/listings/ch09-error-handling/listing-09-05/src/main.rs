@@ -2,9 +2,9 @@ use std::fs::File;
 use std::io::ErrorKind;
 
 fn main() {
-    let f = File::open("hello.txt");
+    let  resultat_fichier_salut= File::open("hello.txt");
 
-    let f = match f {
+    let resultat_fichier_salut = match resultat_fichier_salut {
         Ok(fichier) => fichier,
         Err(erreur) => match erreur.kind() {
             ErrorKind::NotFound => match File::create("hello.txt") {

@@ -17,7 +17,7 @@ fn main() {
     // ANCHOR: here
     let mut compteur = 0;
     match piece {
-        PieceUs::Quarter(etat) => println!("Il s'agit d'un quarter de l'État de {:?} !", etat),
+        PieceUs::Quarter(etat) => println!("Il s'agit d'un quarter de l'État de {etat:?} !"),
         _ => compteur += 1,
     }
     // ANCHOR_END: here

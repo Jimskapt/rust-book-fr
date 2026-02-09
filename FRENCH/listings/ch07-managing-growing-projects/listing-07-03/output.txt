@@ -4,7 +4,9 @@ error[E0603]: module `accueil` is private
  --> src/lib.rs:9:28
   |
 9 |     crate::salle_a_manger::accueil::ajouter_a_la_liste_attente();
-  |                            ^^^^^^^ private module
+  |                            ^^^^^^^  -------------------------- function `ajouter_a_la_liste_attente` is not publicly re-exported
+  |                            |
+  |                            private module
   |
 note: the module `accueil` is defined here
  --> src/lib.rs:2:5
@@ -16,7 +18,9 @@ error[E0603]: module `accueil` is private
   --> src/lib.rs:12:21
    |
 12 |     salle_a_manger::accueil::ajouter_a_la_liste_attente();
-   |                     ^^^^^^^ private module
+   |                     ^^^^^^^  -------------------------- function `ajouter_a_la_liste_attente` is not publicly re-exported
+   |                     |
+   |                     private module
    |
 note: the module `accueil` is defined here
   --> src/lib.rs:2:5
@@ -25,4 +29,4 @@ note: the module `accueil` is defined here
    |     ^^^^^^^^^^^
 
 For more information about this error, try `rustc --explain E0603`.
-error: could not compile `restaurant` due to 2 previous errors
+error: could not compile `restaurant` (lib) due to 2 previous errors

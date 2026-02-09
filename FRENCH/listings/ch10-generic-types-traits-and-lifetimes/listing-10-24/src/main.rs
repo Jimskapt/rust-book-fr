@@ -1,19 +1,11 @@
-// ANCHOR: here
-fn main() {
-    let string1 = String::from("une longue chaîne est longue");
-    let resultat;
-    {
-        let string2 = String::from("xyz");
-        resultat = la_plus_longue(string1.as_str(), string2.as_str());
-    }
-    println!("La chaîne la plus longue est {}", resultat);
+struct ExtraitImportant<'a> {
+    partie: &'a str,
 }
-// ANCHOR_END: here
 
-fn la_plus_longue<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
+fn main() {
+    let roman = String::from("Appelez-moi Ismaël. Il y a quelques années...");
+    let premiere_phrase = roman.split('.').next().unwrap();
+    let i = ExtraitImportant {
+        partie: premiere_phrase,
+    };
 }

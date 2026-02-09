@@ -21,7 +21,7 @@ fn donne_possession() -> String {      // donne_possession va déplacer sa
                                        // l'appelle.
 }
 
-// Cette fonction va prendre une String et en retourne aussi une.
+// Cette fonction va prendre une String et retourne aussi une String.
 fn prend_et_rend(texte: String) -> String { // texte rentre dans la portée.
 
   texte  // texte est retournée et déplacée vers le code qui l'appelle.

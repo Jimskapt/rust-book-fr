@@ -1,13 +1,12 @@
 // ANCHOR: here
 use std::fs::File;
-use std::io;
-use std::io::Read;
+use std::io::{self, Read};
 
 fn lire_pseudo_depuis_fichier() -> Result<String, io::Error> {
-    let mut f = File::open("hello.txt")?;
-    let mut s = String::new();
-    f.read_to_string(&mut s)?;
-    Ok(s)
+    let mut fichier_pseudo = File::open("hello.txt")?;
+    let mut pseudo = String::new();
+    pseudo.read_to_string(&mut pseudo)?;
+    Ok(pseudo)
 }
 // ANCHOR_END: here
 

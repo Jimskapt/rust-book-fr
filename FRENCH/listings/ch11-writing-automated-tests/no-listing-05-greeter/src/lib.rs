@@ -1,5 +1,5 @@
 pub fn accueil(nom: &str) -> String {
-    format!("Salut, {} !", nom)
+    format!("Salut, {nom} !")
 }
 
 #[cfg(test)]

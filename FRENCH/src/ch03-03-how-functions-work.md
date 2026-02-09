@@ -17,12 +17,12 @@ d'entrée de beaucoup de programmes. Vous avez aussi vu le mot-clé `fn`, qui vo
 permet de déclarer des nouvelles fonctions.
 
 <!--
-Rust code uses *snake case* as the conventional style for function and variable
+Rust code uses _snake case_ as the conventional style for function and variable
 names, in which all letters are lowercase and underscores separate words.
 Here’s a program that contains an example function definition:
 -->
 
-Le code Rust utilise le *snake case* comme convention de style de nom des
+Le code Rust utilise le _snake case_ comme convention de style de nom des
 fonctions et des variables, toutes les lettres sont en minuscule et on utilise
 des tirets bas pour séparer les mots. Voici un programme qui est un exemple de
 définition de fonction :
@@ -57,28 +57,29 @@ compilateur où le corps de la fonction commence et où il se termine.
 We can call any function we’ve defined by entering its name followed by a set
 of parentheses. Because `another_function` is defined in the program, it can be
 called from inside the `main` function. Note that we defined `another_function`
-*after* the `main` function in the source code; we could have defined it before
+_after_ the `main` function in the source code; we could have defined it before
 as well. Rust doesn’t care where you define your functions, only that they’re
-defined somewhere.
+defined somewhere in a scope that can be seen by the caller.
 -->
 
 Nous pouvons appeler n'importe quelle fonction que nous avons définie en
 utilisant son nom, suivi d'une paire de parenthèses. Comme `une_autre_fonction`
 est définie dans le programme, elle peut être appelée à l'intérieur de la
-fonction `main`. Remarquez que nous avons défini `une_autre_fonction` *après*
+fonction `main`. Remarquez que nous avons défini `une_autre_fonction` _après_
 la fonction `main` dans le code source ; nous aurions aussi pu la définir avant.
 Rust ne se soucie pas de l'endroit où vous définissez vos fonctions, du moment
-qu'elles sont bien définies quelque part.
+qu'elles sont bien définies quelque part dans une portée qui peut être vue par
+l'appelant.
 
 <!--
-Let’s start a new binary project named *functions* to explore functions
-further. Place the `another_function` example in *src/main.rs* and run it. You
+Let’s start a new binary project named _functions_ to explore functions
+further. Place the `another_function` example in _src/main.rs_ and run it. You
 should see the following output:
 -->
 
-Créons un nouveau projet de binaire qui s'appellera *functions* afin d'en
+Créons un nouveau projet de binaire qui s'appellera _functions_ afin d'en
 apprendre plus sur les fonctions. Ajoutez l'exemple `une_autre_fonction` dans le
-*src/main.rs* et exécutez-le. Vous devriez avoir ceci :
+_src/main.rs_ et exécutez-le. Vous devriez avoir ceci :
 
 <!--
 ```console
@@ -92,8 +93,8 @@ apprendre plus sur les fonctions. Ajoutez l'exemple `une_autre_fonction` dans le
 
 <!--
 The lines execute in the order in which they appear in the `main` function.
-First, the “Hello, world!” message prints, and then `another_function` is
-called and its message is printed.
+First the “Hello, world!” message prints, and then `another_function` is called
+and its message is printed.
 -->
 
 Les lignes s'exécutent dans l'ordre dans lequel elles apparaissent dans la
@@ -107,21 +108,21 @@ fonction `main`. D'abord, le message `Hello, world!` est écrit, et ensuite
 ### Les paramètres
 
 <!--
-We can define functions to have *parameters*, which are special variables that
+We can define functions to have _parameters_, which are special variables that
 are part of a function’s signature. When a function has parameters, you can
 provide it with concrete values for those parameters. Technically, the concrete
-values are called *arguments*, but in casual conversation, people tend to use
-the words *parameter* and *argument* interchangeably for either the variables
+values are called _arguments_, but in casual conversation, people tend to use
+the words _parameter_ and _argument_ interchangeably for either the variables
 in a function’s definition or the concrete values passed in when you call a
 function.
 -->
 
-Nous pouvons définir des fonctions avec des *paramètres*, qui sont des
+Nous pouvons définir des fonctions avec des _paramètres_, qui sont des
 variables spéciales qui font partie de la signature de la fonction. Quand une
 fonction a des paramètres, vous pouvez lui fournir des valeurs concrètes avec
 ces paramètres. Techniquement, ces valeurs concrètes sont appelées des
-*arguments*, mais dans une conversation courante, on a tendance à
-confondre les termes *paramètres* et *arguments* pour désigner soit les
+_arguments_, mais dans une conversation courante, on a tendance à
+confondre les termes _paramètres_ et _arguments_ pour désigner soit les
 variables dans la définition d'une fonction, soit les valeurs concrètes passées
 quand on appelle une fonction.
 
@@ -166,27 +167,30 @@ En exécutant ce programme, vous devriez obtenir ceci :
 <!--
 The declaration of `another_function` has one parameter named `x`. The type of
 `x` is specified as `i32`. When we pass `5` in to `another_function`, the
-`println!` macro puts `5` where the pair of curly brackets were in the format
-string.
+`println!` macro puts `5` where the pair of curly brackets containing `x` was
+in the format string.
 -->
 
 La déclaration de `une_autre_fonction` a un paramètre nommé `x`. Le type de
 `x` a été déclaré comme `i32`. Quand nous passons `5` à `une_autre_fonction`, la
-macro `println!` place `5` là où la paire d'accolades `{}` a été placée dans la
-chaîne de formatage.
+macro `println!` place `5` là où la paire d'accolades contenant `x` était placée
+dans la chaîne de formatage.
 
 <!--
-In function signatures, you *must* declare the type of each parameter. This is
-a deliberate decision in Rust’s design: requiring type annotations in function
+In function signatures, you _must_ declare the type of each parameter. This is
+a deliberate decision in Rust’s design: Requiring type annotations in function
 definitions means the compiler almost never needs you to use them elsewhere in
-the code to figure out what type you mean.
+the code to figure out what type you mean. The compiler is also able to give
+more-helpful error messages if it knows what types the function expects.
 -->
 
-Dans la signature d'une fonction, vous *devez* déclarer le type de chaque
+Dans la signature d'une fonction, vous _devez_ déclarer le type de chaque
 paramètre. C'est un choix délibéré de conception de Rust : exiger l'annotation
 de type dans la définition d'une fonction fait en sorte que le compilateur n'a
 presque plus besoin que vous les utilisiez autre part pour qu'il comprenne avec
-quel type vous souhaitez travailler.
+quel type vous souhaitez travailler. Le compilateur est également capable de
+fournir des messages d'erreur plus utiles s'il connaît les types attendus par
+la fonction.
 
 <!--
 When defining multiple parameters, separate the parameter declarations with
@@ -225,13 +229,13 @@ est de type `char`. La fonction affiche ensuite le texte qui contient les
 valeurs de `valeur` et de `unite`.
 
 <!--
-Let’s try running this code. Replace the program currently in your *functions*
-project’s *src/main.rs* file with the preceding example and run it using `cargo
+Let’s try running this code. Replace the program currently in your _functions_
+project’s _src/main.rs_ file with the preceding example and run it using `cargo
 run`:
 -->
 
 Essayons d'exécuter ce code. Remplacez le programme présent actuellement dans
-votre fichier *src/main.rs* de votre projet *functions* par l'exemple précédent
+votre fichier _src/main.rs_ de votre projet _functions_ par l'exemple précédent
 et lancez-le en utilisant `cargo run` :
 
 <!--
@@ -278,12 +282,16 @@ instructions et les expressions et comment leurs différences influent sur le
 corps des fonctions.
 
 <!--
-*Statements* are instructions that perform some action and do not return a
-value. *Expressions* evaluate to a resulting value. Let’s look at some examples.
+- _Statements_ are instructions that perform some action and do not return
+  a value.
+- _Expressions_ evaluate to a resultant value.
+
+Let’s look at some examples.
 -->
 
-Les *instructions* effectuent des actions et ne retournent aucune valeur.
-Les *expressions* sont évaluées pour retourner une valeur comme résultat.
+- Les _instructions_ effectuent des actions et ne retournent aucune valeur.
+- Les _expressions_ sont évaluées pour retourner une valeur comme résultat.
+
 Voyons quelques exemples.
 
 <!--
@@ -324,11 +332,13 @@ instruction</span>
 
 <!--
 Function definitions are also statements; the entire preceding example is a
-statement in itself.
+statement in itself. (As we’ll see shortly, calling a function is not a
+statement, though.)
 -->
 
 La définition d'une fonction est aussi une instruction ; l'intégralité de
-l'exemple précédent est une instruction à elle toute seule.
+l'exemple précédent est une instruction à elle toute seule (cependant, comme
+nous le verrons prochainement, appeler une fonction n'est pas un instruction).
 
 <!--
 Statements do not return values. Therefore, you can’t assign a `let` statement
@@ -390,7 +400,7 @@ chacun la valeur `6` ; cela n'est pas possible avec Rust.
 Expressions evaluate to a value and make up most of the rest of the code that
 you’ll write in Rust. Consider a math operation, such as `5 + 6`, which is an
 expression that evaluates to the value `11`. Expressions can be part of
-statements: in Listing 3-1, the `6` in the statement `let y = 6;` is an
+statements: In Listing 3-1, the `6` in the statement `let y = 6;` is an
 expression that evaluates to the value `6`. Calling a function is an
 expression. Calling a macro is an expression. A new scope block created with
 curly brackets is an expression, for example:
@@ -445,17 +455,17 @@ L'expression suivante…
 
 <!--
 is a block that, in this case, evaluates to `4`. That value gets bound to `y`
-as part of the `let` statement. Note that the `x + 1` line doesn’t have a
-semicolon at the end, unlike most of the lines you’ve seen so far. Expressions
-do not include ending semicolons. If you add a semicolon to the end of an
+as part of the `let` statement. Note the `x + 1` line without a semicolon at
+the end, which is unlike most of the lines you’ve seen so far. Expressions do
+not include ending semicolons. If you add a semicolon to the end of an
 expression, you turn it into a statement, and it will then not return a value.
 Keep this in mind as you explore function return values and expressions next.
 -->
 
 … est un bloc qui, dans ce cas, s'évalue à `4`. Cette valeur est assignée à `y`
-dans le cadre de l'instruction `let`. Remarquez la ligne `x + 1` ne se termine
-pas par un point-virgule, ce qui est différent de la plupart des lignes que
-vous avez vues jusque là. Les expressions n'ont pas de point-virgule de fin de
+dans le cadre de l'instruction `let`. Remarquez la ligne `x + 1` sans
+point-virgule à la fin, ce qui est différent de la plupart des lignes que vous
+avez vues jusque là. Les expressions n'ont pas de point-virgule de fin de
 ligne. Si vous ajoutez un point-virgule à la fin de l'expression, vous la
 transformez en instruction, et elle ne va donc pas retourner de valeur. Gardez
 ceci à l'esprit quand nous aborderons prochainement les valeurs de retour des
@@ -528,7 +538,7 @@ devrait ressembler à ceci :
 <!--
 The `5` in `five` is the function’s return value, which is why the return type
 is `i32`. Let’s examine this in more detail. There are two important bits:
-first, the line `let x = five();` shows that we’re using the return value of a
+First, the line `let x = five();` shows that we’re using the return value of a
 function to initialize a variable. Because the function `five` returns a `5`,
 that line is the same as the following:
 -->
@@ -582,14 +592,15 @@ Regardons un autre exemple :
 ```
 
 <!--
-Running this code will print `The value of x is: 6`. But if we place a
-semicolon at the end of the line containing `x + 1`, changing it from an
-expression to a statement, we’ll get an error.
+Running this code will print `The value of x is: 6`. But what happens if we
+place a semicolon at the end of the line containing `x + 1`, changing it from
+an expression to a statement?
 -->
 
-Exécuter ce code va afficher `La valeur de x est : 6`. Mais si nous ajoutons un
+Exécuter ce code va afficher `La valeur de x est : 6`. Mais que se passe-t-il
+si nous ajoutons un
 point-virgule à la fin de la ligne qui contient `x + 1`, ce qui la transforme
-d'une expression à une instruction, nous obtenons une erreur.
+d'une expression à une instruction ?
 
 <!--
 <span class="filename">Filename: src/main.rs</span>
@@ -608,7 +619,7 @@ d'une expression à une instruction, nous obtenons une erreur.
 ```
 
 <!--
-Compiling this code produces an error, as follows:
+Compiling this code will produce an error, as follows:
 -->
 
 Compiler ce code va produire une erreur, comme ci-dessous :
@@ -624,16 +635,16 @@ Compiler ce code va produire une erreur, comme ci-dessous :
 ```
 
 <!--
-The main error message, “mismatched types,” reveals the core issue with this
+The main error message, `mismatched types`, reveals the core issue with this
 code. The definition of the function `plus_one` says that it will return an
 `i32`, but statements don’t evaluate to a value, which is expressed by `()`,
 the unit type. Therefore, nothing is returned, which contradicts the function
 definition and results in an error. In this output, Rust provides a message to
-possibly help rectify this issue: it suggests removing the semicolon, which
+possibly help rectify this issue: It suggests removing the semicolon, which
 would fix the error.
 -->
 
-Le message d'erreur principal, “mismatched types” *(types inadéquats)* donne le
+Le message d'erreur principal, “mismatched types” _(types inadéquats)_ donne le
 cœur du problème de ce code. La définition de la fonction `plus_un` dit qu'elle
 va retourner un `i32`, mais les instructions ne retournent pas de valeur, ceci
 est donc représenté par `()`, le type unité. Par conséquent, rien n'est

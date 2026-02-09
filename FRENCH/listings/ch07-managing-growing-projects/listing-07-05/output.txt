@@ -1,28 +1,28 @@
 $ cargo build
    Compiling restaurant v0.1.0 (file:///projects/restaurant)
 error[E0603]: function `ajouter_a_la_liste_attente` is private
- --> src/lib.rs:9:37
-  |
-9 |     crate::salle_a_manger::accueil::ajouter_a_la_liste_attente();
-  |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^ private function
-  |
+  --> src/lib.rs:10:37
+   |
+10 |     crate::salle_a_manger::accueil::ajouter_a_la_liste_attente();
+   |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^ private function
+   |
 note: the function `ajouter_a_la_liste_attente` is defined here
- --> src/lib.rs:3:9
-  |
-3 |         fn ajouter_a_la_liste_attente() {}
-  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  --> src/lib.rs:3:9
+   |
+ 3 |         fn ajouter_a_la_liste_attente() {}
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 error[E0603]: function `ajouter_a_la_liste_attente` is private
-  --> src/lib.rs:12:30
+  --> src/lib.rs:13:30
    |
-12 |     salle_a_manger::accueil::ajouter_a_la_liste_attente();
+13 |     salle_a_manger::accueil::ajouter_a_la_liste_attente();
    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^ private function
    |
 note: the function `ajouter_a_la_liste_attente` is defined here
   --> src/lib.rs:3:9
    |
-3  |         fn ajouter_a_la_liste_attente() {}
+ 3 |         fn ajouter_a_la_liste_attente() {}
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For more information about this error, try `rustc --explain E0603`.
-error: could not compile `restaurant` due to 2 previous errors
+error: could not compile `restaurant` (lib) due to 2 previous errors

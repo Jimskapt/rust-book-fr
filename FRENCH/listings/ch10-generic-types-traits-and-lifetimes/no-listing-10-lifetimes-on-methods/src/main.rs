@@ -13,7 +13,7 @@ impl<'a> ExtraitImportant<'a> {
 // ANCHOR: 3rd
 impl<'a> ExtraitImportant<'a> {
     fn annoncer_et_retourner_partie(&self, annonce: &str) -> &str {
-        println!("Votre attention s'il vous plaît : {}", annonce);
+        println!("Votre attention s'il vous plaît : {annonce}");
         self.partie
     }
 }
@@ -21,7 +21,7 @@ impl<'a> ExtraitImportant<'a> {
 
 fn main() {
     let novel = String::from("Call me Ishmael. Some years ago...");
-    let first_sentence = novel.split('.').next().expect("Could not find a '.'");
+    let first_sentence = novel.split('.').next().unwrap();
     let i = ExtraitImportant {
         partie: first_sentence,
     };

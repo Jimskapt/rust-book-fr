@@ -9,5 +9,5 @@ fn main() {
         }
     };
 
-    println!("Le résultat est {}", resultat);
+    println!("Le résultat est {resultat}");
 }

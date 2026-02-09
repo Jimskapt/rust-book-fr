@@ -8,15 +8,15 @@ pub trait Resumable {
 }
 // ANCHOR_END: here
 
-pub struct Tweet {
+pub struct PublicationSociale {
     pub nom_utilisateur: String,
     pub contenu: String,
     pub reponse: bool,
-    pub retweet: bool,
+    pub republication: bool,
 }
 
 // ANCHOR: impl
-impl Resumable for Tweet {
+impl Resumable for PublicationSociale {
     fn resumer_auteur(&self) -> String {
         format!("@{}", self.nom_utilisateur)
     }

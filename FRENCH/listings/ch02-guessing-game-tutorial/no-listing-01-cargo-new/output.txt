@@ -1,5 +1,5 @@
 $ cargo run
    Compiling jeu_du_plus_ou_du_moins v0.1.0 (file:///projects/jeu_du_plus_ou_du_moins)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.50s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
      Running `target/debug/jeu_du_plus_ou_du_moins`
 Hello, world!

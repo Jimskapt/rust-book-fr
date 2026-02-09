@@ -4,5 +4,5 @@ fn main() {
         x + 1
     };
 
-    println!("La valeur de y est : {}", y);
+    println!("La valeur de y est : {y}");
 }

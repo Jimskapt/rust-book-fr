@@ -10,5 +10,5 @@ fn main() {
         hauteur: 50
     };
 
-    println!("rect1 est {:#?}", rect1);
+    println!("rect1 est {rect1:#?}");
 }

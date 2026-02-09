@@ -5,9 +5,9 @@ use std::io;
 fn main() {
     println!("Devinez le nombre !");
 
-    let nombre_secret = rand::thread_rng().gen_range(1..101);
+    let nombre_secret = rand::thread_rng().gen_range(1..=100);
 
-    println!("Le nombre secret est : {}", nombre_secret);
+    println!("Le nombre secret est : {nombre_secret}");
 
     loop {
         println!("Veuillez entrer un nombre.");
@@ -28,7 +28,7 @@ fn main() {
         };
         // ANCHOR_END: ch19
 
-        println!("Votre nombre : {}", supposition);
+        println!("Votre nombre : {supposition}");
 
         // -- partie masquée ici --
         // ANCHOR_END: here

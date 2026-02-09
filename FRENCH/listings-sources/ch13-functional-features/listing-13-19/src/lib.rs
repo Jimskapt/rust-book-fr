@@ -1,11 +1,29 @@
-#[derive(PartialEq, Debug)]
-struct Shoe {
-    size: u32,
-    style: String,
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let mut results = Vec::new();
+
+    for line in contents.lines() {
+        if line.contains(query) {
+            results.push(line);
+        }
+    }
+
+    results
 }
 
-fn shoes_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
-    shoes.into_iter().filter(|s| s.size == shoe_size).collect()
+pub fn search_case_insensitive<'a>(
+    query: &str,
+    contents: &'a str,
+) -> Vec<&'a str> {
+    let query = query.to_lowercase();
+    let mut results = Vec::new();
+
+    for line in contents.lines() {
+        if line.to_lowercase().contains(&query) {
+            results.push(line);
+        }
+    }
+
+    results
 }
 
 #[cfg(test)]
@@ -13,36 +31,29 @@ mod tests {
     use super::*;
 
     #[test]
-    fn filters_by_size() {
-        let shoes = vec![
-            Shoe {
-                size: 10,
-                style: String::from("sneaker"),
-            },
-            Shoe {
-                size: 13,
-                style: String::from("sandal"),
-            },
-            Shoe {
-                size: 10,
-                style: String::from("boot"),
-            },
-        ];
+    fn case_sensitive() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.
+Duct tape.";
 
-        let in_my_size = shoes_in_size(shoes, 10);
+        assert_eq!(vec!["safe, fast, productive."], search(query, contents));
+    }
+
+    #[test]
+    fn case_insensitive() {
+        let query = "rUsT";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.
+Trust me.";
 
         assert_eq!(
-            in_my_size,
-            vec![
-                Shoe {
-                    size: 10,
-                    style: String::from("sneaker")
-                },
-                Shoe {
-                    size: 10,
-                    style: String::from("boot")
-                },
-            ]
+            vec!["Rust:", "Trust me."],
+            search_case_insensitive(query, contents)
         );
     }
 }

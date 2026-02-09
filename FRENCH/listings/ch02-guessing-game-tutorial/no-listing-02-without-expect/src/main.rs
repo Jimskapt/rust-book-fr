@@ -9,5 +9,5 @@ fn main() {
 
     io::stdin().read_line(&mut supposition);
 
-    println!("Votre nombre : {}", supposition);
+    println!("Votre nombre : {supposition}");
 }

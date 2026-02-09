@@ -1,8 +1,15 @@
 fn main() {
     // ANCHOR: here
-    let mut v = vec![100, 32, 57];
-    for i in &mut v {
-        *i += 50;
+    enum Cellule {
+        Int(i32),
+        Float(f64),
+        Text(String),
     }
+
+    let ligne = vec![
+        Cellule::Int(3),
+        Cellule::Text(String::from("bleu")),
+        Cellule::Float(10.12),
+    ];
     // ANCHOR_END: here
 }

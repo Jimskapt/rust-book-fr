@@ -18,10 +18,10 @@ In rust code, we should translate :
 - comment
 - string text
 - variable name
-- struct name (which is custom, that means it not come from *standard library*
-  or *external crate*)
-- enum name (which is custom, that means it not come from *standard library*
-  or *external crate*)
+- struct name (which is custom, that means it does not come from the *standard
+  library* or *external crate*)
+- enum name (which is custom, that means it does not come from the
+  *standard library* or *external crate*)
 
 All the standard code (and terminal outputs) should stay in English.
 
@@ -34,6 +34,9 @@ Please limit each line of Markdown file to 80 characters (including spaces). You
 can write your file as you want, but it would be nice to use a tool like
 [https://www.dcode.fr/text-splitter](https://www.dcode.fr/text-splitter) on your
 translated paragraphs before committing.
+
+For Vim users, entering `vapgq` in normal mode will format the current
+paragraph with a width of 80 characters.
 
 ### Punctuation
 

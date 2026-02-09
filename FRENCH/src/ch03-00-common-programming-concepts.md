@@ -9,7 +9,7 @@ This chapter covers concepts that appear in almost every programming language
 and how they work in Rust. Many programming languages have much in common at
 their core. None of the concepts presented in this chapter are unique to Rust,
 but we’ll discuss them in the context of Rust and explain the conventions
-around using these concepts.
+around using them.
 -->
 
 Ce chapitre explique des concepts qui apparaissent dans presque tous les
@@ -38,12 +38,12 @@ apprendre dès le début vous procurera de solides bases pour débuter.
 > special meanings, and you’ll be using them to do various tasks in your Rust
 > programs; a few have no current functionality associated with them but have
 > been reserved for functionality that might be added to Rust in the future. You
-> can find a list of the keywords in [Appendix A][appendix_a]<!-- ignore -- >.
+> can find the list of the keywords in [Appendix A][appendix_a]<!-- ignore -- >.
 -->
 
 > #### Mots-clés
 >
-> Le langage Rust possède un ensemble de *mots-clés* qui ont été réservés pour
+> Le langage Rust possède un ensemble de _mots-clés_ qui ont été réservés pour
 > l'usage exclusif du langage, tout comme le font d'autres langages. Gardez à
 > l'esprit que vous ne pouvez pas utiliser ces mots pour des noms de variables
 > ou de fonctions. La plupart des mots-clés ont une signification spéciale, et

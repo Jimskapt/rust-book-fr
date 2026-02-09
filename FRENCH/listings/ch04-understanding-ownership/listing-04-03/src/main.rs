@@ -6,17 +6,17 @@ fn main() {
 
   let x = 5;              // x rentre dans la portée.
 
-  creer_copie(x);         // x va être déplacée dans la fonction,
-                          // mais i32 est Copy, donc on peut
-                          // continuer d'utiliser x ensuite.
+  creer_copie(x);         // Comme i32 implémente le trait Copy,
+                          // x n'est PAS déplacée dans la fonction,
+                          // donc on peutcontinuer d'utiliser x ensuite.
 
-} // Ici, x sort de la portée, puis ensuite s. Mais puisque la valeur de s a
-// été déplacée, il ne se passe rien de spécial.
+} // Ici, x sort de la portée, puis ensuite s. Toutefois, puisque la valeur de
+  // s a été déplacée, il ne se passe rien de spécial.
 
 fn prendre_possession(texte: String) { // texte rentre dans la portée.
-  println!("{}", texte);
+  println!("{texte}");
 } // Ici, texte sort de la portée et `drop` est appelé. La mémoire est libérée.
 
 fn creer_copie(entier: i32) { // entier rentre dans la portée.
-  println!("{}", entier);
+  println!("{entier}");
 } // Ici, entier sort de la portée. Il ne se passe rien de spécial.

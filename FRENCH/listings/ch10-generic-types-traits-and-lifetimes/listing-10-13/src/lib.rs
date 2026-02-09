@@ -16,14 +16,14 @@ impl Resumable for ArticleDePresse {
     }
 }
 
-pub struct Tweet {
+pub struct PublicationSociale {
     pub nom_utilisateur: String,
     pub contenu: String,
     pub reponse: bool,
-    pub retweet: bool,
+    pub republication: bool,
 }
 
-impl Resumable for Tweet {
+impl Resumable for PublicationSociale {
     fn resumer(&self) -> String {
         format!("{} : {}", self.nom_utilisateur, self.contenu)
     }

@@ -1,4 +1,4 @@
-use chapter10::{self, ArticleDePresse, Resumable};
+use agregateur::{self, ArticleDePresse, Resumable};
 
 fn main() {
     // ANCHOR: here

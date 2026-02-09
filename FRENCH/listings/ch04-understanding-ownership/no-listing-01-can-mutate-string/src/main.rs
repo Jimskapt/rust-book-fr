@@ -4,6 +4,6 @@ fn main() {
 
     s.push_str(", world!"); // push_str() ajoute un littéral de chaîne dans une String
     
-    println!("{}", s); // Cela va afficher `hello, world!`
-                       // ANCHOR_END: here
+    println!("{s}"); // Cela va afficher `hello, world!`
+    // ANCHOR_END: here
 }

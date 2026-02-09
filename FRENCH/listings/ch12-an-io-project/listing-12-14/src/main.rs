@@ -1,7 +1,9 @@
-// ANCHOR: here
 use std::env;
+use std::error::Error;
+use std::fs;
 use std::process;
 
+// ANCHOR: here
 use minigrep::Config;
 
 fn main() {

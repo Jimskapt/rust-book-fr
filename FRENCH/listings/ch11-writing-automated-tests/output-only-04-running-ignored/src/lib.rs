@@ -1,12 +1,22 @@
-// ANCHOR: here
-#[test]
-fn it_works() {
-    assert_eq!(2 + 2, 4);
+pub fn ajouter(gauche: u64, droite: u64) -> u64 {
+    gauche + droite
 }
 
-#[test]
-#[ignore]
-fn test_long() {
-    // du code qui prend une heure à s'exécuter
+// ANCHOR: here
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_works() {
+    let resultat = ajouter(2, 2);
+    assert_eq!(resultat), 4);
+    }
+
+    #[test]
+    #[ignore]
+    fn test_long() {
+        // du code qui prend une heure à s'exécuter
+    }
 }
 // ANCHOR_END: here

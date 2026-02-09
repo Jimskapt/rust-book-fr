@@ -11,5 +11,5 @@ fn main() {
         .read_line(&mut supposition)
         .expect("Échec de la lecture de l'entrée utilisateur");
 
-    println!("Votre nombre : {}", supposition);
+    println!("Votre nombre : {supposition}");
 }

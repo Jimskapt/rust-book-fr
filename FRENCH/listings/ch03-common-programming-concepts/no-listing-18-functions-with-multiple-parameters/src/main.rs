@@ -3,5 +3,5 @@ fn main() {
 }
 
 fn afficher_mesure_avec_unite(valeur: i32, unite: char) {
-    println!("La mesure est : {}{}", valeur, unite);
+    println!("La mesure est : {valeur}{unite}");
 }

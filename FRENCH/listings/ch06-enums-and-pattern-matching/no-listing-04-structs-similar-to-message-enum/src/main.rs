@@ -7,5 +7,4 @@ struct MessageDeplacer {
 struct MessageEcrire(String); // une structure tuple
 struct MessageChangerCouleur(i32, i32, i32); // une structure tuple
                                              // ANCHOR_END: here
-
 fn main() {}

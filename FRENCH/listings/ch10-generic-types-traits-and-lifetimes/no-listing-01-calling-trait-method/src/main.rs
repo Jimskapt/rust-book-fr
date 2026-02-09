@@ -1,12 +1,12 @@
 use agregateur::{Resumable, Tweet};
 
 fn main() {
-    let tweet = Tweet {
+    let publication = PublicationSociale {
         nom_utilisateur: String::from("jean"),
         contenu: String::from("Bien sûr, les amis, comme vous le savez probablement déjà"),
         reponse: false,
-        retweet: false,
+        republication: false,
     };
     
-    println!("1 nouveau tweet : {}", tweet.resumer());
+    println!("1 nouvelle publication : {}", publication.resumer());
 }

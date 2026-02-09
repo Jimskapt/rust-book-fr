@@ -28,15 +28,18 @@ while [[ $# -gt 0 ]]; do
     --ignore-cargo-toml)
       IGNORE_CARGO_TOML=1
       ;;
-    --only-ch*)
-      ONLY_CHAPITRES="${1#--only-}"
-      ;;
     --stat-only)
       STAT_ONLY=1
       ;;
     --debug)
       DEBUG=1
       ;;
+    --only-ch*)
+      ONLY_CHAPITRES="${1#--only-}"
+      ;;
+    ch[0-9][0-9])
+      ONLY_CHAPITRES="$1"
+    ;;
     *)
       echo "Option inconnue: $1" >&2
       exit 1
@@ -129,12 +132,21 @@ if [[ $DEBUG -eq 1 ]]; then echo $LINENO; confirm; fi ### DEBUG pas-à-pas
 # --- itération sur les fichiers français ---
 find "$DIR_LISTINGS_FR" -type f -print0 | sort -z | while read -r -d '' fr_file; do
   rel="${fr_file#$DIR_LISTINGS_FR/}" # Ce nom de variable est bien peu explicite => nom RELatif
-  if [[ $IGNORE_CARGO_TOML -eq 1 ]] && [[ $rel -eq "Cargo.toml" ]]; then
+
+  # Filtrage par chapitre le plus tôt possible
+  [[ -n "$ONLY_CHAPITRES" && "$rel" != "$ONLY_CHAPITRES-"* ]] && continue
+
+  if [[ $DEBUG -eq 1 ]]; then
+    echo "IGNORE_CARGO_TOML=$IGNORE_CARGO_TOML"
+    echo "rel=$(basename $rel)"
+  fi
+
+  if [[ $IGNORE_CARGO_TOML == 1 ]] && [[ $(basename $rel) == "Cargo.toml" ]]; then
+    echo "$rel ignoré"
     continue
   fi
-  confirm 0 "Traiter ce fichier?" || continue
   echo -e "\n### Traitement du fichier $fr_file ###"
-  [[ -n "$ONLY_CHAPITRES" && "$rel" != "$ONLY_CHAPITRES-"* ]] && continue
+  confirm 0 "Traiter ce fichier?" || continue
   en_new_file="$DIR_LISTINGS_EN_NEW/$rel"
 
   if [[ ! -f "$en_new_file" ]]; then

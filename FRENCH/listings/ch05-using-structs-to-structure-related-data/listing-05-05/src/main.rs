@@ -8,9 +8,9 @@ struct Utilisateur {
 // ANCHOR: here
 fn creer_utilisateur(email: String, pseudo: String) -> Utilisateur {
     Utilisateur {
-        email,
-        pseudo,
         actif: true,
+        pseudo,
+        email,
         nombre_de_connexions: 1,
     }
 }

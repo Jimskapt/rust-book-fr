@@ -6,8 +6,8 @@ struct Rectangle {
 
 // ANCHOR: here
 impl Rectangle {
-    fn carre(cote: u32) -> Rectangle {
-        Rectangle {
+    fn carre(cote: u32) -> Self {
+        Self {
             largeur: cote,
             hauteur: cote
         }

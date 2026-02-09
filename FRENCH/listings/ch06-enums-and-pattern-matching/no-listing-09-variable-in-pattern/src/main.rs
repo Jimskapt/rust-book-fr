@@ -19,7 +19,7 @@ fn valeur_en_centimes(piece: PieceUs) -> u8 {
         PieceUs::Nickel => 5,
         PieceUs::Dime => 10,
         PieceUs::Quarter(etat) => {
-            println!("Il s'agit d'un quarter de l'État de {:?} !", etat);
+            println!("Il s'agit d'un quarter de l'État de {etat:?} !");
             25
         },
     }

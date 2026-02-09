@@ -7,16 +7,16 @@ fn main() {
 
     let config = interpreter_config(&args);
 
-    println!("On recherche : {}", config.recherche);
-    println!("Dans le fichier : {}", config.nom_fichier);
+    println!("On recherche : {config.recherche}");
+    println!("Dans le fichier : {config.nom_fichier}");
 
     let contenu = fs::read_to_string(config.nom_fichier)
-        .expect("Quelque chose s'est mal passé lors de la lecture du fichier");
+        .expect("Aurait dû pouvoir lire le fichier");
 
     // -- partie masquée ici --
     // ANCHOR_END: here
 
-    println!("Dans le texte :\n{}", contenu);
+    println!("Dans le texte :\n{contenu}");
     // ANCHOR: here
 }
 

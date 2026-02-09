@@ -9,7 +9,7 @@ fn main() {
     // ANCHOR_END: here
     let args: Vec<String> = env::args().collect();
 
-    let config = Config::new(&args).unwrap_or_else(|err| {
+    let config = Config::build(&args).unwrap_or_else(|err| {
         println!("Problème rencontré lors de l'interprétation des arguments : {}", err);
         process::exit(1);
     });
@@ -23,7 +23,7 @@ fn main() {
 
 fn run(config: Config) {
     let contenu = fs::read_to_string(config.nom_fichier)
-        .expect("Quelque chose s'est mal passé lors de la lecture du fichier");
+        .expect("Aurait dû pouvoir lire le fichier");
 
     println!("Dans le texte :\n{}", contenu);
 }
@@ -37,7 +37,7 @@ struct Config {
 }
 
 impl Config {
-    fn new(args: &[String]) -> Result<Config, &'static str> {
+    fn build(args: &[String]) -> Result<Config, &'static str> {
         if args.len() < 3 {
             return Err("il n'y a pas assez d'arguments");
         }

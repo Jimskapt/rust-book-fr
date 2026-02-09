@@ -1,15 +1,10 @@
 fn main() {
     // ANCHOR: here
-    enum Cellule {
-        Int(i32),
-        Float(f64),
-        Text(String),
-    }
-    
-    let ligne = vec![
-        Cellule::Int(3),
-        Cellule::Text(String::from("bleu")),
-        Cellule::Float(10.12),
-    ];
+    {
+        let v = vec![1, 2, 3, 4];
+
+        // on fait des choses avec v
+
+    } // <- v sort de la portée et est libéré ici
     // ANCHOR_END: here
 }

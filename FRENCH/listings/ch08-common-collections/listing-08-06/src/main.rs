@@ -1,8 +1,11 @@
 fn main() {
-    // ANCHOR: here
-    let v = vec![1, 2, 3, 4, 5];
+// ANCHOR: here
+    let mut v = vec![1, 2, 3, 4, 5];
 
-    let existe_pas = &v[100];
-    let existe_pas = v.get(100);
+    let premier = &v[0];
+
+    v.push(6);
+
+    println!("Le premier élément est : {premier}");
     // ANCHOR_END: here
 }

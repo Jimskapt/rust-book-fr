@@ -2,12 +2,15 @@ fn main() {
     // ANCHOR: here
     use std::collections::HashMap;
 
-    let mut scores = HashMap::new();
-    scores.insert(String::from("Bleu"), 10);
+    let texte = "bonjour le monde magnifique monde";
 
-    scores.entry(String::from("Jaune")).or_insert(50);
-    scores.entry(String::from("Bleu")).or_insert(50);
+    let mut table = HashMap::new();
 
-    println!("{:?}", scores);
+    for mot in texte.split_whitespace() {
+        let compteur = table.entry(mot).or_insert(0);
+        *compteur += 1;
+    }
+
+    println!("{table:?}");
     // ANCHOR_END: here
 }

@@ -4,7 +4,7 @@ fn main() {
 
     let s = donnee.to_string();
 
-    // cette méthode fonctionne aussi directement sur un
+    // Cette méthode fonctionne aussi directement sur un
     // littéral de chaîne de caractères :
     let s = "contenu initial".to_string();
     // ANCHOR_END: here

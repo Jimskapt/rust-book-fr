@@ -1,31 +1,14 @@
+use guessing_game::Guess; // TODO translate
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
-// ANCHOR: here
-pub struct Supposition {
-    valeur: i32,
-}
-
-impl Supposition {
-    pub fn new(valeur: i32) -> Supposition {
-        if valeur < 1 || valeur > 100 {
-            panic!("La valeur de Supposition doit ĉtre comprise entre 1 et 100, nous avons {}.", valeur);
-        }
-
-        Supposition { valeur }
-    }
-
-    pub fn valeur(&self) -> i32 {
-        self.valeur
-    }
-}
-// ANCHOR_END: here
+mod guessing_game;
 
 fn main() {
     println!("Devinez le nombre !");
 
-    let nombre_secret = rand::thread_rng().gen_range(1..101);
+    let nombre_secret = rand::thread_rng().gen_range(1..=100);
 
     loop {
         println!("Veuillez entrer un nombre.");

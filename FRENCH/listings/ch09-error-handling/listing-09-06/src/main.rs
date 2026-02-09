@@ -3,17 +3,17 @@ use std::fs::File;
 use std::io::{self, Read};
 
 fn lire_pseudo_depuis_fichier() -> Result<String, io::Error> {
-    let f = File::open("hello.txt");
+    let resultat_fichier_pseudo = File::open("hello.txt");
 
-    let mut f = match f {
+    let mut resultat_fichier_pseudo = match resultat_fichier_pseudo {
         Ok(fichier) => fichier,
         Err(e) => return Err(e),
     };
 
-    let mut s = String::new();
+    let mut pseudo = String::new();
 
-    match f.read_to_string(&mut s) {
-        Ok(_) => Ok(s),
+    match pseudo.read_to_string(&mut pseudo) {
+        Ok(_) => Ok(pseudo),
         Err(e) => Err(e),
     }
 }

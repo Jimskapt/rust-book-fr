@@ -1,5 +1,5 @@
 use std::fs::File;
 
 fn main() {
-    let f = File::open("hello.txt").unwrap();
+    let fichier_salut = File::open("hello.txt").unwrap();
 }

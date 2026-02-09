@@ -1,13 +1,14 @@
-use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+
+use rand::Rng;
 
 fn main() {
     println!("Devinez le nombre !");
 
-    let nombre_secret = rand::thread_rng().gen_range(1..101);
+    let nombre_secret = rand::thread_rng().gen_range(1..=100);
 
-    println!("Le nombre secret est : {}", nombre_secret);
+    println!("Le nombre secret est : {nombre_secret}");
 
     println!("Veuillez entrer un nombre.");
 
@@ -22,7 +23,7 @@ fn main() {
 
     let supposition: u32 = supposition.trim().parse().expect("Veuillez entrer un nombre !");
 
-    println!("Votre nombre : {}", supposition);
+    println!("Votre nombre : {supposition}");
 
     match supposition.cmp(&nombre_secret) {
         Ordering::Less => println!("C'est plus !"),

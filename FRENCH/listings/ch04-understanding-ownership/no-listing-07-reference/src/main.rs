@@ -6,7 +6,7 @@ fn main() {
     let long = calculer_taille(&s1);
     // ANCHOR_END: here
 
-    println!("La taille de '{}' est {}.", s1, long);
+    println!("La taille de '{s1}' est {long}.");
 }
 
 fn calculer_taille(s: &String) -> usize {

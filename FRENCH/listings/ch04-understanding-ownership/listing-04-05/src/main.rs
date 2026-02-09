@@ -3,7 +3,7 @@ fn main() {
 
     let (s2, taille) = calculer_taille(s1);
 
-    println!("La taille de '{}' est {}.", s2, taille);
+    println!("La taille de '{s2}' est {taille}.");
 }
 
 fn calculer_taille(s: String) -> (String, usize) {

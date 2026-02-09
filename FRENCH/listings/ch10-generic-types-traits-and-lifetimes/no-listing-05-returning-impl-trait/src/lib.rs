@@ -15,14 +15,14 @@ impl Resumable for ArticleDePresse {
     }
 }
 
-pub struct Tweet {
+pub struct PublicationSociale {
     pub nom_utilisateur: String,
     pub contenu: String,
     pub reponse: bool,
-    pub retweet: bool,
+    pub republication: bool,
 }
 
-impl Resumable for Tweet {
+impl Resumable for PublicationSociale {
     fn resumer(&self) -> String {
         format!("{} : {}", self.nom_utilisateur, self.contenu)
     }
@@ -30,11 +30,11 @@ impl Resumable for Tweet {
 
 // ANCHOR: here
 fn retourne_resumable() -> impl Resumable {
-    Tweet {
+    PublicationSociale {
         nom_utilisateur: String::from("jean"),
         contenu: String::from("Bien sûr, les amis, comme vous le savez probablement déjà"),
         reponse: false,
-        retweet: false,
+        republication: false,
     }
 }
 // ANCHOR_END: here

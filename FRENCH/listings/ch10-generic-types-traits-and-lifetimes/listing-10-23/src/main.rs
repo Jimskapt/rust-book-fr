@@ -5,15 +5,11 @@ fn main() {
     {
         let string2 = String::from("xyz");
         let resultat = la_plus_longue(string1.as_str(), string2.as_str());
-        println!("La chaîne la plus longue est {}", resultat);
     }
+    println!("La chaîne la plus longue est {resultat}");
 }
 // ANCHOR_END: here
 
 fn la_plus_longue<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
+    if x.len() > y.len() { x } else { y }
 }

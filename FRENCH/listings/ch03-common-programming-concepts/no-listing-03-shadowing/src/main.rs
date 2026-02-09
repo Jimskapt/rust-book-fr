@@ -5,8 +5,8 @@ fn main() {
 
     {
         let x = x * 2;
-        println!("La valeur de x dans la portée interne est : {}", x);
+        println!("La valeur de x dans la portée interne est : {x}");
     }
 
-    println!("La valeur de x est : {}", x);
+    println!("La valeur de x est : {x}");
 }

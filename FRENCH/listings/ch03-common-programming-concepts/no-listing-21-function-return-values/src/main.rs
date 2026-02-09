@@ -5,5 +5,5 @@ fn cinq() -> i32 {
 fn main() {
     let x = cinq();
 
-    println!("La valeur de x est : {}", x);
+    println!("La valeur de x est : {x}");
 }

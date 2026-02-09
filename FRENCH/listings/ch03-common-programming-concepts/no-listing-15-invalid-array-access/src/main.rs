@@ -18,8 +18,5 @@ fn main() {
 
     let element = a[indice];
 
-    println!(
-        "La valeur de l'élément d'indice {} est : {}",
-        indice, element
-    );
+    println!("La valeur de l'élément d'indice {indice} est : {element}");
 }

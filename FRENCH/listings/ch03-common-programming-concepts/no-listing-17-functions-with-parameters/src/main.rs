@@ -3,5 +3,5 @@ fn main() {
 }
 
 fn une_autre_fonction(x: i32) {
-    println!("La valeur de x est : {}", x);
+    println!("La valeur de x est : {x}");
 }

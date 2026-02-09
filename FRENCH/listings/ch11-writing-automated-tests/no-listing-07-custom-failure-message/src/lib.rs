@@ -12,8 +12,7 @@ mod tests {
         let resultat = accueil("Carole");
         assert!(
             resultat.contains("Carole"),
-            "Le message d'accueil ne contient pas le nom, il vaut `{}`",
-            resultat
+            "Le message d'accueil ne contient pas le nom, il vaut `{resultat}`"
         );
     }
     // ANCHOR_END: here

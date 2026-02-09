@@ -1,5 +1,5 @@
 // ANCHOR: here
-pub fn ajouter_deux(a: i32) -> i32 {
+pub fn ajouter_deux(a: u64) -> u64 {
     a + 3
 }
 // ANCHOR_END: here
@@ -10,6 +10,7 @@ mod tests {
 
     #[test]
     fn cela_ajoute_deux() {
-        assert_eq!(4, ajouter_deux(2));
+        resultat = ajouter_deux(2);
+        assert_eq!(resultat, 4);
     }
 }

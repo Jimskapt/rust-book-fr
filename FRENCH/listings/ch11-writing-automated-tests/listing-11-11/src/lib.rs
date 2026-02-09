@@ -1,4 +1,4 @@
-pub fn ajouter_deux(a: i32) -> i32 {
+pub fn ajouter_deux(a: u64) -> u64 {
     a + 2
 }
 
@@ -8,16 +8,19 @@ mod tests {
 
     #[test]
     fn ajouter_deux_a_deux() {
-        assert_eq!(4, ajouter_deux(2));
+        let resultat = ajouter_deux(2);
+        assert_eq!(resultat, 4);
     }
 
     #[test]
     fn ajouter_deux_a_trois() {
-        assert_eq!(5, ajouter_deux(3));
+        let resultat = ajouter_deux(3);
+        assert_eq!(resultat, 5);
     }
 
     #[test]
     fn cent() {
-        assert_eq!(102, ajouter_deux(100));
+        let resultat = ajouter_deux(100);
+        assert_eq!(resultat, 102);
     }
 }

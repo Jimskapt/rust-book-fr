@@ -2,7 +2,7 @@
 ## Validating References with Lifetimes
 -->
 
-## La conformité des références avec les durées de vies
+## La conformité des références avec les durées de vie
 
 <!--
 One detail we didn’t discuss in the [“References and
@@ -24,7 +24,7 @@ laquelle cette référence est en vigueur. La plupart du temps, les durées de
 vies sont implicites et sont déduites automatiquement, comme pour la plupart du
 temps les types sont déduits. Nous devons renseigner le type lorsque plusieurs
 types sont possibles. De la même manière, nous devons renseigner les durées de
-vie lorsque les durées de vies des références peuvent être déduites de
+vie lorsque les durées de vie des références peuvent être déduites de
 différentes manières. Rust nécessite que nous renseignons ces relations en
 utilisant des paramètres de durée de vie génériques pour s'assurer que les
 références utilisées au moment de la compilation restent bien en vigueur.
@@ -55,7 +55,7 @@ Consider the program in Listing 10-17, which has an outer scope and an inner
 scope.
 -->
 
-L'objectif principal des durées de vies est d'éviter les références
+L'objectif principal des durées de vie est d'éviter les références
 pendouillantes qui font qu'un programme pointe des données autres que celles sur
 lesquelles il était censé pointer. Soit le programme de l'encart 10-17, qui
 a une portée externe et une portée interne.
@@ -156,7 +156,7 @@ whether all borrows are valid. Listing 10-18 shows the same code as Listing
 Le compilateur de Rust embarque un *vérificateur d'emprunt* (borrow checker) qui
 compare les portées pour déterminer si les emprunts sont valides. L'encart 10-18
 montre le même code que l'encart 10-17, mais avec des commentaires qui montrent
-les durées de vies des variables.
+les durées de vie des variables.
 
 <!--
 ```rust,ignore,does_not_compile
@@ -188,7 +188,7 @@ with a lifetime of `'b`. The program is rejected because `'b` is shorter than
 Ici, nous avons montré la durée de vie de `r` avec `'a` et la durée de vie de
 `x` avec `'b`. Comme vous pouvez le constater, le bloc interne `'b` est bien
 plus petit que le bloc externe `'a`. Au moment de la compilation, Rust compare
-les tailles des deux durées de vies et constate que `r` a la durée de vie `'a`
+les tailles des deux durées de vie et constate que `r` a la durée de vie `'a`
 mais fait référence à de la mémoire qui a une durée de vie de `'b`. Ce programme
 est refusé car `'b` est plus court que `'a` : l'élément pointé par la référence
 n'existe pas aussi longtemps que la référence.
@@ -236,15 +236,15 @@ lifetimes of parameters and return values in the context of functions.
 -->
 
 Maintenant que vous savez où se situent les durées de vie des références et
-comment Rust analyse les durées de vies pour s'assurer que les références soient
-toujours en vigueur, découvrons les durées de vies génériques des paramètres et
+comment Rust analyse les durées de vie pour s'assurer que les références soient
+toujours en vigueur, découvrons les durées de vie génériques des paramètres et
 des valeurs de retour dans le cas des fonctions.
 
 <!--
 ### Generic Lifetimes in Functions
 -->
 
-### Les durées de vies génériques dans les fonctions
+### Les durées de vie génériques dans les fonctions
 
 <!--
 Let’s write a function that returns the longer of two string slices. This
@@ -395,7 +395,7 @@ faire cette analyse.
 ### Lifetime Annotation Syntax
 -->
 
-### La syntaxe pour annoter les durées de vies
+### La syntaxe pour annoter les durées de vie
 
 <!--
 Lifetime annotations don’t change how long any of the references live. Just
@@ -411,7 +411,7 @@ De la même façon qu'une fonction accepte n'importe quel type lorsque la
 signature utilise un paramètre de type générique, les fonctions peuvent
 accepter des références avec n'importe quelle durée de vie en précisant un
 paramètre de durée de vie générique. L'annotation des durées de vie décrit la
-relation des durées de vies de plusieurs références entre elles sans influencer
+relation des durées de vie de plusieurs références entre elles sans influencer
 les durées de vie.
 
 <!--
@@ -422,8 +422,8 @@ lifetime parameter annotations after the `&` of a reference, using a space to
 separate the annotation from the reference’s type.
 -->
 
-L'annotation des durées de vies a une syntaxe un peu inhabituelle : le nom des
-paramètres de durées de vies doit commencer par une apostrophe (`'`) et est
+L'annotation des durées de vie a une syntaxe un peu inhabituelle : le nom des
+paramètres de durées de vie doit commencer par une apostrophe (`'`) et est
 habituellement en minuscule et très court, comme les types génériques. La
 plupart des personnes utilisent le nom `'a`. Nous plaçons le paramètre de type
 après le `&` d'une référence, en utilisant un espace pour séparer l'annotation
@@ -552,7 +552,7 @@ la fonction indique également à Rust que la slice de chaîne de caractères qu
 retournée par la fonction vivra au moins aussi longtemps que la durée de vie
 `'a`. Dans la pratique, cela veut dire que durée de vie de la référence
 retournée par la fonction `la_plus_longue` est la même que celle de la plus
-petite des durées de vies des références qu'on lui donne. Cette relation est ce
+petite des durées de vie des références qu'on lui donne. Cette relation est ce
 que nous voulons que Rust mette en place lorsqu'il analysera ce code.
 
 <!--
@@ -565,7 +565,7 @@ substituted for `'a` that will satisfy this signature.
 -->
 
 Souvenez-vous, lorsque nous précisons les paramètres de durée de vie dans la
-signature de cette fonction, nous ne changeons pas les durées de vies des
+signature de cette fonction, nous ne changeons pas les durées de vie des
 valeurs qui lui sont envoyées ou qu'elle retourne. Ce que nous faisons, c'est
 plutôt indiquer au vérificateur d'emprunt qu'il doit rejeter toute valeur qui
 ne répond pas à ces conditions. Notez que la fonction `la_plus_longue` n'a pas
@@ -612,10 +612,10 @@ lifetimes of `x` and `y`.
 Lorsque nous donnons une référence concrète à `la_plus_longue`, la durée de vie
 concrète qui est modélisée par `'a` est la partie de la portée de `x` qui se
 chevauche avec la portée de `y`. Autrement dit, la durée vie générique `'a` aura
-la durée de vie concrète qui est égale à la plus petite des durées de vies entre
+la durée de vie concrète qui est égale à la plus petite des durées de vie entre
 `x` et `y`. Comme nous avons marqué la référence retournée avec le même
 paramètre de durée de vie `'a`, la référence retournée sera toujours en vigueur
-pour la durée de la plus petite des durées de vies de `x` et de `y`.
+pour la durée de la plus petite des durées de vie de `x` et de `y`.
 
 <!--
 Let’s look at how the lifetime annotations restrict the `longest` function by
@@ -624,7 +624,7 @@ a straightforward example.
 -->
 
 Regardons comment les annotations de durée de vie restreignent la fonction
-`la_plus_longue` en y passant des références qui ont des durées de vies
+`la_plus_longue` en y passant des références qui ont des durées de vie
 concrètement différentes. L'encart 10-23 en est un exemple.
 
 <!--
@@ -913,7 +913,7 @@ pointeurs pendouillants ou alors enfreindre la sécurité de la mémoire.
 ### Lifetime Annotations in Struct Definitions
 -->
 
-### L'ajout des durées de vies dans les définitions des structures
+### L'ajout des durées de vie dans les définitions des structures
 
 <!--
 So far, we’ve only defined structs to hold owned types. It’s possible for
@@ -1116,7 +1116,7 @@ Lifetimes on function or method parameters are called *input lifetimes*, and
 lifetimes on return values are called *output lifetimes*.
 -->
 
-Les durées de vies sur les fonctions ou les paramètres des fonctions sont
+Les durées de vie sur les fonctions ou les paramètres des fonctions sont
 appelées les *durées de vie des entrées*, et les durées de vie sur les valeurs
 de retour sont appelées les *durées de vie des sorties*.
 
@@ -1413,7 +1413,7 @@ one of the parameters is `&self`, the return type gets the lifetime of `&self`,
 and all lifetimes have been accounted for.
 -->
 
-Il y a deux durées de vies des entrées, donc Rust applique la première règle
+Il y a deux durées de vie des entrées, donc Rust applique la première règle
 d'élision des durées de vie et donne à `&self` et `annonce` leur
 propre durée de vie. Ensuite, comme un des paramètres est `&self`, le type de
 retour obtient la durée de vie de `&self`, de sorte que toutes les durées de
@@ -1470,7 +1470,7 @@ Il se peut que voyiez des suggestions pour utiliser la durée de vie `'static`
 dans les messages d'erreur. Mais avant d'utiliser `'static` comme durée de vie
 pour une référence, demandez-vous si la référence en question vit bien pendant
 toute la vie de votre programme, ou non. Vous devriez vous demander si vous
-voulez qu'elle vive aussi longtemps, même si si c'était possible. La plupart du
+voulez qu'elle vive aussi longtemps, même si c'était possible. La plupart du
 temps, le problème résulte d'une tentative de création d'une référence
 pendouillante ou d'une inadéquation des durées de vie disponibles. Dans ces
 cas-là, la solution consiste à résoudre ces problèmes, et pas à renseigner la
@@ -1480,7 +1480,7 @@ durée de vie comme étant `'static`.
 ## Generic Type Parameters, Trait Bounds, and Lifetimes Together
 -->
 
-## Les paramètres de type génériques, les traits liés, et les durées de vies ensemble
+## Les paramètres de type génériques, les traits liés, et les durées de vie ensemble
 
 <!--
 Let’s briefly look at the syntax of specifying generic type parameters, trait
@@ -1488,7 +1488,7 @@ bounds, and lifetimes all in one function!
 -->
 
 Regardons brièvement la syntaxe pour renseigner tous les paramètres de type
-génériques, les traits liés, et les durées de vies sur une seule fonction !
+génériques, les traits liés, et les durées de vie sur une seule fonction !
 
 <!--
 ```rust

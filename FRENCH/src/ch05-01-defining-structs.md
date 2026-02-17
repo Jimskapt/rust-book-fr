@@ -328,7 +328,7 @@ the struct’s definition.
 -->
 
 Le code dans l'encart 5-7 crée aussi une instance dans `utilisateur2` qui a une
-valeur différente pour `email`, mais qui as les mêmes valeurs pour les champs
+valeur différente pour `email`, mais qui a les mêmes valeurs pour les champs
 `pseudo`, `actif` et `nombre_de_connexions` que `utilisateur1`. Le
 `..utilisateur1` doit être inséré à la fin pour préciser que tous les champs
 restants obtiendrons les valeurs des champs correspondants de `utilisateur1`,

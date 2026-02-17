@@ -489,7 +489,7 @@ En utilisant les énumérations, nous pouvons aussi appliquer des actions
 spéciales pour certaines valeurs précises, mais une action par défaut pour
 toutes les autres valeurs. Imaginons que nous implémentons un jeu dans lequel,
 si vous obtenez une valeur de 3 sur un lancé de dé, votre joueur ne se déplace
-pas, mais à la place il obtient un nouveau chapeau fataisie. Si vous obtenez
+pas, mais à la place il obtient un nouveau chapeau fantaisie. Si vous obtenez
 un 7, votre joueur perd son chapeau fantaisie. Pour toutes les autres valeurs,
 votre joueur se déplace de ce nombre de cases sur le plateau du jeu. Voici un
 `match` qui implémente cette logique, avec le résultat du lancé de dé codé en

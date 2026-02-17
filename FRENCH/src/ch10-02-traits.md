@@ -219,10 +219,10 @@ could use our `aggregator` library crate:
 Maintenant que la bibliothèque a implémenté le trait `Resumable` sur
 `ArticleDePresse` et `Tweet`, les utilisateurs de cette crate peuvent appeler
 les méthodes de l'instance de `ArticleDePresse` et `Tweet` comme si elles
-étaient des méthodes classiques. La seule différence est que le trait ainsi que
-les types doivent être introduits dans la portée pour obtenir les méthodes de
-trait additionnelles. Voici un exemple de comment la crate binaire pourra
-utiliser notre crate de bibliothèque `agregateur` :
+étaient des méthodes classiques. La seule différence est que le trait doit être
+introduit explicitement dans la portée et le type en faire partie pour obtenir
+les méthodes de trait additionnelles. Voici un exemple de comment la crate
+binaire pourra utiliser notre crate de bibliothèque `agregateur` :
 
 <!--
 ```rust,ignore
@@ -285,9 +285,13 @@ dans la bibliothèque standard et ne sont donc pas définis localement dans notr
 crate `agregateur`. Cette limitation fait partie d'une propriété des programmes
 que l'on appelle la *cohérence*, et plus précisément la *règle de l'orphelin*,
 qui s'appelle ainsi car le type parent n'est pas présent. Cette règle s'assure
-que le code des autres personnes ne casse pas votre code et réciproquement.
-Sans cette règle, deux crates pourraient implémenter le même trait sur le même
-type, et Rust ne saurait pas quelle implémentation utiliser.
+que le code des autres personnes ne casse pas votre code et réciproquement. Sans
+cette règle, deux crates pourraient implémenter le même trait sur le même type,
+et Rust ne saurait pas quelle implémentation utiliser. Si un troisième crate
+venait à utiliser les deux premiers, Rust ne saurait pas quelle implémentation
+utiliser et s'arrêterait avec une erreur. La règle de l'orphelin s'assure que ce
+cas de figure reste rare en ne permettant l'implémentation que dans le crate du
+trait ou dans celui du type.
 
 <!--
 ### Default Implementations

@@ -12,7 +12,7 @@ of *procedural* macros:
 -->
 
 Nous avons déjà utilisé des macros tout au long de ce livre, comme `println!`,
-mais nous n'avons pas examiné en profondeur ce qu'est une macro et comment
+mais nous n'avons pas examiné en profondeur ce qu'est une macro ni comment
 elles fonctionnent. Le terme *macro* renvoie à une famille de fonctionnalités de
 Rust : les macros *déclaratives* avec `macro_rules!` et trois types de macros
 *procédurales* :
@@ -25,12 +25,12 @@ Rust : les macros *déclaratives* avec `macro_rules!` et trois types de macros
   specified as their argument
 -->
 
-* Des macros `#[derive]` personnalisées qui renseigne du code ajouté grâce à
-  l'attribut `derive` utilisé sur les structures et les énumérations
-* Les macros qui ressemblent à des attributs qui définissent des attributs
-  personnalisés qui sont utilisables sur n'importe quel élément
-* Les macros qui ressemblent à des fonctions mais qui opèrent sur les éléments
-  renseignés en argument
+* des macros `#[derive]` personnalisées qui renseignent du code ajouté grâce à
+  l'attribut `derive` utilisé sur les structures et les énumérations ;
+* les macros qui ressemblent à des attributs qui définissent des attributs
+  personnalisés qui sont utilisables sur n'importe quel élément ;
+* les macros qui ressemblent à des fonctions mais qui opèrent sur les éléments
+  renseignés en argument.
 
 <!--
 We’ll talk about each of these in turn, but first, let’s look at why we even
@@ -143,7 +143,7 @@ sont parfois appelées “macros définies par un exemple”,
 déclaratives vous permettent d'écrire quelque chose de similaire à une
 expression `match` de Rust. Comme nous l'avons vu au chapitre 6, les
 expressions `match` sont des structures de contrôle qui prennent en argument
-une expression, comparent la valeur qui en résulte avec les motifs et ensuite
+une expression, comparent la valeur qui en résulte avec des motifs et ensuite
 exécutent le code associé au motif qui correspond. Les macros comparent elles
 aussi une valeur avec des motifs qui sont associés à code particulier : dans
 cette situation, la valeur est littéralement le code source Rust envoyé à la
@@ -434,7 +434,7 @@ macro variety.
 -->
 
 Lorsque vous créez une macro procédurale, les définitions doivent être rangées
-dans leur propre crate avec un type spécial de crate. Ceci pour des raisons
+dans leur propre crate avec un type spécial de crate, ceci pour des raisons
 techniques complexes que nous espérons supprimer dans l'avenir. La déclaration
 des macros procédurales ressemble au code de l'encart 19-29, dans lequel
 `un_attribut_quelconque` est un emplacement pour l'utilisation d'une macro
@@ -683,7 +683,7 @@ procédurale à l'intérieur du répertoire de notre crate `hello_macro`. Si nou
 changeons la définition du trait dans `hello_macro`, nous aurons aussi à
 changer l'implémentation de la macro procédurale dans `hello_macro_derive`. Les
 deux crates vont devoir être publiées séparément, et les développeurs qui vont
-utiliser ces crates vont avoir besoin d'ajouter les deux dépendances et les
+utiliser ces crates vont avoir besoin d'ajouter les deux dépendances et de les
 importer dans la portée. Nous pourrions plutôt faire en sorte que la crate
 `hello_macro` utilise `hello_macro_derive` comme dépendance et ré-exporter le
 code de la macro procédurale. Cependant, la façon dont nous avons structuré le
@@ -807,9 +807,9 @@ task.
 La crate `syn` transforme le code Rust d'une chaîne de caractères en une
 structure de données sur laquelle nous pouvons procéder à des opérations. La
 crate `quote` re-transforme les structures de données de `syn` en code Rust.
-Ces crates facilite le parcours de toute sorte de code Rust que nous aurions
-besoin de gérer : l'écriture d'un interpréteur complet de code Rust n'a jamais
-été aussi facile.
+Ces crates facilitent le parcours de toute sorte de code Rust que nous aurions
+besoin de gérer : l'écriture d'un interpréteur complet de code Rust n'est pas 
+chose aisée.
 
 <!--
 The `hello_macro_derive` function will be called when a user of our library
@@ -926,7 +926,7 @@ Bientôt, nous définirons la fonction `impl_hello_macro`, qui nous permettra de
 construire le nouveau code Rust que nous souhaitons injecter. Mais avant de faire
 cela, remarquez que la sortie de notre macro `derive` est aussi un `TokenStream`.
 Le `TokenStream` retourné est ajouté au code que les utilisateurs de notre
-crate ont écrit, donc lorsqu'ils compilent leur crate, ils récupéreront la
+crate ont écrit, donc lorsqu'ils compilent leur crate, ils récupérent la
 fonctionnalité additionnelle que nous injectons dans le `TokenStream` modifié.
 
 <!--
@@ -941,7 +941,7 @@ about what went wrong by using `panic!` or `expect`.
 
 Vous avez peut-être remarqué que nous faisons appel à `unwrap` pour faire
 paniquer la fonction `hello_macro_derive` si l'appel à la fonction `syn::parse`
-que nous faisons échoue. Il est nécessaire de faire paniquer notre macro
+échoue. Il est nécessaire de faire paniquer notre macro
 procédurale si elle rencontre des erreurs car les fonctions `proc_macro_derive`
 doivent retourner un `TokenStream` plutôt qu'un `Result` pour se conformer à
 l'API de la macro procédurale. Nous avons simplifié cet exemple en utilisant
@@ -1063,7 +1063,7 @@ saves an allocation by converting `#name` to a string literal at compile time.
 La macro `stringify!` utilisée ici est écrite en Rust. Elle prend en argument
 une expression Rust, comme `1 + 2`, et à la compilation transforme l'expression
 en une chaîne de caractères littérale, comme `"1 + 2"`. Cela est différent de
-`format!` ou de `println!`, des macros qui évaluent l'expression et retourne
+`format!` ou de `println!`, des macros qui évaluent l'expression et retournent
 ensuite le résultat dans une `String`. Il est possible que l'entrée `#nom` soit
 une expression à écrire littéralement, donc nous utilisons `stringify!`.
 L'utilisation de `stringify!` évite aussi une allocation en convertissant `#nom`
@@ -1082,7 +1082,7 @@ dependencies; if not, you can specify them as `path` dependencies as follows:
 
 Maintenant, `cargo build` devrait fonctionner correctement pour `hello_macro` et
 `hello_macro_derive`. Relions maintenant ces crates au code de l'encart 19-30
-pour voir les macros procédurales à l'oeuvre ! Créez un nouveau projet binaire
+pour voir les macros procédurales à l'œuvre ! Créez un nouveau projet binaire
 dans votre répertoire *projects* en utilisant `cargo new pancakes`. Nous avons
 besoin d'ajouter `hello_macro` et `hello_macro_derive` comme dépendances dans le
 *Cargo.toml* de la crate `pancakes`. Si vous publiez vos versions de
@@ -1300,7 +1300,7 @@ solutions.
 Ouah ! Maintenant vous avez quelques fonctionnalités de Rust supplémentaires
 dans votre boîte à outils que vous n'utiliserez probablement que rarement, mais vous
 savez maintenant qu'elles pourront vous aider dans certaines situations très particulières.
-Nous avons introduits plusieurs sujets complexes afin que vous puissiez les
+Nous avons introduit plusieurs sujets complexes afin que vous puissiez les
 reconnaître, ainsi que la syntaxe associée, lorsque vous les rencontrerez dans des
 messages de suggestions dans des erreurs ou dans le code de quelqu'un d'autre.
 Utilisez ce chapitre comme référence pour vous guider vers ces solutions.

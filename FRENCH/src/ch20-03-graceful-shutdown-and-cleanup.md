@@ -561,7 +561,7 @@ $ cargo run
      Running `target/debug/main`
 L'opérateur 0 a reçu une mission ; il l'exécute.
 L'opérateur 3 a reçu une mission ; il l'exécute.
-Arrêt.
+Arrêt complet.
 Envoi du message d'extinction à tous les opérateurs.
 Arrêt de tous les opérateurs.
 Arrêt de l'opérateur 0
@@ -591,7 +591,7 @@ la troisième requête, le serveur arrête d'accepter des connexions. Lorsque
 le `GroupeTaches` sort de la portée à la fin du `main`, son implémentation de
 `Drop` entre en action et le groupe demande à tous les opérateurs de
 s'arrêter. Chaque opérateur va afficher un message lorsqu'il recevra le message
-d'extinction puis le groupe de tâche utilisera `join` pour arrêter
+d'extinction puis le groupe de tâches utilisera `join` pour arrêter
 la tâche de chaque opérateur.
 
 <!--
@@ -682,12 +682,12 @@ améliorer ce projet, voici quelques idées :
   robustness to the thread pool we implemented.
 -->
 
-* Ajouter de la documentation à `GroupeTaches` et aux méthodes publiques.
-* Ajouter des tests sur les fonctionnalités de la bibliothèque.
-* Remplacer les appels à `unwrap` pour fournir une meilleure gestion des erreurs.
-* Utiliser `GroupeTaches` pour exécuter d'autres tâches que de répondre à des
-  requêtes web.
-* Trouver une crate de groupe de tâches *(NdT : thread pool)* sur
+* ajouter de la documentation à `GroupeTaches` et aux méthodes publiques ;
+* ajouter des tests sur les fonctionnalités de la bibliothèque ;
+* remplacer les appels à `unwrap` pour fournir une meilleure gestion des erreurs ;
+* utiliser `GroupeTaches` pour exécuter d'autres tâches que de répondre à des
+  requêtes web ;
+* trouver une crate de groupe de tâches *(NdT : thread pool)* sur
   [crates.io](https://crates.io/) et implémenter un serveur web similaire en
   l'utilisant. Comparer ensuite son API et sa robustesse au
   groupe de tâches que nous avons implémenté.
@@ -708,7 +708,7 @@ challenges you encounter on your Rust journey.
 
 Bravo ! Vous êtes arrivé à la fin du livre ! Nous tenons à vous remercier
 chaleureusement de nous avoir accompagné pendant cette présentation de Rust.
-Vous êtes maintenant fin prêt(e) à créer vos propres projets Rust et aider les
+Vous êtes maintenant fin prêt(e) à créer vos propres projets Rust et à aider les
 projets des autres développeurs. Rappelez-vous qu'il existe une communauté
 accueillante de Rustacés qui adorerait vous aider à relever tous les défis que vous
 rencontrerez dans votre aventure avec Rust.

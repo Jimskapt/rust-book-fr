@@ -255,7 +255,7 @@ les situations où les opérations échouent. Cette bibliothèque a une structur
 `std::io::Error` qui représente toutes les erreurs possibles d'entrée/sortie.
 De nombreuses fonctions dans `std::io` vont retourner un `Result<T, E>` avec
 `E` qui est un alias pour `std::io::Error`, comme par exemple ces fonctions
-sont dans le trait `Write` :
+du trait `Write` :
 
 <!--
 ```rust,noplayground

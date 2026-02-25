@@ -513,7 +513,7 @@ ignore -- > section of Chapter 3.
 Nous avons choisi `usize` comme type du paramètre `taille`, car nous savons
 qu'un nombre négatif de tâches n'a pas de sens. Nous savons également que nous
 allons utiliser ce 4 comme étant le nombre d'éléments dans une collection de
-tâches, ce qui est à quoi sert le type `usize`, comme nous l'avons vu dans la section
+tâches, ce qui correspond à l'utilisation du type `usize`, comme nous l'avons vu dans la section
 [“Types de nombres entiers”][integer-types]<!-- ignore --> du chapitre 3.
 
 <!--
@@ -606,7 +606,7 @@ Le paramètre de type `F` est celui qui nous intéresse ici ; le paramètre de
 type `T` est lié à la valeur de retour, et ceci ne nous intéresse pas ici.
 Nous pouvons constater que `spawn` utilise le trait `FnOnce` lié à `F`.
 C'est probablement ce dont nous avons besoin, parce que nous allons sûrement
-passer cet argument dans le `execute` de `spawn`. Nous pouvons aussi être sûr
+passer cet argument dans le `execute` de `spawn`. Nous pouvons aussi être sûrs
 que `FnOnce` est le trait dont nous avons besoin car la tâche qui va traiter une
 requête ne va le faire qu'une seule fois, ce qui
 correspond à la partie `Once` dans `FnOnce`.
@@ -649,7 +649,7 @@ definitions, the return type can be omitted from the signature, but even if we
 have no parameters, we still need the parentheses.
 -->
 
-Nous utilisons toujours le `()` après `FnOne` car ce `FnOnce` représente une
+Nous utilisons toujours le `()` après `FnOnce` car ce `FnOnce` représente une
 fermeture qui ne prend pas de paramètres et retourne le type unité `()`.
 Exactement comme les définitions de fonctions, le type de retour peut être omis
 de la signature, mais même si elle ne contient pas de paramètre, nous avons
@@ -841,7 +841,7 @@ and not return anything, so `T` will be the unit type `()`.
 -->
 
 La fonction `spawn` retourne un `JoinHandle<T>`, où `T` est le type que retourne
-notre fermeture. Essayons d'utiliser nous aussi `JoinHandle` pour voir ce qu'il
+notre fermeture. Essayons d'utiliser nous aussi `JoinHandle` pour voir ce qui
 va se passer. Dans notre cas, les fermetures que nous passons dans le groupe de
 tâches vont traiter les connexions mais ne vont rien retourner, donc `T` sera le
 type unité, `()`.
@@ -981,7 +981,7 @@ tâches, nous allons stocker des instances de structure `Operateur`. Chaque
 implémenterons une méthode sur `Operateur` qui va prendre en argument une
 fermeture de code à exécuter et l'envoyer à la tâche qui fonctionne déjà pour
 exécution. Nous allons aussi donner à chacun des opérateurs un identifiant `id`
-afin que nous puissions distinguer les différents opérateurs dans le groupe
+afin que nous puissions distinguer les différents opérateurs du groupe
 dans les journaux ou lors de débogages.
 
 <!--
@@ -1004,13 +1004,13 @@ en suivant ces étapes :
    a new `Worker` with that `id`, and store the worker in the vector.
 -->
 
-1. Définir une structure `Operateur` qui possède un `id` et un `JoinHandle<()>`.
-2. Modifier le `GroupeTaches` afin qu'il possède un vecteur d'instances de
-   `Operateur`.
-3. Définir une fonction `Operateur::new` qui prend en argument un numéro d'`id`
+1. définir une structure `Operateur` qui possède un `id` et un `JoinHandle<()>` ;
+2. modifier le `GroupeTaches` afin qu'il possède un vecteur d'instances de
+   `Operateur` ;
+3. définir une fonction `Operateur::new` qui prend en argument un numéro d'`id`
    et retourne une instance de `Operateur` qui contient l' `id` et une tâche
-   créée avec une fermeture vide.
-4. Dans `GroupeTaches::new`, utiliser le compteur de la boucle `for` pour
+   créée avec une fermeture vide ;
+4. dans `GroupeTaches::new`, utiliser le compteur de la boucle `for` pour
    générer un `id`, créer un nouveau `Operateur` avec cet `id` et stocker
    l'opérateur dans le vecteur.
 
@@ -1148,14 +1148,14 @@ plan :
    and execute the closures of any jobs it receives.
 -->
 
-1. Le `GroupeTaches` va créer un canal et se connecter à la partie émettrice de
-   ce canal.
-2. Chaque `Operateur` va se connecter à la partie réceptrice du canal.
-3. Nous allons créer une nouvelle structure `Mission` qui va stocker les
-   fermetures que nous souhaitons envoyer dans le canal.
-4. La méthode `executer` va envoyer la mission qu'elle souhaite executer à la
-   partie émettrice du canal.
-5. Dans sa propre tâche, l' `Operateur` va vérifier en permanence la partie
+1. le `GroupeTaches` va créer un canal et se connecter à la partie émettrice de
+   ce canal ;
+2. chaque `Operateur` va se connecter à la partie réceptrice du canal ;
+3. nous allons créer une nouvelle structure `Mission` qui va stocker les
+   fermetures que nous souhaitons envoyer dans le canal ;
+4. la méthode `executer` va envoyer la mission qu'elle souhaite executer à la
+   partie émettrice du canal ;
+5. dans sa propre tâche, l'`Operateur` va vérifier en permanence la partie
    réceptrice du canal et exécuter les fermetures des missions qu'il va
    recevoir.
 
@@ -1279,7 +1279,7 @@ Le code essaye d'envoyer `reception` dans plusieurs instances de `Operateur`.
 Ceci ne fonctionne pas, comme vous l'avez appris au chapitre 16 :
 l'implémentation du canal que fournit Rust est du type plusieurs *producteurs*,
 un seul *consommateur*. Cela signifie que nous ne pouvons pas simplement cloner
-la partie réceptrice du canal pour corriger ce code. Même si nous aurions pu le
+la partie réceptrice du canal pour corriger ce code. Même si nous avions pu le
 faire, ce n'est pas la solution que nous souhaitons utiliser ; nous voulons
 plutôt distribuer les missions entre les tâches en partageant la même réception
 entre tous les opérateurs.
@@ -1415,9 +1415,9 @@ Après avoir créé une nouvelle instance `Mission` en utilisant la fermeture qu
 nous obtenons dans `executer`, nous envoyons cette mission dans le canal via la
 partie émettrice. Nous utilisons `unwrap` sur `send` pour les cas où l'envoi
 échoue. Cela peut arriver si, par exemple, nous stoppons l'exécution de toutes
-les tâches, ce qui signifiera que les parties réceptrices auront finis de
+les tâches, ce qui signifiera que les parties réceptrices auront fini de
 recevoir des nouveaux messages. Pour le moment, nous ne pouvons pas stopper
-l'exécution de nos tâches : nos tâches continuerons à s'exécuter aussi
+l'exécution de nos tâches : nos tâches continueront à s'exécuter aussi
 longtemps que le groupe existe. La raison pour laquelle nous utilisons `unwrap`
 est que nous savons que le cas d'échec ne va pas se produire, mais le
 compilateur ne le sait pas.
@@ -1491,7 +1491,7 @@ Si nous obtenons le verrou du mutex, nous faisons appel à `recv` pour recevoir
 une `Mission` provenant du canal. Un `unwrap` final s'occupe lui aussi des cas
 d'erreurs qui peuvent se produire si la tâche qui est connectée à la partie émettrice
 du canal se termine, de la même manière que la méthode `send` enverrait `Err`
-si la partie réceptrice se fermerait.
+si la partie réceptrice se fermait.
 
 <!--
 The call to `recv` blocks, so if there is no job yet, the current thread will
@@ -1675,7 +1675,7 @@ than intended if we don’t think carefully about the lifetime of the
 `MutexGuard<T>`.
 -->
 
-Ce code se compile et s'exécute mais ne se produit pas le comportement des
+Ce code se compile et s'exécute mais ne produit pas le comportement des
 tâches que nous souhaitons : une requête lente à traiter va continuer à mettre
 en attente de traitement les autres requêtes. La raison à cela est subtile : la
 structure `Mutex` n'a pas de méthode publique `unlock` car la propriété du

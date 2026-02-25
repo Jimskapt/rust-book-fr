@@ -41,17 +41,17 @@ Dans ce chapitre, nous allons voir :
 * Macros: ways to define code that defines more code at compile time
 -->
 
-* Le *unsafe* de Rust : comment désactiver certaines garanties de Rust et
-  prendre la responsabilité de veiller vous-même manuellement à les assurer
-* Les traits avancés : les types associés, les types de paramètres par défaut,
+* le *unsafe* de Rust : comment désactiver certaines garanties de Rust et
+  prendre la responsabilité de veiller vous-même manuellement à les assurer ;
+* les traits avancés : les types associés, les types de paramètres par défaut,
   la syntaxe entièrement détaillée, les supertraits et le motif newtype en lien
-  avec les traits
-* Les types avancés : en savoir plus sur le motif newtype, les alias de type,
-  le type never et les types à taille dynamique
-* Les fonctions et fermetures avancées : les pointeurs de fonctions et la façon
-  de retourner des fermetures
-* Les macros : une manière de définir du code qui produit encore plus de code au
-  moment de la compilation
+  avec les traits ;
+* les types avancés : en savoir plus sur le motif newtype, les alias de type,
+  le type never et les types à taille dynamique ;
+* les fonctions et fermetures avancées : les pointeurs de fonctions et la façon
+  de retourner des fermetures ;
+* les macros : une manière de définir du code qui produit encore plus de code au
+  moment de la compilation.
 
 <!--
 It’s a panoply of Rust features with something for everyone! Let’s dive in!

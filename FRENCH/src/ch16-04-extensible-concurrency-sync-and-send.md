@@ -115,7 +115,7 @@ Threads”][sharing-a-mutext-between-multiple-threads]<!-- ignore -- > section.
 Le pointeur intelligent `Rc<T>` n'implémente pas non plus `Sync` pour les mêmes
 raisons qu'il n'implémente pas `Send`. Le type `RefCell<T>` (que nous avons vu
 au chapitre 15) et la famille liée aux types `Cell<T>` n'implémentent pas `Sync`.
-L'implémentation du vérificateur d'emprunt que `RefCell<T>` met en oeuvre à l'exécution
+L'implémentation du vérificateur d'emprunt que `RefCell<T>` met en œuvre à l'exécution
 n'est pas sûre pour le multitâches. Le pointeur intelligent `Mutex<T>`
 implémente `Sync` et peut être utilisé pour partager l'accès entre plusieurs
 tâches, comme vous l'avez vu dans la section précédente.

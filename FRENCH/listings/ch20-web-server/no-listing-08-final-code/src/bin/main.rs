@@ -18,7 +18,7 @@ fn main() {
         });
     }
 
-    println!("Shutting down.");
+    println!("Arrêt complet.");
 }
 
 fn gestion_connexion(mut flux: TcpStream) {

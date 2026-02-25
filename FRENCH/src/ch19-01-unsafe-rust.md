@@ -36,7 +36,7 @@ garanties, il vaut mieux rejeter quelques programmes valides plutôt que
 d'accepter quelques programmes invalides. Bien que le code *puisse* être
 correct, si le compilateur Rust n'a pas assez d'information pour être sûr, il
 va refuser ce code. Dans ce cas, vous pouvez utiliser du code non sécurisé pour
-dire au compilateur “fais-moi confiance, je sais ce que je fait”. Le prix à
+dire au compilateur “fais-moi confiance, je sais ce que je fais”. Le prix à
 payer pour cela est que vous l'utilisez à vos risques et périls : si
 vous écrivez du code non sécurisé de manière incorrecte, des problèmes liés à
 la sécurité de la mémoire peuvent se produire, tel qu'un déréférencement d'un
@@ -88,11 +88,11 @@ permettent de :
 * Access fields of `union`s
 -->
 
-* Déréférencer un pointeur brut
-* Faire appel à une fonction ou une méthode non sécurisée
-* Lire ou modifier une variable statique mutable
-* Implémenter un trait non sécurisé
-* Accéder aux champs des `union`
+* déréférencer un pointeur brut ;
+* faire appel à une fonction ou une méthode non sécurisée ;
+* lire ou modifier une variable statique mutable ;
+* implémenter un trait non sécurisé ;
+* accéder aux champs des `union`.
 
 <!--
 It’s important to understand that `unsafe` doesn’t turn off the borrow checker
@@ -189,7 +189,7 @@ Au chapitre 4, dans la section
 [“Les références pendouillantes”][dangling-references]<!-- ignore -->, nous
 avions mentionné que le compilateur s'assure que les références sont toujours
 valides. Le Rust non sécurisé offre deux nouveaux types qui s'appellent les
-*pointeurs brut* et qui ressemblent aux références. Comme les références, les
+*pointeurs bruts* et qui ressemblent aux références. Comme les références, les
 pointeurs bruts peuvent être immuables ou mutables et s'écrivent respectivement
 `*const T` et `*mut T`. L'astérisque n'est pas l'opérateur de déréférencement ;
 il fait partie du nom du type. Dans un contexte de pointeur brut, *immuable*
@@ -213,10 +213,10 @@ bruts peuvent :
 
 * ignorer les règles d'emprunt en ayant plusieurs pointeurs tant immuables que
   mutables ou en ayant plusieurs pointeurs mutables qui pointent vers le même
-  endroit.
-* ne pas être obligés de pointer sur un emplacement mémoire valide
-* être autorisés à avoir la valeur nulle
-* ne pas implémenter de fonctionnalité de nettoyage automatique
+  endroit ;
+* ne pas être obligés de pointer sur un emplacement mémoire valide ;
+* être autorisés à avoir la valeur nulle ;
+* ne pas implémenter de fonctionnalité de nettoyage automatique.
 
 <!--
 By opting out of having Rust enforce these guarantees, you can give up
@@ -1035,7 +1035,7 @@ too, as shown in Listing 19-11.
 -->
 
 Un autre cas d'usage de `unsafe` est l'implémentation d'un trait non sécurisé.
-Un trait n'est pas sécurisé lorsque au moins une de ses méthodes contient une
+Un trait n'est pas sécurisé lorsqu'au moins une de ses méthodes contient une
 invariante que le compilateur ne peut pas vérifier. Nous pouvons déclarer un
 trait qui n'est pas sécurisé en ajoutant le mot-clé `unsafe` devant `trait` et
 en marquant aussi l'implémentation du trait comme `unsafe`, comme dans
@@ -1090,7 +1090,7 @@ pointeurs bruts, et nous souhaitions marquer ce type comme étant `Send` ou
 `Sync`, nous aurions dû utiliser `unsafe`. Rust ne peut pas vérifier que notre
 type respecte les garanties pour que ce type puisse être envoyé en toute
 sécurité entre des tâches ou qu'il puisse être utilisé par plusieurs tâches ;
-en conséquence, nous avons besoin de faire ces vérifications manuellement et le
+en conséquence, nous avons besoin de faire ces vérifications manuellement et de le
 signaler avec `unsafe`.
 
 <!--
@@ -1131,7 +1131,7 @@ reason to use `unsafe` code, you can do so, and having the explicit `unsafe`
 annotation makes it easier to track down the source of problems when they occur.
 -->
 
-L'utilisation de `unsafe` pour mettre en oeuvre une des cinq actions (ou
+L'utilisation de `unsafe` pour mettre en œuvre une des cinq actions (ou
 super-pouvoirs) que nous venons d'aborder n'est pas une mauvaise chose et ne doit
 pas être mal vu. Mais il est plus difficile de sécuriser du code `unsafe` car le
 compilateur ne peut pas aider à garantir la sécurité de la mémoire. Lorsque vous

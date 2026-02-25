@@ -259,7 +259,7 @@ browser tab.
 Des fois, vous pourriez voir plusieurs messages s'afficher pour une seule
 requête du navigateur ; la raison à cela est peut-être que le navigateur fait
 une requête pour la page ainsi que des requêtes pour d'autres ressources, comme
-l'icone *favicon.ico* qui s'affiche dans l'onglet du navigateur.
+l'icône *favicon.ico* qui s'affiche dans l'onglet du navigateur.
 
 <!--
 It could also be that the browser is trying to connect to the server multiple
@@ -501,7 +501,7 @@ message-body
 
 ```text
 Méthode URI-Demandée Version-HTTP CRLF
-entêtes CRLF
+en-têtes CRLF
 corps-du-message
 ```
 
@@ -566,7 +566,7 @@ headers. `GET` requests have no body.
 -->
 
 Après la ligne de requête, les lignes suivant celle où nous avons `Host:` sont
-des entêtes. Les requêtes `GET` n'ont pas de corps.
+des en-têtes. Les requêtes `GET` n'ont pas de corps.
 
 <!--
 Try making a request from a different browser or asking for a different
@@ -608,7 +608,7 @@ message-body
 
 ```text
 Version-HTTP Code-Statut Phrase-De-Raison CRLF
-entêtes CRLF
+en-têtes CRLF
 corps-message
 ```
 
@@ -623,7 +623,7 @@ response.
 La première ligne est une *ligne de statut* qui contient la version HTTP
 utilisée dans la réponse, un code numérique de statut qui résume le résultat
 de la requête et une phrase de raison qui fournit une description textuelle du
-code de statut. Après la séquence CRLF viennent tous les entêtes, une autre
+code de statut. Après la séquence CRLF viennent toutes les en-têtes, une autre
 séquence CRLF et enfin le corps de la réponse.
 
 <!--
@@ -632,7 +632,7 @@ Here is an example response that uses HTTP version 1.1, has a status code of
 -->
 
 Voici un exemple de réponse qui utilise HTTP version 1.1, a un code de
-statut de 200, une phrase de raison à OK, pas d'entêtes, et pas de corps :
+statut de 200, une phrase de raison à OK, pas d'en-têtes, et pas de corps :
 
 <!--
 ```text
@@ -774,7 +774,7 @@ shown in Listing 20-5 to read the HTML file, add it to the response as a body,
 and send it.
 -->
 
-Ceci est un document HTML5 minimal avec des entêtes et un peu de texte. Pour
+Ceci est un document HTML5 minimal avec des en-têtes et un peu de texte. Pour
 retourner ceci à partir d'un serveur lorsqu'une requête est reçue, nous allons
 modifier `gestion_connexion` comme proposé dans l'encart 20-5 pour lire le
 fichier HTML, l'ajouter dans la réponse comme faisant partie de son corps, et
@@ -825,7 +825,7 @@ which is set to the size of our response body, in this case the size of `hello.h
 
 Ensuite, nous avons utilisé `format!` pour ajouter le contenu du fichier comme
 étant le corps de la réponse avec succès. Pour garantir que ce soit une réponse
-HTTP valide, nous avons ajouté l'entête `Content-Length` qui définit la taille
+HTTP valide, nous avons ajouté l'en-tête `Content-Length` qui définit la taille
 du corps de notre réponse, qui dans ce cas est la taille de `hello.html`.
 
 <!--

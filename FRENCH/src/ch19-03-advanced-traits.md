@@ -30,10 +30,10 @@ uses some types without needing to know exactly what those types are until the
 trait is implemented.
 -->
 
-Les *types associés* connectent un type à remplacer avec un trait afin que la
-définition des méthodes puisse utiliser ces types à remplacer dans leur
+Les *types associés* connectent un type générique avec un trait afin que les
+définitions des méthodes du trait puissent utiliser ces types génériques dans leur
 signature. Celui qui implémente un trait doit renseigner un type concret pour
-être utilisé à la place du type à remplacer pour cette implémentation précise.
+être utilisé à la place du type générique pour cette implémentation précise.
 Ainsi, nous pouvons définir un trait qui utilise certains types sans avoir
 besoin de savoir exactement quels sont ces types jusqu'à ce que ce trait soit
 implémenté.
@@ -94,7 +94,7 @@ method will return an `Option` containing a value of that concrete type.
 
 Le type `Item` est un type à remplacer, et la définition de la méthode `next`
 informe qu'elle va retourner des valeurs du type `Option<Self::Item>`. Ceux qui
-implémenterons le trait `Iterator` devront renseigner un type concret pour
+implémenteront le trait `Iterator` devront renseigner un type concret pour
 `Item`, et la méthode `next` va retourner une `Option` qui contiendra une
 valeur de ce type concret.
 
@@ -171,7 +171,7 @@ the concrete types of the generic type parameters each time. When we use the
 indicate which implementation of `Iterator` we want to use.
 -->
 
-La différence est que lorsque on utilise les génériques, comme dans l'encart
+La différence est que lorsqu'on utilise les génériques, comme dans l'encart
 19-13, on doit annoter les types dans chaque implémentation ; et comme nous
 pouvons aussi implémenter `Iterator<String> for Compteur` ou tout autre type,
 nous pourrions alors avoir plusieurs implémentations de `Iterator` pour
@@ -226,7 +226,7 @@ overloading. *Operator overloading* is customizing the behavior of an operator
 -->
 
 Un bon exemple d'une situation pour laquelle cette technique est utile est avec
-la surcharge d'opérateurs. *La surcharge d'opérateur* permet de personnaliser
+la surcharge d'opérateur. *La surcharge d'opérateur* permet de personnaliser
 le comportement d'un opérateur (comme `+`) dans des cas particuliers.
 
 <!--
@@ -277,7 +277,7 @@ method.
 -->
 
 La méthode `add` ajoute les valeurs `x` de deux instances de `Point` ainsi que
-les valeurs `y` de deux instances de `Point` pour créer un nouveau `Point`. Le
+les valeurs `y` de ces deux instances de `Point` pour créer un nouveau `Point`. Le
 trait `Add` a un type associé `Output` qui détermine le type retourné pour la
 méthode `add`.
 
@@ -401,9 +401,9 @@ Vous utiliserez les paramètres de types par défaut dans deux principaux cas :
 * To allow customization in specific cases most users won’t need
 -->
 
-* Pour étendre un type sans casser le code existant
-* Pour permettre la personnalisation dans des cas spécifiques que la plupart
-  des utilisateurs n'auront pas
+* pour étendre un type sans casser le code existant ;
+* pour permettre la personnalisation dans des cas spécifiques que la plupart
+  des utilisateurs n'auront pas.
 
 <!--
 The standard library’s `Add` trait is an example of the second purpose:
@@ -1069,7 +1069,7 @@ du chapitre 5). La structure tuple aura un champ et sera une petite enveloppe
 pour le type sur lequel nous souhaitons implémenter le trait. Ensuite, le type
 enveloppant est local à notre crate, et nous pouvons lui implémenter un trait.
 *Newtype* est un terme qui provient du langage de programmation Haskell. Il n'y
-a pas de conséquence sur les performance à l'exécution pour l'utilisation de ce
+a pas de conséquence sur les performances à l'exécution pour l'utilisation de ce
 motif, ce qui signifie que le type enveloppant est résolu à la compilation.
 
 <!--

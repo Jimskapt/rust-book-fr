@@ -336,7 +336,7 @@ telles qu'elle était dans l'encart 12-19 à la fin du chapitre 12 :
 function from Listing 12-19</span>
 -->
 
-<span class="caption">Encart 13-28 : La mise en oeuvre de la fonction
+<span class="caption">Encart 13-28 : La mise en œuvre de la fonction
 `rechercher` de l'encart 12-19</span>
 
 <!--

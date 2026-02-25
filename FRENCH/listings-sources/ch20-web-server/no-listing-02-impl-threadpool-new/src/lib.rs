@@ -1,7 +1,7 @@
-pub struct ThreadPool;
+pub struct GroupeTaches;
 
-impl ThreadPool {
-    pub fn new(size: usize) -> ThreadPool {
-        ThreadPool
+impl GroupeTaches {
+    pub fn new(taille: usize) -> GroupeTaches {
+        GroupeTaches
     }
 }

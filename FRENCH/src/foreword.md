@@ -1,107 +1,125 @@
 <!--
+NOTE:
+This chapter has been substantially rewritten upstream.
+The French translation follows the current English version, which replaces
+the previous, obsolete, English version.
+-->
+
+<!--
 # Foreword
 -->
 
 # Avant-propos
 
 <!--
-It wasn’t always so clear, but the Rust programming language is fundamentally
-about *empowerment*: no matter what kind of code you are writing now, Rust
-empowers you to reach farther, to program with confidence in a wider variety of
-domains than you did before.
+The Rust programming language has come a long way in a few short years, from
+its creation and incubation by a small and nascent community of enthusiasts, to
+becoming one of the most loved and in-demand programming languages in the
+world. Looking back, it was inevitable that the power and promise of Rust would
+turn heads and gain a foothold in systems programming. What was not inevitable
+was the global growth in interest and innovation that permeated through open
+source communities and catalyzed wide-scale adoption across industries.
 -->
 
-Cela n'a pas toujours été aussi évident, mais le langage de programmation Rust
-apporte avant tout plus de *puissance* : peu importe le type de code que vous
-écrivez en ce moment, Rust vous permet d'aller plus loin et de
-programmer en toute confiance dans une plus grande diversité de domaines
-qu'auparavant.
+Le langage de programmation Rust a parcouru un bien long chemin en l'espace de
+quelques années seulement, depuis sa création et son incubation par une petite
+communauté naissante de passionnés, jusqu'à devenir l'un des langages de
+programmation les plus appréciés et les plus demandés au monde. En prenant du
+recul, il était inévitable que la puissance et le potentiel de Rust attirent
+l'attention et lui permettent de s'imposer dans le domaine de la programmation
+système. Ce qui n'était pas inévitable, en revanche, c'était l'intérêt et
+l'innovation croissants à l'échelle mondiale qui ont imprégné les communautés
+open source et catalysé son adoption à grande échelle dans tous les secteurs.
 
 <!--
-Take, for example, “systems-level” work that deals with low-level details of
-memory management, data representation, and concurrency. Traditionally, this
-realm of programming is seen as arcane, accessible only to a select few who
-have devoted the necessary years learning to avoid its infamous pitfalls. And
-even those who practice it do so with caution, lest their code be open to
-exploits, crashes, or corruption.
+At this point in time, it is easy to point to the wonderful features that Rust
+has to offer to explain this explosion in interest and adoption. Who doesn’t
+want memory safety, *and* fast performance, *and* a friendly compiler, *and*
+great tooling, among a host of other wonderful features? The Rust language you
+see today combines years of research in systems programming with the practical
+wisdom of a vibrant and passionate community. This language was designed with
+purpose and crafted with care, offering developers a tool that makes it easier
+to write safe, fast, and reliable code.
 -->
 
-Prenez par exemple la gestion des éléments au “niveau système” qui traite de
-détails bas niveau de gestion de mémoire, de modèles de données et de
-concurrence. Traditionnellement, ce domaine de la programmation est jugé
-ésotérique, compréhensible uniquement par une poignée de personnes qui ont
-consacré des années d'apprentissage à en déjouer les pièges infâmes.
-Et même ceux qui travaillent dans ce domaine le font avec beaucoup de prudence,
-de crainte que leur code ne puisse conduire à des problèmes de sécurité, des plantages
-ou des corruptions de mémoire.
+À l'heure actuelle, il est facile de mettre en avant les fonctionnalités
+exceptionnelles offertes par Rust pour expliquer cet engouement et cette
+adoption qui furent fulgurants. En effet, qui ne souhaite pas bénéficier d'une
+sécurité mémoire *et* de performances rapides *et* d'un compilateur convivial
+*et* d'excellents outils, parmi une multitude d'autres fonctionnalités
+exceptionnelles ? Le langage Rust tel qu'il existe aujourd'hui est le fruit de
+nombreuses années de recherche en programmation système et du savoir-faire
+pratique d'une communauté dynamique et passionnée. Ce langage a été conçu avec
+un objectif précis et élaboré avec soin, afin d'offrir aux développeurs un
+outil qui facilite l'écriture de code sûr, rapide et fiable.
 
 <!--
-Rust breaks down these barriers by eliminating the old pitfalls and providing a
-friendly, polished set of tools to help you along the way. Programmers who need
-to “dip down” into lower-level control can do so with Rust, without taking on
-the customary risk of crashes or security holes, and without having to learn
-the fine points of a fickle toolchain. Better yet, the language is designed to
-guide you naturally towards reliable code that is efficient in terms of speed
-and memory usage.
+But what makes Rust truly special is its roots in empowering you, the user, to
+achieve your goals. This is a language that wants you to succeed, and the
+principle of empowerment runs through the core of the community that builds,
+maintains, and advocates for this language. Since the previous edition of this
+definitive text, Rust has further developed into a truly global and trusted
+language. The Rust Project is now robustly supported by the Rust Foundation,
+which also invests in key initiatives to ensure that Rust is secure, stable,
+and sustainable.
 -->
 
-Rust fait tomber ces obstacles en éliminant les vieux pièges et en apportant un
-ensemble d'outils soignés et conviviaux pour vous aider sur votre chemin.
-Les développeurs qui ont besoin de "se plonger" dans le contrôle de plus
-bas niveau peuvent ainsi le faire avec Rust, sans prendre le risque habituel
-de plantages ou de failles de sécurité, et sans avoir à apprendre les subtilités
-d'un enchevêtrement d'outils capricieux. Encore mieux, le langage est conçu pour
-vous guider naturellement vers un code fiable et efficace en termes de rapidité
-d'exécution et d'utilisation de la mémoire.
+Mais ce qui rend Rust vraiment spécial, c'est sa volonté de vous donner, à
+vous, l'utilisateur, les moyens d'atteindre vos objectifs. C'est un langage qui
+veut vous aider à réussir, et le principe d'autonomisation est au cœur de la
+communauté qui développe, maintient et promeut ce langage. Depuis la précédente
+édition de cet ouvrage de référence, Rust s'est encore développé pour devenir
+un langage véritablement mondial et fiable. Le projet Rust bénéficie désormais
+du soutien solide de la Fondation Rust, qui investit également dans des
+initiatives clés visant à garantir la sécurité, la stabilité et la pérennité de
+Rust.
 
 <!--
-Programmers who are already working with low-level code can use Rust to raise
-their ambitions. For example, introducing parallelism in Rust is a relatively
-low-risk operation: the compiler will catch the classical mistakes for you. And
-you can tackle more aggressive optimizations in your code with the confidence
-that you won’t accidentally introduce crashes or vulnerabilities.
+This edition of *The Rust Programming Language* is a comprehensive update,
+reflecting the language’s evolution over the years and providing valuable new
+information. But it is not just a guide to syntax and libraries—it’s an
+invitation to join a community that values quality, performance, and thoughtful
+design. Whether you’re a seasoned developer looking to explore Rust for the
+first time or an experienced Rustacean looking to refine your skills, this
+edition offers something for everyone.
 -->
 
-Les développeurs qui travaillent déjà avec du code bas niveau peuvent utiliser
-Rust pour accroître leurs ambitions. Par exemple, introduire du parallélisme en
-Rust est une opération à faible risque : le compilateur va détecter les erreurs
-classiques pour vous. Et vous pourrez vous lancer dans des améliorations plus
-agressives de votre code avec la certitude que vous n'introduirez pas
-accidentellement des causes de plantage ou des vulnérabilités.
+Cette édition de *The Rust Programming Language* est une mise à jour complète
+qui reflète l'évolution du langage au fil des ans et fournit de nouvelles
+informations précieuses. Mais il ne s'agit pas seulement d'un guide sur la
+syntaxe et les bibliothèques, c'est aussi une invitation à rejoindre une
+communauté qui valorise la qualité, la performance et la conception réfléchie.
+Que vous soyez un développeur chevronné souhaitant découvrir Rust pour la
+première fois ou un Rustacé expérimenté cherchant à perfectionner ses
+compétences, cette édition a quelque chose à offrir à chacun.
 
 <!--
-But Rust isn’t limited to low-level systems programming. It’s expressive and
-ergonomic enough to make CLI apps, web servers, and many other kinds of code
-quite pleasant to write — you’ll find simple examples of both later in the
-book. Working with Rust allows you to build skills that transfer from one
-domain to another; you can learn Rust by writing a web app, then apply those
-same skills to target your Raspberry Pi.
+The Rust journey has been one of collaboration, learning, and iteration. The
+growth of the language and its ecosystem is a direct reflection of the vibrant,
+diverse community behind it. The contributions of thousands of developers, from
+core language designers to casual contributors, are what make Rust such a
+unique and powerful tool. By picking up this book, you’re not just learning a
+new programming language—you’re joining a movement to make software better,
+safer, and more enjoyable to work with.
 -->
 
-Mais Rust n'est pas cantonné à la programmation de bas niveau. C'est un langage
-suffisamment expressif et ergonomique pour rendre les applications en ligne
-de commande, les serveurs web et bien d'autres types de code agréables à écrire
-— vous trouverez plus tard des exemples simples de ces types de programmes dans ce livre.
-Travailler avec Rust vous permet d'acquérir des compétences qui sont
-transposables d'un domaine à un autre ; vous pouvez apprendre Rust en écrivant
-une application web, puis appliquer les mêmes notions pour les utiliser avec
-votre Raspberry Pi.
+Le parcours de Rust a été marqué par la collaboration, l'apprentissage et
+l'itération. La croissance du langage et de son écosystème reflète directement
+la communauté dynamique et diversifiée qui le soutient. Les contributions de
+milliers de développeurs, depuis les concepteurs du langage de base jusqu'aux
+contributeurs occasionnels, font de Rust un outil unique et puissant. En
+choisissant ce livre, vous n'apprenez pas seulement un nouveau langage de
+programmation, vous êtes en train de rejoindre un mouvement visant à rendre les
+logiciels meilleurs, plus sûrs et plus agréables à utiliser.
 
 <!--
-This book fully embraces the potential of Rust to empower its users. It’s a
-friendly and approachable text intended to help you level up not just your
-knowledge of Rust, but also your reach and confidence as a programmer in
-general. So dive in, get ready to learn—and welcome to the Rust community!
+Welcome to the Rust community!
 -->
 
-Ce livre exploite pleinement le potentiel de Rust pour permettre à ses
-utilisateurs de se perfectionner. C'est une documentation conviviale et accessible
-destinée à améliorer vos connaissances en Rust, mais aussi à améliorer vos
-capacités et votre assurance en tant que développeur en général. Alors foncez,
-préparez-vous à apprendre, et bienvenue dans la communauté Rust !
+Bienvenue dans la communauté Rust !
 
 <!--
-— Nicholas Matsakis and Aaron Turon
+- Bec Rumbul, Executive Director of the Rust Foundation
 -->
 
-— Nicholas Matsakis et Aaron Turon
+Bec Rumbul, directeur exécutif de la Fondation Rust

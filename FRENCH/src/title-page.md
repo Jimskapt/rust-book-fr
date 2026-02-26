@@ -5,20 +5,29 @@
 # Le langage de programmation Rust
 
 <!--
+#  --- EN (historical, now outdated) ----------------------------
+# NOTE: The English text below corresponds to an older upstream version.
 *by Steve Klabnik and Carol Nichols, with contributions from the Rust Community*
 -->
 
-*par Steve Klabnik et Carol Nichols, avec la participation de la Communauté
-Rust*
+_par Steve Klabnik, Carol Nichols et Chris Krycho, avec la participation de la
+Communauté Rust_
 
 <!--
+#  --- EN (historical, now outdated) ----------------------------
+# NOTE: The English text below corresponds to an older upstream version.
 This version of the text assumes you’re using Rust 1.58 (released 2022-01-13)
 or later. See the [“Installation” section of Chapter 1][install]<!-- ignore -- >
 to install or update Rust.
 -->
 
-Cette version du document suppose que vous utilisez Rust 1.58 (publié le
-13/01/2022) ou ultérieur. Voir la [section “Installation” du
+<!--
+NOTE (FR): The French translation tracks the current stable Rust release.
+-->
+Cette version du document suppose que vous utilisez Rust 1.90.0 (publié le
+18/09/2025) ou ultérieur, avec `edition = "2024"` renseigné dans le fichier
+*Cargo.toml* de tous les projets pour qu'ils soient configurés afin d'utiliser
+les expressions de l'édition 2024 de Rust. Voir la [section “Installation” du
 chapitre 1][install]<!-- ignore --> pour installer ou mettre à jour Rust.
 
 <!--
@@ -49,6 +58,8 @@ La version anglaise de ce livre est disponible
 [au format papier et e-book chez No Starch Press][nsprust].
 
 <!--
+#  --- EN (historical, now outdated) ----------------------------
+# NOTE: The English text below corresponds to an older upstream version.
 [install]: ch01-01-installation.html
 [editions]: appendix-05-editions.html
 [nsprust]: https://nostarch.com/rust
@@ -57,5 +68,17 @@ La version anglaise de ce livre est disponible
 
 [install]: ch01-01-installation.html
 [editions]: appendix-05-editions.html
-[nsprust]: https://nostarch.com/rust
+<!-- Updated link to the 3rd edition -->
+[nsprust]: https://nostarch.com/rust-programming-language-3rd-edition
 [translations]: appendix-06-translation.html
+
+<!--
+> **🚨 Want a more interactive learning experience? Try out a different version
+> of the Rust Book, featuring: quizzes, highlighting, visualizations, and
+> more**: <https://rust-book.cs.brown.edu>
+-->
+
+> **🚨 Si vous souhaitez un apprentissage qui soit plus interactif, vous pouvez
+> essayer une autre version du Livre de Rust qui comprend des quiz, de la
+> coloration syntaxique, des visualisations et bien plus encore :**
+> <https://rust-book.cs.brown.edu>

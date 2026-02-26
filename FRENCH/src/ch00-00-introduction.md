@@ -1,4 +1,13 @@
 <!--
+# NOTE_FR_TRANSLATION_UPDATE:
+# This chapter has not been substantially rewritten upstream, only details
+# change. The French translation follows the current English version, and for
+# clarity, the commented out historical English version was kept as is,
+# outdated, unless # explicitely mentioned.
+-->
+
+
+<!--
 # Introduction
 -->
 
@@ -15,15 +24,15 @@
 > [The Rust Programming Language][nsprust]
 
 <!--
-[nsprust]: https://nostarch.com/rust
+[nsprust]: https://nostarch.com/rust-programming-language-3rd-edition
 [nsp]: https://nostarch.com/
 -->
 
-[nsprust]: https://nostarch.com/rust
+[nsprust]: https://nostarch.com/rust-programming-language-3rd-edition
 [nsp]: https://nostarch.com/
 
 <!--
-Welcome to *The Rust Programming Language*, an introductory book about Rust.
+Welcome to _The Rust Programming Language_, an introductory book about Rust.
 The Rust programming language helps you write faster, more reliable software.
 High-level ergonomics and low-level control are often at odds in programming
 language design; Rust challenges that conflict. Through balancing powerful
@@ -100,11 +109,11 @@ programmation système :
   integration for code completion and inline error messages.
 -->
 
-* Cargo, l'outil intégré de gestion de dépendances et de compilation, qui
+- Cargo, l'outil intégré de gestion de dépendances et de compilation, qui
   uniformise et facilite l'ajout, la compilation, et la gestion des dépendances
   dans l'écosystème Rust.
-* Rustfmt, qui assure une cohérence de style de codage pour tous les
-  développeurs.
+* L'outil de formatage Rustfmt, qui assure une cohérence de style de codage pour
+  tous les développeurs.
 * Le *Rust Langage Server* alimente les environnements de développement
   intégrés (IDE) pour la complétion du code et l'affichage direct des messages
   d'erreur.
@@ -218,8 +227,8 @@ Rust a try and see if its choices work for you.
 Le langage Rust espère aider beaucoup d'autres utilisateurs ; ceux cités ici ne
 font partie que d'un univers bien plus grand. Globalement, la plus grande
 ambition de Rust est d'éradiquer les compromis auxquels les développeurs
-se soumettaient depuis des décennies en leur apportant sécurité *et*
-productivité, rapidité *et* ergonomie. Essayez Rust et vérifiez si ses décisions
+se soumettaient depuis des décennies en leur apportant sécurité _et_
+productivité, rapidité _et_ ergonomie. Essayez Rust et vérifiez si ses décisions
 vous conviennent.
 
 <!--
@@ -240,7 +249,7 @@ reading a book that specifically provides an introduction to programming.
 Ce livre suppose que vous avez écrit du code dans un autre langage de
 programmation mais ne suppose pas lequel. Nous avons essayé de rendre son
 contenu le plus accessible au plus grand nombre d'expériences de programmation
-possible. Nous ne nous évertuons pas à nous questionner sur *ce qu'est* la
+possible. Nous ne nous évertuons pas à nous questionner sur _ce qu'est_ la
 programmation ou comment l'envisager. Si vous êtes débutant en programmation,
 vous seriez mieux avisé en lisant un livre qui vous initie à la programmation.
 
@@ -273,48 +282,53 @@ Vous allez rencontrer deux différents types de chapitres dans ce livre : les
 chapitres théoriques et les chapitres de projet. Dans les chapitres théoriques,
 vous allez apprendre un sujet à propos de Rust. Dans un chapitre de projet, nous
 allons construire ensemble des petits programmes, pour appliquer ce que vous
-avez appris précédemment. Les chapitres 2, 12 et 20 sont des chapitres de
+avez appris précédemment. Les chapitres 2, 12 et 21 sont des chapitres de
 projet ; les autres sont des chapitres théoriques.
 
 <!--
-Chapter 1 explains how to install Rust, how to write a “Hello, world!” program,
-and how to use Cargo, Rust’s package manager and build tool. Chapter 2 is a
-hands-on introduction to the Rust language. Here we cover concepts at a high
-level, and later chapters will provide additional detail. If you want to get
-your hands dirty right away, Chapter 2 is the place for that. At first, you
-might even want to skip Chapter 3, which covers Rust features similar to those
-of other programming languages, and head straight to Chapter 4 to learn about
-Rust’s ownership system. However, if you’re a particularly meticulous learner
-who prefers to learn every detail before moving on to the next, you might want
-to skip Chapter 2 and go straight to Chapter 3, returning to Chapter 2 when
-you’d like to work on a project applying the details you’ve learned.
+#  --- EN (updated) ---------------------------------------------
+# NOTE_FR_TRANSLATION_UPDATE:
+# The English text below has been updated to match the current upstream
+# English version
+
+**Chapter 1** explains how to install Rust, how to write a “Hello, world!”
+program, and how to use Cargo, Rust’s package manager and build tool. **Chapter
+2** is a hands-on introduction to writing a program in Rust, having you build
+up a number-guessing game. Here, we cover concepts at a high level, and later
+chapters will provide additional detail. If you want to get your hands dirty
+right away, Chapter 2 is the place for that. If you’re a particularly
+meticulous learner who prefers to learn every detail before moving on to the
+next, you might want to skip Chapter 2 and go straight to **Chapter 3**, which
+covers Rust features that are similar to those of other programming languages;
+then, you can return to Chapter 2 when you’d like to work on a project applying
+the details you’ve learned.
 -->
 
-Le chapitre 1 explique comment installer Rust, comment écrire un programme
+**Le chapitre 1** explique comment installer Rust, comment écrire un programme
 "Hello, world!" et comment utiliser Cargo, le gestionnaire de paquets et outil
-de compilation. Le chapitre 2 est une initiation pratique au langage Rust. Nous
-y aborderons des concepts de haut-niveau, et les chapitres suivants apporteront
-plus de détails. Si vous voulez vous *salir les mains* tout de suite,
-le chapitre 2 est l'endroit pour cela. Au début, vous pouvez même sauter le
-chapitre 3, qui aborde les fonctionnalités de Rust semblables aux autres
-langages de programmation, et passer directement au chapitre 4 pour en savoir
-plus sur le système de possession *(ownership)* de Rust. Toutefois, si vous êtes
-un apprenti particulièrement minutieux qui préfère apprendre chaque
-particularité avant de passer à la suivante, vous pouvez sauter le chapitre 2 et
-passer directement au chapitre 3, puis revenir au chapitre 2 lorsque vous
-souhaitez travailler sur un projet en appliquant les notions que vous avez
-apprises.
+de compilation. Le **chapitre 2** est une initiation pratique à l'écriture d'un
+programme en Rust, qui vous fait écrire un jeu de devinette de chiffres.  Nous
+y aborderons des concepts de haut niveau, et les chapitres suivants apporteront
+plus de détails. Si vous voulez vous *salir les mains* tout de suite, le
+chapitre 2 est l'endroit pour cela.  Toutefois, si vous êtes un apprenti
+particulièrement minutieux qui préfère apprendre chaque particularité avant de
+passer à la suivante, vous pouvez sauter le chapitre 2 et passer directement au
+**chapitre 3**, lequel aborde les fonctionnalités de Rust semblables aux autres
+langages de programmation, puis revenir au chapitre 2 lorsque vous souhaitez
+travailler sur un projet en appliquant les notions que vous avez apprises.
 
 <!--
-Chapter 5 discusses structs and methods, and Chapter 6 covers enums, `match`
-expressions, and the `if let` control flow construct. You’ll use structs and
-enums to make custom types in Rust.
+In **Chapter 4**, you’ll learn about Rust’s ownership system. **Chapter 5**
+discusses structs and methods. **Chapter 6** covers enums, `match` expressions,
+and the `if let` and `let...else` control flow constructs. You’ll use structs
+and enums to make custom types.
 -->
 
-Le chapitre 5 traite des structures et des méthodes, et le chapitre 6 couvre les
-énumérations, les expressions `match`, et la structure de contrôle `if let`.
-Vous emploierez les structures et les énumérations pour créer des types
-personnalisés avec Rust.
+Dans le **chapitre 4**, vous apprendrez ce qu'est le système de possession
+*(ownership)* de Rust.  Le **chapitre 5** traite des structures et des méthodes. Le
+**chapitre 6** couvre les énumérations, les expressions `match`, et les
+structures de contrôle `if let` et `let...else`. Vous emploierez les
+structures et les énumérations pour créer des types personnalisés avec Rust.
 
 <!--
 In Chapter 7, you’ll learn about Rust’s module system and about privacy rules
@@ -324,12 +338,13 @@ standard library provides, such as vectors, strings, and hash maps. Chapter 9
 explores Rust’s error-handling philosophy and techniques.
 -->
 
-Au chapitre 7, vous apprendrez le système de modules de Rust et les règles de
-visibilité, afin d'organiser votre code et son interface de programmation
-applicative (API) publique. Le chapitre 8 traitera des structures de collections
-de données usuelles fournies par la bibliothèque standard, comme les vecteurs,
-les chaînes de caractères et les tables de hachage *(hash maps)*. Le chapitre 9
-explorera la philosophie et les techniques de gestion d'erreurs de Rust.
+Au **chapitre 7**, vous apprendrez le système de modules de Rust et les règles
+de visibilité, afin d'organiser votre code et son interface de programmation
+applicative (API) publique. Le **chapitre 8** traitera des structures de
+collections de données usuelles fournies par la bibliothèque standard :
+les vecteurs, les chaînes de caractères et les tables de hachage *(hash maps)*.
+Le **chapitre 9** explorera la philosophie et les techniques de gestion
+d'erreurs de Rust.
 
 <!--
 Chapter 10 digs into generics, traits, and lifetimes, which give you the power
@@ -341,15 +356,15 @@ within files. For this, we’ll use many of the concepts we discussed in the
 previous chapters.
 -->
 
-Le chapitre 10 nous plongera dans la généricité, les *traits* et
-les durées de vie, qui vous donneront la capacité de créer du code qui s'adapte
-à différents types. Le chapitre 11 traitera des techniques de test, qui restent
-nécessaires malgré les garanties de sécurité de Rust, pour s'assurer que
-la logique de votre programme est valide. Au chapitre 12, nous écrirons
+Le **chapitre 10** nous plongera dans la généricité, les *traits* et les durées
+de vie, qui vous donneront la capacité de créer du code qui s'adapte
+à différents types. Le **chapitre 11** traitera des techniques de test, qui
+restent nécessaires malgré les garanties de sécurité de Rust, pour s'assurer
+que la logique de votre programme est valide. Au **chapitre 12**, nous écrirons
 notre propre implémentation d'un sous-ensemble des fonctionnalités du programme
-en ligne de commande `grep`, qui recherche du texte dans des fichiers.
-Pour ce faire, nous utiliserons de nombreuses notions abordées dans les
-chapitres précédents.
+en ligne de commande `grep`, qui recherche du texte dans des fichiers.  Pour ce
+faire, nous utiliserons de nombreuses notions abordées dans les chapitres
+précédents.
 
 <!--
 Chapter 13 explores closures and iterators: features of Rust that come from
@@ -359,45 +374,71 @@ Chapter 15 discusses smart pointers that the standard library provides and the
 traits that enable their functionality.
 -->
 
-Le chapitre 13 explorera les fermetures *(closures)* et itérateurs : ce sont les
+Le **chapitre 13** explorera les fermetures *(closures)* et itérateurs : ce sont les
 fonctionnalités de Rust inspirées des langages de programmation fonctionnels.
-Au chapitre 14, nous explorerons plus en profondeur Cargo et les bonnes
-pratiques pour partager vos propres bibliothèques avec les autres. Le chapitre
-15 parlera de pointeurs intelligents qu'apporte la bibliothèque standard et des
+Au **chapitre 14**, nous explorerons plus en profondeur Cargo et les bonnes
+pratiques pour partager vos propres bibliothèques avec les autres. Le **chapitre
+15** parlera de pointeurs intelligents qu'apporte la bibliothèque standard et des
 *traits* qui activent leurs fonctionnalités.
 
 <!--
+# NOTE_FR_TRANSLATION_UPDATE:
+# STRUCTURAL NOTE:
+# Upstream has introduced a new Chapter 17 (async/await and async concurrency).
+# As a result, subsequent chapter numbers differ between the historical French
+# translation and the current English version. Chapter numbers are changed in
+# the historical English version.
+-->
+
+<!--
+#  --- EN (historical, now outdated) ----------------------------
 In Chapter 16, we’ll walk through different models of concurrent programming
 and talk about how Rust helps you to program in multiple threads fearlessly.
 Chapter 17 looks at how Rust idioms compare to object-oriented programming
 principles you might be familiar with.
+#  --- EN (updated) ---------------------------------------------
+In **Chapter 16**, we’ll walk through different models of concurrent
+programming and talk about how Rust helps you program in multiple threads
+fearlessly. In **Chapter 17**, we build on that by exploring Rust’s async and
+await syntax, along with tasks, futures, and streams, and the lightweight
+concurrency model they enable.
 -->
 
-Au chapitre 16, nous passerons en revue les différents modes de programmation
-concurrente et comment Rust nous aide à développer dans des tâches parallèles
-sans crainte. Le chapitre 17 comparera les fonctionnalités de Rust aux
-principes de programmation orientée objet, que vous connaissez peut-être.
+Au **chapitre 16**, nous passerons en revue les différents modes de
+programmation concurrente et comment Rust nous aide à développer dans des
+tâches parallèles sans crainte. Dans le **chapitre 17**, nous approfondissons
+ce sujet en explorant la syntaxe async et await de Rust, ainsi que les tâches,
+les futurs et les flux, et le modèle de concurrence léger qu'ils permettent.
 
 <!--
-Chapter 18 is a reference on patterns and pattern matching, which are powerful
-ways of expressing ideas throughout Rust programs. Chapter 19 contains a
-smorgasbord of advanced topics of interest, including unsafe Rust, macros, and
-more about lifetimes, traits, types, functions, and closures.
+Chapter 18 looks at how Rust idioms compare to object-oriented programming
+principles you might be familiar with.
 -->
 
-Le chapitre 18 est une référence sur les motifs et le filtrage de motif
+Le **chapitre 18** comparera les fonctionnalités de Rust aux principes de
+programmation orientée objet, que vous connaissez peut-être.
+
+<!--
+
+**Chapter 19** is a reference on patterns and pattern matching, which are
+powerful ways of expressing ideas throughout Rust programs. **Chapter 20**
+contains a smorgasbord of advanced topics of interest, including unsafe Rust,
+macros, and more about lifetimes, traits, types, functions, and closures.
+-->
+
+Le **chapitre 19** est une référence sur les motifs et le filtrage de motif
 *(pattern matching)*, qui sont des moyens puissants permettant de communiquer
-des idées dans les programmes Rust. Le chapitre 19 contient une foultitude de
-sujets avancés intéressants, comme le code Rust non sécurisé *(unsafe)*, les
+des idées dans les programmes Rust. Le **chapitre 20** contient une foultitude
+de sujets avancés intéressants, comme le code Rust non sécurisé *(unsafe)*, les
 macros et plus de détails sur les durées de vie, les *traits*, les types, les
 fonctions et les fermetures *(closures)*.
 
 <!--
-In Chapter 20, we’ll complete a project in which we’ll implement a low-level
+In Chapter 21, we’ll complete a project in which we’ll implement a low-level
 multithreaded web server!
 -->
 
-Au chapitre 20, nous terminerons un projet dans lequel nous allons
+Au **chapitre 21**, nous terminerons un projet dans lequel nous allons
 implémenter en bas-niveau un serveur web multitâches !
 
 <!--
@@ -406,14 +447,20 @@ more reference-like format. Appendix A covers Rust’s keywords, Appendix B
 covers Rust’s operators and symbols, Appendix C covers derivable traits
 provided by the standard library, Appendix D covers some useful development
 tools, and Appendix E explains Rust editions.
+#  --- EN (updated) ---------------------------------------------
+In **Appendix F**, you can find translations of the book, and in **Appendix G**
+we’ll cover how Rust is made and what nightly Rust is.
 -->
 
 Et finalement, quelques annexes qui contiennent des informations utiles sur le
-langage sous forme de référentiels qui renvoient à d'autres documents. L'annexe
-A liste les mots-clés de Rust, l'annexe B couvre les opérateurs et symboles de
-Rust, l'annexe C parle des *traits* dérivables qu'apporte la bibliothèque
-standard, l'annexe D référence certains outils de développement utiles, et
-l'annexe E explique les différentes éditions de Rust.
+langage sous forme de référentiels qui renvoient à d'autres documents.
+L'**annexe A** liste les mots-clés de Rust, l'**annexe B** couvre les
+opérateurs et symboles de Rust, l'**annexe C** parle des *traits* dérivables
+qu'apporte la bibliothèque standard, l'**annexe D** référence certains outils
+de développement utiles, et l'**annexe E** explique les différentes éditions de
+Rust. Dans l'**annexe F**, vous trouverez les traductions du Livre, et dans
+l'**annexe G**, nous expliquerons comment Rust est créé et ce qu'est Rust
+nightly.
 
 <!--
 There is no wrong way to read this book: if you want to skip ahead, go for it!
@@ -442,14 +489,15 @@ surrounding text to see whether the example you’re trying to run is meant to
 error. Ferris will also help you distinguish code that isn’t meant to work:
 -->
 
-Une composante importante du processus d'apprentissage de Rust est de comprendre
-comment lire les messages d'erreur qu'affiche le compilateur : ils vous
-guideront vers du code correct.
-Ainsi, nous citerons de nombreux exemples qui ne compilent pas, avec le message
-d'erreur que le compilateur devrait vous afficher dans chaque cas. C'est donc
-normal que dans certains cas, si vous copiez et exécutez un exemple au hasard,
-il ne compile pas ! Assurez-vous d'avoir lu le texte autour pour savoir si
-l'exemple que vous tentez de compiler doit échouer. Ferris va aussi vous aider
+Une composante importante du processus d'apprentissage de Rust est de
+comprendre comment lire les messages d'erreur qu'affiche le compilateur : ils
+vous guideront vers du code correct.  Ainsi, nous citerons de nombreux exemples
+qui ne compilent pas, avec le message d'erreur que le compilateur devrait vous
+afficher dans chaque cas. C'est donc normal que dans certains cas, si vous
+copiez et exécutez un exemple au hasard, il ne compile pas ! Assurez-vous
+d'avoir lu le texte autour pour savoir si l'exemple que vous tentez de compiler
+doit échouer. Dans la plupart des cas, nous vous guiderons vers la version
+correcte de tout code qui ne compile pas. Ferris va aussi vous aider
 à identifier du code qui ne devrait pas fonctionner :
 
 <!-- markdownlint-disable -->

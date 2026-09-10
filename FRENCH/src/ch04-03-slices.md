@@ -89,7 +89,7 @@ a value is a space, we’ll convert our `String` to an array of bytes using the
 -->
 
 Comme nous avons besoin de parcourir la `String` élément par élément et de
-vérifier si la valeur est une espace, nous convertissons notre `String` en un
+vérifier si la valeur est un espace, nous convertissons notre `String` en un
 tableau d'octets en utilisant la méthode `as_bytes` :
 
 <!--
@@ -470,8 +470,8 @@ as the starting and ending indices.
 -->
 
 Nous récupérons l'indice de la fin du mot de la même façon que nous l'avions
-fait dans l'encart 4-7, en cherchant la première occurrence d'une espace.
-Lorsque nous trouvons une espace, nous retournons une slice de chaîne en
+fait dans l'encart 4-7, en cherchant la première occurrence d'un espace.
+Lorsque nous trouvons un espace, nous retournons une slice de chaîne en
 utilisant le début de la chaîne de caractères et l'indice de l'espace comme
 indices de début et de fin respectivement.
 

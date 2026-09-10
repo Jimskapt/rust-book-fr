@@ -132,7 +132,7 @@ path is relative.
 Lors du second appel à `ajouter_a_la_liste_attente` dans `manger_au_restaurant`,
 nous utilisons un chemin relatif. Le chemin commence par `salle_a_manger`, le
 nom du module qui est défini au même niveau que `manger_au_restaurant` dans
-l'arborescence de modules. Ici, l'équivalent en terme de système de fichier
+l'arborescence de modules. Ici, l'équivalent en termes de système de fichiers
 serait le chemin `salle_a_manger/accueil/ajouter_a_la_liste_attente`. Commencer
 par un nom signifie que le chemin est relatif.
 
@@ -501,7 +501,7 @@ La fonction `corriger_commande_erronee` est dans le module `cuisines`, donc nous
 pouvons utiliser `super` pour nous rendre au module parent de `cuisines`, qui
 dans notre cas est `crate`, la racine. De là, nous cherchons `servir_commande`
 et nous la trouvons. Avec succès ! Nous pensons que le module `cuisines` et la
-fonction `servir_commande` vont toujours garder la même relation et devrons être
+fonction `servir_commande` vont toujours garder la même relation et devront être
 déplacés ensemble si nous réorganisons l'arborescence de modules de la crate.
 Ainsi, nous avons utilisé `super` pour avoir moins de code à mettre à jour à
 l'avenir si ce code est déplacé dans un module différent.

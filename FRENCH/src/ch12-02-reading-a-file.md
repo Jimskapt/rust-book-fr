@@ -19,7 +19,7 @@ renseigné dans l'argument `nom_fichier` de la ligne de commande. D'abord, nous
 avons besoin d'un fichier d'exemple pour le tester : le meilleur type de
 fichier pour s'assurer que `minigrep` fonctionne est un fichier avec une petite
 quantité de texte sur plusieurs lignes avec quelques mots répétés. L'encart 12-3
-présente un poème en Anglais de Emily Dickinson qui fonctionnera bien pour ce
+présente un poème en anglais de Emily Dickinson qui fonctionnera bien pour ce
 test ! Créez un fichier *poem.txt* à la racine de votre projet, et saisissez ce
 poème “I’m Nobody! Who are you?”.
 
@@ -44,7 +44,7 @@ poème “I’m Nobody! Who are you?”.
 case</span>
 -->
 
-<span class="caption">Encart 12-3 : Un poème Anglais d'Emily Dickinson qui fait
+<span class="caption">Encart 12-3 : Un poème anglais d'Emily Dickinson qui fait
 un bon sujet d'essai</span>
 
 <!--

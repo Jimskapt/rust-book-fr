@@ -75,7 +75,7 @@ valeur inférieure à 5. Nous ajoutons le bloc de code à exécuter si la condit
 est vérifiée immédiatement après la condition entre des accolades. Les blocs de
 code associés à une condition dans une expression `if` sont parfois appelés des
 *branches*, exactement comme les branches dans les expressions `match` que nous
-avons vu dans la section [“Comparer le nombre saisi au nombre
+avons vues dans la section [“Comparer le nombre saisi au nombre
 secret”][comparing-the-guess-to-the-secret-number]<!-- ignore --> du
 chapitre 2.
 
@@ -372,7 +372,7 @@ Souvenez-vous que les blocs de code s'exécutent jusqu'à la dernière expressio
 qu'ils contiennent, et que les nombres tout seuls sont aussi des expressions.
 Dans notre cas, la valeur de toute l'expression `if` dépend de quel bloc de code
 elle va exécuter. Cela veut dire que chaque valeur qui peut être le résultat de
-chaque branche du `if` doivent être du même type ; dans l'encart 3-2, les
+chaque branche du `if` doit être du même type ; dans l'encart 3-2, les
 résultats des branches `if` et `else` sont tous deux des entiers `i32`. Si
 les types ne sont pas identiques, comme dans l'exemple suivant, nous allons
 obtenir une erreur :
@@ -448,7 +448,7 @@ experiment with loops, let’s make a new project called *loops*.
 -->
 
 Il est parfois utile d'exécuter un bloc de code plus d'une seule fois. Dans ce
-but, Rust propose plusieurs types de *boucles*, qui parcourt le code à
+but, Rust propose plusieurs types de *boucles*, qui parcourent le code à
 l'intérieur du corps de la boucle jusqu'à la fin et recommence immédiatement du
 début. Pour tester les boucles, créons un nouveau projet appelé *loops*.
 
@@ -581,7 +581,7 @@ next iteration.
 -->
 
 Nous avons également `continue` dans le jeu du plus ou du moins, qui dans une
-boucle demande au programme de sauter le code restant dans cette iteration de
+boucle demande au programme de sauter le code restant dans cette itération de
 la boucle et passer directement à la prochaine itération.
 
 <!--
@@ -594,7 +594,7 @@ nested loops:
 
 Si vous avez des boucles imbriquées dans d'autres boucles, `break` et `continue`
 s'appliquent uniquement à la boucle au plus bas niveau. Si vous en avez besoin,
-vous pouvez associer une *etiquette de boucle* à une boucle que nous pouvons
+vous pouvez associer une *étiquette de boucle* à une boucle que nous pouvons
 ensuite utiliser en association avec `break` ou `continue` pour préciser que
 ces mot-clés s'appliquent sur la boucle correspondant à l'étiquette plutôt qu'à
 la boucle la plus proche possible. Voici un exemple avec deux boucles
@@ -619,7 +619,7 @@ doesn’t specify a label will exit the inner loop only. The `break
 
 La boucle la plus à l'extérieur a l'étiquette `increment`, et elle va
 incrémenter de 0 à 2. La boucle à l'intérieur n'a pas d'étiquette et va
-décrementer de 10 à 9. Le premier `break` qui ne précise pas d'étiquette va
+décrémenter de 10 à 9. Le premier `break` qui ne précise pas d'étiquette va
 arrêter uniquement la boucle interne. L'instruction `break 'increment;` va
 arrêter la boucle la plus à l'extérieur. Ce code va afficher :
 
@@ -828,7 +828,7 @@ index is within the bounds of the array on every iteration through the loop.
 -->
 
 Cependant, cette approche pousse à l'erreur ; nous pourrions faire paniquer le
-programme si la valeur de l'indice est trop grand ou que la condition du test
+programme si la valeur de l'indice est trop grande ou que la condition du test
 est incorrecte. Par exemple, si vous changez la définition du tableau `a` pour
 avoir quatre éléments, mais que nous oublions de modifier la condition dans
 `while indice < 4`, le code paniquera. De plus, c'est lent, car le compilateur

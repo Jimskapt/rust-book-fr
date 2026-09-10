@@ -85,7 +85,7 @@ reasons, checking the borrowing rules at compile time is the best choice in the
 majority of cases, which is why this is Rust’s default.
 -->
 
-Les avantages de vérifier les règles d'emprunt au moment de la compilation est
+Les avantages de vérifier les règles d'emprunt au moment de la compilation sont
 que les erreurs vont se produire plus tôt dans le processus de développement
 et qu'il n'y a pas d'impact sur les performances à l'exécution car toute l'analyse
 a déjà été faite au préalable. Pour ces raisons, la vérification des règles
@@ -176,7 +176,7 @@ pattern. Let’s look at a situation in which interior mutability is useful and
 examine how it’s possible.
 -->
 
-Modifer une valeur à l'intérieur d'une valeur immuable est ce qu'on appelle
+Modifier une valeur à l'intérieur d'une valeur immuable est ce qu'on appelle
 le motif de *mutabilité interne*. Découvrons une situation pour laquelle la
 mutabilité interne s'avère utile, puis examinons comment cela est rendu
 possible.
@@ -307,7 +307,7 @@ called `Messenger`. Listing 15-20 shows the library code:
 -->
 
 Notre bibliothèque fournira uniquement la fonctionnalité de suivi en fonction de
-la proximité d'une valeur avec la maximale et définiera quels seront les
+la proximité d'une valeur avec la maximale et définira quels seront les
 messages associés. Les applications qui utiliseront notre bibliothèque devront
 fournir un mécanisme pour envoyer les messages : l'application peut afficher le
 message dans l'application, l'envoyer par email, l'envoyer par SMS ou autre
@@ -492,7 +492,7 @@ shows what that looks like:
 C'est une situation dans laquelle la mutabilité interne peut nous aider !
 Nous allons stocker `messages_envoyes` dans une `RefCell<T>`, et ensuite la
 méthode `envoyer` pourra modifier `messages_envoyes` pour stocker les
-messages que nous avons avons vus. L'encart 15-22 montre à quoi cela peut
+messages que nous avons vus. L'encart 15-22 montre à quoi cela peut
 ressembler :
 
 <!--
@@ -840,7 +840,7 @@ structures.
 
 Cette technique est plutôt ingénieuse ! En utilisant `RefCell<T>`, nous avons
 une valeur `List` qui est immuable de l'extérieur. Mais nous pouvons utiliser
-les méthodes de `RefCell<T>` qui nous donne accès à sa mutabilité interne afin
+les méthodes de `RefCell<T>` qui nous donnent accès à sa mutabilité interne afin
 que nous puissions modifier notre donnée lorsque nous en avons besoin. Les
 vérifications des règles d'emprunt à l'exécution nous protègent des accès
 concurrents, et il est parfois intéressant de sacrifier un peu de vitesse pour
@@ -859,7 +859,7 @@ La bibliothèque standard a d'autres types qui fournissent de la mutabilité
 interne, comme `Cell<T>`, qui est similaire sauf qu'au lieu de fournir des
 références à la valeur interne, la valeur est copiée à l'intérieur et à
 l'extérieur du `Cell<T>`. Il existe aussi `Mutex<T>` qui offre de la mutabilité
-interne qui est sécurisée pour une utilisation partagée entre plusieures
+interne qui est sécurisée pour une utilisation partagée entre plusieurs
 tâches ; nous allons voir son utilisation au chapitre 16. Plongez-vous dans la
 documentation de la bibliothèque standard pour plus de détails entre ces
 différents types.

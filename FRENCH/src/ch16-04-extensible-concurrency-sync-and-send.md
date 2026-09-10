@@ -45,14 +45,14 @@ where you don’t want to pay the thread-safe performance penalty.
 -->
 
 Le trait `Send` indique que la possession des valeurs du type qui implémente
-`Send` peut être transféré entre plusieurs tâches. Presque tous les types de
+`Send` peut être transférée entre plusieurs tâches. Presque tous les types de
 Rust implémentent `Send`, mais il subsiste quelques exceptions, comme `Rc<T>` :
 il ne peut pas implémenter `Send` car si vous clonez une valeur `Rc<T>` et que
 vous essayez de transférer la possession de ce clone à une autre tâche, les
 deux tâches peuvent modifier le compteur de référence en même temps. Pour cette
 raison, `Rc<T>` n'est prévu que pour une utilisation dans des situations qui
 ne nécessitent qu'une seule tâche et pour lesquelles vous n'avez pas besoin de payer
-le surcoût sur la performance induit par la sureté de fonctionnement multi tâches.
+le surcoût sur la performance induit par la sûreté de fonctionnement multi tâches.
 
 <!--
 Therefore, Rust’s type system and trait bounds ensure that you can never

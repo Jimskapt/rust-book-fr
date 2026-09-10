@@ -391,7 +391,7 @@ library that is a growable, UTF-8 encoded bit of text.
 Lorsque vous revenez sur le jeu du plus ou du moins, vous comprenez donc
 maintenant que la ligne `let mut supposition` permet de créer une variable
 mutable nommée `supposition`. Le signe égal (`=`) indique à Rust que nous
-voulons désormais lier quelquechose à la variable. A la droite du signe égal,
+voulons désormais lier quelque chose à la variable. A la droite du signe égal,
 nous avons la valeur liée à `supposition`, qui est ici le résultat de
 l'utilisation de `String::new`, qui est une fonction qui retourne une nouvelle
 instance de `String`.
@@ -419,7 +419,7 @@ In full, the `let mut guess = String::new();` line has created a mutable
 variable that is currently bound to a new, empty instance of a `String`. Whew!
 -->
 
-En définitif, la ligne `let mut supposition = String::new();` crée une nouvelle
+En définitive, la ligne `let mut supposition = String::new();` crée une nouvelle
 variable mutable qui contient une nouvelle chaîne de caractères vide, une
 instance de `String`. Ouf !
 
@@ -563,7 +563,7 @@ discuss what this line does.
 Cependant, une longue ligne de code n'est pas toujours facile à lire, c'est donc
 une bonne pratique de la diviser. Il est parfois utile d'ajouter une nouvelle
 ligne et des espaces afin de désagréger les longues lignes lorsque vous
-appelerez une méthode, comme ici avec la syntaxe `.nom_de_la_methode()`.
+appellerez une méthode, comme ici avec la syntaxe `.nom_de_la_methode()`.
 Maintenant, voyons à quoi sert cette ligne.
 
 <!--
@@ -589,7 +589,7 @@ des sous-modules, comme `io::Result`. Les types `Result` sont des
 [*énumérations*][enums]<!-- ignore -->, aussi appelées *enums*, qui peuvent
 avoir un certain nombre de valeurs prédéfinies que l'on appelle *variantes*.
 Les énumérations sont souvent utilisées avec `match`, une structure
-conditionelle qui facilite l'exécution d'un code différent en fonction de la
+conditionnelle qui facilite l'exécution d'un code différent en fonction de la
 variante dans l'énumération au moment de son évaluation.
 
 <!--
@@ -1009,7 +1009,7 @@ them and then compiles the project with the dependencies available.
 -->
 
 Une fois le registre mis à jour, Cargo lit la section `[dependencies]` et se
-charge de télécharger les *crates* qui y sont listés que vous n'avez pas encore
+charge de télécharger les *crates* qui y sont listées que vous n'avez pas encore
 téléchargé. Dans notre cas, bien que nous n'ayons spécifié qu'une seule
 dépendance, `rand`, Cargo a aussi téléchargé d'autres *crates* dont dépend
 `rand` pour fonctionner. Une fois le téléchargement terminé des *crates*, Rust
@@ -1089,7 +1089,7 @@ time you run `cargo build`, so we now have this in the *guessing_game*
 directory.
 -->
 
-Cargo embarque une fonctionnalité qui garantie que vous pouvez recompiler le
+Cargo embarque une fonctionnalité qui garantit que vous pouvez recompiler le
 même artéfact à chaque fois que vous ou quelqu'un d'autre compile votre code :
 Cargo va utiliser uniquement les versions de dépendances que vous avez
 utilisées jusqu'à ce que vous indiquiez le contraire.
@@ -1282,7 +1282,7 @@ upper bound, so we need to specify `1..101` to request a number between 1 and
 100. Alternatively, we could pass the range `1..=100`, which is equivalent.
 -->
 
-Ensuite, nous ajoutons deux lignes au milieu. A la première ligne, nous
+Ensuite, nous ajoutons deux lignes au milieu. À la première ligne, nous
 appelons la fonction `rand::thread_rng` qui nous fournit le générateur de
 nombres aléatoires particulier que nous allons utiliser : il est propre au fil
 d'exécution courant et généré par le système d'exploitation. Ensuite, nous
@@ -1766,7 +1766,7 @@ guess a number that is too high, and guess a number that is too low.
 -->
 
 Très bien !
-Même si des espaces ont été ajoutées avant la supposition, le programme a quand
+Même si des espaces ont été ajoutés avant la supposition, le programme a quand
 même compris que l'utilisateur a saisi 76. Lancez le programme plusieurs
 fois pour vérifier qu'il se comporte correctement avec différentes saisies :
 devinez le nombre correctement, saisissez un nombre qui est trop grand, et
@@ -1819,7 +1819,7 @@ which actually introduces a new problem. It doesn’t seem like the user can qui
 
 Comme vous pouvez le remarquer, nous avons déplacé dans une boucle tout le code
 de l'invite à entrer le nombre. Assurez-vous d'indenter correctement les lignes
-dans la boucle avec quatre nouvelles espaces pour chacune, et lancez à nouveau
+dans la boucle avec quatre nouveaux espaces pour chacune, et lancez à nouveau
 le programme. Le programme va désormais demander un nombre à l'infini, ce qui
 est un nouveau problème. Il n'est pas possible pour l'utilisateur de
 l'arrêter !

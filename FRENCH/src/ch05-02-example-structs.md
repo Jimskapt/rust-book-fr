@@ -157,7 +157,7 @@ D'une certaine façon, ce programme est meilleur. Les tuples nous permettent de
 structurer un peu plus et nous ne passons plus qu'un argument. Mais d'une autre
 façon, cette version est moins claire : les tuples ne donnent pas de noms à
 leurs éléments, donc il faut accéder aux éléments du tuple via leur indice, ce
-qui rends plus compliqué notre calcul.
+qui rend plus compliqué notre calcul.
 
 <!--
 Mixing up the width and height wouldn’t matter for the area calculation, but if
@@ -483,7 +483,7 @@ Super ! Ce n'est pas le plus beau des affichages, mais cela montre les
 valeurs de tous les champs de cette instance, ce qui serait assurément utile
 lors du débogage. Quand on a des structures plus grandes, il serait bien d'avoir
 un affichage un peu plus lisible ; dans ces cas-là, on pourra utiliser `{:#?}`
-au lieu de `{:?}` dans la chaîne de formatage. Dans cette exemple,
+au lieu de `{:?}` dans la chaîne de formatage. Dans cet exemple,
 l'utilisation du style `{:#?}` va afficher ceci :
 
 <!--
@@ -577,7 +577,7 @@ figure out what your code is doing!
 
 Nous pouvons constater que la première sortie provient de la ligne 10
 de *src/main.rs*, où nous déboguons l'expression `30 * echelle`, et son résultat
-est 60 (le formattage de `Debug` pour les entiers est d'afficher uniquement sa
+est 60 (le formatage de `Debug` pour les entiers est d'afficher uniquement sa
 valeur). L'appel à `dbg!` à la ligne 14 de *src/main.rs* affiche la valeur de
 `&rect1`, qui est une structure `Rectangle`. La macro `dbg!` peut être très
 utile lorsque vous essayez de comprendre ce que fait votre code !

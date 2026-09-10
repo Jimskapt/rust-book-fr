@@ -19,7 +19,7 @@ Le second trait important pour les pointeurs intelligents est `Drop`, qui vous
 permet de personnaliser ce qui se passe lorsqu'une valeur est en train de sortir
 d'une portée. Vous pouvez fournir une implémentation du trait `Drop` sur
 n'importe quel type, et le code que vous renseignez peut être utilisé pour
-libérer des ressources comme des fichiers ou des connections réseau. Nous
+libérer des ressources comme des fichiers ou des connexions réseau. Nous
 présentons `Drop` dans le contexte des pointeurs intelligents car la
 fonctionnalité du trait `Drop` est quasiment systématiquement utilisée
 lorsque nous implémentons un pointeur intelligent. Par exemple, lorsqu'une
@@ -350,7 +350,7 @@ don’t have to remember to clean up because Rust does it automatically.
 Vous pouvez utiliser le code renseigné dans une implémentation du trait `Drop`
 de plusieurs manières afin de rendre le nettoyage pratique et sûr : par exemple,
 vous pouvez l'utiliser pour créer votre propre alloueur de mémoire ! Grâce au
-trait `Drop` et le système de possession de Rust, vous n'avez pas à vous
+trait `Drop` et au système de possession de Rust, vous n'avez pas à vous
 souvenir de nettoyer car Rust le fait automatiquement.
 
 <!--

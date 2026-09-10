@@ -37,7 +37,7 @@ principalement dans les situations suivantes :
   implements a particular trait rather than being of a specific type
 -->
 
-* Lorsque vous avez un type dont la taille ne peut pas être connu au moment de
+* Lorsque vous avez un type dont la taille ne peut pas être connue au moment de
   la compilation et que vous souhaitez une valeur d'un certain type dans un
   contexte qui nécessite de savoir exactement sa taille
 * Lorsque vous avez une grosse quantité de données et que vous souhaitez
@@ -45,7 +45,7 @@ principalement dans les situations suivantes :
   copiées lorsque vous le ferez
 * Lorsque vous voulez prendre possession d'une valeur et que vous souhaitez
   seulement qu'elle soit d'un type qui implémente un trait particulier plutôt
-  que d'être d'un type spécique
+  que d'être d'un type spécifique
 
 <!--
 We’ll demonstrate the first situation in the [“Enabling Recursive Types with
@@ -69,7 +69,7 @@ données peut prendre beaucoup de temps car les données sont recopiées sur la
 pile. Pour améliorer les performances dans cette situation, nous pouvons stocker
 ces données sur le tas grâce à une boite. Ainsi, seul le petit pointeur vers les
 données est copié sur la pile, alors que les données qu'il pointe restent à leur
-place sur le tas. La troisième situation décris ce qu'on appelle un
+place sur le tas. La troisième situation décrit ce qu'on appelle un
 *objet de trait* et le [chapitre 17][trait-objects]<!-- ignore --> dédie une
 section entière à ce sujet. Donc ce que vous apprenez ici, vous le retrouverez à
 nouveau au chapitre 17 !
@@ -132,8 +132,8 @@ to (stored on the heap).
 Nous avons défini la variable `b` pour avoir la valeur d'une `Box` qui pointe
 sur la valeur `5`, qui est donc allouée sur le tas. Ce programme va afficher
 `b = 5` ; dans ce cas, nous pouvons accéder à la donnée présente dans la boite
-de la même manière que nous le ferrions si elle était sur la pile. Comme toute
-valeur possédée, lorsque une boite sort de la portée, comme lorsque `b` le fait
+de la même manière que nous le ferions si elle était sur la pile. Comme toute
+valeur possédée, lorsqu'une boite sort de la portée, comme lorsque `b` le fait
 à la fin du `main`, elle sera désallouée. Ce sera la boite qui sera désallouée
 en premier (elle est stockée sur la pile), puis ce sera au tour des données sur
 lesquelles elle pointait (qui sont stockées sur le tas).
@@ -169,7 +169,7 @@ by inserting a box in a recursive type definition, you can have recursive types.
 -->
 
 Au moment de la compilation, Rust a besoin de savoir combien d'espace prend un
-type. Un des types dont la taille ne peut pas être connu au moment de la
+type. Un des types dont la taille ne peut pas être connue au moment de la
 compilation est le *type récursif*, dans lequel une valeur peut avoir une partie
 de sa définition qui a une valeur du même type qu'elle-même. Comme cet emboîtement
 de valeurs pourrait théoriquement se poursuivre à l'infini, Rust ne sait pas
@@ -303,7 +303,7 @@ de valeurs `i32`</span>
 
 > Remarque : nous implémentons une liste de construction qui stocke uniquement
 > des valeurs `i32` pour les besoins de cet exemple. Nous aurions pu
-> l'implémenter en utilisant des génériques, que nous avons vu chapitre 10, afin
+> l'implémenter en utilisant des génériques, que nous avons vus chapitre 10, afin
 > de définir une liste de construction qui pourrait stocker n'importe quel type.
 
 <!--
@@ -404,7 +404,7 @@ Recall the `Message` enum we defined in Listing 6-2 when we discussed enum
 definitions in Chapter 6:
 -->
 
-Rappelez-vous de l'énumération `Message` que nous avons défini dans
+Rappelez-vous de l'énumération `Message` que nous avons définie dans
 l'encart 6-2 lorsque nous avons abordé les définitions des énumérations au
 chapitre 6 :
 
@@ -643,10 +643,10 @@ rest of this chapter.
 
 Le type `Box<T>` est un pointeur intelligent car il implémente le trait
 `Deref`, qui permet aux valeurs `Box<T>` d'être traitées comme des
-références. Lorsque une valeur `Box<T>` sort de la portée, les données sur le
+références. Lorsqu'une valeur `Box<T>` sort de la portée, les données sur le
 tas pointées par la boite seront également nettoyées grâce à l'implémentation
 du trait `Drop`. Explorons plus en détail ces deux traits. Ces deux traits
-deviendrons encore plus importants pour les fonctionnalités offertes par les
+deviendront encore plus importants pour les fonctionnalités offertes par les
 autres pointeurs intelligents que nous verrons dans le reste de ce chapitre.
 
 <!-- markdownlint-disable -->

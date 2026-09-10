@@ -90,7 +90,7 @@ retourne un itérateur des arguments de la ligne de commande qui ont été donn�
 deux choses à propos des itérateurs : les itérateurs engendrent une série de
 valeurs, et nous pouvons appeler la méthode `collect` sur un itérateur pour le
 transformer en collection, comme les vecteurs, qui contiennent tous les
-éléments qu'un itérateur engendrent.
+éléments qu'un itérateur engendre.
 
 <!--
 Use the code in Listing 12-1 to allow your `minigrep` program to read any
@@ -143,9 +143,9 @@ que la fonction `std::env::args` est imbriquée sur deux niveaux de modules.
 Comme nous l'avons vu dans le [chapitre 7][ch7-idiomatic-use]<!-- ignore -->,
 il est courant d'importer le module parent dans la portée plutôt que la
 fonction. En faisant ainsi, nous pouvons facilement utiliser les autres
-fonctions de `std::env`. C'est aussi moins ambigü que d'importer uniquement
+fonctions de `std::env`. C'est aussi moins ambigu que d'importer uniquement
 `std::env::args` et ensuite d'appeler la fonction avec seulement `args`, car
-`args` peu facilement être confondu avec une fonction qui est définie dans le
+`args` peut facilement être confondu avec une fonction qui est définie dans le
 module courant.
 
 <!--

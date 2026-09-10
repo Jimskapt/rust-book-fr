@@ -391,7 +391,7 @@ calls `*` on the `MyBox<T>` value now compiles, and the assertions pass!
 
 Nous renseignons le corps de la méthode `deref` avec `&self.0` afin que `deref`
 retourne une référence vers la valeur que nous souhaitons accéder avec
-l'opérateur `*`. Rappellez-vous de la section du
+l'opérateur `*`. Rappelez-vous de la section du
 [chapitre 5][tuple-structs]<!-- ignore --> où nous avons appris que le `.0`
 accède à la première valeur d'une structure tuple. La fonction `main` de
 l'encart 15-9 qui appelle `*` sur la valeur `MaBoite<T>` se compile désormais,
@@ -657,7 +657,7 @@ Le `(*m)` déréférence la `MaBoite<String>` en une `String`. Ensuite le `&` et
 signature de `saluer`. Le code sans l'extrapolation de déréférencement est bien
 plus difficile à lire, écrire et comprendre avec la présence de tous ces
 symboles. L'extrapolation de déréférencement permet à Rust d'automatiser ces
-convertions pour nous.
+conversions pour nous.
 
 <!--
 When the `Deref` trait is defined for the types involved, Rust will analyze the
@@ -739,7 +739,7 @@ possible.
 Le troisième cas est plus ardu : Rust va aussi procéder à une extrapolation de
 déréférencement d'une référence mutable vers une référence immuable. Mais
 l'inverse n'est *pas* possible: une extrapolation de déréférencement d'une
-valeur immuable ne donnera jamais une référence mutable. A cause des règles
+valeur immuable ne donnera jamais une référence mutable. À cause des règles
 d'emprunt, si vous avez une référence mutable, cette référence mutable doit
 être la seule référence vers cette donnée (autrement, le programme ne peut pas
 être compilé). Convertir une référence mutable vers une référence immuable ne

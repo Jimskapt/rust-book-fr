@@ -36,7 +36,7 @@ garanties, il vaut mieux rejeter quelques programmes valides plutôt que
 d'accepter quelques programmes invalides. Bien que le code *puisse* être
 correct, si le compilateur Rust n'a pas assez d'information pour être sûr, il
 va refuser ce code. Dans ce cas, vous pouvez utiliser du code non sécurisé pour
-dire au compilateur “fais-moi confiance, je sais ce que je fait”. Le prix à
+dire au compilateur “fais-moi confiance, je sais ce que je fais”. Le prix à
 payer pour cela est que vous l'utilisez à vos risques et périls : si
 vous écrivez du code non sécurisé de manière incorrecte, des problèmes liés à
 la sécurité de la mémoire peuvent se produire, tel qu'un déréférencement d'un
@@ -386,7 +386,7 @@ abstraction that uses unsafe code.
 -->
 
 Avec tous ces dangers, pourquoi vous risquer à utiliser les pointeurs bruts ?
-Une des utilisations principale consiste à s'interfacer avec du code
+Une des utilisations principales consiste à s'interfacer avec du code
 C, comme vous allez le découvrir dans la section suivante. Une autre
 utilisation est de nous permettre de créer une abstraction sécurisée que le
 vérificateur d'emprunt ne comprend pas. Nous allons découvrir les fonctions
@@ -987,7 +987,7 @@ static variable is unsafe</span>
 -->
 
 <span class="caption">Encart 19-10 : la lecture et l'écriture d'une variable
-statique mutable est non sécurisé</span>
+statique mutable sont non sécurisées</span>
 
 <!--
 As with regular variables, we specify mutability using the `mut` keyword. Any
@@ -1036,7 +1036,7 @@ too, as shown in Listing 19-11.
 
 Un autre cas d'usage de `unsafe` est l'implémentation d'un trait non sécurisé.
 Un trait n'est pas sécurisé lorsque au moins une de ses méthodes contient une
-invariante que le compilateur ne peut pas vérifier. Nous pouvons déclarer un
+invariant que le compilateur ne peut pas vérifier. Nous pouvons déclarer un
 trait qui n'est pas sécurisé en ajoutant le mot-clé `unsafe` devant `trait` et
 en marquant aussi l'implémentation du trait comme `unsafe`, comme dans
 l'encart 19-11.
@@ -1064,7 +1064,7 @@ By using `unsafe impl`, we’re promising that we’ll uphold the invariants tha
 the compiler can’t verify.
 -->
 
-En utilisant `unsafe impl`, nous promettons que nous veillons aux invariantes
+En utilisant `unsafe impl`, nous promettons que nous veillons aux invariants
 que le compilateur ne peut pas vérifier.
 
 <!--
@@ -1097,7 +1097,7 @@ signaler avec `unsafe`.
 ### Accessing Fields of a Union
 -->
 
-### Utiliser des champs d'un Union
+### Utiliser des champs d'une Union
 
 <!--
 The final action that works only with `unsafe` is accessing fields of a
@@ -1109,9 +1109,9 @@ instance. You can learn more about unions in [the Rust Reference][reference].
 -->
 
 La dernière action qui fonctionne uniquement avec `unsafe` est d'accéder aux
-champs d'un *union*. Un `union` ressemble à une `struct`, mais un seul champ de
+champs d'une *union*. Une `union` ressemble à une `struct`, mais un seul champ de
 ceux déclarés est utilisé dans une instance précise au même moment. Les unions
-sont principalement utilisés pour s'interfacer avec les unions du code C.
+sont principalement utilisées pour s'interfacer avec les unions du code C.
 L'accès aux champs des unions n'est pas sécurisé car Rust ne peut pas garantir
 le type de la donnée qui est actuellement stockée dans l'instance de l'union.
 Vous pouvez en apprendre plus sur les unions dans

@@ -123,7 +123,7 @@ C code and will need a C compiler.
 Vous aurez aussi besoin d'un *linker*, qui est un programme que Rust utilise
 pour regrouper ses multiples résultats de compilation dans un unique fichier.
 Il est probable que vous en ayez déjà un d'installé, mais si vous avez des
-erreurs à propos du *linker*, cela veut dire vous devrez installer un
+erreurs à propos du *linker*, cela veut dire que vous devrez installer un
 compilateur de langage C, qui inclura généralement un *linker*. Un compilateur
 est parfois utile car certains paquets Rust communs nécessitent du code C et
 auront besoin d'un compilateur C.
@@ -179,7 +179,7 @@ les outils de compilation est d'installer
 [Build Tools pour Visual Studio 2019][visualstudio]. Lorsque vous aurez à
 sélectionner les composants à installer, assurez-vous que les “Outils de
 compilation C++” sont bien sélectionnés, et que le SDK Windows 10 et les paquets
-de langage Anglais sont bien inclus.
+de langage anglais sont bien inclus.
 
 <!--
 [install]: https://www.rust-lang.org/tools/install

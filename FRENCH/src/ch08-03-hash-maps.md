@@ -18,7 +18,7 @@ map)*. Le type `HashMap<K, V>` stocke une association de clés de type `K` à de
 valeurs de type `V` en utilisant une *fonction de hachage*, qui détermine
 comment elle va ranger ces clés et valeurs dans la mémoire. De nombreux
 langages de programmation prennent en charge ce genre de structure de données,
-mais elles ont souvent un nom différent, tel que hash, map, objet, table
+mais ils ont souvent un nom différent, tel que hash, map, objet, table
 d'association, dictionnaire ou tableau associatif, pour n'en nommer que
 quelques-uns.
 

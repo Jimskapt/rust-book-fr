@@ -678,7 +678,7 @@ API more general and useful without losing any functionality:
 Si nous avons une slice de chaîne, nous pouvons la passer en argument
 directement. Si nous avons une `String`, nous pouvons envoyer une référence ou
 une slice de la `String`. Cette flexibilité nous est offerte par
-l'*extrapolation de déréferencement*, une fonctionnalité que nous allons
+l'*extrapolation de déréférencement*, une fonctionnalité que nous allons
 découvrir dans [une section du Chapitre 15][deref-coercions]<!--ignore-->.
 Définir une fonction qui prend une slice de chaîne plutôt qu'une référence à
 une `String` rend notre API plus générique et plus utile sans perdre aucune

@@ -481,7 +481,7 @@ Récapitulons ce que nous avons appris sur Cargo :
 * Nous pouvons compiler puis exécuter un projet en une seule fois en utilisant
   `cargo run`.
 * Nous pouvons compiler un projet sans produire de binaire afin de vérifier
-  l'existance d'erreurs en utilisant `cargo check`.
+  l'existence d'erreurs en utilisant `cargo check`.
 * Au lieu d'enregistrer le résultat de la compilation dans le même dossier que
   votre code, Cargo l'enregistre dans le dossier *target/debug*.
 

@@ -663,7 +663,7 @@ par regarder le type de retour de la fonction : `Result<String, io::Error>`.
 Cela signifie que la fonction retourne une valeur de type `Result<T, E>` où le
 paramètre générique `T` a été remplacé par le type `String` et le paramètre
 générique `E` a été remplacé par le type `io::Error`. Si cette fonction réussit
-sans problème, le code qui appellant va obtenir une valeur `Ok` qui contient
+sans problème, le code qui appelle va obtenir une valeur `Ok` qui contient
 une `String`, le pseudo que cette fonction lit dans le fichier. Si cette
 fonction rencontre un problème, le code qui appelle cette fonction va obtenir
 une valeur `Err` qui contient une instance de `io::Error` qui donne plus
@@ -985,8 +985,8 @@ it’s compatible with this `return`.
 -->
 
 L'opérateur `?` ne peut être utilisé uniquement que dans des fonctions dont le
-type de retour compatible avec ce sur quoi le `?` est utilisé. C'est parce que
-l'opérateur `?` est conçu pour retourner prématurémment une valeur de la
+type de retour est compatible avec ce sur quoi le `?` est utilisé. C'est parce que
+l'opérateur `?` est conçu pour retourner prématurément une valeur de la
 fonction, de la même manière que le faisait l'expression `match` que nous avons
 définie dans l'encart 9-6. Dans l'encart 9-6, le `match` utilisait une valeur
 de type `Result`, et la branche de retour prématuré retournait une valeur de
@@ -1058,7 +1058,7 @@ Cette erreur explique que nous sommes autorisés à utiliser l'opérateur `?`
 uniquement dans une fonction qui retourne `Result`, `Option`, ou un autre type
 qui implémente `FromResidual`. Pour corriger l'erreur, vous avez deux choix. Le
 premier est de changer le type de retour de votre fonction pour être compatible
-avec la valeur avec lequel vous utilisez l'opérateur `?`, si vous pouvez le
+avec la valeur avec laquelle vous utilisez l'opérateur `?`, si vous pouvez le
 faire. L'autre solution est d'utiliser un `match` ou une des méthodes de
 `Result<T, E>` pour gérer le `Result<T, E>` de la manière la plus appropriée.
 
@@ -1079,7 +1079,7 @@ valeurs de type `Option<T>`. Comme pour pouvoir utiliser `?` sur un `Result`,
 vous devez utiliser `?` sur `Option` uniquement dans une fonction qui retourne
 une `Option`. Le comportement de l'opérateur `?` sur une `Option<T>` est
 identique au comportement sur un `Result<T, E>` : si la valeur est `None`, le
-`None` sera retourné prématurémment à la fonction dans laquelle il est utilisé.
+`None` sera retourné prématurément à la fonction dans laquelle il est utilisé.
 Si la valeur est `Some`, la valeur dans le `Some` sera la valeur résultante de
 l'expression et la fonction continuera son déroulement. L'encart 9-11 est un
 exemple de fonction qui trouve le dernier caractère de la première ligne dans
@@ -1117,7 +1117,7 @@ return a `Some` value containing a string slice of the first line in `text`.
 
 Cette fonction retourne un type `Option<char>` car il est possible qu'il y ait
 un caractère à cet endroit, mais il est aussi possible qu'il n'y soit pas. Ce
-code prends l'argument `texte` slice de chaîne de caractère et appelle sur elle
+code prend l'argument `texte` slice de chaîne de caractère et appelle sur elle
 la méthode `lines`, qui retourne un itérateur des lignes dans la chaîne. Comme
 cette fonction veut traiter la première ligne, elle appelle `next` sur
 l'itérateur afin d'obtenir la première valeur de cet itérateur. Si `texte` est
@@ -1141,14 +1141,14 @@ have to implement this logic using more method calls or a `match` expression.
 -->
 
 Le `?` extrait la slice de la chaîne de caractères, et nous pouvons ainsi
-appeller `chars` sur cette slice de chaîne de caractères afin d'obtenir un
+appeler `chars` sur cette slice de chaîne de caractères afin d'obtenir un
 itérateur de ses caractères. Nous nous intéressons au dernier caractère de
 cette première ligne, donc nous appelons `last` pour retourner le dernier
 élément dans l'itérateur. C'est une `Option` car il est possible que la
 première ligne soit une chaîne de caractères vide, par exemple si `texte`
 commence par une ligne vide mais a des caractères sur les autres lignes, comme
-par exemple `"\nhi"`. Cependant, si il y a un caractère à la fin de la première
-ligne, il sera retourné dans la variante `Some`. L'opérateur `?` au millieu
+par exemple `"\nhi"`. Cependant, s'il y a un caractère à la fin de la première
+ligne, il sera retourné dans la variante `Some`. L'opérateur `?` au milieu
 nous donne un moyen concret d'exprimer cette logique, nous permettant
 d'implémenter la fonction en une ligne. Si nous n'avions pas pu utiliser
 l'opérateur `?` sur `Option`, nous aurions dû implémenter cette logique en
@@ -1227,7 +1227,7 @@ Le type `Box<dyn Error>` est un *objet trait*, que nous verrons dans une
 section du [chapitre 17][trait-objects]<!-- ignore -->. Pour l'instant, vous
 pouvez interpréter `Box<dyn Error>` en “tout type d'erreur”. L'utilisation de
 `?` sur une valeur type `Result` dans la fonction `main` avec le type
-`Box<dyn Error>` est donc permise, car cela permet à n'importe quelle une
+`Box<dyn Error>` est donc permise, car cela permet à n'importe quelle
 valeur de type `Err` d'être retournée prématurément.
 
 <!--

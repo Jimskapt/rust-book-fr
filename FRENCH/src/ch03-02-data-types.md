@@ -202,7 +202,7 @@ Vous pouvez écrire des littéraux d'entiers dans chacune des formes décrites d
 le tableau 3-2. Notez que les littéraux numériques qui peuvent être de plusieurs types
 numériques autorisent l'utilisation d'un suffixe de type, tel que `57u8`, afin de
 préciser leur type. Les nombres littéraux peuvent aussi utiliser `_` comme
-séparateur visuel afin de les rendre plus lisible, comme par exemple `1_000`,
+séparateur visuel afin de les rendre plus lisibles, comme par exemple `1_000`,
 qui a la même valeur que si vous aviez renseigné `1000`.
 
 <!--
@@ -293,13 +293,13 @@ d'entier par défaut est le `i32`. La principale utilisation d'un `isize` ou d'u
 > Rust va effectuer un *rebouclage du complément à deux*. Pour faire simple, les
 > valeurs supérieures à la valeur maximale du type seront “rebouclées” depuis la
 > valeur minimale que le type peut stocker. Dans le cas d'un `u8`, la valeur 256
-> devient 0, la valeur 257 devient 1, et ainsi de suite. Le programme ne va
+> devient 0, la valeur 257 devient 1, et ainsi de suite. Le programme ne va pas
 > paniquer, mais la variable va avoir une valeur qui n'est probablement pas ce
 > que vous attendez à avoir. Se fier au comportement du rebouclage lors du
 > dépassement d'entier est considéré comme une faute.
 >
 > Pour gérer explicitement le dépassement, vous pouvez utiliser les familles
-> de méthodes suivantes qu'offrent la bibliothèque standard sur les types de
+> de méthodes suivantes qu'offre la bibliothèque standard sur les types de
 > nombres primitifs :
 >
 > - Enveloppez les opérations avec les méthodes `wrapping_*`, comme par exemple
@@ -495,8 +495,8 @@ Rust. We’ll discuss this topic in detail in [“Storing UTF-8 Encoded Text wit
 Strings”][strings]<!-- ignore -- > in Chapter 8.
 -->
 
-Notez que nous renseignons un litéral `char` avec des guillemets simples,
-contrairement aux littéraux de chaîne de caractères, qui nécéssite des doubles
+Notez que nous renseignons un littéral `char` avec des guillemets simples,
+contrairement aux littéraux de chaîne de caractères, qui nécessitent des doubles
 guillemets. Le type `char` de Rust prend quatre octets en mémoire et représente
 une valeur scalaire Unicode, ce qui veut dire que cela représente plus de
 caractères que l'ASCII. Les lettres accentuées ; les caractères chinois,
@@ -640,7 +640,7 @@ the first index in a tuple is 0.
 -->
 
 Ce programme crée le tuple `x` puis crée une nouvelle variable pour
-chaque élément en utilisant leur indices respectifs. Comme dans de nombreux
+chaque élément en utilisant leurs indices respectifs. Comme dans de nombreux
 langages de programmation, le premier indice d'un tuple est 0.
 
 <!--

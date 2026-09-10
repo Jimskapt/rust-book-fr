@@ -555,7 +555,7 @@ is supposed to return `true`, so our test should pass. Let’s find out!
 -->
 
 Nous avons nommé notre test `un_grand_peut_contenir_un_petit`, et nous avons
-créé les deux instances `Rectangle` que nous avions besoin. Ensuite, nous avons
+créé les deux instances `Rectangle` dont nous avions besoin. Ensuite, nous avons
 appelé la macro `assert!` et nous lui avons passé le résultat de l'appel à
 `le_grand.peut_contenir(&le_petit)`. Cette expression est censée retourner
 `true`, donc notre test devrait réussir. Vérifions cela !
@@ -821,9 +821,9 @@ right)` `` and that `left` was `5` and `right` was `4`.
 
 Notez que dans certains langages et environnements de test, les paramètres des
 fonctions qui vérifient que deux valeurs soient égales sont appelés `attendu` et
-`effectif`, et l'ordre dans lesquels nous renseignons les arguments est
+`effectif`, et l'ordre dans lequel nous renseignons les arguments est
 important. Cependant, dans Rust, on les appelle `gauche` et `droite`, et l'ordre
-dans lesquels nous renseignons la valeur que nous attendons et la valeur que
+dans lequel nous renseignons la valeur que nous attendons et la valeur que
 produit le code à tester n'est pas important. Nous pouvons écrire la
 vérification de ce test dans la forme `assert_eq!(ajouter_deux(2), 4)`, ce qui
 donnera un message d'échec qui affichera `` assertion failed: `(left == right)`
@@ -841,7 +841,7 @@ to assert might be that the output of the function is not equal to the input.
 
 La macro `assert_ne!` va réussir si les deux valeurs que nous lui donnons ne
 sont pas égales et va échouer si elles sont égales. Cette macro est utile dans
-les cas où nous ne sommes pas sûr de ce que *devrait* valoir une valeur, mais
+les cas où nous ne sommes pas sûrs de ce que *devrait* valoir une valeur, mais
 que nous savons ce que la valeur ne devrait surtout *pas* être si notre code
 fonctionne comme nous le souhaitons. Par exemple, si nous testons une fonction
 qui doit transformer sa valeur d'entrée de manière à ce qu'elle dépend du jour
@@ -1287,7 +1287,7 @@ figuring out where our bug is!
 -->
 
 Le message d'échec nous informe que ce test a paniqué comme prévu, mais que le
-message de panique n'inclus pas la chaîne de caractères prévue `'La supposition
+message de panique n'inclut pas la chaîne de caractères prévue `'La supposition
 doit être plus petite ou égale à 100'`. Le message de panique que nous avons
 obtenu dans ce cas était `La supposition doit être plus grande ou égale à 1, et
 nous avons 200.`. Maintenant, on comprend mieux où est le bogue !

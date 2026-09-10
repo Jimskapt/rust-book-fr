@@ -277,7 +277,7 @@ with each technique, as shown in Listing 8-6.
 -->
 
 La raison pour laquelle Rust offre ces deux manières d'obtenir une référence
-vers un élement est de vous permettre de choisir le comportement du programme
+vers un élément est de vous permettre de choisir le comportement du programme
 lorsque vous essayez d'utiliser une valeur dont l'indice est à l'extérieur de
 la plage des éléments existants. Par exemple, voyons dans l'encart 8-6 ce qui
 se passe lorsque nous avons un vecteur de cinq éléments et qu'ensuite nous

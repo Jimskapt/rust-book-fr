@@ -13,7 +13,7 @@ use `cargo install` to install extensions and then run them just like the
 built-in Cargo tools is a super convenient benefit of Cargo’s design!
 -->
 
-Cargo est conçu pour que vous puissiez étendre ses fonctionnalités avec des
+Cargo est conçu pour que vous puissiez étendre ses fonctionnalités avec de
 nouvelles sous-commandes sans avoir à modifier cargo. Si un binaire dans votre
 `$PATH` est nommé selon `cargo-quelquechose`, vous pouvez le lancer comme s'il
 était une sous-commande de cargo en lançant `cargo quelquechose`. Les commandes

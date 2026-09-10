@@ -94,7 +94,7 @@ method will return an `Option` containing a value of that concrete type.
 
 Le type `Item` est un type à remplacer, et la définition de la méthode `next`
 informe qu'elle va retourner des valeurs du type `Option<Self::Item>`. Ceux qui
-implémenterons le trait `Iterator` devront renseigner un type concret pour
+implémenteront le trait `Iterator` devront renseigner un type concret pour
 `Item`, et la méthode `next` va retourner une `Option` qui contiendra une
 valeur de ce type concret.
 
@@ -628,7 +628,7 @@ fonctions qui ne sont pas des méthodes et qui ont le même nom de fonction, Rus
 ne peut pas toujours savoir quel type vous sous-entendez jusqu'à ce que vous
 utilisiez la *syntaxe totalement définie*. Par exemple, le trait `Animal` de
 l'encart 19-19 a une fonction associée `nom_bebe` qui n'est pas une méthode, et
-le trait `Animal` est implémenté pour la structure `Dog`.Il y a aussi une
+le trait `Animal` est implémenté pour la structure `Dog`. Il y a aussi une
 fonction associée `nom_bebe` qui n'est pas une méthode et qui est définie
 directement sur `Chien`.
 
@@ -1069,7 +1069,7 @@ du chapitre 5). La structure tuple aura un champ et sera une petite enveloppe
 pour le type sur lequel nous souhaitons implémenter le trait. Ensuite, le type
 enveloppant est local à notre crate, et nous pouvons lui implémenter un trait.
 *Newtype* est un terme qui provient du langage de programmation Haskell. Il n'y
-a pas de conséquence sur les performance à l'exécution pour l'utilisation de ce
+a pas de conséquence sur les performances à l'exécution pour l'utilisation de ce
 motif, ce qui signifie que le type enveloppant est résolu à la compilation.
 
 <!--
@@ -1147,7 +1147,7 @@ qu'il possède, l'implémentation du trait `Deref` (que nous avons vu dans
 `Enveloppe` pour retourner le type interne pourrait être une solution. Si nous
 ne souhaitons pas que le type `Enveloppe` ait toutes les méthodes du type qu'il
 possède (par exemple, pour limiter les fonctionnalités du type `Enveloppe`),
-nous n'avons qu'à implémenter manuellement que les méthodes que nous souhaitons.
+nous n'avons qu'à implémenter manuellement les méthodes que nous souhaitons.
 
 <!--
 Now you know how the newtype pattern is used in relation to traits; it’s also a

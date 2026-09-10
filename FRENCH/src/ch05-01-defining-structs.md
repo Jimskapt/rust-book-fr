@@ -18,7 +18,7 @@ chapitre 3][tuples]<!-- ignore -->, car tous les deux portent plusieurs valeurs
 associées. Comme pour les tuples, les éléments d'une structure peuvent être de
 différents types. Contrairement aux tuples, dans une structure on doit nommer
 chaque élément des données afin de clarifier le rôle de chaque valeur. L'ajout
-de ces noms font que les structures sont plus flexibles que les tuples : on n'a
+de ces noms fait que les structures sont plus flexibles que les tuples : on n'a
 pas à utiliser l'ordre des données pour spécifier ou accéder aux valeurs d'une
 instance.
 
@@ -253,7 +253,7 @@ the values from another instance, but changes some. You can do this using
 -->
 
 Il est souvent utile de créer une nouvelle instance de structure qui comporte
-la plupart des valeurs d'une autre instance tout en en changeant certaines.
+la plupart des valeurs d'une autre instance tout en changeant certaines.
 Vous pouvez utiliser pour cela la *syntaxe de mise à jour de structure*.
 
 <!--
@@ -328,10 +328,10 @@ the struct’s definition.
 -->
 
 Le code dans l'encart 5-7 crée aussi une instance dans `utilisateur2` qui a une
-valeur différente pour `email`, mais qui as les mêmes valeurs pour les champs
+valeur différente pour `email`, mais qui a les mêmes valeurs pour les champs
 `pseudo`, `actif` et `nombre_de_connexions` que `utilisateur1`. Le
 `..utilisateur1` doit être inséré à la fin pour préciser que tous les champs
-restants obtiendrons les valeurs des champs correspondants de `utilisateur1`,
+restants obtiendront les valeurs des champs correspondants de `utilisateur1`,
 mais nous pouvons renseigner les valeurs des champs dans n'importe quel ordre,
 peu importe leur position dans la définition de la structure.
 
@@ -348,7 +348,7 @@ types that implement the `Copy` trait, so the behavior we discussed in the
 [“Stack-Only Data: Copy”][copy]<!-- ignore -- > section would apply.
 -->
 
-Veuillez notez que la syntaxe de la mise à jour de structure utilise un `=`
+Veuillez noter que la syntaxe de la mise à jour de structure utilise un `=`
 comme le ferait une assignation ; car cela déplace les données, comme nous
 l'avons vu dans [une des sections au chapitre 4][move]<!-- ignore -->. Dans cet
 exemple, nous ne pouvons plus utiliser `utilisateur1` après avoir créé
@@ -358,7 +358,7 @@ chacune des `String` `email` et `pseudo`, et que par conséquent nous aurions
 déplacé uniquement les valeurs de `actif` et de `nombre_de_connexions` à partir
 de `utilisateur1`, alors `utilisateur1` restera en vigueur après avoir créé
 `utilisateur2`. Les types de `actif` et de `nombre_de_connexions` sont de types
-qui implémentent le trait `Copy`, donc le comportement décris dans [la section
+qui implémentent le trait `Copy`, donc le comportement décrit dans [la section
 à propos de copy][copy]<!-- ignore --> aura lieu ici.
 
 <!--
@@ -422,7 +422,7 @@ définit constitue son propre type, même si les champs au sein de la structure
 ont les mêmes types. Par exemple, une fonction qui prend un paramètre de type
 `Couleur` ne peut pas prendre un argument de type `Point` à la place, bien que
 ces deux types soient tous les deux constitués de trois valeurs `i32`. Mis à
-part cela, les instances de stuctures tuples se comportent comme des tuples : on
+part cela, les instances de structures tuples se comportent comme des tuples : on
 peut les déstructurer en éléments individuels, on peut utiliser un `.` suivi de
 l'indice pour accéder individuellement à une valeur, et ainsi de suite.
 

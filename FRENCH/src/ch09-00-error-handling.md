@@ -17,7 +17,7 @@ Les erreurs font partie de la vie des programmes informatiques, c'est pourquoi
 Rust a des fonctionnalités pour gérer les situations dans lesquelles quelque
 chose dérape. Dans de nombreux cas, Rust exige que vous anticipiez les erreurs
 possibles et que vous preniez des dispositions avant de pouvoir compiler votre
-code. Cette exigence rend votre programme plus résiliant en s'assurant que vous
+code. Cette exigence rend votre programme plus résilient en s'assurant que vous
 détectez et gérez les erreurs correctement avant même que vous ne déployiez
 votre code en production !
 

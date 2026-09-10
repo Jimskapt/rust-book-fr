@@ -933,7 +933,7 @@ value out of `list[0]` and into the `largest` variable, resulting in this
 error.
 -->
 
-L'élement-clé dans ces erreurs est `cannot move out of type [T], a non-copy
+L'élément-clé dans ces erreurs est `cannot move out of type [T], a non-copy
 slice` (*impossible de déplacer une valeur hors du type `[T]`, slice non
 `Copy`*). Avec notre version non générique de la fonction `le_plus_grand`, nous
 avions essayé de trouver le plus grand `i32` ou `char`. Comme nous l'avons vu

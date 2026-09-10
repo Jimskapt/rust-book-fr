@@ -505,7 +505,7 @@ Listing 16-4 provides a scenario that’s more likely to have a reference to `v`
 that won’t be valid:
 -->
 
-L'encart 16-4 propose un scénario qui est a plus de chance d'avoir une
+L'encart 16-4 propose un scénario qui a plus de chance d'avoir une
 référence à `v` qui ne sera plus valide :
 
 <!--
@@ -632,7 +632,7 @@ obtiendrions une erreur différente parce que ce que l'encart 16-4 essaye de
 faire n'est pas autorisé pour une raison différente de la précédente. Si nous
 ajoutions `move` à la fermeture, nous déplacerions `v` dans l'environnement de
 la fermeture, et nous ne pourrions plus appeler `drop` sur `v` dans la tâche
-principale. Nous obtiendrons à la place cette erreur de compilation :
+principale. Nous obtiendrions à la place cette erreur de compilation :
 
 <!--
 ```console

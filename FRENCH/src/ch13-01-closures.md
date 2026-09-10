@@ -126,7 +126,7 @@ Les paramètres d'entrées nécessaires sont :
 * A random number that will generate some variety in the workout plans
 -->
 
-* `intensite` qui est un nombre saisi par utilisateur lorsqu'il demande un
+* `intensite` qui est un nombre saisi par l'utilisateur lorsqu'il demande un
   entraînement afin d'indiquer s'il veut un entraînement de
   faible ou de haute intensité.
 * Un nombre aléatoire faisant varier les programmes d'entraînement
@@ -1047,7 +1047,7 @@ same value for the parameter `arg` to the `value` method. That is, this test of
 `Cacher` will fail:
 -->
 
-Le premier problème est qu'une instance de `Cache` suppose qu'elle obtienne
+Le premier problème est qu'une instance de `Cache` suppose qu'elle obtient
 toujours la même valeur, indépendamment du paramètre `arg` de la méthode
 `valeur`. Autrement dit, ce test sur `Cache` échouera :
 
@@ -1290,7 +1290,7 @@ traits `Fn` comme ceci :
   sous le nom de *l'environnement* de la fermeture. Pour consommer les variables
   capturées, la fermeture doit prendre possession de ces variables et les
   déplacer dans la fermeture lorsqu'elle est définie. La partie `Once` du nom
-  représente le fait que la fermeture ne puisse pas prendre prendre possession
+  représente le fait que la fermeture ne puisse pas prendre possession
   des mêmes variables plus d'une fois, donc elle ne peut être appelée qu'une
   seule fois.
 * `FnMut` peut changer l'environnement car elle emprunte des valeurs de manière
@@ -1309,7 +1309,7 @@ because the body of the closure only needs to read the value in `x`.
 
 Lorsque nous créons une fermeture, Rust déduit quel trait utiliser en se basant
 sur la façon dont la fermeture utilise les valeurs de l'environnement. Toutes
-les fermetures implémentent `FnOne` car elles peuvent toute être appelées au
+les fermetures implémentent `FnOne` car elles peuvent toutes être appelées au
 moins une fois. Les fermetures qui ne déplacent pas les variables capturées
 implémentent également `FnMut`, et les fermetures qui n'ont pas besoin d'accès
 mutable aux variables capturées implémentent aussi `Fn`. Dans l'encart 13-12, la

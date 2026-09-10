@@ -512,7 +512,7 @@ without any arguments; it will look like this:
 -->
 
 Maintenant, nous allons nous pencher sur la correction de la gestion des
-erreurs. Rappellez-vous que la tentative d'accéder aux valeurs dans le vecteur
+erreurs. Rappelez-vous que la tentative d'accéder aux valeurs dans le vecteur
 `args` aux indices 1 ou 2 va faire paniquer le programme si le vecteur contient
 moins de trois éléments. Essayez de lancer le programme sans aucun argument ;
 cela donnera quelque chose comme ceci :
@@ -590,7 +590,7 @@ condition has been met. If `args` has fewer than three items, this condition
 will be true, and we call the `panic!` macro to end the program immediately.
 -->
 
-Ce code est similaire à [la fonction Supposition::new que nous avons écrit
+Ce code est similaire à [la fonction Supposition::new que nous avons écrite
 dans l'encart 9-13][ch9-custom-types]<!-- ignore -->, dans laquelle nous
 appelions `panic!` lorsque l'argument `valeur` était hors de l'intervalle des
 valeurs valides. Plutôt que de vérifier un intervalle de valeurs dans le cas
@@ -1242,7 +1242,7 @@ correctly.
 
 Nous avons ajouté une ligne `use minigrep::Config` pour importer le type
 `Config` de la crate de bibliothèque dans la portée de la crate binaire, et
-nous avons avons préfixé la fonction `run` avec le nom de notre crate.
+nous avons préfixé la fonction `run` avec le nom de notre crate.
 Maintenant, toutes les fonctionnalités devraient être connectées et devraient
 fonctionner. Lancez le programme avec `cargo run` pour vous assurer que tout
 fonctionne correctement.

@@ -145,7 +145,7 @@ Consider the code in Listing 11-12 with the private function `internal_adder`.
 
 Il existe un débat dans la communauté des testeurs au sujet de la nécessité ou non
 de tester directement les fonctions privées, et d'autres langages rendent
-difficile, voir impossible, de tester les fonctions privées. Quelle que soit
+difficile, voire impossible, de tester les fonctions privées. Quelle que soit
 votre approche des tests, les règles de protection de Rust vous permettent de
 tester des fonctions privées. Imaginons le code de l'encart 11-12 qui contient
 la fonction privée `addition_interne`.

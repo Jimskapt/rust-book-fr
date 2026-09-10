@@ -16,7 +16,7 @@ most often.
 
 Un *pointeur* est un concept général pour une variable qui contient une adresse
 vers la mémoire. Cette adresse pointe vers d'autres données. Le type de pointeur
-le plus courant en Rust est la référence, que vous avez appris au chapitre 4.
+le plus courant en Rust est la référence, que vous avez apprise au chapitre 4.
 Les références sont marquées par le symbole `&` et empruntent la valeur sur
 laquelle elles pointent. Elles n'ont pas d'autres fonctionnalités que celle de
 pointer sur une donnée. De plus, elles n'ont aucun coût sur les performances et
@@ -89,7 +89,7 @@ why they’re important to smart pointers.
 
 Les pointeurs intelligents sont souvent implémentés en utilisant des
 structures. Les caractéristiques qui distinguent un pointeur intelligent d'une
-structure classique est que les pointeurs intelligents implémentent les traits
+structure classique sont que les pointeurs intelligents implémentent les traits
 `Deref` et `Drop`. Le trait `Deref` permet à une instance d'un pointeur
 intelligent de se comporter comme une référence afin que vous puissiez écrire
 du code qui fonctionne aussi bien avec des références qu'avec des pointeurs

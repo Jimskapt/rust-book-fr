@@ -302,7 +302,7 @@ the speed of light.
 
 Les constantes sont valables pendant toute la durée d'exécution du programme
 au sein de la portée dans laquelle elles sont déclarées. Cette caractéristique
-rends les constantes très utiles lorsque plusieurs parties du programme doivent
+rend les constantes très utiles lorsque plusieurs parties du programme doivent
 connaître certaines valeurs, comme par exemple le nombre maximum de points
 qu'un joueur est autorisé à gagner ou encore la vitesse de la lumière.
 
@@ -396,7 +396,7 @@ on a value but have the variable be immutable after those transformations have
 been completed.
 -->
 
-Créer un masque est différent que de marquer une variable comme étant `mut`,
+Créer un masque est différent de marquer une variable comme étant `mut`,
 car à moins d'utiliser une nouvelle fois le mot-clé `let`, nous obtiendrons une
 erreur de compilation si nous essayons de réassigner cette variable par
 accident. Nous pouvons effectuer quelques transformations sur une valeur en

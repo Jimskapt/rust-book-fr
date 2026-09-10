@@ -21,7 +21,7 @@ Comment décider si vous devez utiliser `panic!` ou si vous devez retourner un
 `Result` ? Quand un code panique, il n'y a pas de moyen de récupérer la
 situation. Vous pourriez utiliser `panic!` pour n'importe quelle situation
 d'erreur, peu importe s'il est possible de récupérer la situation ou non, mais
-vous prenez alors la décision de tout arrêter à la place du code appellant.
+vous prenez alors la décision de tout arrêter à la place du code appelant.
 Lorsque vous choisissez de retourner une valeur `Result`, vous donnez le choix
 au code appelant. Le code appelant peut choisir d'essayer de récupérer l'erreur
 de manière appropriée à la situation, ou il peut décider que dans ce cas une
@@ -361,7 +361,7 @@ tedious (and might impact performance).
 -->
 
 Cependant, ce n'est pas une solution idéale : si c'était absolument critique
-que le programme ne travaille qu'avec des valeurs entre 1 et 100 et qu'il aurait
+que le programme ne travaille qu'avec des valeurs entre 1 et 100 et qu'il ait
 de nombreuses fonctions qui reposent sur cette condition, cela pourrait être
 fastidieux (et cela impacterait potentiellement la performance) de faire une
 vérification comme celle-ci dans chacune de ces fonctions.

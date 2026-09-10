@@ -53,7 +53,7 @@ commenter du code Rust en utilisant deux barres obliques `//`. Rust a aussi un
 type particulier de commentaire pour la documentation, aussi connu sous le nom
 de *commentaire de documentation*, qui va générer de la documentation en HTML.
 Le HTML affiche le contenu des commentaires de documentation pour les éléments
-public de votre API à destination des développeurs qui s'intéressent à la
+publics de votre API à destination des développeurs qui s'intéressent à la
 manière *d'utiliser* votre crate et non pas à la manière dont elle est
 *implémentée*.
 
@@ -65,7 +65,7 @@ for an `add_one` function in a crate named `my_crate`.
 -->
 
 Les commentaires de documentation utilisent trois barres obliques `///` au lieu
-de deux et prend en charge la notation Markdown pour mettre en forme le texte.
+de deux et prennent en charge la notation Markdown pour mettre en forme le texte.
 Placez les commentaires de documentation juste avant l'élément qu'ils
 documentent. L'encart 14-1 montre des commentaires de documentation pour une
 fonction `ajouter_un` dans une crate nommée `ma_crate`.
@@ -413,7 +413,7 @@ has a large module hierarchy.
 -->
 
 La structure de votre API publique est une question importante lorsque vous
-publiez une crate. Les personnes qui utilisent votre crate sont moins familiers
+publiez une crate. Les personnes qui utilisent votre crate sont moins familières
 avec la structure que vous l'êtes et pourraient avoir des difficultés à trouver
 les éléments qu'ils souhaitent utiliser si votre crate a une hiérarchie de
 module imposante.
@@ -778,7 +778,7 @@ under the `[package]` section to use the new name for publishing, like so:
 -->
 
 Votre crate va avoir besoin d'un nom unique. Tant que vous travaillez en local,
-vous pouvez nommer un crate comme vous le souhaitez. Cependant, les noms des
+vous pouvez nommer une crate comme vous le souhaitez. Cependant, les noms des
 crates sur [crates.io](https://crates.io/)<!-- ignore --> sont accordés selon le
 principe du *premier arrivé, premier servi*. Une fois qu'un nom de crate est
 accordé, personne d'autre ne peut publier une crate avec ce nom. Avant d'essayer
@@ -1151,7 +1151,7 @@ to start depending on a version again:
 -->
 
 Si vous ajoutez `--undo` à la commande, vous pouvez aussi annuler une
-dépréciation et permettre à nouveaux aux projets de dépendre de cette version :
+dépréciation et permettre à nouveau aux projets de dépendre de cette version :
 
 <!--
 ```console

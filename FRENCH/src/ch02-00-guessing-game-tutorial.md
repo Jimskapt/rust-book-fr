@@ -348,7 +348,7 @@ detail in the [“Variables and Mutability”][variables-and-mutability]<!-- ign
 variable name:
 -->
 
-Cette ligne permet de créer une nouvelle variable nommée `pommmes` et à lui
+Cette ligne permet de créer une nouvelle variable nommée `pommes` et à lui
 assigner la valeur 5. Par défaut en Rust, les variables sont immuables.
 Nous aborderons plus en détail cette notion dans la section [“Variables et
 Mutabilité”][variables-and-mutability]<!-- ignore --> au chapitre 3. Pour

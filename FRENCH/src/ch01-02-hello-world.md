@@ -281,7 +281,7 @@ like `rustc`, so it should already be installed on your computer! Check the
 online documentation for more details.
 -->
 
-Si vous souhaitez formater le code de vos projets Rust de manière standardisé,
+Si vous souhaitez formater le code de vos projets Rust de manière standardisée,
 vous pouvez utiliser un outil de formatage automatique tel que `rustfmt`.
 L'équipe de Rust a intégré cet outil dans la distribution standard de Rust,
 comme pour `rustc` par exemple, donc il est probablement déjà installé sur votre

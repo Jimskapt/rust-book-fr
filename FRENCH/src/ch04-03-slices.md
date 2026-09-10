@@ -159,7 +159,7 @@ Otherwise, we return the length of the string by using `s.len()`:
 -->
 
 Au sein de la boucle `for`, nous recherchons l'octet qui représente l'espace en
-utilisant la syntaxe de littéral d'octet. Si nous trouvons une espace, nous
+utilisant la syntaxe de littéral d'octet. Si nous trouvons un espace, nous
 retournons sa position. Sinon, nous retournons la taille de la chaîne en
 utilisant `s.len()` :
 

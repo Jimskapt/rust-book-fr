@@ -106,7 +106,7 @@ our project *hello_cargo*, and Cargo creates its files in a directory of the
 same name.
 -->
 
-La première commande a crée un nouveau dossier appelé *hello_cargo*. Nous avons
+La première commande a créé un nouveau dossier appelé *hello_cargo*. Nous avons
 appelé notre projet *hello_cargo*, et Cargo crée ses fichiers dans un dossier
 avec le même nom.
 
@@ -116,7 +116,7 @@ has generated two files and one directory for us: a *Cargo.toml* file and a
 *src* directory with a *main.rs* file inside.
 -->
 
-Rendez-vous dans le dossier *hello_cargo* et afficher la liste des fichiers.
+Rendez-vous dans le dossier *hello_cargo* et affichez la liste des fichiers.
 Vous constaterez que Cargo a généré deux fichiers et un dossier pour nous : un
 fichier *Cargo.toml* et un dossier *src* avec un fichier *main.rs* à
 l'intérieur.

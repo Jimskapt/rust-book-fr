@@ -414,7 +414,7 @@ iterator and collects the resulting values into a collection data type.
 -->
 
 Pour corriger ceci et consommer l'itérateur, nous utiliserons la méthode
-`collect`, que vous avez utilisé avec `env::args` dans l'encart 12-1 du
+`collect`, que vous avez utilisée avec `env::args` dans l'encart 12-1 du
 chapitre 12. Cette méthode consomme l'itérateur et collecte les valeurs
 résultantes dans un type de collection de données.
 

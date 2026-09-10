@@ -72,7 +72,7 @@ français.
 | data race | accès concurrent | - |
 | data representation | modèle de données | - |
 | deadlock | interblocage | - |
-| deallocate | désalloué | - |
+| deallocate | désallouer | - |
 | debug | déboguer | - |
 | debugging | débogage | - |
 | deep copy | copie en profondeur | - |
@@ -87,7 +87,7 @@ français.
 | directory | dossier | - |
 | dot notation | la notation avec un point | - |
 | double free | double libération | - |
-| drop | libérér | - |
+| drop | libérer | - |
 | elision | élision | - |
 | enum | énumération | - |
 | enumeration | énumération | - |

@@ -190,7 +190,7 @@ tas par `Rc<List>` ne sera pas libérée à ce moment, car son compteur de
 références est à 1, et non pas 0. Puis, Rust libère `a`, ce qui décrémente le
 compteur `a` de références `Rc<List>` de 2 à 1, également. La mémoire de cette
 instance ne peut pas non plus être libérée car l'autre instance `Rc<List>` y
-fait toujours référence. La mémoire alouée à la liste ne sera jamais libérée.
+fait toujours référence. La mémoire allouée à la liste ne sera jamais libérée.
 Pour représenter cette boucle de références, nous avons créé un diagramme dans
 l'illustration 15-4.
 
@@ -320,7 +320,7 @@ once the strong reference count of values involved is 0.
 
 Les références fortes désignent la manière de partager la propriété d'une
 instance `Rc<T>`. Les références faibles n'expriment pas de relation de
-possession. Ils ne provoqueront pas de boucle de références car n'importe quelle
+possession. Elles ne provoqueront pas de boucle de références car n'importe quelle
 boucle impliquant des références faibles sera détruite une fois que le compteur de
 références fortes des valeurs impliquées vaudra 0.
 

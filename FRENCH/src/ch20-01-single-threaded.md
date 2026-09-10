@@ -704,7 +704,7 @@ buffer to minimize calls to the underlying operating system.
 -->
 
 Comme l'opération `write` peut échouer, nous utilisons `unwrap` sur toutes les
-erreurs, comme précédemment. Encore une fois, dans un véritable application,
+erreurs, comme précédemment. Encore une fois, dans une véritable application,
 vous devriez gérer les cas d'erreur ici. Enfin, `flush` va attendre et empêcher
 le programme de continuer à s'exécuter jusqu'à ce que tous les octets soient
 écrits dans la connexion ; `TcpStream` contient un tampon interne pour réduire
@@ -940,7 +940,7 @@ saw when running the code in Listing 20-1 and Listing 20-2.
 Exécutez ce code maintenant et demandez *127.0.0.1:7878* ; vous devriez obtenir
 le HTML de *hello.html*. Si vous faites n'importe quelle autre requête,
 comme *127.0.0.1:7878/autre-chose*, vous allez obtenir une erreur de connexion
-comme celle que vous avez vue lorsque vous exécutiez le code l'encart 20-1 et de
+comme celle que vous avez vue lorsque vous exécutiez le code de l'encart 20-1 et de
 l'encart 20-2.
 
 <!--

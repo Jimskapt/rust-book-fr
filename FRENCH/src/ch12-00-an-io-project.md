@@ -28,7 +28,7 @@ as its arguments a filename and a string. Then it reads the file, finds lines
 in that file that contain the string argument, and prints those lines.
 -->
 
-Sa rapiditié, ses fonctionnalités de sécurité, sa sortie binaire unifiée et sa prise
+Sa rapidité, ses fonctionnalités de sécurité, sa sortie binaire unifiée et sa prise
 en charge de multiples plateformes font de Rust le langage idéal pour créer des outils
 en ligne de commande, donc pour notre projet, nous allons construire notre
 version de l'outil en ligne de commande `grep` (qui signifie **g**lobally

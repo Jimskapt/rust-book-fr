@@ -479,5 +479,5 @@ En gérant quels tests sont exécutés, vous pouvez vous assurer que vos résult
 de `cargo test` seront rapides. Lorsque vous arrivez à un stade où il est
 justifié de vérifier le résultat des tests `ignored` et que vous avez le temps
 d'attendre ces résultats, vous pouvez lancer à la place
-`cargo test -- --ignored`. Si vous voulez exécuter tous les tests q'uils soient
+`cargo test -- --ignored`. Si vous voulez exécuter tous les tests qu'ils soient
 ignorés ou non, vous pouvez lancer `cargo test -- --include-ignored`.

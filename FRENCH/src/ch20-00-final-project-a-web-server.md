@@ -51,7 +51,7 @@ Voici le plan de construction du serveur web :
 -->
 
 1. En savoir plus sur TCP et HTTP.
-2. Ecouter les connections TCP sur un port.
+2. Ecouter les connexions TCP sur un port.
 3. Interpréter une petite quantité de requêtes HTTP.
 4. Créer une réponse HTTP adéquate.
 5. Augmenter le débit de notre serveur avec un groupe de tâches.
@@ -81,7 +81,7 @@ the crates you might use in the future.
 -->
 
 Toutefois, notre intention dans ce chapitre est de vous aider à apprendre, et
-ne pas de se laisser aller à la facilité. Comme Rust est un langage de
+de ne pas nous laisser aller à la facilité. Comme Rust est un langage de
 programmation système, nous pouvons choisir le niveau d'abstraction avec lequel
 nous souhaitons travailler et nous pouvons descendre à un niveau plus bas que
 ce qui est possible ou pratique dans d'autres langages. Nous allons écrire

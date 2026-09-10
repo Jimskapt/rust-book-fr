@@ -143,7 +143,7 @@ pieces of the tuple returned by `mpsc::channel`.
 
 La fonction `mpsc::channel` retourne un tuple, le premier élément est celui qui
 permet d'envoyer et le second est celui qui reçoit. Les abréviations `tx` et
-`rx` sont utilisés traditionnellement dans de nombreux domaines pour signifier
+`rx` sont utilisées traditionnellement dans de nombreux domaines pour signifier
 respectivement *transmetteur* et *récepteur*, nous avons donc nommé nos
 variables ainsi pour indiquer clairement le rôle de chaque élément.  Nous
 utilisons une instruction `let` avec un motif qui déstructure les tuples ; nous

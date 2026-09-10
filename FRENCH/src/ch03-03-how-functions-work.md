@@ -14,7 +14,7 @@ declare new functions.
 Les fonctions sont très utilisées dans le code Rust. Vous avez déjà vu l'une des
 fonctions les plus importantes du langage : la fonction `main`, qui est le point
 d'entrée de beaucoup de programmes. Vous avez aussi vu le mot-clé `fn`, qui vous
-permet de déclarer des nouvelles fonctions.
+permet de déclarer de nouvelles fonctions.
 
 <!--
 Rust code uses *snake case* as the conventional style for function and variable
@@ -270,7 +270,7 @@ of functions.
 
 Les corps de fonctions sont constitués d'une série d'instructions qui se
 termine éventuellement par une expression. Jusqu'à présent, les fonctions que
-nous avons vu n'avaient pas d'expression à la fin, mais vous avez déjà vu une
+nous avons vues n'avaient pas d'expression à la fin, mais vous avez déjà vu une
 expression faire partie d'une instruction. Comme Rust est un langage basé sur
 des expressions, il est important de faire la distinction. D'autres langages ne
 font pas de telles distinctions, donc penchons-nous sur ce que sont les
@@ -452,7 +452,7 @@ Keep this in mind as you explore function return values and expressions next.
 -->
 
 … est un bloc qui, dans ce cas, s'évalue à `4`. Cette valeur est assignée à `y`
-dans le cadre de l'instruction `let`. Remarquez la ligne `x + 1` ne se termine
+dans le cadre de l'instruction `let`. Remarquez que la ligne `x + 1` ne se termine
 pas par un point-virgule, ce qui est différent de la plupart des lignes que
 vous avez vues jusque là. Les expressions n'ont pas de point-virgule de fin de
 ligne. Si vous ajoutez un point-virgule à la fin de l'expression, vous la

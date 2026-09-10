@@ -148,7 +148,7 @@ ownership.
 
 La portée dans laquelle la variable `s` est en vigueur est la même que toute
 portée d'un paramètre de fonction, mais la valeur pointée par la référence
-n'est pas libérée quand `s` n'est plus utilisé, car `s` n'en prends pas
+n'est pas libérée quand `s` n'est plus utilisé, car `s` n'en prend pas
 possession. Lorsque les fonctions ont des références en paramètres au lieu des
 valeurs réelles, nous n'avons pas besoin de retourner les valeurs pour les
 rendre, car nous n'en avons jamais pris possession.

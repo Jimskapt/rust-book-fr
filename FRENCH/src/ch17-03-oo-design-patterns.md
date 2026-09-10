@@ -484,7 +484,7 @@ La méthode `demander_relecture` sur `Brouillon` doit retourner une nouvelle
 instance d'une structure `EnRelecture` dans une `Box`, qui représente l'état
 lorsqu'un billet est en attente de relecture. La structure `EnRelecture`
 implémente elle aussi la méthode `demander_relecture` mais ne fait aucune
-modification. A la place, elle se retourne elle-même, car lorsque nous demandons
+modification. À la place, elle se retourne elle-même, car lorsque nous demandons
 une relecture sur un billet déjà à l'état `EnRelecture`, il doit rester à l'état
 `EnRelecture`.
 
@@ -673,7 +673,7 @@ Listing 17-18:
 -->
 <!-- markdownlint-enable -->
 
-A partir de là, lorsque nous faisons appel à `contenu` sur `&Box<dyn Etat>`,
+À partir de là, lorsque nous faisons appel à `contenu` sur `&Box<dyn Etat>`,
 l'extrapolation de déréférencement va s'appliquer sur le `&` et le `Box` pour
 que la méthode `contenu` puisse finalement être appelée sur le type qui
 implémente le trait `Etat`. Cela signifie que nous devons ajouter `contenu` à la
@@ -909,7 +909,7 @@ draft posts where only published posts are allowed by issuing a compiler error.
 
 Nous allons vous montrer comment repenser le patron état pour qu'il offre des
 compromis différents. Plutôt que d'encapsuler complètement les états et les
-transitions, faisant que le code externe ne puissent pas les connaître, nous
+transitions, faisant que le code externe ne puisse pas les connaître, nous
 allons coder ces états sous forme de différents types. En conséquence, le
 système de vérification de type de Rust va empêcher toute tentative
 d'utilisation des brouillons de billets là où seuls des billets publiés sont

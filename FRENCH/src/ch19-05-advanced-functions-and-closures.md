@@ -112,7 +112,7 @@ accept functions as arguments, but C doesn’t have closures.
 Une situation dans laquelle vous ne voudrez accepter que des `fn` et pas
 des fermetures, est lorsque vous vous interfacez avec du code externe qui n'a
 pas de fermetures : les fonctions C peuvent accepter des fonctions en argument,
-mais le C n'a pas fermetures.
+mais le C n'a pas de fermetures.
 
 <!--
 As an example of where you could use either a closure defined inline or a named

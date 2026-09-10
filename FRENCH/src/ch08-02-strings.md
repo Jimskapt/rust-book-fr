@@ -889,8 +889,8 @@ If we were to try to slice only part of a character’s bytes with something lik
 index were accessed in a vector:
 -->
 
-Si vous essayons de produire une slice d'une partie des octets d'un caractère
-avec quelquechose comme `&bonjour[0..1]`, Rust va paniquer au moment de
+Si vous essayez de produire une slice d'une partie des octets d'un caractère
+avec quelque chose comme `&bonjour[0..1]`, Rust va paniquer au moment de
 l'exécution de la même façon que si nous utilisions un indice invalide pour
 accéder à un élément d'un vecteur :
 

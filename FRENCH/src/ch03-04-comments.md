@@ -62,7 +62,7 @@ ceci :
 Comments can also be placed at the end of lines containing code:
 -->
 
-Les commentaires peuvent aussi être aussi ajoutés à la fin d'une ligne qui
+Les commentaires peuvent aussi être ajoutés à la fin d'une ligne qui
 contient du code :
 
 <!--

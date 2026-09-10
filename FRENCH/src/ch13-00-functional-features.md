@@ -60,7 +60,7 @@ code, so we’ll devote this entire chapter to them.
 -->
 
 Les autres fonctionnalités de Rust, comme le filtrage par motif et les
-énumérations, que nous avons vues dans les chapitres précédents sont influencés
+énumérations, que nous avons vues dans les chapitres précédents sont influencées
 par la programmation fonctionnelle. La maîtrise des fermetures et des itérateurs
 est une étape importante pour écrire du code Rust performant, c'est pourquoi
 nous allons leur dédier ce chapitre entier.

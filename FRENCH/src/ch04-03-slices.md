@@ -89,7 +89,7 @@ a value is a space, we’ll convert our `String` to an array of bytes using the
 -->
 
 Comme nous avons besoin de parcourir la `String` élément par élément et de
-vérifier si la valeur est une espace, nous convertissons notre `String` en un
+vérifier si la valeur est un espace, nous convertissons notre `String` en un
 tableau d'octets en utilisant la méthode `as_bytes` :
 
 <!--
@@ -159,7 +159,7 @@ Otherwise, we return the length of the string by using `s.len()`:
 -->
 
 Au sein de la boucle `for`, nous recherchons l'octet qui représente l'espace en
-utilisant la syntaxe de littéral d'octet. Si nous trouvons une espace, nous
+utilisant la syntaxe de littéral d'octet. Si nous trouvons un espace, nous
 retournons sa position. Sinon, nous retournons la taille de la chaîne en
 utilisant `s.len()` :
 
@@ -470,8 +470,8 @@ as the starting and ending indices.
 -->
 
 Nous récupérons l'indice de la fin du mot de la même façon que nous l'avions
-fait dans l'encart 4-7, en cherchant la première occurrence d'une espace.
-Lorsque nous trouvons une espace, nous retournons une slice de chaîne en
+fait dans l'encart 4-7, en cherchant la première occurrence d'un espace.
+Lorsque nous trouvons un espace, nous retournons une slice de chaîne en
 utilisant le début de la chaîne de caractères et l'indice de l'espace comme
 indices de début et de fin respectivement.
 
@@ -678,7 +678,7 @@ API more general and useful without losing any functionality:
 Si nous avons une slice de chaîne, nous pouvons la passer en argument
 directement. Si nous avons une `String`, nous pouvons envoyer une référence ou
 une slice de la `String`. Cette flexibilité nous est offerte par
-l'*extrapolation de déréferencement*, une fonctionnalité que nous allons
+l'*extrapolation de déréférencement*, une fonctionnalité que nous allons
 découvrir dans [une section du Chapitre 15][deref-coercions]<!--ignore-->.
 Définir une fonction qui prend une slice de chaîne plutôt qu'une référence à
 une `String` rend notre API plus générique et plus utile sans perdre aucune

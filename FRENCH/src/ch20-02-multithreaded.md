@@ -75,7 +75,7 @@ request is received, the server will sleep for 5 seconds before rendering the
 successful HTML page.
 -->
 
-Ce code est peu brouillon, mais est suffisant pour nos besoins de simulation.
+Ce code est un peu brouillon, mais est suffisant pour nos besoins de simulation.
 Nous avons créé une deuxième possibilité de requête `pause` avec des données que
 notre serveur peut reconnaître. Nous avons ajouté un `else if` après le bloc `if`
 pour tester les requêtes destinées à */pause*. Lorsque cette requête est reçue, le
@@ -606,7 +606,7 @@ Le paramètre de type `F` est celui qui nous intéresse ici ; le paramètre de
 type `T` est lié à la valeur de retour, et ceci ne nous intéresse pas ici.
 Nous pouvons constater que `spawn` utilise le trait `FnOnce` lié à `F`.
 C'est probablement ce dont nous avons besoin, parce que nous allons sûrement
-passer cet argument dans le `execute` de `spawn`. Nous pouvons aussi être sûr
+passer cet argument dans le `execute` de `spawn`. Nous pouvons aussi être sûrs
 que `FnOnce` est le trait dont nous avons besoin car la tâche qui va traiter une
 requête ne va le faire qu'une seule fois, ce qui
 correspond à la partie `Once` dans `FnOnce`.
@@ -1415,9 +1415,9 @@ Après avoir créé une nouvelle instance `Mission` en utilisant la fermeture qu
 nous obtenons dans `executer`, nous envoyons cette mission dans le canal via la
 partie émettrice. Nous utilisons `unwrap` sur `send` pour les cas où l'envoi
 échoue. Cela peut arriver si, par exemple, nous stoppons l'exécution de toutes
-les tâches, ce qui signifiera que les parties réceptrices auront finis de
+les tâches, ce qui signifiera que les parties réceptrices auront fini de
 recevoir des nouveaux messages. Pour le moment, nous ne pouvons pas stopper
-l'exécution de nos tâches : nos tâches continuerons à s'exécuter aussi
+l'exécution de nos tâches : nos tâches continueront à s'exécuter aussi
 longtemps que le groupe existe. La raison pour laquelle nous utilisons `unwrap`
 est que nous savons que le cas d'échec ne va pas se produire, mais le
 compilateur ne le sait pas.
@@ -1491,7 +1491,7 @@ Si nous obtenons le verrou du mutex, nous faisons appel à `recv` pour recevoir
 une `Mission` provenant du canal. Un `unwrap` final s'occupe lui aussi des cas
 d'erreurs qui peuvent se produire si la tâche qui est connectée à la partie émettrice
 du canal se termine, de la même manière que la méthode `send` enverrait `Err`
-si la partie réceptrice se fermerait.
+si la partie réceptrice se fermait.
 
 <!--
 The call to `recv` blocks, so if there is no job yet, the current thread will

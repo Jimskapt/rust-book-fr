@@ -51,7 +51,7 @@ valeurs ne soient jamais confondues ou pour spécifier les unités d'une valeur.
 Vous avez vu un exemple d'utilisation des newtypes pour indiquer des unités
 dans l'encart 19-15 : souvenez-vous des structures `Millimetres` et `Metres`
 qui englobaient des valeurs `u32` dans ces newtypes. Si nous avions écrit une
-fonction avec un paramètre de type `Millimetres`, nous ne n'aurions pas pu
+fonction avec un paramètre de type `Millimetres`, nous n'aurions pas pu
 compiler un programme qui aurait accidentellement fait appel à cette fonction
 avec une valeur du type `Metres` ou `u32` pur.
 

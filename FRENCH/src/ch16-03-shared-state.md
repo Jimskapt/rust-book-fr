@@ -424,7 +424,7 @@ with it. What we need is a type exactly like `Rc<T>` but one that makes changes
 to the reference count in a thread-safe way.
 -->
 
-Malheureusement l'utilisation de `Rc<T>` n'est pas sure lorsqu'il est partagé
+Malheureusement l'utilisation de `Rc<T>` n'est pas sûre lorsqu'il est partagé
 entre plusieurs tâches. Lorsque `Rc<T>` gère le compteur de références, il
 incrémente le compteur autant de fois que nous avons fait appel à `clone` et
 décrémente le compteur à chaque fois qu'un clone est libéré. Mais il n'utilise
@@ -434,7 +434,7 @@ provoquer des bogues subtils induisant une mauvaise gestion du compteur, ce qui
 pourrait provoquer des fuites de mémoire ou faire qu'une valeur soit libérée
 avant que nous ayions fini de l'utiliser. Nous avons besoin d'un type
 exactement comme `Rc<T>` mais qui procède aux changements du compteur de
-références de manière sure en situation de concurrence.
+références de manière sûre en situation de concurrence.
 
 <!--
 #### Atomic Reference Counting with `Arc<T>`

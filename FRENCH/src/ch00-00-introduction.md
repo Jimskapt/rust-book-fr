@@ -105,7 +105,7 @@ programmation système :
   dans l'écosystème Rust.
 * Rustfmt, qui assure une cohérence de style de codage pour tous les
   développeurs.
-* Le *Rust Langage Server* alimente les environnements de développement
+* Le *Rust Language Server* alimente les environnements de développement
   intégrés (IDE) pour la complétion du code et l'affichage direct des messages
   d'erreur.
 
@@ -155,11 +155,11 @@ learning, and even major parts of the Firefox web browser.
 -->
 
 Des centaines d'entreprises, petites et grosses, utilisent Rust en production
-pour différentes missions. Ils l'utilisent pour des outils en ligne de commande,
+pour différentes missions. Elles l'utilisent pour des outils en ligne de commande,
 des services web, des outils DevOps, des systèmes embarqués, de l'analyse et de
 la conversion audio et vidéo, des cryptomonnaies, de la bio-informatique, des
 moteurs de recherche, de l'internet des objets *(IoT)*, de l'apprentissage
-automatique *(marchine learning)*, et même des parties importantes du navigateur
+automatique *(machine learning)*, et même des parties importantes du navigateur
 internet Firefox.
 
 <!--

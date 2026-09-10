@@ -807,7 +807,7 @@ task.
 La crate `syn` transforme le code Rust d'une chaîne de caractères en une
 structure de données sur laquelle nous pouvons procéder à des opérations. La
 crate `quote` re-transforme les structures de données de `syn` en code Rust.
-Ces crates facilite le parcours de toute sorte de code Rust que nous aurions
+Ces crates facilitent le parcours de toute sorte de code Rust que nous aurions
 besoin de gérer : l'écriture d'un interpréteur complet de code Rust n'a jamais
 été aussi facile.
 

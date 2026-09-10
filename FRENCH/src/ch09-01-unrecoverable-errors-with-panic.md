@@ -17,7 +17,7 @@ Parfois, des choses se passent mal dans votre code, et vous ne pouvez rien y
 faire. Pour ces cas-là, Rust a la macro `panic!`. Quand la macro `panic!`
 s'exécute, votre programme va afficher un message d'erreur, dérouler et
 nettoyer la pile, et ensuite fermer le programme. Nous allons souvent faire
-paniquer le programme lorsqu'un bogue a été détecté, et qu"on ne sait comment
+paniquer le programme lorsqu'un bogue a été détecté, et qu'on ne sait comment
 gérer cette erreur au moment de l'écriture de notre programme.
 
 <!--
@@ -251,7 +251,7 @@ lister toutes les fonctions qui ont été appelées pour arriver jusqu'à ce poi
 En Rust, le retraçage fonctionne comme dans d'autres langages : le secret pour
 lire le retraçage est de commencer d'en haut et lire jusqu'à ce que vous voyiez
 les fichiers que vous avez écrits. C'est l'endroit où s'est produit le problème.
-Les lignes avant cet endroit est du code qui a été appelé par votre propre
+Les lignes avant cet endroit sont du code qui a été appelé par votre propre
 code ; les lignes qui suivent représentent le code qui a appelé votre code. Ces
 lignes "avant et après" peuvent être du code du cœur de Rust, du code de la
 bibliothèque standard, ou des crates que vous utilisez. Essayons d'obtenir un

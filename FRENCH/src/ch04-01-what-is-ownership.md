@@ -137,7 +137,7 @@ chaînes de caractères.
 > pile, et quand vous avez besoin d'une assiette, vous en prenez une sur le
 > dessus. Ajouter ou enlever des assiettes au milieu ou en bas ne serait pas
 > aussi efficace ! Ajouter une donnée sur la pile se dit *empiler* et en retirer
-> une se dit *dépiler*. Toutes donnée stockée dans la pile doit avoir une
+> une se dit *dépiler*. Toute donnée stockée dans la pile doit avoir une
 > taille connue et fixe. Les données avec une taille inconnue au moment de la
 > compilation ou une taille qui peut changer doivent plutôt être stockées sur
 > le tas.
@@ -500,7 +500,7 @@ exactly one `free`.
 
 Cependant, le deuxième point est différent. Dans des langages avec un
 *ramasse-miettes*, le ramasse-miettes surveille et nettoie la mémoire qui n'est
-plus utilisée, sans que nous n'ayons à nous en préoccuper. Dans la pluspart des
+plus utilisée, sans que nous n'ayons à nous en préoccuper. Dans la plupart des
 langages sans ramasse-miettes, c'est de notre responsabilité d'identifier quand
 cette mémoire n'est plus utilisée et d'appeler du code pour explicitement la
 libérer, comme nous l'avons fait pour la demander auparavant. Historiquement,

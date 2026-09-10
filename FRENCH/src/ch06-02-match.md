@@ -489,7 +489,7 @@ En utilisant les énumérations, nous pouvons aussi appliquer des actions
 spéciales pour certaines valeurs précises, mais une action par défaut pour
 toutes les autres valeurs. Imaginons que nous implémentons un jeu dans lequel,
 si vous obtenez une valeur de 3 sur un lancé de dé, votre joueur ne se déplace
-pas, mais à la place il obtient un nouveau chapeau fataisie. Si vous obtenez
+pas, mais à la place il obtient un nouveau chapeau fantaisie. Si vous obtenez
 un 7, votre joueur perd son chapeau fantaisie. Pour toutes les autres valeurs,
 votre joueur se déplace de ce nombre de cases sur le plateau du jeu. Voici un
 `match` qui implémente cette logique, avec le résultat du lancé de dé codé en
@@ -514,7 +514,7 @@ we’ve chosen to name `other`. The code that runs for the `other` arm uses the
 variable by passing it to the `move_player` function.
 -->
 
-Dans les deux premières branches, les motifs sont les valeurs litérales 3 et 7.
+Dans les deux premières branches, les motifs sont les valeurs littérales 3 et 7.
 La dernière branche couvre toutes les autres valeurs possibles, le motif est la
 variable `autre`. Le code qui s'exécute pour la branche `autre` utilise la
 variable en la passant dans la fonction `deplacer_joueur`.
@@ -530,7 +530,7 @@ catch-all because those later arms would never match!
 
 Ce code se compile, même si nous n'avons pas listé toutes les valeurs possibles
 qu'un `u8` puisse avoir, car le dernier motif va correspondre à toutes les
-valeurs qui ne sont pas spécifiquement listés. Ce motif générique répond à la
+valeurs qui ne sont pas spécifiquement listées. Ce motif générique répond à la
 condition qu'un `match` doive être exhaustif. Notez que nous devons placer la
 branche avec le motif générique en tout dernier, car les motifs sont évalués
 dans l'ordre. Rust va nous prévenir si nous ajoutons des branches après un motif

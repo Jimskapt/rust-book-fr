@@ -271,7 +271,7 @@ between.
 À noter en outre que le corps de la fonction est placé entre des accolades
 `{}`. Rust en a besoin autour du corps de chaque fonction. C'est une
 bonne pratique d'insérer l'accolade ouvrante sur la même ligne que la
-déclaration de la fonction, en ajoutant une espace entre les deux.
+déclaration de la fonction, en ajoutant un espace entre les deux.
 
 <!--
 If you want to stick to a standard style across Rust projects, you can use an
@@ -281,7 +281,7 @@ like `rustc`, so it should already be installed on your computer! Check the
 online documentation for more details.
 -->
 
-Si vous souhaitez formater le code de vos projets Rust de manière standardisé,
+Si vous souhaitez formater le code de vos projets Rust de manière standardisée,
 vous pouvez utiliser un outil de formatage automatique tel que `rustfmt`.
 L'équipe de Rust a intégré cet outil dans la distribution standard de Rust,
 comme pour `rustc` par exemple, donc il est probablement déjà installé sur votre
@@ -308,7 +308,7 @@ This line does all the work in this little program: it prints text to the
 screen. There are four important details to notice here.
 -->
 
-Cette ligne fait tout le travail dans ce petit programme : il écrit le texte à
+Cette ligne fait tout le travail dans ce petit programme : elle écrit le texte à
 l'écran. Il y a quatre détails importants à noter ici.
 
 <!--

@@ -313,7 +313,7 @@ project, which is reproduced here in Listing 13-28 as it was in Listing 12-19:
 
 Nous pouvons également tirer parti des itérateurs dans la fonction `rechercher`
 de notre projet d'entrée/sortie, qui est reproduite ici dans l'encart 13-28,
-telles qu'elle était dans l'encart 12-19 à la fin du chapitre 12 :
+telle qu'elle était dans l'encart 12-19 à la fin du chapitre 12 :
 
 <!--
 <span class="filename">Filename: src/lib.rs</span>
@@ -432,4 +432,4 @@ performance.
 
 Mais ces deux implémentations sont-elles réellement équivalentes ? L'hypothèse
 intuitive pourrait être que la boucle de plus bas niveau sera plus rapide.
-Intéressons nous donc maintenant à leurs performances.
+Intéressons-nous donc maintenant à leurs performances.

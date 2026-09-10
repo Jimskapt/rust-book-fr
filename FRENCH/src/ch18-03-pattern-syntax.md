@@ -540,7 +540,7 @@ changing the value of `msg` to see the code from the other arms run.
 
 Ce code va afficher
 `Changement des taux de rouge à 0, de vert à 160 et de bleu à 255`. Essayez de
-changer la valeur de `message` pour voir le code qu'exécute les autres
+changer la valeur de `message` pour voir le code qu'exécutent les autres
 branches.
 
 <!--

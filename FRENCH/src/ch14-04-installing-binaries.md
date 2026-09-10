@@ -20,7 +20,7 @@ binary target, or both.
 La commande `cargo install` vous permet d'installer et utiliser des crates de
 binaires localement. Cela n'est pas conçu pour remplacer les paquets systèmes ;
 c'est plutôt un moyen pratique pour les développeurs Rust d'installer
-des outils que les autres ont partagé sur
+des outils que les autres ont partagés sur
 [crates.io](https://crates.io/)<!-- ignore -->. Notez que vous ne pouvez
 installer que des paquets qui ont des destinations binaires. Une *destination
 binaire* est le programme exécutable qui est créé si la crate a un fichier
